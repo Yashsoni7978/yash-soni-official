@@ -97,10 +97,11 @@ const GoldDivider = () => (
   <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-30 my-24" />
 );
 
-// --- 5. TRUSTED MARQUEE COMPONENT (UPDATED) ---
+// --- TRUSTED MARQUEE COMPONENT (UPDATED COLOR & LINK) ---
 const TrustedMarquee = () => {
   const brands = [
-    { name: "Google Reviews", color: "hover:text-[#4285F4]", link: "https://share.google/pMZGzEGOhXnJpLq5g" }, // YOUR LINK HERE
+    // Added your specific Google Link here
+    { name: "Google Reviews", color: "hover:text-[#4285F4]", link: "https://share.google/pMZGzEGOhXnJpLq5g" }, 
     { name: "WedMeGood", color: "hover:text-[#DE5D83]", link: "#" },
     { name: "WeddingWire", color: "hover:text-[#1467B0]", link: "#" },
     { name: "StarClinch", color: "hover:text-[#FF5722]", link: "#" },
@@ -113,11 +114,11 @@ const TrustedMarquee = () => {
   return (
     <div className="flex w-full overflow-hidden">
       <motion.div 
-        className="flex gap-40 items-center whitespace-nowrap px-4" // Increased gap to 40 for the "1 sec gap" feel
+        className="flex gap-40 items-center whitespace-nowrap px-4" 
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
       >
-        {/* Tripled array for smooth infinite loop */}
+        {/* Tripled array for infinite loop */}
         {[...brands, ...brands, ...brands].map((brand, i) => (
           <a 
             key={i} 
@@ -134,7 +135,7 @@ const TrustedMarquee = () => {
   );
 };
 
-// --- 6. REVIEW CARD ---
+// --- 5. REVIEW CARD ---
 const ReviewCard = ({ name, date, text, platform }: any) => (
   <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37]/50 transition-colors flex flex-col shadow-lg mx-4">
     <div className="flex items-start gap-4 mb-4">
@@ -241,22 +242,18 @@ export default function Home() {
       <style>{style}</style> 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
 
-      {/* --- SECTION 1: HERO (REPLICATED LAYOUT) --- */}
+      {/* --- SECTION 1: HERO --- */}
       <section className="relative h-screen flex items-end pb-20 md:pb-32 overflow-hidden">
         <HeroSlider />
         <div className="relative container mx-auto px-4 z-20">
           
-          {/* TEXT ALIGNED LEFT */}
           <div className="max-w-4xl mr-auto text-left pl-2 md:pl-10">
-            
-            {/* PILL BADGE */}
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mb-6 inline-block">
                <span className="border border-[#D4AF37] px-6 py-2 rounded-full backdrop-blur-md bg-black/40 text-[#D4AF37] text-sm tracking-wide font-medium">
                  Jaipur's Leading Event Anchor
                </span>
             </motion.div>
 
-            {/* H1 TITLE: "Anchor Yash" with "Yash" in Gold */}
             <motion.h1 
               initial={{ opacity: 0, y: 30 }} 
               animate={{ opacity: 1, y: 0 }} 
@@ -266,31 +263,25 @@ export default function Home() {
               Anchor <GoldTextureText>Yash</GoldTextureText>
             </motion.h1>
 
-            {/* SUBTITLE */}
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="text-gray-300 text-xl md:text-2xl font-light mb-4">
               Premium Wedding & Corporate Event Anchor
             </motion.p>
 
-            {/* TAGS */}
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="text-[#D4AF37] text-sm md:text-base font-medium mb-10">
               1100+ Events • Weddings • Corporate • Sports • Fashion Shows • Event Planning & Designing
             </motion.p>
 
-            {/* 3 BUTTONS ROW */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }} className="flex flex-wrap gap-4 items-center">
-              {/* BOOK NOW (GOLD) */}
               <Link href="/contact">
                 <span className="px-8 py-3 bg-[#D4AF37] text-black font-bold rounded-lg text-sm hover:bg-white transition-all cursor-pointer shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                   Book Now <ArrowRight className="w-4 h-4 inline-block ml-1" />
                 </span>
               </Link>
-              {/* VIEW PORTFOLIO (OUTLINE) */}
               <Link href="/portfolio">
                 <span className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] font-bold rounded-lg text-sm hover:bg-[#D4AF37] hover:text-black transition-all cursor-pointer flex items-center gap-2">
                   <Play className="w-4 h-4 fill-current" /> View Portfolio
                 </span>
               </Link>
-              {/* INSTAGRAM (OUTLINE) */}
               <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer">
                 <span className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] font-bold rounded-lg text-sm hover:bg-[#D4AF37] hover:text-black transition-all cursor-pointer flex items-center gap-2">
                   <Instagram className="w-4 h-4" /> Instagram
@@ -301,11 +292,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SECTION 2: THE INTRODUCTION --- */}
+      {/* --- SECTION 2: INTRODUCTION --- */}
       <section className="py-24 container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
-             <h2 className="text-[#D4AF37] font-display text-sm uppercase tracking-widest mb-4">The Philosophy</h2>
+             <h2 className="text-[#D4AF37] font-display text-sm uppercase tracking-widest mb-4">The Introduction</h2>
              <h3 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight">
                "I don't just speak. <br /> I <GoldTextureText>connect souls</GoldTextureText>."
              </h3>
@@ -324,7 +315,6 @@ export default function Home() {
              </div>
           </ScrollReveal>
 
-          {/* Abstract Image Grid */}
           <div className="grid grid-cols-2 gap-4 opacity-80">
              <ScrollReveal delay={0.2}>
                <div className="relative aspect-[3/4] border border-neutral-800">
@@ -340,9 +330,22 @@ export default function Home() {
         </div>
       </section>
 
-      <GoldDivider />
+      {/* --- SECTION 3: TRUSTED BY MARQUEE (REMOVED MAROON, MATCHED THEME) --- */}
+      <section className="bg-[#111] border-y border-neutral-800 relative z-30 py-8">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+           <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] whitespace-nowrap font-bold">
+             Trusted On
+           </div>
+           {/* SCROLLING MARQUEE */}
+           <div className="flex-1 overflow-hidden relative h-10 flex items-center">
+             <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#111] to-transparent z-10" />
+             <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#111] to-transparent z-10" />
+             <TrustedMarquee />
+           </div>
+        </div>
+      </section>
 
-      {/* --- SECTION 3: THE STYLE (3 Pillars) --- */}
+      {/* --- SECTION 4: THE PHILOSOPHY (WHY ME) --- */}
       <section className="py-20 container mx-auto px-4">
          <ScrollReveal>
            <div className="text-center mb-16">
@@ -364,7 +367,7 @@ export default function Home() {
          </div>
       </section>
 
-      {/* --- SECTION 4: SERVICES --- */}
+      {/* --- SECTION 5: SERVICES --- */}
       <section className="py-20 container mx-auto px-4">
         <ScrollReveal>
           <div className="flex justify-between items-end mb-16">
@@ -397,64 +400,8 @@ export default function Home() {
 
       <GoldDivider />
 
-      {/* --- SECTION 5: THE PROCESS --- */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-20">
-            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">How It Works</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">From Booking to <span className="text-[#D4AF37]">Applause</span></h2>
-          </div>
-        </ScrollReveal>
-
-        <div className="grid md:grid-cols-4 gap-8">
-          {processSteps.map((step, i) => (
-             <ScrollReveal key={i} delay={i * 0.1}>
-               <div className="relative p-6 border-l border-neutral-800 hover:border-[#D4AF37] transition-colors pl-8 group">
-                 <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[10px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">
-                   {step.num}
-                 </span>
-                 <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
-                 <p className="text-gray-400 text-sm leading-relaxed font-light">{step.text}</p>
-               </div>
-             </ScrollReveal>
-          ))}
-        </div>
-      </section>
-
-      {/* --- SECTION 6: VENUES --- */}
-      <section className="py-20 bg-[#111] border-y border-neutral-800">
-        <div className="container mx-auto px-4 text-center">
-          <ScrollReveal>
-            <p className="text-gray-500 text-xs uppercase tracking-[0.3em] mb-12">Featured at Premier Venues</p>
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-60">
-              {venues.map((venue, i) => (
-                <span key={i} className="text-xl md:text-2xl font-display font-bold text-white/40 hover:text-[#D4AF37] cursor-default transition-all duration-500 hover:scale-105">
-                  {venue}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* --- SECTION 7: TRUSTED BY MARQUEE (ROYAL MAROON) --- */}
-      <section className="bg-gradient-to-r from-[#800020] via-[#5C0015] to-[#800020] border-y border-[#FFD700]/20 relative z-30 py-8">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-           <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] whitespace-nowrap font-bold">
-             Trusted On
-           </div>
-           
-           {/* SCROLLING MARQUEE */}
-           <div className="flex-1 overflow-hidden relative h-10 flex items-center">
-             <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#800020] to-transparent z-10" />
-             <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#800020] to-transparent z-10" />
-             <TrustedMarquee />
-           </div>
-        </div>
-      </section>
-
-      {/* --- SECTION 8: REVIEWS SLIDER --- */}
-      <section className="py-24 bg-black overflow-hidden border-t border-neutral-900">
+      {/* --- SECTION 6: REVIEWS (MOVED UP) --- */}
+      <section className="py-24 bg-black overflow-hidden">
         <div className="container mx-auto px-4 mb-16 text-center">
           <ScrollReveal>
             <span className="text-[#D4AF37] text-sm uppercase tracking-widest">Client Love</span>
@@ -481,6 +428,46 @@ export default function Home() {
            <button className="text-gray-500 text-xs tracking-widest hover:text-white transition-colors flex items-center justify-center gap-2 mx-auto uppercase">
              <MapPin className="w-4 h-4 text-[#D4AF37]" /> Based in Jaipur, Available Globally
            </button>
+        </div>
+      </section>
+
+      {/* --- SECTION 7: THE PROCESS (MOVED DOWN) --- */}
+      <section className="py-20 container mx-auto px-4">
+        <ScrollReveal>
+          <div className="text-center mb-20">
+            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">How It Works</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">From Booking to <span className="text-[#D4AF37]">Applause</span></h2>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-4 gap-8">
+          {processSteps.map((step, i) => (
+             <ScrollReveal key={i} delay={i * 0.1}>
+               <div className="relative p-6 border-l border-neutral-800 hover:border-[#D4AF37] transition-colors pl-8 group">
+                 <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[10px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">
+                   {step.num}
+                 </span>
+                 <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
+                 <p className="text-gray-400 text-sm leading-relaxed font-light">{step.text}</p>
+               </div>
+             </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* --- SECTION 8: VENUES --- */}
+      <section className="py-20 bg-[#111] border-y border-neutral-800">
+        <div className="container mx-auto px-4 text-center">
+          <ScrollReveal>
+            <p className="text-gray-500 text-xs uppercase tracking-[0.3em] mb-12">Featured at Premier Venues</p>
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-60">
+              {venues.map((venue, i) => (
+                <span key={i} className="text-xl md:text-2xl font-display font-bold text-white/40 hover:text-[#D4AF37] cursor-default transition-all duration-500 hover:scale-105">
+                  {venue}
+                </span>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
