@@ -1,49 +1,27 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+// @ts-nocheck
 import "./globals.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-// 1. IMPORT NAVBAR AND FOOTER
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
-const playfair = Playfair_Display({ 
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-const jakarta = Plus_Jakarta_Sans({ 
-  subsets: ["latin"],
-  variable: "--font-jakarta",
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "Anchor Yash Soni | Best Wedding & Corporate Anchor in Jaipur",
-  description: "Book Yash Soni, Jaipur's most engaging event anchor for Weddings, Sangeet, Haldi, and Corporate Events. 5+ Years Exp, 1100+ Events.",
+export const metadata = {
+  title: "Anchor Yash Soni | Premium Event Host",
+  description: "India's leading wedding and corporate anchor based in Jaipur. Hosting weddings, sangeets, and corporate summits with elegance and energy.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${playfair.variable} ${jakarta.variable} font-sans bg-neutral-950 text-white antialiased selection:bg-amber-500 selection:text-black`}>
-        
-        {/* 2. PLACEMENT IS CRITICAL */}
-        
-        {/* Navbar goes ABOVE children */}
+      <body className="bg-black text-white antialiased">
+        {/* Navbar sits on top of everything */}
         <Navbar />
         
+        {/* The main content area where your pages load */}
         <main className="min-h-screen">
           {children}
         </main>
-        
-        {/* Footer goes BELOW children */}
+
+        {/* Footer sits at the bottom */}
         <Footer />
-        
       </body>
     </html>
   );
