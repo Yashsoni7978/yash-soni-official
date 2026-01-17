@@ -2,337 +2,272 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ChevronRight, MessageCircle, Music, Heart, Sparkles, Users, Phone, Star, MapPin, Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Mic2, Music, Zap, Sparkles, Star, Users, 
+  ArrowRight, Play, Headphones, ChevronDown, 
+  Trophy, Flame 
+} from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
+// --- 1. CUSTOM NEON TEXTURE (Purple/Blue Gradient) ---
+const NeonText = ({ children, className }) => (
+  <span 
+    className={`bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-fuchsia-500 to-indigo-500 ${className || ""}`}
+    style={{ textShadow: "0 0 30px rgba(168, 85, 247, 0.4)" }}
   >
     {children}
-  </motion.div>
+  </span>
 );
 
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
+const SectionHeading = ({ subtitle, title, align = "left" }) => (
+  <div className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className={`flex items-center gap-2 mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}>
+        <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
+        <p className="text-purple-400 text-xs uppercase tracking-[0.3em] font-bold">
+          {subtitle}
+        </p>
+      </div>
+      <h2 className="text-4xl md:text-6xl font-display font-black text-white leading-tight">
+        {title}
+      </h2>
+    </motion.div>
+  </div>
 );
 
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
-    }}
-  >
-    {children}
-  </motion.div>
-);
-
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function SangeetAnchor() {
   return (
-    <div className="border-b border-neutral-800">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-4 text-left group"
-      >
-        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-amber-500' : 'text-gray-300 group-hover:text-amber-500'}`}>
-          {question}
-        </span>
-        {isOpen ? <Minus className="w-5 h-5 text-amber-500" /> : <Plus className="w-5 h-5 text-gray-500" />}
-      </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-4 text-gray-400 text-sm leading-relaxed">{answer}</p>
-      </motion.div>
-    </div>
-  );
-};
-
-// --- DATA ---
-const sangeetServices = [
-  { icon: Music, title: "Sangeet Night Hosting", description: "High-energy hosting that keeps the dance floor alive and guests entertained throughout the celebration" },
-  { icon: Heart, title: "Couple Introduction", description: "Heartfelt storytelling and fun couple games that make the bride and groom the stars of the evening" },
-  { icon: Users, title: "Performance Coordination", description: "Seamless anchoring between family performances, ensuring smooth transitions and audience engagement" },
-  { icon: Sparkles, title: "Interactive Entertainment", description: "Games, audience participation segments, and spontaneous fun that creates memorable moments" },
-];
-
-const eventTypes = [
-  { title: "Traditional Sangeet", description: "Classic sangeet ceremonies with traditional music, family performances, and cultural rituals anchored with grace and energy." },
-  { title: "Bollywood Theme Night", description: "High-energy Bollywood-themed sangeet with dance performances, movie dialogues, and filmi fun throughout the evening." },
-  { title: "Fusion Sangeet", description: "Modern sangeet blending traditional elements with contemporary entertainment, DJ nights, and creative performances." },
-  { title: "Intimate Sangeet", description: "Smaller, heartfelt gatherings focused on meaningful moments, storytelling, and close family bonding." },
-];
-
-const cities = ["Jaipur", "Udaipur", "Jodhpur", "Jaisalmer", "Pushkar", "Ajmer", "Bikaner", "Mount Abu", "Neemrana", "Alwar"];
-
-const sangeetFAQs = [
-  { question: "What makes a sangeet anchor different from a wedding anchor?", answer: "A sangeet anchor specializes in high-energy entertainment. Unlike the formal wedding ceremony, the Sangeet is about dance, music, and comedy. My role is to be the 'Hype Man', ensuring the energy never drops between performances." },
-  { question: "Do you write the script for family performances?", answer: "Yes! I don't just announce names. I write personalized scripts, Shayaris, and witty one-liners for every Chacha, Bua, and Cousin performing, making them feel like celebrities on stage." },
-  { question: "How do you handle delays between dance performances?", answer: "Delays are common. I fill these gaps with interactive crowd games, rapid-fire questions for the couple, or spontaneous dance-offs so the audience never feels bored." },
-  { question: "Can you anchor sangeet in both Hindi and English?", answer: "Yes, I am fluent in both. For Jaipur weddings, I often use a mix of Hindi, English, and a touch of Marwari humor to connect with guests of all generations." },
-  { question: "Do you coordinate with the DJ and Choreographer?", answer: "Absolutely. I arrive early to do a sound check, sync the performance list with the DJ console, and ensure the Choreographer's sequence is followed perfectly." },
-  { question: "What kind of games do you play with the Couple?", answer: "I host trending games like the 'Shoe Game', 'Who is most likely to', and 'Ring Hunt'. These are lighthearted, photo-friendly, and great for breaking the ice." },
-  { question: "Do you host the Ring Ceremony (Engagement) as well?", answer: "Yes, often the Ring Ceremony happens during the Sangeet. I switch to a formal, romantic tone for the ring exchange and cake cutting, before bringing the party vibe back for the dance floor." },
-  { question: "How do you handle shy family members?", answer: "I never force anyone. I use group activities or 'Seat-based games' (like Antakshari) to get shy guests involved without making them feel self-conscious on stage." },
-  { question: "Can you execute a specific theme (e.g., Retro or 90s)?", answer: "Yes! If you have a theme like 'Retro Bollywood' or 'Fairytale', I adapt my attire, script, and music choices to match that vibe completely." },
-  { question: "How long do you stay for a Sangeet night?", answer: "I stay until the very end of the planned itinerary. Usually, this means from the start of the event until the DJ takes over for the open dance floor (approx 4-5 hours)." },
-  { question: "Do you provide your own mic?", answer: "I can, but usually, the venue sound vendor provides the technical setup. I always carry a backup mic and my own run-sheet to ensure reliability." },
-  { question: "How early should I book a sangeet anchor?", answer: "Sangeet dates (especially weekends in Nov-Feb) get booked 3-6 months in advance. It is best to secure your date as soon as the venue is finalized." }
-];
-
-export default function SangeetAnchorJaipur() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Sangeet Anchor in Jaipur",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "areaServed": {
-        "@type": "State",
-        "name": "Rajasthan",
-      },
-    },
-    "serviceType": "Sangeet Anchoring",
-    "description": "Professional sangeet anchoring services for weddings in Jaipur and Rajasthan. High-energy entertainment, performance coordination, and memorable celebrations.",
-  };
-
-  return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-purple-600 selection:text-white">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      {/* --- 1. HERO: THE CONCERT STAGE --- */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background - Concert/Stage Vibe */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/60 to-purple-900/20 z-10" />
+          {/* Replace with a photo of you on stage with lights */}
+          <img 
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop" 
+            className="w-full h-full object-cover scale-105 animate-slow-zoom" 
+            alt="Sangeet Anchor Jaipur"
+          />
+        </div>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-4 relative">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6">
-              Sangeet Anchor in Jaipur
-            </span>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Sangeet Anchor in <span className="text-amber-500">Jaipur</span>
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+            
+            <div className="inline-flex items-center gap-2 border border-purple-500/50 px-6 py-2 rounded-full bg-purple-900/20 backdrop-blur-xl mb-8">
+              <Mic2 className="w-4 h-4 text-purple-400" />
+              <span className="text-purple-300 text-xs uppercase tracking-[0.2em] font-bold">
+                The Showman
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 drop-shadow-2xl">
+              Turn Your Night <br /> <NeonText>Into A Concert.</NeonText>
             </h1>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto mb-8 px-4">
-              Make your sangeet night unforgettable with high-energy hosting that keeps the celebrations alive from the first beat to the last dance.
+            
+            <p className="text-gray-200 text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto mb-12">
+              Less "And next coming on stage..." <br />
+              More <span className="font-bold text-white">"MAKE SOME NOISE!"</span>
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            
+            <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all hover:scale-105 flex items-center gap-2">
-                  Book for Your Sangeet <ChevronRight className="w-5 h-5" />
+                <button className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_40px_rgba(255,255,255,0.4)]">
+                  Book The Hype
                 </button>
               </Link>
-              <a href="https://wa.me/917737877978?text=Hi%20Anchor%20Yash,%20I%20am%20looking%20for%20a%20Sangeet%20anchor." target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all hover:scale-105 flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
-                </button>
-              </a>
+              <button className="px-10 py-4 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-purple-900/20 transition-colors rounded-full flex items-center justify-center gap-3">
+                 <Play className="w-4 h-4 fill-current" /> Watch Showreel
+              </button>
             </div>
+
           </motion.div>
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
-              The Heart of Every <span className="text-amber-500">Sangeet Celebration</span>
-            </h2>
-            <div className="text-gray-400 text-lg leading-relaxed space-y-6">
-              <p>
-                A sangeet is more than just a pre-wedding function—it's where families come together, friendships are celebrated, and the bride and groom are showered with love through music and dance. In Jaipur's rich wedding culture, the sangeet holds special significance, often becoming the most memorable night of the wedding festivities.
-              </p>
-              <p>
-                As a sangeet anchor in Jaipur, I bring the perfect blend of energy, warmth, and entertainment coordination that transforms your sangeet from a series of performances into a cohesive celebration. With experience hosting over 700 events, including countless sangeet nights at palace venues, luxury hotels, and heritage properties across Rajasthan, I understand what makes these evenings truly special.
-              </p>
+      {/* --- 2. ENERGY METRICS --- */}
+      <div className="bg-[#0a0a0a] border-y border-neutral-800 py-12 overflow-hidden relative">
+         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10"></div>
+         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+             <VibeStat icon={<Flame className="w-6 h-6 text-orange-500" />} val="High" label="Voltage" />
+             <VibeStat icon={<Users className="w-6 h-6 text-blue-500" />} val="Engaged" label="Crowd" />
+             <VibeStat icon={<Music className="w-6 h-6 text-purple-500" />} val="Non-Stop" label="Beats" />
+             <VibeStat icon={<Star className="w-6 h-6 text-yellow-400" />} val="Filmy" label="Drama" />
+         </div>
+      </div>
+
+      {/* --- 3. THE SANGEET MENU (Segments) --- */}
+      <section className="py-32 container mx-auto px-4">
+        <SectionHeading subtitle="The Script" title="Not Just Dance Performances." align="center" />
+        <p className="text-center text-gray-400 max-w-2xl mx-auto mb-20 text-lg">
+           A Sangeet isn't just a talent show. It needs structure, humor, and interactive fillers to keep the energy peaking between performances.
+        </p>
+        
+        <div className="grid md:grid-cols-3 gap-6">
+           {/* Card 1 */}
+           <ShowCard 
+              title="The Roast" 
+              icon={<Flame className="w-8 h-8 text-orange-500" />}
+              desc="A lighthearted, scripted comedy segment roasting the Bride & Groom's quirks. We keep it family-friendly but hilarious."
+              tags={["Scripted", "Comedy", "Viral"]}
+           />
+           {/* Card 2 */}
+           <ShowCard 
+              title="The Awards Night" 
+              icon={<Trophy className="w-8 h-8 text-yellow-500" />}
+              desc="Forget 'Best Dancer'. We give awards for 'Late Lateef', 'Kanjoos Chacha', and 'Drama Queen'. Complete with acceptance speeches."
+              tags={["Interactive", "Props", "Fun"]}
+              highlight
+           />
+           {/* Card 3 */}
+           <ShowCard 
+              title="The Dance Battle" 
+              icon={<Zap className="w-8 h-8 text-purple-500" />}
+              desc="Ladke-wale vs Ladki-wale. I divide the room, assign captains, and host a high-decibel cheer-off."
+              tags={["High Energy", "Loud", "Crowd Work"]}
+           />
+        </div>
+      </section>
+
+      {/* --- 4. VISUAL PROOF (Gallery Style) --- */}
+      <section className="py-32 bg-[#080808] border-y border-neutral-900 relative">
+         <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+               
+               <div className="relative h-[600px] w-full group">
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl transform -rotate-2 opacity-50 group-hover:rotate-0 transition-all duration-500"></div>
+                  <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" className="relative w-full h-full object-cover rounded-2xl shadow-2xl rotate-2 group-hover:rotate-0 transition-all duration-500" alt="Stage Hosting" />
+                  
+                  {/* Floating Badge */}
+                  <div className="absolute bottom-8 right-8 bg-black/80 backdrop-blur-md border border-purple-500/50 p-6 rounded-xl">
+                      <p className="text-white font-bold text-xl">"Unmatched Energy"</p>
+                      <div className="flex gap-1 mt-2 text-yellow-400">
+                          <Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" />
+                      </div>
+                  </div>
+               </div>
+
+               <div>
+                  <SectionHeading subtitle="My Style" title="The Host with the Most." />
+                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                     I don't stand behind a podium. I own the stage. <br /><br />
+                     Whether it's hyping up a nervous solo performer, managing a technical glitch with a joke, or getting the shyest uncle to do the 'Naagin Dance', I ensure the flow is seamless.
+                  </p>
+                  
+                  <div className="space-y-6">
+                     <VibeCheck title="Scripting Support" desc="I help write the anchors' script for family members hosting segments." />
+                     <VibeCheck title="DJ Coordination" desc="I sync with the DJ for perfect entry music and punchline sound effects." />
+                     <VibeCheck title="After-Party Hype" desc="When the performances end, I turn into an MC to kickstart the open dance floor." />
+                  </div>
+               </div>
+
             </div>
-          </ScrollReveal>
+         </div>
+      </section>
+
+      {/* --- 5. SANGEET FAQ --- */}
+      <section className="py-24 max-w-4xl mx-auto px-4">
+        <SectionHeading subtitle="Backstage" title="The Technicals" align="center" />
+        <div className="space-y-4 mt-8">
+           <FAQItem question="Do you help with the Run-of-Show?" answer="Yes! I sit with your planner/choreographer to design the sequence of performances so the energy graph keeps going up." />
+           <FAQItem question="Can you co-host with a family member?" answer="Absolutely. I love co-hosting! I take the lead on the 'heavy lifting' and let the family member shine with inside jokes." />
+           <FAQItem question="Do you provide scripts?" answer="Yes. I provide a template script for the family and customize my own links based on the couple's story." />
+           <FAQItem question="What do you wear?" answer="I stick to the theme. Usually a sharp Tuxedo or a Designer Indo-Western/Sherwani depending on the decor." />
         </div>
       </section>
 
-      {/* What I Bring */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Sangeet Services</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              What I Bring to Your <span className="text-amber-500">Sangeet</span>
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {sangeetServices.map((service) => (
-            <StaggerItem key={service.title}>
-              <motion.div
-                className="h-full flex flex-col p-6 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                whileHover={{ y: -4 }}
-              >
-                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-500">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-display font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm flex-grow">{service.description}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* Event Types */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Event Types</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Sangeet Styles I <span className="text-amber-500">Anchor</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {eventTypes.map((event) => (
-              <StaggerItem key={event.title}>
-                <motion.div
-                  className="h-full flex flex-col p-6 bg-black border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h3 className="text-lg font-display font-bold mb-3 flex items-center gap-2">
-                    <Music className="w-5 h-5 text-amber-500" />
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm flex-grow">{event.description}</p>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Experience Stats */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Experience</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Why Families Choose <span className="text-amber-500">Anchor Yash</span>
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: Star, number: "700+", label: "Events Hosted" },
-            { icon: Heart, number: "300+", label: "Sangeet Nights" },
-            { icon: Users, number: "5+", label: "Years Experience" },
-            { icon: MapPin, number: "50+", label: "Venues Covered" },
-          ].map((stat) => (
-            <StaggerItem key={stat.label}>
-              <motion.div
-                className="text-center p-6 bg-neutral-900 border border-neutral-800 rounded-xl"
-                whileHover={{ scale: 1.05 }}
-              >
-                <stat.icon className="w-8 h-8 text-amber-500 mx-auto mb-4" />
-                <div className="text-3xl font-display font-bold text-amber-500 mb-2">{stat.number}</div>
-                <p className="text-gray-400 text-sm">{stat.label}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* Cities */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Coverage</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Sangeet Anchoring Across <span className="text-amber-500">Rajasthan</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {cities.map((city) => (
-              <StaggerItem key={city}>
-                <motion.div
-                  className="px-6 py-2 bg-black border border-neutral-800 rounded-full text-sm font-medium hover:border-amber-500 hover:text-amber-500 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {city}
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-display font-bold text-center mb-12">Sangeet Hosting FAQs</h2>
-        <div className="space-y-2">
-          {sangeetFAQs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-neutral-900 border-t border-neutral-800">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Ready to Make Your Sangeet <span className="text-amber-500">Unforgettable?</span>
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Let's create a sangeet night that your family will talk about for years. Book a consultation to discuss your vision.
+      {/* --- 6. CTA --- */}
+      <section className="py-32 bg-gradient-to-r from-purple-800 to-indigo-900 text-center relative overflow-hidden">
+         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+         <div className="container mx-auto px-4 relative z-10">
+            <h2 className="text-4xl md:text-7xl font-display font-black mb-8 text-white">The Spotlight is Waiting.</h2>
+            <p className="text-purple-200 max-w-2xl mx-auto mb-12 text-xl font-medium">
+               Don't let your Sangeet be a snooze-fest. <br /> Let's make it a blockbuster.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2">
-                  Book Your Sangeet Anchor <ChevronRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <a href="tel:+917737877978">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Call Now
-                </button>
-              </a>
-            </div>
-            <p className="text-gray-500 text-sm mt-8">
-              Also explore our <Link href="/wedding-anchor-jaipur" className="text-amber-500 hover:underline">wedding anchoring</Link> and <Link href="/sangeet-anchor-jaipur" className="text-amber-500 hover:underline">other anchoring services</Link>.
-            </p>
-          </ScrollReveal>
-        </div>
+            <Link href="/contact">
+               <button className="px-12 py-5 bg-white text-purple-900 font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+                  Check Sangeet Dates
+               </button>
+            </Link>
+         </div>
       </section>
 
     </div>
   );
 }
+
+// --- SUB COMPONENTS ---
+
+const VibeStat = ({ icon, val, label }) => (
+    <div className="flex flex-col items-center justify-center gap-2 group">
+        <div className="bg-[#111] p-4 rounded-full border border-neutral-800 group-hover:border-purple-500 transition-colors">
+            {icon}
+        </div>
+        <h3 className="text-3xl font-black text-white">{val}</h3>
+        <p className="text-gray-500 text-xs uppercase tracking-widest">{label}</p>
+    </div>
+);
+
+const ShowCard = ({ title, icon, desc, tags, highlight }) => (
+    <div className={`p-8 rounded-3xl border transition-all duration-300 group hover:-translate-y-2 ${highlight ? 'bg-[#0f0518] border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.1)]' : 'bg-[#0a0a0a] border-neutral-800 hover:border-purple-500/30'}`}>
+        <div className="mb-6 bg-black w-16 h-16 rounded-2xl flex items-center justify-center border border-neutral-800 group-hover:border-purple-500 transition-colors">
+           {icon}
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+        <p className="text-gray-400 text-sm leading-relaxed mb-6">{desc}</p>
+        <div className="flex flex-wrap gap-2">
+            {tags.map(tag => (
+                <span key={tag} className="text-[10px] uppercase font-bold tracking-wider bg-white/5 px-3 py-1 rounded-full text-gray-300 border border-white/5">
+                    {tag}
+                </span>
+            ))}
+        </div>
+    </div>
+);
+
+const VibeCheck = ({ title, desc }) => (
+    <div className="flex gap-4 group">
+       <div className="mt-1 flex-shrink-0">
+          <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
+             <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+          </div>
+       </div>
+       <div>
+          <h4 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">{title}</h4>
+          <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+       </div>
+    </div>
+);
+
+const FAQItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-xl overflow-hidden transition-all duration-300 hover:border-purple-500/30">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-between w-full p-6 text-left hover:bg-neutral-900 transition-colors"
+      >
+        <span className="font-bold text-white text-lg">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-purple-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <p className="p-6 pt-0 text-gray-400 leading-relaxed text-sm font-light">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};

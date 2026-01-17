@@ -2,333 +2,337 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ChevronRight, MessageCircle, Briefcase, Award, Users, Target, Phone, Star, MapPin, Mic, Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Mic2, Briefcase, Award, TrendingUp, Users, ArrowRight, 
+  CheckCircle, Building2, Globe, ChevronDown, FileText, 
+  MonitorPlay, Calendar, MapPin 
+} from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
-  >
+// --- REUSABLE COMPONENTS ---
+const TextureText = ({ children, className }) => (
+  <span className={`bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-500 ${className}`}>
     {children}
-  </motion.div>
+  </span>
 );
 
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
+const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
+  <div className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <p className="text-blue-500 text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-3 justify-center md:justify-start">
+        {align === "center" && <span className="w-8 h-[1px] bg-blue-500"></span>}
+        {subtitle}
+        {align !== "center" && <span className="w-12 h-[1px] bg-blue-500"></span>}
+        {align === "center" && <span className="w-8 h-[1px] bg-blue-500"></span>}
+      </p>
+      <h2 className={`text-4xl md:text-6xl font-display font-black leading-tight ${dark ? 'text-black' : 'text-white'}`}>
+        {title}
+      </h2>
+    </motion.div>
+  </div>
 );
 
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
-    }}
-  >
-    {children}
-  </motion.div>
-);
-
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function CorporateAnchor() {
   return (
-    <div className="border-b border-neutral-800">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-4 text-left group"
-      >
-        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-amber-500' : 'text-gray-300 group-hover:text-amber-500'}`}>
-          {question}
-        </span>
-        {isOpen ? <Minus className="w-5 h-5 text-amber-500" /> : <Plus className="w-5 h-5 text-gray-500" />}
-      </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-4 text-gray-400 text-sm leading-relaxed">{answer}</p>
-      </motion.div>
-    </div>
-  );
-};
-
-// --- DATA ---
-const corporateServices = [
-  { icon: Briefcase, title: "Conference Hosting", description: "Professional emceeing for conferences, seminars, and business summits with polished delivery" },
-  { icon: Award, title: "Award Ceremonies", description: "Elegant hosting for recognition events, annual awards, and achievement celebrations" },
-  { icon: Users, title: "Team Building Events", description: "Energetic facilitation of team activities, offsites, and employee engagement programs" },
-  { icon: Target, title: "Product Launches", description: "Dynamic anchoring for product unveilings, brand launches, and promotional events" },
-];
-
-const eventTypes = [
-  { title: "Annual Conferences", description: "Multi-session corporate conferences with keynote introductions, panel moderation, and seamless session transitions." },
-  { title: "R&R Events", description: "Recognition and rewards ceremonies that celebrate achievements while maintaining corporate professionalism with entertainment." },
-  { title: "Town Halls & AGMs", description: "Formal corporate gatherings requiring precise timing, professional delivery, and audience management expertise." },
-  { title: "Corporate Celebrations", description: "Milestone celebrations, anniversary events, and festive gatherings that balance professionalism with celebration." },
-  { title: "Dealer & Partner Meets", description: "Business networking events, dealer conferences, and partner appreciation events with engaging hosting." },
-  { title: "Training & Workshops", description: "Interactive facilitation for corporate training sessions, workshops, and skill development programs." },
-];
-
-const clients = ["IT Companies", "Manufacturing", "Hospitality", "Healthcare", "Finance & Banking", "Real Estate", "Education", "Retail", "Pharmaceuticals", "Startups"];
-
-const corporateFAQs = [
-  { question: "Have you hosted formal Corporate Award Nights?", answer: "Yes, I have hosted over 100+ formal events including R&R Awards, CEO Summits, and Government conclaves. I maintain strict professional decorum and stage etiquette." },
-  { question: "Can you conduct Team Building activities?", answer: "I am a specialist Game Show Host. I conduct energy-boosting ice-breakers and team-building challenges that improve employee morale and collaboration." },
-  { question: "Do you require a script from the company?", answer: "I am flexible. I can strictly follow your corporate script for compliance, or I can provide professional improvisation if you want a more natural flow." },
-  { question: "How do you handle VIPs and Dignitaries on stage?", answer: "I have extensive experience managing VIP protocol, ensuring correct names, titles, and order of precedence are followed during lamp lighting and speeches." },
-  { question: "Can you host Product Launches in Jaipur?", answer: "Yes, I host Product Launches for automobiles, tech, and FMCG brands, ensuring the product reveal is high-energy and impactful." },
-  { question: "Do you host Mall Activations and Roadshows?", answer: "Yes, I am known for my high energy in Mall Activations (Malls in Jaipur/Delhi) to gather crowds and drive customer engagement for brands." },
-  { question: "What attire do you wear for corporate events?", answer: "I adhere to strict grooming standards. I wear formal Tuxedos or Suits for galas, and smart casuals for team-building offsites, matching your brand image." },
-  { question: "Can you anchor in fluent English for international delegates?", answer: "Yes, I am fluent in global-standard English and can easily host events with international delegates and expats." },
-  { question: "Do you raise a GST invoice for corporate billing?", answer: "Yes, we provide proper GST invoices for all corporate bookings to ensure smooth vendor registration and payment processing." },
-  { question: "Can you manage the 'Fun' part after the formal conference?", answer: "Absolutely. I can seamlessly switch roles from a 'Formal Emcee' during the day to a 'Gala Night Host' in the evening to make the party unforgettable." },
-  { question: "Do you host Dealer Meets and distributor conferences?", answer: "Yes, I connect well with dealer networks, mixing business talk with engaging entertainment to keep the partners motivated." },
-  { question: "How much experience do you have with Corporate Events?", answer: "I have worked with top brands like Tata, Reliance, and government bodies, delivering over 300+ successful corporate shows." }
-];
-
-export default function CorporateEventAnchorJaipur() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Corporate Event Anchor in Jaipur",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "areaServed": "Jaipur, Rajasthan",
-    },
-    "serviceType": "Corporate Event Anchoring",
-    "description": "Professional corporate event anchoring services for conferences, award ceremonies, product launches, and business events in Jaipur.",
-  };
-
-  return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-blue-600 selection:text-white">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      {/* --- 1. CORPORATE HERO SECTION --- */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background - Professional/Stage Vibe */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-blue-900/10 z-10" />
+          <img 
+            src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop" 
+            className="w-full h-full object-cover opacity-50 grayscale" 
+            alt="Corporate Event Anchor Jaipur"
+          />
+        </div>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
+        <div className="relative z-20 container mx-auto px-4 mt-20">
+          <div className="max-w-5xl">
+            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+              
+              <div className="inline-flex items-center gap-2 border border-blue-500/30 px-5 py-2 rounded-full bg-blue-900/10 backdrop-blur-md mb-8">
+                <Building2 className="w-4 h-4 text-blue-400" />
+                <span className="text-blue-200 text-xs uppercase tracking-[0.2em] font-bold">
+                  Corporate & Business Events
+                </span>
+              </div>
+
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 tracking-tight">
+                Command <br /> <TextureText>The Room.</TextureText>
+              </h1>
+              
+              <p className="text-gray-400 text-xl md:text-2xl font-light leading-relaxed max-w-2xl mb-12 border-l-4 border-blue-600 pl-8">
+                When the CEO speaks, the audience should listen. <br />
+                I bridge the gap between your brand's message and the audience's attention span.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-5">
+                <Link href="/contact">
+                  <button className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-blue-50 transition-colors rounded-full shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                    Book for Summit
+                  </button>
+                </Link>
+                <button className="px-10 py-4 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white/10 transition-colors rounded-full flex items-center gap-3">
+                   <Globe className="w-4 h-4" /> Download Profile
+                </button>
+              </div>
+
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- 2. THE BRAND TICKER (Trusted By) --- */}
+      <div className="border-y border-white/10 bg-[#0a0a0a] overflow-hidden py-8">
+         <div className="container mx-auto px-4 mb-4">
+            <p className="text-center text-gray-500 text-[10px] uppercase tracking-[0.3em]">Trusted by Global Brands</p>
+         </div>
+         <div className="relative flex overflow-x-hidden group">
+            <div className="animate-marquee whitespace-nowrap flex gap-20 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+               {/* Placeholders for logos - Replace with real brand logos */}
+               <span className="text-2xl font-black text-white/40">SAMSUNG</span>
+               <span className="text-2xl font-black text-white/40">MARRIOTT</span>
+               <span className="text-2xl font-black text-white/40">TATA MOTORS</span>
+               <span className="text-2xl font-black text-white/40">HDFC BANK</span>
+               <span className="text-2xl font-black text-white/40">JCB</span>
+               <span className="text-2xl font-black text-white/40">TEDx</span>
+               <span className="text-2xl font-black text-white/40">HYUNDAI</span>
+               <span className="text-2xl font-black text-white/40">SAMSUNG</span>
+               <span className="text-2xl font-black text-white/40">MARRIOTT</span>
+               <span className="text-2xl font-black text-white/40">TATA MOTORS</span>
+            </div>
+         </div>
+      </div>
+
+      {/* --- 3. THE "WHY ME" SECTION (Stats & Authority) --- */}
+      <section className="py-32 container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+           <div>
+              <SectionHeading subtitle="The ROI" title="Precision. Authority. Engagement." />
+              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                 Corporate events are not about "shouting into a mic." They are about <strong className="text-white">Brand Representation</strong>.
+              </p>
+              <div className="space-y-8">
+                 <CheckItem title="Brand Guardian" desc="I represent your brand on stage. I dress the part (Tuxedos/Suits), speak the language, and adhere to your company guidelines strictly." />
+                 <CheckItem title="Crisis Management" desc="Mic failure? Keynote speaker late? I fill the dead air seamlessly with intelligent engagement so the audience never notices a glitch." />
+                 <CheckItem title="Audience Retention" desc="I use sharp wit and interactive segments to keep the energy high during long conferences, ensuring your message actually lands." />
+              </div>
+           </div>
+           
+           {/* Stats Grid */}
+           <div className="grid grid-cols-2 gap-4">
+              <StatCard num="500+" label="Corporate Shows" />
+              <StatCard num="50+" label="Brands Served" />
+              <StatCard num="100%" label="English Fluency" />
+              <StatCard num="10yr" label="Stage Experience" />
+           </div>
+        </div>
+      </section>
+
+      {/* --- 4. VIDEO SHOWCASE (Dark Cinema) --- */}
+      <section className="py-24 bg-[#080808] border-y border-neutral-900">
+         <div className="container mx-auto px-4 text-center">
+            <SectionHeading subtitle="Watch The Reel" title="In Action." align="center" />
+         </div>
+         
+         <div className="container mx-auto px-4 mt-10">
+            <div className="relative aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl group cursor-pointer">
+               <img src="https://images.unsplash.com/photo-1475721027767-f42a66a010d9?w=1200&q=80" className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700" alt="Showreel Cover" />
+               <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                     <MonitorPlay className="w-8 h-8 text-white fill-current" />
+                  </div>
+               </div>
+               <div className="absolute bottom-8 left-8">
+                  <p className="text-white font-bold text-xl">Corporate Showreel 2025</p>
+                  <p className="text-blue-400 text-sm uppercase tracking-widest">Highlights & Testimonials</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      {/* --- 5. SERVICES GRID (Expanded) --- */}
+      <section className="py-32 container mx-auto px-4">
+        <SectionHeading subtitle="Capabilities" title="Formats I Master." align="center" />
         
-        <div className="container mx-auto px-4 relative">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6">
-              Corporate Event Anchor
-            </span>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Corporate Event Anchor in <span className="text-amber-500">Jaipur</span>
-            </h1>
-            <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mb-8 px-4">
-              Elevate your corporate events with professional anchoring that combines polished delivery, precise timing, and engaging stage presence.
+        <div className="grid md:grid-cols-3 gap-6 mt-16">
+           <CorpCard 
+             icon={<Award className="w-8 h-8 text-blue-400" />}
+             title="Award Nights"
+             desc="High-energy hosting that keeps the momentum going through 50+ award categories without letting the audience doze off."
+           />
+           <CorpCard 
+             icon={<TrendingUp className="w-8 h-8 text-blue-400" />}
+             title="Conferences & Summits"
+             desc="Formal, articulate, and script-perfect. I moderate panels, introduce keynote speakers, and handle Q&A sessions with intellect."
+           />
+           <CorpCard 
+             icon={<Users className="w-8 h-8 text-blue-400" />}
+             title="Product Launches"
+             desc="Building the hype before the reveal. I work with light & sound teams to create a 'Steve Jobs' moment for your product."
+           />
+           <CorpCard 
+             icon={<Mic2 className="w-8 h-8 text-blue-400" />}
+             title="Gala Dinners"
+             desc="The perfect blend of formal and fun. Networking games, light engagement, and ensuring the VIPs feel honored."
+           />
+           <CorpCard 
+             icon={<Building2 className="w-8 h-8 text-blue-400" />}
+             title="Dealer Meets"
+             desc="Motivating your sales network. High-octane anchoring that leaves your partners feeling valued and charged up."
+           />
+           <CorpCard 
+             icon={<Globe className="w-8 h-8 text-blue-400" />}
+             title="Team Building"
+             desc="Interactive activities that break siloes. Turning a group of colleagues into a cohesive team through fun engagement."
+           />
+        </div>
+      </section>
+
+      {/* --- 6. THE PROCESS TIMELINE (New Section) --- */}
+      <section className="py-32 bg-[#080808]">
+         <div className="container mx-auto px-4">
+            <SectionHeading subtitle="Workflow" title="From Brief to Applause." align="center" />
+            
+            <div className="mt-20 relative max-w-4xl mx-auto">
+               {/* Vertical Line */}
+               <div className="absolute left-0 md:left-1/2 top-0 h-full w-[2px] bg-neutral-800 -translate-x-1/2 hidden md:block"></div>
+               
+               <TimelineItem 
+                 step="01" 
+                 title="The Briefing" 
+                 desc="We hop on a call. I understand your brand tone, the audience profile, and the key message you want to deliver." 
+                 side="left"
+               />
+               <TimelineItem 
+                 step="02" 
+                 title="Scripting & Flow" 
+                 desc="I don't just show up. I help refine the run-of-show and prepare a script that balances information with entertainment." 
+                 side="right"
+               />
+               <TimelineItem 
+                 step="03" 
+                 title="The Sound Check" 
+                 desc="I arrive early. I check the mic, the lights, and the stage entry. I sync with the console team to ensure zero technical glitches." 
+                 side="left"
+               />
+               <TimelineItem 
+                 step="04" 
+                 title="The Execution" 
+                 desc="I take the stage. I manage the time, handle the energy, and deliver a seamless experience that makes you look good." 
+                 side="right"
+               />
+            </div>
+         </div>
+      </section>
+
+      {/* --- 7. CORPORATE FAQ (New Section) --- */}
+      <section className="py-32 max-w-4xl mx-auto px-4">
+        <SectionHeading subtitle="Details" title="Vendor Questions" />
+        <div className="space-y-4 mt-8">
+           <FAQItem question="Do you provide a GST Invoice?" answer="Yes, I am a registered entity and provide a fully compliant GST invoice for all corporate bookings." />
+           <FAQItem question="Are you comfortable with teleprompters?" answer="Absolutely. For high-stakes summits, I am trained to read from teleprompters naturally while maintaining eye contact with the audience." />
+           <FAQItem question="Do you travel for events?" answer="Yes. While based in Jaipur, 60% of my corporate work happens in Delhi, Mumbai, and Bangalore. Travel logistics are handled by the client." />
+           <FAQItem question="Can you moderate panel discussions?" answer="Yes. I research the speakers beforehand to ask relevant, insightful questions that add value to the discussion." />
+        </div>
+      </section>
+
+      {/* --- 8. FINAL CTA --- */}
+      <section className="py-32 bg-blue-700 text-white text-center relative overflow-hidden">
+         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+         <div className="container mx-auto px-4 relative z-10">
+            <h2 className="text-4xl md:text-6xl font-display font-black mb-8">Ready to Elevate Your Event?</h2>
+            <p className="text-blue-100 max-w-2xl mx-auto mb-12 text-xl font-light">
+               Don't risk your brand reputation with an amateur. <br /> Hire a host who understands business.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all hover:scale-105 flex items-center gap-2">
-                  Book for Your Event <ChevronRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <a href="https://wa.me/917737877978?text=Hi%20Anchor%20Yash,%20I%20want%20to%20inquire%20about%20corporate%20anchoring." target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all hover:scale-105 flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
-                </button>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
-              Professional Anchoring for <span className="text-amber-500">Business Excellence</span>
-            </h2>
-            <div className="text-gray-400 text-lg leading-relaxed space-y-6">
-              <p>
-                Corporate events demand a different kind of anchoring—one that balances professionalism with engagement, precision with personality. In Jaipur's growing business landscape, companies need anchors who understand corporate culture, can handle formal protocols, and still keep audiences attentive throughout long conference days or celebratory evenings.
-              </p>
-              <p>
-                With experience hosting over 70 corporate clients across industries—from IT giants to manufacturing leaders, hospitality brands to financial institutions—I bring a refined approach to business event hosting. Whether it's a high-stakes product launch, an annual conference for 500+ attendees, or an intimate leadership summit, the anchoring adapts to reflect your brand's values and event objectives.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Corporate Services */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Services</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Corporate Anchoring <span className="text-amber-500">Services</span>
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {corporateServices.map((service) => (
-            <StaggerItem key={service.title}>
-              <motion.div
-                className="h-full flex flex-col p-6 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                whileHover={{ y: -4 }}
-              >
-                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-500">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-display font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm flex-grow">{service.description}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* Event Types */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Event Types</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Corporate Events I <span className="text-amber-500">Anchor</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {eventTypes.map((event) => (
-              <StaggerItem key={event.title}>
-                <motion.div
-                  className="h-full flex flex-col p-6 bg-black border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h3 className="text-lg font-display font-bold mb-3 flex items-center gap-2">
-                    <Mic className="w-5 h-5 text-amber-500" />
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm flex-grow">{event.description}</p>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Experience Stats */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Experience</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Trusted by <span className="text-amber-500">Businesses</span>
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: Star, number: "70+", label: "Corporate Clients" },
-            { icon: Briefcase, number: "200+", label: "Business Events" },
-            { icon: Users, number: "50,000+", label: "Audience Reached" },
-            { icon: MapPin, number: "10+", label: "Industries Served" },
-          ].map((stat) => (
-            <StaggerItem key={stat.label}>
-              <motion.div className="text-center p-6 bg-neutral-900 border border-neutral-800 rounded-xl" whileHover={{ scale: 1.05 }}>
-                <stat.icon className="w-8 h-8 text-amber-500 mx-auto mb-4" />
-                <div className="text-3xl font-display font-bold text-white mb-2">{stat.number}</div>
-                <p className="text-gray-400 text-sm">{stat.label}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* Industries Served */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Industries</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Sectors I've <span className="text-amber-500">Worked With</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {clients.map((client) => (
-              <StaggerItem key={client}>
-                <motion.div
-                  className="px-6 py-3 bg-black border border-neutral-800 rounded-full text-sm font-medium hover:border-amber-500 hover:text-amber-500 transition-all duration-300 cursor-default"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {client}
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-display font-bold text-center mb-12">Corporate Event FAQs</h2>
-        <div className="space-y-2">
-          {corporateFAQs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-neutral-900 border-t border-neutral-800">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Elevate Your Next <span className="text-amber-500">Corporate Event</span>
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Let's discuss how professional anchoring can enhance your business event. Share your requirements for a customized approach.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2">
-                  Get in Touch <ChevronRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <a href="tel:+917737877978">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Call Now
-                </button>
-              </a>
-            </div>
-            <p className="text-gray-500 text-sm mt-8">
-              Also explore our <Link href="/wedding-anchor-jaipur" className="text-amber-500 hover:underline">wedding anchoring</Link> and <Link href="/event-management-company-jaipur" className="text-amber-500 hover:underline">event management services</Link>.
-            </p>
-          </ScrollReveal>
-        </div>
+            <Link href="/contact">
+               <button className="px-12 py-5 bg-white text-blue-900 font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl">
+                  Check Availability
+               </button>
+            </Link>
+         </div>
       </section>
 
     </div>
   );
 }
+
+// --- SUB COMPONENTS ---
+
+const StatCard = ({ num, label }) => (
+  <div className="bg-[#111] p-6 rounded-xl border border-neutral-800 text-center hover:border-blue-500/50 transition-colors">
+     <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">{num}</h3>
+     <p className="text-gray-500 text-[10px] uppercase tracking-widest">{label}</p>
+  </div>
+);
+
+const CorpCard = ({ icon, title, desc }) => (
+  <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl hover:border-blue-500/50 transition-colors group hover:-translate-y-2 duration-300">
+     <div className="mb-6 bg-neutral-900 w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-blue-900/20 transition-colors text-blue-500">
+        {icon}
+     </div>
+     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{title}</h3>
+     <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+  </div>
+);
+
+const CheckItem = ({ title, desc }) => (
+  <div className="flex gap-5 group">
+     <div className="mt-1 flex-shrink-0">
+        <CheckCircle className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
+     </div>
+     <div>
+        <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
+        <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+     </div>
+  </div>
+);
+
+const TimelineItem = ({ step, title, desc, side }) => (
+  <div className={`flex flex-col md:flex-row items-center gap-8 mb-16 relative ${side === 'right' ? 'md:flex-row-reverse' : ''}`}>
+      {/* Dot */}
+      <div className="absolute left-4 md:left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full md:-translate-x-1/2 shadow-[0_0_20px_rgba(59,130,246,0.5)] z-10 hidden md:block"></div>
+      
+      {/* Content */}
+      <div className={`w-full md:w-1/2 p-8 bg-[#111] border border-neutral-800 rounded-2xl hover:border-blue-500/30 transition-colors ${side === 'right' ? 'text-left md:text-left' : 'text-left md:text-right'}`}>
+         <span className="text-4xl font-display font-bold text-blue-900 mb-4 block">{step}</span>
+         <h3 className="text-2xl font-bold text-white mb-3">{title}</h3>
+         <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+      </div>
+      <div className="w-full md:w-1/2 hidden md:block"></div>
+  </div>
+);
+
+const FAQItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-500/30">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-between w-full p-6 text-left hover:bg-neutral-900 transition-colors"
+      >
+        <span className="font-bold text-white text-lg">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-blue-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <p className="p-6 pt-0 text-gray-400 leading-relaxed text-sm font-light">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};

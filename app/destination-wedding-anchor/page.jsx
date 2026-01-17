@@ -1,339 +1,319 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { MapPin, Crown, Star, Users, Phone, MessageCircle, Sparkles, Building, Heart } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Plane, MapPin, Sun, Moon, Wine, Music, 
+  Palmtree, ArrowRight, Globe, Anchor, CheckCircle, 
+  ChevronDown, Luggage
+} from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
+// --- REUSABLE COMPONENTS ---
+const GoldTextureText = ({ children, className }) => (
+  <span 
+    className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
+    style={{ 
+      backgroundImage: "url('/gold-texture.png')", 
+      backgroundColor: "#D4AF37", 
     }}
   >
     {children}
-  </motion.div>
+  </span>
 );
 
-// --- DATA ---
-const destinationVenues = [
-  {
-    icon: Building,
-    title: "Palace Weddings",
-    description: "Host at iconic heritage palaces like City Palace, Taj Lake Palace, and Rambagh Palace with royal grandeur.",
-  },
-  {
-    icon: MapPin,
-    title: "Udaipur Celebrations",
-    description: "The Venice of the East offers breathtaking lakeside venues perfect for fairy-tale destination weddings.",
-  },
-  {
-    icon: Crown,
-    title: "Jaipur Heritage",
-    description: "Pink City's majestic forts and havelis provide the perfect backdrop for unforgettable celebrations.",
-  },
-  {
-    icon: Sparkles,
-    title: "Jodhpur Grandeur",
-    description: "Blue City's stunning Mehrangarh Fort and Umaid Bhawan create magical wedding memories.",
-  },
-];
+const SectionHeading = ({ subtitle, title, align = "left" }) => (
+  <div className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-3 justify-center md:justify-start">
+        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+        <Plane className="w-3 h-3 text-[#D4AF37]" />
+        {subtitle}
+        {align !== "center" && <span className="w-12 h-[1px] bg-[#D4AF37]"></span>}
+        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+      </p>
+      <h2 className="text-4xl md:text-6xl font-display font-black text-white leading-tight">
+        {title}
+      </h2>
+    </motion.div>
+  </div>
+);
 
-const whyChoose = [
-  "Experience hosting 200+ destination weddings across Rajasthan",
-  "Fluent in Hindi, English, and familiar with regional dialects",
-  "Understanding of palace protocols and heritage venue requirements",
-  "Coordination with local vendors and event teams",
-  "Flexible with multi-day wedding celebrations",
-  "Professional handling of diverse guest demographics",
-];
-
-const faqs = [
-  {
-    question: "What makes a destination wedding anchor different from a regular wedding host?",
-    answer: "A destination wedding anchor understands the unique dynamics of out-of-town celebrations—managing diverse guest groups, coordinating with unfamiliar venues, adapting to heritage location acoustics, and keeping the energy high across multi-day events. I bring experience from 200+ destination weddings across Rajasthan's most prestigious venues.",
-  },
-  {
-    question: "Which palace venues in Rajasthan do you host weddings at?",
-    answer: "I've hosted weddings at Rajasthan's finest heritage properties including City Palace Jaipur, Taj Lake Palace Udaipur, Rambagh Palace, Umaid Bhawan Palace Jodhpur, Oberoi Rajvilas, Fairmont Jaipur, and numerous boutique heritage havelis.",
-  },
-  {
-    question: "Do you travel for destination weddings outside Rajasthan?",
-    answer: "Absolutely. While Rajasthan is my home base and specialty, I regularly travel for destination weddings across India—Goa, Kerala, Himachal, and beyond. Travel arrangements and accommodation are discussed during booking.",
-  },
-  {
-    question: "How do you handle multi-day wedding events?",
-    answer: "Destination weddings often span 3-5 days. I maintain consistent energy while adapting the tone for each function—playful for mehendi, high-energy for sangeet, emotional for the pheras, and celebratory for the reception.",
-  },
-  {
-    question: "What languages do you host in for destination weddings?",
-    answer: "I'm fluent in Hindi and English, which covers most destination wedding requirements. For NRI weddings or events with international guests, I seamlessly blend both languages to ensure everyone feels included.",
-  },
-];
-
-export default function DestinationWeddingAnchorRajasthan() {
-  const whatsappMessage = encodeURIComponent(
-    "Hi Anchor Yash, I'm planning a destination wedding in Rajasthan and would like to discuss hosting services."
-  );
-
-  // Schema for Destination Wedding Service
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Destination Wedding Anchor Services Rajasthan",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Jaipur",
-        "addressRegion": "Rajasthan",
-        "addressCountry": "IN"
-      }
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "Rajasthan",
-    },
-    "description": "Professional destination wedding anchor and palace wedding host services across Rajasthan including Jaipur, Udaipur, and Jodhpur.",
-    "serviceType": "Destination Wedding Anchoring",
-  };
-
+export default function DestinationAnchor() {
   return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      {/* --- 1. HERO: THE JETSETTER VIBE --- */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video/Image of a Palace or Beach */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#050505] z-10" />
+          <img 
+            src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2070&auto=format&fit=crop" 
+            className="w-full h-full object-cover scale-110 animate-slow-zoom" 
+            alt="Destination Wedding Anchor"
+          />
+        </div>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-4 relative text-center">
-          <ScrollReveal>
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">
-              Destination Wedding Specialist
-            </span>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mt-4 mb-6">
-              Destination Wedding Anchor <span className="text-amber-500">Rajasthan</span>
+        <div className="relative z-20 container mx-auto px-4 text-center mt-20">
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+            
+            <div className="inline-flex items-center gap-3 border border-white/20 px-6 py-2 rounded-full bg-black/40 backdrop-blur-xl mb-8">
+              <Globe className="w-4 h-4 text-[#D4AF37] animate-pulse" />
+              <span className="text-white text-xs uppercase tracking-[0.2em] font-bold">
+                Passport Ready • Global Events
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 drop-shadow-2xl">
+              Have Mic, <br /> <GoldTextureText>Will Travel.</GoldTextureText>
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              Palace wedding host in Jaipur, Udaipur, and Jodhpur. Bringing royal celebrations to life at Rajasthan's most iconic heritage venues.
+            
+            <p className="text-white text-lg md:text-2xl font-light leading-relaxed max-w-3xl mx-auto mb-12 drop-shadow-lg">
+              From the royal palaces of Udaipur to the white sands of Goa. <br className="hidden md:block" />
+              I don't just host your wedding; I curate the 3-day experience.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={`https://wa.me/917737877978?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-full transition-all hover:scale-105">
-                  <MessageCircle className="w-5 h-5" /> Discuss Your Wedding
-                </button>
-              </a>
+            <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <Link href="/contact">
-                <button className="flex items-center gap-2 px-8 py-4 border border-neutral-700 hover:border-amber-500 text-white font-bold rounded-full transition-all hover:scale-105">
-                  <Phone className="w-5 h-5" /> Contact Now
+                <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                  Check Travel Dates
                 </button>
               </Link>
             </div>
-          </ScrollReveal>
+
+          </motion.div>
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-8">
-              Why Rajasthan for Your <span className="text-amber-500">Dream Wedding?</span>
-            </h2>
-            <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
-              <p>
-                Rajasthan isn't just a destination—it's an experience. From the pink sandstone walls of Jaipur to the shimmering lakes of Udaipur and the blue-hued streets of Jodhpur, every corner of this royal state tells a story. When couples choose Rajasthan for their destination wedding, they're choosing a backdrop that transforms their celebration into a fairy tale.
-              </p>
-              <p>
-                As a destination wedding anchor with deep roots in Rajasthan, I understand what makes these celebrations special. It's not just about hosting an event—it's about honoring the grandeur of palace venues, respecting heritage protocols, and creating moments that match the magnificence of your surroundings. Having hosted over 200 destination weddings across the state, I bring local expertise combined with professional hosting that elevates every function.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* --- 2. THE DESTINATION TICKER --- */}
+      <div className="bg-[#D4AF37] text-black py-4 overflow-hidden">
+         <div className="animate-marquee whitespace-nowrap flex gap-12 font-bold uppercase tracking-widest text-sm">
+            <span>Udaipur • Jodhpur • Jaipur • Goa • Dubai • Thailand • Bali • Mussoorie • Kerala •</span>
+            <span>Udaipur • Jodhpur • Jaipur • Goa • Dubai • Thailand • Bali • Mussoorie • Kerala •</span>
+            <span>Udaipur • Jodhpur • Jaipur • Goa • Dubai • Thailand • Bali • Mussoorie • Kerala •</span>
+         </div>
+      </div>
 
-      {/* Destination Venues */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Premier <span className="text-amber-500">Destination Venues</span>
-            </h2>
-            <p className="text-gray-400">Experienced in hosting at Rajasthan's most prestigious wedding destinations</p>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {destinationVenues.map((venue, index) => (
-            <StaggerItem key={index}>
-              <div className="h-full bg-neutral-900 border border-neutral-800 rounded-xl p-6 hover:border-amber-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-500">
-                  <venue.icon className="w-6 h-6" />
-                </div>
-                <h3 className="font-display font-bold text-lg mb-2">{venue.title}</h3>
-                <p className="text-gray-400 text-sm">{venue.description}</p>
+      {/* --- 3. THE "CRUISE DIRECTOR" PHILOSOPHY --- */}
+      <section className="py-32 container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+           <div>
+              <SectionHeading subtitle="The Role" title="The Social Glue." />
+              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                 Destination weddings are different. Guests are tired from travel, families are meeting for the first time, and the itinerary is packed.
+              </p>
+              <p className="text-gray-400 text-lg leading-relaxed mb-10 border-l-4 border-[#D4AF37] pl-6">
+                 I act as the <strong>"Social Glue"</strong> that binds the two families together. From the Welcome Lunch to the After-Party, I ensure the energy never drops.
+              </p>
+              <div className="space-y-8">
+                 <FeatureRow icon={<Luggage />} title="Logistics Aware" desc="I understand hotel logistics, room check-in delays, and how to keep guests entertained while things get set up." />
+                 <FeatureRow icon={<Wine />} title="The Ice-Breaker" desc="I turn awkward 'Hello's' into 'Let's take a shot' moments within the first 2 hours." />
               </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* The Experience */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-8">
-              The Destination Wedding <span className="text-amber-500">Experience</span>
-            </h2>
-            <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
-              <p>
-                Destination weddings demand more than just a good microphone voice. When families travel from across India—and often across the world—to celebrate at a Rajasthani palace, every element needs to come together perfectly.
-              </p>
-              <p>
-                The challenge with heritage venues is unique. Palace acoustics differ from conventional banquet halls. Guest demographics span multiple generations and sometimes multiple countries. Ceremonies need to respect both tradition and the venue's heritage character. I've learned to navigate these nuances through years of experience.
-              </p>
-              <p>
-                My coordination extends beyond the stage. I work closely with wedding planners, venue teams, and technical crews to ensure smooth transitions between functions. For destination weddings, this backstage coordination is just as important as what happens in front of the guests.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Why Choose */}
-      <section className="py-20 container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Why Couples <span className="text-amber-500">Trust Me</span></h2>
-          <p className="text-gray-400">What sets a destination wedding anchor apart</p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <StaggerContainer className="grid md:grid-cols-2 gap-4">
-            {whyChoose.map((item, index) => (
-              <StaggerItem key={index}>
-                <div className="flex items-start gap-4 p-4 bg-neutral-900 border border-neutral-800 rounded-lg hover:border-amber-500/50 transition-colors">
-                  <Star className="w-5 h-5 text-amber-500 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{item}</span>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Multi-Day Events */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <ScrollReveal>
-            <div className="text-center mb-8">
-              <Heart className="w-12 h-12 text-amber-500 mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-display font-bold">
-                Multi-Day <span className="text-amber-500">Celebrations</span>
-              </h2>
-            </div>
-            <div className="space-y-6 text-gray-400 text-lg leading-relaxed text-center">
-              <p>
-                Rajasthani destination weddings rarely fit into a single evening. From the colorful mehendi afternoon to the emotional vidaai, these celebrations unfold over three to five days—each function with its own mood, pace, and requirements.
-              </p>
-              <p>
-                The sangeet needs high energy. The haldi calls for warmth. The wedding day balances ritual with joy. I adapt my hosting style for each function while maintaining the thread that connects your entire wedding story.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
-          Frequently Asked <span className="text-amber-500">Questions</span>
-        </h2>
-        <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <ScrollReveal key={index} delay={index * 0.1}>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 hover:border-amber-500/30 transition-colors">
-                <h3 className="font-display font-bold text-lg mb-3 text-white">{faq.question}</h3>
-                <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+           </div>
+           
+           <div className="relative h-[600px] w-full">
+              {/* Image Stack */}
+              <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-neutral-800 rounded-2xl overflow-hidden transform rotate-3 border border-neutral-700">
+                 <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80" className="w-full h-full object-cover grayscale opacity-60" alt="Resort Vibe" />
               </div>
-            </ScrollReveal>
-          ))}
+              <div className="absolute bottom-0 left-0 w-3/4 h-3/4 bg-black rounded-2xl overflow-hidden shadow-2xl border border-[#D4AF37] transform -rotate-3">
+                 <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80" className="w-full h-full object-cover" alt="Yash Soni Travel" />
+              </div>
+           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-amber-500/5 to-transparent text-center">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <Users className="w-16 h-16 text-amber-500 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Planning a Destination Wedding in <span className="text-amber-500">Rajasthan?</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto mb-8">
-              Let's discuss how I can bring your palace wedding vision to life. From venue-specific planning to multi-day coordination, I'm here to make your celebration unforgettable.
+      {/* --- 4. THE 3-DAY ITINERARY (The Flight Path) --- */}
+      <section className="py-32 bg-[#0a0a0a] border-y border-neutral-900">
+         <div className="container mx-auto px-4">
+            <SectionHeading subtitle="The Experience" title="Your 3-Day Journey." align="center" />
+            
+            <div className="mt-20 relative max-w-5xl mx-auto">
+               {/* Vertical Flight Path Line */}
+               <div className="absolute left-8 md:left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-[#D4AF37] via-neutral-800 to-transparent -translate-x-1/2"></div>
+
+               {/* Day 1 */}
+               <ItineraryCard 
+                 day="Day 01"
+                 title="The Welcome & Sundowner"
+                 icon={<Sun className="w-6 h-6 text-[#D4AF37]" />}
+                 desc="Guests arrive. The vibe is chill but exciting. I host a casual 'Know Your Family' session over high-tea or cocktails to break the ice."
+                 align="left"
+               />
+
+               {/* Day 2 (Morning) */}
+               <ItineraryCard 
+                 day="Day 02 (AM)"
+                 title="The Pool Party / Haldi"
+                 icon={<Palmtree className="w-6 h-6 text-[#D4AF37]" />}
+                 desc="Chaos mode on. Floral Holi, Tug-of-War, and high-energy anchor games. I make sure no one stays dry and everyone is dancing."
+                 align="right"
+               />
+
+               {/* Day 2 (Night) */}
+               <ItineraryCard 
+                 day="Day 02 (PM)"
+                 title="The Sangeet Gala"
+                 icon={<Music className="w-6 h-6 text-[#D4AF37]" />}
+                 desc="Glitz and Glamour. I transition into a Tuxedo. This is about family performances, heartfelt roasts, and managing the stage flow perfectly."
+                 align="left"
+               />
+
+               {/* Day 3 */}
+               <ItineraryCard 
+                 day="Day 03"
+                 title="The Royal Wedding"
+                 icon={<Moon className="w-6 h-6 text-[#D4AF37]" />}
+                 desc="The Grand Varmala. I switch to traditional attire and poetic storytelling, creating a cinematic atmosphere for the main ceremony."
+                 align="right"
+               />
+            </div>
+         </div>
+      </section>
+
+      {/* --- 5. FEATURED LOCATIONS (Postcards) --- */}
+      <section className="py-32 container mx-auto px-4">
+        <SectionHeading subtitle="Expertise" title="Home Grounds." />
+        
+        <div className="grid md:grid-cols-4 gap-4 h-[500px]">
+           {/* Card 1 */}
+           <LocationCard 
+              name="Udaipur" 
+              tag="The City of Lakes" 
+              img="https://images.unsplash.com/photo-1590766940555-154a8f192905?w=800&q=80" 
+              colSpan="col-span-2"
+           />
+           {/* Card 2 */}
+           <LocationCard 
+              name="Goa" 
+              tag="Beach Vibes" 
+              img="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80" 
+           />
+           {/* Card 3 */}
+           <LocationCard 
+              name="Jaipur" 
+              tag="Royal Palaces" 
+              img="https://images.unsplash.com/photo-1599661046289-e318d6d48ed1?w=800&q=80" 
+           />
+        </div>
+        <div className="text-center mt-12">
+            <p className="text-gray-400 text-sm uppercase tracking-widest mb-4">Also available for</p>
+            <div className="flex flex-wrap justify-center gap-4">
+                {["Dubai", "Thailand", "Mussoorie", "Jodhpur", "Ranthambore", "Pushkar"].map(city => (
+                    <span key={city} className="border border-neutral-800 px-6 py-2 rounded-full hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors cursor-default text-sm">
+                        {city}
+                    </span>
+                ))}
+            </div>
+        </div>
+      </section>
+
+      {/* --- 6. TRAVEL LOGISTICS FAQ --- */}
+      <section className="py-24 max-w-4xl mx-auto px-4 border-t border-neutral-900">
+        <SectionHeading subtitle="Logistics" title="Travel & Stay." align="center" />
+        <div className="space-y-4 mt-8">
+           <FAQItem question="Who handles travel & accommodation?" answer="The client provides travel (Flights) and Stay (in the same hotel as guests) for the Anchor + 1 Assistant. This ensures we are always on time for every function." />
+           <FAQItem question="Do you charge for 'Non-Event' days?" answer="If travel takes up a full day (e.g., International flights), a minimal block-date fee applies. For domestic travel within schedule, no extra charge." />
+           <FAQItem question="Do you bring your own team?" answer="I travel with one assistant/manager who handles my sound check, script cues, and coordination with your planner." />
+        </div>
+      </section>
+
+      {/* --- 7. CTA --- */}
+      <section className="py-32 bg-[#0a0a0a] text-center relative overflow-hidden">
+         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+         <div className="container mx-auto px-4 relative z-10">
+            <h2 className="text-4xl md:text-7xl font-display font-black mb-8 text-white">Packing My Bags?</h2>
+            <p className="text-[#D4AF37] max-w-2xl mx-auto mb-12 text-xl font-light">
+               Dates for 2026 Destination Weddings are booking 8-12 months in advance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`https://wa.me/917737877978?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center justify-center gap-2">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp Now
-                </button>
-              </a>
-              <Link href="/contact">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center justify-center gap-2">
-                  <Phone className="w-5 h-5" /> Contact Page
-                </button>
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* Internal Links */}
-          <div className="mt-12 pt-8 border-t border-neutral-800">
-            <p className="text-gray-500 text-sm mb-4">Explore more services:</p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link href="/wedding-anchor-jaipur" className="text-amber-500 hover:underline text-sm">Wedding Anchor Jaipur</Link>
-              <Link href="/sangeet-anchor-jaipur" className="text-amber-500 hover:underline text-sm">Sangeet Anchor Jaipur</Link>
-              <Link href="/event-management-company-jaipur" className="text-amber-500 hover:underline text-sm">Event Management Jaipur</Link>
-            </div>
-          </div>
-        </div>
+            <Link href="/contact">
+               <button className="px-12 py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl">
+                  Inquire Now
+               </button>
+            </Link>
+         </div>
       </section>
 
     </div>
   );
 }
+
+// --- SUB COMPONENTS ---
+
+const FeatureRow = ({ icon, title, desc }) => (
+  <div className="flex gap-5 group">
+    <div className="w-14 h-14 rounded-full border border-neutral-800 bg-[#0a0a0a] flex items-center justify-center text-[#D4AF37] shrink-0 group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-500">
+      {icon}
+    </div>
+    <div>
+      <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
+      <p className="text-gray-400 text-sm leading-relaxed font-light">{desc}</p>
+    </div>
+  </div>
+);
+
+const ItineraryCard = ({ day, title, desc, icon, align }) => (
+  <div className={`flex flex-col md:flex-row items-center gap-8 mb-16 relative ${align === 'right' ? 'md:flex-row-reverse' : ''}`}>
+      {/* Dot */}
+      <div className="absolute left-8 md:left-1/2 top-0 w-8 h-8 bg-[#0a0a0a] border-2 border-[#D4AF37] rounded-full md:-translate-x-1/2 z-10 flex items-center justify-center">
+        <div className="w-2 h-2 bg-[#D4AF37] rounded-full"></div>
+      </div>
+      
+      {/* Content */}
+      <div className={`w-full md:w-1/2 p-8 ml-16 md:ml-0 hover:bg-[#111] border border-transparent hover:border-[#D4AF37]/30 rounded-2xl transition-all duration-500 group ${align === 'right' ? 'text-left md:text-left' : 'text-left md:text-right'}`}>
+         <div className={`flex items-center gap-3 mb-4 ${align === 'right' ? 'md:justify-start' : 'md:justify-end'}`}>
+            <span className="text-[#D4AF37] font-bold uppercase tracking-widest text-sm">{day}</span>
+            {icon}
+         </div>
+         <h3 className="text-2xl font-bold text-white mb-3">{title}</h3>
+         <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+      </div>
+      <div className="w-full md:w-1/2 hidden md:block"></div>
+  </div>
+);
+
+const LocationCard = ({ name, tag, img, colSpan = "" }) => (
+    <div className={`relative rounded-2xl overflow-hidden group cursor-pointer ${colSpan}`}>
+        <img src={img} alt={name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
+        <div className="absolute bottom-6 left-6">
+            <p className="text-white font-black text-3xl uppercase">{name}</p>
+            <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-bold uppercase tracking-widest mt-1">
+                <MapPin className="w-3 h-3" /> {tag}
+            </div>
+        </div>
+    </div>
+);
+
+const FAQItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-xl overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/30">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-between w-full p-6 text-left hover:bg-neutral-900 transition-colors"
+      >
+        <span className="font-bold text-white text-lg">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-[#D4AF37] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <p className="p-6 pt-0 text-gray-400 leading-relaxed text-sm font-light">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
