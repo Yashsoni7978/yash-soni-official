@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Play, Minus, Plus, Crown, ArrowRight, Star, Mic, Sparkles, 
-  MapPin, Quote, Instagram, CheckCircle2, Users, ScrollText, CalendarCheck 
+  Play, Minus, Plus, ArrowRight, Star, Mic, Sparkles, 
+  MapPin, Quote, Instagram, Users, CalendarCheck, Phone, ChevronDown 
 } from "lucide-react";
 
 // --- 1. CSS STYLES ---
@@ -94,13 +94,12 @@ const ScrollReveal = ({ children, delay = 0 }: any) => (
 );
 
 const GoldDivider = () => (
-  <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-30 my-24" />
+  <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-30 my-16" />
 );
 
-// --- TRUSTED MARQUEE COMPONENT (UPDATED COLOR & LINK) ---
+// --- TRUSTED MARQUEE COMPONENT ---
 const TrustedMarquee = () => {
   const brands = [
-    // Added your specific Google Link here
     { name: "Google Reviews", color: "hover:text-[#4285F4]", link: "https://share.google/pMZGzEGOhXnJpLq5g" }, 
     { name: "WedMeGood", color: "hover:text-[#DE5D83]", link: "#" },
     { name: "WeddingWire", color: "hover:text-[#1467B0]", link: "#" },
@@ -118,7 +117,6 @@ const TrustedMarquee = () => {
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
       >
-        {/* Tripled array for infinite loop */}
         {[...brands, ...brands, ...brands].map((brand, i) => (
           <a 
             key={i} 
@@ -135,50 +133,65 @@ const TrustedMarquee = () => {
   );
 };
 
-// --- 5. REVIEW CARD ---
-const ReviewCard = ({ name, date, text, platform }: any) => (
-  <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37]/50 transition-colors flex flex-col shadow-lg mx-4">
-    <div className="flex items-start gap-4 mb-4">
-      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center text-black font-bold text-xl">
-        {name.charAt(0)}
-      </div>
-      <div>
-        <h4 className="font-bold text-white text-base">{name}</h4>
-        <div className="flex items-center gap-2 text-xs text-gray-400">
-           <span>{date}</span> • <span className="text-[#D4AF37] font-medium">{platform}</span>
+// --- 5. REVIEW CARD (CLICKABLE) ---
+const ReviewCard = ({ name, date, text, platform, link }: any) => (
+  <a href={link} target="_blank" rel="noopener noreferrer" className="block h-full">
+    <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all duration-300 flex flex-col shadow-lg mx-4 group cursor-pointer h-full relative overflow-hidden">
+      {/* Hover Glow Effect */}
+      <div className="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      <div className="flex items-start gap-4 mb-4 relative z-10">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center text-black font-bold text-xl group-hover:scale-110 transition-transform">
+          {name.charAt(0)}
+        </div>
+        <div>
+          <h4 className="font-bold text-white text-base group-hover:text-[#D4AF37] transition-colors">{name}</h4>
+          <div className="flex items-center gap-2 text-xs text-gray-400">
+             <span>{date}</span> • <span className="text-[#D4AF37] font-medium">{platform}</span>
+          </div>
         </div>
       </div>
+      <div className="flex text-[#D4AF37] gap-1 mb-4 relative z-10">
+        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+      </div>
+      <p className="text-gray-300 text-sm leading-relaxed flex-grow font-light tracking-wide relative z-10 group-hover:text-white transition-colors">"{text}"</p>
+      
+      <div className="mt-4 flex items-center text-[#D4AF37] text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">
+        Read Full Review <ArrowRight className="w-3 h-3 ml-1" />
+      </div>
     </div>
-    <div className="flex text-[#D4AF37] gap-1 mb-4">
-      {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
-    </div>
-    <p className="text-gray-300 text-sm leading-relaxed flex-grow font-light tracking-wide">"{text}"</p>
-  </div>
+  </a>
 );
 
+// --- 6. LUXURY FAQ COMPONENT ---
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border-b border-neutral-800">
+    <div className="border-b border-neutral-800 last:border-0">
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-6 text-left group"
+        className="flex justify-between items-center w-full py-8 text-left group transition-all"
       >
-        <span className={`text-lg md:text-xl font-display transition-colors ${isOpen ? 'text-[#D4AF37]' : 'text-gray-300 group-hover:text-[#D4AF37]'}`}>
+        <span className={`text-xl md:text-2xl font-display transition-colors duration-300 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-200 group-hover:text-[#D4AF37]'}`}>
           {question}
         </span>
-        <div className={`p-2 rounded-full transition-colors ${isOpen ? 'bg-[#D4AF37] text-black' : 'bg-neutral-800 text-white'}`}>
-           {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+        <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+           <ChevronDown className={`w-6 h-6 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-500'}`} />
         </div>
       </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-6 text-gray-400 text-base leading-relaxed max-w-2xl font-light tracking-wide">{answer}</p>
-      </motion.div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <p className="pb-8 text-gray-400 text-lg leading-relaxed max-w-3xl font-light">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -192,14 +205,14 @@ const services = [
 ];
 
 const reviews = [
-  { name: "Priya Sharma", date: "2 months ago", platform: "Google Reviews", text: "Yash was the soul of our Sangeet! He managed 500 guests effortlessly. The energy was insane from start to finish." },
-  { name: "Rahul Verma", date: "1 month ago", platform: "WedMeGood", text: "Hired him for our Corporate R&R in Jaipur. Extremely professional, punctual, and witty. Our CEO was very impressed." },
-  { name: "Amit & Sneha", date: "3 weeks ago", platform: "Google Reviews", text: "The best decision for our wedding. His command over Hindi and English is perfect for a mixed crowd. Highly recommended!" },
-  { name: "Vikram Rathore", date: "4 months ago", platform: "WeddingWire", text: "A true professional. He controlled the flow of our Varmala perfectly. The shayaris were beautiful." },
-  { name: "Simran Kaur", date: "1 week ago", platform: "StarClinch", text: "Our guests are still talking about the games Yash hosted. He has a unique way of connecting with everyone." },
-  { name: "Oberoi Group", date: "6 months ago", platform: "Corporate Client", text: "Excellent command over the stage. Handled our Annual General Meeting with grace and authority." },
-  { name: "Nikhil Jain", date: "5 months ago", platform: "WedMeGood", text: "If you want your wedding to be memorable, book Yash. He is not just an anchor, he is an entertainer." },
-  { name: "Anjali Mehta", date: "2 weeks ago", platform: "Google Reviews", text: "Punctual, well-dressed, and incredibly talented. He saved our event when the DJ had a technical glitch." },
+  { name: "Priya Sharma", date: "2 months ago", platform: "Google Reviews", text: "Yash was the soul of our Sangeet! He managed 500 guests effortlessly. The energy was insane from start to finish.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
+  { name: "Rahul Verma", date: "1 month ago", platform: "WedMeGood", text: "Hired him for our Corporate R&R in Jaipur. Extremely professional, punctual, and witty. Our CEO was very impressed.", link: "#" },
+  { name: "Amit & Sneha", date: "3 weeks ago", platform: "Google Reviews", text: "The best decision for our wedding. His command over Hindi and English is perfect for a mixed crowd. Highly recommended!", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
+  { name: "Vikram Rathore", date: "4 months ago", platform: "WeddingWire", text: "A true professional. He controlled the flow of our Varmala perfectly. The shayaris were beautiful.", link: "#" },
+  { name: "Simran Kaur", date: "1 week ago", platform: "StarClinch", text: "Our guests are still talking about the games Yash hosted. He has a unique way of connecting with everyone.", link: "#" },
+  { name: "Oberoi Group", date: "6 months ago", platform: "Corporate Client", text: "Excellent command over the stage. Handled our Annual General Meeting with grace and authority.", link: "#" },
+  { name: "Nikhil Jain", date: "5 months ago", platform: "WedMeGood", text: "If you want your wedding to be memorable, book Yash. He is not just an anchor, he is an entertainer.", link: "#" },
+  { name: "Anjali Mehta", date: "2 weeks ago", platform: "Google Reviews", text: "Punctual, well-dressed, and incredibly talented. He saved our event when the DJ had a technical glitch.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
 ];
 
 const philosophy = [
@@ -220,7 +233,7 @@ const processSteps = [
 ];
 
 const homeFAQs = [
-  { question: "How do you handle a crowd of 1000+ people?", answer: "Energy is key. I use a mix of humor, interactive games, and commanding stage presence to ensure even the back row feels connected." },
+  { question: "How do you handle a large crowd?", answer: "Energy is key. I use a mix of humor, interactive games, and commanding stage presence to ensure even the back row feels connected." },
   { question: "Can you host in both Hindi and English?", answer: "Absolutely. I switch seamlessly between Hindi (for emotional connection/shayari) and English (for professional/corporate notes) depending on the audience vibe." },
   { question: "Do you travel outside Jaipur?", answer: "Yes! While Jaipur is home, I frequently travel to Udaipur, Jodhpur, Goa, and Delhi for destination weddings and events." },
   { question: "Do you provide scripts beforehand?", answer: "Yes. For corporate events and sangeets, I provide a draft script for approval to ensure we are aligned on the messaging." },
@@ -242,11 +255,10 @@ export default function Home() {
       <style>{style}</style> 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
 
-      {/* --- SECTION 1: HERO --- */}
+      {/* --- SECTION 1: HERO (LEFT ALIGNED) --- */}
       <section className="relative h-screen flex items-end pb-20 md:pb-32 overflow-hidden">
         <HeroSlider />
         <div className="relative container mx-auto px-4 z-20">
-          
           <div className="max-w-4xl mr-auto text-left pl-2 md:pl-10">
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mb-6 inline-block">
                <span className="border border-[#D4AF37] px-6 py-2 rounded-full backdrop-blur-md bg-black/40 text-[#D4AF37] text-sm tracking-wide font-medium">
@@ -330,25 +342,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SECTION 3: TRUSTED BY MARQUEE (REMOVED MAROON, MATCHED THEME) --- */}
-      <section className="bg-[#111] border-y border-neutral-800 relative z-30 py-8">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-           <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] whitespace-nowrap font-bold">
-             Trusted On
-           </div>
-           {/* SCROLLING MARQUEE */}
-           <div className="flex-1 overflow-hidden relative h-10 flex items-center">
-             <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#111] to-transparent z-10" />
-             <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#111] to-transparent z-10" />
-             <TrustedMarquee />
-           </div>
-        </div>
-      </section>
+      <GoldDivider />
 
-      {/* --- SECTION 4: THE PHILOSOPHY (WHY ME) --- */}
-      <section className="py-20 container mx-auto px-4">
+      {/* --- SECTION 3: THE STYLE (Why Me) --- */}
+      <section className="py-12 container mx-auto px-4">
          <ScrollReveal>
-           <div className="text-center mb-16">
+           <div className="text-center mb-12">
              <span className="text-[#D4AF37] text-sm uppercase tracking-widest">Why Me</span>
              <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">The <span className="text-[#D4AF37]">Yash Soni</span> Signature</h2>
            </div>
@@ -367,8 +366,22 @@ export default function Home() {
          </div>
       </section>
 
-      {/* --- SECTION 5: SERVICES --- */}
-      <section className="py-20 container mx-auto px-4">
+      {/* --- SECTION 4: TRUSTED BY MARQUEE (Below Why Me) --- */}
+      <section className="bg-[#111] border-y border-neutral-800 relative z-30 py-12 mb-12">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+           <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] whitespace-nowrap font-bold">
+             Trusted On
+           </div>
+           <div className="flex-1 overflow-hidden relative h-10 flex items-center">
+             <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#111] to-transparent z-10" />
+             <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#111] to-transparent z-10" />
+             <TrustedMarquee />
+           </div>
+        </div>
+      </section>
+
+      {/* --- SECTION 5: SERVICES (UPDATED CARD DESIGN) --- */}
+      <section className="py-12 container mx-auto px-4">
         <ScrollReveal>
           <div className="flex justify-between items-end mb-16">
             <h2 className="text-4xl md:text-6xl font-display font-bold">Signature <span className="text-neutral-700">Services</span></h2>
@@ -384,6 +397,12 @@ export default function Home() {
               <Link href={s.link}>
                 <div className="group border-t border-neutral-800 py-12 flex flex-col md:flex-row gap-8 items-center cursor-pointer hover:bg-neutral-900/30 transition-colors">
                   <span className="text-neutral-800 text-6xl font-display font-bold group-hover:text-[#D4AF37] group-hover:opacity-100 transition-all">0{i+1}</span>
+                  
+                  {/* Image Reveal on Hover (Mobile Hidden for Space) */}
+                  <div className="hidden md:block w-32 h-20 overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-lg transform translate-x-4 group-hover:translate-x-0">
+                    <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+                  </div>
+
                   <div className="flex-grow">
                     <h3 className="text-3xl font-bold mb-2 group-hover:text-[#D4AF37] transition-colors">{s.title}</h3>
                     <p className="text-gray-500 max-w-xl font-light">{s.desc}</p>
@@ -398,11 +417,9 @@ export default function Home() {
         </div>
       </section>
 
-      <GoldDivider />
-
-      {/* --- SECTION 6: REVIEWS (MOVED UP) --- */}
-      <section className="py-24 bg-black overflow-hidden">
-        <div className="container mx-auto px-4 mb-16 text-center">
+      {/* --- SECTION 6: REVIEWS (Above Process, Reduced Gap, Clickable) --- */}
+      <section className="py-12 bg-black overflow-hidden">
+        <div className="container mx-auto px-4 mb-8 text-center">
           <ScrollReveal>
             <span className="text-[#D4AF37] text-sm uppercase tracking-widest">Client Love</span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">Rated 5.0 on <span className="text-white">Google</span></h2>
@@ -423,15 +440,28 @@ export default function Home() {
              ))}
            </motion.div>
         </div>
+      </section>
+
+      {/* --- SECTION 7: NEW SECTION - LIVE MOMENTS (Gallery Teaser) --- */}
+      <section className="py-20 bg-[#111] overflow-hidden">
+        <div className="container mx-auto px-4 mb-10">
+           <ScrollReveal>
+             <h2 className="text-3xl md:text-5xl font-display font-bold">Moments of <span className="text-[#D4AF37]">Magic</span></h2>
+           </ScrollReveal>
+        </div>
         
-        <div className="text-center mt-12">
-           <button className="text-gray-500 text-xs tracking-widest hover:text-white transition-colors flex items-center justify-center gap-2 mx-auto uppercase">
-             <MapPin className="w-4 h-4 text-[#D4AF37]" /> Based in Jaipur, Available Globally
-           </button>
+        {/* Horizontal Scroll Strip */}
+        <div className="flex gap-4 overflow-x-auto no-scrollbar px-4 pb-8">
+          {[1,2,3,4,5].map((i) => (
+             <div key={i} className="min-w-[300px] md:min-w-[400px] aspect-[4/5] relative rounded-lg overflow-hidden group">
+               <img src={`https://images.unsplash.com/photo-${i === 1 ? '1519741497674-611481863552' : i === 2 ? '1540039155733-5bb30b53aa14' : '1501281668745-f7f57925c3b4'}?w=600&q=80`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Event" />
+               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+             </div>
+          ))}
         </div>
       </section>
 
-      {/* --- SECTION 7: THE PROCESS (MOVED DOWN) --- */}
+      {/* --- SECTION 8: THE PROCESS (How It Works) --- */}
       <section className="py-20 container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-20">
@@ -455,30 +485,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SECTION 8: VENUES --- */}
-      <section className="py-20 bg-[#111] border-y border-neutral-800">
-        <div className="container mx-auto px-4 text-center">
-          <ScrollReveal>
-            <p className="text-gray-500 text-xs uppercase tracking-[0.3em] mb-12">Featured at Premier Venues</p>
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-60">
-              {venues.map((venue, i) => (
-                <span key={i} className="text-xl md:text-2xl font-display font-bold text-white/40 hover:text-[#D4AF37] cursor-default transition-all duration-500 hover:scale-105">
-                  {venue}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* --- SECTION 9: FAQ --- */}
+      {/* --- SECTION 9: LUXURY FAQ (REDESIGNED) --- */}
       <section className="py-24 container mx-auto px-4 max-w-4xl">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Common Questions</h2>
-            <p className="text-gray-400 font-light">Everything you need to know before the show.</p>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-2">
             {homeFAQs.map((faq, i) => (
               <FAQItem key={i} question={faq.question} answer={faq.answer} />
             ))}
@@ -486,24 +499,29 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
-      {/* --- SECTION 10: FINAL CTA --- */}
-      <section className="py-40 text-center relative overflow-hidden">
-         <div className="absolute inset-0 bg-[url('/gold-texture.png')] opacity-10 bg-cover bg-center mix-blend-overlay animate-pulse"></div>
-         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
-         
-         <div className="container mx-auto px-4 relative z-10">
+      {/* --- SECTION 10: NEW PREMIUM CTA --- */}
+      <section className="py-32 border-t border-neutral-900 bg-[#050505] text-center">
+         <div className="container mx-auto px-4">
            <ScrollReveal>
-             <h2 className="text-5xl md:text-8xl font-display font-black mb-8 leading-tight uppercase">
-               Let's Create <br /> <GoldTextureText>History.</GoldTextureText>
+             <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">
+               Your Stage Awaits.
              </h2>
-             <p className="text-xl font-light text-gray-300 mb-12 max-w-2xl mx-auto">
-               Your event deserves a voice that echoes. Dates for 2026 are filling up fast.
+             <p className="text-gray-400 max-w-xl mx-auto mb-12 font-light text-lg">
+               Dates for the 2026 wedding season are 80% booked. <br /> Secure your date before someone else does.
              </p>
-             <Link href="/contact">
-               <button className="px-12 py-5 bg-[#D4AF37] text-black text-lg font-bold tracking-widest hover:bg-white transition-colors shadow-2xl hover:scale-105 transform duration-300">
-                 BOOK ANCHOR YASH
-               </button>
-             </Link>
+             <div className="flex justify-center">
+               <Link href="/contact">
+                 <div className="group relative cursor-pointer inline-block">
+                   <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] to-[#806000] rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+                   <button className="relative bg-black border border-[#D4AF37] text-[#D4AF37] px-12 py-5 text-lg font-bold tracking-widest uppercase hover:bg-[#D4AF37] hover:text-black transition-all duration-300 flex items-center gap-3">
+                     <CalendarCheck className="w-5 h-5" /> Check Availability
+                   </button>
+                 </div>
+               </Link>
+             </div>
+             <p className="mt-8 text-gray-600 text-sm flex items-center justify-center gap-2">
+               <Phone className="w-3 h-3" /> Direct Line: +91 77378 77978
+             </p>
            </ScrollReveal>
          </div>
       </section>
