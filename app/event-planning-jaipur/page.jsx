@@ -16,7 +16,6 @@ const ScrollReveal = ({ children, delay = 0 }) => (
     {children}
   </motion.div>
 );
-
 const StaggerContainer = ({ children, className }) => (
   <motion.div
     initial="hidden"
