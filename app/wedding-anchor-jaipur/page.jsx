@@ -2,338 +2,335 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ChevronRight, MessageCircle, Heart, Music, Users, Sparkles, Phone, Star, MapPin, Mic, CalendarHeart, Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Mic, Heart, Music, Star, Calendar, ArrowRight, Play, 
+  CheckCircle, Sparkles, ChevronDown, Quote, Camera 
+} from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
+// --- 1. REUSABLE LUXURY COMPONENTS ---
+const GoldTextureText = ({ children, className }) => (
+  <span 
+    className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
+    style={{ 
+      backgroundImage: "url('/gold-texture.png')", 
+      backgroundColor: "#D4AF37", 
     }}
   >
     {children}
-  </motion.div>
+  </span>
 );
 
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
+  <div className={`mb-12 ${align === "center" ? "text-center" : "text-left"}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-3 flex items-center gap-3 justify-center md:justify-start">
+        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+        {subtitle}
+        {align !== "center" && <span className="w-12 h-[1px] bg-[#D4AF37]"></span>}
+        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+      </p>
+      <h2 className={`text-3xl md:text-5xl font-display font-black leading-tight ${dark ? 'text-black' : 'text-white'}`}>
+        {title}
+      </h2>
+    </motion.div>
+  </div>
+);
+
+export default function WeddingAnchor() {
   return (
-    <div className="border-b border-neutral-800">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-4 text-left group"
-      >
-        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-amber-500' : 'text-gray-300 group-hover:text-amber-500'}`}>
-          {question}
-        </span>
-        {isOpen ? <Minus className="w-5 h-5 text-amber-500" /> : <Plus className="w-5 h-5 text-gray-500" />}
-      </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-4 text-gray-400 text-sm leading-relaxed">{answer}</p>
-      </motion.div>
-    </div>
-  );
-};
-
-// --- DATA ---
-const weddingServices = [
-  { icon: Music, title: "Sangeet Ceremony", description: "High-energy anchoring for Sangeet nights, dance battles, and family performances that keeps the crowd on their feet." },
-  { icon: Sparkles, title: "Varmala Themes", description: "Royal and poetic hosting for the Jaimala ceremony, ensuring the most photographed moment is magical." },
-  { icon: Users, title: "Haldi & Mehandi", description: "Interactive fun, couple games, and ice-breakers to engage guests during daytime pre-wedding rituals." },
-  { icon: Star, title: "Reception & Ring Ceremony", description: "Elegant and sophisticated hosting for formal receptions, cake cutting, and ring exchange ceremonies." },
-];
-
-const weddingEventTypes = [
-  { title: "Destination Weddings", description: "Specialized in hosting 2-3 day destination weddings in Udaipur, Jodhpur, Jaisalmer, and Pushkar." },
-  { title: "Sangeet Nights", description: "The highlight of Indian weddings—I manage the flow of performances, DJ interactions, and open dance floors." },
-  { title: "Haldi Carnivals", description: "Turning traditional Haldi into a fun carnival with props, rapid-fire rounds, and family interaction." },
-  { title: "Varmala Concepts", description: "Executing themed Varmala entries (Ganga Aarti, Vintage, Flower Shower) with perfect voice-over coordination." },
-  { title: "Pool Parties", description: "Casual, high-vibe anchoring for welcome lunches and pool parties to break the ice between the two families." },
-  { title: "After Parties", description: "Keeping the energy alive post-midnight for the youngsters with engaging games and DJ hype." },
-];
-
-const weddingStyles = [
-  "Royal Palaces", "Beach Weddings", "Heritage Resorts", "Luxury Hotels", "Open Lawns", "Banquet Halls", "Poolside Venues", "Fort Weddings", "Intimate Gatherings", "Grand Galas"
-];
-
-const weddingFAQs = [
-  { question: "Do you travel for destination weddings outside Jaipur?", answer: "Absolutely! I frequently host destination weddings in Udaipur, Jodhpur, Jaisalmer, Pushkar, and across India. Travel and stay are arranged by the client." },
-  { question: "What is your anchoring style: Funny or Formal?", answer: "I blend both! I am energetic and witty for Sangeet/Haldi to get people laughing, but graceful and poetic (Shayari) for Varmala and Pheras." },
-  { question: "How do you handle a crowd that isn't dancing?", answer: "That’s my specialty. I use proven ice-breaker games, 'Ladkewale vs Ladkiwale' banter, and interactive couples activities to naturally build momentum." },
-  { question: "Do you provide scripts for family performances?", answer: "Yes, I help frame the script for family performances and can provide voice-overs to make the Sangeet flow like a Bollywood awards show." },
-  { question: "What languages do you anchor in?", answer: "I am fluent in Hindi and English. I switch seamlessly between the two to ensure both the elders and the younger generation feel connected." },
-  { question: "How many weddings have you hosted?", answer: "I have hosted over 1100+ events, with a major focus on weddings, Sangeets, and corporate shows over the last 5+ years." },
-  { question: "Do you work with the DJ and Event Planner?", answer: "Yes, I coordinate directly with the DJ for music cues (fanfares, entry songs) and the planner to ensure the event timeline is followed strictly." },
-  { question: "What do you wear for weddings?", answer: "I dress to impress! I wear premium Indo-Westerns, Jodhpuri Suits, or Tuxedos depending on the theme of your event (Haldi vs. Reception)." },
-  { question: "Can you host the Varmala with poetry/Shayari?", answer: "Yes, I have a collection of royal Shayari and verses specifically for the Jaimala moment to make it emotional and grand." },
-  { question: "How long do you stay at the event?", answer: "I am there from the start of the guest arrival until the end of the planned itinerary/party. I don't rush; I ensure the event finishes on a high note." },
-  { question: "Do you conduct games for the Bride and Groom?", answer: "Yes! Shoe Game, Compatibility Test, Ring Hunt—I have a list of trending wedding games to make the couple the center of attention." },
-  { question: "How do we book you?", answer: "You can contact me via WhatsApp or call directly to check availability for your wedding dates. It is best to book 2-3 months in advance." }
-];
-
-export default function WeddingAnchorJaipur() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Wedding Anchor in Jaipur",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "areaServed": "Jaipur, Rajasthan, Udaipur, Jodhpur",
-    },
-    "serviceType": "Wedding Emcee & Host",
-    "description": "Premium wedding anchor in Jaipur for Sangeet, Varmala, and Destination Weddings. 1100+ events hosted.",
-  };
-
-  return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <div className="bg-[#050505] text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans relative">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      {/* Background Noise Texture for Premium Feel */}
+      <div className="fixed inset-0 opacity-[0.03] pointer-events-none z-0" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}></div>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-4 relative">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6">
-              Premium Wedding Emcee
-            </span>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              More Than Just a Mic – I Bring the <span className="text-amber-500">Life</span> to Your Wedding
+      {/* --- 1. CINEMATIC HERO SECTION --- */}
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/40 to-black/20 z-10" />
+          {/* Replace with high-quality wedding video/image */}
+          <img 
+            src="https://images.unsplash.com/photo-1606216794074-735e91aa5c92?q=80&w=1974&auto=format&fit=crop" 
+            className="w-full h-full object-cover scale-105 animate-slow-zoom" 
+            alt="Royal Wedding Jaipur"
+          />
+        </div>
+
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+            
+            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 backdrop-blur-md mb-8">
+              <Star className="w-4 h-4 text-[#D4AF37] fill-current" />
+              <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">
+                Premium Wedding Emcee
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 drop-shadow-2xl">
+              The Voice of <br /> <GoldTextureText>Forever.</GoldTextureText>
             </h1>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto mb-8 px-4">
-              Jaipur’s Premier Anchor for High-Energy Sangeets, Emotional Varmalas, and Unforgettable Haldi Ceremonies.
+            
+            <p className="text-gray-100 text-lg md:text-2xl font-light leading-relaxed max-w-3xl mx-auto mb-12 drop-shadow-lg">
+              Your wedding isn't just an event; it's a legacy. <br className="hidden md:block" />
+              Don't let it be boring. Let's make it legendary.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all hover:scale-105 flex items-center gap-2">
-                  Check Availability <ChevronRight className="w-5 h-5" />
+                <button className="group relative px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest overflow-hidden rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                  <span className="relative z-10 flex items-center gap-2">Check Availability <ArrowRight className="w-4 h-4" /></span>
                 </button>
               </Link>
-              <a href="https://wa.me/917737877978?text=Hi%20Anchor%20Yash,%20I%20am%20looking%20for%20an%20anchor%20for%20my%20wedding." target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all hover:scale-105 flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp Me
-                </button>
-              </a>
             </div>
+
           </motion.div>
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
-              Making Every Moment <span className="text-amber-500">Unforgettable</span>
-            </h2>
-            <div className="text-gray-400 text-lg leading-relaxed space-y-6">
-              <p>
-                A wedding isn't just about rituals; it's about the laughter during the Haldi, the competitive spirit during the Sangeet dance battles, and the teary-eyed silence during the Varmala. As a Wedding Anchor, my job isn't just to speak—it's to connect hearts.
-              </p>
-              <p>
-                With over <strong>5+ years of experience</strong> in Jaipur and Rajasthan's destination wedding circuit, I know exactly how to read a room. Whether it's engaging the elders with respectful humor or getting the shy cousins on the dance floor, I ensure your guests are not just watching the wedding—they are <em>living</em> it.
-              </p>
+      {/* --- 2. THE PHILOSOPHY (Editorial Layout) --- */}
+      <section className="py-24 container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Text Content (Col 5) */}
+          <div className="lg:col-span-5">
+            <SectionHeading subtitle="The Approach" title="More Than Just A Mic." />
+            <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
+              Most anchors just read names off a paper. <strong className="text-white font-bold">I don't.</strong>
+            </p>
+            <p className="text-gray-400 text-lg leading-relaxed mb-12 border-l-2 border-[#D4AF37] pl-6 font-light">
+              I bridge the gap between the *Ladki-walas* and *Ladke-walas*, turning a room full of strangers into one big, loud, happy family.
+            </p>
+            
+            <div className="space-y-8">
+              <FeatureRow icon={<Heart />} title="Emotional Intelligence" desc="Knowing when to hype the crowd and when to let silence speak during rituals." />
+              <FeatureRow icon={<Sparkles />} title="Unscripted Wit" desc="Spontaneous humor that feels natural, not rehearsed. No cringy jokes." />
             </div>
-          </ScrollReveal>
+          </div>
+          
+          {/* Image Collage (Col 7) */}
+          <div className="lg:col-span-7 relative h-[600px]">
+             <div className="absolute top-0 right-0 w-4/5 h-4/5 z-0">
+                <img src="https://images.unsplash.com/photo-1583203363541-f5c1d632969f?w=800&q=80" className="w-full h-full object-cover rounded-xl grayscale contrast-125 opacity-50" alt="Background Emotion" />
+             </div>
+             <div className="absolute bottom-0 left-0 w-4/5 h-4/5 z-10 border-4 border-[#050505] rounded-xl overflow-hidden shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" className="w-full h-full object-cover scale-110" alt="Yash Soni Hosting" />
+                {/* Gold Frame Accent */}
+                <div className="absolute inset-0 border-2 border-[#D4AF37]/50 m-4 rounded-lg pointer-events-none"></div>
+             </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Wedding Services */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Ceremonies</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Events I <span className="text-amber-500">Host</span>
-            </h2>
+      {/* --- 3. THE TRINITY (VISUAL UPGRADE - HOVER CARDS) --- */}
+      <section className="py-32 bg-[#080808] relative z-10 border-t border-neutral-900">
+        <div className="container mx-auto px-4">
+          <SectionHeading subtitle="My Expertise" title="The Wedding Trilogy" align="center" />
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-20">
+            <VisualServiceCard 
+              title="The Sangeet"
+              subtitle="High Voltage Energy"
+              img="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=800&q=80"
+              icon={<Music className="w-8 h-8" />}
+              desc="The night of dance and drama. I handle the flow, introduce performances with personalized anecdotes, and run interactive couple games that get everyone on the floor."
+              tags={["Couple Games", "Family Roasts", "Non-Stop Hype"]}
+            />
+            <VisualServiceCard 
+              title="The Varmala"
+              subtitle="Cinematic Grandeur"
+              img="https://images.unsplash.com/photo-1604904839548-93a3074b4731?w=800&q=80" // Need a varmala/royal image
+              icon={<Heart className="w-8 h-8" />}
+              desc="The main event. I use poetic shayari and voice modulation to turn the garland exchange into a movie scene. Themes: Royal, Floral, or Fun."
+              tags={["Grand Entry", "Shayari", "Crowd Control"]}
+              highlight
+            />
+            <VisualServiceCard 
+              title="The Reception"
+              subtitle="Formal Elegance"
+              img="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
+              icon={<Star className="w-8 h-8" />}
+              desc="Crisp, classy, and polished. Ensuring VIP guests are acknowledged, the cake cutting is picture-perfect, and the couple looks like royalty."
+              tags={["VIP Protocol", "Cake Cutting", "Toastmaster"]}
+            />
           </div>
-        </ScrollReveal>
+        </div>
+      </section>
 
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {weddingServices.map((service) => (
-            <StaggerItem key={service.title}>
-              <motion.div
-                className="h-full flex flex-col p-6 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                whileHover={{ y: -4 }}
-              >
-                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-500">
-                  <service.icon className="w-6 h-6" />
+      {/* --- 4. NEW SECTION: THE GALLERY WALL (Visual Proof) --- */}
+      <section className="py-24 container mx-auto px-4 relative z-10">
+         <SectionHeading subtitle="Moments" title="Real Weddings. Real Emotion." />
+         
+         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
+            {/* Tall Item 1 */}
+            <div className="col-span-2 row-span-2 relative rounded-xl overflow-hidden group">
+               <img src="https://images.unsplash.com/photo-1587271407850-8d4389106628?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+               <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-all"></div>
+            </div>
+            {/* Square Item 2 */}
+            <div className="relative rounded-xl overflow-hidden group">
+               <img src="https://images.unsplash.com/photo-1611105637889-3e7960025e83?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+            </div>
+             {/* Square Item 3 */}
+            <div className="relative rounded-xl overflow-hidden group">
+               <img src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+            </div>
+            {/* Wide Item 4 */}
+            <div className="col-span-2 relative rounded-xl overflow-hidden group">
+               <img src="https://images.unsplash.com/photo-1523438097201-5390507d5664?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+            </div>
+         </div>
+         <div className="text-center mt-10">
+            <Link href="/portfolio">
+               <button className="flex items-center gap-2 mx-auto text-[#D4AF37] uppercase tracking-widest text-xs font-bold border-b border-[#D4AF37] pb-1 hover:text-white hover:border-white transition-all">
+                  <Camera className="w-4 h-4" /> View Full Gallery
+               </button>
+            </Link>
+         </div>
+      </section>
+
+      {/* --- 5. VIDEO STRIP (Kept, but moved down) --- */}
+      <section className="py-20 bg-[#080808] border-y border-neutral-900 overflow-hidden relative z-10">
+        <div className="container mx-auto px-4 mb-10">
+           <div className="flex justify-between items-end">
+             <h2 className="text-3xl font-display font-bold">Watch Me <span className="text-[#D4AF37]">Live</span></h2>
+           </div>
+        </div>
+        <div className="flex gap-6 overflow-x-auto pb-8 px-4 no-scrollbar">
+           {[1, 2, 3, 4].map((i) => (
+             <div key={i} className="min-w-[350px] md:min-w-[450px] aspect-video bg-[#111] relative group rounded-xl overflow-hidden cursor-pointer border border-neutral-800">
+                <img src={`https://images.unsplash.com/photo-${i === 1 ? '1545232979-8bf68ee9b1af' : '1511578314322-379afb476865'}?w=800&q=80`} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                   <div className="w-16 h-16 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-black transition-all shadow-xl">
+                      <Play className="w-6 h-6 fill-current" />
+                   </div>
                 </div>
-                <h3 className="text-lg font-display font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm flex-grow">{service.description}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* Event Types Details */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Expertise</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Wedding <span className="text-amber-500">Highlights</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {weddingEventTypes.map((event) => (
-              <StaggerItem key={event.title}>
-                <motion.div
-                  className="h-full flex flex-col p-6 bg-black border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h3 className="text-lg font-display font-bold mb-3 flex items-center gap-2">
-                    <Mic className="w-5 h-5 text-amber-500" />
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm flex-grow">{event.description}</p>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+             </div>
+           ))}
         </div>
       </section>
 
-      {/* Experience Stats */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Experience</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Why Families <span className="text-amber-500">Trust Me</span>
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: CalendarHeart, number: "1100+", label: "Events Hosted" },
-            { icon: Star, number: "5+", label: "Years Experience" },
-            { icon: Users, number: "100k+", label: "Happy Guests" },
-            { icon: MapPin, number: "15+", label: "Cities Covered" },
-          ].map((stat) => (
-            <StaggerItem key={stat.label}>
-              <motion.div
-                className="text-center p-6 bg-neutral-900 border border-neutral-800 rounded-xl"
-                whileHover={{ scale: 1.05 }}
-              >
-                <stat.icon className="w-8 h-8 text-amber-500 mx-auto mb-4" />
-                <div className="text-3xl font-display font-bold text-amber-500 mb-2">{stat.number}</div>
-                <p className="text-gray-400 text-sm">{stat.label}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* Venues/Styles */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Venues</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Wedding Styles I <span className="text-amber-500">Handle</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {weddingStyles.map((style) => (
-              <StaggerItem key={style}>
-                <motion.div
-                  className="px-6 py-2 bg-black border border-neutral-800 rounded-full text-sm font-medium hover:border-amber-500 hover:text-amber-500 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {style}
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+      {/* --- 6. WEDDING SPECIFIC FAQ --- */}
+      <section className="py-24 max-w-4xl mx-auto px-4 relative z-10">
+        <SectionHeading subtitle="Clarifications" title="Common Wedding Questions" align="center" />
+        <div className="space-y-4 mt-16">
+          <FAQItem 
+            question="Do you prepare scripts for our family members?" 
+            answer="Yes! I know Chachas and Masis get nervous. I provide simple, funny script templates and rehearse with them 10 minutes before the show to make them look like pros." 
+          />
+          <FAQItem 
+            question="Can you handle a crowd that doesn't dance?" 
+            answer="That is my specialty. I have a set of 'Ice-Breaker' games and interactive crowd-pullers (like 'The Train' or 'Paper Dance') that force even the shyest guests off their chairs." 
+          />
+          <FAQItem 
+            question="Do you travel for Destination Weddings?" 
+            answer="Yes. I am based in Jaipur but frequently host in Udaipur, Jodhpur, Pushkar, and Goa. Travel, stay, and logistics are to be arranged by the client." 
+          />
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-display font-bold text-center mb-12">Wedding Anchor FAQs</h2>
-        <div className="space-y-2">
-          {weddingFAQs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-neutral-900 border-t border-neutral-800">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Ready to Create <span className="text-amber-500">Magic?</span>
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Dates for the wedding season fill up fast. Let's discuss your Sangeet ideas and block your dates today!
+      {/* --- 7. FINAL CTA --- */}
+      <section className="py-32 bg-[#D4AF37] text-black text-center relative overflow-hidden z-10">
+         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-multiply"></div>
+         <div className="container mx-auto px-4 relative z-10">
+            <h2 className="text-4xl md:text-7xl font-display font-black mb-6">Dates Filling Fast for 2026</h2>
+            <p className="text-xl mb-12 max-w-2xl mx-auto font-medium opacity-80 leading-relaxed">
+               Don't leave your big day to chance. <br /> Book an anchor who guarantees a celebration, not just an event.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2">
-                  Book Now <ChevronRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <a href="tel:+917737877978">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Call Now
-                </button>
-              </a>
-            </div>
-            <p className="text-gray-500 text-sm mt-8">
-              Looking for corporate events? Check out my <Link href="/corporate-event-anchor-jaipur" className="text-amber-500 hover:underline">Corporate Anchor Profile</Link>.
-            </p>
-          </ScrollReveal>
-        </div>
+            <Link href="/contact">
+               <button className="px-12 py-5 bg-black text-white text-lg font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl rounded-full">
+                  Check Your Date Availability
+               </button>
+            </Link>
+         </div>
       </section>
 
     </div>
   );
 }
+
+// --- NEW SUB-COMPONENTS ---
+
+const FeatureRow = ({ icon, title, desc }) => (
+  <div className="flex gap-5 group">
+    <div className="w-14 h-14 rounded-full border border-neutral-800 bg-[#0a0a0a] flex items-center justify-center text-[#D4AF37] shrink-0 group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-500">
+      {icon}
+    </div>
+    <div>
+      <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
+      <p className="text-gray-400 text-sm leading-relaxed font-light max-w-md">{desc}</p>
+    </div>
+  </div>
+);
+
+// THE NEW VISUAL SERVICE CARD (HOVER REVEAL)
+const VisualServiceCard = ({ title, subtitle, img, icon, desc, tags, highlight }) => (
+  <div className={`group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer ${highlight ? 'ring-2 ring-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.2)]' : 'border border-neutral-900'}`}>
+    
+    {/* Background Image */}
+    <div className="absolute inset-0">
+       <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+       <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-80"></div>
+    </div>
+    
+    {/* Content Layer */}
+    <div className="absolute inset-0 p-8 flex flex-col justify-end z-20">
+       
+       {/* Initial View (Icon & Title) */}
+       <div className="transform transition-all duration-500 group-hover:-translate-y-4">
+          <div className={`w-14 h-14 mb-6 rounded-full flex items-center justify-center transition-all duration-500 ${highlight ? 'bg-[#D4AF37] text-black' : 'bg-black/50 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 group-hover:bg-[#D4AF37] group-hover:text-black'}`}>
+            {icon}
+          </div>
+          <p className="text-[#D4AF37] text-xs uppercase tracking-widest font-bold mb-2">{subtitle}</p>
+          <h3 className="text-3xl font-display font-bold text-white mb-0 group-hover:mb-4 transition-all">{title}</h3>
+       </div>
+
+       {/* Hidden Details (Reveal on Hover) */}
+       <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 delay-100 overflow-hidden">
+          <p className="text-gray-300 text-sm leading-relaxed font-light mb-6 border-l-2 border-[#D4AF37] pl-4">
+            {desc}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span key={tag} className="text-[10px] bg-black/50 backdrop-blur-md text-white px-3 py-1 rounded-full border border-white/20">
+                {tag}
+              </span>
+            ))}
+          </div>
+       </div>
+
+    </div>
+  </div>
+);
+
+const FAQItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-xl overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/50">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-between w-full p-6 text-left"
+      >
+        <span className="font-bold text-white text-lg md:text-xl">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-[#D4AF37] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <p className="p-6 pt-0 text-gray-400 leading-relaxed font-light">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
