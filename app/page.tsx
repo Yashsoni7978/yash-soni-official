@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Play, Minus, Plus, Crown, ArrowRight, Star, Mic, Sparkles, 
-  MapPin, Quote, Instagram, CheckCircle2, Users 
+  MapPin, Quote, Instagram, CheckCircle2, Users, ScrollText, CalendarCheck 
 } from "lucide-react";
 
 // --- 1. CSS STYLES ---
@@ -29,7 +29,7 @@ const GoldTextureText = ({ children, className }: { children: React.ReactNode, c
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className}`}
     style={{ 
-      backgroundImage: "url('/gold-texture.png')", // Ensure this file is in public folder
+      backgroundImage: "url('/gold-texture.png')", 
       backgroundColor: "#D4AF37", 
     }}
   >
@@ -97,31 +97,44 @@ const GoldDivider = () => (
   <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-30 my-24" />
 );
 
-// --- TRUSTED MARQUEE COMPONENT ---
+// --- 5. TRUSTED MARQUEE COMPONENT (UPDATED) ---
 const TrustedMarquee = () => {
   const brands = [
-    "WedMeGood", "WeddingWire", "StarClinch", "ShaadiDukaan", 
-    "Google Reviews", "Justdial", "Sulekha", "WeddingBazaar"
+    { name: "Google Reviews", color: "hover:text-[#4285F4]", link: "https://share.google/pMZGzEGOhXnJpLq5g" }, // YOUR LINK HERE
+    { name: "WedMeGood", color: "hover:text-[#DE5D83]", link: "#" },
+    { name: "WeddingWire", color: "hover:text-[#1467B0]", link: "#" },
+    { name: "StarClinch", color: "hover:text-[#FF5722]", link: "#" },
+    { name: "ShaadiDukaan", color: "hover:text-[#E91E63]", link: "#" },
+    { name: "Justdial", color: "hover:text-[#FF9800]", link: "#" },
+    { name: "Sulekha", color: "hover:text-[#FFC107]", link: "#" },
+    { name: "WeddingBazaar", color: "hover:text-[#E53935]", link: "#" }
   ];
 
   return (
     <div className="flex w-full overflow-hidden">
       <motion.div 
-        className="flex gap-16 md:gap-32 items-center whitespace-nowrap px-4"
+        className="flex gap-40 items-center whitespace-nowrap px-4" // Increased gap to 40 for the "1 sec gap" feel
         animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
       >
+        {/* Tripled array for smooth infinite loop */}
         {[...brands, ...brands, ...brands].map((brand, i) => (
-          <span key={i} className="text-xl md:text-2xl font-display font-bold text-gray-600 uppercase tracking-widest hover:text-[#D4AF37] transition-colors cursor-default">
-            {brand}
-          </span>
+          <a 
+            key={i} 
+            href={brand.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`text-xl md:text-3xl font-display font-bold text-white/80 uppercase tracking-widest transition-colors duration-300 ${brand.color}`}
+          >
+            {brand.name}
+          </a>
         ))}
       </motion.div>
     </div>
   );
 };
 
-// --- 5. REVIEW CARD ---
+// --- 6. REVIEW CARD ---
 const ReviewCard = ({ name, date, text, platform }: any) => (
   <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37]/50 transition-colors flex flex-col shadow-lg mx-4">
     <div className="flex items-start gap-4 mb-4">
@@ -233,7 +246,7 @@ export default function Home() {
         <HeroSlider />
         <div className="relative container mx-auto px-4 z-20">
           
-          {/* TEXT ALIGNED LEFT (As requested) */}
+          {/* TEXT ALIGNED LEFT */}
           <div className="max-w-4xl mr-auto text-left pl-2 md:pl-10">
             
             {/* PILL BADGE */}
@@ -243,7 +256,7 @@ export default function Home() {
                </span>
             </motion.div>
 
-            {/* H1 TITLE: "Anchor Yash" */}
+            {/* H1 TITLE: "Anchor Yash" with "Yash" in Gold */}
             <motion.h1 
               initial={{ opacity: 0, y: 30 }} 
               animate={{ opacity: 1, y: 0 }} 
@@ -288,23 +301,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SECTION 2: TRUSTED MARQUEE (New!) --- */}
-      <section className="bg-[#111] border-y border-neutral-800 relative z-30">
-        <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center gap-8">
-           <div className="text-gray-500 text-xs uppercase tracking-[0.3em] whitespace-nowrap md:w-32">
-             Trusted On
-           </div>
-           
-           {/* SCROLLING MARQUEE */}
-           <div className="flex-1 overflow-hidden relative h-10 flex items-center">
-             <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#111] to-transparent z-10" />
-             <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#111] to-transparent z-10" />
-             <TrustedMarquee />
-           </div>
-        </div>
-      </section>
-
-      {/* --- SECTION 3: THE INTRODUCTION --- */}
+      {/* --- SECTION 2: THE INTRODUCTION --- */}
       <section className="py-24 container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
@@ -345,7 +342,7 @@ export default function Home() {
 
       <GoldDivider />
 
-      {/* --- SECTION 4: THE STYLE (3 Pillars) --- */}
+      {/* --- SECTION 3: THE STYLE (3 Pillars) --- */}
       <section className="py-20 container mx-auto px-4">
          <ScrollReveal>
            <div className="text-center mb-16">
@@ -367,7 +364,7 @@ export default function Home() {
          </div>
       </section>
 
-      {/* --- SECTION 5: SERVICES (Detailed List) --- */}
+      {/* --- SECTION 4: SERVICES --- */}
       <section className="py-20 container mx-auto px-4">
         <ScrollReveal>
           <div className="flex justify-between items-end mb-16">
@@ -400,7 +397,7 @@ export default function Home() {
 
       <GoldDivider />
 
-      {/* --- SECTION 6: THE PROCESS --- */}
+      {/* --- SECTION 5: THE PROCESS --- */}
       <section className="py-20 container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-20">
@@ -424,7 +421,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SECTION 7: REVIEWS SLIDER (Infinite Scroll) --- */}
+      {/* --- SECTION 6: VENUES --- */}
+      <section className="py-20 bg-[#111] border-y border-neutral-800">
+        <div className="container mx-auto px-4 text-center">
+          <ScrollReveal>
+            <p className="text-gray-500 text-xs uppercase tracking-[0.3em] mb-12">Featured at Premier Venues</p>
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-60">
+              {venues.map((venue, i) => (
+                <span key={i} className="text-xl md:text-2xl font-display font-bold text-white/40 hover:text-[#D4AF37] cursor-default transition-all duration-500 hover:scale-105">
+                  {venue}
+                </span>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* --- SECTION 7: TRUSTED BY MARQUEE (ROYAL MAROON) --- */}
+      <section className="bg-gradient-to-r from-[#800020] via-[#5C0015] to-[#800020] border-y border-[#FFD700]/20 relative z-30 py-8">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+           <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] whitespace-nowrap font-bold">
+             Trusted On
+           </div>
+           
+           {/* SCROLLING MARQUEE */}
+           <div className="flex-1 overflow-hidden relative h-10 flex items-center">
+             <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#800020] to-transparent z-10" />
+             <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#800020] to-transparent z-10" />
+             <TrustedMarquee />
+           </div>
+        </div>
+      </section>
+
+      {/* --- SECTION 8: REVIEWS SLIDER --- */}
       <section className="py-24 bg-black overflow-hidden border-t border-neutral-900">
         <div className="container mx-auto px-4 mb-16 text-center">
           <ScrollReveal>
@@ -433,7 +462,6 @@ export default function Home() {
           </ScrollReveal>
         </div>
 
-        {/* MARQUEE ANIMATION CONTAINER */}
         <div className="flex overflow-hidden relative w-full py-8">
            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
@@ -443,7 +471,6 @@ export default function Home() {
              animate={{ x: ["0%", "-50%"] }}
              transition={{ duration: 60, ease: "linear", repeat: Infinity }}
            >
-             {/* Duplicate array to create infinite loop effect */}
              {[...reviews, ...reviews].map((r, i) => (
                <ReviewCard key={i} {...r} />
              ))}
@@ -457,7 +484,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SECTION 8: FAQ --- */}
+      {/* --- SECTION 9: FAQ --- */}
       <section className="py-24 container mx-auto px-4 max-w-4xl">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -472,7 +499,7 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
-      {/* --- SECTION 9: FINAL CTA --- */}
+      {/* --- SECTION 10: FINAL CTA --- */}
       <section className="py-40 text-center relative overflow-hidden">
          <div className="absolute inset-0 bg-[url('/gold-texture.png')] opacity-10 bg-cover bg-center mix-blend-overlay animate-pulse"></div>
          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
