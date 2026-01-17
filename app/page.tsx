@@ -7,11 +7,12 @@ import { Play, Instagram, Star, Users, Award, Mic, ChevronRight, Quote, Plus, Mi
 
 // --- HERO IMAGE SLIDER COMPONENT ---
 const HeroSlider = () => {
+  // FIXED: Using Internet Images so they work immediately without 404 errors
   const images = [
-    "/hero-anchor.webp",
-    "/wedding-event.jpg",
-    "/corporate-event.jpg",
-    "/sangeet-event.jpg"
+    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop", // Wedding
+    "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069&auto=format&fit=crop", // Stage
+    "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1974&auto=format&fit=crop", // Mic
+    "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1770&auto=format&fit=crop"  // Crowd
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,9 +44,7 @@ const HeroSlider = () => {
   );
 };
 
-// --- INLINE ANIMATION COMPONENTS (Fixed Types) ---
-// We added ': any' to children, question, and answer to fix the 6 errors.
-
+// --- INLINE ANIMATION COMPONENTS (Fixed Types for TypeScript) ---
 const ScrollReveal = ({ children, delay = 0, direction = "up" }: any) => {
   const variants = {
     hidden: { 
@@ -148,9 +147,9 @@ const trustBadges = [
 ];
 
 const anchoringServices = [
-  { title: "Wedding Anchor", description: "Professional hosting for your special day with seamless ceremony management", image: "/wedding-event.jpg", link: "/wedding-anchor-jaipur" },
-  { title: "Corporate Anchor", description: "Polished and engaging hosting for business events and conferences", image: "/corporate-event.jpg", link: "/corporate-event-anchor-jaipur" },
-  { title: "Fashion Show Host", description: "Bringing glamour and energy to runway events and fashion weeks", image: "/fashion-show.jpg", link: "/anchoring" },
+  { title: "Wedding Anchor", description: "Professional hosting for your special day with seamless ceremony management", image: "https://images.unsplash.com/photo-1519225421980-715cb0202128?auto=format&fit=crop&q=80", link: "/wedding-anchor-jaipur" },
+  { title: "Corporate Anchor", description: "Polished and engaging hosting for business events and conferences", image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80", link: "/corporate-event-anchor-jaipur" },
+  { title: "Fashion Show Host", description: "Bringing glamour and energy to runway events and fashion weeks", image: "https://images.unsplash.com/photo-1509631179647-0177f4cd6804?auto=format&fit=crop&q=80", link: "/services" }, // FIXED: Points to /services now
 ];
 
 const testimonials = [
@@ -222,6 +221,7 @@ export default function Home() {
               1100+ Events • Weddings • Corporate • Sports • Fashion Shows • Event Planning & Designing
             </motion.p>
 
+            {/* FIXED BUTTONS: Changed <button> to <span> to fix nesting error */}
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-wrap gap-4">
               <Link href="/contact">
                 <span className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.4)] cursor-pointer">
@@ -318,7 +318,8 @@ export default function Home() {
         </StaggerContainer>
 
         <div className="text-center mt-12">
-          <Link href="/anchoring">
+          {/* FIXED LINK: Changed from /anchoring to /services */}
+          <Link href="/services">
             <span className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all inline-flex items-center gap-2 mx-auto cursor-pointer">
               View All Anchoring Services <ChevronRight className="w-5 h-5" />
             </span>
