@@ -1,11 +1,51 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Play, Instagram, Star, Users, Award, Mic, ChevronRight, Quote, Calendar, Palette, PartyPopper, Plus, Minus } from "lucide-react";
 
-// --- INLINE COMPONENTS ---
+// --- HERO IMAGE SLIDER COMPONENT ---
+const HeroSlider = () => {
+  // Add your image paths here. Make sure these exist in your public folder!
+  const images = [
+    "/hero-anchor.webp",     // Main portrait
+    "/wedding-event.jpg",    // Wide stage shot
+    "/corporate-event.jpg",  // Mic in hand shot
+    "/sangeet-event.jpg"     // Dancing/Fun shot
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000); // Changes every 5 seconds
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="absolute inset-0 z-0">
+      <AnimatePresence mode="popLayout">
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+          className="w-full h-full object-cover absolute inset-0"
+          alt="Anchor Yash Event"
+        />
+      </AnimatePresence>
+      {/* Dark Overlay to make text readable */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950/50 z-10" />
+    </div>
+  );
+};
+
+// --- INLINE ANIMATION COMPONENTS ---
 const ScrollReveal = ({ children, delay = 0, direction = "up" }) => {
   const variants = {
     hidden: { 
@@ -148,55 +188,91 @@ export default function Home() {
       
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
 
-      {/* Hero Section */}
+      {/* --- HERO SECTION --- */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/hero-anchor.webp" 
-            alt="Anchor Yash - Premium Event Host and Event Management in Jaipur"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
-        </div>
+        
+        {/* --- BACKGROUND SLIDER --- */}
+        <HeroSlider />
 
-        <div className="relative container mx-auto px-4 pt-32 pb-20">
+        {/* --- CONTENT (Sits on top of slider) --- */}
+        <div className="relative container mx-auto px-4 pt-32 pb-20 z-20">
+          
+          {/* --- URGENCY BANNER (SEO UPDATE) --- */}
+          <div className="absolute top-20 left-0 right-0 flex justify-center">
+             <div className="bg-amber-600 text-black text-xs md:text-sm font-bold py-2 px-6 rounded-full animate-pulse shadow-lg shadow-amber-900/50">
+               📅 Booking Fast for Jan-Feb 2026 Wedding Season! <Link href="/contact" className="underline hover:text-white ml-1">Check Dates</Link>
+             </div>
+          </div>
+
           <div className="max-w-3xl">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6 backdrop-blur-sm">
                 Jaipur's Leading Event Anchor
               </span>
             </motion.div>
 
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
-              <span className="text-white">Anchor</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-500 to-amber-700">Yash</span>
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8, delay: 0.1 }} 
+              className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6"
+            >
+              The Most Engaging <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-500 to-amber-700">Anchor in Jaipur</span>
             </motion.h1>
 
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-xl md:text-2xl text-gray-400 mb-4">
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-xl md:text-2xl text-gray-200 mb-4 font-light">
               Premium Wedding & Corporate Event Anchor
             </motion.p>
 
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="text-lg text-amber-500 font-medium mb-8">
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="text-lg text-amber-400 font-medium mb-8">
               1100+ Events • Weddings • Corporate • Sports • Fashion Shows • Event Planning & Designing
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2">
+                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.4)]">
                   Book Now <ChevronRight className="w-5 h-5" />
                 </button>
               </Link>
               <Link href="/portfolio">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
+                <button className="px-8 py-4 border border-white/30 bg-black/30 backdrop-blur-md text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
                   <Play className="w-5 h-5" /> View Portfolio
                 </button>
               </Link>
               <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
+                <button className="px-8 py-4 border border-white/30 bg-black/30 backdrop-blur-md text-white font-bold rounded-full hover:border-pink-500 hover:text-pink-500 transition-all flex items-center gap-2">
                   <Instagram className="w-5 h-5" /> Instagram
                 </button>
               </a>
             </motion.div>
+
+            {/* --- TRUST BADGE (SEO UPDATE) --- */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+              className="mt-8 flex items-center gap-3 backdrop-blur-sm p-2 rounded-lg inline-block bg-black/20"
+            >
+              <div className="flex -space-x-2">
+                {[1,2,3,4].map(i => (
+                  <div key={i} className="w-8 h-8 rounded-full border-2 border-black bg-neutral-800 overflow-hidden">
+                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="Client" />
+                  </div>
+                ))}
+              </div>
+              <div className="text-sm">
+                <div className="flex text-amber-500">
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                </div>
+                <p className="text-gray-300 font-medium">Rated 5.0 by 500+ Happy Clients</p>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>

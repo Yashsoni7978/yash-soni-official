@@ -162,9 +162,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:yashsoni7978@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-amber-500 transition-colors py-1">
+                <a href="mailto:info@yashsoni.in" className="flex items-center gap-3 text-gray-400 hover:text-amber-500 transition-colors py-1">
                   <Mail className="w-5 h-5 text-amber-500 shrink-0" />
-                  yashsoni7978@gmail.com
+                  info@yashsoni.in
                 </a>
               </li>
               <li>
