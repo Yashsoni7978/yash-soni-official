@@ -3,16 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, Instagram, Star, Users, Award, Mic, ChevronRight, Quote, Calendar, Palette, PartyPopper, Plus, Minus } from "lucide-react";
+import { Play, Instagram, Star, Users, Award, Mic, ChevronRight, Quote, Plus, Minus } from "lucide-react";
 
 // --- HERO IMAGE SLIDER COMPONENT ---
 const HeroSlider = () => {
-  // Add your image paths here. Make sure these exist in your public folder!
   const images = [
-    "/hero-anchor.webp",     // Main portrait
-    "/wedding-event.jpg",    // Wide stage shot
-    "/corporate-event.jpg",  // Mic in hand shot
-    "/sangeet-event.jpg"     // Dancing/Fun shot
+    "/hero-anchor.webp",
+    "/wedding-event.jpg",
+    "/corporate-event.jpg",
+    "/sangeet-event.jpg"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,7 +19,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // Changes every 5 seconds
+    }, 5000); 
     return () => clearInterval(timer);
   }, [images.length]);
 
@@ -38,15 +37,16 @@ const HeroSlider = () => {
           alt="Anchor Yash Event"
         />
       </AnimatePresence>
-      {/* Dark Overlay to make text readable */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30 z-10" />
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950/50 z-10" />
     </div>
   );
 };
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0, direction = "up" }) => {
+// --- INLINE ANIMATION COMPONENTS (Fixed Types) ---
+// We added ': any' to children, question, and answer to fix the 6 errors.
+
+const ScrollReveal = ({ children, delay = 0, direction = "up" }: any) => {
   const variants = {
     hidden: { 
       opacity: 0, 
@@ -69,7 +69,7 @@ const ScrollReveal = ({ children, delay = 0, direction = "up" }) => {
   );
 };
 
-const StaggerContainer = ({ children, className }) => (
+const StaggerContainer = ({ children, className }: any) => (
   <motion.div
     initial="hidden"
     whileInView="show"
@@ -84,7 +84,7 @@ const StaggerContainer = ({ children, className }) => (
   </motion.div>
 );
 
-const StaggerItem = ({ children }) => (
+const StaggerItem = ({ children }: any) => (
   <motion.div
     variants={{
       hidden: { opacity: 0, y: 20 },
@@ -95,7 +95,7 @@ const StaggerItem = ({ children }) => (
   </motion.div>
 );
 
-const FAQItem = ({ question, answer }) => {
+const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="border-b border-neutral-800">
@@ -153,12 +153,6 @@ const anchoringServices = [
   { title: "Fashion Show Host", description: "Bringing glamour and energy to runway events and fashion weeks", image: "/fashion-show.jpg", link: "/anchoring" },
 ];
 
-const eventManagementServices = [
-  { icon: Calendar, title: "Event Planning", description: "End-to-end event planning from concept to flawless execution", link: "/event-planning-jaipur" },
-  { icon: Palette, title: "Event Designing", description: "Stunning decor, themes, and visual experiences for memorable events", link: "/event-designing" },
-  { icon: PartyPopper, title: "Wedding Planning", description: "Complete wedding management including choreography and entertainment", link: "/event-management-jaipur" },
-];
-
 const testimonials = [
   { name: "Priya & Rahul Sharma", event: "Wedding Reception", text: "Anchor Yash made our wedding reception absolutely magical! His energy was infectious and he kept all our guests engaged throughout the night. Highly recommend!", rating: 5 },
   { name: "Rajesh Agarwal", event: "Corporate Annual Meet", text: "Professional, punctual, and incredibly talented. Yash handled our 500+ employee event flawlessly. The best anchor we've ever worked with.", rating: 5 },
@@ -194,10 +188,9 @@ export default function Home() {
         {/* --- BACKGROUND SLIDER --- */}
         <HeroSlider />
 
-        {/* --- CONTENT (Sits on top of slider) --- */}
+        {/* --- CONTENT --- */}
         <div className="relative container mx-auto px-4 pt-32 pb-20 z-20">
           
-          {/* --- URGENCY BANNER (SEO UPDATE) --- */}
           <div className="absolute top-20 left-0 right-0 flex justify-center">
              <div className="bg-amber-600 text-black text-xs md:text-sm font-bold py-2 px-6 rounded-full animate-pulse shadow-lg shadow-amber-900/50">
                📅 Booking Fast for Jan-Feb 2026 Wedding Season! <Link href="/contact" className="underline hover:text-white ml-1">Check Dates</Link>
@@ -231,23 +224,22 @@ export default function Home() {
 
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.4)]">
+                <span className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.4)] cursor-pointer">
                   Book Now <ChevronRight className="w-5 h-5" />
-                </button>
+                </span>
               </Link>
               <Link href="/portfolio">
-                <button className="px-8 py-4 border border-white/30 bg-black/30 backdrop-blur-md text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
+                <span className="px-8 py-4 border border-white/30 bg-black/30 backdrop-blur-md text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2 cursor-pointer">
                   <Play className="w-5 h-5" /> View Portfolio
-                </button>
+                </span>
               </Link>
               <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
-                <button className="px-8 py-4 border border-white/30 bg-black/30 backdrop-blur-md text-white font-bold rounded-full hover:border-pink-500 hover:text-pink-500 transition-all flex items-center gap-2">
+                <span className="px-8 py-4 border border-white/30 bg-black/30 backdrop-blur-md text-white font-bold rounded-full hover:border-pink-500 hover:text-pink-500 transition-all flex items-center gap-2 cursor-pointer">
                   <Instagram className="w-5 h-5" /> Instagram
-                </button>
+                </span>
               </a>
             </motion.div>
 
-            {/* --- TRUST BADGE (SEO UPDATE) --- */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -281,7 +273,7 @@ export default function Home() {
       <section className="py-16 bg-neutral-900 border-y border-neutral-800">
         <div className="container mx-auto px-4">
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <StaggerItem key={stat.label}>
                 <motion.div className="text-center" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
                   <stat.icon className="w-8 h-8 text-amber-500 mx-auto mb-4" />
@@ -327,9 +319,9 @@ export default function Home() {
 
         <div className="text-center mt-12">
           <Link href="/anchoring">
-            <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2 mx-auto">
+            <span className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all inline-flex items-center gap-2 mx-auto cursor-pointer">
               View All Anchoring Services <ChevronRight className="w-5 h-5" />
-            </button>
+            </span>
           </Link>
         </div>
       </section>
@@ -422,14 +414,14 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact">
-                <button className="px-10 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2">
+                <span className="px-10 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2 cursor-pointer">
                   Book Anchor Yash <ChevronRight className="w-5 h-5" />
-                </button>
+                </span>
               </Link>
               <Link href="/portfolio">
-                <button className="px-10 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2">
+                <span className="px-10 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all flex items-center gap-2 cursor-pointer">
                   <Play className="w-5 h-5" /> View My Work
-                </button>
+                </span>
               </Link>
             </div>
           </ScrollReveal>
