@@ -9,12 +9,7 @@ import {
   PenTool, Gem, ChevronDown, ShieldCheck 
 } from "lucide-react";
 
-// --- SEO METADATA ---
-export const metadata = {
-  title: "Wedding Planner Jaipur | Yash Soni | The Insider's Blueprint",
-  description: "Plan your dream wedding in Jaipur with an industry insider. Direct access to top decor, catering, and logistics vendors without hidden commissions. Honest, transparent planning.",
-  keywords: "Wedding Planner Jaipur, Destination Wedding Rajasthan, Budget Wedding Planning Jaipur, Decor Vendor Jaipur, Wedding Logistics Management",
-};
+
 
 // --- GOLD TEXTURE COMPONENT ---
 const GoldTextureText = ({ children, className }) => (

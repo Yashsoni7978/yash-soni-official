@@ -8,12 +8,7 @@ import {
   ArrowRight, Ticket, Film, Crown, Sparkles 
 } from "lucide-react";
 
-// --- SEO METADATA ---
-export const metadata = {
-  title: "Celebrity & Concert Anchor Jaipur | Yash Soni | Lifestyle Event Host",
-  description: "Host for Music Festivals, Celebrity Meet & Greets, and Luxury Brand Launches in Jaipur. The voice that controls the crowd.",
-  keywords: "Celebrity Anchor Jaipur, Concert Host Rajasthan, Fashion Show Emcee, Movie Promotion Host, Luxury Brand Launch Anchor",
-};
+
 
 // --- CHROME/PLATINUM TEXTURE (For that "Star" feel) ---
 const PlatinumText = ({ children, className }) => (

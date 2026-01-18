@@ -8,12 +8,7 @@ import {
   ArrowRight, CheckCircle, ChevronDown, Phone, Crown, Camera 
 } from "lucide-react";
 
-// --- SEO METADATA ---
-export const metadata = {
-  title: "Best Anchor in Jaipur | Yash Soni | Royal Event Host",
-  description: "Hire Jaipur's premium anchor. Yash Soni hosts royal weddings at Fairmont, Rambagh, and corporate events at JECC with heritage elegance. Local expert.",
-  keywords: "Anchor in Jaipur, Royal Wedding Anchor, Best Emcee Jaipur, Event Host Rajasthan, Fairmont Jaipur Anchor, Rambagh Palace Host",
-};
+
 
 // --- ROYAL COMPONENTS ---
 const GoldTextureText = ({ children, className }) => (

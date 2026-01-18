@@ -4,11 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Script from "next/script";
 
-export const metadata = {
-  title: "Anchor Yash Soni | Premium Event Host Jaipur",
-  description: "India's leading wedding and corporate anchor based in Jaipur. Hosting weddings, sangeets, and corporate summits with elegance and energy.",
-  metadataBase: new URL('https://yashsoni.in'), // Your actual domain
-};
+
 
 export default function RootLayout({ children }) {
   return (
