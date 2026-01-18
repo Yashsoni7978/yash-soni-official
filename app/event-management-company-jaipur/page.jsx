@@ -2,290 +2,245 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  ChevronRight, MessageCircle, Radio, Zap, Truck, 
-  ShieldCheck, Settings, Hammer, Monitor, Speaker, 
-  Layers, Users, Activity, Plus, Minus, TriangleAlert
+  Settings, Truck, ShieldCheck, Zap, 
+  Speaker, Monitor, Hammer, Radio, 
+  CheckCircle, ArrowRight, ChevronDown 
 } from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
-    }}
-  >
-    {children}
-  </motion.div>
-);
-
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-neutral-800">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-4 text-left group"
-      >
-        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-emerald-500' : 'text-gray-300 group-hover:text-emerald-500'}`}>
-          {question}
-        </span>
-        {isOpen ? <Minus className="w-5 h-5 text-emerald-500" /> : <Plus className="w-5 h-5 text-gray-500" />}
-      </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-4 text-gray-400 text-sm leading-relaxed">{answer}</p>
-      </motion.div>
-    </div>
-  );
-};
-
-// --- DATA ---
-const techInventory = [
-  { icon: Speaker, title: "Pro Audio", description: "JBL Vertec / RCF Line Arrays. Digital Consoles (DiGiCo/Yamaha) ensuring crystal clear speech and thumping bass." },
-  { icon: Monitor, title: "Visuals", description: "P3/P4 High-Refresh Rate LED Walls, Watchout Servers, and seamless switchers for glitch-free presentations." },
-  { icon: Zap, title: "Intelligent Lighting", description: "Sharpy Beams, COB Washes, and GrandMA2 Consoles to create concert-level light shows." },
-  { icon: Layers, title: "Trussing & Rigging", description: "Certified Box Truss and German Hangers. Safety-first rigging for heavy LED walls and sound clusters." },
+// --- EXPANDING CARD DATA ---
+const productionServices = [
+  {
+    id: "01",
+    title: "Technical Production",
+    subtitle: "Sound, Light & Visuals",
+    desc: "We own the console. From JBL Line Arrays to P3 LED Walls, we ensure your event sounds crisp and looks cinematic. Zero feedback loops. Zero blackouts.",
+    icon: <Speaker className="w-12 h-12 text-[#D4AF37]" />,
+    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: "02",
+    title: "Fabrication & Decor",
+    subtitle: "Stage & Structures",
+    desc: "Custom carpentry and metalwork. We build 60ft stages, massive entry arches, and intricate photobooths that can withstand the weather and the crowd.",
+    icon: <Hammer className="w-12 h-12 text-[#D4AF37]" />,
+    image: "https://images.unsplash.com/photo-1561344640-2453889cde5b?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: "03",
+    title: "Logistics & Fleet",
+    subtitle: "Transport & Movement",
+    desc: "Moving 500 guests and 5 trucks of gear requires military precision. We manage the fleet, the loading docks, and the parking logic.",
+    icon: <Truck className="w-12 h-12 text-[#D4AF37]" />,
+    image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: "04",
+    title: "Artist Management",
+    subtitle: "Hospitality & Tech Rider",
+    desc: "We bridge the gap between the Star and the Stage. Green rooms, technical riders, and secure entry/exit routes for celebrity performers.",
+    icon: <Settings className="w-12 h-12 text-[#D4AF37]" />,
+    image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070&auto=format&fit=crop"
+  },
 ];
 
-const logisticsList = [
-  { icon: Hammer, title: "Fabrication", desc: "Custom stage decks, backdrops, and photobooths built on-site." },
-  { icon: Zap, title: "Power/Genset", desc: "62.5 kVA+ Silent Gensets with auto-changeover switches for zero blackout." },
-  { icon: Radio, title: "Comms", desc: "Walkie-talkie channels for stage managers, console, and security." },
-  { icon: Truck, title: "Logistics", desc: "Fleet management for equipment transport and loading/unloading labor." },
-  { icon: ShieldCheck, title: "Security", desc: "Bouncers for VIP areas and crowd control barriers." },
-  { icon: Users, title: "Manpower", desc: "Runners, Shadows, and Stage Hands to handle quick changes." },
-];
-
-const managementFAQs = [
-  { question: "What is the difference between Planning and Management?", answer: "Planning is the paperwork (Budget, Vendors). Management is the fieldwork (Wires, Lights, Logistics). This page is about the 'Boots on the Ground' execution." },
-  { question: "Do you own your own equipment?", answer: "We have in-house sound and light inventory for intimate events. For large-scale concerts or weddings, we partner with Jaipur's top rental vendors whom I trust personally." },
-  { question: "How do you handle power failures?", answer: "We operate on a 'Zero Dark' policy. We always mandate a backup silent genset on standby with an automatic transfer switch (ATS). The show never stops." },
-  { question: "Do you manage artist technical riders?", answer: "Yes. Since I am an artist myself, I understand technical riders perfectly. I ensure the band gets the specific drum kit, amps, and monitors they requested." },
-  { question: "Can you handle last-minute fabrication changes?", answer: "Yes, our fabrication team travels with extra flex, wood, and paint for on-site touch-ups and last-minute branding changes." },
-];
-
-export default function EventManagement() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Event Management Company Jaipur",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "areaServed": "Jaipur, Rajasthan",
-    },
-    "serviceType": "Event Production & Logistics",
-    "description": "Technical event production and management in Jaipur. Sound, Light, LED Walls, and on-ground logistics execution.",
-  };
+export default function EventManagementPro() {
+  const [activeCard, setActiveCard] = useState("01");
 
   return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <div className="bg-[#0a0a0a] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent" />
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+      {/* --- 1. HERO: INDUSTRIAL GRANDEUR --- */}
+      <section className="relative h-screen flex flex-col justify-center px-6 border-b border-white/10 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black/50"></div>
         
-        <div className="container mx-auto px-4 relative text-center">
-          <ScrollReveal>
-            <span className="inline-block px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-500 text-sm font-medium mb-6">
-              Logistics • Production • Execution
-            </span>
-            <h1 className="text-4xl md:text-7xl font-display font-bold mb-6">
-              Chaos. <br /> <span className="text-emerald-500">Controlled.</span>
+        <div className="relative z-10 container mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 1 }}
+          >
+            <div className="flex items-center gap-4 mb-6">
+               <Settings className="w-6 h-6 text-[#D4AF37] animate-spin-slow" />
+               <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-sm">Production House</span>
+            </div>
+            
+            <h1 className="text-6xl md:text-9xl font-display font-black leading-[0.9] text-white mb-8">
+              ENGINEERED <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#8a6e1c]">PERFECTION.</span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              Planning is the dream. Management is the reality. <br />
-              We are the boots on the ground that ensure the mic works, the lights hit, and the show goes on without a glitch.
+            
+            <p className="text-xl text-gray-400 max-w-2xl leading-relaxed mb-12 border-l-2 border-[#D4AF37] pl-6">
+              Events are not just "managed." They are <strong>built.</strong> <br />
+              We provide the backbone of steel, sound, and logistics that allows the magic to happen.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            
+            <div className="flex gap-6">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-emerald-600 text-white font-bold rounded-none border-l-4 border-white hover:bg-emerald-700 transition-all hover:scale-105 flex items-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                  Deploy The Team <Settings className="w-5 h-5" />
+                <button className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-[#D4AF37] transition-all">
+                  Deploy Team
                 </button>
               </Link>
             </div>
-          </ScrollReveal>
+          </motion.div>
         </div>
       </section>
 
-      {/* The "Why Me" Intro */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <ScrollReveal>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                  The <span className="text-emerald-500">Zero Error</span> Protocol
-                </h2>
-                <div className="text-gray-400 text-lg leading-relaxed space-y-6">
-                  <p>
-                    Why hire an Anchor's team for production? <strong>Because I am the one holding the mic.</strong>
-                  </p>
-                  <p>
-                    If the sound cracks, I look bad. If the spotlight misses, I look bad. My reputation is literally tied to the technical success of your event. That gives me a stronger incentive than any other manager to ensure perfection.
-                  </p>
-                  <p>
-                    We don't hope for the best. We prepare for the worst. My team runs on military precision, with backups for the backups.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Stats Box */}
-              <div className="grid grid-cols-2 gap-4">
-                 <div className="bg-black p-6 border border-neutral-800 text-center rounded-xl">
-                    <Activity className="w-8 h-8 text-emerald-500 mx-auto mb-2" />
-                    <h3 className="text-2xl font-bold text-white">2m</h3>
-                    <p className="text-gray-500 text-xs uppercase">Response Time</p>
-                 </div>
-                 <div className="bg-black p-6 border border-neutral-800 text-center rounded-xl">
-                    <Users className="w-8 h-8 text-emerald-500 mx-auto mb-2" />
-                    <h3 className="text-2xl font-bold text-white">20+</h3>
-                    <p className="text-gray-500 text-xs uppercase">Tech Crew</p>
-                 </div>
-                 <div className="bg-black p-6 border border-neutral-800 text-center rounded-xl">
-                    <ShieldCheck className="w-8 h-8 text-emerald-500 mx-auto mb-2" />
-                    <h3 className="text-2xl font-bold text-white">100%</h3>
-                    <p className="text-gray-500 text-xs uppercase">Safety Record</p>
-                 </div>
-                 <div className="bg-black p-6 border border-neutral-800 text-center rounded-xl">
-                    <TriangleAlert className="w-8 h-8 text-emerald-500 mx-auto mb-2" />
-                    <h3 className="text-2xl font-bold text-white">Zero</h3>
-                    <p className="text-gray-500 text-xs uppercase">Blackouts</p>
-                 </div>
-              </div>
+      {/* --- 2. THE EXPANDING CARDS (New Layout) --- */}
+      <section className="hidden lg:flex h-[800px] w-full bg-[#050505] overflow-hidden">
+        {productionServices.map((service) => (
+          <motion.div 
+            key={service.id}
+            onClick={() => setActiveCard(service.id)}
+            className={`relative h-full border-r border-white/10 cursor-pointer transition-all duration-700 ease-in-out flex-shrink-0
+              ${activeCard === service.id ? "w-[50%]" : "w-[16.66%]"}
+            `}
+          >
+            {/* Background Image (Visible only when active) */}
+            <div className="absolute inset-0">
+               <img 
+                 src={service.image} 
+                 alt={service.title} 
+                 className={`w-full h-full object-cover transition-all duration-700 grayscale ${activeCard === service.id ? "opacity-40 grayscale-0" : "opacity-20"}`} 
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
             </div>
-          </ScrollReveal>
-        </div>
-      </section>
 
-      {/* Tech Arsenal */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              The <span className="text-emerald-500">Arsenal</span>
-            </h2>
-            <p className="text-gray-400 mt-4">Professional Grade Gear. No Compromises.</p>
-          </div>
-        </ScrollReveal>
+            {/* Vertical Text (When Inactive) */}
+            {activeCard !== service.id && (
+               <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="text-2xl font-bold text-gray-500 uppercase tracking-widest -rotate-90 whitespace-nowrap">
+                     {service.title}
+                  </h3>
+                  <div className="absolute bottom-10 text-[#D4AF37] font-black text-4xl opacity-50">{service.id}</div>
+               </div>
+            )}
 
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {techInventory.map((item) => (
-            <StaggerItem key={item.title}>
-              <motion.div
-                className="h-full flex flex-col p-8 bg-neutral-900 border border-neutral-800 rounded-none hover:border-emerald-500/50 transition-all duration-300 group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="mb-6 text-emerald-500">
-                  <item.icon className="w-10 h-10" />
-                </div>
-                <h3 className="text-xl font-display font-bold mb-3 text-white">{item.title}</h3>
-                <p className="text-gray-400 text-sm flex-grow leading-relaxed">{item.description}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* Operations Grid */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                The <span className="text-emerald-500">Logistics</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {logisticsList.map((item) => (
-              <StaggerItem key={item.title}>
-                <motion.div
-                  className="h-full flex flex-col items-center justify-center p-6 bg-black border border-neutral-800 hover:border-emerald-500/50 transition-all duration-300 text-center"
-                  whileHover={{ scale: 1.05 }}
+            {/* Content (When Active) */}
+            <AnimatePresence>
+              {activeCard === service.id && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="absolute bottom-0 left-0 p-16 w-full z-10"
                 >
-                  <item.icon className="w-8 h-8 text-gray-500 mb-3 group-hover:text-emerald-500" />
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider">{item.title}</h3>
-                  <p className="text-gray-500 text-[10px] mt-2 leading-tight hidden md:block">{item.desc}</p>
+                   <div className="text-[#D4AF37] mb-6">{service.icon}</div>
+                   <span className="text-[#D4AF37] font-bold tracking-widest uppercase mb-2 block">{service.subtitle}</span>
+                   <h2 className="text-6xl font-display font-black text-white mb-6 leading-none">{service.title}</h2>
+                   <p className="text-xl text-gray-300 max-w-lg leading-relaxed">{service.desc}</p>
                 </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        ))}
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-display font-bold text-center mb-12">Production FAQs</h2>
-        <div className="space-y-2">
-          {managementFAQs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-emerald-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-        <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
-              Ready to <span className="text-emerald-200">Execute?</span>
-            </h2>
-            <p className="text-emerald-100 mb-8 text-lg">
-              Don't risk your event with amateur gear. Hire the team that knows the difference between "Good Enough" and "Flawless."
-            </p>
-            <div className="flex justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-12 py-5 bg-white text-emerald-900 font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
-                  Check Availability
-                </button>
-              </Link>
+      {/* --- Mobile View for Services (Since expanding cards don't work well on mobile) --- */}
+      <section className="lg:hidden py-20 px-4">
+         {productionServices.map((service) => (
+            <div key={service.id} className="mb-8 bg-[#111] border border-white/10 rounded-2xl overflow-hidden">
+               <div className="h-64 overflow-hidden relative">
+                  <img src={service.image} className="w-full h-full object-cover grayscale" />
+                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                     <span className="text-6xl font-black text-white/10">{service.id}</span>
+                  </div>
+               </div>
+               <div className="p-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest mb-4">{service.subtitle}</p>
+                  <p className="text-gray-400 text-sm">{service.desc}</p>
+               </div>
             </div>
-          </ScrollReveal>
-        </div>
+         ))}
+      </section>
+
+      {/* --- 3. THE TECH ARSENAL (Grid) --- */}
+      <section className="py-32 container mx-auto px-4">
+         <div className="text-center mb-20">
+            <h2 className="text-4xl font-display font-bold">The Hardware.</h2>
+            <p className="text-gray-500 mt-4">We don't rent mediocrity. We deploy industry-standard gear.</p>
+         </div>
+
+         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border border-white/10">
+            <TechItem label="JBL Vertec / RCF" sub="Line Array Audio" />
+            <TechItem label="DiGiCo / Yamaha" sub="Digital Consoles" />
+            <TechItem label="P3 LED Walls" sub="4K Visuals" />
+            <TechItem label="Watchout Server" sub="Visual Mapping" />
+            <TechItem label="Sharpy / Beam" sub="Intelligent Lights" />
+            <TechItem label="GrandMA2" sub="Lighting Console" />
+            <TechItem label="62.5 kVA Genset" sub="Silent Power" />
+            <TechItem label="Trussing" sub="Certified Rigging" />
+         </div>
+      </section>
+
+      {/* --- 4. THE PROTOCOL (Process) --- */}
+      <section className="py-24 bg-[#111] border-y border-white/5">
+         <div className="container mx-auto px-4 max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+               <div>
+                  <h2 className="text-3xl font-bold mb-6 text-white">The "Zero Error" Protocol.</h2>
+                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                     Production is binary. It works, or it fails. <br />
+                     Because I am an Anchor first, I know the pain of a mic drop or a feedback loop. My team operates on a military-grade checklist to ensure 100% uptime.
+                  </p>
+                  <ul className="space-y-4">
+                     <CheckItem text="Double-redundancy on all Microphones." />
+                     <CheckItem text="Dedicated Genset for Sound (Isolated Earth)." />
+                     <CheckItem text="3D Stage Renders approved before fabrication." />
+                     <CheckItem text="Safety-First Rigging for overhead LEDs." />
+                  </ul>
+               </div>
+               <div className="grid grid-cols-2 gap-4">
+                  <StatCard num="2m" label="Response Time" />
+                  <StatCard num="100%" label="Safety Record" />
+                  <StatCard num="50+" label="Team Strength" />
+                  <StatCard num="0" label="Blackouts" />
+               </div>
+            </div>
+         </div>
+      </section>
+
+      {/* --- 5. CTA FOOTER --- */}
+      <section className="py-32 relative overflow-hidden bg-white text-black text-center">
+         <div className="container mx-auto px-4 relative z-10">
+            <h2 className="text-5xl md:text-7xl font-display font-black mb-8">READY TO EXECUTE?</h2>
+            <p className="text-gray-600 mb-10 text-xl max-w-2xl mx-auto font-medium">
+               Don't risk your reputation with amateur gear. <br /> Hire the team that understands the stage.
+            </p>
+            <Link href="/contact">
+               <button className="px-14 py-5 bg-black text-white font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
+                  Check Availability
+               </button>
+            </Link>
+         </div>
       </section>
 
     </div>
   );
 }
+
+// --- SUB COMPONENTS ---
+
+const TechItem = ({ label, sub }) => (
+   <div className="bg-[#050505] p-10 flex flex-col items-center justify-center text-center group hover:bg-[#1a1a1a] transition-colors">
+      <h4 className="text-white font-bold text-lg group-hover:text-[#D4AF37] transition-colors">{label}</h4>
+      <p className="text-gray-600 text-xs uppercase tracking-widest mt-2">{sub}</p>
+   </div>
+);
+
+const CheckItem = ({ text }) => (
+   <li className="flex items-start gap-4">
+      <CheckCircle className="w-6 h-6 text-[#D4AF37] shrink-0" />
+      <span className="text-gray-300">{text}</span>
+   </li>
+);
+
+const StatCard = ({ num, label }) => (
+   <div className="bg-black border border-white/10 p-6 text-center">
+      <div className="text-3xl font-black text-white mb-1">{num}</div>
+      <div className="text-[#D4AF37] text-[10px] uppercase tracking-widest">{label}</div>
+   </div>
+);
