@@ -2,14 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { 
   ClipboardList, Users, Clock, CheckCircle, 
   ArrowRight, FileText, PieChart, Calendar, 
-  PenTool, Gem, ChevronDown, ShieldCheck 
+  PenTool, Gem, ChevronDown, ShieldCheck, Mic2 
 } from "lucide-react";
-
-
 
 // --- GOLD TEXTURE COMPONENT ---
 const GoldTextureText = ({ children, className }) => (
@@ -52,7 +50,7 @@ export default function WeddingPlanning() {
       
       {/* --- 1. HERO: THE INSIDER'S PROMISE --- */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background: Aspirational Wedding Setup (Stock is okay here as it's the "Goal") */}
+        {/* Background: Aspirational Wedding Setup */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40 z-10" />
           <img 
