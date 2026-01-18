@@ -3,9 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Check, ChevronRight, Palette, Music, Heart, Camera, Star, Flower2, MessageCircle, Sparkles, Plus, Minus } from "lucide-react";
+import { 
+  Phone, MessageCircle, MapPin, CheckCircle, 
+  Palette, PenTool, Image as ImageIcon, Lightbulb, 
+  Layers, ChevronRight, Plus, Minus, Wand2 
+} from "lucide-react";
 
-// --- INLINE COMPONENTS ---
+// --- INLINE ANIMATION COMPONENTS ---
 const ScrollReveal = ({ children, delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -69,124 +73,48 @@ const FAQItem = ({ question, answer }) => {
 };
 
 // --- DATA ---
-const services = [
-  {
-    icon: Palette,
-    title: "Event Designing & Decor",
-    description: "Transform any venue into a stunning visual masterpiece with creative themes, elegant decorations, and meticulous attention to every detail.",
-    features: ["Theme conceptualization", "Stage design & backdrop", "Floral arrangements", "Lighting design", "Table settings & centerpieces"],
-  },
-  {
-    icon: Heart,
-    title: "Wedding Planning",
-    description: "Complete end-to-end wedding planning that takes care of every detail, from venue selection to the final farewell.",
-    features: ["Venue selection & booking", "Vendor management", "Timeline coordination", "Guest management", "Budget optimization"],
-  },
-  {
-    icon: Music,
-    title: "Sangeet Choreography",
-    description: "Professional dance choreography for sangeet ceremonies that will have your guests cheering. From traditional to Bollywood styles.",
-    features: ["Custom choreography", "Group dance coordination", "Solo performance training", "Music selection & mixing", "Rehearsal sessions"],
-  },
-  {
-    icon: Star,
-    title: "Bride & Groom Entry Design",
-    description: "Create a grand entrance that sets the tone for your celebration. Unique, memorable, and perfectly tailored to your personality.",
-    features: ["Concept development", "Props & special effects", "Music synchronization", "Pyrotechnics (where permitted)", "Rehearsal coordination"],
-  },
-  {
-    icon: Camera,
-    title: "Entertainment Management",
-    description: "Access to top entertainers, DJs, live bands, dancers, and performers to elevate your event's entertainment quotient.",
-    features: ["Artist booking", "Performance scheduling", "Sound & lighting coordination", "Green room management", "Technical crew"],
-  },
-  {
-    icon: Flower2,
-    title: "Destination Wedding Planning",
-    description: "Complete destination wedding solutions for creating magical celebrations at exotic locations across India.",
-    features: ["Location scouting", "Travel & accommodation", "Local vendor coordination", "Guest experience management", "Multi-day itinerary planning"],
-  },
+const designServices = [
+  { icon: Palette, title: "Theme Conceptualization", description: "We don't just copy Pinterest. We create unique themes (Royal Rajasthan, Bohemian, Tropical, Cyber-Punk) tailored to your story and venue." },
+  { icon: ImageIcon, title: "3D Visualization", description: "See it before we build it. We work with 3D artists to create realistic renders of the stage, mandap, and entry passages so there are no surprises." },
+  { icon: Lightbulb, title: "Lighting Design", description: "Lighting is 50% of the decor. I ensure the stage lighting is calibrated for photography, video, and live ambiance." },
+  { icon: Layers, title: "Fabrication Oversight", description: "I supervise the fabricators to ensure the actual build matches the 3D render. No 'expectation vs reality' memes here." },
 ];
 
-const packages = [
-  {
-    name: "Decor Only",
-    price: "Custom Quote",
-    description: "Book a free consultation to get an exact estimate based on your venue and theme.",
-    features: ["Theme conceptualization", "Stage & backdrop design", "Floral arrangements", "Table decor", "Lighting setup"],
-    popular: false,
-  },
-  {
-    name: "Wedding Planning",
-    price: "Custom Quote",
-    description: "Book a free consultation to discuss your vision and get a personalized package.",
-    features: ["Everything in Decor Only", "Vendor management", "Timeline coordination", "Day-of coordination", "Guest management", "Sangeet choreography"],
-    popular: true,
-  },
-  {
-    name: "Destination Wedding",
-    price: "Custom Quote",
-    description: "Book a free consultation for a comprehensive destination wedding proposal.",
-    features: ["Everything in Wedding Planning", "Location scouting & booking", "Travel arrangements", "Accommodation management", "Multi-day event coordination", "Guest experience curation", "Anchor Yash as host"],
-    popular: false,
-  },
+const designProcess = [
+  { title: "The Discovery", description: "We analyze your venue and your personal style. We create a 'Mood Board' with color palettes, textures, and reference images." },
+  { title: "The Blueprint", description: "We create 2D layouts for seating and 3D renders for the main structures (Stage/Bar). You approve every corner." },
+  { title: "Vendor Matching", description: "I match the design with the right fabricator. Some are good at floral, others at carpentry. I hire the specialist for the job." },
+  { title: "The Setup", description: "My team is on-site 24 hours prior, checking finishes, floral freshness, and light angles." },
 ];
 
-const portfolio = [
-  {
-    title: "Royal Rajasthani Wedding",
-    description: "A 3-day grand celebration at Jaipur's heritage venue",
-    image: "/wedding-event.jpg", // Ensure exists in public/
-    category: "Wedding",
-  },
-  {
-    title: "Sangeet Night Extravaganza",
-    description: "Choreographed performances with stunning stage design",
-    image: "/sangeet-event.jpg", // Ensure exists in public/
-    category: "Sangeet",
-  },
-  {
-    title: "Corporate Gala Night",
-    description: "Elegant corporate event with premium decor",
-    image: "/corporate-event.jpg", // Ensure exists in public/
-    category: "Corporate",
-  },
+const designFAQs = [
+  { question: "Do you own the decor materials?", answer: "No, and that's good for you. Decorators who own materials force you to use their old stock. As Designers, we source fresh, trending materials specific to your theme." },
+  { question: "Can I see what the stage will look like beforehand?", answer: "Yes! For major events, we provide 3D Walkthroughs or Renders so you know exactly how the venue will look." },
+  { question: "Do you handle floral arrangements?", answer: "We curate the floral design and source the flowers from wholesale markets (often flown in from Bangalore/Thailand) to ensure freshness and lower costs." },
+  { question: "Why hire an Anchor for Design?", answer: "Because I know the 'Camera Angle'. I know what background looks good in your wedding film and how the stage lights affect your makeup." }
 ];
 
-const eventPlanningFAQs = [
-  { question: "Do you handle full Wedding Planning or just Decor?", answer: "We offer both! You can hire us solely for Event Decor & Designing, or choose our Full Wedding Planning service where we manage everything from venue booking to guest hospitality." },
-  { question: "How do we get a price estimate for Wedding Decor?", answer: "Since every wedding is unique, we don't have fixed rates. We offer a Free Consultation where we discuss your venue and vision, after which we provide a detailed custom quote." },
-  { question: "Do you plan Destination Weddings in Rajasthan?", answer: "Yes, we specialize in Destination Weddings in Udaipur, Jodhpur, Jaisalmer, Pushkar, and Sawai Madhopur. We handle logistics, travel, and local vendor management." },
-  { question: "Can you customize the wedding theme?", answer: "Absolutely. We don't believe in cookie-cutter weddings. Whether you want a Royal Rajasthani theme, a Bohemian vibe, or a modern Pastel setup, we design it from scratch." },
-  { question: "Do you provide Sangeet Choreographers?", answer: "Yes, we have an in-house team of professional choreographers who teach easy-to-learn steps for the family and create spectacular couples' dance sequences." },
-  { question: "How do you handle guest management and RSVP?", answer: "For full planning clients, we provide a dedicated Hospitality Desk team that manages RSVP calls, airport pickups, hotel check-ins, and welcome hampers." },
-  { question: "Can you suggest unique Bride & Groom entry ideas?", answer: "Yes! We design grand entries ranging from vintage cars and ATV bikes to royal Palkis, cold pyro pathways, and flower showers tailored to your personality." },
-  { question: "Do you take care of light and sound requirements?", answer: "Yes, we provide professional Sound & Light setups (Truss, LED Walls, Line Array Speakers) suitable for live bands, DJ nights, and sangeet performances." },
-  { question: "How soon should we book you for wedding planning?", answer: "Planning a wedding involves many moving parts. We recommend booking us 4-6 months in advance to secure the best venues and rates." },
-  { question: "Do you provide Corporate Event Management?", answer: "Yes, we manage corporate offsites, award nights, and product launches, focusing on branding, stage fabrication, and seamless technical execution." },
-  { question: "Will Anchor Yash be hosting if we book planning services?", answer: "Anchor Yash is available as an add-on or part of the premium package. If he is booked, we can provide other top-tier anchors from our network." },
-  { question: "Do you handle vendor payments and negotiations?", answer: "Yes, we act as your single point of contact. We negotiate the best rates with vendors (caterers, photographers, makeup artists) and manage their payment schedules." }
+const whyTrustUs = [
+  { label: "Camera-Ready Aesthetic", detail: "Designs optimized for photography & video." },
+  { label: "3D Visualization", detail: "See the event before spending a rupee." },
+  { label: "Fresh Concepts", detail: "We don't recycle old props." },
+  { label: "Lighting Mastery", detail: "Ambiance control for the perfect vibe." },
 ];
 
 export default function EventDesigning() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Event Designing & Decor Services",
+    "name": "Event Designing Services Jaipur",
     "provider": {
-      "@type": "LocalBusiness",
-      "name": "Anchor Yash Soni Events",
+      "@type": "Person",
+      "name": "Anchor Yash Soni",
       "url": "https://yashsoni.in",
       "telephone": "+917737877978",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Jaipur",
-        "addressRegion": "Rajasthan",
-        "addressCountry": "IN"
-      },
+      "areaServed": "Jaipur, Rajasthan",
     },
-    "serviceType": "Event Designing",
-    "description": "Premium event designing, wedding decor, sangeet choreography, and entry concepts in Jaipur.",
+    "serviceType": "Event Decor & Design",
+    "description": "Creative event designing, 3D visualization, and theme conceptualization for weddings and corporate events in Jaipur.",
   };
 
   return (
@@ -197,29 +125,31 @@ export default function EventDesigning() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-4 relative text-center">
-          <ScrollReveal>
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">
-              Event Designing & Wedding Planning
-            </span>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mt-4 mb-6">
-              Creating <span className="text-amber-500">Dream Events</span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              From stunning decor to complete wedding planning, we transform your vision into reality with meticulous attention to every detail.
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 relative">
+          <ScrollReveal className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-purple-400 font-medium">
+              Concept • Decor • Ambiance
             </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
+            <h1 className="mt-4 text-4xl md:text-6xl font-display font-bold leading-tight">
+              Your Vision. <br />
+              <span className="text-purple-500">Visualized.</span>
+            </h1>
+            <p className="mt-5 text-lg text-gray-400 max-w-2xl leading-relaxed">
+              We don't just decorate; we design experiences. From 3D renders to the final floral touch, 
+              we bridge the gap between your imagination and reality.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all hover:scale-105">
-                  Design My Event
+                <button className="px-8 py-4 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition-all hover:scale-105">
+                  Start Designing
                 </button>
               </Link>
-              <a href="https://wa.me/917737877978" target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all hover:scale-105 flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
+              <a href="https://wa.me/917737877978?text=Hi%20Yash,%20I%20need%20help%20designing%20my%20event%20decor." target="_blank" rel="noopener noreferrer">
+                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-purple-500 hover:text-purple-500 transition-all hover:scale-105 flex items-center gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp
                 </button>
               </a>
             </div>
@@ -227,183 +157,207 @@ export default function EventDesigning() {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Our Services</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                What We <span className="text-amber-500">Offer</span>
+      {/* Main Content */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-14">
+          
+          {/* Left: Text Content */}
+          <div className="lg:col-span-2 space-y-16">
+            
+            {/* The Creative Director Angle */}
+            <ScrollReveal>
+              <h2 className="text-3xl font-display font-bold mb-6">
+                The <span className="text-purple-500">Creative Director</span> Approach
               </h2>
-            </div>
-          </ScrollReveal>
+              <div className="space-y-4 text-gray-400 leading-relaxed">
+                <p>
+                  Most decorators try to sell you what they have in their warehouse (the same old props). 
+                  <strong>I design what YOU want.</strong>
+                </p>
+                <p>
+                  My role is that of a Creative Director. I work with you to build a Moodboard and a 3D Concept. 
+                  Once we lock the look, I hire the specific specialists (Carpenters, Florists, Lighting Engineers) 
+                  to build it exactly as planned.
+                </p>
+                <p>
+                  <strong>The Anchor's Edge:</strong> I know how a stage looks through a camera lens. 
+                  I ensure your decor isn't just pretty to the eye, but optimized for your wedding film and photos.
+                </p>
+              </div>
+            </ScrollReveal>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <StaggerItem key={service.title}>
-                <motion.div
-                  className="group p-8 bg-black border border-neutral-800 rounded-2xl hover:border-amber-500/50 transition-all duration-300"
-                  whileHover={{ y: -8 }}
-                >
-                  <div className="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center mb-6 text-amber-500 group-hover:bg-amber-500/20">
-                    <service.icon className="w-7 h-7" />
-                  </div>
-                  <h3 className="text-xl font-display font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-400 text-sm mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-gray-500">
-                        <Check className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                        <span>{feature}</span>
+            {/* Why Trust Us List */}
+            <ScrollReveal>
+               <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl">
+                  <h3 className="text-xl font-bold text-white mb-6 border-b border-neutral-800 pb-4">The Aesthetic Promise</h3>
+                  <ul className="space-y-4">
+                    {whyTrustUs.map((item) => (
+                      <li key={item.label} className="flex items-start gap-3">
+                        <CheckCircle className="w-6 h-6 text-purple-500 flex-shrink-0" />
+                        <span className="text-gray-400">
+                          <strong className="text-white">{item.label}</strong> – {item.detail}
+                        </span>
                       </li>
                     ))}
                   </ul>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
+               </div>
+            </ScrollReveal>
 
-      {/* Portfolio */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Our Work</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Recent <span className="text-amber-500">Projects</span>
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid md:grid-cols-3 gap-8">
-          {portfolio.map((item) => (
-            <StaggerItem key={item.title}>
-              <motion.div
-                className="group relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800"
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="aspect-[4/3] bg-neutral-800 relative">
-                   {/* PLACEHOLDER IMAGE */}
-                   <div className="absolute inset-0 flex items-center justify-center text-gray-600">Image: {item.title}</div>
-                   {/* <Image src={item.image} fill className="object-cover" /> */}
-                </div>
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-amber-500 text-black text-xs font-bold rounded-full">
-                    {item.category}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                  <p className="text-gray-400 text-sm">{item.description}</p>
-                </div>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-        
-        <div className="text-center mt-12">
-            <Link href="/portfolio" className="inline-flex items-center text-amber-500 font-bold hover:underline">
-                View Full Portfolio <ChevronRight className="w-5 h-5 ml-1" />
-            </Link>
-        </div>
-      </section>
-
-      {/* Pricing Packages */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">Packages</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Investment <span className="text-amber-500">Options</span>
+            {/* Core Services Grid */}
+            <ScrollReveal>
+              <h2 className="text-3xl font-display font-bold mb-8">
+                Design <span className="text-purple-500">Services</span>
               </h2>
-              <p className="text-gray-400 mt-4">Customizable packages designed to match your event scale and budget</p>
-            </div>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg) => (
-              <StaggerItem key={pkg.name}>
-                <motion.div
-                  className={`relative p-8 rounded-2xl border ${
-                    pkg.popular
-                      ? "bg-gradient-to-b from-amber-500/10 to-black border-amber-500 shadow-2xl shadow-amber-500/10"
-                      : "bg-black border-neutral-800"
-                  }`}
-                  whileHover={{ scale: 1.02, y: -4 }}
-                >
-                  {pkg.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-amber-500 text-black text-xs font-bold rounded-full uppercase tracking-wide">
-                      Most Popular
+              <div className="grid sm:grid-cols-2 gap-6">
+                {designServices.map((service) => (
+                  <div
+                    key={service.title}
+                    className="bg-black border border-neutral-800 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 bg-neutral-900 rounded-lg flex items-center justify-center mb-4 text-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                      <service.icon className="w-6 h-6" />
                     </div>
-                  )}
-                  
-                  <h3 className="text-2xl font-display font-bold mb-2">{pkg.name}</h3>
-                  <div className="text-2xl font-bold text-amber-500 mb-2">{pkg.price}</div>
-                  <p className="text-gray-400 text-sm mb-6">{pkg.description}</p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {pkg.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link href="/contact">
-                    <button className={`w-full py-3 rounded-lg font-bold transition-all flex items-center justify-center gap-2 ${
-                        pkg.popular ? "bg-amber-500 text-black hover:bg-amber-600" : "border border-neutral-700 text-white hover:border-amber-500 hover:text-amber-500"
-                    }`}>
-                      Book Consultation <ChevronRight className="w-4 h-4" />
+                    <h3 className="font-display font-bold text-lg mb-2 text-white">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            {/* The Process */}
+            <ScrollReveal>
+              <h2 className="text-3xl font-display font-bold mb-8">
+                From <span className="text-purple-500">Moodboard</span> to Reality
+              </h2>
+              <div className="space-y-4">
+                {designProcess.map((step, index) => (
+                  <div key={step.title} className="flex gap-6 group">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-purple-500 font-bold bg-neutral-900 group-hover:border-purple-500 transition-colors">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-1 flex items-center gap-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            {/* FAQ Section */}
+            <div className="max-w-3xl">
+                <h2 className="text-3xl font-display font-bold mb-8">Design FAQs</h2>
+                <div className="space-y-2">
+                {designFAQs.map((faq, index) => (
+                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                ))}
+                </div>
+            </div>
+
+            {/* Internal Links */}
+            <ScrollReveal>
+              <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-8">
+                <h3 className="font-display font-bold text-lg mb-4">
+                  Bring the Design to Life
+                </h3>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/event-management-company-jaipur">
+                    <button className="px-6 py-2 border border-neutral-700 text-white hover:border-purple-500 hover:text-purple-500 rounded-lg transition-all text-sm font-bold">
+                      Explore Production & Execution
                     </button>
                   </Link>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+                  <Link href="/wedding-anchor-jaipur">
+                    <button className="px-6 py-2 border border-neutral-700 text-white hover:border-purple-500 hover:text-purple-500 rounded-lg transition-all text-sm font-bold">
+                      Wedding Hosting
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Right: Sticky Booking Card */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-28 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 space-y-6">
+              <h3 className="text-xl font-display font-bold">
+                Get a Design Consultation
+              </h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Have a theme in mind? Let's create a moodboard and see how we can bring it to life within your budget.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                  <div>
+                    <p className="text-gray-500 text-xs uppercase tracking-wide">
+                      Call / WhatsApp
+                    </p>
+                    <p className="font-bold text-white">+91 77378 77978</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                  <div>
+                    <p className="text-gray-500 text-xs uppercase tracking-wide">
+                      Studio Base
+                    </p>
+                    <p className="font-bold text-white text-sm">Jaipur, Rajasthan</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-4">
+                <Link href="/contact" className="block">
+                  <button className="w-full py-4 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition-all flex items-center justify-center gap-2">
+                    Start Consultation <Wand2 className="w-4 h-4" />
+                  </button>
+                </Link>
+                <a
+                  href="https://wa.me/917737877978?text=Hi%20Yash,%20I%20want%20to%20discuss%20event%20decor."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <button className="w-full py-4 border border-neutral-700 text-white font-bold rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all flex items-center justify-center gap-2">
+                    <MessageCircle className="w-5 h-5" />
+                    WhatsApp Direct
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-display font-bold text-center mb-12">Event Planning FAQs</h2>
-        <div className="space-y-2">
-          {eventPlanningFAQs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-neutral-900 border-t border-neutral-800 text-center">
-        <div className="container mx-auto px-4">
+      {/* Final CTA */}
+      <section className="py-20 bg-gradient-to-b from-neutral-950 to-purple-900/20">
+        <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <Sparkles className="w-12 h-12 text-amber-500 mx-auto mb-6" />
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Let's Create Your <span className="text-amber-500">Dream Event</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Dream It. <span className="text-purple-500">Build It.</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-10">
-              From concept to celebration, we handle every detail so you can enjoy your special moments.
+              Stop settling for standard decor packages. Let's create something unique.
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact">
-                <button className="px-10 py-5 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-colors flex items-center gap-2">
-                  Book Free Consultation <ChevronRight className="w-5 h-5" />
+                <button className="px-10 py-5 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition-all hover:scale-105">
+                  Book Design Session
                 </button>
               </Link>
-              <a href="https://wa.me/917737877978" target="_blank" rel="noopener noreferrer">
-                <button className="px-10 py-5 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-colors flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
-                </button>
-              </a>
             </div>
           </ScrollReveal>
         </div>
       </section>
-
     </div>
   );
 }
