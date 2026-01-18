@@ -2,320 +2,256 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  ChevronRight, MessageCircle, ClipboardList, Calculator, 
-  Users, MapPin, ShieldCheck, Clock, FileText, 
-  CheckCircle, Plus, Minus, LayoutTemplate 
+  CheckCircle, ChevronDown, ChevronRight, 
+  ClipboardList, Calculator, Users, Clock, 
+  MapPin, ShieldCheck, FileText, LayoutTemplate, 
+  Truck, Utensils, Gift, Music, Phone 
 } from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
-    }}
-  >
-    {children}
-  </motion.div>
-);
-
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-neutral-800">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-4 text-left group"
-      >
-        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-amber-500' : 'text-gray-300 group-hover:text-amber-500'}`}>
-          {question}
-        </span>
-        {isOpen ? <Minus className="w-5 h-5 text-amber-500" /> : <Plus className="w-5 h-5 text-gray-500" />}
-      </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-4 text-gray-400 text-sm leading-relaxed">{answer}</p>
-      </motion.div>
-    </div>
-  );
+// --- ANIMATION UTILS ---
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-// --- DATA ---
-const planningServices = [
-  { icon: Calculator, title: "Budget Engineering", description: "We don't just spend your money; we optimize it. We allocate funds to what matters (Food/Entertainment) and cut costs on hidden vendor markups." },
-  { icon: Users, title: "Vendor Negotiation", description: "Access to my personal network of Jaipur's top 50 Decorators & Caterers. I negotiate the 'Industry Rate' for you, not the 'Tourist Rate'." },
-  { icon: Clock, title: "Itinerary Design", description: "A minute-by-minute flow of the event. As an anchor, I know exactly how to time the Bride's entry, the speeches, and the cake cutting for maximum impact." },
-  { icon: MapPin, title: "Venue Scouting", description: "Finding the perfect location (Heritage vs Modern) that fits your guest count and vibe, based on actual logistical experience." },
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } }
+};
+
+// --- DATA: THE EMPIRE CONTENT ---
+const ecosystemData = [
+  { icon: Calculator, title: "Financial Engineering", desc: "We don't just 'budget'. We perform cost-benefit analysis on every vendor, ensuring your ₹50L looks like ₹80L." },
+  { icon: MapPin, title: "Venue Procurement", desc: "Negotiating contracts with Fairmont, Rambagh, & Leela. We know the hidden clauses and the best inventory." },
+  { icon: Utensils, title: "F&B Curation", desc: "Designing menus that matter. Tasting sessions, bar management, and ensuring the food stays hot for 400 guests." },
+  { icon: Truck, title: "Logistics & Fleet", desc: "Managing airport transfers, Innova/Bus fleets, and valet coordination for a seamless guest arrival." },
+  { icon: Gift, title: "Gifting & Hampers", desc: "Sourcing, packaging, and room-placement of welcome hampers. We handle the logistics of gratitude." },
+  { icon: FileText, title: "Legal & Licensing", desc: "PPL, IPRS, Noise Permits. We handle the bureaucracy so the police don't stop the party." },
+  { icon: Users, title: "Hospitality Desk", desc: "A dedicated 24/7 desk at the hotel lobby to handle check-ins, key cards, and guest queries." },
+  { icon: Music, title: "Entertainment Tech", desc: "Managing artist riders, sound checks, and green room requirements for celebrity performers." },
 ];
 
-const processSteps = [
-  { title: "The Vision Board", description: "We sit over coffee. You dump your Pinterest board on me. We put a realistic price tag on your dreams and define the non-negotiables." },
-  { title: "The Vendor Audit", description: "I open my contact book. I get quotes from trusted Tent Houses, Florists, and Caterers. I audit them to ensure no inflated pricing." },
-  { title: "Micro-Detailing", description: "Menu tasting, song selection, room allocation for guests, and printing invites. The devil is in the details." },
-  { title: "The Execution", description: "The team takes over the venue. We run the show. You just show up and look good." },
-  { title: "Hospitality Desk", description: "Managing guest arrivals, airport pickups, hotel check-ins, and welcome hampers so you don't have to play receptionist." },
-  { title: "Legal & Permissions", description: "Handling PPL music licenses, noise permits, and local authority permissions so the party doesn't stop." },
+const processTimeline = [
+  { 
+    phase: "Phase 1: The Blueprint", 
+    timeline: "Month 1-2",
+    items: ["Vision & Concept Lock", "Budget Allocation", "Venue Finalization", "Contract Negotiations"] 
+  },
+  { 
+    phase: "Phase 2: The Architecture", 
+    timeline: "Month 3-4",
+    items: ["Vendor Onboarding (Decor/Photo)", "Menu Tasting & Finalization", "Room Allocation Matrix", "Invite Distribution Strategy"] 
+  },
+  { 
+    phase: "Phase 3: The Micro-Detailing", 
+    timeline: "Month 5",
+    items: ["Run-of-Show (Minute by Minute)", "Logistics & Fleet Charting", "Hospitality Desk Setup", "Technical Tech-Recce"] 
+  },
+  { 
+    phase: "Phase 4: The Execution", 
+    timeline: "Event Days",
+    items: ["Team Deployment (Shadows/Runners)", "Vendor Management", "Guest Experience Management", "Crisis Handling"] 
+  }
 ];
 
-const planningFAQs = [
-  { question: "Why hire an Anchor to plan the event?", answer: "Because I live on the stage. I see 100 weddings a year. I know which decorator runs late, which caterer serves cold food, and how to fix problems before guests notice. You get 'Field Experience,' not just office planning." },
-  { question: "Do you take a commission from vendors?", answer: "We operate on a transparent model. We charge a flat planning fee. Any discounts we get from our vendor network are passed directly to you." },
-  { question: "Can you work with vendors we have already booked?", answer: "Absolutely. We step in as the 'Lead Coordinator' and manage them alongside our own team to ensure everyone follows the timeline." },
-  { question: "Do you handle Destination Weddings?", answer: "Yes. We specialize in managing logistics for destination weddings in Jaipur, Udaipur, and Goa, handling everything from flights to room hampers." },
-  { question: "What is the difference between Planning and Management?", answer: "Planning is the strategy (Budget, Vendors, Concepts) done months in advance. Management is the execution (Logistics, Sound, Light) done on the event days. We handle both." },
-  { question: "Do you provide 3D designs for decor?", answer: "Yes, we work with specialized 3D designers to create renders of the stage and mandap so you can visualize the look before we build it." }
+const faqs = [
+  { q: "Do you handle destination weddings outside Jaipur?", a: "Yes. Our team specializes in logistical movements. Whether it's Udaipur, Jodhpur, or Goa, we move our 'War Room' to the venue 48 hours prior to the event." },
+  { q: "How do you handle budget overruns?", a: "We operate on a strict 'Approval First' basis. No vendor is paid and no extra cost is incurred without your written sign-off on our shared Budget Sheet." },
+  { q: "What implies 'End-to-End' Planning?", a: "It means you only talk to us. We talk to the Tent House, the Florist, the Caterer, the Driver, and the DJ. We are your single point of accountability." },
+  { q: "Can we hire you just for On-Day Coordination?", a: "Yes. If you have done the planning but need a professional team to execute the flow on the final days, we offer a 'Show Running' package." }
 ];
 
-export default function EventPlanning() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Event Planning Services Jaipur",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "areaServed": "Jaipur, Rajasthan",
-    },
-    "serviceType": "Wedding & Corporate Planning",
-    "description": "Transparent event planning and vendor negotiation services in Jaipur. Specialized in budget management and itinerary design.",
-  };
+export default function EventPlanningPro() {
+  const [activeAccordion, setActiveAccordion] = useState(null);
 
   return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <div className="bg-[#050505] text-white min-h-screen font-sans">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
-        {/* Background Texture/Image Placeholder */}
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+      {/* --- 1. HERO: THE MAGNUM OPUS --- */}
+      <section className="relative h-[90vh] w-full flex items-center justify-center overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
         
-        <div className="container mx-auto px-4 relative text-center">
-          <ScrollReveal>
-            <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6">
-              Strategy • Budget • Execution
-            </span>
-            <h1 className="text-4xl md:text-7xl font-display font-bold mb-6">
-              We Plan. <br /> You <span className="text-amber-500">Celebrate.</span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              An event without a plan is just chaos. We provide the blueprints, the budget sheets, and the peace of mind.
-              Leverage my <strong>insider network</strong> to get the best vendors at the right price.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
+        <div className="relative z-10 container mx-auto px-4">
+          <motion.div 
+            initial="hidden" 
+            animate="visible" 
+            variants={staggerContainer}
+            className="max-w-4xl"
+          >
+            <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-6">
+              <span className="h-[1px] w-12 bg-amber-500"></span>
+              <span className="text-amber-500 font-bold uppercase tracking-[0.3em] text-sm">360° Turnkey Solutions</span>
+            </motion.div>
+            
+            <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] text-white mb-8">
+              PRECISION <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-700">PLANNING.</span>
+            </motion.h1>
+            
+            <motion.p variants={fadeInUp} className="text-xl text-gray-400 max-w-2xl leading-relaxed mb-10 border-l-2 border-amber-500 pl-6">
+              We don't just "arrange" events. We engineer them. <br />
+              From the architectural blueprints of the stage to the minute-by-minute logistics of guest arrival—we are the architects of your celebration.
+            </motion.p>
+            
+            <motion.div variants={fadeInUp} className="flex flex-wrap gap-5">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all hover:scale-105 flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
-                  Start Planning <ChevronRight className="w-5 h-5" />
+                <button className="px-10 py-5 bg-amber-500 text-black font-bold uppercase tracking-widest hover:bg-white transition-all">
+                  Initiate Project
                 </button>
               </Link>
-              <a href="https://wa.me/917737877978?text=Hi%20Yash,%20I%20need%20help%20planning%20an%20event." target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-amber-500 hover:text-amber-500 transition-all hover:scale-105 flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp Consultant
-                </button>
-              </a>
-            </div>
-          </ScrollReveal>
+              <button className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white/10 transition-all flex items-center gap-3">
+                <Phone className="w-5 h-5" /> Book Consultation
+              </button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* The "Why Me" Intro */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <ScrollReveal>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                  The <span className="text-amber-500">Anchor's Advantage</span>
-                </h2>
-                <div className="text-gray-400 text-lg leading-relaxed space-y-6">
-                  <p>
-                    Why hire an Anchor to plan your wedding? <strong>Because I live on the field.</strong>
-                  </p>
-                  <p>
-                    Most planners sit in an office. I stand on the stage. I see exactly what goes wrong behind the scenes. I know which decorator arrives late, which caterer's food goes cold, and which sound guy creates feedback.
-                  </p>
-                  <p>
-                    When you hire me to plan, you aren't just getting a spreadsheet; you are getting <strong>street-smart execution</strong> and direct access to my personal "Vendor Mafia" list—trusted teams that I have vetted over 1000+ shows.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Feature List */}
-              <div className="bg-black p-8 rounded-2xl border border-neutral-800 shadow-2xl">
-                <h3 className="text-xl font-bold text-white mb-6 border-b border-neutral-800 pb-4">Our "Peace of Mind" Promise</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 shrink-0 mt-1" />
-                    <span className="text-gray-300">Direct Vendor Access (No Middlemen)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 shrink-0 mt-1" />
-                    <span className="text-gray-300">Transparent Budgeting (Actuals Only)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 shrink-0 mt-1" />
-                    <span className="text-gray-300">Technical Sound/Light Audit</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 shrink-0 mt-1" />
-                    <span className="text-gray-300">We handle the frantic vendor calls.</span>
-                  </li>
-                </ul>
-              </div>
+      {/* --- 2. THE PHILOSOPHY (Text Heavy / Authority) --- */}
+      <section className="py-32 container mx-auto px-4 border-b border-white/5">
+        <div className="grid lg:grid-cols-2 gap-20">
+          <div>
+            <h2 className="text-4xl font-display font-bold mb-8">The "War Room" Approach.</h2>
+            <div className="space-y-6 text-lg text-gray-400 leading-relaxed text-justify">
+              <p>
+                An event is a live operation. There are no retakes. That is why we treat every project like a military operation. We don't rely on "hope" or "verbal assurances." We rely on <strong>Contracts, CAD Drawings, and Excel Sheets.</strong>
+              </p>
+              <p>
+                As an Anchor-led planning team, we have a unique advantage: <strong>We live on the stage.</strong> We know exactly when a timeline is going to fail before it happens. We know which vendor is cutting corners.
+              </p>
+              <p>
+                We bring this "Field Experience" into the boardroom, ensuring that what we plan on paper is actually executable in reality.
+              </p>
             </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Core Services */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Scope of <span className="text-amber-500">Work</span>
-            </h2>
           </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {planningServices.map((service) => (
-            <StaggerItem key={service.title}>
-              <motion.div
-                className="h-full flex flex-col p-8 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300 group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 text-amber-500 border border-neutral-800 group-hover:border-amber-500/30 transition-colors">
-                  <service.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-xl font-display font-bold mb-3 text-white">{service.title}</h3>
-                <p className="text-gray-400 text-sm flex-grow leading-relaxed">{service.description}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+          <div className="grid grid-cols-2 gap-4">
+            <StatBox number="1000+" label="Vendors Vetted" />
+            <StatBox number="₹50Cr+" label="Budgets Managed" />
+            <StatBox number="0" label="Critical Failures" />
+            <StatBox number="24/7" label="Ops Team" />
+          </div>
+        </div>
       </section>
 
-      {/* The Roadmap */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
+      {/* --- 3. THE ECOSYSTEM (Bento Grid) --- */}
+      <section className="py-32 bg-[#0a0a0a]">
         <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                The <span className="text-amber-500">Roadmap</span>
-              </h2>
-              <p className="text-gray-400 mt-4">From your first thought to the final applause.</p>
-            </div>
-          </ScrollReveal>
+          <div className="text-center mb-20">
+            <span className="text-amber-500 font-bold uppercase tracking-widest text-xs">Scope of Work</span>
+            <h2 className="text-5xl font-display font-black text-white mt-4">The Planning Ecosystem.</h2>
+          </div>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {processSteps.map((step, index) => (
-              <StaggerItem key={step.title}>
-                <motion.div
-                  className="h-full flex flex-col p-6 bg-black border border-neutral-800 rounded-xl hover:border-amber-500/30 transition-all duration-300 relative overflow-hidden"
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="absolute top-0 right-0 p-4 opacity-10 text-6xl font-black text-amber-500">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-lg font-display font-bold mb-3 flex items-center gap-2 relative z-10">
-                    <LayoutTemplate className="w-5 h-5 text-amber-500" />
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm flex-grow relative z-10">{step.description}</p>
-                </motion.div>
-              </StaggerItem>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {ecosystemData.map((item, idx) => (
+              <div key={idx} className="p-8 bg-[#111] border border-white/5 hover:border-amber-500/50 transition-all group">
+                <item.icon className="w-10 h-10 text-amber-500 mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
-      {/* Experience Stats */}
-      <section className="py-20 container mx-auto px-4">
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: Users, number: "50+", label: "Trusted Vendors" },
-            { icon: Calculator, number: "20%", label: "Avg Cost Saved" },
-            { icon: ShieldCheck, number: "100%", label: "Transparency" },
-            { icon: Clock, number: "24/7", label: "Support Access" },
-          ].map((stat) => (
-            <StaggerItem key={stat.label}>
-              <motion.div className="text-center p-6 bg-neutral-900 border border-neutral-800 rounded-xl" whileHover={{ scale: 1.05 }}>
-                <stat.icon className="w-8 h-8 text-amber-500 mx-auto mb-4" />
-                <div className="text-3xl font-display font-bold text-amber-500 mb-2">{stat.number}</div>
-                <p className="text-gray-400 text-sm">{stat.label}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-display font-bold text-center mb-12">Planning FAQs</h2>
-        <div className="space-y-2">
-          {planningFAQs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
+      {/* --- 4. THE PROCESS (Timeline) --- */}
+      <section className="py-32 container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-display font-bold mb-16 text-center">The Execution Roadmap.</h2>
+          
+          <div className="space-y-8">
+            {processTimeline.map((step, idx) => (
+              <div key={idx} className="flex flex-col md:flex-row gap-6 bg-[#111] border border-white/10 p-8 md:p-12 hover:border-amber-500/30 transition-colors">
+                <div className="md:w-1/3 border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                  <span className="text-amber-500 font-bold text-sm uppercase tracking-wider block mb-2">{step.timeline}</span>
+                  <h3 className="text-2xl font-bold text-white">{step.phase}</h3>
+                </div>
+                <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {step.items.map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-gray-600" />
+                      <span className="text-gray-300">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-neutral-900 border-t border-neutral-800">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Stop Stressing. <span className="text-amber-500">Start Celebrating.</span>
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Let's discuss your event over coffee. No sales pitch. Just a transparent discussion about costs, concepts, and how we can make it happen.
-            </p>
-            <div className="flex justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2 shadow-lg hover:shadow-amber-500/20">
-                  Get A Free Consultation <ChevronRight className="w-5 h-5" />
-                </button>
-              </Link>
+      {/* --- 5. THE TOOLKIT (Technical Authority) --- */}
+      <section className="py-24 bg-gradient-to-b from-[#0a0a0a] to-[#050505] border-y border-white/5">
+        <div className="container mx-auto px-4 text-center">
+           <h3 className="text-2xl font-bold text-white mb-10">Powered By Industry Standard Tools</h3>
+           <div className="flex flex-wrap justify-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+              <ToolBadge name="AutoCAD" />
+              <ToolBadge name="Microsoft Excel" />
+              <ToolBadge name="SketchUp 3D" />
+              <ToolBadge name="Asana" />
+              <ToolBadge name="Google Workspace" />
+           </div>
+        </div>
+      </section>
+
+      {/* --- 6. FAQ (Accordion) --- */}
+      <section className="py-32 container mx-auto px-4 max-w-3xl">
+        <h2 className="text-4xl font-display font-bold mb-12 text-center">Critical Queries.</h2>
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => (
+            <div key={idx} className="border border-white/10 bg-[#111] p-6 cursor-pointer" onClick={() => setActiveAccordion(activeAccordion === idx ? null : idx)}>
+              <div className="flex justify-between items-center">
+                <h4 className="text-lg font-bold text-white">{faq.q}</h4>
+                <ChevronDown className={`w-5 h-5 text-amber-500 transition-transform ${activeAccordion === idx ? "rotate-180" : ""}`} />
+              </div>
+              <AnimatePresence>
+                {activeAccordion === idx && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="pt-4 text-gray-400 leading-relaxed">{faq.a}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-          </ScrollReveal>
+          ))}
         </div>
+      </section>
+
+      {/* --- 7. CTA: THE CLOSER --- */}
+      <section className="py-40 bg-amber-600 relative overflow-hidden">
+         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+         <div className="container mx-auto px-4 text-center relative z-10">
+            <h2 className="text-5xl md:text-8xl font-display font-black text-white mb-8">NO MORE CHAOS.</h2>
+            <p className="text-xl md:text-2xl text-black font-medium mb-12 max-w-3xl mx-auto">
+               You have a vision. We have the blueprint. <br/> Let's build your event with precision.
+            </p>
+            <Link href="/contact">
+               <button className="px-12 py-6 bg-black text-white text-lg font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
+                  Schedule The Audit
+               </button>
+            </Link>
+         </div>
       </section>
 
     </div>
   );
 }
+
+// --- SUB COMPONENTS ---
+
+const StatBox = ({ number, label }) => (
+  <div className="p-6 border border-white/10 bg-[#111] text-center">
+    <div className="text-3xl font-black text-white mb-1">{number}</div>
+    <div className="text-xs uppercase tracking-widest text-amber-500">{label}</div>
+  </div>
+);
+
+const ToolBadge = ({ name }) => (
+  <span className="text-xl font-bold text-white border border-white/20 px-6 py-3 rounded-full">{name}</span>
+);
