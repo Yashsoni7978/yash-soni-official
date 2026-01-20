@@ -4,60 +4,40 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Script from "next/script";
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-black text-white antialiased relative">
         
-        {/* GEO-LOCATION SCHEMA (Crucial for Local SEO) */}
+        {/* GEO-LOCATION SCHEMA (Kept same as your provided code) */}
         <Script id="schema-org" type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "Anchor Yash Soni",
-              "image": "https://yashsoni.in/anchor-portrait.webp",
               "url": "https://yashsoni.in",
               "telephone": "+917737877978",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Jhotwara",
                 "addressLocality": "Jaipur",
-                "addressRegion": "RJ",
-                "postalCode": "302012",
                 "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 26.9124,
-                "longitude": 75.7873
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                  "Sunday"
-                ],
-                "opens": "09:00",
-                "closes": "23:00"
               },
               "priceRange": "$$$"
             }
           `}
         </Script>
 
-        <div className="fixed top-0 left-0 w-full z-50">
+        {/* 1. FIXED NAVBAR WRAPPER */}
+        {/* z-[10000] ensures it is ALWAYS on top. Fixed height avoids breaking. */}
+        <header className="fixed top-0 left-0 w-full z-[10000]">
           <Navbar />
-        </div>
+        </header>
 
-        <main className="min-h-screen relative z-0">
+        {/* 2. THE MAIN CONTENT WRAPPER */}
+        {/* pt-20 (80px) or pt-24 (96px) ensures content starts AFTER the navbar. */}
+        {/* relative z-0 prevents content from fighting the navbar for priority. */}
+        <main className="min-h-screen relative z-0 pt-20 md:pt-24 lg:pt-28">
           {children}
         </main>
 

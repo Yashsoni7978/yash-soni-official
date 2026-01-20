@@ -40,19 +40,19 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Handle scroll effect for transparency and visibility
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
+    // Fixed height (h-20) and absolute positioning container
     <nav
-      className={`fixed top-0 w-full z-[10000] transition-all duration-500 ${
+      className={`fixed top-0 w-full z-[10000] h-20 transition-all duration-500 flex items-center ${
         scrolled 
-          ? "bg-black/90 backdrop-blur-xl border-b border-white/10 py-4" 
-          : "bg-transparent py-8"
+          ? "bg-black/80 backdrop-blur-xl border-b border-white/10" 
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -74,7 +74,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <div 
               key={link.name} 
-              className="relative group"
+              className="relative py-4 group"
               onMouseEnter={() => setActiveDropdown(link.name)}
               onMouseLeave={() => setActiveDropdown(null)}
             >
@@ -94,14 +94,15 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-[-20px] mt-4 w-64 bg-[#0a0a0a] border border-white/10 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                    className="absolute top-full left-[-20px] w-64 bg-[#0a0a0a] border border-white/10 p-6 shadow-2xl"
                   >
                     <div className="space-y-4">
                       {link.dropdown.map((sub) => (
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          className="block text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-[#D4AF37] transition-all border-l border-transparent hover:border-[#D4AF37] pl-4"
+                          onClick={() => setActiveDropdown(null)}
+                          className="block text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-[#D4AF37] transition-all border-l-2 border-transparent hover:border-[#D4AF37] pl-4"
                         >
                           {sub.name}
                         </Link>
@@ -113,7 +114,6 @@ export default function Navbar() {
             </div>
           ))}
 
-          {/* CTA BUTTON */}
           <Link href="/contact">
             <button className="px-8 py-3 bg-white text-black text-[10px] font-black uppercase tracking-[0.2em] hover:bg-[#D4AF37] transition-all rounded-none">
               Initiate
@@ -127,13 +127,13 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE MENU (Full Screen Overlay) */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
             className="fixed inset-0 bg-black z-[10001] flex flex-col p-10 lg:hidden overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-16">
@@ -167,11 +167,6 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-            </div>
-
-            <div className="mt-20 pt-10 border-t border-white/10">
-               <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-4">Direct Link</p>
-               <a href="tel:+917737877978" className="text-xl font-bold">+91 77378 77978</a>
             </div>
           </motion.div>
         )}
