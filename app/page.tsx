@@ -9,11 +9,11 @@ import {
   MapPin, Mic, Plus, Minus 
 } from "lucide-react";
 
-// --- 1. GLOBAL EMPIRE STYLES ---
+// --- 1. GLOBAL STYLES (Updated for Sleekness) ---
 const style = `
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   .animate-marquee { animation: marquee 35s linear infinite; }
-  .animate-slow-scroll { animation: marquee 50s linear infinite; }
+  .animate-slow-scroll { animation: marquee 60s linear infinite; }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   @keyframes shimmer {
@@ -24,7 +24,22 @@ const style = `
   .sparkle-text { background-size: 200% auto; animation: shimmer 4s linear infinite; }
 `;
 
-// --- 2. ANIMATION VARIANTS (Fixed for TypeScript) ---
+// --- 2. LUXURY ASSETS & ANIMATIONS ---
+const GoldTextureText = ({ children, className }: { children: React.ReactNode, className?: string }) => (
+  <span 
+    className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className}`}
+    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: "#D4AF37" }}
+  >
+    {children}
+  </span>
+);
+
+const FilmGrain = () => (
+  <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-50 mix-blend-overlay" 
+    style={{ backgroundImage: 'url("https://upload.wikimedia.org/wikipedia/commons/7/76/Noise.png")' }}>
+  </div>
+);
+
 const revealUp: Variants = {
   hidden: { y: 60, opacity: 0 },
   visible: { 
@@ -42,25 +57,24 @@ const staggerContainer: Variants = {
   }
 };
 
-const scaleIn: Variants = {
-  hidden: { scale: 0.9, opacity: 0 },
-  visible: { 
-    scale: 1, 
-    opacity: 1, 
-    transition: { duration: 0.6, ease: "easeOut" } 
-  }
-};
+const ScrollReveal = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.8, delay, ease: "easeOut" }}
+  >
+    {children}
+  </motion.div>
+);
 
-// --- 3. THE EMPIRE DATA STORE (Full Content) ---
-
-// A. Brand Marquee
+// --- 3. FULL DATA STORE ---
 const brands = [
   "Fairmont", "Rambagh Palace", "The Leela", "Marriott", "City Palace", 
   "Taj Jai Mahal", "Hyatt Regency", "Raffles Udaipur", "Oberoi Rajvilas",
   "Radisson Blu", "ITC Rajputana", "DoubleTree by Hilton"
 ];
 
-// B. Signature Services
 const services = [
   { title: "Royal Weddings", num: "01", desc: "Orchestrating grandeur with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800", link: "/wedding-anchor-jaipur" },
   { title: "Corporate Galas", num: "02", desc: "Crisp, professional hosting keeping stakeholders engaged with premium tonality.", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800", link: "/corporate-event-anchor-jaipur" },
@@ -68,7 +82,6 @@ const services = [
   { title: "Team Building", num: "04", desc: "Ice-breakers and bonding activities that turn colleagues into family.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800", link: "/team-building-host" },
 ];
 
-// C. Full Review List (8 Items)
 const reviews = [
   { name: "Priya Sharma", date: "2 months ago", platform: "Google Reviews", text: "Yash was the soul of our Sangeet! He managed 500 guests effortlessly. The energy was insane from start to finish.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
   { name: "Rahul Verma", date: "1 month ago", platform: "WedMeGood", text: "Hired him for our Corporate R&R in Jaipur. Extremely professional, punctual, and witty. Our CEO was very impressed.", link: "#" },
@@ -80,7 +93,6 @@ const reviews = [
   { name: "Anjali Mehta", date: "2 weeks ago", platform: "Google Reviews", text: "Punctual, well-dressed, and incredibly talented. He saved our event when the DJ had a technical glitch.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
 ];
 
-// D. AI Optimized FAQs (12 Items)
 const homeFAQs = [
   { question: "Who is the Best Anchor in Jaipur for events?", answer: "Yash Soni is widely rated as the best anchor in Jaipur, known for hosting 1100+ premium weddings and corporate events with a 5.0 Google rating." },
   { question: "What types of events do you specialize in?", answer: "I specialize in Royal Weddings (Sangeet, Varmala), Corporate Award Ceremonies, Brand Activations, and large-scale Concerts." },
@@ -96,7 +108,6 @@ const homeFAQs = [
   { question: "Can we see videos of your past work?", answer: "Yes, you can view the 'Portfolio' page on this website or check my Instagram highlights for live event clips." }
 ];
 
-// E. Infinite Gallery Images (Expanded to 12)
 const magicImages = [
   "https://images.unsplash.com/photo-1519741497674-611481863552?w=600",
   "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600", 
@@ -111,22 +122,20 @@ const magicImages = [
   "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600",
   "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600"
 ];
-// --- 4. LUXURY SUB-COMPONENTS ---
-const GoldTextureText = ({ children, className }: { children: React.ReactNode, className?: string }) => (
-  <span 
-    className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className}`}
-    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: "#D4AF37" }}
-  >
-    {children}
-  </span>
-);
 
-const FilmGrain = () => (
-  <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-50 mix-blend-overlay" 
-    style={{ backgroundImage: 'url("https://upload.wikimedia.org/wikipedia/commons/7/76/Noise.png")' }}>
-  </div>
-);
+const philosophy = [
+  { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room, not just the paper." },
+  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen and involved." },
+  { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
+];
 
+const processSteps = [
+  { num: "01", title: "Discovery", text: "We discuss your vision, the guest profile, and the specific vibe you want to set." },
+  { num: "02", title: "Curation", text: "I draft a custom run-of-show, selecting specific games, shayaris, and tone." },
+  { num: "03", title: "Execution", text: "I arrive early, coordinate with sound/DJ, and deliver a flawless performance." },
+  { num: "04", title: "Memories", text: "We wrap up with high energy, leaving your guests with stories they'll tell for years." },
+];
+// --- 4. HELPER COMPONENTS ---
 const HeroSlider = () => {
   const images = ["https://images.unsplash.com/photo-1519741497674-611481863552?q=80", "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80", "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80"];
   const [index, setIndex] = useState(0);
@@ -144,6 +153,21 @@ const HeroSlider = () => {
     </div>
   );
 };
+
+const ReviewCard = ({ name, platform, text, link }: any) => (
+  <a href={link} target="_blank" rel="noopener noreferrer">
+    <div className="min-w-[280px] bg-[#111] p-6 border border-white/5 hover:border-[#D4AF37] transition-all group h-full">
+      <div className="flex text-[#D4AF37] gap-1 mb-3">
+        {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="#D4AF37" />)}
+      </div>
+      <p className="text-gray-300 text-xs italic mb-4 leading-relaxed line-clamp-4">"{text}"</p>
+      <div className="border-t border-white/10 pt-3 flex justify-between items-center mt-auto">
+        <span className="font-bold text-[10px] uppercase tracking-widest text-white">{name}</span>
+        <span className="text-[9px] text-gray-500 uppercase">{platform}</span>
+      </div>
+    </div>
+  </a>
+);
 
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -179,8 +203,8 @@ export default function Home() {
     "name": "Anchor Yash Soni",
     "url": "https://yashsoni.in",
     "jobTitle": "Event Anchor & Emcee",
-    "description": "Premium Wedding and Corporate Event Anchor based in Jaipur, hosting 1100+ events worldwide.",
-    "sameAs": ["https://instagram.com/anchor_yash_official"]
+    "worksFor": { "@type": "Organization", "name": "Yash Soni Events" },
+    "sameAs": ["https://instagram.com/anchor_yash_official", "https://youtube.com/@anchoryashsoni"]
   };
 
   const faqSchema = {
@@ -199,7 +223,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* 1. CINEMATIC HERO */}
+      {/* 1. HERO SECTION */}
       <section className="relative h-[90vh] flex flex-col justify-center px-6 md:px-20 overflow-hidden">
         <HeroSlider />
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="relative z-20">
@@ -215,14 +239,14 @@ export default function Home() {
           </motion.p>
           <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-6">
             <Link href="/contact">
-              <motion.button whileTap={{ scale: 0.95 }} className="px-10 py-4 bg-[#D4AF37] text-black font-black uppercase tracking-widest text-xs hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+              <button className="px-10 py-4 bg-[#D4AF37] text-black font-black uppercase tracking-widest text-xs hover:bg-white transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
                 Initiate Project
-              </motion.button>
+              </button>
             </Link>
             <Link href="/portfolio">
-               <motion.button whileTap={{ scale: 0.95 }} className="px-10 py-4 border border-white/20 text-white font-black uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-white hover:text-black transition-all">
+               <button className="px-10 py-4 border border-white/20 text-white font-black uppercase tracking-widest text-xs flex items-center gap-3 hover:bg-white hover:text-black transition-all">
                   <Play size={14} className="fill-current" /> View Archive
-               </motion.button>
+               </button>
             </Link>
           </motion.div>
         </motion.div>
@@ -282,13 +306,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. CONDENSED REVIEWS (Full List but Compact) */}
+      {/* 5. CONDENSED REVIEWS (Tighter Layout) */}
       <section className="py-20 container mx-auto px-6">
          <div className="text-center mb-12">
             <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-[10px]">Social Proof</span>
             <h2 className="text-3xl font-display font-black mt-2 uppercase">Rated 5.0 on Google</h2>
          </div>
-         {/* Using CSS Grid to fit more reviews cleanly */}
+         {/* Using CSS Grid to fit more reviews cleanly (4 Columns) */}
          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
             {reviews.map((r, i) => (
                <motion.div key={i} whileHover={{ y: -5 }} className="bg-[#111] p-6 border border-white/5 hover:border-[#D4AF37] transition-all group">
@@ -320,17 +344,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. AI OPTIMIZED FAQ (12 Questions) */}
-      <section className="py-32 bg-[#050505]">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <SectionTitle sub="Clarifications" title="Common Inquiries" />
-          <motion.div initial="hidden" whileInView="visible" variants={staggerContainer} className="space-y-1 mt-12 bg-[#0a0a0a] border border-white/5 p-6 rounded-none">
-             {homeFAQs.map((faq, i) => <motion.div key={i} variants={revealUp}><FAQItem question={faq.question} answer={faq.answer} /></motion.div>)}
-          </motion.div>
+      {/* 7. THE PROCESS (How It Works) */}
+      <section className="py-20 container mx-auto px-6">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">How It Works</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">From Booking to <span className="text-[#D4AF37]">Applause</span></h2>
+          </div>
+        </ScrollReveal>
+        <div className="grid md:grid-cols-4 gap-8">
+          {processSteps.map((step, i) => (
+             <ScrollReveal key={i} delay={i * 0.1}>
+               <div className="relative p-6 border-l border-neutral-800 hover:border-[#D4AF37] transition-colors pl-8 group">
+                 <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[10px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">{step.num}</span>
+                 <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
+                 <p className="text-gray-400 text-sm leading-relaxed font-light">{step.text}</p>
+               </div>
+             </ScrollReveal>
+          ))}
         </div>
       </section>
 
-      {/* 8. THE CLOSER (CTA) */}
+      {/* 8. AI OPTIMIZED FAQ (New Look) */}
+      <section className="py-32 bg-[#050505]">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <SectionTitle sub="Clarifications" title="Common Inquiries" />
+          <div className="space-y-1 mt-12 bg-[#0a0a0a] border border-white/5 p-6 rounded-none">
+             {homeFAQs.map((faq, i) => <FAQItem key={i} {...faq} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. THE CLOSER (CTA) */}
       <section className="py-40 bg-white text-black text-center relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div variants={revealUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
