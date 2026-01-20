@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { 
   Play, Minus, Plus, ArrowRight, Star, Mic, Sparkles, 
   MapPin, Quote, Instagram, Users, CalendarCheck, Phone, ChevronDown 
@@ -43,7 +43,28 @@ const FilmGrain = () => (
   </div>
 );
 
-// --- 3. BACKGROUND SLIDER ---
+// --- 3. ANIMATION VARIANTS (FIXED FOR TYPESCRIPT) ---
+const revealUp: Variants = {
+  hidden: { y: 80, opacity: 0 },
+  visible: { 
+    y: 0, 
+    opacity: 1, 
+    transition: { 
+      duration: 0.8, 
+      ease: [0.33, 1, 0.68, 1] as const // Fixed: Added 'as const'
+    } 
+  }
+};
+
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  visible: { 
+    opacity: 1, 
+    transition: { staggerChildren: 0.2 } 
+  }
+};
+
+// --- 4. SUB-COMPONENTS ---
 const HeroSlider = () => {
   const images = [
     "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop", 
@@ -81,8 +102,7 @@ const HeroSlider = () => {
   );
 };
 
-// --- 4. ANIMATIONS & SUB-COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }: any) => (
+const ScrollReveal = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +117,6 @@ const GoldDivider = () => (
   <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-30 my-16" />
 );
 
-// --- TRUSTED MARQUEE COMPONENT ---
 const TrustedMarquee = () => {
   const brands = [
     { name: "Google Reviews", color: "hover:text-[#4285F4]", link: "https://share.google/pMZGzEGOhXnJpLq5g" }, 
@@ -133,11 +152,9 @@ const TrustedMarquee = () => {
   );
 };
 
-// --- 5. REVIEW CARD (CLICKABLE) ---
 const ReviewCard = ({ name, date, text, platform, link }: any) => (
   <a href={link} target="_blank" rel="noopener noreferrer" className="block h-full">
     <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all duration-300 flex flex-col shadow-lg mx-4 group cursor-pointer h-full relative overflow-hidden">
-      {/* Hover Glow Effect */}
       <div className="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       <div className="flex items-start gap-4 mb-4 relative z-10">
@@ -163,7 +180,6 @@ const ReviewCard = ({ name, date, text, platform, link }: any) => (
   </a>
 );
 
-// --- 6. LUXURY FAQ COMPONENT ---
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -195,7 +211,6 @@ const FAQItem = ({ question, answer }: any) => {
     </div>
   );
 };
-
 // --- DATA ---
 const services = [
   { title: "Royal Weddings", subtitle: "Sangeet, Varmala & Pheras", desc: "Orchestrating the grandeur of big fat Indian weddings with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80", link: "/wedding-anchor-jaipur" },
@@ -219,10 +234,6 @@ const philosophy = [
   { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room, not just the paper." },
   { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen and involved." },
   { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
-];
-
-const venues = [
-  "Rambagh Palace", "The Oberoi Rajvilas", "Fairmont Jaipur", "City Palace Udaipur", "Le Méridien", "Taj Jai Mahal"
 ];
 
 const processSteps = [
@@ -330,12 +341,12 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 opacity-80">
              <ScrollReveal delay={0.2}>
                <div className="relative aspect-[3/4] border border-neutral-800">
-                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash Hosting" />
                </div>
              </ScrollReveal>
              <ScrollReveal delay={0.3}>
                <div className="relative aspect-[3/4] border border-neutral-800 mt-8">
-                 <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                 <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Corporate Event" />
                </div>
              </ScrollReveal>
           </div>
