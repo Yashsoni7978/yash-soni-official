@@ -5,16 +5,22 @@ import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { 
   Play, ArrowRight, Star, Sparkles, Quote, Instagram, 
-  Users, CalendarCheck, Phone, ChevronDown, Activity 
+  Users, CalendarCheck, Phone, ChevronDown, Activity, 
+  MapPin, Mic, ExternalLink 
 } from "lucide-react";
 
-// --- 1. GLOBAL STYLES ---
+// --- 1. GLOBAL STYLES (Glassmorphism & Pausable Marquee) ---
 const style = `
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  .animate-marquee { animation: marquee 35s linear infinite; }
+  .animate-marquee { animation: marquee 40s linear infinite; }
   .animate-slow-scroll { animation: marquee 60s linear infinite; }
+  /* Pause animation on hover for user control */
+  .hover-pause:hover .animate-marquee,
+  .hover-pause:hover .animate-slow-scroll { animation-play-state: paused; }
+  
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  
   @keyframes shimmer {
     0% { background-position: 0% 50%; filter: brightness(100%); }
     50% { background-position: 100% 50%; filter: brightness(130%); }
@@ -72,29 +78,35 @@ const GoldDivider = () => (
   <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-30 my-16" />
 );
 
-// --- 4. DATA STORE (Full Content) ---
-const brands = [
-  "Fairmont", "Rambagh Palace", "The Leela", "Marriott", "City Palace", 
-  "Taj Jai Mahal", "Hyatt Regency", "Raffles Udaipur", "Oberoi Rajvilas",
-  "Radisson Blu", "ITC Rajputana", "DoubleTree by Hilton"
+// --- 4. DATA STORE (Real Reviews & Links) ---
+
+// Trusted Platforms (Clickable)
+const trustedPlatforms = [
+  { name: "WedMeGood", link: "https://www.wedmegood.com/profile/anchor-yash-25628297", color: "hover:text-[#DE5D83]" },
+  { name: "WeddingWire", link: "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166", color: "hover:text-[#1467B0]" },
+  { name: "Justdial", link: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET", color: "hover:text-[#FF9800]" },
+  { name: "ShaadiDukaan", link: "https://www.shaadidukaan.com/profile/yash-2", color: "hover:text-[#E91E63]" },
+  { name: "StarClinch", link: "https://starclinch.com", color: "hover:text-[#FF5722]" },
+  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#FFC107]" },
+  { name: "WeddingBazaar", link: "https://weddingbazaar.com", color: "hover:text-[#E53935]" },
+  { name: "Google Reviews", link: "https://share.google/pMZGzEGOhXnJpLq5g", color: "hover:text-[#4285F4]" }
 ];
 
-const services = [
-  { title: "Royal Weddings", subtitle: "Sangeet, Varmala & Pheras", desc: "Orchestrating grandeur with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800", link: "/wedding-anchor-jaipur" },
-  { title: "Corporate Galas", subtitle: "Awards, Summits & R&R", desc: "Crisp, professional hosting keeping stakeholders engaged with premium tonality.", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800", link: "/corporate-event-anchor-jaipur" },
-  { title: "Brand Activations", subtitle: "Mall & Roadshows", desc: "High-energy interaction to drive footfall and maximize brand visibility.", img: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800", link: "/mall-activation-anchor" },
-  { title: "Team Offsites", subtitle: "Building Connections", desc: "Ice-breakers and bonding activities that turn colleagues into family.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800", link: "/team-building-host" },
-];
-
+// Authentic Google Reviews
 const reviews = [
-  { name: "Priya Sharma", date: "2 months ago", platform: "Google Reviews", text: "Yash was the soul of our Sangeet! He managed 500 guests effortlessly. The energy was insane from start to finish.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
-  { name: "Rahul Verma", date: "1 month ago", platform: "WedMeGood", text: "Hired him for our Corporate R&R in Jaipur. Extremely professional, punctual, and witty. Our CEO was very impressed.", link: "#" },
-  { name: "Amit & Sneha", date: "3 weeks ago", platform: "Google Reviews", text: "The best decision for our wedding. His command over Hindi and English is perfect for a mixed crowd. Highly recommended!", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
-  { name: "Vikram Rathore", date: "4 months ago", platform: "WeddingWire", text: "A true professional. He controlled the flow of our Varmala perfectly. The shayaris were beautiful.", link: "#" },
-  { name: "Simran Kaur", date: "1 week ago", platform: "StarClinch", text: "Our guests are still talking about the games Yash hosted. He has a unique way of connecting with everyone.", link: "#" },
-  { name: "Oberoi Group", date: "6 months ago", platform: "Corporate Client", text: "Excellent command over the stage. Handled our Annual General Meeting with grace and authority.", link: "#" },
-  { name: "Nikhil Jain", date: "5 months ago", platform: "WedMeGood", text: "If you want your wedding to be memorable, book Yash. He is not just an anchor, he is an entertainer.", link: "#" },
-  { name: "Anjali Mehta", date: "2 weeks ago", platform: "Google Reviews", text: "Punctual, well-dressed, and incredibly talented. He saved our event when the DJ had a technical glitch.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
+  { name: "Nikita Agarwal", date: "15 weeks ago", text: "We couldn’t have asked for a better anchor! Yash brought the perfect blend of energy, charm, and professionalism." },
+  { name: "Sakshi Soni", date: "19 weeks ago", text: "One of the best Anchor in jaipur, really the top most Anchor in jaipur. Made our event really Memorable." },
+  { name: "Divyansh Soni", date: "22 Dec 2024", text: "It was a very good experience with Yash. Handled my sangeet function very well." },
+  { name: "Utkarsh Godha", date: "22 Dec 2024", text: "Very nice 👍 perfect entertaining." },
+  { name: "Bharat Sharma", date: "21 Dec 2024", text: "Good personality and anchoring with humour and professionalism. Everything goes in flow with him." },
+  { name: "Riya Chauhan", date: "8 Oct 2024", text: "Anchor Yash absolutely rocked the stage at India Kids Fashion Week Season 11 at The Lalit, Jaipur!" },
+  { name: "Rishita Sharma", date: "7 Oct 2024", text: "Anchor Yash hosted a memorable Dandiya night! His professionalism made it a truly enjoyable experience." },
+  { name: "Saurabh Agarwal", date: "5 Jul 2024", text: "The experience was phenomenal. Great anchor with soft and attracting personality and eye catching presence." },
+  { name: "Divya Shree", date: "4 Jul 2024", text: "A true master of connection, they made everyone feel included. Highly recommend for an unforgettable experience!" },
+  { name: "Keshav Srivastav", date: "19 Jun 2024", text: "He was engaging, professional, and kept the audience captivated throughout the event." },
+  { name: "Vartika Jetawat", date: "19 Jun 2024", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic thorough the function." },
+  { name: "Riya Sharma", date: "19 Jun 2024", text: "He is very nice anchor, has a great personality and makes every event successful with his charm." },
+  { name: "Saksham Thakral", date: "8 Oct 2024", text: "These anchors typically bring energy and humor, ensuring the show flows smoothly." }
 ];
 
 const homeFAQs = [
@@ -112,25 +124,26 @@ const homeFAQs = [
   { question: "Can we see videos of your past work?", answer: "Yes, you can view the 'Portfolio' page on this website or check my Instagram highlights for live event clips." }
 ];
 
+const services = [
+  { title: "Royal Weddings", num: "01", desc: "Orchestrating grandeur with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800", link: "/wedding-anchor-jaipur" },
+  { title: "Corporate Galas", num: "02", desc: "Crisp, professional hosting keeping stakeholders engaged with premium tonality.", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800", link: "/corporate-event-anchor-jaipur" },
+  { title: "Brand Activations", num: "03", desc: "High-energy interaction to drive footfall and maximize brand visibility.", img: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800", link: "/mall-activation-anchor" },
+  { title: "Team Building", num: "04", desc: "Ice-breakers and bonding activities that turn colleagues into family.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800", link: "/team-building-host" },
+];
+
 const magicImages = [
-  "https://images.unsplash.com/photo-1519741497674-611481863552?w=600",
-  "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600", 
-  "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600",
-  "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
-  "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600",
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600",
-  "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600",
-  "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600",
-  "https://images.unsplash.com/photo-1505373877741-2d3940e8d6f8?w=600",
-  "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600",
-  "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600",
-  "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600"
+  "https://images.unsplash.com/photo-1519741497674-611481863552?w=600", "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600", 
+  "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600", "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
+  "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600", "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600",
+  "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600", "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600",
+  "https://images.unsplash.com/photo-1505373877741-2d3940e8d6f8?w=600", "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600",
+  "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600", "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600"
 ];
 
 const philosophy = [
-  { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room, not just the paper." },
-  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen and involved." },
-  { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
+  { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room." },
+  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen." },
+  { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes to create a cohesive journey." },
 ];
 
 const processSteps = [
@@ -161,15 +174,27 @@ const HeroSlider = () => {
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border-b border-white/10 last:border-0">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full py-6 text-left group hover:bg-white/5 transition-colors px-4">
-        <span className={`text-lg font-bold transition-colors ${isOpen ? 'text-[#D4AF37]' : 'text-gray-300 group-hover:text-white'}`}>{question}</span>
-        <ChevronDown className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-180 text-[#D4AF37]' : 'text-gray-500'}`} />
+    <div className="border-b border-neutral-800 last:border-0 group">
+      <button 
+        onClick={() => setIsOpen(!isOpen)} 
+        className="flex justify-between items-center w-full py-8 text-left transition-all"
+      >
+        <span className={`text-xl font-display transition-colors duration-300 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-300 group-hover:text-white'}`}>
+          {question}
+        </span>
+        <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+           <ChevronDown className={`w-6 h-6 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-500'}`} />
+        </div>
       </button>
       <AnimatePresence>
         {isOpen && (
-          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden px-4">
-            <p className="pb-6 text-gray-400 text-sm leading-relaxed max-w-3xl font-light italic">{answer}</p>
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }} 
+            animate={{ height: "auto", opacity: 1 }} 
+            exit={{ height: 0, opacity: 0 }} 
+            className="overflow-hidden"
+          >
+            <p className="pb-8 text-gray-400 text-lg leading-relaxed max-w-3xl font-light">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -177,19 +202,35 @@ const FAQItem = ({ question, answer }: any) => {
   );
 };
 
-const ReviewCard = ({ name, platform, text, link }: any) => (
-  <a href={link} target="_blank" rel="noopener noreferrer">
-    <div className="min-w-[280px] bg-[#111] p-6 border border-white/5 hover:border-[#D4AF37] transition-all group h-full">
-      <div className="flex text-[#D4AF37] gap-1 mb-3">
-        {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="#D4AF37" />)}
+// Updated: Rounded, Blur Effect, Clickable Review Card
+const ReviewCard = ({ name, date, text }: any) => (
+  <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer" className="block h-full">
+    <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37] transition-all group h-full flex flex-col shadow-lg cursor-pointer">
+      <div className="flex justify-between items-start mb-4">
+         <div className="flex text-[#D4AF37] gap-1">
+           {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#D4AF37" />)}
+         </div>
+         <span className="text-[10px] text-gray-500 uppercase font-bold">{date}</span>
       </div>
-      <p className="text-gray-300 text-xs italic mb-4 leading-relaxed line-clamp-4">"{text}"</p>
-      <div className="border-t border-white/10 pt-3 flex justify-between items-center mt-auto">
-        <span className="font-bold text-[10px] uppercase tracking-widest text-white">{name}</span>
-        <span className="text-[9px] text-gray-500 uppercase">{platform}</span>
+      <p className="text-gray-200 text-sm leading-relaxed flex-grow font-light">"{text}"</p>
+      <div className="border-t border-white/10 pt-4 mt-6 flex items-center gap-3">
+        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center text-black font-bold text-xs">
+          {name.charAt(0)}
+        </div>
+        <div>
+          <span className="font-bold text-xs uppercase tracking-widest text-white block group-hover:text-[#D4AF37] transition-colors">{name}</span>
+          <span className="text-[9px] text-gray-500 uppercase flex items-center gap-1">Google Review <ExternalLink size={8} /></span>
+        </div>
       </div>
     </div>
   </a>
+);
+
+const SectionTitle = ({ sub, title }: any) => (
+  <div className="text-center mb-16">
+    <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">{sub}</span>
+    <h2 className="text-4xl md:text-6xl font-display font-black mt-3 uppercase leading-none">{title}</h2>
+  </div>
 );
 
 // --- 6. MAIN RENDER ---
@@ -200,8 +241,7 @@ export default function Home() {
     "name": "Anchor Yash Soni",
     "url": "https://yashsoni.in",
     "jobTitle": "Event Anchor & Emcee",
-    "worksFor": { "@type": "Organization", "name": "Yash Soni Events" },
-    "sameAs": ["https://instagram.com/anchor_yash_official", "https://youtube.com/@anchoryashsoni"]
+    "sameAs": ["https://instagram.com/anchor_yash_official"]
   };
 
   const faqSchema = {
@@ -220,7 +260,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* 1. HERO SECTION (Restored Left Alignment) */}
+      {/* 1. HERO SECTION */}
       <section className="relative h-screen flex items-end pb-20 md:pb-32 overflow-hidden">
         <HeroSlider />
         <div className="relative container mx-auto px-4 z-20">
@@ -230,15 +270,12 @@ export default function Home() {
                  Jaipur's Leading Event Anchor
                </span>
             </motion.div>
-
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} className="text-6xl md:text-8xl lg:text-9xl font-display font-black leading-[0.95] mb-4">
               Anchor <GoldTextureText>Yash</GoldTextureText>
             </motion.h1>
-
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="text-gray-300 text-xl md:text-2xl font-light mb-4">
               Premium Wedding & Corporate Event Anchor
             </motion.p>
-
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }} className="flex flex-wrap gap-4 items-center">
               <Link href="/contact">
                 <span className="px-8 py-3 bg-[#D4AF37] text-black font-bold rounded-lg text-sm hover:bg-white transition-all cursor-pointer shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center gap-2">
@@ -286,11 +323,16 @@ export default function Home() {
 
       <GoldDivider />
 
-      {/* 3. SLEEK MARQUEE (New & Fixed) */}
-      <section className="py-8 bg-[#0a0a0a] border-y border-white/5 overflow-hidden">
-         <div className="flex gap-20 animate-marquee whitespace-nowrap items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-            {[...brands, ...brands].map((b, i) => (
-               <span key={i} className="text-xl font-black italic uppercase tracking-tighter">{b}</span>
+      {/* 3. TRUSTED ON MARQUEE (Clickable Links) */}
+      <section className="py-12 bg-[#0a0a0a] border-y border-white/5 overflow-hidden hover-pause">
+         <div className="container mx-auto px-6 mb-8 text-center">
+            <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">Featured On</span>
+         </div>
+         <div className="flex gap-20 animate-marquee whitespace-nowrap items-center">
+            {[...trustedPlatforms, ...trustedPlatforms].map((brand, i) => (
+               <a key={i} href={brand.link} target="_blank" rel="noopener noreferrer" className={`text-2xl font-black italic uppercase tracking-tighter text-white/30 transition-colors ${brand.color}`}>
+                 {brand.name}
+               </a>
             ))}
          </div>
       </section>
@@ -303,18 +345,17 @@ export default function Home() {
             <Link href="/services" className="text-[#D4AF37] border-b border-[#D4AF37] pb-1 uppercase text-xs tracking-widest hover:text-white transition-colors">View All</Link>
           </div>
         </ScrollReveal>
-        <div className="space-y-4">
+        <div className="grid md:grid-cols-4 gap-4">
           {services.map((s, i) => (
             <ScrollReveal key={i}>
               <Link href={s.link}>
-                <div className="group border-t border-neutral-800 py-12 flex flex-col md:flex-row gap-8 items-center cursor-pointer hover:bg-neutral-900/30 transition-colors">
-                  <span className="text-neutral-800 text-6xl font-display font-bold group-hover:text-[#D4AF37] group-hover:opacity-100 transition-all">0{i+1}</span>
-                  <div className="flex-grow">
-                    <h3 className="text-3xl font-bold mb-2 group-hover:text-[#D4AF37] transition-colors">{s.title}</h3>
-                    <p className="text-gray-500 max-w-xl font-light">{s.desc}</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-black transition-all">
-                    <ArrowRight className="w-5 h-5" />
+                <div className="group relative h-[400px] border border-neutral-800 hover:border-[#D4AF37] transition-all overflow-hidden">
+                  <img src={s.img} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <span className="text-4xl font-display font-black text-white/20 mb-2 block group-hover:text-[#D4AF37] transition-colors">{s.num}</span>
+                    <h3 className="text-2xl font-bold text-white mb-2">{s.title}</h3>
+                    <p className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">{s.desc}</p>
                   </div>
                 </div>
               </Link>
@@ -323,25 +364,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. CONDENSED REVIEWS (Fixed Layout) */}
-      <section className="py-20 bg-black container mx-auto px-6">
-         <div className="text-center mb-12">
+      {/* 5. AUTHENTIC GOOGLE REVIEWS (Rounded & Blurred) */}
+      <section className="py-24 bg-black container mx-auto px-6">
+         <div className="text-center mb-16">
             <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-[10px]">Social Proof</span>
-            <h2 className="text-3xl font-display font-black mt-2 uppercase">Rated 5.0 on Google</h2>
+            <h2 className="text-3xl font-display font-black mt-2 uppercase">Authentic Client Love</h2>
          </div>
-         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-8xl mx-auto">
             {reviews.map((r, i) => <ReviewCard key={i} {...r} />)}
          </div>
       </section>
 
-      {/* 6. INFINITE MAGIC GALLERY */}
-      <section className="py-24 bg-[#050505] overflow-hidden border-t border-white/5">
+      {/* 6. INFINITE MAGIC GALLERY (Pause on Hover) */}
+      <section className="py-24 bg-[#050505] overflow-hidden border-t border-white/5 hover-pause">
         <div className="container mx-auto px-6 mb-12">
            <h2 className="text-4xl md:text-6xl font-display font-black uppercase italic">Moments of <GoldTextureText>Magic.</GoldTextureText></h2>
         </div>
         <div className="flex gap-4 animate-slow-scroll whitespace-nowrap">
           {[...magicImages, ...magicImages].map((img, i) => (
-            <div key={i} className="min-w-[280px] h-[400px] bg-[#111] border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden relative group">
+            <div key={i} className="min-w-[300px] h-[450px] bg-[#111] border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden relative group">
                <img src={img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Anchor Yash Event" />
                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
             </div>
@@ -349,13 +390,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. AI OPTIMIZED FAQ */}
+      {/* 7. AI OPTIMIZED FAQ (Empire Design) */}
       <section className="py-32 bg-[#050505]">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Common Questions</h2>
-          </div>
-          <div className="space-y-1 mt-12 bg-[#0a0a0a] border border-white/5 p-6 rounded-none">
+          <SectionTitle sub="Clarifications" title="Common Questions" />
+          <div className="space-y-1 mt-12">
              {homeFAQs.map((faq, i) => <FAQItem key={i} {...faq} />)}
           </div>
         </div>
