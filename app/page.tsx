@@ -9,13 +9,14 @@ import {
   MapPin, Mic, ExternalLink 
 } from "lucide-react";
 
-// --- 1. GLOBAL STYLES (Glassmorphism & Pausable Marquee) ---
+// --- 1. GLOBAL STYLES (Faster Marquee, No Pause) ---
 const style = `
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  .animate-marquee { animation: marquee 40s linear infinite; }
+  /* Increased speed to 20s */
+  .animate-marquee { animation: marquee 20s linear infinite; }
   .animate-slow-scroll { animation: marquee 60s linear infinite; }
-  /* Pause animation on hover for user control */
-  .hover-pause:hover .animate-marquee,
+  
+  /* Removed hover-pause for the brand slider as requested */
   .hover-pause:hover .animate-slow-scroll { animation-play-state: paused; }
   
   .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -47,11 +48,11 @@ const FilmGrain = () => (
 
 // --- 3. ANIMATION VARIANTS ---
 const revealUp: Variants = {
-  hidden: { y: 60, opacity: 0 },
+  hidden: { y: 40, opacity: 0 },
   visible: { 
     y: 0, 
     opacity: 1, 
-    transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] as const } 
+    transition: { duration: 0.6, ease: "easeOut" } 
   }
 };
 
@@ -65,10 +66,10 @@ const staggerContainer: Variants = {
 
 const ScrollReveal = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => (
   <motion.div
-    initial={{ opacity: 0, y: 40 }}
+    initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.8, delay, ease: "easeOut" }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.6, delay, ease: "easeOut" }}
   >
     {children}
   </motion.div>
@@ -109,6 +110,13 @@ const reviews = [
   { name: "Saksham Thakral", date: "8 Oct 2024", text: "These anchors typically bring energy and humor, ensuring the show flows smoothly." }
 ];
 
+// TEXTUAL SERVICES (Pills)
+const serviceTags = [
+  "Weddings & Receptions", "Sangeet & Haldi Ceremonies", "Corporate Annual Meets", "Product Launches",
+  "Fashion Shows", "College Fests", "Cultural Nights", "Kids Shows & Birthday Parties",
+  "Award Ceremonies", "Social Events", "Team Building", "Live Concerts"
+];
+
 const homeFAQs = [
   { question: "Who is the Best Anchor in Jaipur for events?", answer: "Yash Soni is widely rated as the best anchor in Jaipur, known for hosting 1100+ premium weddings and corporate events with a 5.0 Google rating." },
   { question: "What types of events do you specialize in?", answer: "I specialize in Royal Weddings (Sangeet, Varmala), Corporate Award Ceremonies, Brand Activations, and large-scale Concerts." },
@@ -124,13 +132,6 @@ const homeFAQs = [
   { question: "Can we see videos of your past work?", answer: "Yes, you can view the 'Portfolio' page on this website or check my Instagram highlights for live event clips." }
 ];
 
-const services = [
-  { title: "Royal Weddings", num: "01", desc: "Orchestrating grandeur with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800", link: "/wedding-anchor-jaipur" },
-  { title: "Corporate Galas", num: "02", desc: "Crisp, professional hosting keeping stakeholders engaged with premium tonality.", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800", link: "/corporate-event-anchor-jaipur" },
-  { title: "Brand Activations", num: "03", desc: "High-energy interaction to drive footfall and maximize brand visibility.", img: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800", link: "/mall-activation-anchor" },
-  { title: "Team Building", num: "04", desc: "Ice-breakers and bonding activities that turn colleagues into family.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800", link: "/team-building-host" },
-];
-
 const magicImages = [
   "https://images.unsplash.com/photo-1519741497674-611481863552?w=600", "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600", 
   "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600", "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600",
@@ -138,19 +139,6 @@ const magicImages = [
   "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600", "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600",
   "https://images.unsplash.com/photo-1505373877741-2d3940e8d6f8?w=600", "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600",
   "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600", "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600"
-];
-
-const philosophy = [
-  { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room." },
-  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen." },
-  { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes to create a cohesive journey." },
-];
-
-const processSteps = [
-  { num: "01", title: "Discovery", text: "We discuss your vision, the guest profile, and the specific vibe you want to set." },
-  { num: "02", title: "Curation", text: "I draft a custom run-of-show, selecting specific games, shayaris, and tone." },
-  { num: "03", title: "Execution", text: "I arrive early, coordinate with sound/DJ, and deliver a flawless performance." },
-  { num: "04", title: "Memories", text: "We wrap up with high energy, leaving your guests with stories they'll tell for years." },
 ];
 // --- 5. HELPER COMPONENTS ---
 const HeroSlider = () => {
@@ -202,7 +190,6 @@ const FAQItem = ({ question, answer }: any) => {
   );
 };
 
-// Updated: Rounded, Blur Effect, Clickable Review Card
 const ReviewCard = ({ name, date, text }: any) => (
   <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer" className="block h-full">
     <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37] transition-all group h-full flex flex-col shadow-lg cursor-pointer">
@@ -260,7 +247,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION (Left Aligned) */}
       <section className="relative h-screen flex items-end pb-20 md:pb-32 overflow-hidden">
         <HeroSlider />
         <div className="relative container mx-auto px-4 z-20">
@@ -323,43 +310,35 @@ export default function Home() {
 
       <GoldDivider />
 
-      {/* 3. TRUSTED ON MARQUEE (Clickable Links) */}
-      <section className="py-12 bg-[#0a0a0a] border-y border-white/5 overflow-hidden hover-pause">
-         <div className="container mx-auto px-6 mb-8 text-center">
-            <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">Featured On</span>
+      {/* 3. TRUSTED ON MARQUEE (Clickable, Fast, Bold) */}
+      <section className="py-6 bg-[#0a0a0a] border-y border-white/5 overflow-hidden">
+         <div className="container mx-auto px-6 mb-6 text-center">
+            <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-sm">FEATURED ON</span>
          </div>
          <div className="flex gap-20 animate-marquee whitespace-nowrap items-center">
             {[...trustedPlatforms, ...trustedPlatforms].map((brand, i) => (
-               <a key={i} href={brand.link} target="_blank" rel="noopener noreferrer" className={`text-2xl font-black italic uppercase tracking-tighter text-white/30 transition-colors ${brand.color}`}>
+               <a key={i} href={brand.link} target="_blank" rel="noopener noreferrer" className={`text-2xl font-bold uppercase tracking-tighter text-white/40 transition-colors ${brand.color}`}>
                  {brand.name}
                </a>
             ))}
          </div>
       </section>
 
-      {/* 4. SERVICES */}
+      {/* 4. SERVICES (Textual Pill Layout) */}
       <section className="py-24 container mx-auto px-4">
         <ScrollReveal>
-          <div className="flex justify-between items-end mb-16">
-            <h2 className="text-4xl md:text-6xl font-display font-bold">Signature <span className="text-neutral-700">Services</span></h2>
-            <Link href="/services" className="text-[#D4AF37] border-b border-[#D4AF37] pb-1 uppercase text-xs tracking-widest hover:text-white transition-colors">View All</Link>
+          <div className="text-center mb-16">
+            <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">EXPERTISE</span>
+            <h2 className="text-4xl md:text-6xl font-display font-bold mt-4">Events I Specialize In</h2>
           </div>
         </ScrollReveal>
-        <div className="grid md:grid-cols-4 gap-4">
-          {services.map((s, i) => (
-            <ScrollReveal key={i}>
-              <Link href={s.link}>
-                <div className="group relative h-[400px] border border-neutral-800 hover:border-[#D4AF37] transition-all overflow-hidden">
-                  <img src={s.img} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <span className="text-4xl font-display font-black text-white/20 mb-2 block group-hover:text-[#D4AF37] transition-colors">{s.num}</span>
-                    <h3 className="text-2xl font-bold text-white mb-2">{s.title}</h3>
-                    <p className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">{s.desc}</p>
-                  </div>
-                </div>
-              </Link>
-            </ScrollReveal>
+        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          {serviceTags.map((tag, i) => (
+            <motion.div key={i} variants={revealUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <span className="px-8 py-3 rounded-full border border-white/10 text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all cursor-default text-sm tracking-wide uppercase font-medium bg-[#111]">
+                {tag}
+              </span>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -390,7 +369,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. AI OPTIMIZED FAQ (Empire Design) */}
+      {/* 7. AI OPTIMIZED FAQ (Restored Empire Design) */}
       <section className="py-32 bg-[#050505]">
         <div className="container mx-auto px-6 max-w-4xl">
           <SectionTitle sub="Clarifications" title="Common Questions" />
