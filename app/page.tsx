@@ -94,14 +94,96 @@ const trustedPlatforms = [
   { name: "Google Reviews", link: "https://share.google/pMZGzEGOhXnJpLq5g", color: "hover:text-[#4285F4]" }
 ];
 
-// SERVICE PILLS
-const serviceTags = [
-  "Weddings & Receptions", "Sangeet & Haldi Ceremonies", "Corporate Annual Meets", "Product Launches",
-  "Fashion Shows", "College Fests", "Cultural Nights", "Kids Shows & Birthday Parties",
-  "Award Ceremonies", "Social Events", "Team Building", "Live Concerts"
+  return (
+    <div className="flex w-full overflow-hidden">
+      <motion.div 
+        className="flex gap-40 items-center whitespace-nowrap px-4" 
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+      >
+        {[...brands, ...brands, ...brands].map((brand, i) => (
+          <a 
+            key={i} 
+            href={brand.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`text-xl md:text-3xl font-display font-bold text-white/80 uppercase tracking-widest transition-colors duration-300 ${brand.color}`}
+          >
+            {brand.name}
+          </a>
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
+const ReviewCard = ({ name, date, text, platform, link }: any) => (
+  <a href={link} target="_blank" rel="noopener noreferrer" className="block h-full">
+    <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all duration-300 flex flex-col shadow-lg mx-4 group cursor-pointer h-full relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      <div className="flex items-start gap-4 mb-4 relative z-10">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center text-black font-bold text-xl group-hover:scale-110 transition-transform">
+          {name.charAt(0)}
+        </div>
+        <div>
+          <h4 className="font-bold text-white text-base group-hover:text-[#D4AF37] transition-colors">{name}</h4>
+          <div className="flex items-center gap-2 text-xs text-gray-400">
+             <span>{date}</span> • <span className="text-[#D4AF37] font-medium">{platform}</span>
+          </div>
+        </div>
+      </div>
+      <div className="flex text-[#D4AF37] gap-1 mb-4 relative z-10">
+        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+      </div>
+      <p className="text-gray-300 text-sm leading-relaxed flex-grow font-light tracking-wide relative z-10 group-hover:text-white transition-colors">"{text}"</p>
+      
+      <div className="mt-4 flex items-center text-[#D4AF37] text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">
+        Read Full Review <ArrowRight className="w-3 h-3 ml-1" />
+      </div>
+    </div>
+  </a>
+);
+
+const FAQItem = ({ question, answer }: any) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border-b border-neutral-800 last:border-0">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between items-center w-full py-8 text-left group transition-all"
+      >
+        <span className={`text-xl md:text-2xl font-display transition-colors duration-300 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-200 group-hover:text-[#D4AF37]'}`}>
+          {question}
+        </span>
+        <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+           <ChevronDown className={`w-6 h-6 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-500'}`} />
+        </div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <p className="pb-8 text-gray-400 text-lg leading-relaxed max-w-3xl font-light">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+// --- DATA ---
+const services = [
+  { title: "Royal Weddings", subtitle: "Sangeet, Varmala & Pheras", desc: "Orchestrating the grandeur of big fat Indian weddings with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80", link: "/wedding-anchor-jaipur" },
+  { title: "Corporate Galas", subtitle: "Awards, Summits & R&R", desc: "Crisp, professional hosting that keeps stakeholders engaged and maintains the brand's premium tonality.", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80", link: "/corporate-event-anchor-jaipur" },
+  { title: "Brand Activations", subtitle: "Mall & Roadshows", desc: "High-energy crowd interaction to drive footfall and maximize brand visibility in public spaces.", img: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800&q=80", link: "/mall-activation-anchor" },
+  { title: "Team Offsites", subtitle: "Building Connections", desc: "Ice-breakers and team-bonding activities that turn colleagues into a cohesive family.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80", link: "/team-building-host" },
 ];
 
-// REVIEWS
 const reviews = [
   { name: "Nikita Agarwal", date: "15 weeks ago", text: "We couldn’t have asked for a better anchor! Yash brought the perfect blend of energy, charm, and professionalism." },
   { name: "Sakshi Soni", date: "19 weeks ago", text: "One of the best Anchor in jaipur, really the top most Anchor in jaipur. Made our event really Memorable." },
