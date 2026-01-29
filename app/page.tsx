@@ -6,17 +6,17 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { 
   Play, ArrowRight, Star, Sparkles, Quote, Instagram, 
   Users, CalendarCheck, Phone, Plus, Minus, Activity, 
-  MapPin, Mic, ExternalLink 
+  MapPin, Mic, ExternalLink, ChevronDown 
 } from "lucide-react";
 
 // --- 1. GLOBAL STYLES ---
 const style = `
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   
-  /* Fast Marquee (20s) - NO PAUSE on hover */
+  /* MARQUEE: Fast (20s), No Pause */
   .animate-marquee { animation: marquee 20s linear infinite; }
   
-  /* Gallery Scroll (60s) - Pauses on Hover */
+  /* GALLERY: Slow (60s), Pause on Hover */
   .animate-slow-scroll { animation: marquee 60s linear infinite; }
   .hover-pause:hover .animate-slow-scroll { animation-play-state: paused; }
   
@@ -82,7 +82,6 @@ const GoldDivider = () => (
 
 // --- 4. REAL DATA STORE ---
 
-// PLATFORMS
 const trustedPlatforms = [
   { name: "WedMeGood", link: "https://www.wedmegood.com/profile/anchor-yash-25628297", color: "hover:text-[#DE5D83]" },
   { name: "WeddingWire", link: "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166", color: "hover:text-[#1467B0]" },
@@ -94,94 +93,10 @@ const trustedPlatforms = [
   { name: "Google Reviews", link: "https://share.google/pMZGzEGOhXnJpLq5g", color: "hover:text-[#4285F4]" }
 ];
 
-  return (
-    <div className="flex w-full overflow-hidden">
-      <motion.div 
-        className="flex gap-40 items-center whitespace-nowrap px-4" 
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-      >
-        {[...brands, ...brands, ...brands].map((brand, i) => (
-          <a 
-            key={i} 
-            href={brand.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={`text-xl md:text-3xl font-display font-bold text-white/80 uppercase tracking-widest transition-colors duration-300 ${brand.color}`}
-          >
-            {brand.name}
-          </a>
-        ))}
-      </motion.div>
-    </div>
-  );
-};
-
-const ReviewCard = ({ name, date, text, platform, link }: any) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" className="block h-full">
-    <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all duration-300 flex flex-col shadow-lg mx-4 group cursor-pointer h-full relative overflow-hidden">
-      <div className="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
-      <div className="flex items-start gap-4 mb-4 relative z-10">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center text-black font-bold text-xl group-hover:scale-110 transition-transform">
-          {name.charAt(0)}
-        </div>
-        <div>
-          <h4 className="font-bold text-white text-base group-hover:text-[#D4AF37] transition-colors">{name}</h4>
-          <div className="flex items-center gap-2 text-xs text-gray-400">
-             <span>{date}</span> • <span className="text-[#D4AF37] font-medium">{platform}</span>
-          </div>
-        </div>
-      </div>
-      <div className="flex text-[#D4AF37] gap-1 mb-4 relative z-10">
-        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
-      </div>
-      <p className="text-gray-300 text-sm leading-relaxed flex-grow font-light tracking-wide relative z-10 group-hover:text-white transition-colors">"{text}"</p>
-      
-      <div className="mt-4 flex items-center text-[#D4AF37] text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">
-        Read Full Review <ArrowRight className="w-3 h-3 ml-1" />
-      </div>
-    </div>
-  </a>
-);
-
-const FAQItem = ({ question, answer }: any) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-neutral-800 last:border-0">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-8 text-left group transition-all"
-      >
-        <span className={`text-xl md:text-2xl font-display transition-colors duration-300 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-200 group-hover:text-[#D4AF37]'}`}>
-          {question}
-        </span>
-        <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
-           <ChevronDown className={`w-6 h-6 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-500'}`} />
-        </div>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <p className="pb-8 text-gray-400 text-lg leading-relaxed max-w-3xl font-light">{answer}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-// --- DATA ---
-const services = [
-  { title: "Royal Weddings", subtitle: "Sangeet, Varmala & Pheras", desc: "Orchestrating the grandeur of big fat Indian weddings with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80", link: "/wedding-anchor-jaipur" },
-  { title: "Corporate Galas", subtitle: "Awards, Summits & R&R", desc: "Crisp, professional hosting that keeps stakeholders engaged and maintains the brand's premium tonality.", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80", link: "/corporate-event-anchor-jaipur" },
-  { title: "Brand Activations", subtitle: "Mall & Roadshows", desc: "High-energy crowd interaction to drive footfall and maximize brand visibility in public spaces.", img: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800&q=80", link: "/mall-activation-anchor" },
-  { title: "Team Offsites", subtitle: "Building Connections", desc: "Ice-breakers and team-bonding activities that turn colleagues into a cohesive family.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80", link: "/team-building-host" },
+const serviceTags = [
+  "Weddings & Receptions", "Sangeet & Haldi Ceremonies", "Corporate Annual Meets", "Product Launches",
+  "Fashion Shows", "College Fests", "Cultural Nights", "Kids Shows & Birthday Parties",
+  "Award Ceremonies", "Social Events", "Team Building", "Live Concerts"
 ];
 
 const reviews = [
@@ -200,7 +115,6 @@ const reviews = [
   { name: "Saksham Thakral", date: "8 Oct 2024", text: "These anchors typically bring energy and humor, ensuring the show flows smoothly." }
 ];
 
-// FAQs
 const homeFAQs = [
   { question: "Who is the Best Anchor in Jaipur for events?", answer: "Yash Soni is widely rated as the best anchor in Jaipur, known for hosting 1100+ premium weddings and corporate events with a 5.0 Google rating." },
   { question: "What types of events do you specialize in?", answer: "I specialize in Royal Weddings (Sangeet, Varmala), Corporate Award Ceremonies, Brand Activations, and large-scale Concerts." },
@@ -216,8 +130,20 @@ const homeFAQs = [
   { question: "Can we see videos of your past work?", answer: "Yes, you can view the 'Portfolio' page on this website or check my Instagram highlights for live event clips." }
 ];
 
-// 20+ Images for Infinite Scroll
 const magicImages = Array.from({ length: 20 }, (_, i) => `https://images.unsplash.com/photo-${1519741497674 + i * 10}-611481863552?w=600&q=80`);
+
+const philosophy = [
+  { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room, not just the paper." },
+  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen and involved." },
+  { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
+];
+
+const processSteps = [
+  { num: "01", title: "Discovery", text: "We discuss your vision, the guest profile, and the specific vibe you want to set." },
+  { num: "02", title: "Curation", text: "I draft a custom run-of-show, selecting specific games, shayaris, and tone." },
+  { num: "03", title: "Execution", text: "I arrive early, coordinate with sound/DJ, and deliver a flawless performance." },
+  { num: "04", title: "Memories", text: "We wrap up with high energy, leaving your guests with stories they'll tell for years." },
+];
 // --- 5. HELPER COMPONENTS ---
 const HeroSlider = () => {
   const images = ["https://images.unsplash.com/photo-1519741497674-611481863552?q=80", "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80", "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80"];
@@ -237,16 +163,16 @@ const HeroSlider = () => {
   );
 };
 
-// NEW: Grid-Style FAQ Item (Matching Screenshot)
+// FAQ ITEM: Grid Style with Plus/Minus (As requested)
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-[#111] border border-white/10 rounded-2xl overflow-hidden transition-all hover:border-[#D4AF37]/50">
+    <div className="bg-[#111] border border-white/10 rounded-2xl overflow-hidden transition-all hover:border-[#D4AF37]/50 h-full">
       <button 
         onClick={() => setIsOpen(!isOpen)} 
         className="flex justify-between items-center w-full p-6 text-left"
       >
-        <span className={`text-base md:text-lg font-bold pr-4 transition-colors ${isOpen ? 'text-[#D4AF37]' : 'text-gray-200'}`}>
+        <span className={`text-base md:text-lg font-bold pr-4 leading-tight transition-colors ${isOpen ? 'text-[#D4AF37]' : 'text-gray-200'}`}>
           {question}
         </span>
         <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center transition-colors ${isOpen ? 'bg-[#D4AF37] text-black border-[#D4AF37]' : 'text-gray-400'}`}>
@@ -271,9 +197,10 @@ const FAQItem = ({ question, answer }: any) => {
   );
 };
 
+// REVIEW CARD: Restored to Stable Design (Clean, Dark, Bordered)
 const ReviewCard = ({ name, date, text }: any) => (
   <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer" className="block h-full">
-    <div className="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:border-[#D4AF37] transition-all group h-full flex flex-col shadow-lg cursor-pointer hover:-translate-y-1">
+    <div className="bg-[#111] p-6 border border-white/10 hover:border-[#D4AF37] transition-all group h-full flex flex-col shadow-lg cursor-pointer">
       <div className="flex justify-between items-start mb-3">
          <div className="flex text-[#D4AF37] gap-0.5">
            {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#D4AF37" />)}
@@ -297,7 +224,7 @@ const ReviewCard = ({ name, date, text }: any) => (
 const SectionTitle = ({ sub, title }: any) => (
   <div className="text-center mb-16">
     <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">{sub}</span>
-    <h2 className="text-4xl md:text-6xl font-display font-black mt-3 uppercase leading-none">{title}</h2>
+    <h2 className="text-4xl md:text-6xl font-display font-bold mt-4 text-white">{title}</h2>
   </div>
 );
 // --- 6. MAIN RENDER ---
@@ -368,7 +295,7 @@ export default function Home() {
 
       <GoldDivider />
 
-      {/* 3. FEATURED MARQUEE (Bold, Fast, No Pause) */}
+      {/* 3. FEATURED MARQUEE (Bold, Fast) */}
       <section className="py-8 bg-[#0a0a0a] border-y border-white/5 overflow-hidden">
          <div className="container mx-auto px-6 mb-8 text-center">
             <span className="text-[#D4AF37] font-black tracking-[0.3em] uppercase text-2xl">FEATURED ON</span>
@@ -382,12 +309,12 @@ export default function Home() {
          </div>
       </section>
 
-      {/* 4. SERVICES (Textual Pills) */}
+      {/* 4. SERVICES (Textual Pills - Fixed) */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
             <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-xs">EXPERTISE</span>
-            <h2 className="text-4xl md:text-6xl font-display font-bold mt-4">Events I Specialize In</h2>
+            <h2 className="text-4xl md:text-6xl font-display font-bold mt-4 text-white">Events I Specialize In</h2>
           </div>
         </ScrollReveal>
         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
@@ -401,7 +328,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. REVIEWS (Rounded, Blurred, Small) */}
+      {/* 5. REVIEWS (Standard Clean Design) */}
       <section className="py-24 bg-black container mx-auto px-6">
          <div className="text-center mb-16">
             <span className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-[10px]">Social Proof</span>
@@ -412,7 +339,7 @@ export default function Home() {
          </div>
       </section>
 
-      {/* 6. MAGIC GALLERY (Infinite Scroll, Pause on Hover) */}
+      {/* 6. MAGIC GALLERY (Infinite, Pause on Hover) */}
       <section className="py-24 bg-[#050505] overflow-hidden border-t border-white/5 hover-pause">
         <div className="container mx-auto px-6 mb-12">
            <h2 className="text-4xl md:text-6xl font-display font-black uppercase italic">Moments of <GoldTextureText>Magic.</GoldTextureText></h2>
@@ -427,7 +354,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. FAQ (Grid Layout with Plus Icon) */}
+      {/* 7. FAQ (Grid Layout with Plus/Minus) */}
       <section className="py-32 bg-[#050505]">
         <div className="container mx-auto px-6 max-w-7xl">
           <SectionTitle sub="Clarifications" title="Frequently Asked Questions" />
@@ -459,4 +386,3 @@ export default function Home() {
     </main>
   );
 }
-
