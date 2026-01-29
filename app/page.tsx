@@ -1,38 +1,132 @@
-
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useScroll, useTransform, Variants } from "framer-motion";
 import { 
-  Play, Minus, Plus, ArrowRight, Star, Mic, Sparkles, 
-  MapPin, Quote, Instagram, Users, CalendarCheck, Phone, ChevronDown 
+  Play, Minus, Plus, ArrowRight, Star, 
+  Instagram, ChevronDown, ExternalLink, CalendarCheck, 
+  Sparkles, Users, Quote, Mic
 } from "lucide-react";
 
-// --- 1. CSS STYLES ---
+// --- 1. CONFIGURATION & STYLES ---
+const GOLD_COLOR = "#D4AF37";
+
+// Custom CSS for advanced animations
 const style = `
   @keyframes shimmer {
-    0% { background-position: 0% 50%; filter: brightness(100%); }
-    50% { background-position: 100% 50%; filter: brightness(130%); }
-    100% { background-position: 0% 50%; filter: brightness(100%); }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   .sparkle-text {
     background-size: 200% auto;
     animation: shimmer 4s linear infinite;
   }
-  /* Hide scrollbar */
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+  .animate-marquee-slow {
+    animation: marquee 45s linear infinite;
+  }
+  .mask-linear-gradient {
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 `;
 
-// --- 2. LUXURY TEXTURE ASSETS ---
+// --- 2. ANIMATION VARIANTS ---
+const revealUp: Variants = {
+  hidden: { y: 60, opacity: 0 },
+  visible: { 
+    y: 0, 
+    opacity: 1, 
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+  }
+};
+
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+  }
+};
+
+// --- 3. DATA CONSTANTS ---
+const PLATFORMS = [
+  "WedMeGood", "WeddingWire", "Justdial", "ShaadiDukaan", 
+  "StarClinch", "Sulekha", "WeddingBazaar", "Google Reviews"
+];
+
+const SERVICES = [
+  "Weddings & Receptions", "Sangeet & Haldi Ceremonies", "Corporate Annual Meets",
+  "Product Launches", "Fashion Shows", "College Fests", "Cultural Nights",
+  "Kids Shows & Birthday Parties", "Award Ceremonies", "Social Events",
+  "Team Building", "Live Concerts"
+];
+
+const PHILOSOPHY = [
+  { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room, not just the paper." },
+  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen and involved." },
+  { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
+];
+
+const PROCESS_STEPS = [
+  { num: "01", title: "Discovery", text: "We discuss your vision, the guest profile, and the specific vibe you want to set." },
+  { num: "02", title: "Curation", text: "I draft a custom run-of-show, selecting specific games, shayaris, and tone." },
+  { num: "03", title: "Execution", text: "I arrive early, coordinate with sound/DJ, and deliver a flawless performance." },
+  { num: "04", title: "Memories", text: "We wrap up with high energy, leaving your guests with stories they'll tell for years." },
+];
+
+const REVIEWS = [
+  { name: "Nikita Agarwal", date: "15 weeks ago", text: "We couldn’t have asked for a better anchor! Yash brought the perfect blend of energy, charm, and professionalism." },
+  { name: "Sakshi Soni", date: "19 weeks ago", text: "One of the best Anchor in jaipur, really the top most Anchor in jaipur. Made our event really Memorable." },
+  { name: "Divyansh Soni", date: "22 Dec 2024", text: "It was a very good experience with Yash. Handled my sangeet function very well." },
+  { name: "Utkarsh Godha", date: "22 Dec 2024", text: "Very nice 👍 perfect entertaining." },
+  { name: "Bharat Sharma", date: "21 Dec 2024", text: "Good personality and anchoring with humour and professionalism. Everything goes in flow with him." },
+  { name: "Riya Chauhan", date: "8 Oct 2024", text: "Anchor Yash absolutely rocked the stage at India Kids Fashion Week Season 11 at The Lalit, Jaipur!" },
+  { name: "Saurabh Agarwal", date: "5 Jul 2024", text: "The experience was phenomenal. Great anchor with soft and attracting personality and eye catching presence." },
+  { name: "Divya Shree", date: "4 Jul 2024", text: "A true master of connection, they made everyone feel included. Highly recommend for an unforgettable experience!" },
+  { name: "Keshav Srivastav", date: "19 Jun 2024", text: "He was engaging, professional, and kept the audience captivated throughout the event." },
+  { name: "Vartika Jetawat", date: "19 Jun 2024", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic thorough the function." }
+];
+
+const FAQS = [
+  { q: "Who is the Best Anchor in Jaipur for events?", a: "Anchor Yash is widely recognized for his charismatic presence and professional versatility across Jaipur." },
+  { q: "What types of events do you specialize in?", a: "Specializations include Weddings, Sangeets, Corporate Meets, Fashion Shows, and Live Concerts." },
+  { q: "Do you travel for Destination Weddings outside Jaipur?", a: "Yes, I travel globally to host weddings and corporate events." },
+  { q: "Which languages are you fluent in?", a: "I am fluent in Hindi and English, allowing me to connect with diverse audiences." },
+  { q: "Do you also provide Event Management services?", a: "My primary focus is Anchoring/Emceeing, but I can recommend top-tier management partners." },
+  { q: "Can you provide a Female Anchor or Co-Host?", a: "Yes, co-hosted events can be arranged upon request." },
+  { q: "How far in advance should we book you?", a: "It is recommended to book 3-6 months in advance, especially for wedding seasons." },
+  { q: "What are your charges for an event?", a: "Charges vary based on event type, duration, and location. Please click 'Book Now' for a quote." },
+  { q: "Do you bring your own team?", a: "I work with your existing technical team or can bring a dedicated assistant if required." },
+  { q: "Why should we hire Anchor Yash over others?", a: "A unique blend of humor, professionalism, and a 'soft yet attracting' personality that keeps guests engaged." },
+  { q: "How do I confirm a booking with you?", a: "Bookings are confirmed via a formal agreement and an initial advance payment." },
+  { q: "Can we see videos of your past work?", a: "Absolutely! Visit the 'Portfolio' section or my YouTube channel for live performance clips." }
+];
+
+const GALLERY_IMAGES = [
+  "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
+  "https://images.unsplash.com/photo-1511285560982-1351cdeb9821?w=600&q=80",
+  "https://images.unsplash.com/photo-1475721027785-f74eccf8e5fe?w=600&q=80",
+  "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80",
+  "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&q=80",
+  "https://images.unsplash.com/photo-1545128485-c400e7702796?w=600&q=80"
+];
+
+// --- 4. SUB-COMPONENTS ---
+
 const GoldTextureText = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className}`}
-    style={{ 
-      backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#D4AF37", 
-    }}
+    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: GOLD_COLOR }}
   >
     {children}
   </span>
@@ -44,42 +138,16 @@ const FilmGrain = () => (
   </div>
 );
 
-// --- 3. ANIMATION VARIANTS (FIXED FOR TYPESCRIPT) ---
-const revealUp: Variants = {
-  hidden: { y: 80, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1, 
-    transition: { 
-      duration: 0.8, 
-      ease: [0.33, 1, 0.68, 1] as const // Fixed: Added 'as const'
-    } 
-  }
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1, 
-    transition: { staggerChildren: 0.2 } 
-  }
-};
-
-// --- 4. SUB-COMPONENTS ---
 const HeroSlider = () => {
   const images = [
-    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1974&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1770&auto=format&fit=crop"
+    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070", 
+    "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069", 
+    "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1974"
   ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000); 
+    const timer = setInterval(() => setIndex((i) => (i + 1) % images.length), 4000);
     return () => clearInterval(timer);
   }, [images.length]);
 
@@ -87,114 +155,44 @@ const HeroSlider = () => {
     <div className="absolute inset-0 z-0 bg-black">
       <AnimatePresence mode="popLayout">
         <motion.img
-          key={currentIndex}
-          src={images[currentIndex]}
+          key={index}
+          src={images[index]}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }} 
+          animate={{ opacity: 0.6 }} 
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5 }}
           className="w-full h-full object-cover absolute inset-0 grayscale-[20%]"
           alt="Anchor Yash Event"
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/40 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/60 to-transparent z-10" />
       <FilmGrain />
     </div>
   );
 };
 
-const ScrollReveal = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => (
+const ScrollReveal = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
+    initial="hidden"
+    whileInView="visible"
     viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.8, delay, ease: "easeOut" }}
+    variants={revealUp}
+    className={className}
   >
     {children}
   </motion.div>
 );
 
-const GoldDivider = () => (
-  <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-30 my-16" />
-);
-
-const TrustedMarquee = () => {
-  const brands = [
-    { name: "Google Reviews", color: "hover:text-[#4285F4]", link: "https://share.google/pMZGzEGOhXnJpLq5g" }, 
-    { name: "WedMeGood", color: "hover:text-[#DE5D83]", link: "#" },
-    { name: "WeddingWire", color: "hover:text-[#1467B0]", link: "#" },
-    { name: "StarClinch", color: "hover:text-[#FF5722]", link: "#" },
-    { name: "ShaadiDukaan", color: "hover:text-[#E91E63]", link: "#" },
-    { name: "Justdial", color: "hover:text-[#FF9800]", link: "#" },
-    { name: "Sulekha", color: "hover:text-[#FFC107]", link: "#" },
-    { name: "WeddingBazaar", color: "hover:text-[#E53935]", link: "#" }
-  ];
-
-  return (
-    <div className="flex w-full overflow-hidden">
-      <motion.div 
-        className="flex gap-40 items-center whitespace-nowrap px-4" 
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-      >
-        {[...brands, ...brands, ...brands].map((brand, i) => (
-          <a 
-            key={i} 
-            href={brand.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={`text-xl md:text-3xl font-display font-bold text-white/80 uppercase tracking-widest transition-colors duration-300 ${brand.color}`}
-          >
-            {brand.name}
-          </a>
-        ))}
-      </motion.div>
-    </div>
-  );
-};
-
-const ReviewCard = ({ name, date, text, platform, link }: any) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" className="block h-full">
-    <div className="min-w-[320px] md:min-w-[400px] bg-[#111] p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all duration-300 flex flex-col shadow-lg mx-4 group cursor-pointer h-full relative overflow-hidden">
-      <div className="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
-      <div className="flex items-start gap-4 mb-4 relative z-10">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center text-black font-bold text-xl group-hover:scale-110 transition-transform">
-          {name.charAt(0)}
-        </div>
-        <div>
-          <h4 className="font-bold text-white text-base group-hover:text-[#D4AF37] transition-colors">{name}</h4>
-          <div className="flex items-center gap-2 text-xs text-gray-400">
-             <span>{date}</span> • <span className="text-[#D4AF37] font-medium">{platform}</span>
-          </div>
-        </div>
-      </div>
-      <div className="flex text-[#D4AF37] gap-1 mb-4 relative z-10">
-        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
-      </div>
-      <p className="text-gray-300 text-sm leading-relaxed flex-grow font-light tracking-wide relative z-10 group-hover:text-white transition-colors">"{text}"</p>
-      
-      <div className="mt-4 flex items-center text-[#D4AF37] text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">
-        Read Full Review <ArrowRight className="w-3 h-3 ml-1" />
-      </div>
-    </div>
-  </a>
-);
-
-const FAQItem = ({ question, answer }: any) => {
+const FAQItem = ({ q, a }: { q: string, a: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border-b border-neutral-800 last:border-0">
+    <div className="group border border-white/10 bg-zinc-900/40 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/40">
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-8 text-left group transition-all"
+        className="w-full flex justify-between items-start p-6 text-left hover:bg-white/5 transition-colors"
       >
-        <span className={`text-xl md:text-2xl font-display transition-colors duration-300 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-200 group-hover:text-[#D4AF37]'}`}>
-          {question}
-        </span>
-        <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
-           <ChevronDown className={`w-6 h-6 ${isOpen ? 'text-[#D4AF37]' : 'text-gray-500'}`} />
-        </div>
+        <span className={`font-semibold text-base pr-4 transition-colors ${isOpen ? 'text-[#D4AF37]' : 'text-zinc-200'}`}>{q}</span>
+        {isOpen ? <Minus className="text-[#D4AF37] shrink-0" /> : <Plus className="text-zinc-600 group-hover:text-[#D4AF37] shrink-0" />}
       </button>
       <AnimatePresence>
         {isOpen && (
@@ -202,343 +200,307 @@ const FAQItem = ({ question, answer }: any) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
+            className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed"
           >
-            <p className="pb-8 text-gray-400 text-lg leading-relaxed max-w-3xl font-light">{answer}</p>
+            {a}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
 };
-// --- DATA ---
-const services = [
-  { title: "Royal Weddings", subtitle: "Sangeet, Varmala & Pheras", desc: "Orchestrating the grandeur of big fat Indian weddings with shayaris, humor, and seamless ritual management.", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80", link: "/wedding-anchor-jaipur" },
-  { title: "Corporate Galas", subtitle: "Awards, Summits & R&R", desc: "Crisp, professional hosting that keeps stakeholders engaged and maintains the brand's premium tonality.", img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80", link: "/corporate-event-anchor-jaipur" },
-  { title: "Brand Activations", subtitle: "Mall & Roadshows", desc: "High-energy crowd interaction to drive footfall and maximize brand visibility in public spaces.", img: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800&q=80", link: "/mall-activation-anchor" },
-  { title: "Team Offsites", subtitle: "Building Connections", desc: "Ice-breakers and team-bonding activities that turn colleagues into a cohesive family.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80", link: "/team-building-host" },
-];
+// --- 5. MAIN PAGE COMPONENT ---
 
-const reviews = [
-  { name: "Priya Sharma", date: "2 months ago", platform: "Google Reviews", text: "Yash was the soul of our Sangeet! He managed 500 guests effortlessly. The energy was insane from start to finish.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
-  { name: "Rahul Verma", date: "1 month ago", platform: "WedMeGood", text: "Hired him for our Corporate R&R in Jaipur. Extremely professional, punctual, and witty. Our CEO was very impressed.", link: "#" },
-  { name: "Amit & Sneha", date: "3 weeks ago", platform: "Google Reviews", text: "The best decision for our wedding. His command over Hindi and English is perfect for a mixed crowd. Highly recommended!", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
-  { name: "Vikram Rathore", date: "4 months ago", platform: "WeddingWire", text: "A true professional. He controlled the flow of our Varmala perfectly. The shayaris were beautiful.", link: "#" },
-  { name: "Simran Kaur", date: "1 week ago", platform: "StarClinch", text: "Our guests are still talking about the games Yash hosted. He has a unique way of connecting with everyone.", link: "#" },
-  { name: "Oberoi Group", date: "6 months ago", platform: "Corporate Client", text: "Excellent command over the stage. Handled our Annual General Meeting with grace and authority.", link: "#" },
-  { name: "Nikhil Jain", date: "5 months ago", platform: "WedMeGood", text: "If you want your wedding to be memorable, book Yash. He is not just an anchor, he is an entertainer.", link: "#" },
-  { name: "Anjali Mehta", date: "2 weeks ago", platform: "Google Reviews", text: "Punctual, well-dressed, and incredibly talented. He saved our event when the DJ had a technical glitch.", link: "https://share.google/pMZGzEGOhXnJpLq5g" },
-];
-
-const philosophy = [
-  { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room, not just the paper." },
-  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen and involved." },
-  { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
-];
-
-const processSteps = [
-  { num: "01", title: "Discovery", text: "We discuss your vision, the guest profile, and the specific vibe you want to set." },
-  { num: "02", title: "Curation", text: "I draft a custom run-of-show, selecting specific games, shayaris, and tone." },
-  { num: "03", title: "Execution", text: "I arrive early, coordinate with sound/DJ, and deliver a flawless performance." },
-  { num: "04", title: "Memories", text: "We wrap up with high energy, leaving your guests with stories they'll tell for years." },
-];
-
-const homeFAQs = [
-  { question: "How do you handle a large crowd?", answer: "Energy is key. I use a mix of humor, interactive games, and commanding stage presence to ensure even the back row feels connected." },
-  { question: "Can you host in both Hindi and English?", answer: "Absolutely. I switch seamlessly between Hindi (for emotional connection/shayari) and English (for professional/corporate notes) depending on the audience vibe." },
-  { question: "Do you travel outside Jaipur?", answer: "Yes! While Jaipur is home, I frequently travel to Udaipur, Jodhpur, Goa, and Delhi for destination weddings and events." },
-  { question: "Do you provide scripts beforehand?", answer: "Yes. For corporate events and sangeets, I provide a draft script for approval to ensure we are aligned on the messaging." },
-];
-
-export default function Home() {
+export default function HomePage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Anchor Yash Soni",
-    "url": "https://yashsoni.in",
     "jobTitle": "Event Anchor & Emcee",
-    "worksFor": { "@type": "Organization", "name": "Yash Soni Events" },
-    "sameAs": ["https://instagram.com/anchor_yash_official", "https://youtube.com/@anchoryashsoni"]
+    "url": "https://yashsoni.in"
   };
 
   return (
-    <div className="bg-black text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans overflow-x-hidden">
-      <style>{style}</style> 
+    <main className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black font-sans overflow-x-hidden">
+      <style>{style}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-
-      {/* --- SECTION 1: HERO (LEFT ALIGNED) --- */}
-      <section className="relative h-screen flex items-end pb-20 md:pb-32 overflow-hidden">
+      
+      {/* 1. HERO SECTION */}
+      <section className="relative h-screen w-full flex items-center overflow-hidden">
         <HeroSlider />
-        <div className="relative container mx-auto px-4 z-20">
-          <div className="max-w-4xl mr-auto text-left pl-2 md:pl-10">
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mb-6 inline-block">
-               <span className="border border-[#D4AF37] px-6 py-2 rounded-full backdrop-blur-md bg-black/40 text-[#D4AF37] text-sm tracking-wide font-medium">
-                 Jaipur's Leading Event Anchor
+        <div className="container mx-auto px-6 z-30 pt-20">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="max-w-3xl"
+          >
+            <div className="mb-6 inline-block">
+               <span className="border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 text-[#D4AF37] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                 Jaipur's Premier Event Host
                </span>
-            </motion.div>
-
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="text-6xl md:text-8xl lg:text-9xl font-display font-black leading-[0.95] mb-4"
-            >
-              Anchor <GoldTextureText>Yash</GoldTextureText>
-            </motion.h1>
-
-            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="text-gray-300 text-xl md:text-2xl font-light mb-4">
-              Premium Wedding & Corporate Event Anchor
-            </motion.p>
-
-            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="text-[#D4AF37] text-sm md:text-base font-medium mb-10">
-              1100+ Events • Weddings • Corporate • Sports • Fashion Shows • Event Planning & Designing
-            </motion.p>
-
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }} className="flex flex-wrap gap-4 items-center">
-              <Link href="/contact">
-                <span className="px-8 py-3 bg-[#D4AF37] text-black font-bold rounded-lg text-sm hover:bg-white transition-all cursor-pointer shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                  Book Now <ArrowRight className="w-4 h-4 inline-block ml-1" />
-                </span>
-              </Link>
-              <Link href="/portfolio">
-                <span className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] font-bold rounded-lg text-sm hover:bg-[#D4AF37] hover:text-black transition-all cursor-pointer flex items-center gap-2">
-                  <Play className="w-4 h-4 fill-current" /> View Portfolio
-                </span>
-              </Link>
-              <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer">
-                <span className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] font-bold rounded-lg text-sm hover:bg-[#D4AF37] hover:text-black transition-all cursor-pointer flex items-center gap-2">
-                  <Instagram className="w-4 h-4" /> Instagram
-                </span>
-              </a>
-            </motion.div>
-          </div>
+            </div>
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-6 tracking-tighter leading-[0.95]">
+              ANCHOR <br />
+              <GoldTextureText>YASH</GoldTextureText>
+            </h1>
+            <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-lg font-light leading-relaxed">
+              Elevating your moments with <span className="text-white font-medium">energy</span>, <span className="text-white font-medium">charm</span>, and a touch of gold.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-5">
+              <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+                BOOK NOW
+              </button>
+              <button className="px-10 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-bold text-lg rounded-full hover:bg-[#D4AF37]/10 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
+                <Play size={18} fill="currentColor" /> VIEW PORTFOLIO
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* --- SECTION 2: INTRODUCTION --- */}
-      <section className="py-24 container mx-auto px-4">
+      {/* 2. INTRODUCTION SECTION */}
+      <section className="py-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
-             <h2 className="text-[#D4AF37] font-display text-sm uppercase tracking-widest mb-4">The Introduction</h2>
-             <h3 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight">
+             <h2 className="text-[#D4AF37] text-sm uppercase tracking-widest mb-4 font-bold">The Introduction</h2>
+             <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
                "I don't just speak. <br /> I <GoldTextureText>connect souls</GoldTextureText>."
              </h3>
-             <p className="text-gray-400 text-lg mb-6 leading-relaxed font-light">
-               From the royal palaces of Udaipur to the corporate boardrooms of Jaipur, I have spent the last 5 years mastering the art of audience engagement.
+             <p className="text-zinc-400 text-lg mb-8 leading-relaxed font-light">
+               From the royal palaces of Udaipur to corporate boardrooms in Jaipur, I have spent the last 5 years mastering the art of audience engagement.
              </p>
-             <div className="flex gap-12 mt-12 border-t border-neutral-800 pt-8">
+             <div className="flex gap-12 border-t border-white/10 pt-8">
                <div>
-                 <p className="text-4xl font-display font-bold text-white">1100+</p>
+                 <p className="text-4xl font-black text-white">1100+</p>
                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest mt-2">Events Hosted</p>
                </div>
                <div>
-                 <p className="text-4xl font-display font-bold text-white">05+</p>
-                 <p className="text-[#D4AF37] text-xs uppercase tracking-widest mt-2">Years Experience</p>
+                 <p className="text-4xl font-black text-white">05+</p>
+                 <p className="text-[#D4AF37] text-xs uppercase tracking-widest mt-2">Years Exp.</p>
                </div>
              </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 gap-4 opacity-80">
+          <div className="grid grid-cols-2 gap-4">
              <ScrollReveal delay={0.2}>
-               <div className="relative aspect-[3/4] border border-neutral-800">
-                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash Hosting" />
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
+                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash" />
                </div>
              </ScrollReveal>
-             <ScrollReveal delay={0.3}>
-               <div className="relative aspect-[3/4] border border-neutral-800 mt-8">
-                 <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Corporate Event" />
+             <ScrollReveal delay={0.4} className="mt-12">
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
+                 <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Corporate Event" />
                </div>
              </ScrollReveal>
           </div>
         </div>
       </section>
 
-      <GoldDivider />
-
-      {/* --- SECTION 3: THE STYLE (Why Me) --- */}
-      <section className="py-12 container mx-auto px-4">
-         <ScrollReveal>
-           <div className="text-center mb-12">
-             <span className="text-[#D4AF37] text-sm uppercase tracking-widest">Why Me</span>
-             <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">The <span className="text-[#D4AF37]">Yash Soni</span> Signature</h2>
-           </div>
-         </ScrollReveal>
-         
-         <div className="grid md:grid-cols-3 gap-8">
-           {philosophy.map((item, i) => (
-             <ScrollReveal key={i} delay={i * 0.1}>
-               <div className="bg-[#111] p-10 border border-neutral-800 hover:border-[#D4AF37] transition-all duration-500 group h-full hover:-translate-y-2">
-                 <item.icon className="w-12 h-12 text-[#D4AF37] mb-8 group-hover:scale-110 transition-transform" />
-                 <h3 className="text-xl font-bold mb-4 font-display text-white">{item.title}</h3>
-                 <p className="text-gray-400 leading-relaxed font-light">{item.text}</p>
-               </div>
-             </ScrollReveal>
-           ))}
-         </div>
-      </section>
-
-      {/* --- SECTION 4: TRUSTED BY MARQUEE (Below Why Me) --- */}
-      <section className="bg-[#111] border-y border-neutral-800 relative z-30 py-12 mb-12">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-           <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] whitespace-nowrap font-bold">
-             Trusted On
-           </div>
-           <div className="flex-1 overflow-hidden relative h-10 flex items-center">
-             <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#111] to-transparent z-10" />
-             <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#111] to-transparent z-10" />
-             <TrustedMarquee />
-           </div>
+      {/* 3. FEATURED MARQUEE */}
+      <section className="py-14 bg-zinc-950 border-y border-white/5 relative z-20">
+        <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-10 uppercase">
+          FEATURED ON
+        </h2>
+        <div className="flex overflow-hidden mask-linear-gradient">
+          <div className="flex whitespace-nowrap gap-16 items-center animate-marquee w-max pointer-events-none">
+            {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
+              <span key={idx} className="text-3xl md:text-5xl font-black text-zinc-800 uppercase hover:text-[#D4AF37] transition-colors duration-500">
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* --- SECTION 5: SERVICES (UPDATED CARD DESIGN) --- */}
-      <section className="py-12 container mx-auto px-4">
+      {/* 4. WHY ME (PHILOSOPHY) */}
+      <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
-          <div className="flex justify-between items-end mb-16">
-            <h2 className="text-4xl md:text-6xl font-display font-bold">Signature <span className="text-neutral-700">Services</span></h2>
-            <Link href="/services" className="text-[#D4AF37] border-b border-[#D4AF37] pb-1 uppercase text-xs tracking-widest hover:text-white transition-colors">
-              View All
-            </Link>
+          <div className="text-center mb-16">
+            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">Why Me</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">The <span className="text-[#D4AF37]">Yash Soni</span> Signature</h2>
           </div>
         </ScrollReveal>
-
-        <div className="space-y-4">
-          {services.map((s, i) => (
-            <ScrollReveal key={i}>
-              <Link href={s.link}>
-                <div className="group border-t border-neutral-800 py-12 flex flex-col md:flex-row gap-8 items-center cursor-pointer hover:bg-neutral-900/30 transition-colors">
-                  <span className="text-neutral-800 text-6xl font-display font-bold group-hover:text-[#D4AF37] group-hover:opacity-100 transition-all">0{i+1}</span>
-                  
-                  {/* Image Reveal on Hover (Mobile Hidden for Space) */}
-                  <div className="hidden md:block w-32 h-20 overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-lg transform translate-x-4 group-hover:translate-x-0">
-                    <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
-                  </div>
-
-                  <div className="flex-grow">
-                    <h3 className="text-3xl font-bold mb-2 group-hover:text-[#D4AF37] transition-colors">{s.title}</h3>
-                    <p className="text-gray-500 max-w-xl font-light">{s.desc}</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-black group-hover:border-[#D4AF37] transition-all transform group-hover:rotate-45">
-                    <ArrowRight className="w-5 h-5" />
-                  </div>
-                </div>
-              </Link>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {PHILOSOPHY.map((item, i) => (
+            <ScrollReveal key={i} delay={i * 0.1}>
+              <div className="bg-zinc-900/30 p-10 rounded-2xl border border-white/5 hover:border-[#D4AF37]/50 transition-all duration-500 group h-full hover:-translate-y-2">
+                <item.icon className="w-12 h-12 text-[#D4AF37] mb-8 group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-bold mb-4 text-white">{item.title}</h3>
+                <p className="text-zinc-400 leading-relaxed font-light">{item.text}</p>
+              </div>
             </ScrollReveal>
           ))}
         </div>
       </section>
 
-      {/* --- SECTION 6: REVIEWS (Above Process, Reduced Gap, Clickable) --- */}
-      <section className="py-12 bg-black overflow-hidden">
-        <div className="container mx-auto px-4 mb-8 text-center">
+      {/* 5. SERVICES (PILLS/TAGS) - STRICTLY NO IMAGES */}
+      <section className="py-24 bg-zinc-950/50">
+        <div className="container mx-auto px-6">
           <ScrollReveal>
-            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">Client Love</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">Rated 5.0 on <span className="text-white">Google</span></h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Mastering Every Stage</h2>
+              <div className="h-1 w-24 bg-[#D4AF37] mx-auto rounded-full" />
+            </div>
           </ScrollReveal>
-        </div>
 
-        <div className="flex overflow-hidden relative w-full py-8">
-           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
-           
-           <motion.div 
-             className="flex"
-             animate={{ x: ["0%", "-50%"] }}
-             transition={{ duration: 60, ease: "linear", repeat: Infinity }}
-           >
-             {[...reviews, ...reviews].map((r, i) => (
-               <ReviewCard key={i} {...r} />
-             ))}
-           </motion.div>
+          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+            {SERVICES.map((service, idx) => (
+              <ScrollReveal key={idx} delay={idx * 0.05}>
+                <div className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-[#D4AF37]/30 text-[#D4AF37] bg-[#D4AF37]/5 font-bold text-sm md:text-lg uppercase tracking-wide hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                  {service}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* --- SECTION 7: NEW SECTION - LIVE MOMENTS (Gallery Teaser) --- */}
-      <section className="py-20 bg-[#111] overflow-hidden">
-        <div className="container mx-auto px-4 mb-10">
-           <ScrollReveal>
-             <h2 className="text-3xl md:text-5xl font-display font-bold">Moments of <span className="text-[#D4AF37]">Magic</span></h2>
-           </ScrollReveal>
+      {/* 6. MOMENTS OF MAGIC (GALLERY) */}
+      <section className="py-24 bg-zinc-900/30 overflow-hidden">
+        <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
+          <div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-2">Moments of <GoldTextureText>Magic</GoldTextureText></h2>
+            <p className="text-zinc-400">Capturing the pulse of the celebration.</p>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-zinc-500 uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span> Hover to Pause
+          </div>
         </div>
-        
-        {/* Horizontal Scroll Strip */}
-        <div className="flex gap-4 overflow-x-auto no-scrollbar px-4 pb-8">
-          {[1,2,3,4,5].map((i) => (
-             <div key={i} className="min-w-[300px] md:min-w-[400px] aspect-[4/5] relative rounded-lg overflow-hidden group">
-               <img src={`https://images.unsplash.com/photo-${i === 1 ? '1519741497674-611481863552' : i === 2 ? '1540039155733-5bb30b53aa14' : '1501281668745-f7f57925c3b4'}?w=600&q=80`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Event" />
-               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
-             </div>
-          ))}
+
+        <div className="flex w-full overflow-hidden">
+          <div className="flex gap-6 animate-marquee-slow hover:[animation-play-state:paused] w-max pl-6">
+            {[...GALLERY_IMAGES, ...GALLERY_IMAGES, ...GALLERY_IMAGES].map((img, idx) => (
+              <div 
+                key={idx} 
+                className="relative w-[280px] md:w-[350px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shrink-0 group cursor-pointer"
+              >
+                <img 
+                  src={img} 
+                  alt="Gallery Moment" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-[#D4AF37] text-xs font-black tracking-widest bg-black/60 px-3 py-1 rounded backdrop-blur-sm">LIVE MOMENT</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* --- SECTION 8: THE PROCESS (How It Works) --- */}
-      <section className="py-20 container mx-auto px-4">
+      {/* 7. PROCESS STEPS */}
+      <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">How It Works</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2">From Booking to <span className="text-[#D4AF37]">Applause</span></h2>
+            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">The Process</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">From Booking to <span className="text-[#D4AF37]">Applause</span></h2>
           </div>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-4 gap-8">
-          {processSteps.map((step, i) => (
-             <ScrollReveal key={i} delay={i * 0.1}>
-               <div className="relative p-6 border-l border-neutral-800 hover:border-[#D4AF37] transition-colors pl-8 group">
-                 <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[10px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">
-                   {step.num}
-                 </span>
-                 <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
-                 <p className="text-gray-400 text-sm leading-relaxed font-light">{step.text}</p>
-               </div>
-             </ScrollReveal>
+          {PROCESS_STEPS.map((step, i) => (
+            <ScrollReveal key={i} delay={i * 0.1}>
+              <div className="relative p-6 border-l border-white/10 hover:border-[#D4AF37] transition-colors pl-8 group">
+                <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[10px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">
+                  {step.num}
+                </span>
+                <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed font-light">{step.text}</p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
-      {/* --- SECTION 9: LUXURY FAQ (REDESIGNED) --- */}
-      <section className="py-24 container mx-auto px-4 max-w-4xl">
+      {/* 8. REVIEWS */}
+      <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Common Questions</h2>
-          </div>
-          <div className="space-y-2">
-            {homeFAQs.map((faq, i) => (
-              <FAQItem key={i} question={faq.question} answer={faq.answer} />
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
+            Real Words. <span className="text-[#D4AF37]">Real Impact.</span>
+          </h2>
+        </ScrollReveal>
+        
+        <div className="flex overflow-x-auto pb-12 gap-6 snap-x snap-mandatory no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+          {REVIEWS.map((review, idx) => (
+            <a 
+              key={idx}
+              href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="snap-center shrink-0 w-[300px] md:w-[450px] p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="flex text-[#D4AF37] gap-1">
+                    {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#D4AF37" />)}
+                  </div>
+                  <ExternalLink className="text-zinc-600 group-hover:text-[#D4AF37] transition-colors" size={18} />
+                </div>
+                <p className="text-zinc-300 text-sm md:text-lg leading-relaxed mb-8 font-light italic">
+                  "{review.text}"
+                </p>
+              </div>
+              <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-zinc-800 flex items-center justify-center font-bold text-black text-lg">
+                  {review.name.charAt(0)}
+                </div>
+                <div>
+                  <h4 className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors">{review.name}</h4>
+                  <span className="text-zinc-500 text-xs">{review.date}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* 9. FAQ */}
+      <section className="py-24 bg-zinc-950">
+        <div className="container mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
+              Common <span className="text-[#D4AF37]">Questions</span>
+            </h2>
+          </ScrollReveal>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {FAQS.map((faq, idx) => (
+              <ScrollReveal key={idx} delay={idx * 0.05}>
+                <FAQItem q={faq.q} a={faq.a} />
+              </ScrollReveal>
             ))}
           </div>
-        </ScrollReveal>
+        </div>
       </section>
 
-      {/* --- SECTION 10: NEW PREMIUM CTA --- */}
-      <section className="py-32 border-t border-neutral-900 bg-[#050505] text-center">
-         <div className="container mx-auto px-4">
-           <ScrollReveal>
-             <h2 className="text-4xl md:text-6xl font-display font-bold mb-8">
-               Your Stage Awaits.
-             </h2>
-             <p className="text-gray-400 max-w-xl mx-auto mb-12 font-light text-lg">
-               Dates for the 2026 wedding season are 80% booked. <br /> Secure your date before someone else does.
-             </p>
-             <div className="flex justify-center">
-               <Link href="/contact">
-                 <div className="group relative cursor-pointer inline-block">
-                   <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] to-[#806000] rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
-                   <button className="relative bg-black border border-[#D4AF37] text-[#D4AF37] px-12 py-5 text-lg font-bold tracking-widest uppercase hover:bg-[#D4AF37] hover:text-black transition-all duration-300 flex items-center gap-3">
-                     <CalendarCheck className="w-5 h-5" /> Check Availability
-                   </button>
-                 </div>
-               </Link>
-             </div>
-             <p className="mt-8 text-gray-600 text-sm flex items-center justify-center gap-2">
-               <Phone className="w-3 h-3" /> Direct Line: +91 77378 77978
-             </p>
-           </ScrollReveal>
+      {/* 10. FOOTER CTA */}
+      <footer className="py-32 border-t border-white/10 bg-black text-center relative overflow-hidden">
+         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
+         <div className="container mx-auto px-6 relative z-10">
+            <h2 className="text-4xl md:text-7xl font-black mb-8 tracking-tight">
+              Your Stage Awaits.
+            </h2>
+            <p className="text-zinc-400 mb-12 max-w-lg mx-auto text-lg">
+              Dates for the upcoming season are filling fast. Secure your date with Jaipur's most trusted voice.
+            </p>
+            <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#D4AF37] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+              <span className="relative z-10 flex items-center gap-3">
+                <CalendarCheck size={24} /> Check Availability
+              </span>
+            </button>
+            <div className="mt-20 flex justify-center gap-10 text-zinc-500 text-sm font-medium tracking-widest uppercase">
+               <a href="#" className="hover:text-[#D4AF37] transition-colors">Instagram</a>
+               <a href="#" className="hover:text-[#D4AF37] transition-colors">YouTube</a>
+               <a href="#" className="hover:text-[#D4AF37] transition-colors">Email</a>
+            </div>
+            <div className="mt-8 text-zinc-700 text-xs">
+              © {new Date().getFullYear()} Anchor Yash. All rights reserved.
+            </div>
          </div>
-      </section>
-
-    </div>
+      </footer>
+    </main>
   );
 }
-
