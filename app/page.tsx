@@ -1,17 +1,16 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence, useScroll, useTransform, Variants } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { 
-  Play, Minus, Plus, ArrowRight, Star, 
-  Instagram, ChevronDown, ExternalLink, CalendarCheck, 
-  Sparkles, Users, Quote, Mic
+  Play, Minus, Plus, Star, 
+  ExternalLink, CalendarCheck, 
+  Sparkles, Users, Quote
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
 const GOLD_COLOR = "#D4AF37";
 
-// Custom CSS for advanced animations
 const style = `
   @keyframes shimmer {
     0% { background-position: 0% 50%; }
@@ -26,11 +25,12 @@ const style = `
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
   }
+  /* Slow speed for readability */
   .animate-marquee {
-    animation: marquee 20s linear infinite;
+    animation: marquee 45s linear infinite;
   }
   .animate-marquee-slow {
-    animation: marquee 45s linear infinite;
+    animation: marquee 60s linear infinite;
   }
   .mask-linear-gradient {
     mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
@@ -50,25 +50,17 @@ const revealUp: Variants = {
   }
 };
 
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.2 }
-  }
-};
+// --- 3. UPDATED DATA (WITH LINKS) ---
 
-// --- 3. DATA CONSTANTS ---
 const PLATFORMS = [
-  "WedMeGood", "WeddingWire", "Justdial", "ShaadiDukaan", 
-  "StarClinch", "Sulekha", "WeddingBazaar", "Google Reviews"
-];
-
-const SERVICES = [
-  "Weddings & Receptions", "Sangeet & Haldi Ceremonies", "Corporate Annual Meets",
-  "Product Launches", "Fashion Shows", "College Fests", "Cultural Nights",
-  "Kids Shows & Birthday Parties", "Award Ceremonies", "Social Events",
-  "Team Building", "Live Concerts"
+  { name: "WedMeGood", link: "https://www.wedmegood.com/profile/anchor-yash-25628297", color: "hover:text-[#DE5D83]" },
+  { name: "WeddingWire", link: "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166", color: "hover:text-[#1467B0]" },
+  { name: "Justdial", link: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET", color: "hover:text-[#FF9800]" },
+  { name: "ShaadiDukaan", link: "https://www.shaadidukaan.com/profile/yash-2", color: "hover:text-[#E91E63]" },
+  { name: "StarClinch", link: "https://starclinch.com", color: "hover:text-[#FF5722]" },
+  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#FFC107]" },
+  { name: "WeddingBazaar", link: "https://weddingbazaar.com", color: "hover:text-[#E53935]" },
+  { name: "Google Reviews", link: "https://share.google/pMZGzEGOhXnJpLq5g", color: "hover:text-[#4285F4]" }
 ];
 
 const PHILOSOPHY = [
@@ -297,17 +289,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. FEATURED MARQUEE */}
-      <section className="py-14 bg-zinc-950 border-y border-white/5 relative z-20">
-        <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-10 uppercase">
+      {/* 3. FEATURED MARQUEE (UPDATED: Links, Colors, Slower, Spacing) */}
+      <section className="py-16 bg-zinc-950 border-y border-white/5 relative z-20">
+        <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-12 uppercase">
           FEATURED ON
         </h2>
         <div className="flex overflow-hidden mask-linear-gradient">
-          <div className="flex whitespace-nowrap gap-16 items-center animate-marquee w-max pointer-events-none">
+          <div className="flex whitespace-nowrap gap-32 items-center animate-marquee w-max">
+            {/* Loop 3x for smooth infinite scroll */}
             {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
-              <span key={idx} className="text-3xl md:text-5xl font-black text-zinc-800 uppercase hover:text-[#D4AF37] transition-colors duration-500">
-                {item}
-              </span>
+              <a 
+                key={idx}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-4xl md:text-5xl font-black text-zinc-800 uppercase no-underline transition-colors duration-300 ${item.color}`}
+              >
+                {item.name}
+              </a>
             ))}
           </div>
         </div>
@@ -335,29 +334,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. SERVICES (PILLS/TAGS) - STRICTLY NO IMAGES */}
-      <section className="py-24 bg-zinc-950/50">
-        <div className="container mx-auto px-6">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Mastering Every Stage</h2>
-              <div className="h-1 w-24 bg-[#D4AF37] mx-auto rounded-full" />
-            </div>
-          </ScrollReveal>
-
-          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
-            {SERVICES.map((service, idx) => (
-              <ScrollReveal key={idx} delay={idx * 0.05}>
-                <div className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-[#D4AF37]/30 text-[#D4AF37] bg-[#D4AF37]/5 font-bold text-sm md:text-lg uppercase tracking-wide hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                  {service}
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. MOMENTS OF MAGIC (GALLERY) */}
+      {/* 5. MOMENTS OF MAGIC (GALLERY) */}
       <section className="py-24 bg-zinc-900/30 overflow-hidden">
         <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
           <div>
@@ -391,7 +368,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. PROCESS STEPS */}
+      {/* 6. PROCESS STEPS */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-20">
@@ -415,7 +392,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. REVIEWS */}
+      {/* 7. REVIEWS */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
@@ -457,7 +434,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. FAQ */}
+      {/* 8. FAQ */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <ScrollReveal>
@@ -476,7 +453,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. FOOTER CTA */}
+      {/* 9. FOOTER CTA */}
       <footer className="py-32 border-t border-white/10 bg-black text-center relative overflow-hidden">
          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
          <div className="container mx-auto px-6 relative z-10">
