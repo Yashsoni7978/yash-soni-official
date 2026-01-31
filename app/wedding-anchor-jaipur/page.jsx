@@ -127,7 +127,51 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 3. THE TRINITY (VISUAL UPGRADE - HOVER CARDS) --- */}
+      {/* --- 3. CULTURAL WEDDINGS EXPERTISE (New Section) --- */}
+       <section className="py-32 bg-[#080808] relative z-10 border-t border-neutral-900">
+        <div className="container mx-auto px-4">
+          <SectionHeading subtitle="Cultural Expertise" title="Celebrating Every Tradition" align="center" />
+          
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+              {[
+                { title: "Hindu Weddings", desc: "From Vedic chants to the high-energy Baraat.", icon: "🕉️" },
+                { title: "Jain Weddings", desc: "Respectful, traditional, and family-oriented celebrations.", icon: "🪷" },
+                { title: "Punjabi Weddings", desc: "Dhol, Bhangra, and non-stop energy all night long.", icon: "🪘" },
+                { title: "Christian Weddings", desc: "Elegant toasts, cake cutting, and first dances.", icon: "⛪" },
+                { title: "Islamic Weddings", desc: "Poetic hosting with grace for Nikkah and Walima.", icon: "🌙" },
+                 { title: "Cross-Cultural", desc: "Blending traditions seamlessly for modern couples.", icon: "🤝" }
+              ].map((wedding, idx) => (
+                  <div key={idx} className="bg-[#111] border border-neutral-800 p-8 rounded-xl hover:border-[#D4AF37] transition-all duration-300 group">
+                      <div className="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">{wedding.icon}</div>
+                      <h3 className="text-xl font-bold text-white mb-2">{wedding.title}</h3>
+                      <p className="text-gray-400 text-sm">{wedding.desc}</p>
+                  </div>
+              ))}
+           </div>
+        </div>
+      </section>
+
+
+      {/* --- 4. THE EVENT JOURNEY (New Section: Welcome Lunch to Varmala) --- */}
+      <section className="py-32 bg-[#050505] relative z-10 border-t border-neutral-900">
+         <div className="container mx-auto px-4">
+             <SectionHeading subtitle="The Full Experience" title="From Welcome To Varmala" align="center" />
+             
+             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                 {[
+                     "Welcome Lunch", "Haldi Ceremony", "Mehandi & Sangeet", "Gala Night",
+                     "Sufi Night", "Mocktail Night", "Mayara / Bhaat", "Baraat on Wheels",
+                     "Varmala", "The Wedding", "Reception", "After Party"
+                 ].map((event, i) => (
+                     <div key={i} className="bg-neutral-900/50 border border-neutral-800 p-4 rounded-lg text-center hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default">
+                         <p className="font-bold uppercase tracking-wider text-xs md:text-sm">{event}</p>
+                     </div>
+                 ))}
+             </div>
+         </div>
+      </section>
+
+      {/* --- 5. THE TRINITY (VISUAL UPGRADE - HOVER CARDS) --- */}
       <section className="py-32 bg-[#080808] relative z-10 border-t border-neutral-900">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="My Expertise" title="The Wedding Trilogy" align="center" />
@@ -162,28 +206,28 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 4. NEW SECTION: THE GALLERY WALL (Visual Proof) --- */}
+      {/* --- 6. NEW SECTION: THE GALLERY WALL (Visual Proof) --- */}
       <section className="py-24 container mx-auto px-4 relative z-10">
          <SectionHeading subtitle="Moments" title="Real Weddings. Real Emotion." />
          
          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
-            {/* Tall Item 1 */}
-            <div className="col-span-2 row-span-2 relative rounded-xl overflow-hidden group">
-               <img src="https://images.unsplash.com/photo-1587271407850-8d4389106628?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
-               <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-all"></div>
-            </div>
-            {/* Square Item 2 */}
-            <div className="relative rounded-xl overflow-hidden group">
-               <img src="https://images.unsplash.com/photo-1611105637889-3e7960025e83?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
-            </div>
-             {/* Square Item 3 */}
-            <div className="relative rounded-xl overflow-hidden group">
-               <img src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
-            </div>
-            {/* Wide Item 4 */}
-            <div className="col-span-2 relative rounded-xl overflow-hidden group">
-               <img src="https://images.unsplash.com/photo-1523438097201-5390507d5664?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
-            </div>
+           {/* Tall Item 1 */}
+           <div className="col-span-2 row-span-2 relative rounded-xl overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1587271407850-8d4389106628?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-all"></div>
+           </div>
+           {/* Square Item 2 */}
+           <div className="relative rounded-xl overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1611105637889-3e7960025e83?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+           </div>
+            {/* Square Item 3 */}
+           <div className="relative rounded-xl overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+           </div>
+           {/* Wide Item 4 */}
+           <div className="col-span-2 relative rounded-xl overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1523438097201-5390507d5664?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
+           </div>
          </div>
          <div className="text-center mt-10">
             <Link href="/portfolio">
@@ -194,7 +238,7 @@ export default function WeddingAnchor() {
          </div>
       </section>
 
-      {/* --- 5. VIDEO STRIP (Kept, but moved down) --- */}
+      {/* --- 7. VIDEO STRIP (Kept, but moved down) --- */}
       <section className="py-20 bg-[#080808] border-y border-neutral-900 overflow-hidden relative z-10">
         <div className="container mx-auto px-4 mb-10">
            <div className="flex justify-between items-end">
@@ -215,7 +259,7 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 6. WEDDING SPECIFIC FAQ --- */}
+      {/* --- 8. WEDDING SPECIFIC FAQ --- */}
       <section className="py-24 max-w-4xl mx-auto px-4 relative z-10">
         <SectionHeading subtitle="Clarifications" title="Common Wedding Questions" align="center" />
         <div className="space-y-4 mt-16">
@@ -234,7 +278,7 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 7. FINAL CTA --- */}
+      {/* --- 9. FINAL CTA --- */}
       <section className="py-32 bg-[#D4AF37] text-black text-center relative overflow-hidden z-10">
          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-multiply"></div>
          <div className="container mx-auto px-4 relative z-10">
