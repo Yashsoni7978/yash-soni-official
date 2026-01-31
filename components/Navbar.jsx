@@ -53,7 +53,7 @@ const GoldLogo = () => (
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  cconst [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   
   // Mobile specific state for expanding submenus
 const [mobileExpanded, setMobileExpanded] = useState(null);
