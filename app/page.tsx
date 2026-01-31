@@ -5,7 +5,7 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { 
   Play, Minus, Plus, Star, 
   ExternalLink, CalendarCheck, 
-  Sparkles, Users, Quote
+  Sparkles, Users, Quote, Mic, Award, UserCheck, ArrowRight
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
@@ -25,7 +25,7 @@ const style = `
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
   }
-  /* Slow speed for readability */
+  /* Slower speed for readability */
   .animate-marquee {
     animation: marquee 45s linear infinite;
   }
@@ -50,8 +50,42 @@ const revealUp: Variants = {
   }
 };
 
-// --- 3. UPDATED DATA (WITH LINKS) ---
+// --- 3. DATA CONSTANTS ---
 
+// NEW: STATS DATA
+const STATS_DATA = [
+  { value: "1100+", label: "Events Hosted", icon: Mic },
+  { value: "05+", label: "Years Experience", icon: Award },
+  { value: "500+", label: "Happy Clients", icon: Users },
+  { value: "70+", label: "Corporate Clients", icon: UserCheck }
+];
+
+// NEW: SIGNATURE SERVICES (Image Cards)
+const SIGNATURE_SERVICES = [
+  { 
+    title: "Wedding Anchor", 
+    desc: "Professional hosting for your special day with seamless ceremony management, ensuring every ritual and moment is celebrated with grace.",
+    img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
+  },
+  { 
+    title: "Corporate Anchor", 
+    desc: "Polished and engaging hosting for business events, galas, and conferences. Maintaining high energy while respecting brand tonality.",
+    img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80"
+  },
+  { 
+    title: "Fashion Show Host", 
+    desc: "Bringing glamour and energy to runway events and fashion weeks. A voice that complements the style and swagger of the ramp.",
+    img: "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?w=800&q=80"
+  }
+];
+
+// NEW: TRUSTED TAGS
+const TRUSTED_TAGS = [
+  "Celebrity Weddings", "Corporate R&R Events", "Big Fat Indian Weddings", 
+  "Award Ceremonies", "Live Productions", "Award Shows", "National-Level Sports Events"
+];
+
+// UPDATED: PLATFORMS WITH LINKS & COLORS
 const PLATFORMS = [
   { name: "WedMeGood", link: "https://www.wedmegood.com/profile/anchor-yash-25628297", color: "hover:text-[#DE5D83]" },
   { name: "WeddingWire", link: "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166", color: "hover:text-[#1467B0]" },
@@ -201,6 +235,7 @@ const FAQItem = ({ q, a }: { q: string, a: string }) => {
     </div>
   );
 };
+
 // --- 5. MAIN PAGE COMPONENT ---
 
 export default function HomePage() {
@@ -262,15 +297,10 @@ export default function HomePage() {
              <p className="text-zinc-400 text-lg mb-8 leading-relaxed font-light">
                From the royal palaces of Udaipur to corporate boardrooms in Jaipur, I have spent the last 5 years mastering the art of audience engagement.
              </p>
-             <div className="flex gap-12 border-t border-white/10 pt-8">
-               <div>
-                 <p className="text-4xl font-black text-white">1100+</p>
-                 <p className="text-[#D4AF37] text-xs uppercase tracking-widest mt-2">Events Hosted</p>
-               </div>
-               <div>
-                 <p className="text-4xl font-black text-white">05+</p>
-                 <p className="text-[#D4AF37] text-xs uppercase tracking-widest mt-2">Years Exp.</p>
-               </div>
+             <div className="mt-8">
+               <span className="inline-block border-b border-[#D4AF37] pb-1 text-[#D4AF37] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
+                 Read My Story &rarr;
+               </span>
              </div>
           </ScrollReveal>
 
@@ -289,9 +319,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. FEATURED MARQUEE (UPDATED: Links, Colors, Slower, Spacing) */}
-      <section className="py-16 bg-zinc-950 border-y border-white/5 relative z-20">
-        <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-12 uppercase">
+      {/* 3. NEW: STATS SECTION (Validating the Intro) */}
+      <section className="py-20 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
+        {/* Subtle Background Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {STATS_DATA.map((stat, i) => (
+              <ScrollReveal key={i} delay={i * 0.1} className="text-center group">
+                <div className="mb-6 flex justify-center">
+                  <stat.icon className="w-10 h-10 text-[#D4AF37] group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div className="text-5xl md:text-6xl font-black mb-3">
+                  <GoldTextureText>{stat.value}</GoldTextureText>
+                </div>
+                <div className="text-zinc-500 text-sm uppercase tracking-[0.2em] font-medium group-hover:text-white transition-colors">{stat.label}</div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. FEATURED MARQUEE (Social Proof) */}
+      <section className="py-20 bg-black border-b border-white/5 relative z-20">
+        <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-14 uppercase">
           FEATURED ON
         </h2>
         <div className="flex overflow-hidden mask-linear-gradient">
@@ -303,7 +355,7 @@ export default function HomePage() {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-4xl md:text-5xl font-black text-zinc-800 uppercase no-underline transition-colors duration-300 ${item.color}`}
+                className={`text-4xl md:text-6xl font-black text-zinc-800 uppercase no-underline transition-colors duration-500 hover:scale-105 transform ${item.color}`}
               >
                 {item.name}
               </a>
@@ -312,7 +364,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. WHY ME (PHILOSOPHY) */}
+      {/* 5. NEW: SIGNATURE SERVICES (Visual Cards) */}
+      <section className="py-24 container mx-auto px-6">
+        <ScrollReveal>
+          <div className="text-center mb-16">
+             <span className="text-[#D4AF37] text-sm uppercase tracking-widest">What I Do</span>
+             <h2 className="text-4xl md:text-6xl font-bold mt-2">Signature <span className="text-[#D4AF37]">Services</span></h2>
+          </div>
+        </ScrollReveal>
+        
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {SIGNATURE_SERVICES.map((service, i) => (
+            <ScrollReveal key={i} delay={i * 0.15}>
+              <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl">
+                <img 
+                  src={service.img} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
+                
+                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <h3 className="text-3xl font-bold text-white mb-3 font-display">{service.title}</h3>
+                   <div className="h-1 w-12 bg-[#D4AF37] mb-4 rounded-full" />
+                   <p className="text-zinc-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                     {service.desc}
+                   </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+        
+        <div className="text-center mt-16">
+           <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 mx-auto">
+             View All Anchoring Services <ArrowRight size={18} />
+           </button>
+        </div>
+      </section>
+
+      {/* 6. NEW: TRUSTED BY TAGS (Scale & Niche) */}
+      <section className="py-20 bg-zinc-950 border-y border-white/5">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-zinc-500 mb-10 text-sm uppercase tracking-widest font-medium">Trusted by leading brands and events across</p>
+          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+            {TRUSTED_TAGS.map((tag, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="px-8 py-3 rounded-full border border-white/5 bg-white/5 text-zinc-300 text-sm md:text-lg font-medium hover:border-[#D4AF37] hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all cursor-default">
+                  {tag}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. WHY ME (PHILOSOPHY) */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -334,7 +441,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. MOMENTS OF MAGIC (GALLERY) */}
+      {/* 8. MOMENTS OF MAGIC (GALLERY) */}
       <section className="py-24 bg-zinc-900/30 overflow-hidden">
         <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
           <div>
@@ -368,7 +475,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. PROCESS STEPS */}
+      {/* 9. PROCESS STEPS */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-20">
@@ -380,7 +487,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-4 gap-8">
           {PROCESS_STEPS.map((step, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="relative p-6 border-l border-white/10 hover:border-[#D4AF37] transition-colors pl-8 group">
+              <div className="relative p-6 border-l border-white/10 hover:border-[#D4AF37] transition-colors pl-8 group h-full">
                 <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[10px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">
                   {step.num}
                 </span>
@@ -392,7 +499,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. REVIEWS */}
+      {/* 10. REVIEWS */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
@@ -434,7 +541,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. FAQ */}
+      {/* 11. FAQ */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <ScrollReveal>
@@ -453,7 +560,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. FOOTER CTA */}
+      {/* 12. FOOTER CTA */}
       <footer className="py-32 border-t border-white/10 bg-black text-center relative overflow-hidden">
          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
          <div className="container mx-auto px-6 relative z-10">
