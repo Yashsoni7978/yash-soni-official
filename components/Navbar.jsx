@@ -11,26 +11,42 @@ const navLinks = [
   { name: "About", href: "/about" },
   {
     name: "Anchoring",
-    href: "/anchoring",
+    href: "/services", // Main services page
     dropdown: [
-      { name: "All Anchoring Services", href: "/anchoring" },
-      { name: "Wedding Anchor", href: "/wedding-anchor-jaipur" },
-      { name: "Corporate Host", href: "/corporate-event-anchor-jaipur" },
-      { name: "Celebrity & Concerts", href: "/celebrity-anchor-jaipur" },
-      { name: "Team Building", href: "/team-building-host-jaipur" },
-      { name: "Game Show Host", href: "/game-show-host" },
+      { name: "Wedding Anchor Jaipur", href: "/wedding-anchor-jaipur" },
+      { name: "Corporate Anchor", href: "/corporate-event-anchor-jaipur" },
+      { name: "Destination Wedding", href: "/destination-wedding-anchor" },
+      { name: "Sangeet Anchor", href: "/sangeet-anchor-jaipur" },
+      { name: "Haldi & Mehndi", href: "/haldi-mehndi-anchor" },
+      { name: "Team Building Host", href: "/team-building-host" },
+      { name: "Mall Activation", href: "/mall-activation-anchor" },
+      { name: "General Anchor Jaipur", href: "/anchor-in-jaipur" },
     ],
   },
   {
     name: "Events",
-    href: "/events",
+    href: "/event-management-company-jaipur",
     dropdown: [
-      { name: "All Event Services", href: "/events" },
       { name: "Wedding Planning", href: "/wedding-planning-jaipur" },
+      { name: "Event Planning", href: "/event-planning-jaipur" },
       { name: "Event Management", href: "/event-management-company-jaipur" },
       { name: "Event Designing", href: "/event-designing" },
       { name: "Artist Management", href: "/artist-management-jaipur" },
-      { name: "Haldi & Sangeet", href: "/haldi-sangeet-planner" },
+    ],
+  },
+  {
+    name: "Locations",
+    href: "#",
+    dropdown: [
+      { name: "Delhi", href: "/locations/delhi" },
+      { name: "Mumbai", href: "/locations/mumbai" },
+      { name: "Udaipur", href: "/locations/udaipur" },
+      { name: "Jodhpur", href: "/locations/jodhpur" },
+      { name: "Jaipur", href: "/locations/jaipur" },
+      { name: "Bikaner", href: "/locations/bikaner" },
+      { name: "Alwar", href: "/locations/alwar" },
+      { name: "Sikar", href: "/locations/sikar" },
+      { name: "Khatu", href: "/locations/khatu" },
     ],
   },
   { name: "Portfolio", href: "/portfolio" },
@@ -56,7 +72,7 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   
   // Mobile specific state for expanding submenus
-const [mobileExpanded, setMobileExpanded] = useState(null);
+  const [mobileExpanded, setMobileExpanded] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -90,7 +106,7 @@ const [mobileExpanded, setMobileExpanded] = useState(null);
           </Link>
 
           {/* 2. DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <div 
                 key={link.name} 
@@ -100,7 +116,7 @@ const [mobileExpanded, setMobileExpanded] = useState(null);
               >
                 <Link
                   href={link.href}
-                  className={`text-sm font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${
+                  className={`text-xs xl:text-sm font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${
                     activeDropdown === link.name ? "text-[#D4AF37]" : "text-gray-300 hover:text-white"
                   }`}
                 >
@@ -118,15 +134,17 @@ const [mobileExpanded, setMobileExpanded] = useState(null);
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 w-64 bg-black border border-[#D4AF37]/30 shadow-[0_0_30px_rgba(0,0,0,0.8)] rounded-xl overflow-hidden mt-4 p-2"
                     >
-                      {link.dropdown.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          href={sub.href}
-                          className="block px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all"
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
+                       <div className="max-h-[60vh] overflow-y-auto custom-scrollbar">
+                        {link.dropdown.map((sub) => (
+                            <Link
+                            key={sub.name}
+                            href={sub.href}
+                            className="block px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                            >
+                            {sub.name}
+                            </Link>
+                        ))}
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

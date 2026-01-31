@@ -2,76 +2,78 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { 
-  MapPin, Mic, Users, CheckCircle2 
+  MapPin, Mic, Users, CheckCircle2, 
+  Plane, Car, Star, Calendar, 
+  ArrowRight, Sparkles, Building2 
 } from "lucide-react";
 
-// --- 1. INTELLIGENT CITY DATA ---
+// --- 1. EXPANDED CITY DATA ---
 const CITY_DATA: Record<string, { 
   title: string; 
   subtitle: string;
   desc: string; 
   vibe: string;
   heroImage: string;
-  tags: string[];
+  eventCount: string; // "N+ Events"
+  travelMode: string; // "Direct Flight" or "4hr Drive"
+  venues: string[]; // SEO Keywords
+  faq: { q: string, a: string }[];
 }> = {
-  // --- RAJASTHAN (The Core) ---
+  // --- RAJASTHAN ---
   jaipur: {
     title: "The Voice of the Pink City",
     subtitle: "Anchor Yash: Jaipur's Most Trusted Emcee",
     desc: "From the grand ballrooms of The Fairmont to intimate gatherings at Rambagh Palace, Yash Soni is the definitive choice for Jaipur's elite weddings and corporate summits.",
-    vibe: "As a Jaipur local, I know the acoustics of every major palace and the rhythm of Rajasthani hospitality better than anyone.",
+    vibe: "My home ground. I know every venue manager, every sound setup, and the exact pulse of a Jaipur celebration.",
     heroImage: "https://images.unsplash.com/photo-1605634261270-34907996342c?q=80&w=2070",
-    tags: ["Rambagh Palace", "Fairmont Jaipur", "City Palace Events"]
+    eventCount: "1100+",
+    travelMode: "Local Base",
+    venues: ["Rambagh Palace", "Fairmont Jaipur", "City Palace", "Leela Palace", "Jai Mahal"],
+    faq: [
+      { q: "Do you charge travel fees for Jaipur?", a: "No, as I am based in Jaipur, there are no travel or accommodation charges." },
+      { q: "Have you hosted at The Fairmont before?", a: "Yes, I have extensive experience with the acoustics and layout of The Fairmont Jaipur." }
+    ]
   },
   udaipur: {
     title: "Royal Weddings in the City of Lakes",
     subtitle: "Premium Anchoring for Udaipur Destination Weddings",
-    desc: "Elevating lakeside vows at The Oberoi Udaivilas and Jagmandir Island. Anchor Yash brings sophistication that matches the grandeur of your Udaipur destination wedding.",
-    vibe: "Udaipur demands romance and royalty. My hosting style shifts here—softer, more poetic, yet commanding enough for grand island entries.",
+    desc: "Elevating lakeside vows and island parties. Anchor Yash brings sophistication that matches the grandeur of your Udaipur destination wedding.",
+    vibe: "Udaipur requires a softer, more poetic hosting style that respects the royalty of the location while keeping the energy high.",
     heroImage: "https://images.unsplash.com/photo-1590050752117-238cb0fb5689?q=80&w=2070",
-    tags: ["Jagmandir Island", "The Oberoi Udaivilas", "Lake Pichola Weddings"]
+    eventCount: "50+",
+    travelMode: "6hr Drive / 1hr Flight",
+    venues: ["The Oberoi Udaivilas", "Jagmandir Island", "Taj Lake Palace", "Raffels Udaipur"],
+    faq: [
+      { q: "Do you speak fluent English for NRI guests?", a: "Absolutely. My hosting is 100% bilingual (English/Hindi) suitable for global audiences." },
+      { q: "How do you handle travel to Udaipur?", a: "My team drives or flies down 24 hours prior to the event to ensure punctuality." }
+    ]
   },
   jodhpur: {
     title: "Majestic Hosting in the Blue City",
     subtitle: "Anchor Yash x Umaid Bhawan Palace",
     desc: "Matching the scale of Umaid Bhawan and Mehrangarh Fort. A powerful voice for Jodhpur's most colossal celebrations.",
-    vibe: "Jodhpur is about power and history. I bring high-octane energy to match the sheer scale of the forts and palaces.",
+    vibe: "Jodhpur is about power and history. I bring high-octane energy to match the sheer scale of the forts.",
     heroImage: "https://images.unsplash.com/photo-1534063250529-684ba2177e09?q=80&w=2070",
-    tags: ["Umaid Bhawan", "Mehrangarh Fort", "Indana Palace"]
+    eventCount: "40+",
+    travelMode: "5hr Drive",
+    venues: ["Umaid Bhawan Palace", "Mehrangarh Fort", "Indana Palace", "WelcomHotel"],
+    faq: [
+      { q: "Can you manage a Sangeet with 1000+ guests?", a: "Yes, I specialize in large-format events common in Jodhpur weddings." }
+    ]
   },
   bikaner: {
     title: "Heritage Event Hosting in Bikaner",
     subtitle: "Bringing Energy to the Heart of the Thar",
     desc: "From Junagarh Fort to Laxmi Niwas, Anchor Yash turns traditional Bikaner gatherings into modern, unforgettable experiences.",
-    vibe: "Bikaner values tradition. I blend Marwari cultural nuances with modern engagement techniques to keep all generations connected.",
+    vibe: "Bikaner values tradition. I blend Marwari cultural nuances with modern engagement techniques.",
     heroImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=2070",
-    tags: ["Laxmi Niwas Palace", "Narendra Bhawan", "Junagarh Fort"]
+    eventCount: "25+",
+    travelMode: "5hr Drive",
+    venues: ["Laxmi Niwas Palace", "Narendra Bhawan", "Junagarh Fort"],
+    faq: [
+      { q: "Are you familiar with Marwari traditions?", a: "Yes, being from Rajasthan, I am deeply familiar with Myra, Tikka, and other rituals." }
+    ]
   },
-  alwar: {
-    title: "Event Anchor for Alwar & Neemrana",
-    subtitle: "Perfecting Fort Weddings & Local Events",
-    desc: "Specializing in destination weddings at Neemrana Fort and grand local celebrations in Alwar.",
-    vibe: "Alwar is the gateway to Rajasthan. I bring the Jaipur polish to your local events, ensuring a premium experience close to home.",
-    heroImage: "https://images.unsplash.com/photo-1596558236209-77726477b838?q=80&w=2070",
-    tags: ["Neemrana Fort", "Tijara Fort", "Alwar Bagh"]
-  },
-  sikar: {
-    title: "Celebrity Anchor for Sikar & Shekhawati",
-    subtitle: "High-Energy Hosting for Shekhawati's Grandest Events",
-    desc: "The preferred choice for high-profile weddings and business meets in the Shekhawati region.",
-    vibe: "Sikar crowds love energy. I ensure the dance floor never stops and the engagement remains 100% high-voltage.",
-    heroImage: "https://images.unsplash.com/photo-1582510003544-4d00b7f0bd44?q=80&w=2070",
-    tags: ["Shekhawati Havelis", "Grand Weddings", "Local Concerts"]
-  },
-  khatu: {
-    title: "Devotional & Event Anchor for Khatu",
-    subtitle: "Soulful Hosting for Khatu Shyam Ji Events",
-    desc: "Balancing reverence with celebration. Expert hosting for jagran, kirtan, and weddings in the holy city of Khatu.",
-    vibe: "Events here are spiritual yet celebratory. My tone respects the sanctity of the location while ensuring guests are joyfully engaged.",
-    heroImage: "https://images.unsplash.com/photo-1604084964673-94c637370a2d?q=80&w=2070",
-    tags: ["Khatu Shyam Ji", "Bhajan Sandhya", "Dharamshala Events"]
-  },
-
   // --- METROS ---
   delhi: {
     title: "Corporate & Wedding Emcee in Delhi NCR",
@@ -79,7 +81,13 @@ const CITY_DATA: Record<string, {
     desc: "The speed of Delhi meets the charm of Jaipur. Perfect for fast-paced corporate summits in Gurugram and farm-house weddings in Chattarpur.",
     vibe: "Delhi audiences are sharp and fast. I cut the fluff, keep the wit high, and ensure your brand message lands with impact.",
     heroImage: "https://images.unsplash.com/photo-1543835245-c4a0078233f2?q=80&w=2070",
-    tags: ["Aerocity Hotels", "Chattarpur Farms", "Pragati Maidan"]
+    eventCount: "60+",
+    travelMode: "45min Flight / 4hr Drive",
+    venues: ["Aerocity Hotels", "Chattarpur Farms", "Pragati Maidan", "Jaypee Greens"],
+    faq: [
+      { q: "Do you host Corporate R&R events in Gurgaon?", a: "Yes, I regularly host corporate galas and team-building events in DLF Cyber Hub/Gurgaon areas." },
+      { q: "What are your travel requirements for Delhi?", a: "I require return flights and accommodation near the venue." }
+    ]
   },
   mumbai: {
     title: "Anchor Yash in Mumbai",
@@ -87,13 +95,18 @@ const CITY_DATA: Record<string, {
     desc: "From Juhu hotels to South Bombay galas, bringing a touch of Rajasthani royalty to Mumbai's glittering event scene.",
     vibe: "Mumbai has seen it all. To stand out, I bring a unique 'Royal Anchor' persona that feels distinct from the usual Mumbai emcees.",
     heroImage: "https://images.unsplash.com/photo-1566552881560-0be862a7c445?q=80&w=2070",
-    tags: ["Taj Lands End", "Jio World Drive", "Colaba Events"]
+    eventCount: "30+",
+    travelMode: "2hr Flight",
+    venues: ["Taj Lands End", "Jio World Drive", "St. Regis", "Trident Nariman Point"],
+    faq: [
+      { q: "Do you have a team in Mumbai?", a: "I travel with my core team, but we partner with local Mumbai vendors for seamless execution." }
+    ]
   }
 };
 
-// --- 2. SEO GENERATOR (Fixed for Next.js 15) ---
+// --- 2. SEO GENERATOR ---
 export async function generateMetadata({ params }: { params: Promise<{ city: string }> }): Promise<Metadata> {
-  const resolvedParams = await params; // AWAIT params here
+  const resolvedParams = await params;
   const cityKey = resolvedParams.city.toLowerCase();
   const data = CITY_DATA[cityKey];
 
@@ -102,17 +115,12 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   return {
     title: `${data.title} | Anchor Yash`,
     description: data.desc,
-    openGraph: {
-      title: data.title,
-      description: data.desc,
-      images: [data.heroImage],
-    }
   };
 }
 
-// --- 3. PAGE COMPONENT (Fixed for Next.js 15) ---
+// --- 3. PAGE COMPONENT ---
 export default async function LocationPage({ params }: { params: Promise<{ city: string }> }) {
-  const resolvedParams = await params; // AWAIT params here
+  const resolvedParams = await params;
   const cityKey = resolvedParams.city.toLowerCase();
   const data = CITY_DATA[cityKey];
 
@@ -121,120 +129,184 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
   return (
     <main className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black">
       
-      {/* 1. HERO SECTION */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
+      {/* SECTION 1: HYPER-LOCAL HERO */}
+      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/30 z-10" />
           <img 
             src={data.heroImage} 
             alt={data.title} 
-            className="w-full h-full object-cover scale-105"
+            className="w-full h-full object-cover scale-105 animate-slow-zoom"
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-20 text-center">
-          <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-4 py-1 rounded-full bg-black/40 backdrop-blur-md mb-6">
-            <MapPin size={14} className="text-[#D4AF37]" />
+        <div className="container mx-auto px-6 relative z-20 text-center pt-20">
+          <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/60 backdrop-blur-md mb-8">
+            <CheckCircle2 size={16} className="text-[#D4AF37]" />
             <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest">
-              Available in {resolvedParams.city.charAt(0).toUpperCase() + resolvedParams.city.slice(1)}
+              Successfully hosted {data.eventCount} Events in {resolvedParams.city}
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-6 leading-none">
-            {data.title.split(" ").map((word, i) => (
-              <span key={i} className={i === 1 || i === 2 ? "text-transparent bg-clip-text bg-gradient-to-b from-[#D4AF37] to-[#8a6e1c]" : "text-white"}>
-                {word} </span>
-            ))}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+            {data.title}
           </h1>
           
-          <p className="text-xl text-zinc-300 max-w-2xl mx-auto font-light mb-10">
-            {data.subtitle}
+          <p className="text-xl text-zinc-300 max-w-2xl mx-auto font-light mb-12">
+            {data.desc}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <Link href="/contact">
-              <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_30px_rgba(212,175,55,0.4)]">
-                Book for {resolvedParams.city}
+              <button className="px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)]">
+                Check {resolvedParams.city} Dates
               </button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 2. THE LOCAL ADVANTAGE */}
-      <section className="py-24 bg-zinc-950 border-y border-white/5">
+      {/* SECTION 2: THE MAN BEHIND THE MIC (Personal Connection) */}
+      <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="text-[#D4AF37] text-sm font-black uppercase tracking-widest mb-4 block">
-              The {resolvedParams.city.charAt(0).toUpperCase() + resolvedParams.city.slice(1)} Edge
-            </span>
-            <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-6">
-              Why hire Anchor Yash for <span className="text-zinc-500">Your Event?</span>
-            </h2>
-            <p className="text-lg text-zinc-400 leading-relaxed mb-8 border-l-2 border-[#D4AF37] pl-6">
-              "{data.vibe}"
-            </p>
-            <ul className="space-y-4">
-              {[
-                "Fluent in English & Hindi (Perfect for diverse crowds)",
-                "Experience managing 1000+ Guest crowds",
-                "Technical knowledge of Sound & Light setups",
-                "Zero-travel hassle (Team ready to deploy)"
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm font-medium text-zinc-300">
-                  <CheckCircle2 size={18} className="text-[#D4AF37]" /> {item}
-                </li>
-              ))}
-            </ul>
+          <div className="relative">
+             <div className="absolute -inset-4 bg-[#D4AF37]/20 rounded-2xl rotate-3 blur-lg"></div>
+             {/* PLACEHOLDER FOR YOUR PHOTO - Replace src with your actual photo */}
+             <img 
+               src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" 
+               alt="Anchor Yash" 
+               className="relative rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/5]"
+             />
+             <div className="absolute bottom-6 right-6 bg-black/80 backdrop-blur border border-[#D4AF37] p-4 rounded-xl">
+               <p className="text-[#D4AF37] font-black text-2xl">{data.eventCount}</p>
+               <p className="text-xs text-white uppercase tracking-widest">Events in {resolvedParams.city}</p>
+             </div>
           </div>
           
-          <div className="grid grid-cols-2 gap-4">
-             <div className="bg-[#111] p-8 rounded-2xl border border-white/5 flex flex-col items-center text-center justify-center aspect-square">
-                <Mic size={40} className="text-[#D4AF37] mb-4" />
-                <span className="text-3xl font-black text-white">1100+</span>
-                <span className="text-xs text-zinc-500 uppercase tracking-widest mt-2">Shows</span>
-             </div>
-             <div className="bg-[#111] p-8 rounded-2xl border border-white/5 flex flex-col items-center text-center justify-center aspect-square">
-                <Users size={40} className="text-[#D4AF37] mb-4" />
-                <span className="text-3xl font-black text-white">500+</span>
-                <span className="text-xs text-zinc-500 uppercase tracking-widest mt-2">Happy Clients</span>
-             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. VENUE EXPERTISE */}
-      <section className="py-24 bg-black">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold uppercase mb-12">
-            Experience at Top {resolvedParams.city.charAt(0).toUpperCase() + resolvedParams.city.slice(1)} Venues
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {data.tags.map((tag, i) => (
-              <span key={i} className="px-8 py-4 rounded-full border border-white/10 bg-zinc-900 text-zinc-300 text-lg hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors cursor-default">
-                {tag}
-              </span>
-            ))}
-            <span className="px-8 py-4 rounded-full border border-white/10 bg-zinc-900 text-zinc-500 text-lg">
-              + Many More
+          <div>
+            <span className="text-[#D4AF37] text-sm font-black uppercase tracking-widest mb-4 block">
+              The {resolvedParams.city.charAt(0).toUpperCase() + resolvedParams.city.slice(1)} Connection
             </span>
+            <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight mb-8">
+              "I don't just host. <br/> I <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-yellow-200">Adapt</span> to the city."
+            </h2>
+            <p className="text-lg text-zinc-400 leading-relaxed mb-8">
+              Every city has a rhythm. {data.vibe}
+            </p>
+            <p className="text-lg text-zinc-400 leading-relaxed mb-8">
+              When you book me for {resolvedParams.city}, you aren't just paying for a flight ticket—you are paying for an anchor who knows how to control a crowd in that specific region.
+            </p>
+            
+            <div className="grid grid-cols-2 gap-6 border-t border-white/10 pt-8">
+               <div>
+                 <div className="flex items-center gap-2 mb-2 text-white font-bold">
+                   <Plane size={20} className="text-[#D4AF37]" /> Logistics
+                 </div>
+                 <p className="text-sm text-zinc-500">{data.travelMode} to {resolvedParams.city}</p>
+               </div>
+               <div>
+                 <div className="flex items-center gap-2 mb-2 text-white font-bold">
+                   <Mic size={20} className="text-[#D4AF37]" /> Language
+                 </div>
+                 <p className="text-sm text-zinc-500">English, Hindi & Regional Nuances</p>
+               </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. CTA FOOTER SPECIFIC TO CITY */}
-      <section className="py-24 bg-[#D4AF37] text-black text-center">
+      {/* SECTION 3: SERVICES IN THIS CITY */}
+      <section className="py-24 bg-black border-t border-white/5">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
+              My Services in {resolvedParams.city}
+            </h2>
+            <div className="h-1 w-24 bg-[#D4AF37] mx-auto rounded-full" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#D4AF37]/50 transition-all group">
+               <div className="w-14 h-14 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform">
+                 <Sparkles size={28} />
+               </div>
+               <h3 className="text-xl font-bold mb-4">Destination Weddings</h3>
+               <p className="text-zinc-400 text-sm leading-relaxed">
+                 Specializing in Sangeet, Varmala, and Reception hosting at {resolvedParams.city}'s top heritage and luxury venues.
+               </p>
+            </div>
+            
+            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#D4AF37]/50 transition-all group">
+               <div className="w-14 h-14 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform">
+                 <Building2 size={28} />
+               </div>
+               <h3 className="text-xl font-bold mb-4">Corporate Summits</h3>
+               <p className="text-zinc-400 text-sm leading-relaxed">
+                 High-energy hosting for Annual Meets, R&R Shows, and Product Launches in {resolvedParams.city}'s business hubs.
+               </p>
+            </div>
+
+            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#D4AF37]/50 transition-all group">
+               <div className="w-14 h-14 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform">
+                 <Users size={28} />
+               </div>
+               <h3 className="text-xl font-bold mb-4">Social Galas</h3>
+               <p className="text-zinc-400 text-sm leading-relaxed">
+                 Engaging anchoring for Anniversaries, Milestone Birthdays, and Private Concerts.
+               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: VENUE EXPERTISE (SEO KEYWORDS) */}
+      <section className="py-20 bg-zinc-950">
+         <div className="container mx-auto px-6 text-center">
+            <p className="text-zinc-500 text-sm font-bold uppercase tracking-widest mb-10">
+              Venues in {resolvedParams.city} we are ready to serve
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+              {data.venues.map((venue, i) => (
+                <span key={i} className="px-6 py-3 rounded-full bg-black border border-white/10 text-zinc-300 text-sm md:text-base font-medium hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors cursor-default">
+                  {venue}
+                </span>
+              ))}
+            </div>
+         </div>
+      </section>
+
+      {/* SECTION 5: CITY SPECIFIC FAQ */}
+      {data.faq && (
+        <section className="py-24 bg-black border-t border-white/5">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl font-black uppercase mb-12 text-center">
+              Common Questions about <br/> hiring me for <span className="text-[#D4AF37]">{resolvedParams.city}</span>
+            </h2>
+            <div className="grid gap-6">
+              {data.faq.map((item, i) => (
+                <div key={i} className="p-6 rounded-xl border border-white/10 bg-zinc-900/50">
+                  <h3 className="font-bold text-lg text-white mb-3">{item.q}</h3>
+                  <p className="text-zinc-400 text-sm">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* SECTION 6: CTA FOOTER */}
+      <section className="py-24 bg-[#D4AF37] text-black text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-6xl font-black uppercase mb-6 leading-none">
-            Planning an event in <br/> {resolvedParams.city}?
+            Your {resolvedParams.city} Event <br/> Deserves the Best.
           </h2>
           <p className="text-xl font-medium mb-10 max-w-2xl mx-auto">
-            Don't settle for a generic host. Get the anchor who knows the city, the venues, and the vibe.
+            Dates for the upcoming season in {resolvedParams.city} are filling up. Secure your booking today.
           </p>
           <Link href="/contact">
             <button className="bg-black text-white px-12 py-5 text-lg font-black uppercase tracking-widest rounded-full hover:scale-105 transition-transform shadow-2xl">
-              Get {resolvedParams.city.charAt(0).toUpperCase() + resolvedParams.city.slice(1)} Quote
+              Get Quote for {resolvedParams.city}
             </button>
           </Link>
         </div>
@@ -244,7 +316,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
   );
 }
 
-// 4. GENERATE STATIC PARAMS (For SEO & Performance)
+// 4. GENERATE STATIC PARAMS
 export async function generateStaticParams() {
   return Object.keys(CITY_DATA).map((city) => ({
     city: city,
