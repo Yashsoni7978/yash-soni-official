@@ -52,13 +52,12 @@ const revealUp: Variants = {
 // --- 3. DATA CONSTANTS ---
 
 const STATS_DATA = [
-  { value: "1100+", label: "Events Hosted", icon: Mic },
-  { value: "05+", label: "Years Experience", icon: Award },
+  { value: "1100+", label: "Mic Checks", icon: Mic },
+  { value: "05+", label: "Years Live", icon: Award },
   { value: "500+", label: "Happy Clients", icon: Users },
-  { value: "70+", label: "Corporate Clients", icon: UserCheck }
+  { value: "70+", label: "Corporate Brands", icon: UserCheck }
 ];
 
-// UPDATED: SERVICES (New Vibe)
 const SIGNATURE_SERVICES = [
   { 
     title: "The Wedding Architect", 
@@ -99,7 +98,6 @@ const PHILOSOPHY = [
   { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
 ];
 
-// UPDATED: PROCESS (New Vibe)
 const PROCESS_STEPS = [
   { num: "01", title: "The Vibe Check", text: "We hop on a call. You tell me if you want 'Royal & Elegant' or 'Wild & Crazy.' We discuss the guest list, the inside jokes, and the 'Do Not Play' list." },
   { num: "02", title: "Script & Spice", text: "I don't use templates. I draft a run-of-show that includes custom games for your specific crowd, shayaris that actually make sense, and a timeline that flows perfectly." },
@@ -120,14 +118,20 @@ const REVIEWS = [
   { name: "Vartika Jetawat", date: "19 Jun 2024", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic thorough the function." }
 ];
 
-// UPDATED: FAQS (SEO Gold)
+// --- 12 EXPANDED FAQS ---
 const FAQS = [
   { q: "Who is the Best Anchor in Jaipur for events?", a: "While Jaipur is full of talent, my clients hire me (Anchor Yash) because I treat the audience like friends, not spectators. I combine the traditional grace of Rajasthani hospitality with modern, high-energy hosting. Check my 500+ happy client reviews—they tell the story better than I can." },
   { q: "Do you travel for Destination Weddings outside Jaipur?", a: "Absolutely. 'Have Mic, Will Travel.' While Jaipur is home, I’ve hosted weddings in Udaipur, Jodhpur, and across India. Travel logistics are simple and we can discuss them during our first call." },
   { q: "Which languages are you fluent in?", a: "I switch effortlessly between Hindi (for the emotions), English (for the class), and a bit of Marwari (to make the elders smile)." },
   { q: "Do you also provide Event Management services?", a: "I focus 100% on the mic to ensure your hosting is perfect. However, after 5 years in the industry, I know the best vendors in Jaipur. I can definitely connect you with trusted planners, DJs, and decorators." },
   { q: "Why should we hire Anchor Yash over others?", a: "Because I don't just read a script. I improvise. If the food is late, I keep the crowd entertained. If the bride needs 5 more minutes, I handle the delay without anyone noticing. I am your insurance policy against awkward silences." },
-  { q: "How do I confirm a booking with you?", a: "Simple. Click the 'Book Now' or WhatsApp button. We check the date, sign a simple agreement, and lock it in. Dates for the wedding season (Nov-Feb) usually book out 3-4 months in advance." }
+  { q: "How do I confirm a booking with you?", a: "Simple. Click the 'Book Now' or WhatsApp button. We check the date, sign a simple agreement, and lock it in. Dates for the wedding season (Nov-Feb) usually book out 3-4 months in advance." },
+  { q: "Do you prepare scripts for our family members?", a: "Yes! I know Chachas and Masis get nervous. I provide simple, funny script templates and even do a quick rehearsal with them 10 minutes before the show to make them look like pros." },
+  { q: "Can you handle a crowd that doesn't dance?", a: "That is my specialty. I have a set of 'Ice-Breaker' games and interactive crowd-pullers (like 'The Train' or 'Paper Dance') that force even the shyest guests off their chairs." },
+  { q: "What do you wear to the event?", a: "I don't just show up; I blend in. Whether it's a tuxedo for a Corporate Gala or a heavy Sherwani for a Royal Wedding, my attire always matches your event's theme." },
+  { q: "Do you bring your own sound system/DJ?", a: "I am an artist, not a rental company. However, I have preferred technical partners in Jaipur who provide concert-level sound and lighting if you need recommendations." },
+  { q: "What are your payment terms?", a: "To block the date, we take a 50% advance. The remaining balance is due on the day of the event, before I take the stage." },
+  { q: "Do you do virtual or hybrid events?", a: "Yes, post-2020, I’ve mastered the art of engaging audiences through a camera lens for virtual town halls and webinars." }
 ];
 
 const GALLERY_IMAGES = [
@@ -201,30 +205,30 @@ const ScrollReveal = ({ children, delay = 0, className = "" }: { children: React
   </motion.div>
 );
 
-// UPDATED: FAQ ITEM WITH SHADOW DESIGN
+// --- FAQ COMPONENT (Matches the Screenshot: Gold Border + Glow) ---
 const FAQItem = ({ q, a }: { q: string, a: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div 
-      className={`group rounded-2xl border transition-all duration-500 overflow-hidden ${
+      className={`group rounded-2xl border transition-all duration-300 ${
         isOpen 
-          ? "border-[#D4AF37] bg-[#0a0a0a] shadow-[0_0_25px_rgba(212,175,55,0.15)]" // Active State: Gold Border + Glow Shadow
-          : "border-white/10 bg-zinc-900/30 hover:border-[#D4AF37]/40 hover:shadow-lg" // Inactive State
+          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" // Active Style: Gold Border + Glow
+          : "border-white/10 bg-transparent hover:border-white/20" // Inactive Style
       }`}
     >
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center p-6 text-left"
       >
-        <span className={`font-bold text-lg md:text-xl pr-8 transition-colors ${
+        <span className={`font-semibold text-lg pr-4 transition-colors ${
           isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
         }`}>
           {q}
         </span>
-        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300 ${
-          isOpen ? "bg-[#D4AF37] border-[#D4AF37] text-black rotate-180" : "bg-transparent border-zinc-600 text-zinc-400 group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
+          isOpen ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
         }`}>
-          {isOpen ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} />}
+          {isOpen ? <Minus size={16} /> : <Plus size={16} />}
         </div>
       </button>
       <AnimatePresence>
@@ -235,11 +239,8 @@ const FAQItem = ({ q, a }: { q: string, a: string }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-8 pt-0">
-              <div className="h-[1px] w-full bg-gradient-to-r from-[#D4AF37]/30 to-transparent mb-4" />
-              <p className="text-zinc-400 text-base leading-relaxed font-light">
-                {a}
-              </p>
+            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
+              <div className="pt-4">{a}</div>
             </div>
           </motion.div>
         )}
@@ -276,7 +277,7 @@ export default function HomePage() {
           >
             <div className="mb-6 inline-block">
                <span className="border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 text-[#D4AF37] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                 Jaipur's Top Event Host
+                 Jaipur's Premier Event Host
                </span>
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.95]">
@@ -317,7 +318,7 @@ export default function HomePage() {
              </p>
              <div className="mt-8">
                <span className="inline-block border-b border-[#D4AF37] pb-1 text-[#D4AF37] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
-                 read my story &rarr;
+                 Read My Story &rarr;
                </span>
              </div>
           </ScrollReveal>
@@ -379,7 +380,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. SIGNATURE SERVICES (Updated Text) */}
+      {/* 5. SIGNATURE SERVICES */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -490,7 +491,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. PROCESS STEPS (Updated) */}
+      {/* 9. PROCESS STEPS */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-20">
@@ -556,7 +557,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. FAQ (NEW DESIGN) */}
+      {/* 11. FAQ (REDESIGNED & EXPANDED) */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <ScrollReveal>
@@ -586,7 +587,7 @@ export default function HomePage() {
               Your Stage Awaits.
             </h2>
             <p className="text-zinc-400 mb-12 max-w-lg mx-auto text-lg">
-              Spots this season are vanishing quickly. Lock in your moment through Jaipur’s top-rated choice.
+              Dates for the upcoming season are filling fast. Secure your date with Jaipur's most trusted voice.
             </p>
             <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#D4AF37] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
               <span className="relative z-10 flex items-center gap-3">
