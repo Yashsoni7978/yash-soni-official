@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Mic, Heart, Music, Star, Calendar, ArrowRight, Play, 
-  CheckCircle, Sparkles, ChevronDown, Quote, Camera 
+  CheckCircle, Sparkles, ChevronDown, Quote, Camera, Wine, Sun, Users
 } from "lucide-react";
 
 // --- 1. REUSABLE LUXURY COMPONENTS ---
@@ -41,6 +41,47 @@ const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
     </motion.div>
   </div>
 );
+
+// --- 2. DATA: CULTURAL EXPERTISE ---
+const WEDDING_TYPES = [
+  { title: "Hindu Weddings", desc: "Mastering the Vedic rituals, Pheras commentary, and the high-energy Baraat.", icon: "🕉️" },
+  { title: "Punjabi Weddings", desc: "Unmatched energy for the Dhol, Bhangra, and the wildest cocktail parties.", icon: "🪘" },
+  { title: "Jain Weddings", desc: "Elegant, sophisticated hosting that respects traditions and family values.", icon: "🪷" },
+  { title: "Islamic Nikkah", desc: "Poetic Urdu hosting (Shayari) adding grace to the Walima and Nikkah.", icon: "🌙" },
+  { title: "Christian Weddings", desc: "Classic, formal emceeing for the Toast, Cake Cutting, and First Dance.", icon: "⛪" },
+  { title: "Cross-Cultural", desc: "Blending traditions seamlessly for modern couples.", icon: "🤝" }
+];
+
+// --- 3. DATA: THE EVENT JOURNEY ---
+const EVENT_FLOW = [
+  { title: "Welcome Lunch", icon: Sun },
+  { title: "Mayara / Bhaat", icon: Users },
+  { title: "Haldi Ceremony", icon: Sparkles },
+  { title: "Mehandi & Sangeet", icon: Music },
+  { title: "Sufi / Mocktail Night", icon: Wine },
+  { title: "Gala Night", icon: Star },
+  { title: "Baraat on Wheels", icon: Mic },
+  { title: "Varmala", icon: Heart },
+  { title: "The Wedding", icon: CheckCircle },
+  { title: "Reception", icon: Camera },
+  { title: "After Party", icon: Music },
+];
+
+// --- 4. DATA: 12 FAQS ---
+const FAQS = [
+  { q: "Do you prepare scripts for our family members?", a: "Yes! I know Chachas and Masis get nervous. I provide simple, funny script templates and rehearse with them 10 minutes before the show to make them look like pros." },
+  { q: "Can you handle a crowd that doesn't dance?", a: "That is my specialty. I have a set of 'Ice-Breaker' games and interactive crowd-pullers (like 'The Train' or 'Paper Dance') that force even the shyest guests off their chairs." },
+  { q: "Do you travel for Destination Weddings?", a: "Yes. I am based in Jaipur but frequently host in Udaipur, Jodhpur, Pushkar, and Goa. Travel, stay, and logistics are to be arranged by the client." },
+  { q: "What is your hosting style: Formal or Fun?", a: "I adapt to the event. For the Sangeet, I am high-energy and witty. For the Pheras/Varmala, I am traditional and poetic. I read the room and switch gears instantly." },
+  { q: "Do you bring your own team?", a: "I usually work solo on the mic but coordinate seamlessly with your DJ and Sound team. If you need a co-host (female anchor), I can arrange one from my trusted network." },
+  { q: "How long do you stay at the event?", a: "I am there from the first guest's arrival until the last performance or ritual is done. I don't count hours; I count moments." },
+  { q: "What languages are you fluent in?", a: "I am fluent in English and Hindi. I can also throw in some Marwari/Punjabi phrases to connect with the elders!" },
+  { q: "Do you engage with the audience?", a: "100%. I don't just stand on stage. I walk into the crowd, interview guests, crack jokes with the front row, and make everyone feel involved." },
+  { q: "What if the event runs late?", a: "Indian weddings always run late! I am mentally prepared for delays and know exactly how to fill the gaps so the guests don't get bored." },
+  { q: "Can we see videos of your past work?", a: "Absolutely. Scroll up to the 'Watch Me Live' section or check my Instagram/YouTube for raw, unedited clips of my hosting." },
+  { q: "How far in advance should we book?", a: "For peak wedding dates (Nov-Feb), I recommend booking 3-6 months in advance. My calendar fills up fast." },
+  { q: "What are your charges?", a: "My fee depends on the number of days, location, and scope of work. Click 'Check Availability' to get a custom quote instantly." }
+];
 
 export default function WeddingAnchor() {
   return (
@@ -127,24 +168,17 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 3. CULTURAL WEDDINGS EXPERTISE (New Section) --- */}
+      {/* --- 3. CULTURAL WEDDINGS EXPERTISE (Updated with Data) --- */}
        <section className="py-32 bg-[#080808] relative z-10 border-t border-neutral-900">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="Cultural Expertise" title="Celebrating Every Tradition" align="center" />
           
            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-              {[
-                { title: "Hindu Weddings", desc: "From Vedic chants to the high-energy Baraat.", icon: "🕉️" },
-                { title: "Jain Weddings", desc: "Respectful, traditional, and family-oriented celebrations.", icon: "🪷" },
-                { title: "Punjabi Weddings", desc: "Dhol, Bhangra, and non-stop energy all night long.", icon: "🪘" },
-                { title: "Christian Weddings", desc: "Elegant toasts, cake cutting, and first dances.", icon: "⛪" },
-                { title: "Islamic Weddings", desc: "Poetic hosting with grace for Nikkah and Walima.", icon: "🌙" },
-                 { title: "Cross-Cultural", desc: "Blending traditions seamlessly for modern couples.", icon: "🤝" }
-              ].map((wedding, idx) => (
+              {WEDDING_TYPES.map((wedding, idx) => (
                   <div key={idx} className="bg-[#111] border border-neutral-800 p-8 rounded-xl hover:border-[#D4AF37] transition-all duration-300 group">
                       <div className="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">{wedding.icon}</div>
                       <h3 className="text-xl font-bold text-white mb-2">{wedding.title}</h3>
-                      <p className="text-gray-400 text-sm">{wedding.desc}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed">{wedding.desc}</p>
                   </div>
               ))}
            </div>
@@ -152,26 +186,23 @@ export default function WeddingAnchor() {
       </section>
 
 
-      {/* --- 4. THE EVENT JOURNEY (New Section: Welcome Lunch to Varmala) --- */}
+      {/* --- 4. THE EVENT JOURNEY (Updated with Icons) --- */}
       <section className="py-32 bg-[#050505] relative z-10 border-t border-neutral-900">
          <div className="container mx-auto px-4">
              <SectionHeading subtitle="The Full Experience" title="From Welcome To Varmala" align="center" />
              
              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-                 {[
-                     "Welcome Lunch", "Haldi Ceremony", "Mehandi & Sangeet", "Gala Night",
-                     "Sufi Night", "Mocktail Night", "Mayara / Bhaat", "Baraat on Wheels",
-                     "Varmala", "The Wedding", "Reception", "After Party"
-                 ].map((event, i) => (
-                     <div key={i} className="bg-neutral-900/50 border border-neutral-800 p-4 rounded-lg text-center hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default">
-                         <p className="font-bold uppercase tracking-wider text-xs md:text-sm">{event}</p>
+                 {EVENT_FLOW.map((event, i) => (
+                     <div key={i} className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-lg text-center hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default group">
+                         <event.icon className="w-6 h-6 mx-auto mb-3 text-[#D4AF37] group-hover:text-black transition-colors" />
+                         <p className="font-bold uppercase tracking-wider text-xs md:text-sm">{event.title}</p>
                      </div>
                  ))}
              </div>
          </div>
       </section>
 
-      {/* --- 5. THE TRINITY (VISUAL UPGRADE - HOVER CARDS) --- */}
+      {/* --- 5. THE TRINITY (VISUAL CARDS) --- */}
       <section className="py-32 bg-[#080808] relative z-10 border-t border-neutral-900">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="My Expertise" title="The Wedding Trilogy" align="center" />
@@ -188,7 +219,7 @@ export default function WeddingAnchor() {
             <VisualServiceCard 
               title="The Varmala"
               subtitle="Cinematic Grandeur"
-              img="https://images.unsplash.com/photo-1604904839548-93a3074b4731?w=800&q=80" // Need a varmala/royal image
+              img="https://images.unsplash.com/photo-1604904839548-93a3074b4731?w=800&q=80" 
               icon={<Heart className="w-8 h-8" />}
               desc="The main event. I use poetic shayari and voice modulation to turn the garland exchange into a movie scene. Themes: Royal, Floral, or Fun."
               tags={["Grand Entry", "Shayari", "Crowd Control"]}
@@ -206,7 +237,7 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 6. NEW SECTION: THE GALLERY WALL (Visual Proof) --- */}
+      {/* --- 6. MOMENTS (GALLERY) --- */}
       <section className="py-24 container mx-auto px-4 relative z-10">
          <SectionHeading subtitle="Moments" title="Real Weddings. Real Emotion." />
          
@@ -238,7 +269,7 @@ export default function WeddingAnchor() {
          </div>
       </section>
 
-      {/* --- 7. VIDEO STRIP (Kept, but moved down) --- */}
+      {/* --- 7. VIDEO STRIP --- */}
       <section className="py-20 bg-[#080808] border-y border-neutral-900 overflow-hidden relative z-10">
         <div className="container mx-auto px-4 mb-10">
            <div className="flex justify-between items-end">
@@ -259,22 +290,14 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 8. WEDDING SPECIFIC FAQ --- */}
-      <section className="py-24 max-w-4xl mx-auto px-4 relative z-10">
+      {/* --- 8. WEDDING SPECIFIC FAQ (12 QUESTIONS) --- */}
+      <section className="py-24 max-w-6xl mx-auto px-4 relative z-10">
         <SectionHeading subtitle="Clarifications" title="Common Wedding Questions" align="center" />
-        <div className="space-y-4 mt-16">
-          <FAQItem 
-            question="Do you prepare scripts for our family members?" 
-            answer="Yes! I know Chachas and Masis get nervous. I provide simple, funny script templates and rehearse with them 10 minutes before the show to make them look like pros." 
-          />
-          <FAQItem 
-            question="Can you handle a crowd that doesn't dance?" 
-            answer="That is my specialty. I have a set of 'Ice-Breaker' games and interactive crowd-pullers (like 'The Train' or 'Paper Dance') that force even the shyest guests off their chairs." 
-          />
-          <FAQItem 
-            question="Do you travel for Destination Weddings?" 
-            answer="Yes. I am based in Jaipur but frequently host in Udaipur, Jodhpur, Pushkar, and Goa. Travel, stay, and logistics are to be arranged by the client." 
-          />
+        
+        <div className="grid md:grid-cols-2 gap-6 mt-16">
+          {FAQS.map((faq, idx) => (
+             <FAQItem key={idx} question={faq.q} answer={faq.a} />
+          ))}
         </div>
       </section>
 
@@ -360,7 +383,7 @@ const FAQItem = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full p-6 text-left"
       >
-        <span className="font-bold text-white text-lg md:text-xl">{question}</span>
+        <span className="font-bold text-white text-lg">{question}</span>
         <ChevronDown className={`w-5 h-5 text-[#D4AF37] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
@@ -371,7 +394,7 @@ const FAQItem = ({ question, answer }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <p className="p-6 pt-0 text-gray-400 leading-relaxed font-light">{answer}</p>
+            <p className="p-6 pt-0 text-gray-400 leading-relaxed font-light text-sm">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
