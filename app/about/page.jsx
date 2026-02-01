@@ -3,10 +3,9 @@
 import { useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Mic, Sparkles, Quote, MapPin, Calendar, Briefcase, Zap, Globe } from "lucide-react";
+import { ArrowRight, Star, Mic, Sparkles, Quote, MapPin, Calendar, Briefcase, Zap, Globe, ShieldAlert, Layers } from "lucide-react";
 
 // --- 1. LUXURY TEXTURE ASSETS ---
-// Removed TypeScript types here
 const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
@@ -20,7 +19,6 @@ const GoldTextureText = ({ children, className }) => (
 );
 
 // --- 2. ANIMATION HELPERS ---
-// Removed ": any" here
 const FadeIn = ({ children, delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -61,155 +59,165 @@ export default function About() {
         {/* --- RIGHT SIDE: THE SCROLLING SAGA (The Legend) --- */}
         <div className="lg:w-1/2 relative bg-[#050505]">
           
-          {/* 1. INTRO: THE HOOK */}
+          {/* 1. INTRO: THE HERO */}
           <section className="min-h-screen flex items-center justify-center p-8 md:p-20 border-b border-neutral-900">
             <FadeIn>
               <p className="text-[#D4AF37] text-sm uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-[#D4AF37]"></span> About Me
               </p>
-              <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight">
-                Not Just a Host. <br /> An <GoldTextureText>Experience.</GoldTextureText>
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight">
+                The Difference Between a <br/> "Mic Holder" and a <br/>
+                <GoldTextureText>Crowd Controller.</GoldTextureText>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-6 font-light">
-                Anyone can hold a microphone. My job isn't just to speak; it's to sense the room's heartbeat and sync it with the event's flow.
+                I am Yash Soni. For the last 5 years, I haven't just hosted events; I’ve saved them, elevated them, and turned them into memories.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed font-light mb-8">
-                From the royal corridors of <strong>Jaipur</strong> to high-stakes corporate boardrooms, I bring a blend of **wit, warmth, and command** that turns a scheduled timeline into a seamless memory.
+                1100+ stages later, I’m just getting started.
               </p>
             </FadeIn>
           </section>
 
-          {/* 2. THE STATS: HARD PROOF */}
+          {/* 2. THE STATS: SOCIAL PROOF */}
           <section className="py-20 p-8 md:p-20 border-b border-neutral-900 bg-[#080808]">
             <FadeIn>
               <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-12">By The Numbers</h3>
               <div className="grid grid-cols-2 gap-12">
                 <div>
                   <p className="text-5xl font-display font-black text-white mb-2">1100+</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Events Hosted</p>
+                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Live Events</p>
                 </div>
                 <div>
                   <p className="text-5xl font-display font-black text-white mb-2">05+</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Years Active</p>
+                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Years Experience</p>
                 </div>
                 <div>
-                  <p className="text-5xl font-display font-black text-white mb-2">50+</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Cities Covered</p>
+                  <p className="text-5xl font-display font-black text-white mb-2">0</p>
+                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Canned Jokes</p>
                 </div>
                 <div>
                   <p className="text-5xl font-display font-black text-white mb-2">100%</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Client Return Rate</p>
+                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Unscripted Energy</p>
                 </div>
               </div>
             </FadeIn>
           </section>
 
-          {/* 3. CHAPTER 1: THE SPARK */}
+          {/* 3. THE ORIGIN STORY */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
             <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">01</span>
             <FadeIn>
-              <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10">The Spark</h3>
+              <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10">It Started With a Spark (2019)</h3>
+              <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10 mb-6">
+                Five years ago, I picked up a microphone with a simple goal: to kill the awkward silence. What started as a hobby quickly turned into an obsession.
+              </p>
               <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10">
-                It started in 2019. Not on a grand stage, but with a simple realization: **People don't remember what you said, they remember how you made them feel.** </p>
-              <p className="text-gray-400 leading-relaxed font-light text-lg mt-4 relative z-10">
-                I obsessed over the craft. I studied stand-up comedy to master timing. I studied psychology to understand crowds. I didn't want to be a "filler" between performances; I wanted to be the glue that held the night together.
+                While others were memorizing scripts, I was studying human behavior. I learned the hard way—dealing with bad sound systems, tough crowds, and last-minute schedule changes. I learned how to read a room instantly, understanding exactly when to crack a joke and when to let the emotion sink in.
               </p>
             </FadeIn>
           </section>
 
-          {/* 4. THE SIGNATURE STYLE */}
+          {/* 4. THE PHILOSOPHY */}
           <section className="py-20 p-8 md:p-20 border-b border-neutral-900 bg-[#080808]">
             <FadeIn>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-12">My Signature Style</h3>
-              <div className="space-y-8">
-                <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-all">
-                    <Sparkles className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Unscripted Wit</h4>
-                    <p className="text-gray-400 text-sm font-light leading-relaxed">I hate cue cards. I read the room, roast the groom's best friend, and create moments that feel spontaneous, not rehearsed.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-all">
-                    <Zap className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">High Voltage Energy</h4>
-                    <p className="text-gray-400 text-sm font-light leading-relaxed">Whether it's 2 PM or 2 AM, my energy level stays at a 10. I am the coffee for your event.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-all">
-                    <Briefcase className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">Corporate Elegance</h4>
-                    <p className="text-gray-400 text-sm font-light leading-relaxed">I know when to switch from "Party Mode" to "Professional Mode." Seamless transitions for Awards, Summits, and R&R.</p>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-12">My Philosophy</h3>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-8">
+                I Don't "Manage" Crowds. <br/> <GoldTextureText>I Move Them.</GoldTextureText>
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed font-light mb-6">
+                There are two types of anchors in Jaipur: the ones who read poetry from a phone, and the ones who connect. I am the second type.
+              </p>
+              <p className="text-gray-400 text-lg leading-relaxed font-light">
+                My "secret sauce" isn't a fancy suit; it’s adaptability. Whether it’s a chaotic Sangeet with 500 dancing relatives or a strict Corporate Award show, I switch gears instantly. I am the calm in the chaos.
+              </p>
             </FadeIn>
           </section>
 
-          {/* 5. CHAPTER 2: THE ASCENT */}
+          {/* 5. VENUE AUTHORITY (NEW ADDITION) */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
             <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">02</span>
             <FadeIn>
-              <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10">The Ascent</h3>
-              <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10">
-                By 2022, the calendar was full. Crossing the **500+ event mark** wasn't just a number; it was 500 different audiences, 500 unexpected technical glitches handled with a smile, and 500 families trusting me with their biggest days.
+              <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10">Stages I've Conquered</h3>
+              <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10 mb-8">
+                You don't trust a pilot who hasn't flown. Over the last 5 years, I’ve held the mic at some of India's most iconic venues. I know their acoustics, their layouts, and their teams.
               </p>
-              <div className="flex flex-wrap gap-3 mt-8 relative z-10">
-                {["Weddings", "Corporate", "Sangeet", "Launches", "Concerts"].map((tag) => (
-                  <span key={tag} className="px-4 py-2 border border-neutral-800 rounded-full text-xs text-gray-500 uppercase tracking-wider hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all cursor-default">
-                    {tag}
-                  </span>
-                ))}
+              
+              <div className="grid gap-6 relative z-10">
+                <div className="flex items-start gap-4">
+                  <MapPin className="text-[#D4AF37] w-6 h-6 shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-white font-bold mb-1">The Palaces</h4>
+                    <p className="text-gray-500 text-sm">Rambagh Palace, Jai Mahal, City Palace Udaipur</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Star className="text-[#D4AF37] w-6 h-6 shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-white font-bold mb-1">The Luxury Hotels</h4>
+                    <p className="text-gray-500 text-sm">Fairmont Jaipur, Marriott, The Leela</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Briefcase className="text-[#D4AF37] w-6 h-6 shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-white font-bold mb-1">The Corporate Hubs</h4>
+                    <p className="text-gray-500 text-sm">JECC Sitapura, Birla Auditorium</p>
+                  </div>
+                </div>
               </div>
+              <p className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest mt-10">Know your venue is on this list? Then I already know the drill.</p>
             </FadeIn>
           </section>
 
-          {/* 6. EDITORIAL REVIEW (Visual Break) */}
-          <section className="py-32 p-8 md:p-20 border-b border-neutral-900 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-fixed">
+          {/* 6. SIGNATURE STYLE (NEW ADDITION) */}
+          <section className="py-20 p-8 md:p-20 border-b border-neutral-900 bg-[#080808]">
             <FadeIn>
-              <Quote className="w-12 h-12 text-[#D4AF37] mb-8" />
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-white leading-tight mb-8">
-                "We have hired many anchors before, but Yash brings a different class. He doesn't just speak; he commands the room."
-              </h3>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-neutral-800 rounded-full overflow-hidden flex items-center justify-center text-xl font-bold">
-                  R
+              <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-12">Signature Style</h3>
+              <h2 className="text-3xl font-display font-bold text-white mb-6">No "Pass the Parcel" Here.</h2>
+              <p className="text-gray-400 text-lg leading-relaxed font-light mb-8">
+                My games aren't for kids (unless it's a kids' party). I curate modern, high-energy interactions that get people off their chairs.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50 hover:border-[#D4AF37]/50 transition-colors">
+                  <h4 className="text-white font-bold mb-2 flex items-center gap-2"><Sparkles size={18} className="text-[#D4AF37]"/> For Sangeets</h4>
+                  <p className="text-gray-400 text-sm">"The Couple Trivia" (Roast edition), "Dance-Offs" (Boys vs. Girls).</p>
                 </div>
-                <div>
-                  <p className="text-white font-bold">Rajesh Gupta</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">CEO, TechStreams</p>
+                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50 hover:border-[#D4AF37]/50 transition-colors">
+                  <h4 className="text-white font-bold mb-2 flex items-center gap-2"><Zap size={18} className="text-[#D4AF37]"/> For Corporates</h4>
+                  <p className="text-gray-400 text-sm">"Ice-Breakers" that don't feel awkward, Rapid-fire industry quizzes.</p>
                 </div>
               </div>
+              <p className="text-gray-500 italic mt-6 text-sm">The Rule: No one is forced to participate, but everyone will want to.</p>
             </FadeIn>
           </section>
 
-          {/* 7. CHAPTER 3: THE STANDARD */}
+          {/* 7. CRISIS MANAGEMENT (NEW ADDITION) */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
             <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">03</span>
             <FadeIn>
-              <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10">The Standard</h3>
-              <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10">
-                Today, with **1100+ events** across India, my philosophy has evolved. It's no longer about proving I can hold a stage. It's about **elevating** it. 
+              <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10 flex items-center gap-3">
+                <ShieldAlert className="text-[#D4AF37]" /> Crisis Management
+              </h3>
+              <h4 className="text-2xl font-bold text-white mb-6 relative z-10">Scripts are Safety Nets. I Don't Use Them.</h4>
+              <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10 mb-6">
+                A script can't help you when the electricity goes out or the Bride is 20 minutes late. Most anchors panic. I pivot.
               </p>
-              <p className="text-gray-400 leading-relaxed font-light text-lg mt-4 relative z-10">
-                I work with brands and families who refuse to settle for "average." When you book Anchor Yash Soni, you aren't booking a vendor. You are booking insurance against boredom.
+              <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10">
+                I have a mental library of 50+ filler interactions ready for these exact moments. When the unexpected happens, I don't just fill the silence; I make the audience think it was part of the plan all along.
               </p>
             </FadeIn>
           </section>
 
-          {/* 8. SIGNATURE SIGN OFF */}
+          {/* 8. THE CLOSER */}
           <section className="min-h-[60vh] flex flex-col justify-center items-center text-center p-8 md:p-20 bg-[#D4AF37] text-black">
             <Quote className="w-12 h-12 mb-6 opacity-50" />
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight">
-              "Your stage is waiting. <br/> Let's make it legendary."
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight">
+              "Your Stage, <br/> My Responsibility."
             </h2>
+            <p className="text-black/80 text-xl max-w-2xl mx-auto mb-12 font-medium">
+              When you hand me the mic, you aren't just hiring a vendor. You are handing over the responsibility of your reputation. I take that seriously. You enjoy the party; I'll handle the rest.
+            </p>
             
             {/* Digital Signature Graphic */}
             <div className="font-handwriting text-7xl md:text-8xl opacity-80 rotate-[-5deg] mb-12 font-black tracking-tighter mix-blend-multiply">

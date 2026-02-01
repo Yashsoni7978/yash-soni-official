@@ -94,7 +94,7 @@ const PLATFORMS = [
 
 const PHILOSOPHY = [
   { icon: Sparkles, title: "Spontaneity", text: "Scripts are good, but the magic happens in the moment. I read the room, not just the paper." },
-  { icon: Users, title: "Connection", text: "I don't speak *at* the audience; I speak *with* them. Every guest feels seen and involved." },
+  { icon: Users, title: "Connection", text: "I don't speak at the audience; I speak with them. Every guest feels seen and involved." },
   { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
 ];
 
@@ -118,7 +118,6 @@ const REVIEWS = [
   { name: "Vartika Jetawat", date: "19 Jun 2024", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic thorough the function." }
 ];
 
-// --- 12 EXPANDED FAQS ---
 const FAQS = [
   { q: "Who is the Best Anchor in Jaipur for events?", a: "While Jaipur is full of talent, my clients hire me (Anchor Yash) because I treat the audience like friends, not spectators. I combine the traditional grace of Rajasthani hospitality with modern, high-energy hosting. Check my 500+ happy client reviews—they tell the story better than I can." },
   { q: "Do you travel for Destination Weddings outside Jaipur?", a: "Absolutely. 'Have Mic, Will Travel.' While Jaipur is home, I’ve hosted weddings in Udaipur, Jodhpur, and across India. Travel logistics are simple and we can discuss them during our first call." },
@@ -205,14 +204,13 @@ const ScrollReveal = ({ children, delay = 0, className = "" }: { children: React
   </motion.div>
 );
 
-// --- FAQ COMPONENT (Matches the Screenshot: Gold Border + Glow) ---
 const FAQItem = ({ q, a }: { q: string, a: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div 
       className={`group rounded-2xl border transition-all duration-300 ${
         isOpen 
-          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" // Active Style: Gold Border + Glow
+          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" // Active Style: Gold Border
           : "border-white/10 bg-transparent hover:border-white/20" // Inactive Style
       }`}
     >
@@ -277,15 +275,15 @@ export default function HomePage() {
           >
             <div className="mb-6 inline-block">
                <span className="border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 text-[#D4AF37] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                 Jaipur's Premier Event Host
+                 A PREMIUM AWARD WINNING ANCHOR
                </span>
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.95]">
-              Turning "Just Another Event" <br/> Into The Night They Won't <br />
-              <GoldTextureText>Stop Talking About.</GoldTextureText>
+              ANCHOR <br />
+              <GoldTextureText>YASH</GoldTextureText>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-2xl font-light leading-relaxed">
-              Your story, my voice. From high-energy Sangeets in Jaipur to sharp Corporate Galas—I bring the wit, the warmth, and the command to keep your guests glued to their seats.
+              Commanding the stage with wit, warmth, and a voice that defines the moment.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
@@ -539,7 +537,7 @@ export default function HomePage() {
                   </div>
                   <ExternalLink className="text-zinc-600 group-hover:text-[#D4AF37] transition-colors" size={18} />
                 </div>
-                <p className="text-zinc-300 text-sm md:text-lg leading-relaxed mb-8 font-light italic">
+                <p className="text-zinc-300 text-sm md:text-lg leading-relaxed mb-8 font-normal">
                   "{review.text}"
                 </p>
               </div>
@@ -557,7 +555,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. FAQ (REDESIGNED & EXPANDED) */}
+      {/* 11. FAQ (12 Questions) */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <ScrollReveal>
