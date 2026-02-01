@@ -25,7 +25,6 @@ const style = `
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
   }
-  /* Slower speed for readability */
   .animate-marquee {
     animation: marquee 45s linear infinite;
   }
@@ -52,7 +51,6 @@ const revealUp: Variants = {
 
 // --- 3. DATA CONSTANTS ---
 
-// NEW: STATS DATA
 const STATS_DATA = [
   { value: "1100+", label: "Events Hosted", icon: Mic },
   { value: "05+", label: "Years Experience", icon: Award },
@@ -60,32 +58,30 @@ const STATS_DATA = [
   { value: "70+", label: "Corporate Clients", icon: UserCheck }
 ];
 
-// NEW: SIGNATURE SERVICES (Image Cards)
+// UPDATED: SERVICES (New Vibe)
 const SIGNATURE_SERVICES = [
   { 
-    title: "Wedding Anchor", 
-    desc: "Professional hosting for your special day with seamless ceremony management, ensuring every ritual and moment is celebrated with grace.",
+    title: "The Wedding Architect", 
+    desc: "The 'Family Member with a Mic.' I handle everything from the chaotic Baraat entry to the emotional Varmala. I don't just host; I manage the crowd, keep the drunk uncles in check, and make sure the Sangeet games actually get people laughing.",
     img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
   },
   { 
-    title: "Corporate Anchor", 
-    desc: "Polished and engaging hosting for business events, galas, and conferences. Maintaining high energy while respecting brand tonality.",
+    title: "The Corporate Pro", 
+    desc: "Professional doesn't have to mean 'boring.' I bridge the gap between the boardroom and the banquet hall. High energy for the awards, sharp wit for the engagement, and total brand alignment for your stakeholders.",
     img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80"
   },
   { 
-    title: "Fashion Show Host", 
-    desc: "Bringing glamour and energy to runway events and fashion weeks. A voice that complements the style and swagger of the ramp.",
+    title: "The Runway Voice", 
+    desc: "A ramp walk needs a rhythm, not just a speaker. I provide the voice that matches the swagger of the models, keeping the tempo high and the audience’s cameras flashing.",
     img: "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?w=800&q=80"
   }
 ];
 
-// NEW: TRUSTED TAGS
 const TRUSTED_TAGS = [
   "Celebrity Weddings", "Corporate R&R Events", "Big Fat Indian Weddings", 
   "Award Ceremonies", "Live Productions", "Award Shows", "National-Level Sports Events"
 ];
 
-// UPDATED: PLATFORMS WITH LINKS & COLORS
 const PLATFORMS = [
   { name: "WedMeGood", link: "https://www.wedmegood.com/profile/anchor-yash-25628297", color: "hover:text-[#DE5D83]" },
   { name: "WeddingWire", link: "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166", color: "hover:text-[#1467B0]" },
@@ -103,11 +99,12 @@ const PHILOSOPHY = [
   { icon: Quote, title: "Storytelling", text: "Every event has a narrative. I weave anecdotes and emotions to create a cohesive journey." },
 ];
 
+// UPDATED: PROCESS (New Vibe)
 const PROCESS_STEPS = [
-  { num: "01", title: "Discovery", text: "We discuss your vision, the guest profile, and the specific vibe you want to set." },
-  { num: "02", title: "Curation", text: "I draft a custom run-of-show, selecting specific games, shayaris, and tone." },
-  { num: "03", title: "Execution", text: "I arrive early, coordinate with sound/DJ, and deliver a flawless performance." },
-  { num: "04", title: "Memories", text: "We wrap up with high energy, leaving your guests with stories they'll tell for years." },
+  { num: "01", title: "The Vibe Check", text: "We hop on a call. You tell me if you want 'Royal & Elegant' or 'Wild & Crazy.' We discuss the guest list, the inside jokes, and the 'Do Not Play' list." },
+  { num: "02", title: "Script & Spice", text: "I don't use templates. I draft a run-of-show that includes custom games for your specific crowd, shayaris that actually make sense, and a timeline that flows perfectly." },
+  { num: "03", title: "Showtime", text: "I arrive before the sound guy does. I sync with the DJ, check the mics, and handle the stage so you can actually enjoy your own party." },
+  { num: "04", title: "The After-Effect", text: "We end on a high note. My goal is simple: when guests leave, they should be asking you, 'Where did you find this guy?'" },
 ];
 
 const REVIEWS = [
@@ -123,19 +120,14 @@ const REVIEWS = [
   { name: "Vartika Jetawat", date: "19 Jun 2024", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic thorough the function." }
 ];
 
+// UPDATED: FAQS (SEO Gold)
 const FAQS = [
-  { q: "Who is the Best Anchor in Jaipur for events?", a: "Anchor Yash is widely recognized for his charismatic presence and professional versatility across Jaipur." },
-  { q: "What types of events do you specialize in?", a: "Specializations include Weddings, Sangeets, Corporate Meets, Fashion Shows, and Live Concerts." },
-  { q: "Do you travel for Destination Weddings outside Jaipur?", a: "Yes, I travel globally to host weddings and corporate events." },
-  { q: "Which languages are you fluent in?", a: "I am fluent in Hindi and English, allowing me to connect with diverse audiences." },
-  { q: "Do you also provide Event Management services?", a: "My primary focus is Anchoring/Emceeing, but I can recommend top-tier management partners." },
-  { q: "Can you provide a Female Anchor or Co-Host?", a: "Yes, co-hosted events can be arranged upon request." },
-  { q: "How far in advance should we book you?", a: "It is recommended to book 3-6 months in advance, especially for wedding seasons." },
-  { q: "What are your charges for an event?", a: "Charges vary based on event type, duration, and location. Please click 'Book Now' for a quote." },
-  { q: "Do you bring your own team?", a: "I work with your existing technical team or can bring a dedicated assistant if required." },
-  { q: "Why should we hire Anchor Yash over others?", a: "A unique blend of humor, professionalism, and a 'soft yet attracting' personality that keeps guests engaged." },
-  { q: "How do I confirm a booking with you?", a: "Bookings are confirmed via a formal agreement and an initial advance payment." },
-  { q: "Can we see videos of your past work?", a: "Absolutely! Visit the 'Portfolio' section or my YouTube channel for live performance clips." }
+  { q: "Who is the Best Anchor in Jaipur for events?", a: "While Jaipur is full of talent, my clients hire me (Anchor Yash) because I treat the audience like friends, not spectators. I combine the traditional grace of Rajasthani hospitality with modern, high-energy hosting. Check my 500+ happy client reviews—they tell the story better than I can." },
+  { q: "Do you travel for Destination Weddings outside Jaipur?", a: "Absolutely. 'Have Mic, Will Travel.' While Jaipur is home, I’ve hosted weddings in Udaipur, Jodhpur, and across India. Travel logistics are simple and we can discuss them during our first call." },
+  { q: "Which languages are you fluent in?", a: "I switch effortlessly between Hindi (for the emotions), English (for the class), and a bit of Marwari (to make the elders smile)." },
+  { q: "Do you also provide Event Management services?", a: "I focus 100% on the mic to ensure your hosting is perfect. However, after 5 years in the industry, I know the best vendors in Jaipur. I can definitely connect you with trusted planners, DJs, and decorators." },
+  { q: "Why should we hire Anchor Yash over others?", a: "Because I don't just read a script. I improvise. If the food is late, I keep the crowd entertained. If the bride needs 5 more minutes, I handle the delay without anyone noticing. I am your insurance policy against awkward silences." },
+  { q: "How do I confirm a booking with you?", a: "Simple. Click the 'Book Now' or WhatsApp button. We check the date, sign a simple agreement, and lock it in. Dates for the wedding season (Nov-Feb) usually book out 3-4 months in advance." }
 ];
 
 const GALLERY_IMAGES = [
@@ -209,16 +201,31 @@ const ScrollReveal = ({ children, delay = 0, className = "" }: { children: React
   </motion.div>
 );
 
+// UPDATED: FAQ ITEM WITH SHADOW DESIGN
 const FAQItem = ({ q, a }: { q: string, a: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="group border border-white/10 bg-zinc-900/40 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/40">
+    <div 
+      className={`group rounded-2xl border transition-all duration-500 overflow-hidden ${
+        isOpen 
+          ? "border-[#D4AF37] bg-[#0a0a0a] shadow-[0_0_25px_rgba(212,175,55,0.15)]" // Active State: Gold Border + Glow Shadow
+          : "border-white/10 bg-zinc-900/30 hover:border-[#D4AF37]/40 hover:shadow-lg" // Inactive State
+      }`}
+    >
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-start p-6 text-left hover:bg-white/5 transition-colors"
+        className="w-full flex justify-between items-center p-6 text-left"
       >
-        <span className={`font-semibold text-base pr-4 transition-colors ${isOpen ? 'text-[#D4AF37]' : 'text-zinc-200'}`}>{q}</span>
-        {isOpen ? <Minus className="text-[#D4AF37] shrink-0" /> : <Plus className="text-zinc-600 group-hover:text-[#D4AF37] shrink-0" />}
+        <span className={`font-bold text-lg md:text-xl pr-8 transition-colors ${
+          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+        }`}>
+          {q}
+        </span>
+        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300 ${
+          isOpen ? "bg-[#D4AF37] border-[#D4AF37] text-black rotate-180" : "bg-transparent border-zinc-600 text-zinc-400 group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+        }`}>
+          {isOpen ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} />}
+        </div>
       </button>
       <AnimatePresence>
         {isOpen && (
@@ -226,9 +233,14 @@ const FAQItem = ({ q, a }: { q: string, a: string }) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="px-6 pb-6 text-zinc-400 text-sm leading-relaxed"
+            className="overflow-hidden"
           >
-            {a}
+            <div className="px-6 pb-8 pt-0">
+              <div className="h-[1px] w-full bg-gradient-to-r from-[#D4AF37]/30 to-transparent mb-4" />
+              <p className="text-zinc-400 text-base leading-relaxed font-light">
+                {a}
+              </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -260,19 +272,19 @@ export default function HomePage() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             <div className="mb-6 inline-block">
                <span className="border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 text-[#D4AF37] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                 Jaipur's Premier Event Host
+                 Jaipur's Top Event Host
                </span>
             </div>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-6 tracking-tighter leading-[0.95]">
-              ANCHOR <br />
-              <GoldTextureText>YASH</GoldTextureText>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.95]">
+              Turning "Just Another Event" <br/> Into The Night They Won't <br />
+              <GoldTextureText>Stop Talking About.</GoldTextureText>
             </h1>
-            <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-lg font-light leading-relaxed">
-              Elevating your moments with <span className="text-white font-medium">energy</span>, <span className="text-white font-medium">charm</span>, and a touch of gold.
+            <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-2xl font-light leading-relaxed">
+              Your story, my voice. From high-energy Sangeets in Jaipur to sharp Corporate Galas—I bring the wit, the warmth, and the command to keep your guests glued to their seats.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
@@ -292,14 +304,20 @@ export default function HomePage() {
           <ScrollReveal>
              <h2 className="text-[#D4AF37] text-sm uppercase tracking-widest mb-4 font-bold">The Introduction</h2>
              <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-               "I don't just speak. <br /> I <GoldTextureText>connect souls</GoldTextureText>."
+               Scripts are boring. <br /> <GoldTextureText>Spontaneity is Magic</GoldTextureText>.
              </h3>
+             <p className="text-zinc-400 text-lg mb-6 leading-relaxed font-light">
+               Let’s be real—nobody remembers the decor if the vibe is dead. That’s where I step in.
+             </p>
              <p className="text-zinc-400 text-lg mb-8 leading-relaxed font-light">
-               From the royal palaces of Udaipur to corporate boardrooms in Jaipur, I have spent the last 5 years mastering the art of audience engagement.
+               I’m not just there to announce names; I’m there to read the room. Whether it’s decoding Sanskrit shlokas for a traditional ceremony or roasting the boss (respectfully!) at a corporate party, I know exactly when to dial up the energy and when to let the moment breathe.
+             </p>
+             <p className="text-white text-xl font-bold italic mb-8">
+               5 Years. 1100+ Mic Checks. Zero dull moments.
              </p>
              <div className="mt-8">
                <span className="inline-block border-b border-[#D4AF37] pb-1 text-[#D4AF37] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
-                 Read My Story &rarr;
+                 read my story &rarr;
                </span>
              </div>
           </ScrollReveal>
@@ -319,11 +337,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. NEW: STATS SECTION (Validating the Intro) */}
+      {/* 3. STATS SECTION */}
       <section className="py-20 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
-        {/* Subtle Background Glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
-        
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {STATS_DATA.map((stat, i) => (
@@ -341,14 +357,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. FEATURED MARQUEE (Social Proof) */}
+      {/* 4. FEATURED MARQUEE */}
       <section className="py-20 bg-black border-b border-white/5 relative z-20">
         <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-14 uppercase">
           FEATURED ON
         </h2>
         <div className="flex overflow-hidden mask-linear-gradient">
           <div className="flex whitespace-nowrap gap-32 items-center animate-marquee w-max">
-            {/* Loop 3x for smooth infinite scroll */}
             {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
               <a 
                 key={idx}
@@ -364,7 +379,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. NEW: SIGNATURE SERVICES (Visual Cards) */}
+      {/* 5. SIGNATURE SERVICES (Updated Text) */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -403,7 +418,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. NEW: TRUSTED BY TAGS (Scale & Niche) */}
+      {/* 6. TRUSTED BY TAGS */}
       <section className="py-20 bg-zinc-950 border-y border-white/5">
         <div className="container mx-auto px-6 text-center">
           <p className="text-zinc-500 mb-10 text-sm uppercase tracking-widest font-medium">Trusted by leading brands and events across</p>
@@ -419,7 +434,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. WHY ME (PHILOSOPHY) */}
+      {/* 7. WHY ME */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -441,7 +456,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. MOMENTS OF MAGIC (GALLERY) */}
+      {/* 8. MOMENTS OF MAGIC */}
       <section className="py-24 bg-zinc-900/30 overflow-hidden">
         <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
           <div>
@@ -475,7 +490,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. PROCESS STEPS */}
+      {/* 9. PROCESS STEPS (Updated) */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-20">
@@ -541,13 +556,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. FAQ */}
+      {/* 11. FAQ (NEW DESIGN) */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
-              Common <span className="text-[#D4AF37]">Questions</span>
-            </h2>
+            <div className="text-center mb-16">
+               <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
+                 Frequently Asked <span className="text-[#D4AF37]">Questions</span>
+               </h2>
+               <div className="h-1 w-20 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto rounded-full" />
+            </div>
           </ScrollReveal>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -568,7 +586,7 @@ export default function HomePage() {
               Your Stage Awaits.
             </h2>
             <p className="text-zinc-400 mb-12 max-w-lg mx-auto text-lg">
-              Dates for the upcoming season are filling fast. Secure your date with Jaipur's most trusted voice.
+              Spots this season are vanishing quickly. Lock in your moment through Jaipur’s top-rated choice.
             </p>
             <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#D4AF37] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
               <span className="relative z-10 flex items-center gap-3">
