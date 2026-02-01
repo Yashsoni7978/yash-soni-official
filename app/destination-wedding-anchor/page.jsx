@@ -9,7 +9,7 @@ import {
   ChevronDown, Luggage
 } from "lucide-react";
 
-// --- REUSABLE COMPONENTS ---
+// --- 1. REUSABLE COMPONENTS ---
 const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
@@ -43,6 +43,28 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
     </motion.div>
   </div>
 );
+
+// --- 2. SEO KEYWORDS & CONTENT ---
+const KEYWORDS = {
+  heroTitle: "Destination Wedding Anchor",
+  locations: "Udaipur, Goa, Jaipur, Dubai, Thailand",
+  metaDesc: "Top Destination Wedding Emcee for 3-day royal weddings. Expert in crowd engagement, pool parties, and sangeet hosting globally."
+};
+
+const FAQS = [
+  { q: "Do you travel for weddings outside India?", a: "Yes! I hold a valid passport and frequently host weddings in Dubai, Thailand, and Bali. International bookings require at least 3 months' notice for visa logistics." },
+  { q: "How many days do you stay for a destination wedding?", a: "I stay for the entire duration (usually 2-3 days). I arrive one day prior to the first event to sync with the venue team and depart the morning after the reception." },
+  { q: "What is your role during non-stage events (like lunch)?", a: "I act as a 'Social Glue.' I mingle with guests, play ice-breaker games, and ensure both sides of the family are interacting, rather than sitting in separate groups." },
+  { q: "Who handles your travel and stay?", a: "The client arranges return flights (from Jaipur) and accommodation at the wedding venue (same hotel as guests) for myself and one assistant." },
+  { q: "Can you host the Pool Party or Haldi?", a: "Absolutely. These are my favorite events! I bring high-energy games, water activities (if pool), and fun commentary to kickstart the party vibe." },
+  { q: "Do you charge extra for blocking 3 full days?", a: "My Destination Wedding Package is a flat fee that covers all events over the 2-3 days. There are no hidden hourly charges." },
+  { q: "What if our flight gets delayed?", a: "I always fly in 24 hours early precisely to avoid this risk. Reliability is part of the premium service." },
+  { q: "Do you have experience with palace weddings?", a: "Yes, I have extensively hosted at Rambagh Palace, Umaid Bhawan, and City Palace Udaipur. I understand the protocols and acoustics of heritage venues." },
+  { q: "Can you speak local languages for guests?", a: "I am fluent in English and Hindi. I can also use basic phrases in Gujarati, Punjabi, or Marwari to make elders feel at home." },
+  { q: "How do we coordinate with you before the wedding?", a: "We will have 2-3 Zoom video calls to finalize the itinerary, scripts, and games. I also create a dedicated WhatsApp group with your planner." },
+  { q: "Do you bring your own team?", a: "I travel with a manager who handles my sound check, script cues, and coordination. We work alongside your event planner." },
+  { q: "How early should we book for a destination wedding?", a: "Since these block 3-4 days of my calendar, I recommend booking 6-9 months in advance." }
+];
 
 export default function DestinationAnchor() {
   return (
@@ -214,13 +236,13 @@ export default function DestinationAnchor() {
         </div>
       </section>
 
-      {/* --- 6. TRAVEL LOGISTICS FAQ --- */}
-      <section className="py-24 max-w-4xl mx-auto px-4 border-t border-neutral-900">
+      {/* --- 6. LOGISTICS FAQ --- */}
+      <section className="py-24 max-w-6xl mx-auto px-4 border-t border-neutral-900">
         <SectionHeading subtitle="Logistics" title="Travel & Stay." align="center" />
-        <div className="space-y-4 mt-8">
-           <FAQItem question="Who handles travel & accommodation?" answer="The client provides travel (Flights) and Stay (in the same hotel as guests) for the Anchor + 1 Assistant. This ensures we are always on time for every function." />
-           <FAQItem question="Do you charge for 'Non-Event' days?" answer="If travel takes up a full day (e.g., International flights), a minimal block-date fee applies. For domestic travel within schedule, no extra charge." />
-           <FAQItem question="Do you bring your own team?" answer="I travel with one assistant/manager who handles my sound check, script cues, and coordination with your planner." />
+        <div className="grid md:grid-cols-2 gap-6 mt-16">
+           {FAQS.map((faq, idx) => (
+              <FAQItem key={idx} question={faq.q} answer={faq.a} />
+           ))}
         </div>
       </section>
 

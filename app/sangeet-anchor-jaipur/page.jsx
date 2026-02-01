@@ -40,6 +40,28 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
   </div>
 );
 
+// --- 2. SEO KEYWORDS & CONTENT ---
+const KEYWORDS = {
+  heroTitle: "Sangeet Anchor in Jaipur",
+  heroSubtitle: "Turn Your Night Into A Concert.",
+  metaDesc: "High-energy Sangeet Host in Jaipur. Expert in crowd interaction, couple games, and non-stop entertainment for weddings in Rajasthan."
+};
+
+const FAQS = [
+  { q: "Do you help script the family performances?", a: "Yes! I provide a funny, engaging script template for family members who are announcing performances. I also add my own witty one-liners to keep the flow smooth." },
+  { q: "How do you handle the 'Dead Air' between dances?", a: "That is my specialty. I fill gaps with interactive couple games, rapid-fire crowd questions, and impromptu dance-offs to ensure the energy never drops." },
+  { q: "Can you co-host with a family member?", a: "Absolutely. I love the 'Professional + Family' duo dynamic. I handle the flow and energy, while your cousin/friend adds the personal inside jokes." },
+  { q: "Do you host the After-Party?", a: "Yes. Once the performances end, I transition into an MC role to hype up the DJ set and get everyone (including the non-dancers) on the floor." },
+  { q: "What do you wear for a Sangeet?", a: "I dress to match the glamour of the night. Typically a sharp, designer Indo-Western outfit or a Tuxedo, depending on your theme." },
+  { q: "Do you travel for Sangeets outside Jaipur?", a: "Yes, I regularly host Sangeets in Udaipur, Jodhpur, Goa, and Delhi. Travel logistics are simple and handled professionally." },
+  { q: "How long do you stay at the event?", a: "I am there from the first song until the DJ takes over completely. Usually, a 4-6 hour high-energy shift." },
+  { q: "Do you bring your own sound system?", a: "No, I work with your appointed DJ/Sound vendor. However, I do a sound check 2 hours prior to ensure the mics are crisp." },
+  { q: "What makes you different from other anchors?", a: "I treat a Sangeet like a concert, not a school assembly. No boring poetry. Just high-octane interaction and entertainment." },
+  { q: "How do we book you?", a: "Click the 'Book The Hype' button below to check my availability for your date. Sangeet dates book out very fast." },
+  { q: "Can we see videos of your past Sangeets?", a: "Yes! Scroll up to the 'Watch Showreel' button or visit my Instagram for raw, unedited clips of my crowd work." },
+  { q: "What are your charges for a Sangeet?", a: "My fee depends on the location and duration. Contact me directly for a custom quote." }
+];
+
 export default function SangeetAnchor() {
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-purple-600 selection:text-white">
@@ -49,7 +71,6 @@ export default function SangeetAnchor() {
         {/* Background - Concert/Stage Vibe */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/60 to-purple-900/20 z-10" />
-          {/* Replace with a photo of you on stage with lights */}
           <img 
             src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop" 
             className="w-full h-full object-cover scale-105 animate-slow-zoom" 
@@ -83,7 +104,7 @@ export default function SangeetAnchor() {
                 </button>
               </Link>
               <button className="px-10 py-4 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-purple-900/20 transition-colors rounded-full flex items-center justify-center gap-3">
-                 <Play className="w-4 h-4 fill-current" /> Watch Showreel
+                  <Play className="w-4 h-4 fill-current" /> Watch Showreel
               </button>
             </div>
 
@@ -93,13 +114,13 @@ export default function SangeetAnchor() {
 
       {/* --- 2. ENERGY METRICS --- */}
       <div className="bg-[#0a0a0a] border-y border-neutral-800 py-12 overflow-hidden relative">
-         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10"></div>
-         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
-             <VibeStat icon={<Flame className="w-6 h-6 text-orange-500" />} val="High" label="Voltage" />
-             <VibeStat icon={<Users className="w-6 h-6 text-blue-500" />} val="Engaged" label="Crowd" />
-             <VibeStat icon={<Music className="w-6 h-6 text-purple-500" />} val="Non-Stop" label="Beats" />
-             <VibeStat icon={<Star className="w-6 h-6 text-yellow-400" />} val="Filmy" label="Drama" />
-         </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10"></div>
+          <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+              <VibeStat icon={<Flame className="w-6 h-6 text-orange-500" />} val="High" label="Voltage" />
+              <VibeStat icon={<Users className="w-6 h-6 text-blue-500" />} val="Engaged" label="Crowd" />
+              <VibeStat icon={<Music className="w-6 h-6 text-purple-500" />} val="Non-Stop" label="Beats" />
+              <VibeStat icon={<Star className="w-6 h-6 text-yellow-400" />} val="Filmy" label="Drama" />
+          </div>
       </div>
 
       {/* --- 3. THE SANGEET MENU (Segments) --- */}
@@ -161,9 +182,9 @@ export default function SangeetAnchor() {
                   </p>
                   
                   <div className="space-y-6">
-                     <VibeCheck title="Scripting Support" desc="I help write the anchors' script for family members hosting segments." />
-                     <VibeCheck title="DJ Coordination" desc="I sync with the DJ for perfect entry music and punchline sound effects." />
-                     <VibeCheck title="After-Party Hype" desc="When the performances end, I turn into an MC to kickstart the open dance floor." />
+                      <VibeCheck title="Scripting Support" desc="I help write the anchors' script for family members hosting segments." />
+                      <VibeCheck title="DJ Coordination" desc="I sync with the DJ for perfect entry music and punchline sound effects." />
+                      <VibeCheck title="After-Party Hype" desc="When the performances end, I turn into an MC to kickstart the open dance floor." />
                   </div>
                </div>
 
@@ -175,10 +196,9 @@ export default function SangeetAnchor() {
       <section className="py-24 max-w-4xl mx-auto px-4">
         <SectionHeading subtitle="Backstage" title="The Technicals" align="center" />
         <div className="space-y-4 mt-8">
-           <FAQItem question="Do you help with the Run-of-Show?" answer="Yes! I sit with your planner/choreographer to design the sequence of performances so the energy graph keeps going up." />
-           <FAQItem question="Can you co-host with a family member?" answer="Absolutely. I love co-hosting! I take the lead on the 'heavy lifting' and let the family member shine with inside jokes." />
-           <FAQItem question="Do you provide scripts?" answer="Yes. I provide a template script for the family and customize my own links based on the couple's story." />
-           <FAQItem question="What do you wear?" answer="I stick to the theme. Usually a sharp Tuxedo or a Designer Indo-Western/Sherwani depending on the decor." />
+           {FAQS.map((faq, idx) => (
+              <FAQItem key={idx} question={faq.q} answer={faq.a} />
+           ))}
         </div>
       </section>
 

@@ -1,17 +1,56 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Mic, Heart, Music, Star, Calendar, ArrowRight, Play, 
-  CheckCircle, Sparkles, ChevronDown, Quote, Camera, Wine, Sun, Users
+  CheckCircle, Sparkles, ChevronDown, Quote, Camera, Wine, Sun, Users, MapPin
 } from "lucide-react";
 
-// --- 1. REUSABLE LUXURY COMPONENTS ---
+// --- 1. CONFIGURATION & STYLES ---
+const GOLD_COLOR = "#D4AF37";
+
+const style = `
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .sparkle-text {
+    background-size: 200% auto;
+    animation: shimmer 4s linear infinite;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+`;
+
+// --- 2. ANIMATION HELPERS ---
+const revealUp = {
+  hidden: { y: 60, opacity: 0 },
+  visible: { 
+    y: 0, 
+    opacity: 1, 
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+  }
+};
+
+const ScrollReveal = ({ children, delay = 0, className = "" }) => (
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={revealUp}
+    className={className}
+  >
+    {children}
+  </motion.div>
+);
+
+// --- 3. COMPONENTS ---
 const GoldTextureText = ({ children, className }) => (
   <span 
-    className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
+    className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
       backgroundColor: "#D4AF37", 
@@ -21,28 +60,34 @@ const GoldTextureText = ({ children, className }) => (
   </span>
 );
 
-const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
-  <div className={`mb-12 ${align === "center" ? "text-center" : "text-left"}`}>
+const FilmGrain = () => (
+  <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-50 mix-blend-overlay" 
+    style={{ backgroundImage: 'url("https://upload.wikimedia.org/wikipedia/commons/7/76/Noise.png")' }}>
+  </div>
+);
+
+const SectionHeading = ({ subtitle, title, align = "left" }) => (
+  <div className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-3 flex items-center gap-3 justify-center md:justify-start">
+      <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4 flex items-center gap-3 justify-center md:justify-start font-bold">
         {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
         {subtitle}
         {align !== "center" && <span className="w-12 h-[1px] bg-[#D4AF37]"></span>}
         {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
       </p>
-      <h2 className={`text-3xl md:text-5xl font-display font-black leading-tight ${dark ? 'text-black' : 'text-white'}`}>
+      <h2 className="text-4xl md:text-6xl font-display font-black leading-tight text-white">
         {title}
       </h2>
     </motion.div>
   </div>
 );
 
-// --- 2. DATA: CULTURAL EXPERTISE ---
+// --- 4. DATA ---
 const WEDDING_TYPES = [
   { title: "Hindu Weddings", desc: "Mastering the Vedic rituals, Pheras commentary, and the high-energy Baraat.", icon: "🕉️" },
   { title: "Punjabi Weddings", desc: "Unmatched energy for the Dhol, Bhangra, and the wildest cocktail parties.", icon: "🪘" },
@@ -52,7 +97,6 @@ const WEDDING_TYPES = [
   { title: "Cross-Cultural", desc: "Blending traditions seamlessly for modern couples.", icon: "🤝" }
 ];
 
-// --- 3. DATA: THE EVENT JOURNEY ---
 const EVENT_FLOW = [
   { title: "Welcome Lunch", icon: Sun },
   { title: "Mayara / Bhaat", icon: Users },
@@ -67,7 +111,6 @@ const EVENT_FLOW = [
   { title: "After Party", icon: Music },
 ];
 
-// --- 4. DATA: 12 FAQS ---
 const FAQS = [
   { q: "Do you prepare scripts for our family members?", a: "Yes! I know Chachas and Masis get nervous. I provide simple, funny script templates and rehearse with them 10 minutes before the show to make them look like pros." },
   { q: "Can you handle a crowd that doesn't dance?", a: "That is my specialty. I have a set of 'Ice-Breaker' games and interactive crowd-pullers (like 'The Train' or 'Paper Dance') that force even the shyest guests off their chairs." },
@@ -83,36 +126,147 @@ const FAQS = [
   { q: "What are your charges?", a: "My fee depends on the number of days, location, and scope of work. Click 'Check Availability' to get a custom quote instantly." }
 ];
 
+// --- 5. SUB-COMPONENTS ---
+
+const HeroSlider = () => {
+  const images = [
+    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070", 
+    "https://images.unsplash.com/photo-1606216794074-735e91aa5c92?q=80&w=1974", 
+    "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070"
+  ];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => setIndex((i) => (i + 1) % images.length), 4000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="absolute inset-0 z-0 bg-black">
+      <AnimatePresence mode="popLayout">
+        <motion.img
+          key={index}
+          src={images[index]}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.5 }} 
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+          className="w-full h-full object-cover absolute inset-0 grayscale-[30%]"
+          alt="Royal Wedding Jaipur"
+        />
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
+      <FilmGrain />
+    </div>
+  );
+};
+
+const FAQItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div 
+      className={`group rounded-2xl border transition-all duration-300 ${
+        isOpen 
+          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
+          : "border-white/10 bg-transparent hover:border-white/20"
+      }`}
+    >
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex justify-between items-center p-6 text-left"
+      >
+        <span className={`font-bold text-lg md:text-xl pr-4 transition-colors ${
+          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+        }`}>
+          {question}
+        </span>
+        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
+          isOpen ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+        }`}>
+          {isOpen ? <ChevronDown size={18} className="rotate-180" /> : <ChevronDown size={18} />}
+        </div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
+              <div className="pt-4">{answer}</div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+const VisualServiceCard = ({ title, subtitle, img, icon, desc, tags, highlight }) => (
+  <div className={`group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer ${highlight ? 'ring-2 ring-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.2)]' : 'border border-neutral-900'}`}>
+    <div className="absolute inset-0">
+       <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+       <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-80"></div>
+    </div>
+    <div className="absolute inset-0 p-8 flex flex-col justify-end z-20">
+       <div className="transform transition-all duration-500 group-hover:-translate-y-4">
+          <div className={`w-14 h-14 mb-6 rounded-full flex items-center justify-center transition-all duration-500 ${highlight ? 'bg-[#D4AF37] text-black' : 'bg-black/50 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 group-hover:bg-[#D4AF37] group-hover:text-black'}`}>
+            {icon}
+          </div>
+          <p className="text-[#D4AF37] text-xs uppercase tracking-widest font-bold mb-2">{subtitle}</p>
+          <h3 className="text-3xl font-display font-bold text-white mb-0 group-hover:mb-4 transition-all">{title}</h3>
+       </div>
+       <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 delay-100 overflow-hidden">
+          <p className="text-gray-300 text-sm leading-relaxed font-light mb-6 border-l-2 border-[#D4AF37] pl-4">
+            {desc}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span key={tag} className="text-[10px] bg-black/50 backdrop-blur-md text-white px-3 py-1 rounded-full border border-white/20">
+                {tag}
+              </span>
+            ))}
+          </div>
+       </div>
+    </div>
+  </div>
+);
+
+const FeatureRow = ({ icon, title, desc }) => (
+  <div className="flex gap-5 group p-6 rounded-xl border border-white/5 hover:border-[#D4AF37]/30 hover:bg-white/5 transition-all">
+    <div className="w-14 h-14 rounded-full bg-[#0a0a0a] flex items-center justify-center text-[#D4AF37] shrink-0 group-hover:scale-110 transition-all duration-500 border border-white/10">
+      {icon}
+    </div>
+    <div>
+      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors">{title}</h4>
+      <p className="text-gray-400 text-sm leading-relaxed font-light max-w-md">{desc}</p>
+    </div>
+  </div>
+);
+
+// --- 6. MAIN PAGE COMPONENT ---
+
 export default function WeddingAnchor() {
   return (
     <div className="bg-[#050505] text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans relative">
+      <style>{style}</style>
       
-      {/* Background Noise Texture for Premium Feel */}
-      <div className="fixed inset-0 opacity-[0.03] pointer-events-none z-0" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}></div>
-
-      {/* --- 1. CINEMATIC HERO SECTION --- */}
+      {/* 1. HERO SECTION (NEW SLIDER DESIGN) */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/40 to-black/20 z-10" />
-          {/* Replace with high-quality wedding video/image */}
-          <img 
-            src="https://images.unsplash.com/photo-1606216794074-735e91aa5c92?q=80&w=1974&auto=format&fit=crop" 
-            className="w-full h-full object-cover scale-105 animate-slow-zoom" 
-            alt="Royal Wedding Jaipur"
-          />
-        </div>
-
+        <HeroSlider />
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
-            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 backdrop-blur-md mb-8">
+            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md mb-8 shadow-2xl">
               <Star className="w-4 h-4 text-[#D4AF37] fill-current" />
               <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">
                 Premium Wedding Emcee
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 drop-shadow-2xl tracking-tighter">
               The Voice of <br /> <GoldTextureText>Forever.</GoldTextureText>
             </h1>
             
@@ -123,7 +277,7 @@ export default function WeddingAnchor() {
             
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               <Link href="/contact">
-                <button className="group relative px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest overflow-hidden rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                <button className="group relative px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest overflow-hidden rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(212,175,55,0.4)]">
                   <span className="relative z-10 flex items-center gap-2">Check Availability <ArrowRight className="w-4 h-4" /></span>
                 </button>
               </Link>
@@ -133,27 +287,27 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 2. THE PHILOSOPHY (Editorial Layout) --- */}
+      {/* 2. THE PHILOSOPHY */}
       <section className="py-24 container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
           
-          {/* Text Content (Col 5) */}
+          {/* Text Content */}
           <div className="lg:col-span-5">
             <SectionHeading subtitle="The Approach" title="More Than Just A Mic." />
             <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
               Most anchors just read names off a paper. <strong className="text-white font-bold">I don't.</strong>
             </p>
             <p className="text-gray-400 text-lg leading-relaxed mb-12 border-l-2 border-[#D4AF37] pl-6 font-light">
-              I bridge the gap between the *Ladki-walas* and *Ladke-walas*, turning a room full of strangers into one big, loud, happy family.
+              I bridge the gap between the Ladki-walas and Ladke-walas, turning a room full of strangers into one big, loud, happy family.
             </p>
             
-            <div className="space-y-8">
-              <FeatureRow icon={<Heart />} title="Emotional Intelligence" desc="Knowing when to hype the crowd and when to let silence speak during rituals." />
-              <FeatureRow icon={<Sparkles />} title="Unscripted Wit" desc="Spontaneous humor that feels natural, not rehearsed. No cringy jokes." />
+            <div className="space-y-6">
+              <FeatureRow icon={<Heart className="text-[#D4AF37]" />} title="Emotional Intelligence" desc="Knowing when to hype the crowd and when to let silence speak during rituals." />
+              <FeatureRow icon={<Sparkles className="text-[#D4AF37]" />} title="Unscripted Wit" desc="Spontaneous humor that feels natural, not rehearsed. No cringy jokes." />
             </div>
           </div>
           
-          {/* Image Collage (Col 7) */}
+          {/* Image Collage */}
           <div className="lg:col-span-7 relative h-[600px]">
              <div className="absolute top-0 right-0 w-4/5 h-4/5 z-0">
                 <img src="https://images.unsplash.com/photo-1583203363541-f5c1d632969f?w=800&q=80" className="w-full h-full object-cover rounded-xl grayscale contrast-125 opacity-50" alt="Background Emotion" />
@@ -168,95 +322,100 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 3. CULTURAL WEDDINGS EXPERTISE (Updated with Data) --- */}
+      {/* 3. CULTURAL WEDDINGS EXPERTISE */}
        <section className="py-32 bg-[#080808] relative z-10 border-t border-neutral-900">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="Cultural Expertise" title="Celebrating Every Tradition" align="center" />
           
            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
               {WEDDING_TYPES.map((wedding, idx) => (
-                  <div key={idx} className="bg-[#111] border border-neutral-800 p-8 rounded-xl hover:border-[#D4AF37] transition-all duration-300 group">
-                      <div className="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">{wedding.icon}</div>
-                      <h3 className="text-xl font-bold text-white mb-2">{wedding.title}</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{wedding.desc}</p>
-                  </div>
+                  <ScrollReveal key={idx} delay={idx * 0.1}>
+                    <div className="bg-[#111] border border-neutral-800 p-8 rounded-xl hover:border-[#D4AF37] hover:shadow-[0_0_20px_rgba(212,175,55,0.1)] transition-all duration-300 group cursor-default">
+                        <div className="text-4xl mb-6 grayscale group-hover:grayscale-0 transition-all duration-300">{wedding.icon}</div>
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{wedding.title}</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">{wedding.desc}</p>
+                    </div>
+                  </ScrollReveal>
               ))}
            </div>
         </div>
       </section>
 
-
-      {/* --- 4. THE EVENT JOURNEY (Updated with Icons) --- */}
+      {/* 4. THE EVENT JOURNEY */}
       <section className="py-32 bg-[#050505] relative z-10 border-t border-neutral-900">
          <div className="container mx-auto px-4">
              <SectionHeading subtitle="The Full Experience" title="From Welcome To Varmala" align="center" />
              
              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
                  {EVENT_FLOW.map((event, i) => (
-                     <div key={i} className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-lg text-center hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default group">
-                         <event.icon className="w-6 h-6 mx-auto mb-3 text-[#D4AF37] group-hover:text-black transition-colors" />
-                         <p className="font-bold uppercase tracking-wider text-xs md:text-sm">{event.title}</p>
-                     </div>
+                     <ScrollReveal key={i} delay={i * 0.05}>
+                       <div className="bg-neutral-900/30 border border-neutral-800 p-6 rounded-lg text-center hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default group hover:scale-105">
+                           <event.icon className="w-6 h-6 mx-auto mb-3 text-[#D4AF37] group-hover:text-black transition-colors" />
+                           <p className="font-bold uppercase tracking-wider text-xs md:text-sm">{event.title}</p>
+                       </div>
+                     </ScrollReveal>
                  ))}
              </div>
          </div>
       </section>
 
-      {/* --- 5. THE TRINITY (VISUAL CARDS) --- */}
+      {/* 5. THE TRINITY (VISUAL CARDS) */}
       <section className="py-32 bg-[#080808] relative z-10 border-t border-neutral-900">
         <div className="container mx-auto px-4">
           <SectionHeading subtitle="My Expertise" title="The Wedding Trilogy" align="center" />
           
           <div className="grid md:grid-cols-3 gap-8 mt-20">
-            <VisualServiceCard 
-              title="The Sangeet"
-              subtitle="High Voltage Energy"
-              img="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=800&q=80"
-              icon={<Music className="w-8 h-8" />}
-              desc="The night of dance and drama. I handle the flow, introduce performances with personalized anecdotes, and run interactive couple games that get everyone on the floor."
-              tags={["Couple Games", "Family Roasts", "Non-Stop Hype"]}
-            />
-            <VisualServiceCard 
-              title="The Varmala"
-              subtitle="Cinematic Grandeur"
-              img="https://images.unsplash.com/photo-1604904839548-93a3074b4731?w=800&q=80" 
-              icon={<Heart className="w-8 h-8" />}
-              desc="The main event. I use poetic shayari and voice modulation to turn the garland exchange into a movie scene. Themes: Royal, Floral, or Fun."
-              tags={["Grand Entry", "Shayari", "Crowd Control"]}
-              highlight
-            />
-            <VisualServiceCard 
-              title="The Reception"
-              subtitle="Formal Elegance"
-              img="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
-              icon={<Star className="w-8 h-8" />}
-              desc="Crisp, classy, and polished. Ensuring VIP guests are acknowledged, the cake cutting is picture-perfect, and the couple looks like royalty."
-              tags={["VIP Protocol", "Cake Cutting", "Toastmaster"]}
-            />
+            <ScrollReveal delay={0.1}>
+              <VisualServiceCard 
+                title="The Sangeet"
+                subtitle="High Voltage Energy"
+                img="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=800&q=80"
+                icon={<Music className="w-8 h-8" />}
+                desc="The night of dance and drama. I handle the flow, introduce performances with personalized anecdotes, and run interactive couple games that get everyone on the floor."
+                tags={["Couple Games", "Family Roasts", "Non-Stop Hype"]}
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <VisualServiceCard 
+                title="The Varmala"
+                subtitle="Cinematic Grandeur"
+                img="https://images.unsplash.com/photo-1604904839548-93a3074b4731?w=800&q=80" 
+                icon={<Heart className="w-8 h-8" />}
+                desc="The main event. I use poetic shayari and voice modulation to turn the garland exchange into a movie scene. Themes: Royal, Floral, or Fun."
+                tags={["Grand Entry", "Shayari", "Crowd Control"]}
+                highlight
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={0.3}>
+              <VisualServiceCard 
+                title="The Reception"
+                subtitle="Formal Elegance"
+                img="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80"
+                icon={<Star className="w-8 h-8" />}
+                desc="Crisp, classy, and polished. Ensuring VIP guests are acknowledged, the cake cutting is picture-perfect, and the couple looks like royalty."
+                tags={["VIP Protocol", "Cake Cutting", "Toastmaster"]}
+              />
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* --- 6. MOMENTS (GALLERY) --- */}
-      <section className="py-24 container mx-auto px-4 relative z-10">
+      {/* 6. MOMENTS (GALLERY) */}
+      <section className="py-24 container mx-auto px-4 relative z-10 bg-zinc-950">
          <SectionHeading subtitle="Moments" title="Real Weddings. Real Emotion." />
          
          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
-           {/* Tall Item 1 */}
-           <div className="col-span-2 row-span-2 relative rounded-xl overflow-hidden group">
+           <div className="col-span-2 row-span-2 relative rounded-xl overflow-hidden group border border-white/10">
               <img src="https://images.unsplash.com/photo-1587271407850-8d4389106628?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-all"></div>
            </div>
-           {/* Square Item 2 */}
-           <div className="relative rounded-xl overflow-hidden group">
+           <div className="relative rounded-xl overflow-hidden group border border-white/10">
               <img src="https://images.unsplash.com/photo-1611105637889-3e7960025e83?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
            </div>
-            {/* Square Item 3 */}
-           <div className="relative rounded-xl overflow-hidden group">
+           <div className="relative rounded-xl overflow-hidden group border border-white/10">
               <img src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
            </div>
-           {/* Wide Item 4 */}
-           <div className="col-span-2 relative rounded-xl overflow-hidden group">
+           <div className="col-span-2 relative rounded-xl overflow-hidden group border border-white/10">
               <img src="https://images.unsplash.com/photo-1523438097201-5390507d5664?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wedding Moment" />
            </div>
          </div>
@@ -269,7 +428,7 @@ export default function WeddingAnchor() {
          </div>
       </section>
 
-      {/* --- 7. VIDEO STRIP --- */}
+      {/* 7. VIDEO STRIP */}
       <section className="py-20 bg-[#080808] border-y border-neutral-900 overflow-hidden relative z-10">
         <div className="container mx-auto px-4 mb-10">
            <div className="flex justify-between items-end">
@@ -290,18 +449,20 @@ export default function WeddingAnchor() {
         </div>
       </section>
 
-      {/* --- 8. WEDDING SPECIFIC FAQ (12 QUESTIONS) --- */}
+      {/* 8. WEDDING SPECIFIC FAQ (12 QUESTIONS) */}
       <section className="py-24 max-w-6xl mx-auto px-4 relative z-10">
         <SectionHeading subtitle="Clarifications" title="Common Wedding Questions" align="center" />
         
         <div className="grid md:grid-cols-2 gap-6 mt-16">
           {FAQS.map((faq, idx) => (
-             <FAQItem key={idx} question={faq.q} answer={faq.a} />
+             <ScrollReveal key={idx} delay={idx * 0.05}>
+                <FAQItem question={faq.q} answer={faq.a} />
+             </ScrollReveal>
           ))}
         </div>
       </section>
 
-      {/* --- 9. FINAL CTA --- */}
+      {/* 9. FINAL CTA */}
       <section className="py-32 bg-[#D4AF37] text-black text-center relative overflow-hidden z-10">
          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-multiply"></div>
          <div className="container mx-auto px-4 relative z-10">
@@ -320,84 +481,3 @@ export default function WeddingAnchor() {
     </div>
   );
 }
-
-// --- NEW SUB-COMPONENTS ---
-
-const FeatureRow = ({ icon, title, desc }) => (
-  <div className="flex gap-5 group">
-    <div className="w-14 h-14 rounded-full border border-neutral-800 bg-[#0a0a0a] flex items-center justify-center text-[#D4AF37] shrink-0 group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-500">
-      {icon}
-    </div>
-    <div>
-      <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
-      <p className="text-gray-400 text-sm leading-relaxed font-light max-w-md">{desc}</p>
-    </div>
-  </div>
-);
-
-// THE NEW VISUAL SERVICE CARD (HOVER REVEAL)
-const VisualServiceCard = ({ title, subtitle, img, icon, desc, tags, highlight }) => (
-  <div className={`group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer ${highlight ? 'ring-2 ring-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.2)]' : 'border border-neutral-900'}`}>
-    
-    {/* Background Image */}
-    <div className="absolute inset-0">
-       <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-       <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-80"></div>
-    </div>
-    
-    {/* Content Layer */}
-    <div className="absolute inset-0 p-8 flex flex-col justify-end z-20">
-       
-       {/* Initial View (Icon & Title) */}
-       <div className="transform transition-all duration-500 group-hover:-translate-y-4">
-          <div className={`w-14 h-14 mb-6 rounded-full flex items-center justify-center transition-all duration-500 ${highlight ? 'bg-[#D4AF37] text-black' : 'bg-black/50 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 group-hover:bg-[#D4AF37] group-hover:text-black'}`}>
-            {icon}
-          </div>
-          <p className="text-[#D4AF37] text-xs uppercase tracking-widest font-bold mb-2">{subtitle}</p>
-          <h3 className="text-3xl font-display font-bold text-white mb-0 group-hover:mb-4 transition-all">{title}</h3>
-       </div>
-
-       {/* Hidden Details (Reveal on Hover) */}
-       <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 delay-100 overflow-hidden">
-          <p className="text-gray-300 text-sm leading-relaxed font-light mb-6 border-l-2 border-[#D4AF37] pl-4">
-            {desc}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span key={tag} className="text-[10px] bg-black/50 backdrop-blur-md text-white px-3 py-1 rounded-full border border-white/20">
-                {tag}
-              </span>
-            ))}
-          </div>
-       </div>
-
-    </div>
-  </div>
-);
-
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-xl overflow-hidden transition-all duration-300 hover:border-[#D4AF37]/50">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full p-6 text-left"
-      >
-        <span className="font-bold text-white text-lg">{question}</span>
-        <ChevronDown className={`w-5 h-5 text-[#D4AF37] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
-          >
-            <p className="p-6 pt-0 text-gray-400 leading-relaxed font-light text-sm">{answer}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};

@@ -39,7 +39,23 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
   </div>
 );
 
-export default function HaldiMehndiAnchor() {
+// --- 2. SEO & CONTENT DATA ---
+const FAQS = [
+  { q: "Do you bring the props for games?", a: "Yes! I bring a 'Fun Kit' with ribbons, placards, blindfolds, and buzzers. You don't need to worry about sourcing the small stuff." },
+  { q: "Will the games be too messy for elders?", a: "Not at all. I categorize games into 'Messy' (for friends) and 'Classy' (for family). Elders enjoy watching and judging, while the youth gets dirty!" },
+  { q: "Do you handle the Dholwala?", a: "Yes, I coordinate with the Dhol team to sync beats with my commentary and the couple's entry. I make sure they stop when I speak!" },
+  { q: "Can you host a Phoolon Ki Holi?", a: "Absolutely. It's the most photogenic part of the Haldi. I choreograph the flower shower so your photographers get the perfect shot." },
+  { q: "What if people are shy to play?", a: "That's why you hire me. I don't force people; I lure them in with easy 'Ice-Breakers' that make everyone laugh. Within 10 minutes, even the shyest cousin is shouting answers." },
+  { q: "Do you wear yellow?", a: "I usually wear a vibrant Kurta (Yellow, Orange, or Floral) to match the Haldi theme perfectly. I blend in like a family member." },
+  { q: "How long is your Haldi package?", a: "Typically 3-4 hours. From the welcome dhol to the final 'everyone in the pool' moment." },
+  { q: "Can we customize the games?", a: "100%. If you want a specific 'Rapid Fire' about the couple or a 'Saree Draping Contest', we can add it to the run-of-show." },
+  { q: "Do you speak Marwari/Local languages?", a: "Khamma Ghani! Yes, I switch between Hindi, English, and Marwari/Punjabi to connect with the Dadi-Sa and the NRI cousins equally." },
+  { q: "What happens if it rains?", a: "I always have a 'Plan B' set of indoor games (Quizzes, Antakshari) that don't require running around, just in case the weather turns." },
+  { q: "Is sound system included?", a: "No, sound is provided by your vendor. I need one handheld mic and a good speaker system to control the crowd." },
+  { q: "How do we book you?", a: "Click the 'Book The Vibe' button below. Haldi dates fill up fast during the wedding season!" }
+];
+
+export default function HaldiAnchor() {
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-pink-500 selection:text-white">
       
@@ -81,7 +97,7 @@ export default function HaldiMehndiAnchor() {
                 </button>
               </Link>
               <button className="px-10 py-4 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white/10 transition-colors rounded-full flex items-center justify-center gap-3">
-                 <Play className="w-4 h-4 fill-current" /> Watch The Madness
+                  <Play className="w-4 h-4 fill-current" /> Watch The Madness
               </button>
             </div>
 
@@ -91,12 +107,12 @@ export default function HaldiMehndiAnchor() {
 
       {/* --- 2. THE STATS (Fun Metrics) --- */}
       <div className="bg-[#111] border-y border-neutral-800 py-12 overflow-hidden">
-         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-             <FunStat icon={<Zap className="w-6 h-6 text-yellow-400" />} val="100%" label="Energy Level" />
-             <FunStat icon={<Camera className="w-6 h-6 text-pink-500" />} val="Uncounted" label="Crazy Selfies" />
-             <FunStat icon={<Users className="w-6 h-6 text-green-400" />} val="Zero" label="Awkward Silence" />
-             <FunStat icon={<Trophy className="w-6 h-6 text-blue-400" />} val="Legendary" label="Game Moments" />
-         </div>
+          <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <FunStat icon={<Zap className="w-6 h-6 text-yellow-400" />} val="100%" label="Energy Level" />
+              <FunStat icon={<Camera className="w-6 h-6 text-pink-500" />} val="Uncounted" label="Crazy Selfies" />
+              <FunStat icon={<Users className="w-6 h-6 text-green-400" />} val="Zero" label="Awkward Silence" />
+              <FunStat icon={<Trophy className="w-6 h-6 text-blue-400" />} val="Legendary" label="Game Moments" />
+          </div>
       </div>
 
       {/* --- 3. THE "GAME JOCKEY" MENU --- */}
@@ -113,10 +129,10 @@ export default function HaldiMehndiAnchor() {
               color="yellow"
               icon={<Zap className="w-8 h-8" />}
               games={[
-                 "The Tug-of-War (Ladki vs Ladke)",
-                 "Saree Draping Challenge (For Men)",
-                 "The 'Knot' Challenge",
-                 "Musical Chairs (Extreme Edition)"
+                  "The Tug-of-War (Ladki vs Ladke)",
+                  "Saree Draping Challenge (For Men)",
+                  "The 'Knot' Challenge",
+                  "Musical Chairs (Extreme Edition)"
               ]}
            />
            {/* Couple Chemistry Category */}
@@ -125,10 +141,10 @@ export default function HaldiMehndiAnchor() {
               color="pink"
               icon={<Heart className="w-8 h-8" />}
               games={[
-                 "The Shoe Game (Viral Content)",
-                 "Paper Dance (Close & Cozy)",
-                 "The Whisper Challenge",
-                 "Blindfold Groom Search"
+                  "The Shoe Game (Viral Content)",
+                  "Paper Dance (Close & Cozy)",
+                  "The Whisper Challenge",
+                  "Blindfold Groom Search"
               ]}
            />
            {/* Crowd Chaos Category */}
@@ -137,43 +153,43 @@ export default function HaldiMehndiAnchor() {
               color="purple"
               icon={<Music className="w-8 h-8" />}
               games={[
-                 "Antakshari War (Boys vs Girls)",
-                 "Pass the Pillow (With Dares)",
-                 "Bollywood Hookstep Challenge",
-                 "Find the Ring (Haldi Special)"
+                  "Antakshari War (Boys vs Girls)",
+                  "Pass the Pillow (With Dares)",
+                  "Bollywood Hookstep Challenge",
+                  "Find the Ring (Haldi Special)"
               ]}
            />
         </div>
       </section>
 
-      {/* --- 4. THE TWO VIBES (Haldi vs Sangeet) --- */}
+      {/* --- 4. VISUAL PROOF (Gallery Style) --- */}
       <section className="py-32 bg-[#0a0a0a] border-y border-neutral-900">
          <div className="container mx-auto px-4">
-            <SectionHeading subtitle="The Flow" title="Two Moods. One Host." />
-            
-            <div className="grid lg:grid-cols-2 gap-12 mt-16">
-               {/* Haldi Card */}
-               <div className="relative h-[600px] group rounded-3xl overflow-hidden cursor-pointer border border-yellow-500/30">
-                  <img src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Haldi" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+               <div className="relative h-[600px] group rounded-3xl overflow-hidden border border-yellow-500/30">
+                  <img src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Haldi Fun" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-10">
-                     <h3 className="text-5xl font-display font-black text-yellow-400 mb-4">The Haldi</h3>
-                     <p className="text-white text-lg leading-relaxed">
-                        Flower showers, dhol beats, and yellow chaos. I manage the rituals with respect but ensure the "Holi" vibe takes over.
-                     </p>
+                      <h3 className="text-5xl font-display font-black text-yellow-400 mb-4">The Haldi</h3>
+                      <p className="text-white text-lg leading-relaxed">
+                         Flower showers, dhol beats, and yellow chaos. I manage the rituals with respect but ensure the "Holi" vibe takes over.
+                      </p>
                   </div>
                </div>
 
-               {/* Sangeet Card */}
-               <div className="relative h-[600px] group rounded-3xl overflow-hidden cursor-pointer border border-pink-500/30">
-                  <img src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Sangeet" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-10">
-                     <h3 className="text-5xl font-display font-black text-pink-500 mb-4">The Sangeet</h3>
-                     <p className="text-white text-lg leading-relaxed">
-                        Lights, Camera, Action. I introduce performances like a Filmfare host and roast the family (lovingly) in between sets.
-                     </p>
-                  </div>
+               <div>
+                  <SectionHeading subtitle="The Vibe" title="Laughter Guaranteed." />
+                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                     Haldi is the most intimate, fun event of the wedding. It's where the real personalities come out. <br /><br />
+                     My job is to amplify that. I make the shy chacha dance, the strict bua laugh, and the groom regret not applying waterproof makeup!
+                  </p>
+                  <ul className="space-y-4">
+                      {["No cringy jokes", "Family-friendly humor", "High engagement", "Viral video moments"].map((item, i) => (
+                          <li key={i} className="flex items-center gap-3 text-white">
+                              <Star className="w-5 h-5 text-yellow-500 fill-current" /> {item}
+                          </li>
+                      ))}
+                  </ul>
                </div>
             </div>
          </div>
@@ -183,10 +199,9 @@ export default function HaldiMehndiAnchor() {
       <section className="py-24 max-w-4xl mx-auto px-4">
         <SectionHeading subtitle="Good to Know" title="Common Questions" align="center" />
         <div className="space-y-4 mt-8">
-           <FAQItem question="Do you bring the props for games?" answer="Yes! I bring a 'Fun Kit' with ribbons, placards, blindfolds, and buzzers. You don't need to worry about sourcing the small stuff." />
-           <FAQItem question="Can you speak Marwari?" answer="Khamma Ghani! Absolutely. I switch between Hindi, English, and Marwari to connect with the Dadi-Sa and the NRI cousins equally." />
-           <FAQItem question="Will you drag people to the dance floor?" answer="100%. I have specific 'Ice-Breaker' techniques to get the non-dancers on the floor without making them feel awkward." />
-           <FAQItem question="Do you handle the Dholwala?" answer="Yes, I coordinate with the Dhol team to sync beats with my commentary and the couple's entry." />
+           {FAQS.map((faq, idx) => (
+              <FAQItem key={idx} question={faq.q} answer={faq.a} />
+           ))}
         </div>
       </section>
 
