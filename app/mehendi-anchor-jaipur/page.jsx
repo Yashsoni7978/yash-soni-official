@@ -65,7 +65,7 @@ export default function MehendiAnchor() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/50 to-green-900/20 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1595524362625-27c96797dbec?q=80&w=2070&auto=format&fit=crop" 
+            src="/gallery-3.webp" 
             className="w-full h-full object-cover scale-105 animate-slow-zoom" 
             alt="Mehendi Anchor Jaipur"
           />
@@ -168,7 +168,7 @@ export default function MehendiAnchor() {
          <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                <div className="relative h-[600px] group rounded-3xl overflow-hidden border border-green-500/30">
-                  <img src="https://images.unsplash.com/photo-1583934555026-63b5b44760b6?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Mehendi Fun" />
+                  <img src="/gallery-2.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Mehendi Fun" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-10">
                       <h3 className="text-5xl font-display font-black text-green-400 mb-4">The Mehendi</h3>

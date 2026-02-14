@@ -46,7 +46,7 @@ export default function About() {
           
           {/* UPDATED: Now uses your provided portrait image */}
           <img 
-            src="/intro-portrait-top.jpg" 
+            src="/intro-portrait-top.webp" 
             alt="Anchor Yash Soni" 
             className="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-1000 ease-in-out"
           />

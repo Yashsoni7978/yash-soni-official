@@ -14,7 +14,7 @@ const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
-      backgroundImage: "url('/gold-texture.png')", 
+      backgroundImage: "url('/gold-texture.webp')", 
       backgroundColor: "#D4AF37", 
     }}
   >
@@ -76,7 +76,7 @@ export default function DestinationAnchor() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#050505] z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2070&auto=format&fit=crop" 
+            src="/hero-slide-2.webp" 
             className="w-full h-full object-cover scale-110 animate-slow-zoom" 
             alt="Destination Wedding Anchor"
           />
@@ -142,10 +142,10 @@ export default function DestinationAnchor() {
            <div className="relative h-[600px] w-full">
               {/* Image Stack */}
               <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-neutral-800 rounded-2xl overflow-hidden transform rotate-3 border border-neutral-700">
-                 <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80" className="w-full h-full object-cover grayscale opacity-60" alt="Resort Vibe" />
+                 <img src="/gallery-6.webp" className="w-full h-full object-cover grayscale opacity-60" alt="Resort Vibe" />
               </div>
               <div className="absolute bottom-0 left-0 w-3/4 h-3/4 bg-black rounded-2xl overflow-hidden shadow-2xl border border-[#D4AF37] transform -rotate-3">
-                 <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80" className="w-full h-full object-cover" alt="Yash Soni Travel" />
+                 <img src="/intro-portrait-top.jpg" className="w-full h-full object-cover" alt="Yash Soni Travel" />
               </div>
            </div>
         </div>
@@ -208,20 +208,20 @@ export default function DestinationAnchor() {
            <LocationCard 
               name="Udaipur" 
               tag="The City of Lakes" 
-              img="https://images.unsplash.com/photo-1590766940555-154a8f192905?w=800&q=80" 
+              img="/gallery-1.webp" 
               colSpan="col-span-2"
            />
            {/* Card 2 */}
            <LocationCard 
               name="Goa" 
               tag="Beach Vibes" 
-              img="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80" 
+              img="/gallery-4.webp" 
            />
            {/* Card 3 */}
            <LocationCard 
               name="Jaipur" 
               tag="Royal Palaces" 
-              img="https://images.unsplash.com/photo-1599661046289-e318d6d48ed1?w=800&q=80" 
+              img="/service-wedding.webp" 
            />
         </div>
         <div className="text-center mt-12">

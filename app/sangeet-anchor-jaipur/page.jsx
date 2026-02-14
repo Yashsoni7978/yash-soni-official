@@ -72,7 +72,7 @@ export default function SangeetAnchor() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/60 to-purple-900/20 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop" 
+            src="/hero-slide-1.webp" 
             className="w-full h-full object-cover scale-105 animate-slow-zoom" 
             alt="Sangeet Anchor Jaipur"
           />
@@ -163,7 +163,7 @@ export default function SangeetAnchor() {
                
                <div className="relative h-[600px] w-full group">
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl transform -rotate-2 opacity-50 group-hover:rotate-0 transition-all duration-500"></div>
-                  <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" className="relative w-full h-full object-cover rounded-2xl shadow-2xl rotate-2 group-hover:rotate-0 transition-all duration-500" alt="Stage Hosting" />
+                  <img src="/gallery-4.webp" className="relative w-full h-full object-cover rounded-2xl shadow-2xl rotate-2 group-hover:rotate-0 transition-all duration-500" alt="Stage Hosting" />
                   
                   {/* Floating Badge */}
                   <div className="absolute bottom-8 right-8 bg-black/80 backdrop-blur-md border border-purple-500/50 p-6 rounded-xl">

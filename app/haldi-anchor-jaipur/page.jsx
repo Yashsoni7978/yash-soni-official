@@ -65,7 +65,7 @@ export default function HaldiAnchor() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/50 to-purple-900/20 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1605634428453-65239e5e782e?q=80&w=2070&auto=format&fit=crop" 
+            src="/service-wedding.webp" 
             className="w-full h-full object-cover scale-105 animate-slow-zoom" 
             alt="Haldi Ceremony Anchor Jaipur"
           />
@@ -167,7 +167,7 @@ export default function HaldiAnchor() {
          <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                <div className="relative h-[600px] group rounded-3xl overflow-hidden border border-yellow-500/30">
-                  <img src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Haldi Fun" />
+                  <img src="/gallery-3.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Haldi Fun" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-10">
                       <h3 className="text-5xl font-display font-black text-yellow-400 mb-4">The Haldi</h3>

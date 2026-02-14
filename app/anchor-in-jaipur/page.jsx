@@ -13,7 +13,7 @@ const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
-      backgroundImage: "url('/gold-texture.png')", 
+      backgroundImage: "url('/gold-texture.webp')", 
       backgroundColor: "#D4AF37", 
     }}
   >
@@ -76,9 +76,9 @@ export default function JaipurAnchor() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#2a0a15]/80 to-[#3d0c0c]/60 z-10" />
           
-          {/* 📸 HERO IMAGE */}
+          {/* 📸 HERO IMAGE (Reusing service-corporate.webp) */}
           <img 
-            src="https://images.unsplash.com/photo-1599661046289-e318d6d48ed1?q=80&w=2070&auto=format&fit=crop" 
+            src="/service-corporate.webp" 
             className="w-full h-full object-cover scale-105 animate-slow-zoom" 
             alt="Best Anchor in Jaipur - Yash Soni"
           />
@@ -88,7 +88,7 @@ export default function JaipurAnchor() {
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-8 py-3 rounded-full bg-black/60 backdrop-blur-xl mb-10 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
-              <img src="/gold-texture.png" className="w-6 h-6 rounded-full animate-spin-slow" alt="Gold" />
+              <img src="/gold-texture.webp" className="w-6 h-6 rounded-full animate-spin-slow" alt="Gold" />
               <span className="text-[#D4AF37] text-sm uppercase tracking-[0.25em] font-bold">
                 Rated #1 Event Host in Jaipur
               </span>
@@ -153,7 +153,7 @@ export default function JaipurAnchor() {
             {/* 📸 PHOTO 1 */}
             <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
                <img 
-                 src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=800&q=80" 
+                 src="/gallery-1.webp" 
                  alt="Yash Soni Hosting" 
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                />
@@ -164,7 +164,7 @@ export default function JaipurAnchor() {
             {/* 📸 PHOTO 2 */}
             <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
                <img 
-                 src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" 
+                 src="/gallery-2.webp" 
                  alt="Crowd Interaction" 
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                />
@@ -174,7 +174,7 @@ export default function JaipurAnchor() {
             {/* 📸 PHOTO 3 */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
                <img 
-                 src="https://images.unsplash.com/photo-1596199644274-04f10d370c7f?w=800&q=80" 
+                 src="/gallery-3.webp" 
                  alt="Haldi Vibes" 
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                />
@@ -183,7 +183,7 @@ export default function JaipurAnchor() {
             {/* 📸 PHOTO 4 */}
             <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
                <img 
-                 src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80" 
+                 src="/gallery-4.webp" 
                  alt="Sangeet Night" 
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                />
@@ -195,7 +195,7 @@ export default function JaipurAnchor() {
              {/* 📸 PHOTO 5 */}
             <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
                <img 
-                 src="https://images.unsplash.com/photo-1475721027767-f42a66a010d9?w=800&q=80" 
+                 src="/gallery-5.webp" 
                  alt="Corporate Hosting" 
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                />
