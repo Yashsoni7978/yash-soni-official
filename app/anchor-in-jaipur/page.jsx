@@ -14,7 +14,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#FFC107", 
+      backgroundColor: "#FFD700", 
     }}
   >
     {children}
@@ -36,8 +36,8 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
       transition={{ duration: 0.6 }}
     >
       <div className={`flex items-center gap-3 mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}>
-        <Crown className="w-5 h-5 text-[#FFC107]" />
-        <p className="text-[#FFC107] text-xs uppercase tracking-[0.3em] font-bold">
+        <Crown className="w-5 h-5 text-[#FFD700]" />
+        <p className="text-[#FFD700] text-xs uppercase tracking-[0.3em] font-bold">
           {subtitle}
         </p>
       </div>
@@ -87,9 +87,9 @@ export default function JaipurAnchor() {
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
-            <div className="inline-flex items-center gap-3 border border-[#FFC107]/50 px-8 py-3 rounded-full bg-black/60 backdrop-blur-xl mb-10 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+            <div className="inline-flex items-center gap-3 border border-[#FFD700]/50 px-8 py-3 rounded-full bg-black/60 backdrop-blur-xl mb-10 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
               <img src="/gold-texture.png" className="w-6 h-6 rounded-full animate-spin-slow" alt="Gold" />
-              <span className="text-[#FFC107] text-sm uppercase tracking-[0.25em] font-bold">
+              <span className="text-[#FFD700] text-sm uppercase tracking-[0.25em] font-bold">
                 Rated #1 Event Host in Jaipur
               </span>
             </div>
@@ -105,7 +105,7 @@ export default function JaipurAnchor() {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
-                <button className="px-12 py-5 bg-gradient-to-r from-[#FFC107] to-[#b48f25] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_40px_rgba(212,175,55,0.4)] relative overflow-hidden group">
+                <button className="px-12 py-5 bg-gradient-to-r from-[#FFD700] to-[#b48f25] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_40px_rgba(212,175,55,0.4)] relative overflow-hidden group">
                   <span className="relative z-10">Book The Best</span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                 </button>
@@ -117,8 +117,8 @@ export default function JaipurAnchor() {
       </section>
 
       {/* --- 2. THE LOCAL ADVANTAGE --- */}
-      <section className="py-32 bg-[#0a0a0a] border-y border-[#FFC107]/20 relative">
-         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#FFC107]/20">
+      <section className="py-32 bg-[#0a0a0a] border-y border-[#FFD700]/20 relative">
+         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#FFD700]/20">
             <Crown className="w-24 h-24" />
          </div>
 
@@ -151,7 +151,7 @@ export default function JaipurAnchor() {
          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px] mt-12">
             
             {/* 📸 PHOTO 1 */}
-            <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#FFC107]/20">
+            <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#FFD700]/20">
                <img 
                  src="/gallery-1.webp" 
                  alt="Yash Soni Hosting" 
@@ -162,7 +162,7 @@ export default function JaipurAnchor() {
             </div>
 
             {/* 📸 PHOTO 2 */}
-            <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#FFC107]/20">
+            <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#FFD700]/20">
                <img 
                  src="/gallery-2.webp" 
                  alt="Crowd Interaction" 
@@ -172,7 +172,7 @@ export default function JaipurAnchor() {
             </div>
 
             {/* 📸 PHOTO 3 */}
-            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group border border-[#FFC107]/20">
+            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group border border-[#FFD700]/20">
                <img 
                  src="/gallery-3.webp" 
                  alt="Haldi Vibes" 
@@ -181,19 +181,19 @@ export default function JaipurAnchor() {
             </div>
 
             {/* 📸 PHOTO 4 */}
-            <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#FFC107]/20">
+            <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#FFD700]/20">
                <img 
                  src="/gallery-4.webp" 
                  alt="Sangeet Night" 
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                />
-               <div className="absolute bottom-4 left-4 flex items-center gap-2 text-[#FFC107] font-bold text-xs uppercase tracking-widest">
+               <div className="absolute bottom-4 left-4 flex items-center gap-2 text-[#FFD700] font-bold text-xs uppercase tracking-widest">
                   <Camera className="w-4 h-4" /> Real Wedding
                </div>
             </div>
 
              {/* 📸 PHOTO 5 */}
-            <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#FFC107]/20">
+            <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#FFD700]/20">
                <img 
                  src="/gallery-5.webp" 
                  alt="Corporate Hosting" 
@@ -207,7 +207,7 @@ export default function JaipurAnchor() {
       </section>
 
       {/* --- 4. VENUE SHOWCASE (The Palaces) --- */}
-      <section className="py-32 bg-[#0f0508] border-y border-[#FFC107]/20 container-fluid relative z-10">
+      <section className="py-32 bg-[#0f0508] border-y border-[#FFD700]/20 container-fluid relative z-10">
         <div className="container mx-auto px-4">
            <SectionHeading subtitle="My Playground" title="Iconic Jaipur Venues." align="center" />
            
@@ -240,12 +240,12 @@ export default function JaipurAnchor() {
          
          <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="text-5xl md:text-7xl font-display font-black mb-8 text-white">Hosting in Jaipur?</h2>
-            <p className="text-[#FFC107] max-w-2xl mx-auto mb-12 text-2xl font-light leading-relaxed">
+            <p className="text-[#FFD700] max-w-2xl mx-auto mb-12 text-2xl font-light leading-relaxed">
                Don't fly in an outsider. <br /> Hire the <RoyalPinkText>Local Authority.</RoyalPinkText>
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-6">
                <Link href="/contact">
-                  <button className="px-14 py-6 bg-[#FFC107] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_50px_rgba(212,175,55,0.5)] text-lg">
+                  <button className="px-14 py-6 bg-[#FFD700] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_50px_rgba(212,175,55,0.5)] text-lg">
                      Check My Availability
                   </button>
                </Link>
@@ -260,27 +260,27 @@ export default function JaipurAnchor() {
 // --- ROYAL SUB COMPONENTS ---
 
 const RoyalBenefitCard = ({ icon, title, desc }) => (
-    <div className="p-10 bg-[#0f0508] rounded-3xl border border-[#FFC107]/30 hover:border-[#E91E63] transition-all duration-500 group relative overflow-hidden hover:-translate-y-2 shadow-2xl">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#FFC107]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div className="p-10 bg-[#0f0508] rounded-3xl border border-[#FFD700]/30 hover:border-[#E91E63] transition-all duration-500 group relative overflow-hidden hover:-translate-y-2 shadow-2xl">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#FFD700]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="relative z-10">
-            <div className="mb-8 bg-gradient-to-br from-[#FFC107] to-[#b48f25] w-20 h-20 rounded-2xl flex items-center justify-center text-black shadow-lg group-hover:scale-110 transition-transform">
+            <div className="mb-8 bg-gradient-to-br from-[#FFD700] to-[#b48f25] w-20 h-20 rounded-2xl flex items-center justify-center text-black shadow-lg group-hover:scale-110 transition-transform">
                {icon}
             </div>
-            <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#FFC107] transition-colors">{title}</h3>
+            <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#FFD700] transition-colors">{title}</h3>
             <p className="text-gray-400 text-lg leading-relaxed">{desc}</p>
         </div>
     </div>
 );
 
 const VenueCard = ({ name, img, span = "", highlight = false }) => (
-    <div className={`relative group overflow-hidden rounded-2xl border ${highlight ? 'border-[#FFC107] shadow-[0_0_30px_rgba(212,175,55,0.2)]' : 'border-[#FFC107]/20'} ${span}`}>
+    <div className={`relative group overflow-hidden rounded-2xl border ${highlight ? 'border-[#FFD700] shadow-[0_0_30px_rgba(212,175,55,0.2)]' : 'border-[#FFD700]/20'} ${span}`}>
         <img src={img} alt={name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-90" />
         
         <div className="absolute inset-0 border-2 border-[#E91E63] opacity-0 group-hover:opacity-100 transition-opacity duration-500 m-2 rounded-xl pointer-events-none"></div>
         
         <div className="absolute bottom-6 left-6 z-10">
-            {highlight && <p className="text-[#FFC107] text-xs uppercase tracking-widest mb-2 font-bold">Featured Venue</p>}
+            {highlight && <p className="text-[#FFD700] text-xs uppercase tracking-widest mb-2 font-bold">Featured Venue</p>}
             <p className="text-white font-display font-bold text-3xl group-hover:text-[#E91E63] transition-colors duration-500">{name}</p>
         </div>
     </div>
@@ -289,7 +289,7 @@ const VenueCard = ({ name, img, span = "", highlight = false }) => (
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border border-[#FFC107]/30 bg-[#0f0508] rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#E91E63]">
+    <div className="border border-[#FFD700]/30 bg-[#0f0508] rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#E91E63]">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full p-6 text-left"

@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
-const GOLD_COLOR = "#FFC107";
+const GOLD_COLOR = "#FFD700";
 
 const style = `
   @keyframes shimmer {
@@ -94,7 +94,7 @@ const PLATFORMS = [
   { name: "Justdial", link: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET", color: "hover:text-[#FF9800]" },
   { name: "ShaadiDukaan", link: "https://www.shaadidukaan.com/profile/yash-2", color: "hover:text-[#E91E63]" },
   { name: "StarClinch", link: "https://starclinch.com", color: "hover:text-[#FF5722]" },
-  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#FFC107]" },
+  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#FFD700]" },
   { name: "WeddingBazaar", link: "https://weddingbazaar.com", color: "hover:text-[#E53935]" },
   { name: "Google Reviews", link: "https://share.google/pMZGzEGOhXnJpLq5g", color: "hover:text-[#4285F4]" }
 ];
@@ -106,11 +106,28 @@ const PHILOSOPHY = [
 ];
 
 const PROCESS_STEPS = [
-  { num: "01", title: "The Vibe Check", text: "We hop on a call. You tell me if you want 'Royal & Elegant' or 'Wild & Crazy.' We discuss the guest list, the inside jokes, and the 'Do Not Play' list." },
-  { num: "02", title: "Script & Spice", text: "I don't use templates. I draft a run-of-show that includes custom games for your specific crowd, shayaris that actually make sense, and a timeline that flows perfectly." },
-  { num: "03", title: "Showtime", text: "I arrive before the sound guy does. I sync with the DJ, check the mics, and handle the stage so you can actually enjoy your own party." },
-  { num: "04", title: "The After-Effect", text: "We end on a high note. My goal is simple: when guests leave, they should be asking you, 'Where did you find this guy?'" },
+  { 
+    num: "01", 
+    title: "The Vision", 
+    text: "We align on your exact vibe—whether that's royal elegance or a high-energy celebration. We cover the crowd, the inside jokes, and the must-haves." 
+  },
+  { 
+    num: "02", 
+    title: "The Blueprint", 
+    text: "No templates. I design a custom run-of-show, complete with tailored games, meaningful crowd work, and a flawless timeline." 
+  },
+  { 
+    num: "03", 
+    title: "The Execution", 
+    text: "I arrive early, sync with the technical and sound teams, and completely own the stage so you can actually be a guest at your own event." 
+  },
+  { 
+    num: "04", 
+    title: "The Legacy", 
+    text: "We close on a massive high. My benchmark for success is your guests leaving and asking, 'Where did you find this anchor?'" 
+  }
 ];
+
 
 const REVIEWS = [
   { name: "Nikita Agarwal", text: "We couldn’t have asked for a better anchor! Yash brought the perfect blend of energy, charm, and professionalism." },
@@ -154,7 +171,7 @@ const GALLERY_IMAGES = [
 const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
-    style={{ backgroundImage: "url('/gold-texture.webp')", backgroundColor: GOLD_COLOR }}
+    style={{ backgroundImage: "url('/gold-texture.')", backgroundColor: GOLD_COLOR }}
   >
     {children}
   </span>
@@ -187,7 +204,7 @@ const FAQItem = ({ q, a }) => {
       onMouseLeave={() => setIsOpen(false)}
       className={`group rounded-2xl border transition-all duration-300 ${
         isOpen 
-          ? "border-[#FFC107] bg-[#FFC107]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
+          ? "border-[#FFD700] bg-[#FFD700]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
           : "border-white/10 bg-transparent hover:border-white/20" 
       }`}
     >
@@ -196,12 +213,12 @@ const FAQItem = ({ q, a }) => {
         className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-lg pr-4 transition-colors ${
-          isOpen ? "text-[#FFC107]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#FFD700]" : "text-zinc-200 group-hover:text-white"
         }`}>
           {q}
         </span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
-          isOpen ? "bg-[#FFC107] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#FFC107] group-hover:text-[#FFC107]"
+          isOpen ? "bg-[#FFD700] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#FFD700] group-hover:text-[#FFD700]"
         }`}>
           {isOpen ? <Minus size={16} /> : <Plus size={16} />}
         </div>
@@ -214,7 +231,7 @@ const FAQItem = ({ q, a }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#FFC107]/20 mt-2">
+            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#FFD700]/20 mt-2">
               <div className="pt-4">{a}</div>
             </div>
           </motion.div>
@@ -236,7 +253,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-[#FFC107] selection:text-black font-sans overflow-x-hidden">
+    <main className="min-h-screen bg-black text-white selection:bg-[#FFD700] selection:text-black font-sans overflow-x-hidden">
       <style>{style}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       
@@ -263,7 +280,7 @@ export default function HomePage() {
             className="max-w-4xl"
           >
             <div className="mb-6 inline-block">
-               <span className="border border-[#FFC107]/50 px-5 py-2 rounded-full bg-black/40 text-[#FFC107] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+               <span className="border border-[#FFD700]/50 px-5 py-2 rounded-full bg-black/40 text-[#FFD700] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
                  A PREMIUM AWARD WINNING ANCHOR
                </span>
             </div>
@@ -276,12 +293,12 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <Link href="/contact">
-                <button className="px-10 py-4 bg-[#FFC107] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+                <button className="px-10 py-4 bg-[#FFD700] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
                   BOOK NOW
                 </button>
               </Link>
               <Link href="/portfolio">
-                <button className="px-10 py-4 border-2 border-[#FFC107] text-[#FFC107] font-bold text-lg rounded-full hover:bg-[#FFC107]/10 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
+                <button className="px-10 py-4 border-2 border-[#FFD700] text-[#FFD700] font-bold text-lg rounded-full hover:bg-[#FFD700]/10 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
                   <Play size={18} fill="currentColor" /> VIEW PORTFOLIO
                 </button>
               </Link>
@@ -294,18 +311,17 @@ export default function HomePage() {
       <section className="py-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
-             <h2 className="text-[#FFC107] text-sm uppercase tracking-widest mb-4 font-bold">The Introduction</h2>
+             <h2 className="text-[#FFD700] text-sm uppercase tracking-widest mb-4 font-bold">The Introduction</h2>
              <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-               Beyond Announcements. <br /> <GoldTextureText>Creating Extraordinary Celebrations.</GoldTextureText>
+               Beyond Announcements. <br /> <GoldTextureText> Creating Extraordinary <br /> celebrations</GoldTextureText>
+               
              </h3>
              <p className="text-zinc-400 text-lg mb-8 leading-relaxed font-light">
-               Let’s be real—guests remember how an event made them feel. That’s where I step in. I’m not just here to read a script; I’m here to read the room. With over 5 years of live stage experience, I know exactly how to elevate the energy of any crowd. Whether we are kicking off a high-energy Sangeet night, managing the emotional flow of a Varmala ceremony, or keeping stakeholders engaged at a corporate gala, I know when to dial up the excitement and when to let the moment breathe. Your event deserves a host who connects effortlessly, no matter the destination.
+I don't just read scripts; I read the room. With over 5 years of live stage experience, I bring unmatched energy and effortless connection to luxury Sangeets, Varmalas, and corporate galas—no matter the destination.
              </p>
-             <p className="text-white text-xl font-bold italic mb-8">
-               5 Years. 1100+ Mic Checks. Zero dull moments.
-             </p>
+            
              <div className="mt-8">
-               <Link href="/about" className="inline-block border-b border-[#FFC107] pb-1 text-[#FFC107] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
+               <Link href="/about" className="inline-block border-b border-[#FFD700] pb-1 text-[#FFD700] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
                  Read My Story &rarr;
                </Link>
              </div>
@@ -313,12 +329,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 gap-4">
              <ScrollReveal delay={0.2}>
-               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#FFC107]/50 group">
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#FFD700]/50 group">
                  <img src="/intro-portrait-top.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Portrait" />
                </div>
              </ScrollReveal>
              <ScrollReveal delay={0.4} className="mt-12">
-               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#FFC107]/50 group">
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#FFD700]/50 group">
                  <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Event Interaction" />
                </div>
              </ScrollReveal>
@@ -330,13 +346,13 @@ export default function HomePage() {
       {/* 3. STATS SECTION */}
       
       <section className="py-20 bg-zinc-950 border-b border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFC107]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFD700]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {STATS_DATA.map((stat, i) => (
               <ScrollReveal key={i} delay={i * 0.1} className="text-center group">
                 <div className="mb-6 flex justify-center">
-                  <stat.icon className="w-10 h-10 text-[#FFC107] group-hover:scale-110 transition-transform duration-300" />
+                  <stat.icon className="w-10 h-10 text-[#FFD700] group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div className="text-5xl md:text-6xl font-black mb-3">
                   <GoldTextureText>{stat.value}</GoldTextureText>
@@ -375,15 +391,15 @@ export default function HomePage() {
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-             <span className="text-[#FFC107] text-sm uppercase tracking-widest">What I Do</span>
-             <h2 className="text-4xl md:text-6xl font-bold mt-2">Signature <span className="text-[#FFC107]">Services</span></h2>
+             <span className="text-[#FFD700] text-sm uppercase tracking-widest">What I Do</span>
+             <h2 className="text-4xl md:text-6xl font-bold mt-2">Signature <span className="text-[#FFD700]">Services</span></h2>
           </div>
         </ScrollReveal>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {SIGNATURE_SERVICES.map((service, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
-              <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#FFC107]/50">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#FFD700]/50">
                 <img 
                   src={service.img} 
                   alt={service.title} 
@@ -393,7 +409,7 @@ export default function HomePage() {
                 
                 <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                    <h3 className="text-3xl font-bold text-white mb-3 font-display">{service.title}</h3>
-                   <div className="h-1 w-12 bg-[#FFC107] mb-4 rounded-full" />
+                   <div className="h-1 w-12 bg-[#FFD700] mb-4 rounded-full" />
                    <p className="text-zinc-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                      {service.desc}
                    </p>
@@ -405,7 +421,7 @@ export default function HomePage() {
         
         <div className="text-center mt-16">
            <Link href="/wedding-anchor-jaipur">
-             <button className="px-10 py-4 bg-[#FFC107] text-black font-bold rounded-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 mx-auto">
+             <button className="px-10 py-4 bg-[#FFD700] text-black font-bold rounded-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 mx-auto">
                View All Anchoring Services <ArrowRight size={18} />
              </button>
            </Link>
@@ -419,7 +435,7 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
             {TRUSTED_TAGS.map((tag, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
-                <div className="px-8 py-3 rounded-full border border-white/5 bg-white/5 text-zinc-300 text-sm md:text-lg font-medium hover:border-[#FFC107] hover:text-[#FFC107] hover:bg-[#FFC107]/10 transition-all cursor-default">
+                <div className="px-8 py-3 rounded-full border border-white/5 bg-white/5 text-zinc-300 text-sm md:text-lg font-medium hover:border-[#FFD700] hover:text-[#FFD700] hover:bg-[#FFD700]/10 transition-all cursor-default">
                   {tag}
                 </div>
               </ScrollReveal>
@@ -432,16 +448,16 @@ export default function HomePage() {
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="text-[#FFC107] text-sm uppercase tracking-widest">Why Me</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">The <span className="text-[#FFC107]">Yash Soni</span> Signature</h2>
+            <span className="text-[#FFD700] text-sm uppercase tracking-widest">Why Me</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">The <span className="text-[#FFD700]">Yash Soni</span> Signature</h2>
           </div>
         </ScrollReveal>
         
         <div className="grid md:grid-cols-3 gap-8">
           {PHILOSOPHY.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="bg-zinc-900/30 p-10 rounded-2xl border border-white/5 hover:border-[#FFC107]/50 transition-all duration-500 group h-full hover:-translate-y-2">
-                <item.icon className="w-12 h-12 text-[#FFC107] mb-8 group-hover:scale-110 transition-transform" />
+              <div className="bg-zinc-900/30 p-10 rounded-2xl border border-white/5 hover:border-[#FFD700]/50 transition-all duration-500 group h-full hover:-translate-y-2">
+                <item.icon className="w-12 h-12 text-[#FFD700] mb-8 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-bold mb-4 text-white">{item.title}</h3>
                 <p className="text-zinc-400 leading-relaxed font-light">{item.text}</p>
               </div>
@@ -458,7 +474,7 @@ export default function HomePage() {
             <p className="text-zinc-400">Capturing the pulse of the celebration.</p>
           </div>
           <div className="flex items-center gap-2 text-xs text-zinc-500 uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-[#FFC107] animate-pulse"></span> Hover to Pause
+            <span className="w-2 h-2 rounded-full bg-[#FFD700] animate-pulse"></span> Hover to Pause
           </div>
         </div>
 
@@ -476,7 +492,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[#FFC107] text-xs font-black tracking-widest bg-black/60 px-3 py-1 rounded backdrop-blur-sm">LIVE MOMENT</span>
+                  <span className="text-[#FFD700] text-xs font-black tracking-widest bg-black/60 px-3 py-1 rounded backdrop-blur-sm">LIVE MOMENT</span>
                 </div>
               </div>
             ))}
@@ -488,16 +504,16 @@ export default function HomePage() {
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <span className="text-[#FFC107] text-sm uppercase tracking-widest">The Process</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">From Booking to <span className="text-[#FFC107]">Applause</span></h2>
+            <span className="text-[#FFD700] text-sm uppercase tracking-widest">The Process</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">From Booking to <span className="text-[#FFD700]">Applause</span></h2>
           </div>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-4 gap-8">
           {PROCESS_STEPS.map((step, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="relative p-6 border-l border-white/10 hover:border-[#FFC107] transition-colors pl-8 group h-full">
-                <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#FFC107] rounded-full flex items-center justify-center text-[10px] text-[#FFC107] font-bold group-hover:scale-125 transition-transform">
+              <div className="relative p-6 border-l border-white/10 hover:border-[#FFD700] transition-colors pl-8 group h-full">
+                <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#FFD700] rounded-full flex items-center justify-center text-[10px] text-[#FFD700] font-bold group-hover:scale-125 transition-transform">
                   {step.num}
                 </span>
                 <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
@@ -513,7 +529,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 mb-16">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-bold text-center">
-              Real Words. <span className="text-[#FFC107]">Real Impact.</span>
+              Real Words. <span className="text-[#FFD700]">Real Impact.</span>
             </h2>
           </ScrollReveal>
         </div>
@@ -527,15 +543,15 @@ export default function HomePage() {
                 href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#FFC107]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
+                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#FFD700]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
               >
-                <div className="flex text-[#FFC107] gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFC107" />)}
+                <div className="flex text-[#FFD700] gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFD700" />)}
                 </div>
                 <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
                   "{review.text}"
                 </p>
-                <h4 className="text-white font-bold text-sm group-hover:text-[#FFC107] transition-colors mt-auto">
+                <h4 className="text-white font-bold text-sm group-hover:text-[#FFD700] transition-colors mt-auto">
                   — {review.name}
                 </h4>
               </a>
@@ -552,15 +568,15 @@ export default function HomePage() {
                 href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#FFC107]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
+                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#FFD700]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
               >
-                <div className="flex text-[#FFC107] gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFC107" />)}
+                <div className="flex text-[#FFD700] gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFD700" />)}
                 </div>
                 <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
                   "{review.text}"
                 </p>
-                <h4 className="text-white font-bold text-sm group-hover:text-[#FFC107] transition-colors mt-auto">
+                <h4 className="text-white font-bold text-sm group-hover:text-[#FFD700] transition-colors mt-auto">
                   — {review.name}
                 </h4>
               </a>
@@ -575,9 +591,9 @@ export default function HomePage() {
           <ScrollReveal>
             <div className="text-center mb-16">
                <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
-                 Frequently Asked <span className="text-[#FFC107]">Questions</span>
+                 Frequently Asked <span className="text-[#FFD700]">Questions</span>
                </h2>
-               <div className="h-1 w-20 bg-gradient-to-r from-transparent via-[#FFC107] to-transparent mx-auto rounded-full" />
+               <div className="h-1 w-20 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent mx-auto rounded-full" />
             </div>
           </ScrollReveal>
           
@@ -593,7 +609,7 @@ export default function HomePage() {
 
       {/* 12. FOOTER CTA */}
       <footer className="py-32 border-t border-white/10 bg-black text-center relative overflow-hidden">
-         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFC107]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
+         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFD700]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
          <div className="container mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-7xl font-black mb-8 tracking-tight">
               Your Stage Awaits.
@@ -602,16 +618,16 @@ export default function HomePage() {
               Dates for the upcoming season are filling fast. Secure your date with Jaipur's most trusted voice.
             </p>
             <Link href="/contact">
-              <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#FFC107] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+              <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#FFD700] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
                 <span className="relative z-10 flex items-center gap-3">
                   <CalendarCheck size={24} /> Check Availability
                 </span>
               </button>
             </Link>
             <div className="mt-20 flex justify-center gap-10 text-zinc-500 text-sm font-medium tracking-widest uppercase">
-               <a href="https://instagram.com/Anchor_Yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFC107] transition-colors">Instagram</a>
-               <a href="#" className="hover:text-[#FFC107] transition-colors">YouTube</a>
-               <a href="mailto:info@yashsoni.in" className="hover:text-[#FFC107] transition-colors">Email</a>
+               <a href="https://instagram.com/Anchor_Yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors">Instagram</a>
+               <a href="#" className="hover:text-[#FFD700] transition-colors">YouTube</a>
+               <a href="mailto:info@yashsoni.in" className="hover:text-[#FFD700] transition-colors">Email</a>
             </div>
             <div className="mt-8 text-zinc-700 text-xs">
               © {new Date().getFullYear()} Anchor Yash. All rights reserved.

@@ -15,7 +15,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", // Ensure this image exists in /public
-      backgroundColor: "#FFC107", 
+      backgroundColor: "#FFD700", 
     }}
   >
     {children}
@@ -30,12 +30,12 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <p className="text-[#FFC107] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-2 justify-center md:justify-start">
-        {align === "center" && <span className="w-8 h-[1px] bg-[#FFC107]"></span>}
-        <Gem className="w-3 h-3 text-[#FFC107]" />
+      <p className="text-[#FFD700] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-2 justify-center md:justify-start">
+        {align === "center" && <span className="w-8 h-[1px] bg-[#FFD700]"></span>}
+        <Gem className="w-3 h-3 text-[#FFD700]" />
         {subtitle}
-        {align !== "center" && <span className="w-12 h-[1px] bg-[#FFC107]"></span>}
-        {align === "center" && <span className="w-8 h-[1px] bg-[#FFC107]"></span>}
+        {align !== "center" && <span className="w-12 h-[1px] bg-[#FFD700]"></span>}
+        {align === "center" && <span className="w-8 h-[1px] bg-[#FFD700]"></span>}
       </p>
       <h2 className="text-4xl md:text-7xl font-display font-black text-white leading-tight">
         {title}
@@ -46,7 +46,7 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
 
 export default function WeddingPlanning() {
   return (
-    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#FFC107] selection:text-black">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#FFD700] selection:text-black">
       
       {/* --- 1. HERO: THE INSIDER'S PROMISE --- */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -63,9 +63,9 @@ export default function WeddingPlanning() {
         <div className="relative z-20 container mx-auto px-4 mt-20">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
-            <div className="inline-flex items-center gap-2 border border-[#FFC107]/50 px-6 py-2 rounded-full bg-[#FFC107]/10 backdrop-blur-xl mb-8">
-              <ShieldCheck className="w-4 h-4 text-[#FFC107]" />
-              <span className="text-[#FFC107] text-sm uppercase tracking-[0.2em] font-bold">
+            <div className="inline-flex items-center gap-2 border border-[#FFD700]/50 px-6 py-2 rounded-full bg-[#FFD700]/10 backdrop-blur-xl mb-8">
+              <ShieldCheck className="w-4 h-4 text-[#FFD700]" />
+              <span className="text-[#FFD700] text-sm uppercase tracking-[0.2em] font-bold">
                 The "Zero Commission" Approach
               </span>
             </div>
@@ -74,13 +74,13 @@ export default function WeddingPlanning() {
               Your Vision. <br /> <GoldTextureText>My Network.</GoldTextureText>
             </h1>
             
-            <p className="text-gray-300 text-xl font-light leading-relaxed max-w-2xl mb-12 border-l-4 border-[#FFC107] pl-8">
+            <p className="text-gray-300 text-xl font-light leading-relaxed max-w-2xl mb-12 border-l-4 border-[#FFD700] pl-8">
               Stop paying inflated "Planner Rates." <br />
               Leverage my direct access to Jaipur's best vendors for a flawless, transparent wedding.
             </p>
             
             <Link href="/contact">
-              <button className="px-12 py-5 bg-[#FFC107] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+              <button className="px-12 py-5 bg-[#FFD700] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_30px_rgba(212,175,55,0.4)]">
                 Get A Transparent Quote
               </button>
             </Link>
@@ -90,14 +90,14 @@ export default function WeddingPlanning() {
       </section>
 
       {/* --- 2. THE PIVOT: WHY HIRE AN ANCHOR TO PLAN? --- */}
-      <section className="py-32 container mx-auto px-4 border-b border-[#FFC107]/20">
+      <section className="py-32 container mx-auto px-4 border-b border-[#FFD700]/20">
          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
                <SectionHeading subtitle="The Honest Truth" title="The Anchor's Advantage." />
                <p className="text-gray-200 text-xl leading-relaxed mb-8 font-light">
-                  I've stood on 1000+ stages. I've seen decorators arrive late. I've tasted cold food. I know exactly <strong className="text-[#FFC107]">who delivers</strong> and who just talks.
+                  I've stood on 1000+ stages. I've seen decorators arrive late. I've tasted cold food. I know exactly <strong className="text-[#FFD700]">who delivers</strong> and who just talks.
                </p>
-               <div className="bg-[#111] p-10 rounded-3xl border border-[#FFC107]/30 shadow-2xl">
+               <div className="bg-[#111] p-10 rounded-3xl border border-[#FFD700]/30 shadow-2xl">
                   <h4 className="text-2xl font-display font-bold text-white mb-6">My "Insider" Guarantee:</h4>
                   <ul className="space-y-6">
                      <ListItem text="Direct Vendor Access: No middlemen. You get the industry rate." />
@@ -107,11 +107,11 @@ export default function WeddingPlanning() {
                </div>
             </div>
             {/* Image: You on stage, looking in control of a massive setup */}
-            <div className="relative h-[600px] w-full rounded-3xl overflow-hidden order-1 md:order-2 border border-[#FFC107]/30">
+            <div className="relative h-[600px] w-full rounded-3xl overflow-hidden order-1 md:order-2 border border-[#FFD700]/30">
                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80" className="w-full h-full object-cover contrast-110" alt="Yash Soni Event Expertise" />
                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-               <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur-md p-6 rounded-2xl border border-[#FFC107]/50">
-                  <p className="text-[#FFC107] text-2xl font-display font-bold">"I don't just host. I oversee."</p>
+               <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur-md p-6 rounded-2xl border border-[#FFD700]/50">
+                  <p className="text-[#FFD700] text-2xl font-display font-bold">"I don't just host. I oversee."</p>
                </div>
             </div>
          </div>
@@ -124,7 +124,7 @@ export default function WeddingPlanning() {
             
             <div className="relative mt-24 max-w-5xl mx-auto">
                {/* Central Gold Line */}
-               <div className="absolute left-8 md:left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#FFC107] via-[#FFC107]/50 to-transparent md:-translate-x-1/2"></div>
+               <div className="absolute left-8 md:left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#FFD700] via-[#FFD700]/50 to-transparent md:-translate-x-1/2"></div>
                
                <TimelineItem 
                   step="01" 
@@ -174,13 +174,13 @@ export default function WeddingPlanning() {
       </section>
 
       {/* --- 5. VISUALIZING THE DREAM (Moodboard Section) --- */}
-      <section className="py-32 bg-[#080808] border-y border-[#FFC107]/20">
+      <section className="py-32 bg-[#080808] border-y border-[#FFD700]/20">
           <div className="container mx-auto px-4 text-center">
               <SectionHeading subtitle="Concept to Reality" title="We Visualize. Then We Build." align="center" />
               <p className="text-gray-400 mb-12">We use 3D renders and detailed moodboards to align on the vision before a single rupee is spent.</p>
               
               {/* A grid that looks like a Pinterest board / 3D render showcase */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] p-4 bg-[#111] rounded-3xl border border-[#FFC107]/30 relative">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] p-4 bg-[#111] rounded-3xl border border-[#FFD700]/30 relative">
                   {/* Overlay Text */}
                   <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
                       <p className="text-3xl md:text-5xl font-display font-bold text-white/20 uppercase tracking-widest rotate-12">From Sketch To Stage</p>
@@ -204,7 +204,7 @@ export default function WeddingPlanning() {
                Let's discuss your wedding over coffee. No sales pitch. Just a transparent discussion about costs and concepts.
             </p>
             <Link href="/contact">
-               <button className="px-14 py-6 bg-[#FFC107] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl text-lg">
+               <button className="px-14 py-6 bg-[#FFD700] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl text-lg">
                   Schedule Consultation
                </button>
             </Link>
@@ -219,7 +219,7 @@ export default function WeddingPlanning() {
 
 const ListItem = ({ text }) => (
   <div className="flex gap-4 items-start group">
-     <CheckCircle className="w-6 h-6 text-[#FFC107] shrink-0 group-hover:scale-110 transition-transform" />
+     <CheckCircle className="w-6 h-6 text-[#FFD700] shrink-0 group-hover:scale-110 transition-transform" />
      <span className="text-gray-300 text-lg font-light">{text}</span>
   </div>
 );
@@ -227,13 +227,13 @@ const ListItem = ({ text }) => (
 const TimelineItem = ({ step, title, desc, align, icon }) => (
   <div className={`flex flex-col md:flex-row gap-10 mb-24 relative ${align === 'right' ? 'md:flex-row-reverse' : ''}`}>
       {/* Center Icon */}
-      <div className="absolute left-8 md:left-1/2 top-0 w-16 h-16 bg-[#0a0a0a] border-2 border-[#FFC107] rounded-full md:-translate-x-1/2 z-10 flex items-center justify-center text-[#FFC107] shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+      <div className="absolute left-8 md:left-1/2 top-0 w-16 h-16 bg-[#0a0a0a] border-2 border-[#FFD700] rounded-full md:-translate-x-1/2 z-10 flex items-center justify-center text-[#FFD700] shadow-[0_0_30px_rgba(212,175,55,0.3)]">
           {icon}
       </div>
       
       {/* Content */}
       <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${align === 'right' ? 'md:text-left md:pr-24' : 'md:text-right md:pl-24'}`}>
-         <span className="text-[#FFC107] font-bold uppercase tracking-widest text-sm mb-3 block">Step {step}</span>
+         <span className="text-[#FFD700] font-bold uppercase tracking-widest text-sm mb-3 block">Step {step}</span>
          <h3 className="text-3xl font-display font-bold text-white mb-4">{title}</h3>
          <p className="text-gray-400 text-lg leading-relaxed font-light">{desc}</p>
       </div>
@@ -242,12 +242,12 @@ const TimelineItem = ({ step, title, desc, align, icon }) => (
 );
 
 const VendorCard = ({ title, icon, desc, bgImage }) => (
-  <div className="relative h-96 rounded-3xl overflow-hidden group border border-[#FFC107]/30 transition-all hover:scale-[1.02] hover:border-[#FFC107]">
+  <div className="relative h-96 rounded-3xl overflow-hidden group border border-[#FFD700]/30 transition-all hover:scale-[1.02] hover:border-[#FFD700]">
      <img src={bgImage} alt={title} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
      
      <div className="absolute bottom-0 left-0 p-8">
-        <div className="mb-4 text-[#FFC107] w-14 h-14 bg-[#FFC107]/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-[#FFC107]/50">{icon}</div>
+        <div className="mb-4 text-[#FFD700] w-14 h-14 bg-[#FFD700]/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-[#FFD700]/50">{icon}</div>
         <h3 className="text-2xl font-bold text-white mb-3">{title}</h3>
         <p className="text-gray-300 text-sm leading-relaxed font-light">{desc}</p>
      </div>
@@ -255,11 +255,11 @@ const VendorCard = ({ title, icon, desc, bgImage }) => (
 );
 
 const MoodboardImage = ({ img, span = "", label }) => (
-    <div className={`relative group overflow-hidden rounded-2xl border border-[#FFC107]/20 ${span}`}>
+    <div className={`relative group overflow-hidden rounded-2xl border border-[#FFD700]/20 ${span}`}>
         <img src={img} alt={label} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-50 group-hover:grayscale-0" />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all" />
         <div className="absolute bottom-4 left-4">
-            <p className="text-white/80 text-xs uppercase tracking-widest font-bold group-hover:text-[#FFC107] transition-colors">{label}</p>
+            <p className="text-white/80 text-xs uppercase tracking-widest font-bold group-hover:text-[#FFD700] transition-colors">{label}</p>
         </div>
     </div>
 );

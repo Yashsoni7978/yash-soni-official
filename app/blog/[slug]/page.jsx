@@ -9,17 +9,17 @@ export default function BlogPost({ params }) {
   // const { slug } = params;
 
   return (
-    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#FFC107] selection:text-black">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#FFD700] selection:text-black">
       
       {/* --- ARTICLE HEADER --- */}
       <header className="pt-40 pb-20 border-b border-white/5">
         <div className="container mx-auto px-6 max-w-4xl">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-[#FFC107] text-[10px] font-black uppercase tracking-[0.2em] mb-12 hover:gap-4 transition-all">
+          <Link href="/blog" className="inline-flex items-center gap-2 text-[#FFD700] text-[10px] font-black uppercase tracking-[0.2em] mb-12 hover:gap-4 transition-all">
             <ArrowLeft size={14} /> Back to Journal
           </Link>
           
           <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-8">
-            <span className="text-[#FFC107]">Strategy Audit</span>
+            <span className="text-[#FFD700]">Strategy Audit</span>
             <span className="flex items-center gap-2"><Calendar size={12} /> Jan 18, 2026</span>
             <span className="flex items-center gap-2"><Clock size={12} /> 12 Min Read</span>
           </div>
@@ -30,15 +30,15 @@ export default function BlogPost({ params }) {
 
           <div className="flex items-center justify-between py-8 border-y border-white/5">
              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFC107] to-gray-600 flex items-center justify-center font-black text-black">YS</div>
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFD700] to-gray-600 flex items-center justify-center font-black text-black">YS</div>
                 <div>
                    <p className="text-[10px] font-black uppercase tracking-widest text-white">Yash Soni</p>
                    <p className="text-[9px] font-bold uppercase tracking-widest text-gray-500">Industry Authority</p>
                 </div>
              </div>
              <div className="flex gap-4">
-                <button className="p-3 border border-white/10 hover:border-[#FFC107] transition-all"><Share2 size={16} /></button>
-                <button className="p-3 border border-white/10 hover:border-[#FFC107] transition-all"><Bookmark size={16} /></button>
+                <button className="p-3 border border-white/10 hover:border-[#FFD700] transition-all"><Share2 size={16} /></button>
+                <button className="p-3 border border-white/10 hover:border-[#FFD700] transition-all"><Bookmark size={16} /></button>
              </div>
           </div>
         </div>

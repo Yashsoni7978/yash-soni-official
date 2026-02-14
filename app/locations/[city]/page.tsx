@@ -127,7 +127,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
   if (!data) return notFound();
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-[#FFC107] selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-[#FFD700] selection:text-black">
       
       {/* SECTION 1: HYPER-LOCAL HERO */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
@@ -141,9 +141,9 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
         </div>
 
         <div className="container mx-auto px-6 relative z-20 text-center pt-20">
-          <div className="inline-flex items-center gap-2 border border-[#FFC107]/50 px-5 py-2 rounded-full bg-black/60 backdrop-blur-md mb-8">
-            <CheckCircle2 size={16} className="text-[#FFC107]" />
-            <span className="text-[#FFC107] text-xs font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-[#FFD700]/50 px-5 py-2 rounded-full bg-black/60 backdrop-blur-md mb-8">
+            <CheckCircle2 size={16} className="text-[#FFD700]" />
+            <span className="text-[#FFD700] text-xs font-bold uppercase tracking-widest">
               Successfully hosted {data.eventCount} Events in {resolvedParams.city}
             </span>
           </div>
@@ -158,7 +158,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
 
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <Link href="/contact">
-              <button className="px-10 py-5 bg-[#FFC107] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)]">
+              <button className="px-10 py-5 bg-[#FFD700] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)]">
                 Check {resolvedParams.city} Dates
               </button>
             </Link>
@@ -170,25 +170,25 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
-             <div className="absolute -inset-4 bg-[#FFC107]/20 rounded-2xl rotate-3 blur-lg"></div>
+             <div className="absolute -inset-4 bg-[#FFD700]/20 rounded-2xl rotate-3 blur-lg"></div>
              {/* PLACEHOLDER FOR YOUR PHOTO - Replace src with your actual photo */}
              <img 
                src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" 
                alt="Anchor Yash" 
                className="relative rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/5]"
              />
-             <div className="absolute bottom-6 right-6 bg-black/80 backdrop-blur border border-[#FFC107] p-4 rounded-xl">
-               <p className="text-[#FFC107] font-black text-2xl">{data.eventCount}</p>
+             <div className="absolute bottom-6 right-6 bg-black/80 backdrop-blur border border-[#FFD700] p-4 rounded-xl">
+               <p className="text-[#FFD700] font-black text-2xl">{data.eventCount}</p>
                <p className="text-xs text-white uppercase tracking-widest">Events in {resolvedParams.city}</p>
              </div>
           </div>
           
           <div>
-            <span className="text-[#FFC107] text-sm font-black uppercase tracking-widest mb-4 block">
+            <span className="text-[#FFD700] text-sm font-black uppercase tracking-widest mb-4 block">
               The {resolvedParams.city.charAt(0).toUpperCase() + resolvedParams.city.slice(1)} Connection
             </span>
             <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight mb-8">
-              "I don't just host. <br/> I <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC107] to-yellow-200">Adapt</span> to the city."
+              "I don't just host. <br/> I <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-yellow-200">Adapt</span> to the city."
             </h2>
             <p className="text-lg text-zinc-400 leading-relaxed mb-8">
               Every city has a rhythm. {data.vibe}
@@ -200,13 +200,13 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
             <div className="grid grid-cols-2 gap-6 border-t border-white/10 pt-8">
                <div>
                  <div className="flex items-center gap-2 mb-2 text-white font-bold">
-                   <Plane size={20} className="text-[#FFC107]" /> Logistics
+                   <Plane size={20} className="text-[#FFD700]" /> Logistics
                  </div>
                  <p className="text-sm text-zinc-500">{data.travelMode} to {resolvedParams.city}</p>
                </div>
                <div>
                  <div className="flex items-center gap-2 mb-2 text-white font-bold">
-                   <Mic size={20} className="text-[#FFC107]" /> Language
+                   <Mic size={20} className="text-[#FFD700]" /> Language
                  </div>
                  <p className="text-sm text-zinc-500">English, Hindi & Regional Nuances</p>
                </div>
@@ -222,12 +222,12 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
             <h2 className="text-3xl md:text-5xl font-black uppercase mb-4">
               My Services in {resolvedParams.city}
             </h2>
-            <div className="h-1 w-24 bg-[#FFC107] mx-auto rounded-full" />
+            <div className="h-1 w-24 bg-[#FFD700] mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#FFC107]/50 transition-all group">
-               <div className="w-14 h-14 rounded-full bg-[#FFC107]/10 flex items-center justify-center text-[#FFC107] mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#FFD700]/50 transition-all group">
+               <div className="w-14 h-14 rounded-full bg-[#FFD700]/10 flex items-center justify-center text-[#FFD700] mb-6 group-hover:scale-110 transition-transform">
                  <Sparkles size={28} />
                </div>
                <h3 className="text-xl font-bold mb-4">Destination Weddings</h3>
@@ -236,8 +236,8 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                </p>
             </div>
             
-            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#FFC107]/50 transition-all group">
-               <div className="w-14 h-14 rounded-full bg-[#FFC107]/10 flex items-center justify-center text-[#FFC107] mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#FFD700]/50 transition-all group">
+               <div className="w-14 h-14 rounded-full bg-[#FFD700]/10 flex items-center justify-center text-[#FFD700] mb-6 group-hover:scale-110 transition-transform">
                  <Building2 size={28} />
                </div>
                <h3 className="text-xl font-bold mb-4">Corporate Summits</h3>
@@ -246,8 +246,8 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#FFC107]/50 transition-all group">
-               <div className="w-14 h-14 rounded-full bg-[#FFC107]/10 flex items-center justify-center text-[#FFC107] mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-[#FFD700]/50 transition-all group">
+               <div className="w-14 h-14 rounded-full bg-[#FFD700]/10 flex items-center justify-center text-[#FFD700] mb-6 group-hover:scale-110 transition-transform">
                  <Users size={28} />
                </div>
                <h3 className="text-xl font-bold mb-4">Social Galas</h3>
@@ -267,7 +267,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
             </p>
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
               {data.venues.map((venue, i) => (
-                <span key={i} className="px-6 py-3 rounded-full bg-black border border-white/10 text-zinc-300 text-sm md:text-base font-medium hover:text-[#FFC107] hover:border-[#FFC107] transition-colors cursor-default">
+                <span key={i} className="px-6 py-3 rounded-full bg-black border border-white/10 text-zinc-300 text-sm md:text-base font-medium hover:text-[#FFD700] hover:border-[#FFD700] transition-colors cursor-default">
                   {venue}
                 </span>
               ))}
@@ -280,7 +280,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
         <section className="py-24 bg-black border-t border-white/5">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl font-black uppercase mb-12 text-center">
-              Common Questions about <br/> hiring me for <span className="text-[#FFC107]">{resolvedParams.city}</span>
+              Common Questions about <br/> hiring me for <span className="text-[#FFD700]">{resolvedParams.city}</span>
             </h2>
             <div className="grid gap-6">
               {data.faq.map((item, i) => (
@@ -295,7 +295,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
       )}
 
       {/* SECTION 6: CTA FOOTER */}
-      <section className="py-24 bg-[#FFC107] text-black text-center relative overflow-hidden">
+      <section className="py-24 bg-[#FFD700] text-black text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-6xl font-black uppercase mb-6 leading-none">

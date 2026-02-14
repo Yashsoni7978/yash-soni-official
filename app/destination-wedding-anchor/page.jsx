@@ -15,7 +15,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#FFC107", 
+      backgroundColor: "#FFD700", 
     }}
   >
     {children}
@@ -30,12 +30,12 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <p className="text-[#FFC107] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-3 justify-center md:justify-start">
-        {align === "center" && <span className="w-8 h-[1px] bg-[#FFC107]"></span>}
-        <Plane className="w-3 h-3 text-[#FFC107]" />
+      <p className="text-[#FFD700] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-3 justify-center md:justify-start">
+        {align === "center" && <span className="w-8 h-[1px] bg-[#FFD700]"></span>}
+        <Plane className="w-3 h-3 text-[#FFD700]" />
         {subtitle}
-        {align !== "center" && <span className="w-12 h-[1px] bg-[#FFC107]"></span>}
-        {align === "center" && <span className="w-8 h-[1px] bg-[#FFC107]"></span>}
+        {align !== "center" && <span className="w-12 h-[1px] bg-[#FFD700]"></span>}
+        {align === "center" && <span className="w-8 h-[1px] bg-[#FFD700]"></span>}
       </p>
       <h2 className="text-4xl md:text-6xl font-display font-black text-white leading-tight">
         {title}
@@ -68,7 +68,7 @@ const FAQS = [
 
 export default function DestinationAnchor() {
   return (
-    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#FFC107] selection:text-black">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#FFD700] selection:text-black">
       
       {/* --- 1. HERO: THE JETSETTER VIBE --- */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -86,7 +86,7 @@ export default function DestinationAnchor() {
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
             <div className="inline-flex items-center gap-3 border border-white/20 px-6 py-2 rounded-full bg-black/40 backdrop-blur-xl mb-8">
-              <Globe className="w-4 h-4 text-[#FFC107] animate-pulse" />
+              <Globe className="w-4 h-4 text-[#FFD700] animate-pulse" />
               <span className="text-white text-xs uppercase tracking-[0.2em] font-bold">
                 Passport Ready • Global Events
               </span>
@@ -103,7 +103,7 @@ export default function DestinationAnchor() {
             
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <Link href="/contact">
-                <button className="px-10 py-4 bg-[#FFC107] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                <button className="px-10 py-4 bg-[#FFD700] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_30px_rgba(212,175,55,0.4)]">
                   Check Travel Dates
                 </button>
               </Link>
@@ -114,7 +114,7 @@ export default function DestinationAnchor() {
       </section>
 
       {/* --- 2. THE DESTINATION TICKER --- */}
-      <div className="bg-[#FFC107] text-black py-4 overflow-hidden">
+      <div className="bg-[#FFD700] text-black py-4 overflow-hidden">
          <div className="animate-marquee whitespace-nowrap flex gap-12 font-bold uppercase tracking-widest text-sm">
             <span>Udaipur • Jodhpur • Jaipur • Goa • Dubai • Thailand • Bali • Mussoorie • Kerala •</span>
             <span>Udaipur • Jodhpur • Jaipur • Goa • Dubai • Thailand • Bali • Mussoorie • Kerala •</span>
@@ -130,7 +130,7 @@ export default function DestinationAnchor() {
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
                  Destination weddings are different. Guests are tired from travel, families are meeting for the first time, and the itinerary is packed.
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-10 border-l-4 border-[#FFC107] pl-6">
+              <p className="text-gray-400 text-lg leading-relaxed mb-10 border-l-4 border-[#FFD700] pl-6">
                  I act as the <strong>"Social Glue"</strong> that binds the two families together. From the Welcome Lunch to the After-Party, I ensure the energy never drops.
               </p>
               <div className="space-y-8">
@@ -144,7 +144,7 @@ export default function DestinationAnchor() {
               <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-neutral-800 rounded-2xl overflow-hidden transform rotate-3 border border-neutral-700">
                  <img src="/gallery-6.webp" className="w-full h-full object-cover grayscale opacity-60" alt="Resort Vibe" />
               </div>
-              <div className="absolute bottom-0 left-0 w-3/4 h-3/4 bg-black rounded-2xl overflow-hidden shadow-2xl border border-[#FFC107] transform -rotate-3">
+              <div className="absolute bottom-0 left-0 w-3/4 h-3/4 bg-black rounded-2xl overflow-hidden shadow-2xl border border-[#FFD700] transform -rotate-3">
                  <img src="/intro-portrait-top.jpg" className="w-full h-full object-cover" alt="Yash Soni Travel" />
               </div>
            </div>
@@ -158,13 +158,13 @@ export default function DestinationAnchor() {
             
             <div className="mt-20 relative max-w-5xl mx-auto">
                {/* Vertical Flight Path Line */}
-               <div className="absolute left-8 md:left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-[#FFC107] via-neutral-800 to-transparent -translate-x-1/2"></div>
+               <div className="absolute left-8 md:left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-[#FFD700] via-neutral-800 to-transparent -translate-x-1/2"></div>
 
                {/* Day 1 */}
                <ItineraryCard 
                  day="Day 01"
                  title="The Welcome & Sundowner"
-                 icon={<Sun className="w-6 h-6 text-[#FFC107]" />}
+                 icon={<Sun className="w-6 h-6 text-[#FFD700]" />}
                  desc="Guests arrive. The vibe is chill but exciting. I host a casual 'Know Your Family' session over high-tea or cocktails to break the ice."
                  align="left"
                />
@@ -173,7 +173,7 @@ export default function DestinationAnchor() {
                <ItineraryCard 
                  day="Day 02 (AM)"
                  title="The Pool Party / Haldi"
-                 icon={<Palmtree className="w-6 h-6 text-[#FFC107]" />}
+                 icon={<Palmtree className="w-6 h-6 text-[#FFD700]" />}
                  desc="Chaos mode on. Floral Holi, Tug-of-War, and high-energy anchor games. I make sure no one stays dry and everyone is dancing."
                  align="right"
                />
@@ -182,7 +182,7 @@ export default function DestinationAnchor() {
                <ItineraryCard 
                  day="Day 02 (PM)"
                  title="The Sangeet Gala"
-                 icon={<Music className="w-6 h-6 text-[#FFC107]" />}
+                 icon={<Music className="w-6 h-6 text-[#FFD700]" />}
                  desc="Glitz and Glamour. I transition into a Tuxedo. This is about family performances, heartfelt roasts, and managing the stage flow perfectly."
                  align="left"
                />
@@ -191,7 +191,7 @@ export default function DestinationAnchor() {
                <ItineraryCard 
                  day="Day 03"
                  title="The Royal Wedding"
-                 icon={<Moon className="w-6 h-6 text-[#FFC107]" />}
+                 icon={<Moon className="w-6 h-6 text-[#FFD700]" />}
                  desc="The Grand Varmala. I switch to traditional attire and poetic storytelling, creating a cinematic atmosphere for the main ceremony."
                  align="right"
                />
@@ -228,7 +228,7 @@ export default function DestinationAnchor() {
             <p className="text-gray-400 text-sm uppercase tracking-widest mb-4">Also available for</p>
             <div className="flex flex-wrap justify-center gap-4">
                 {["Dubai", "Thailand", "Mussoorie", "Jodhpur", "Ranthambore", "Pushkar"].map(city => (
-                    <span key={city} className="border border-neutral-800 px-6 py-2 rounded-full hover:border-[#FFC107] hover:text-[#FFC107] transition-colors cursor-default text-sm">
+                    <span key={city} className="border border-neutral-800 px-6 py-2 rounded-full hover:border-[#FFD700] hover:text-[#FFD700] transition-colors cursor-default text-sm">
                         {city}
                     </span>
                 ))}
@@ -251,11 +251,11 @@ export default function DestinationAnchor() {
          <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
          <div className="container mx-auto px-4 relative z-10">
             <h2 className="text-4xl md:text-7xl font-display font-black mb-8 text-white">Packing My Bags?</h2>
-            <p className="text-[#FFC107] max-w-2xl mx-auto mb-12 text-xl font-light">
+            <p className="text-[#FFD700] max-w-2xl mx-auto mb-12 text-xl font-light">
                Dates for 2026 Destination Weddings are booking 8-12 months in advance.
             </p>
             <Link href="/contact">
-               <button className="px-12 py-5 bg-[#FFC107] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl">
+               <button className="px-12 py-5 bg-[#FFD700] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl">
                   Inquire Now
                </button>
             </Link>
@@ -270,7 +270,7 @@ export default function DestinationAnchor() {
 
 const FeatureRow = ({ icon, title, desc }) => (
   <div className="flex gap-5 group">
-    <div className="w-14 h-14 rounded-full border border-neutral-800 bg-[#0a0a0a] flex items-center justify-center text-[#FFC107] shrink-0 group-hover:bg-[#FFC107] group-hover:text-black transition-all duration-500">
+    <div className="w-14 h-14 rounded-full border border-neutral-800 bg-[#0a0a0a] flex items-center justify-center text-[#FFD700] shrink-0 group-hover:bg-[#FFD700] group-hover:text-black transition-all duration-500">
       {icon}
     </div>
     <div>
@@ -283,14 +283,14 @@ const FeatureRow = ({ icon, title, desc }) => (
 const ItineraryCard = ({ day, title, desc, icon, align }) => (
   <div className={`flex flex-col md:flex-row items-center gap-8 mb-16 relative ${align === 'right' ? 'md:flex-row-reverse' : ''}`}>
       {/* Dot */}
-      <div className="absolute left-8 md:left-1/2 top-0 w-8 h-8 bg-[#0a0a0a] border-2 border-[#FFC107] rounded-full md:-translate-x-1/2 z-10 flex items-center justify-center">
-        <div className="w-2 h-2 bg-[#FFC107] rounded-full"></div>
+      <div className="absolute left-8 md:left-1/2 top-0 w-8 h-8 bg-[#0a0a0a] border-2 border-[#FFD700] rounded-full md:-translate-x-1/2 z-10 flex items-center justify-center">
+        <div className="w-2 h-2 bg-[#FFD700] rounded-full"></div>
       </div>
       
       {/* Content */}
-      <div className={`w-full md:w-1/2 p-8 ml-16 md:ml-0 hover:bg-[#111] border border-transparent hover:border-[#FFC107]/30 rounded-2xl transition-all duration-500 group ${align === 'right' ? 'text-left md:text-left' : 'text-left md:text-right'}`}>
+      <div className={`w-full md:w-1/2 p-8 ml-16 md:ml-0 hover:bg-[#111] border border-transparent hover:border-[#FFD700]/30 rounded-2xl transition-all duration-500 group ${align === 'right' ? 'text-left md:text-left' : 'text-left md:text-right'}`}>
          <div className={`flex items-center gap-3 mb-4 ${align === 'right' ? 'md:justify-start' : 'md:justify-end'}`}>
-            <span className="text-[#FFC107] font-bold uppercase tracking-widest text-sm">{day}</span>
+            <span className="text-[#FFD700] font-bold uppercase tracking-widest text-sm">{day}</span>
             {icon}
          </div>
          <h3 className="text-2xl font-bold text-white mb-3">{title}</h3>
@@ -306,7 +306,7 @@ const LocationCard = ({ name, tag, img, colSpan = "" }) => (
         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
         <div className="absolute bottom-6 left-6">
             <p className="text-white font-black text-3xl uppercase">{name}</p>
-            <div className="flex items-center gap-2 text-[#FFC107] text-xs font-bold uppercase tracking-widest mt-1">
+            <div className="flex items-center gap-2 text-[#FFD700] text-xs font-bold uppercase tracking-widest mt-1">
                 <MapPin className="w-3 h-3" /> {tag}
             </div>
         </div>
@@ -316,13 +316,13 @@ const LocationCard = ({ name, tag, img, colSpan = "" }) => (
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-xl overflow-hidden transition-all duration-300 hover:border-[#FFC107]/30">
+    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-xl overflow-hidden transition-all duration-300 hover:border-[#FFD700]/30">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full p-6 text-left hover:bg-neutral-900 transition-colors"
       >
         <span className="font-bold text-white text-lg">{question}</span>
-        <ChevronDown className={`w-5 h-5 text-[#FFC107] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-5 h-5 text-[#FFD700] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
         {isOpen && (

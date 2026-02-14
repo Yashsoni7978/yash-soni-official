@@ -54,7 +54,7 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-const GOLD_COLOR = "#FFC107";
+const GOLD_COLOR = "#FFD700";
 
 // --- SUB-COMPONENTS ---
 const GoldLogo = () => (
@@ -117,7 +117,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={`text-xs xl:text-sm font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${
-                    activeDropdown === link.name ? "text-[#FFC107]" : "text-gray-300 hover:text-white"
+                    activeDropdown === link.name ? "text-[#FFD700]" : "text-gray-300 hover:text-white"
                   }`}
                 >
                   {link.name}
@@ -132,7 +132,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 15 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 w-64 bg-black border border-[#FFC107]/30 shadow-[0_0_30px_rgba(0,0,0,0.8)] rounded-xl overflow-hidden mt-4 p-2"
+                      className="absolute top-full left-0 w-64 bg-black border border-[#FFD700]/30 shadow-[0_0_30px_rgba(0,0,0,0.8)] rounded-xl overflow-hidden mt-4 p-2"
                     >
                        <div className="max-h-[60vh] overflow-y-auto custom-scrollbar">
                         {link.dropdown.map((sub) => (
@@ -153,7 +153,7 @@ export default function Navbar() {
 
             {/* CTA Button Desktop */}
             <Link href="/contact">
-              <button className="px-6 py-2 bg-[#FFC107] text-black text-xs font-black uppercase tracking-widest rounded hover:bg-white transition-all transform hover:scale-105">
+              <button className="px-6 py-2 bg-[#FFD700] text-black text-xs font-black uppercase tracking-widest rounded hover:bg-white transition-all transform hover:scale-105">
                 Book Now
               </button>
             </Link>
@@ -165,7 +165,7 @@ export default function Navbar() {
             className="lg:hidden text-white p-2 z-[10002] relative focus:outline-none"
             aria-label="Toggle Menu"
           >
-            {isOpen ? <X size={28} className="text-[#FFC107]" /> : <Menu size={28} />}
+            {isOpen ? <X size={28} className="text-[#FFD700]" /> : <Menu size={28} />}
           </button>
         </div>
       </nav>
@@ -180,7 +180,7 @@ export default function Navbar() {
             className="fixed inset-0 bg-black z-[10000] lg:hidden flex flex-col pt-24 px-6 overflow-y-auto"
           >
              {/* Background Element */}
-             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFC107]/5 via-transparent to-transparent pointer-events-none" />
+             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFD700]/5 via-transparent to-transparent pointer-events-none" />
 
              <div className="flex flex-col gap-6 relative z-10 pb-20">
                {navLinks.map((link, idx) => (
@@ -194,7 +194,7 @@ export default function Navbar() {
                          {link.name}
                          <ChevronRight 
                            size={20} 
-                           className={`text-[#FFC107] transition-transform duration-300 ${mobileExpanded === link.name ? "rotate-90" : ""}`} 
+                           className={`text-[#FFD700] transition-transform duration-300 ${mobileExpanded === link.name ? "rotate-90" : ""}`} 
                          />
                        </button>
                        <AnimatePresence>
@@ -205,13 +205,13 @@ export default function Navbar() {
                              exit={{ height: 0, opacity: 0 }}
                              className="overflow-hidden"
                            >
-                             <div className="flex flex-col gap-4 mt-4 pl-4 border-l border-[#FFC107]/30 ml-1">
+                             <div className="flex flex-col gap-4 mt-4 pl-4 border-l border-[#FFD700]/30 ml-1">
                                {link.dropdown.map(sub => (
                                  <Link 
                                    key={sub.name}
                                    href={sub.href}
                                    onClick={() => setIsOpen(false)}
-                                   className="text-sm font-medium text-gray-400 uppercase tracking-widest hover:text-[#FFC107]"
+                                   className="text-sm font-medium text-gray-400 uppercase tracking-widest hover:text-[#FFD700]"
                                  >
                                    {sub.name}
                                  </Link>
@@ -225,7 +225,7 @@ export default function Navbar() {
                      <Link 
                        href={link.href}
                        onClick={() => setIsOpen(false)}
-                       className="block text-2xl font-black text-white uppercase tracking-tight hover:text-[#FFC107] transition-colors"
+                       className="block text-2xl font-black text-white uppercase tracking-tight hover:text-[#FFD700] transition-colors"
                      >
                        {link.name}
                      </Link>
@@ -235,7 +235,7 @@ export default function Navbar() {
 
                <div className="mt-8">
                  <Link href="/contact" onClick={() => setIsOpen(false)}>
-                   <button className="w-full py-5 bg-[#FFC107] text-black text-lg font-black uppercase tracking-widest rounded-lg">
+                   <button className="w-full py-5 bg-[#FFD700] text-black text-lg font-black uppercase tracking-widest rounded-lg">
                      Book Now
                    </button>
                  </Link>

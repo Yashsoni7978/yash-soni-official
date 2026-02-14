@@ -14,7 +14,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#FFC107", 
+      backgroundColor: "#FFD700", 
     }}
   >
     {children}
@@ -29,7 +29,7 @@ const FAQItem = ({ q, a }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center py-4 text-left group"
       >
-        <span className="text-gray-300 group-hover:text-[#FFC107] transition-colors font-medium">{q}</span>
+        <span className="text-gray-300 group-hover:text-[#FFD700] transition-colors font-medium">{q}</span>
         <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
@@ -73,10 +73,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen selection:bg-[#FFC107] selection:text-black font-sans pt-32 pb-20">
+    <div className="bg-black text-white min-h-screen selection:bg-[#FFD700] selection:text-black font-sans pt-32 pb-20">
       
       {/* --- AVAILABILITY TICKER --- */}
-      <div className="fixed top-20 left-0 w-full bg-[#FFC107] text-black text-[10px] md:text-xs font-bold uppercase tracking-widest py-2 z-20 overflow-hidden">
+      <div className="fixed top-20 left-0 w-full bg-[#FFD700] text-black text-[10px] md:text-xs font-bold uppercase tracking-widest py-2 z-20 overflow-hidden">
          <div className="whitespace-nowrap animate-marquee">
             Now Booking Dates for Winter 2025 & 2026 • Limited Slots Available • Contact Directly for Urgent Bookings • 
             Now Booking Dates for Winter 2025 & 2026 • Limited Slots Available • Contact Directly for Urgent Bookings •
@@ -87,8 +87,8 @@ export default function Contact() {
         
         {/* --- HEADER --- */}
         <div className="text-center mb-20">
-          <p className="text-[#FFC107] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center justify-center gap-2">
-            <span className="w-8 h-[1px] bg-[#FFC107]"></span> Let's Create Magic <span className="w-8 h-[1px] bg-[#FFC107]"></span>
+          <p className="text-[#FFD700] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center justify-center gap-2">
+            <span className="w-8 h-[1px] bg-[#FFD700]"></span> Let's Create Magic <span className="w-8 h-[1px] bg-[#FFD700]"></span>
           </p>
           <h1 className="text-5xl md:text-7xl font-display font-black mb-6 leading-tight">
             Ready to <GoldTextureText>Elevate</GoldTextureText> <br className="hidden md:block"/> Your Event?
@@ -107,12 +107,12 @@ export default function Contact() {
             <div className="bg-[#111] border border-neutral-800 p-8 rounded-2xl space-y-6">
                <h3 className="text-xl font-bold text-white mb-6">Quick Connect</h3>
                <a href="tel:+917737877978" className="flex items-center gap-4 group">
-                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center border border-neutral-800 text-[#FFC107] group-hover:bg-[#FFC107] group-hover:text-black transition-colors">
+                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center border border-neutral-800 text-[#FFD700] group-hover:bg-[#FFD700] group-hover:text-black transition-colors">
                    <Phone className="w-5 h-5" />
                  </div>
                  <div>
                    <p className="text-gray-500 text-xs uppercase tracking-widest">Call Me</p>
-                   <p className="text-lg font-bold text-white group-hover:text-[#FFC107] transition-colors">+91 77378 77978</p>
+                   <p className="text-lg font-bold text-white group-hover:text-[#FFD700] transition-colors">+91 77378 77978</p>
                  </div>
                </a>
                <a href="mailto:info@yashsoni.in" className="flex items-center gap-4 group">
@@ -136,7 +136,7 @@ export default function Contact() {
                    "Early booking locks in current pricing before seasonal hikes."
                  ].map((item, i) => (
                    <li key={i} className="flex gap-3 text-gray-400 text-sm">
-                     <CheckCircle2 className="w-5 h-5 text-[#FFC107] shrink-0" />
+                     <CheckCircle2 className="w-5 h-5 text-[#FFD700] shrink-0" />
                      {item}
                    </li>
                  ))}
@@ -160,7 +160,7 @@ export default function Contact() {
             <div className="bg-[#111] border border-neutral-800 p-8 md:p-10 rounded-3xl relative overflow-hidden shadow-2xl">
               
               {/* Background Glow */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFC107] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFD700] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-8">
@@ -180,7 +180,7 @@ export default function Contact() {
                         name="name"
                         required
                         placeholder="Your Name"
-                        className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFC107] focus:outline-none transition-colors placeholder:text-neutral-700"
+                        className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFD700] focus:outline-none transition-colors placeholder:text-neutral-700"
                         onChange={handleInputChange}
                       />
                     </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                           type="date" 
                           name="date"
                           required
-                          className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFC107] focus:outline-none transition-colors appearance-none"
+                          className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFD700] focus:outline-none transition-colors appearance-none"
                           onChange={handleInputChange}
                         />
                         <Calendar className="absolute right-4 top-4 text-neutral-600 w-5 h-5 pointer-events-none" />
@@ -204,7 +204,7 @@ export default function Contact() {
                        <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">Event Type</label>
                        <select 
                          name="type"
-                         className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFC107] focus:outline-none transition-colors appearance-none cursor-pointer"
+                         className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFD700] focus:outline-none transition-colors appearance-none cursor-pointer"
                          onChange={handleInputChange}
                        >
                          <option>Wedding / Reception</option>
@@ -221,7 +221,7 @@ export default function Contact() {
                         name="location"
                         required
                         placeholder="e.g. Fairmont Jaipur"
-                        className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFC107] focus:outline-none transition-colors placeholder:text-neutral-700"
+                        className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFD700] focus:outline-none transition-colors placeholder:text-neutral-700"
                         onChange={handleInputChange}
                       />
                     </div>
@@ -233,14 +233,14 @@ export default function Contact() {
                       name="message"
                       rows={3}
                       placeholder="Tell me a bit about the vibe you want..."
-                      className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFC107] focus:outline-none transition-colors placeholder:text-neutral-700 resize-none"
+                      className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#FFD700] focus:outline-none transition-colors placeholder:text-neutral-700 resize-none"
                       onChange={handleInputChange}
                     />
                   </div>
 
                   <button 
                     type="submit"
-                    className="w-full bg-[#FFC107] text-black font-bold text-lg p-5 rounded-xl hover:bg-white transition-all flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(212,175,55,0.3)] transform hover:scale-[1.02]"
+                    className="w-full bg-[#FFD700] text-black font-bold text-lg p-5 rounded-xl hover:bg-white transition-all flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(212,175,55,0.3)] transform hover:scale-[1.02]"
                   >
                     Start Conversation <Send className="w-5 h-5" />
                   </button>

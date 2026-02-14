@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 // --- 1. CONFIGURATION ---
-const GOLD_COLOR = "#FFC107";
+const GOLD_COLOR = "#FFD700";
 
 // --- 2. DATA: THE 9 BLOGS ---
 const BLOG_POSTS = [
@@ -126,7 +126,7 @@ const ArticleCard = ({ post }) => (
         alt={post.title} 
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
       />
-      <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-[#FFC107] uppercase tracking-widest border border-white/10 rounded-md">
+      <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-[#FFD700] uppercase tracking-widest border border-white/10 rounded-md">
         {post.category}
       </div>
     </div>
@@ -136,13 +136,13 @@ const ArticleCard = ({ post }) => (
         <span className="w-1 h-1 rounded-full bg-zinc-700"></span>
         <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
       </div>
-      <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-[#FFC107] transition-colors">
+      <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-[#FFD700] transition-colors">
         {post.title}
       </h3>
       <p className="text-zinc-400 text-sm leading-relaxed mb-6 line-clamp-3">
         {post.excerpt}
       </p>
-      <div className="mt-auto flex items-center text-[#FFC107] text-xs font-black uppercase tracking-widest gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
+      <div className="mt-auto flex items-center text-[#FFD700] text-xs font-black uppercase tracking-widest gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
         Read Article <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
       </div>
     </div>
@@ -162,7 +162,7 @@ export default function BlogPage() {
   const featuredPost = BLOG_POSTS.find(p => p.featured);
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#FFC107] selection:text-black">
+    <main className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#FFD700] selection:text-black">
       
       {/* 1. HEADER SECTION (SEO Optimized H1) */}
       <section className="pt-32 pb-16 border-b border-white/10 relative overflow-hidden">
@@ -172,12 +172,12 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <span className="text-[#FFC107] font-black tracking-[0.2em] uppercase text-xs mb-4 block">
+            <span className="text-[#FFD700] font-black tracking-[0.2em] uppercase text-xs mb-4 block">
               The Anchor's Journal
             </span>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 text-white leading-[0.9]">
               Latest Insights <span className="text-zinc-600">&</span> <br/> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC107] to-[#8a6e1c]">Expert Advice</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#8a6e1c]">Expert Advice</span>
             </h1>
             <p className="text-xl text-zinc-400 font-light max-w-2xl leading-relaxed">
               Expert advice, behind-the-scenes stories, and tips to make your next event unforgettable. Curated by Anchor Yash.
@@ -208,22 +208,22 @@ export default function BlogPage() {
                       alt={featuredPost.title} 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
-                    <div className="absolute top-6 left-6 z-20 bg-[#FFC107] text-black px-4 py-1.5 text-xs font-black uppercase tracking-widest rounded-md">
+                    <div className="absolute top-6 left-6 z-20 bg-[#FFD700] text-black px-4 py-1.5 text-xs font-black uppercase tracking-widest rounded-md">
                       Featured Guide
                     </div>
                     <div className="absolute bottom-0 left-0 p-8 md:p-12 z-20 max-w-3xl">
                       <div className="flex items-center gap-4 text-zinc-300 text-xs mb-4 font-medium uppercase tracking-wider">
                         <span>{featuredPost.date}</span>
-                        <span className="w-1 h-1 rounded-full bg-[#FFC107]"></span>
+                        <span className="w-1 h-1 rounded-full bg-[#FFD700]"></span>
                         <span>{featuredPost.readTime}</span>
                       </div>
-                      <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight group-hover:text-[#FFC107] transition-colors">
+                      <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight group-hover:text-[#FFD700] transition-colors">
                         {featuredPost.title}
                       </h2>
                       <p className="text-zinc-300 text-lg md:text-xl font-light mb-8 line-clamp-2 md:line-clamp-none">
                         {featuredPost.excerpt}
                       </p>
-                      <button className="flex items-center gap-3 px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-black uppercase tracking-widest group-hover:bg-[#FFC107] group-hover:text-black group-hover:border-[#FFC107] transition-all">
+                      <button className="flex items-center gap-3 px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-black uppercase tracking-widest group-hover:bg-[#FFD700] group-hover:text-black group-hover:border-[#FFD700] transition-all">
                         Read Full Article <ArrowUpRight size={16} />
                       </button>
                     </div>
@@ -251,7 +251,7 @@ export default function BlogPage() {
             {filteredPosts.length === 0 && (
               <div className="py-20 text-center border border-white/10 rounded-2xl bg-zinc-900/30">
                 <p className="text-zinc-500">No articles found in this category.</p>
-                <button onClick={() => setActiveCategory("All")} className="mt-4 text-[#FFC107] underline">View All Posts</button>
+                <button onClick={() => setActiveCategory("All")} className="mt-4 text-[#FFD700] underline">View All Posts</button>
               </div>
             )}
           </div>
@@ -263,14 +263,14 @@ export default function BlogPage() {
               <input 
                 type="text" 
                 placeholder="Search articles..." 
-                className="w-full bg-zinc-900/50 border border-white/10 rounded-lg py-4 pl-12 pr-4 text-sm focus:outline-none focus:border-[#FFC107] transition-colors"
+                className="w-full bg-zinc-900/50 border border-white/10 rounded-lg py-4 pl-12 pr-4 text-sm focus:outline-none focus:border-[#FFD700] transition-colors"
               />
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
             </div>
 
             {/* Categories */}
             <div>
-              <h3 className="text-sm font-black uppercase tracking-widest text-white mb-6 border-l-2 border-[#FFC107] pl-3">
+              <h3 className="text-sm font-black uppercase tracking-widest text-white mb-6 border-l-2 border-[#FFD700] pl-3">
                 Explore Topics
               </h3>
               <div className="flex flex-col gap-2">
@@ -279,7 +279,7 @@ export default function BlogPage() {
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={`text-left px-4 py-3 rounded-lg text-sm font-medium transition-all flex justify-between items-center group
-                      ${activeCategory === cat ? "bg-[#FFC107] text-black font-bold" : "bg-zinc-900/30 text-zinc-400 hover:bg-zinc-900 hover:text-white"}`}
+                      ${activeCategory === cat ? "bg-[#FFD700] text-black font-bold" : "bg-zinc-900/30 text-zinc-400 hover:bg-zinc-900 hover:text-white"}`}
                   >
                     {cat}
                     {activeCategory === cat && <ChevronRight size={16} />}
@@ -290,29 +290,29 @@ export default function BlogPage() {
 
             {/* Trending / Quick Links */}
             <div className="p-6 rounded-xl border border-white/10 bg-gradient-to-br from-zinc-900 to-black">
-               <div className="flex items-center gap-2 mb-6 text-[#FFC107]">
+               <div className="flex items-center gap-2 mb-6 text-[#FFD700]">
                  <TrendingUp size={20} />
                  <span className="text-xs font-black uppercase tracking-widest">Trending Now</span>
                </div>
                <ul className="space-y-4">
-                 <li className="text-sm text-zinc-300 hover:text-[#FFC107] cursor-pointer transition-colors border-b border-white/5 pb-3">
+                 <li className="text-sm text-zinc-300 hover:text-[#FFD700] cursor-pointer transition-colors border-b border-white/5 pb-3">
                    → 5 Rajasthani Wedding Traditions
                  </li>
-                 <li className="text-sm text-zinc-300 hover:text-[#FFC107] cursor-pointer transition-colors border-b border-white/5 pb-3">
+                 <li className="text-sm text-zinc-300 hover:text-[#FFD700] cursor-pointer transition-colors border-b border-white/5 pb-3">
                    → Viral Bride & Groom Entry Ideas
                  </li>
-                 <li className="text-sm text-zinc-300 hover:text-[#FFC107] cursor-pointer transition-colors">
+                 <li className="text-sm text-zinc-300 hover:text-[#FFD700] cursor-pointer transition-colors">
                    → Sangeet Technical Checklist
                  </li>
                </ul>
             </div>
 
             {/* Newsletter Mini */}
-            <div className="text-center p-8 border border-[#FFC107]/30 rounded-xl bg-[#FFC107]/5">
+            <div className="text-center p-8 border border-[#FFD700]/30 rounded-xl bg-[#FFD700]/5">
                <h4 className="font-bold text-white mb-2">Get the Weekly Digest</h4>
                <p className="text-xs text-zinc-400 mb-4">Event trends & secrets delivered to your inbox.</p>
-               <input type="email" placeholder="Email Address" className="w-full bg-black border border-white/10 rounded px-3 py-2 text-xs mb-3 focus:outline-none focus:border-[#FFC107]" />
-               <button className="w-full bg-[#FFC107] text-black font-bold text-xs uppercase py-3 rounded hover:bg-white transition-colors">
+               <input type="email" placeholder="Email Address" className="w-full bg-black border border-white/10 rounded px-3 py-2 text-xs mb-3 focus:outline-none focus:border-[#FFD700]" />
+               <button className="w-full bg-[#FFD700] text-black font-bold text-xs uppercase py-3 rounded hover:bg-white transition-colors">
                  Subscribe
                </button>
             </div>
@@ -329,7 +329,7 @@ export default function BlogPage() {
               Read enough? Let's make magic happen. Book Anchor Yash for your next wedding or corporate gala.
             </p>
             <Link href="/contact">
-              <button className="px-10 py-4 bg-[#FFC107] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+              <button className="px-10 py-4 bg-[#FFD700] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,175,55,0.3)]">
                 Check Availability
               </button>
             </Link>
