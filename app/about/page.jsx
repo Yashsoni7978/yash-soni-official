@@ -6,11 +6,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star, Mic, Sparkles, Quote, MapPin, Calendar, Briefcase, Zap, Globe, ShieldAlert, Layers } from "lucide-react";
 
 // --- 1. LUXURY TEXTURE ASSETS ---
+// UPDATED: Now points to the .webp version of your gold texture
 const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
-      backgroundImage: "url('/gold-texture.png')", 
+      backgroundImage: "url('/gold-texture.webp')", 
       backgroundColor: "#D4AF37", 
     }}
   >
@@ -42,11 +43,14 @@ export default function About() {
         {/* --- LEFT SIDE: THE STICKY VISUAL (The Man) --- */}
         <div className="lg:w-1/2 h-[60vh] lg:h-screen lg:sticky lg:top-0 relative overflow-hidden border-r border-neutral-900 z-10">
           <div className="absolute inset-0 bg-black/10 z-10" />
+          
+          {/* UPDATED: Now uses your provided portrait image */}
           <img 
-            src="/anchor-portrait.webp" 
+            src="/intro-portrait-top.jpg" 
             alt="Anchor Yash Soni" 
             className="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-1000 ease-in-out"
           />
+          
           {/* Floating Name (Desktop) */}
           <div className="absolute bottom-10 left-10 z-20 hidden lg:block">
             <p className="text-white/60 text-sm uppercase tracking-[0.4em] mb-2">The Host</p>
@@ -133,7 +137,7 @@ export default function About() {
             </FadeIn>
           </section>
 
-          {/* 5. VENUE AUTHORITY (NEW ADDITION) */}
+          {/* 5. VENUE AUTHORITY */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
             <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">02</span>
             <FadeIn>
@@ -169,7 +173,7 @@ export default function About() {
             </FadeIn>
           </section>
 
-          {/* 6. SIGNATURE STYLE (NEW ADDITION) */}
+          {/* 6. SIGNATURE STYLE */}
           <section className="py-20 p-8 md:p-20 border-b border-neutral-900 bg-[#080808]">
             <FadeIn>
               <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-12">Signature Style</h3>
@@ -192,7 +196,7 @@ export default function About() {
             </FadeIn>
           </section>
 
-          {/* 7. CRISIS MANAGEMENT (NEW ADDITION) */}
+          {/* 7. CRISIS MANAGEMENT */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
             <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">03</span>
             <FadeIn>
