@@ -26,8 +26,15 @@ const style = `
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
   }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
   .animate-marquee {
     animation: marquee 45s linear infinite;
+  }
+  .animate-marquee-reverse {
+    animation: marquee-reverse 45s linear infinite;
   }
   .animate-marquee-slow {
     animation: marquee 60s linear infinite;
@@ -106,16 +113,16 @@ const PROCESS_STEPS = [
 ];
 
 const REVIEWS = [
-  { name: "Nikita Agarwal", date: "15 weeks ago", text: "We couldn’t have asked for a better anchor! Yash brought the perfect blend of energy, charm, and professionalism." },
-  { name: "Sakshi Soni", date: "19 weeks ago", text: "One of the best Anchor in jaipur, really the top most Anchor in jaipur. Made our event really Memorable." },
-  { name: "Divyansh Soni", date: "22 Dec 2024", text: "It was a very good experience with Yash. Handled my sangeet function very well." },
-  { name: "Utkarsh Godha", date: "22 Dec 2024", text: "Very nice 👍 perfect entertaining." },
-  { name: "Bharat Sharma", date: "21 Dec 2024", text: "Good personality and anchoring with humour and professionalism. Everything goes in flow with him." },
-  { name: "Riya Chauhan", date: "8 Oct 2024", text: "Anchor Yash absolutely rocked the stage at India Kids Fashion Week Season 11 at The Lalit, Jaipur!" },
-  { name: "Saurabh Agarwal", date: "5 Jul 2024", text: "The experience was phenomenal. Great anchor with soft and attracting personality and eye catching presence." },
-  { name: "Divya Shree", date: "4 Jul 2024", text: "A true master of connection, they made everyone feel included. Highly recommend for an unforgettable experience!" },
-  { name: "Keshav Srivastav", date: "19 Jun 2024", text: "He was engaging, professional, and kept the audience captivated throughout the event." },
-  { name: "Vartika Jetawat", date: "19 Jun 2024", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic thorough the function." }
+  { name: "Nikita Agarwal", text: "We couldn’t have asked for a better anchor! Yash brought the perfect blend of energy, charm, and professionalism." },
+  { name: "Sakshi Soni", text: "One of the best Anchor in jaipur, really the top most Anchor in jaipur. Made our event really Memorable." },
+  { name: "Divyansh Soni", text: "It was a very good experience with Yash. Handled my sangeet function very well." },
+  { name: "Utkarsh Godha", text: "Very nice 👍 perfect entertaining." },
+  { name: "Bharat Sharma", text: "Good personality and anchoring with humour and professionalism. Everything goes in flow with him." },
+  { name: "Riya Chauhan", text: "Anchor Yash absolutely rocked the stage at India Kids Fashion Week Season 11 at The Lalit, Jaipur!" },
+  { name: "Saurabh Agarwal", text: "The experience was phenomenal. Great anchor with soft and attracting personality and eye catching presence." },
+  { name: "Divya Shree", text: "A true master of connection, they made everyone feel included. Highly recommend for an unforgettable experience!" },
+  { name: "Keshav Srivastav", text: "He was engaging, professional, and kept the audience captivated throughout the event." },
+  { name: "Vartika Jetawat", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic thorough the function." }
 ];
 
 const FAQS = [
@@ -144,7 +151,6 @@ const GALLERY_IMAGES = [
 
 // --- 4. SUB-COMPONENTS ---
 
-// Updated to make the animation optional and use the webp texture consistently
 const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
@@ -320,28 +326,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. FEATURED MARQUEE (Moved Up & Boxed) */}
+      {/* 3. FEATURED MARQUEE (Boxed Title Only) */}
       <section className="py-20 bg-black border-y border-white/5 relative z-20">
-        <div className="container mx-auto px-6">
-          <div className="bg-white/5 border border-white/10 rounded-3xl py-12 px-6 md:px-12 shadow-2xl relative overflow-hidden">
-            <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/40 mb-10 uppercase">
-              FEATURED ON
-            </h2>
-            <div className="flex overflow-hidden mask-linear-gradient">
-              <div className="flex whitespace-nowrap gap-24 items-center animate-marquee w-max">
-                {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
-                  <a 
-                    key={idx}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-3xl md:text-5xl font-black text-zinc-600 uppercase no-underline transition-colors duration-500 hover:scale-105 transform ${item.color}`}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
+        <div className="container mx-auto px-6 mb-10 flex justify-center">
+          <h2 className="inline-block text-center text-xs md:text-sm font-black tracking-[0.3em] text-white/40 uppercase border border-white/10 bg-white/5 rounded-full px-8 py-3 backdrop-blur-md">
+            FEATURED ON
+          </h2>
+        </div>
+        <div className="flex overflow-hidden mask-linear-gradient">
+          <div className="flex whitespace-nowrap gap-24 items-center animate-marquee w-max">
+            {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
+              <a 
+                key={idx}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-3xl md:text-5xl font-black text-zinc-600 uppercase no-underline transition-colors duration-500 hover:scale-105 transform ${item.color}`}
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -503,45 +507,64 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. REVIEWS */}
-      <section className="py-24 container mx-auto px-6">
-        <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-            Real Words. <span className="text-[#D4AF37]">Real Impact.</span>
-          </h2>
-        </ScrollReveal>
+      {/* 10. REVIEWS (Moving Train Layout) */}
+      <section className="py-24 overflow-hidden relative">
+        <div className="container mx-auto px-6 mb-16">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-5xl font-bold text-center">
+              Real Words. <span className="text-[#D4AF37]">Real Impact.</span>
+            </h2>
+          </ScrollReveal>
+        </div>
         
-        <div className="flex overflow-x-auto pb-12 gap-6 snap-x snap-mandatory no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
-          {REVIEWS.map((review, idx) => (
-            <a 
-              key={idx}
-              href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="snap-center shrink-0 w-[300px] md:w-[450px] p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex text-[#D4AF37] gap-1">
-                    {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#D4AF37" />)}
-                  </div>
-                  <ExternalLink className="text-zinc-600 group-hover:text-[#D4AF37] transition-colors" size={18} />
+        {/* Row 1 - Moves Left */}
+        <div className="flex overflow-hidden mask-linear-gradient mb-6">
+          <div className="flex whitespace-nowrap gap-6 animate-marquee w-max hover:[animation-play-state:paused]">
+            {[...REVIEWS.slice(0, 5), ...REVIEWS.slice(0, 5), ...REVIEWS.slice(0, 5)].map((review, idx) => (
+              <a 
+                key={idx}
+                href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
+              >
+                <div className="flex text-[#D4AF37] gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#D4AF37" />)}
                 </div>
-                <p className="text-zinc-300 text-sm md:text-lg leading-relaxed mb-8 font-normal">
+                <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
                   "{review.text}"
                 </p>
-              </div>
-              <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-zinc-800 flex items-center justify-center font-bold text-black text-lg">
-                  {review.name.charAt(0)}
+                <h4 className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors mt-auto">
+                  — {review.name}
+                </h4>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2 - Moves Right */}
+        <div className="flex overflow-hidden mask-linear-gradient">
+          <div className="flex whitespace-nowrap gap-6 animate-marquee-reverse w-max hover:[animation-play-state:paused]">
+            {[...REVIEWS.slice(5, 10), ...REVIEWS.slice(5, 10), ...REVIEWS.slice(5, 10)].map((review, idx) => (
+              <a 
+                key={idx}
+                href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
+              >
+                <div className="flex text-[#D4AF37] gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#D4AF37" />)}
                 </div>
-                <div>
-                  <h4 className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors">{review.name}</h4>
-                  <span className="text-zinc-500 text-xs">{review.date}</span>
-                </div>
-              </div>
-            </a>
-          ))}
+                <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
+                  "{review.text}"
+                </p>
+                <h4 className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors mt-auto">
+                  — {review.name}
+                </h4>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
