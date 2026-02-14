@@ -326,7 +326,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. FEATURED MARQUEE (Boxed Title Only) */}
+      
+      {/* 3. STATS SECTION */}
+      
+      <section className="py-20 bg-zinc-950 border-b border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {STATS_DATA.map((stat, i) => (
+              <ScrollReveal key={i} delay={i * 0.1} className="text-center group">
+                <div className="mb-6 flex justify-center">
+                  <stat.icon className="w-10 h-10 text-[#D4AF37] group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div className="text-5xl md:text-6xl font-black mb-3">
+                  <GoldTextureText>{stat.value}</GoldTextureText>
+                </div>
+                <div className="text-zinc-500 text-sm uppercase tracking-[0.2em] font-medium group-hover:text-white transition-colors">{stat.label}</div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+{/* 4. FEATURED MARQUEE (Boxed Title Only) */}
       <section className="py-20 bg-black border-y border-white/5 relative z-20">
         <div className="container mx-auto px-6 mb-10 flex justify-center">
           <h2 className="inline-block text-center text-xs md:text-sm font-black tracking-[0.3em] text-white/40 uppercase border border-white/10 bg-white/5 rounded-full px-8 py-3 backdrop-blur-md">
@@ -345,26 +366,6 @@ export default function HomePage() {
               >
                 {item.name}
               </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. STATS SECTION */}
-      <section className="py-20 bg-zinc-950 border-b border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            {STATS_DATA.map((stat, i) => (
-              <ScrollReveal key={i} delay={i * 0.1} className="text-center group">
-                <div className="mb-6 flex justify-center">
-                  <stat.icon className="w-10 h-10 text-[#D4AF37] group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div className="text-5xl md:text-6xl font-black mb-3">
-                  <GoldTextureText>{stat.value}</GoldTextureText>
-                </div>
-                <div className="text-zinc-500 text-sm uppercase tracking-[0.2em] font-medium group-hover:text-white transition-colors">{stat.label}</div>
-              </ScrollReveal>
             ))}
           </div>
         </div>
