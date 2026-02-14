@@ -14,7 +14,7 @@ const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
-      backgroundImage: "url('/gold-texture.png')", 
+      backgroundImage: "url('/gold-texture.webp')", 
       backgroundColor: "#D4AF37", 
     }}
   >

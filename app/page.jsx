@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   Play, Minus, Plus, Star, 
   ExternalLink, CalendarCheck, 
@@ -40,17 +41,16 @@ const style = `
 `;
 
 // --- 2. ANIMATION VARIANTS ---
-const revealUp: Variants = {
+const revealUp = {
   hidden: { y: 60, opacity: 0 },
   visible: { 
     y: 0, 
     opacity: 1, 
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+    transition: { duration: 0.8, ease: "easeOut" } 
   }
 };
 
 // --- 3. DATA CONSTANTS ---
-
 const STATS_DATA = [
   { value: "1100+", label: "Mic Checks", icon: Mic },
   { value: "05+", label: "Years Live", icon: Award },
@@ -62,17 +62,17 @@ const SIGNATURE_SERVICES = [
   { 
     title: "The Wedding Architect", 
     desc: "The 'Family Member with a Mic.' I handle everything from the chaotic Baraat entry to the emotional Varmala. I don't just host; I manage the crowd, keep the drunk uncles in check, and make sure the Sangeet games actually get people laughing.",
-    img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
+    img: "/service-wedding.webp"
   },
   { 
     title: "The Corporate Pro", 
     desc: "Professional doesn't have to mean 'boring.' I bridge the gap between the boardroom and the banquet hall. High energy for the awards, sharp wit for the engagement, and total brand alignment for your stakeholders.",
-    img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80"
+    img: "/service-corporate.webp"
   },
   { 
     title: "The Runway Voice", 
     desc: "A ramp walk needs a rhythm, not just a speaker. I provide the voice that matches the swagger of the models, keeping the tempo high and the audience’s cameras flashing.",
-    img: "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?w=800&q=80"
+    img: "/service-fashion.webp"
   }
 ];
 
@@ -134,17 +134,17 @@ const FAQS = [
 ];
 
 const GALLERY_IMAGES = [
-  "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
-  "https://images.unsplash.com/photo-1511285560982-1351cdeb9821?w=600&q=80",
-  "https://images.unsplash.com/photo-1475721027785-f74eccf8e5fe?w=600&q=80",
-  "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80",
-  "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&q=80",
-  "https://images.unsplash.com/photo-1545128485-c400e7702796?w=600&q=80"
+  "/gallery-1.webp",
+  "/gallery-2.webp",
+  "/gallery-3.webp",
+  "/gallery-4.webp",
+  "/gallery-5.webp",
+  "/gallery-6.webp"
 ];
 
 // --- 4. SUB-COMPONENTS ---
 
-const GoldTextureText = ({ children, className }: { children: React.ReactNode, className?: string }) => (
+const GoldTextureText = ({ children, className = "" }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className}`}
     style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: GOLD_COLOR }}
@@ -161,9 +161,9 @@ const FilmGrain = () => (
 
 const HeroSlider = () => {
   const images = [
-    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070", 
-    "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069", 
-    "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1974"
+    "/hero-slide-1.webp", 
+    "/hero-slide-2.webp", 
+    "/hero-slide-3.webp"
   ];
   const [index, setIndex] = useState(0);
 
@@ -192,7 +192,7 @@ const HeroSlider = () => {
   );
 };
 
-const ScrollReveal = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
+const ScrollReveal = ({ children, delay = 0, className = "" }) => (
   <motion.div
     initial="hidden"
     whileInView="visible"
@@ -204,7 +204,7 @@ const ScrollReveal = ({ children, delay = 0, className = "" }: { children: React
   </motion.div>
 );
 
-const FAQItem = ({ q, a }: { q: string, a: string }) => {
+const FAQItem = ({ q, a }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div 
@@ -286,12 +286,16 @@ export default function HomePage() {
               Commanding the stage with wit, warmth, and a voice that defines the moment.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
-                BOOK NOW
-              </button>
-              <button className="px-10 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-bold text-lg rounded-full hover:bg-[#D4AF37]/10 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
-                <Play size={18} fill="currentColor" /> VIEW PORTFOLIO
-              </button>
+              <Link href="/contact">
+                <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+                  BOOK NOW
+                </button>
+              </Link>
+              <Link href="/portfolio">
+                <button className="px-10 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-bold text-lg rounded-full hover:bg-[#D4AF37]/10 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
+                  <Play size={18} fill="currentColor" /> VIEW PORTFOLIO
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -315,21 +319,21 @@ export default function HomePage() {
                5 Years. 1100+ Mic Checks. Zero dull moments.
              </p>
              <div className="mt-8">
-               <span className="inline-block border-b border-[#D4AF37] pb-1 text-[#D4AF37] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
+               <Link href="/about" className="inline-block border-b border-[#D4AF37] pb-1 text-[#D4AF37] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
                  Read My Story &rarr;
-               </span>
+               </Link>
              </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-2 gap-4">
              <ScrollReveal delay={0.2}>
                <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
-                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash" />
+                 <img src="/intro-portrait-top.webp" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash Portrait" />
                </div>
              </ScrollReveal>
              <ScrollReveal delay={0.4} className="mt-12">
                <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
-                 <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Corporate Event" />
+                 <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash Event Interaction" />
                </div>
              </ScrollReveal>
           </div>
@@ -411,9 +415,11 @@ export default function HomePage() {
         </div>
         
         <div className="text-center mt-16">
-           <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 mx-auto">
-             View All Anchoring Services <ArrowRight size={18} />
-           </button>
+           <Link href="/wedding-anchor-jaipur">
+             <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 mx-auto">
+               View All Anchoring Services <ArrowRight size={18} />
+             </button>
+           </Link>
         </div>
       </section>
 
@@ -587,15 +593,17 @@ export default function HomePage() {
             <p className="text-zinc-400 mb-12 max-w-lg mx-auto text-lg">
               Dates for the upcoming season are filling fast. Secure your date with Jaipur's most trusted voice.
             </p>
-            <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#D4AF37] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
-              <span className="relative z-10 flex items-center gap-3">
-                <CalendarCheck size={24} /> Check Availability
-              </span>
-            </button>
+            <Link href="/contact">
+              <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#D4AF37] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+                <span className="relative z-10 flex items-center gap-3">
+                  <CalendarCheck size={24} /> Check Availability
+                </span>
+              </button>
+            </Link>
             <div className="mt-20 flex justify-center gap-10 text-zinc-500 text-sm font-medium tracking-widest uppercase">
-               <a href="#" className="hover:text-[#D4AF37] transition-colors">Instagram</a>
+               <a href="https://instagram.com/Anchor_Yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Instagram</a>
                <a href="#" className="hover:text-[#D4AF37] transition-colors">YouTube</a>
-               <a href="#" className="hover:text-[#D4AF37] transition-colors">Email</a>
+               <a href="mailto:info@yashsoni.in" className="hover:text-[#D4AF37] transition-colors">Email</a>
             </div>
             <div className="mt-8 text-zinc-700 text-xs">
               © {new Date().getFullYear()} Anchor Yash. All rights reserved.
