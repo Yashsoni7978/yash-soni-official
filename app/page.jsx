@@ -340,12 +340,12 @@ export default function HomePage() {
       </section>
 
       {/* 4. FEATURED MARQUEE */}
-      <section className="py-20 bg-black border-b border-white/5 relative z-20">
+      <section className="py-15 bg-black border-b border-white/5 relative z-20">
         <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-14 uppercase">
           FEATURED ON
         </h2>
         <div className="flex overflow-hidden mask-linear-gradient">
-          <div className="flex whitespace-nowrap gap-32 items-center animate-marquee w-max">
+          <div className="flex whitespace-nowrap gap-24 items-center animate-marquee w-max">
             {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
               <a 
                 key={idx}
