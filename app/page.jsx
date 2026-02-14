@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
-const GOLD_COLOR = "#FFD700";
+const GOLD_COLOR = "#D4AF37"; // Reverted to the premium, elegant royal gold
 
 const style = `
   @keyframes shimmer {
@@ -94,7 +94,7 @@ const PLATFORMS = [
   { name: "Justdial", link: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET", color: "hover:text-[#FF9800]" },
   { name: "ShaadiDukaan", link: "https://www.shaadidukaan.com/profile/yash-2", color: "hover:text-[#E91E63]" },
   { name: "StarClinch", link: "https://starclinch.com", color: "hover:text-[#FF5722]" },
-  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#FFD700]" },
+  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#D4AF37]" },
   { name: "WeddingBazaar", link: "https://weddingbazaar.com", color: "hover:text-[#E53935]" },
   { name: "Google Reviews", link: "https://share.google/pMZGzEGOhXnJpLq5g", color: "hover:text-[#4285F4]" }
 ];
@@ -127,7 +127,6 @@ const PROCESS_STEPS = [
     text: "We close on a massive high. My benchmark for success is your guests leaving and asking, 'Where did you find this anchor?'" 
   }
 ];
-
 
 const REVIEWS = [
   { name: "Nikita Agarwal", text: "We couldn’t have asked for a better anchor! Yash brought the perfect blend of energy, charm, and professionalism." },
@@ -168,10 +167,11 @@ const GALLERY_IMAGES = [
 
 // --- 4. SUB-COMPONENTS ---
 
+// Explicitly using the .png file and the molten shimmer animation for the YASH text
 const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
-    style={{ backgroundImage: "url('/gold-texture.')", backgroundColor: GOLD_COLOR }}
+    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: GOLD_COLOR }}
   >
     {children}
   </span>
@@ -204,7 +204,7 @@ const FAQItem = ({ q, a }) => {
       onMouseLeave={() => setIsOpen(false)}
       className={`group rounded-2xl border transition-all duration-300 ${
         isOpen 
-          ? "border-[#FFD700] bg-[#FFD700]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
+          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
           : "border-white/10 bg-transparent hover:border-white/20" 
       }`}
     >
@@ -213,12 +213,12 @@ const FAQItem = ({ q, a }) => {
         className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-lg pr-4 transition-colors ${
-          isOpen ? "text-[#FFD700]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
         }`}>
           {q}
         </span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
-          isOpen ? "bg-[#FFD700] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#FFD700] group-hover:text-[#FFD700]"
+          isOpen ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
         }`}>
           {isOpen ? <Minus size={16} /> : <Plus size={16} />}
         </div>
@@ -231,7 +231,7 @@ const FAQItem = ({ q, a }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#FFD700]/20 mt-2">
+            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
               <div className="pt-4">{a}</div>
             </div>
           </motion.div>
@@ -244,16 +244,31 @@ const FAQItem = ({ q, a }) => {
 // --- 5. MAIN PAGE COMPONENT ---
 
 export default function HomePage() {
+  
+  // High-End SEO Local Business Schema
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": ["Person", "EntertainmentBusiness"],
     "name": "Anchor Yash Soni",
-    "jobTitle": "Event Anchor & Emcee",
-    "url": "https://yashsoni.in"
+    "jobTitle": "Premium Event Anchor & Emcee",
+    "description": "Award-winning premium event anchor, wedding emcee, and corporate host based in Jaipur, Rajasthan.",
+    "url": "https://yashsoni.in",
+    "image": "https://yashsoni.in/hero-slide-1.webp",
+    "telephone": "+91-7737877978",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://instagram.com/Anchor_Yash_official"
+    ]
   };
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-[#FFD700] selection:text-black font-sans overflow-x-hidden">
+    <main className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black font-sans overflow-x-hidden">
       <style>{style}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       
@@ -266,7 +281,7 @@ export default function HomePage() {
             animate={{ opacity: 0.6 }} 
             transition={{ duration: 1.5 }}
             className="w-full h-full object-cover absolute inset-0"
-            alt="Anchor Yash Event"
+            alt="Anchor Yash Soni hosting a premium live event on stage"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/60 to-transparent z-10" />
           <FilmGrain />
@@ -280,7 +295,7 @@ export default function HomePage() {
             className="max-w-4xl"
           >
             <div className="mb-6 inline-block">
-               <span className="border border-[#FFD700]/50 px-5 py-2 rounded-full bg-black/40 text-[#FFD700] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+               <span className="border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 text-[#D4AF37] text-xs md:text-sm font-bold uppercase tracking-widest backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.2)]">
                  A PREMIUM AWARD WINNING ANCHOR
                </span>
             </div>
@@ -293,12 +308,12 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <Link href="/contact">
-                <button className="px-10 py-4 bg-[#FFD700] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+                <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold text-lg rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
                   BOOK NOW
                 </button>
               </Link>
               <Link href="/portfolio">
-                <button className="px-10 py-4 border-2 border-[#FFD700] text-[#FFD700] font-bold text-lg rounded-full hover:bg-[#FFD700]/10 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
+                <button className="px-10 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-bold text-lg rounded-full hover:bg-[#D4AF37]/10 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
                   <Play size={18} fill="currentColor" /> VIEW PORTFOLIO
                 </button>
               </Link>
@@ -311,17 +326,16 @@ export default function HomePage() {
       <section className="py-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
-             <h2 className="text-[#FFD700] text-sm uppercase tracking-widest mb-4 font-bold">The Introduction</h2>
+             <h2 className="text-[#D4AF37] text-sm uppercase tracking-widest mb-4 font-bold">The Introduction</h2>
              <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
                Beyond Announcements. <br /> <GoldTextureText> Creating Extraordinary <br /> celebrations</GoldTextureText>
-               
              </h3>
              <p className="text-zinc-400 text-lg mb-8 leading-relaxed font-light">
-I don't just read scripts; I read the room. With over 5 years of live stage experience, I bring unmatched energy and effortless connection to luxury Sangeets, Varmalas, and corporate galas—no matter the destination.
+               I don't just read scripts; I read the room. With over 5 years of live stage experience, I bring unmatched energy and effortless connection to luxury Sangeets, Varmalas, and corporate galas—no matter the destination.
              </p>
             
              <div className="mt-8">
-               <Link href="/about" className="inline-block border-b border-[#FFD700] pb-1 text-[#FFD700] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
+               <Link href="/about" className="inline-block border-b border-[#D4AF37] pb-1 text-[#D4AF37] text-sm tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
                  Read My Story &rarr;
                </Link>
              </div>
@@ -329,13 +343,13 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
 
           <div className="grid grid-cols-2 gap-4">
              <ScrollReveal delay={0.2}>
-               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#FFD700]/50 group">
-                 <img src="/intro-portrait-top.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Portrait" />
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50 group">
+                 <img src="/intro-portrait-top.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Soni professional portrait in a luxury suit" />
                </div>
              </ScrollReveal>
              <ScrollReveal delay={0.4} className="mt-12">
-               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#FFD700]/50 group">
-                 <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Event Interaction" />
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50 group">
+                 <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Soni engaging dynamically with a wedding crowd" />
                </div>
              </ScrollReveal>
           </div>
@@ -346,13 +360,13 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
       {/* 3. STATS SECTION */}
       
       <section className="py-20 bg-zinc-950 border-b border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFD700]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {STATS_DATA.map((stat, i) => (
               <ScrollReveal key={i} delay={i * 0.1} className="text-center group">
                 <div className="mb-6 flex justify-center">
-                  <stat.icon className="w-10 h-10 text-[#FFD700] group-hover:scale-110 transition-transform duration-300" />
+                  <stat.icon className="w-10 h-10 text-[#D4AF37] group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div className="text-5xl md:text-6xl font-black mb-3">
                   <GoldTextureText>{stat.value}</GoldTextureText>
@@ -363,7 +377,8 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
           </div>
         </div>
       </section>
-{/* 4. FEATURED MARQUEE (Boxed Title Only) */}
+
+      {/* 4. FEATURED MARQUEE (Boxed Title Only) */}
       <section className="py-20 bg-black border-y border-white/5 relative z-20">
         <div className="container mx-auto px-6 mb-10 flex justify-center">
           <h2 className="inline-block text-center text-xs md:text-sm font-black tracking-[0.3em] text-white/40 uppercase border border-white/10 bg-white/5 rounded-full px-8 py-3 backdrop-blur-md">
@@ -391,25 +406,25 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-             <span className="text-[#FFD700] text-sm uppercase tracking-widest">What I Do</span>
-             <h2 className="text-4xl md:text-6xl font-bold mt-2">Signature <span className="text-[#FFD700]">Services</span></h2>
+             <span className="text-[#D4AF37] text-sm uppercase tracking-widest">What I Do</span>
+             <h2 className="text-4xl md:text-6xl font-bold mt-2">Signature <span className="text-[#D4AF37]">Services</span></h2>
           </div>
         </ScrollReveal>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {SIGNATURE_SERVICES.map((service, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
-              <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#FFD700]/50">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50">
                 <img 
                   src={service.img} 
-                  alt={service.title} 
+                  alt={`Anchor Yash Soni performing - ${service.title}`} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
                 
                 <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                    <h3 className="text-3xl font-bold text-white mb-3 font-display">{service.title}</h3>
-                   <div className="h-1 w-12 bg-[#FFD700] mb-4 rounded-full" />
+                   <div className="h-1 w-12 bg-[#D4AF37] mb-4 rounded-full" />
                    <p className="text-zinc-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                      {service.desc}
                    </p>
@@ -421,7 +436,7 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
         
         <div className="text-center mt-16">
            <Link href="/wedding-anchor-jaipur">
-             <button className="px-10 py-4 bg-[#FFD700] text-black font-bold rounded-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 mx-auto">
+             <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 mx-auto">
                View All Anchoring Services <ArrowRight size={18} />
              </button>
            </Link>
@@ -435,7 +450,7 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
           <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
             {TRUSTED_TAGS.map((tag, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
-                <div className="px-8 py-3 rounded-full border border-white/5 bg-white/5 text-zinc-300 text-sm md:text-lg font-medium hover:border-[#FFD700] hover:text-[#FFD700] hover:bg-[#FFD700]/10 transition-all cursor-default">
+                <div className="px-8 py-3 rounded-full border border-white/5 bg-white/5 text-zinc-300 text-sm md:text-lg font-medium hover:border-[#D4AF37] hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all cursor-default">
                   {tag}
                 </div>
               </ScrollReveal>
@@ -448,16 +463,16 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="text-[#FFD700] text-sm uppercase tracking-widest">Why Me</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">The <span className="text-[#FFD700]">Yash Soni</span> Signature</h2>
+            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">Why Me</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">The <span className="text-[#D4AF37]">Yash Soni</span> Signature</h2>
           </div>
         </ScrollReveal>
         
         <div className="grid md:grid-cols-3 gap-8">
           {PHILOSOPHY.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="bg-zinc-900/30 p-10 rounded-2xl border border-white/5 hover:border-[#FFD700]/50 transition-all duration-500 group h-full hover:-translate-y-2">
-                <item.icon className="w-12 h-12 text-[#FFD700] mb-8 group-hover:scale-110 transition-transform" />
+              <div className="bg-zinc-900/30 p-10 rounded-2xl border border-white/5 hover:border-[#D4AF37]/50 transition-all duration-500 group h-full hover:-translate-y-2">
+                <item.icon className="w-12 h-12 text-[#D4AF37] mb-8 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-bold mb-4 text-white">{item.title}</h3>
                 <p className="text-zinc-400 leading-relaxed font-light">{item.text}</p>
               </div>
@@ -474,7 +489,7 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
             <p className="text-zinc-400">Capturing the pulse of the celebration.</p>
           </div>
           <div className="flex items-center gap-2 text-xs text-zinc-500 uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-[#FFD700] animate-pulse"></span> Hover to Pause
+            <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span> Hover to Pause
           </div>
         </div>
 
@@ -487,12 +502,12 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
               >
                 <img 
                   src={img} 
-                  alt="Gallery Moment" 
+                  alt={`Anchor Yash Soni live stage moment ${idx + 1}`} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[#FFD700] text-xs font-black tracking-widest bg-black/60 px-3 py-1 rounded backdrop-blur-sm">LIVE MOMENT</span>
+                  <span className="text-[#D4AF37] text-xs font-black tracking-widest bg-black/60 px-3 py-1 rounded backdrop-blur-sm">LIVE MOMENT</span>
                 </div>
               </div>
             ))}
@@ -504,16 +519,16 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <span className="text-[#FFD700] text-sm uppercase tracking-widest">The Process</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">From Booking to <span className="text-[#FFD700]">Applause</span></h2>
+            <span className="text-[#D4AF37] text-sm uppercase tracking-widest">The Process</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">From Booking to <span className="text-[#D4AF37]">Applause</span></h2>
           </div>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-4 gap-8">
           {PROCESS_STEPS.map((step, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="relative p-6 border-l border-white/10 hover:border-[#FFD700] transition-colors pl-8 group h-full">
-                <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#FFD700] rounded-full flex items-center justify-center text-[10px] text-[#FFD700] font-bold group-hover:scale-125 transition-transform">
+              <div className="relative p-6 border-l border-white/10 hover:border-[#D4AF37] transition-colors pl-8 group h-full">
+                <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[10px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">
                   {step.num}
                 </span>
                 <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
@@ -529,7 +544,7 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
         <div className="container mx-auto px-6 mb-16">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-bold text-center">
-              Real Words. <span className="text-[#FFD700]">Real Impact.</span>
+              Real Words. <span className="text-[#D4AF37]">Real Impact.</span>
             </h2>
           </ScrollReveal>
         </div>
@@ -543,15 +558,15 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
                 href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#FFD700]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
+                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
               >
-                <div className="flex text-[#FFD700] gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFD700" />)}
+                <div className="flex text-[#D4AF37] gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#D4AF37" />)}
                 </div>
                 <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
                   "{review.text}"
                 </p>
-                <h4 className="text-white font-bold text-sm group-hover:text-[#FFD700] transition-colors mt-auto">
+                <h4 className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors mt-auto">
                   — {review.name}
                 </h4>
               </a>
@@ -568,15 +583,15 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
                 href="https://www.google.com/search?q=anchor+yash+jaipur+reviews" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#FFD700]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
+                className="shrink-0 w-[300px] md:w-[400px] p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group cursor-pointer flex flex-col whitespace-normal"
               >
-                <div className="flex text-[#FFD700] gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFD700" />)}
+                <div className="flex text-[#D4AF37] gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#D4AF37" />)}
                 </div>
                 <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-6 font-normal">
                   "{review.text}"
                 </p>
-                <h4 className="text-white font-bold text-sm group-hover:text-[#FFD700] transition-colors mt-auto">
+                <h4 className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors mt-auto">
                   — {review.name}
                 </h4>
               </a>
@@ -591,9 +606,9 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
           <ScrollReveal>
             <div className="text-center mb-16">
                <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
-                 Frequently Asked <span className="text-[#FFD700]">Questions</span>
+                 Frequently Asked <span className="text-[#D4AF37]">Questions</span>
                </h2>
-               <div className="h-1 w-20 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent mx-auto rounded-full" />
+               <div className="h-1 w-20 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto rounded-full" />
             </div>
           </ScrollReveal>
           
@@ -609,7 +624,7 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
 
       {/* 12. FOOTER CTA */}
       <footer className="py-32 border-t border-white/10 bg-black text-center relative overflow-hidden">
-         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FFD700]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
+         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
          <div className="container mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-7xl font-black mb-8 tracking-tight">
               Your Stage Awaits.
@@ -618,19 +633,19 @@ I don't just read scripts; I read the room. With over 5 years of live stage expe
               Dates for the upcoming season are filling fast. Secure your date with Jaipur's most trusted voice.
             </p>
             <Link href="/contact">
-              <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#FFD700] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+              <button className="group relative inline-flex items-center justify-center px-12 py-6 bg-[#D4AF37] text-black font-bold text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:bg-white hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
                 <span className="relative z-10 flex items-center gap-3">
                   <CalendarCheck size={24} /> Check Availability
                 </span>
               </button>
             </Link>
             <div className="mt-20 flex justify-center gap-10 text-zinc-500 text-sm font-medium tracking-widest uppercase">
-               <a href="https://instagram.com/Anchor_Yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors">Instagram</a>
-               <a href="#" className="hover:text-[#FFD700] transition-colors">YouTube</a>
-               <a href="mailto:info@yashsoni.in" className="hover:text-[#FFD700] transition-colors">Email</a>
+               <a href="https://instagram.com/Anchor_Yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Instagram</a>
+               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">YouTube</a>
+               <a href="mailto:info@yashsoni.in" className="hover:text-[#D4AF37] transition-colors">Email</a>
             </div>
             <div className="mt-8 text-zinc-700 text-xs">
-              © {new Date().getFullYear()} Anchor Yash. All rights reserved.
+              © {new Date().getFullYear()} Anchor Yash Soni. All rights reserved.
             </div>
          </div>
       </footer>
