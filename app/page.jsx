@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -144,10 +144,11 @@ const GALLERY_IMAGES = [
 
 // --- 4. SUB-COMPONENTS ---
 
-const GoldTextureText = ({ children, className = "" }) => (
+// Updated to make the animation optional and use the webp texture consistently
+const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
-    className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className}`}
-    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: GOLD_COLOR }}
+    className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
+    style={{ backgroundImage: "url('/gold-texture.webp')", backgroundColor: GOLD_COLOR }}
   >
     {children}
   </span>
@@ -173,17 +174,20 @@ const ScrollReveal = ({ children, delay = 0, className = "" }) => (
 
 const FAQItem = ({ q, a }) => {
   const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <div 
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
       className={`group rounded-2xl border transition-all duration-300 ${
         isOpen 
-          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" // Active Style: Gold Border
-          : "border-white/10 bg-transparent hover:border-white/20" // Inactive Style
+          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
+          : "border-white/10 bg-transparent hover:border-white/20" 
       }`}
     >
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center p-6 text-left"
+        className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-lg pr-4 transition-colors ${
           isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
@@ -259,10 +263,10 @@ export default function HomePage() {
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.95]">
               ANCHOR <br />
-              <GoldTextureText>YASH</GoldTextureText>
+              <GoldTextureText animate={true}>YASH</GoldTextureText>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-2xl font-light leading-relaxed">
-              Commanding the stage with wit, warmth, and a voice that defines the moment.
+              Setting the standard for live events. The top choice for high-profile weddings and corporate stages in Jaipur.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <Link href="/contact">
@@ -286,13 +290,10 @@ export default function HomePage() {
           <ScrollReveal>
              <h2 className="text-[#D4AF37] text-sm uppercase tracking-widest mb-4 font-bold">The Introduction</h2>
              <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-               Scripts are boring. <br /> <GoldTextureText>Spontaneity is Magic</GoldTextureText>.
+               Beyond Announcements. <br /> <GoldTextureText>Creating Extraordinary Celebrations.</GoldTextureText>
              </h3>
-             <p className="text-zinc-400 text-lg mb-6 leading-relaxed font-light">
-               Let’s be real—nobody remembers the decor if the vibe is dead. That’s where I step in.
-             </p>
              <p className="text-zinc-400 text-lg mb-8 leading-relaxed font-light">
-               I’m not just there to announce names; I’m there to read the room. Whether it’s decoding Sanskrit shlokas for a traditional ceremony or roasting the boss (respectfully!) at a corporate party, I know exactly when to dial up the energy and when to let the moment breathe.
+               Let’s be real—guests remember how an event made them feel. That’s where I step in. I’m not just here to read a script; I’m here to read the room. With over 5 years of live stage experience, I know exactly how to elevate the energy of any crowd. Whether we are kicking off a high-energy Sangeet night, managing the emotional flow of a Varmala ceremony, or keeping stakeholders engaged at a corporate gala, I know when to dial up the excitement and when to let the moment breathe. Your event deserves a host who connects effortlessly, no matter the destination.
              </p>
              <p className="text-white text-xl font-bold italic mb-8">
                5 Years. 1100+ Mic Checks. Zero dull moments.
@@ -319,8 +320,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. STATS SECTION */}
-      <section className="py-20 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
+      {/* 3. FEATURED MARQUEE (Moved Up & Boxed) */}
+      <section className="py-20 bg-black border-y border-white/5 relative z-20">
+        <div className="container mx-auto px-6">
+          <div className="bg-white/5 border border-white/10 rounded-3xl py-12 px-6 md:px-12 shadow-2xl relative overflow-hidden">
+            <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/40 mb-10 uppercase">
+              FEATURED ON
+            </h2>
+            <div className="flex overflow-hidden mask-linear-gradient">
+              <div className="flex whitespace-nowrap gap-24 items-center animate-marquee w-max">
+                {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
+                  <a 
+                    key={idx}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-3xl md:text-5xl font-black text-zinc-600 uppercase no-underline transition-colors duration-500 hover:scale-105 transform ${item.color}`}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. STATS SECTION */}
+      <section className="py-20 bg-zinc-950 border-b border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
@@ -334,28 +361,6 @@ export default function HomePage() {
                 </div>
                 <div className="text-zinc-500 text-sm uppercase tracking-[0.2em] font-medium group-hover:text-white transition-colors">{stat.label}</div>
               </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. FEATURED MARQUEE */}
-      <section className="py-15 bg-black border-b border-white/5 relative z-20">
-        <h2 className="text-center text-sm font-black tracking-[0.3em] text-white/30 mb-14 uppercase">
-          FEATURED ON
-        </h2>
-        <div className="flex overflow-hidden mask-linear-gradient">
-          <div className="flex whitespace-nowrap gap-24 items-center animate-marquee w-max">
-            {[...PLATFORMS, ...PLATFORMS, ...PLATFORMS].map((item, idx) => (
-              <a 
-                key={idx}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-4xl md:text-6xl font-black text-zinc-800 uppercase no-underline transition-colors duration-500 hover:scale-105 transform ${item.color}`}
-              >
-                {item.name}
-              </a>
             ))}
           </div>
         </div>
