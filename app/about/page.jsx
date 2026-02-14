@@ -12,7 +12,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#D4AF37", 
+      backgroundColor: "#FFC107", 
     }}
   >
     {children}
@@ -35,7 +35,7 @@ export default function About() {
   const containerRef = useRef(null);
 
   return (
-    <div className="bg-black text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans">
+    <div className="bg-black text-white min-h-screen selection:bg-[#FFC107] selection:text-black font-sans">
       
       {/* --- SPLIT SCREEN LAYOUT --- */}
       <div ref={containerRef} className="relative flex flex-col lg:flex-row">
@@ -66,8 +66,8 @@ export default function About() {
           {/* 1. INTRO: THE HERO */}
           <section className="min-h-screen flex items-center justify-center p-8 md:p-20 border-b border-neutral-900">
             <FadeIn>
-              <p className="text-[#D4AF37] text-sm uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#D4AF37]"></span> About Me
+              <p className="text-[#FFC107] text-sm uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-[#FFC107]"></span> About Me
               </p>
               <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight">
                 The Difference Between a <br/> "Mic Holder" and a <br/>
@@ -89,19 +89,19 @@ export default function About() {
               <div className="grid grid-cols-2 gap-12">
                 <div>
                   <p className="text-5xl font-display font-black text-white mb-2">1100+</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Live Events</p>
+                  <p className="text-[#FFC107] text-xs uppercase tracking-widest">Live Events</p>
                 </div>
                 <div>
                   <p className="text-5xl font-display font-black text-white mb-2">05+</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Years Experience</p>
+                  <p className="text-[#FFC107] text-xs uppercase tracking-widest">Years Experience</p>
                 </div>
                 <div>
                   <p className="text-5xl font-display font-black text-white mb-2">0</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Canned Jokes</p>
+                  <p className="text-[#FFC107] text-xs uppercase tracking-widest">Canned Jokes</p>
                 </div>
                 <div>
                   <p className="text-5xl font-display font-black text-white mb-2">100%</p>
-                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest">Unscripted Energy</p>
+                  <p className="text-[#FFC107] text-xs uppercase tracking-widest">Unscripted Energy</p>
                 </div>
               </div>
             </FadeIn>
@@ -109,7 +109,7 @@ export default function About() {
 
           {/* 3. THE ORIGIN STORY */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
-            <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">01</span>
+            <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#FFC107]/10 transition-colors">01</span>
             <FadeIn>
               <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10">It Started With a Spark (2019)</h3>
               <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10 mb-6">
@@ -139,7 +139,7 @@ export default function About() {
 
           {/* 5. VENUE AUTHORITY */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
-            <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">02</span>
+            <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#FFC107]/10 transition-colors">02</span>
             <FadeIn>
               <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10">Stages I've Conquered</h3>
               <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10 mb-8">
@@ -148,28 +148,28 @@ export default function About() {
               
               <div className="grid gap-6 relative z-10">
                 <div className="flex items-start gap-4">
-                  <MapPin className="text-[#D4AF37] w-6 h-6 shrink-0 mt-1" />
+                  <MapPin className="text-[#FFC107] w-6 h-6 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-white font-bold mb-1">The Palaces</h4>
                     <p className="text-gray-500 text-sm">Rambagh Palace, Jai Mahal, City Palace Udaipur</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Star className="text-[#D4AF37] w-6 h-6 shrink-0 mt-1" />
+                  <Star className="text-[#FFC107] w-6 h-6 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-white font-bold mb-1">The Luxury Hotels</h4>
                     <p className="text-gray-500 text-sm">Fairmont Jaipur, Marriott, The Leela</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Briefcase className="text-[#D4AF37] w-6 h-6 shrink-0 mt-1" />
+                  <Briefcase className="text-[#FFC107] w-6 h-6 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-white font-bold mb-1">The Corporate Hubs</h4>
                     <p className="text-gray-500 text-sm">JECC Sitapura, Birla Auditorium</p>
                   </div>
                 </div>
               </div>
-              <p className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest mt-10">Know your venue is on this list? Then I already know the drill.</p>
+              <p className="text-[#FFC107] text-sm font-bold uppercase tracking-widest mt-10">Know your venue is on this list? Then I already know the drill.</p>
             </FadeIn>
           </section>
 
@@ -183,12 +183,12 @@ export default function About() {
               </p>
               
               <div className="space-y-6">
-                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50 hover:border-[#D4AF37]/50 transition-colors">
-                  <h4 className="text-white font-bold mb-2 flex items-center gap-2"><Sparkles size={18} className="text-[#D4AF37]"/> For Sangeets</h4>
+                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50 hover:border-[#FFC107]/50 transition-colors">
+                  <h4 className="text-white font-bold mb-2 flex items-center gap-2"><Sparkles size={18} className="text-[#FFC107]"/> For Sangeets</h4>
                   <p className="text-gray-400 text-sm">"The Couple Trivia" (Roast edition), "Dance-Offs" (Boys vs. Girls).</p>
                 </div>
-                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50 hover:border-[#D4AF37]/50 transition-colors">
-                  <h4 className="text-white font-bold mb-2 flex items-center gap-2"><Zap size={18} className="text-[#D4AF37]"/> For Corporates</h4>
+                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50 hover:border-[#FFC107]/50 transition-colors">
+                  <h4 className="text-white font-bold mb-2 flex items-center gap-2"><Zap size={18} className="text-[#FFC107]"/> For Corporates</h4>
                   <p className="text-gray-400 text-sm">"Ice-Breakers" that don't feel awkward, Rapid-fire industry quizzes.</p>
                 </div>
               </div>
@@ -198,10 +198,10 @@ export default function About() {
 
           {/* 7. CRISIS MANAGEMENT */}
           <section className="min-h-[60vh] flex flex-col justify-center p-8 md:p-20 border-b border-neutral-900 group hover:bg-[#0a0a0a] transition-colors duration-500">
-            <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#D4AF37]/10 transition-colors">03</span>
+            <span className="text-9xl font-display font-black text-neutral-900 mb-[-40px] z-0 opacity-50 group-hover:text-[#FFC107]/10 transition-colors">03</span>
             <FadeIn>
               <h3 className="text-3xl font-display font-bold text-white mb-6 relative z-10 flex items-center gap-3">
-                <ShieldAlert className="text-[#D4AF37]" /> Crisis Management
+                <ShieldAlert className="text-[#FFC107]" /> Crisis Management
               </h3>
               <h4 className="text-2xl font-bold text-white mb-6 relative z-10">Scripts are Safety Nets. I Don't Use Them.</h4>
               <p className="text-gray-400 leading-relaxed font-light text-lg relative z-10 mb-6">
@@ -214,7 +214,7 @@ export default function About() {
           </section>
 
           {/* 8. THE CLOSER */}
-          <section className="min-h-[60vh] flex flex-col justify-center items-center text-center p-8 md:p-20 bg-[#D4AF37] text-black">
+          <section className="min-h-[60vh] flex flex-col justify-center items-center text-center p-8 md:p-20 bg-[#FFC107] text-black">
             <Quote className="w-12 h-12 mb-6 opacity-50" />
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight">
               "Your Stage, <br/> My Responsibility."

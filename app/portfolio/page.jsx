@@ -10,7 +10,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#D4AF37", 
+      backgroundColor: "#FFC107", 
     }}
   >
     {children}
@@ -119,12 +119,12 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
-    <div className="bg-black text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans pt-32 pb-20">
+    <div className="bg-black text-white min-h-screen selection:bg-[#FFC107] selection:text-black font-sans pt-32 pb-20">
       
       {/* --- HEADER --- */}
       <div className="container mx-auto px-4 mb-20 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <p className="text-[#D4AF37] text-xs uppercase tracking-[0.4em] mb-4">Selected Works</p>
+          <p className="text-[#FFC107] text-xs uppercase tracking-[0.4em] mb-4">Selected Works</p>
           <h1 className="text-6xl md:text-8xl font-display font-black mb-8 leading-tight">
             The <GoldTextureText>Showreel</GoldTextureText>
           </h1>
@@ -144,7 +144,7 @@ export default function Portfolio() {
               onClick={() => setActiveFilter(cat)}
               className={`px-4 py-2 text-xs md:text-sm uppercase tracking-widest rounded-full transition-all duration-300 ${
                 activeFilter === cat 
-                  ? "bg-[#D4AF37] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.4)]" 
+                  ? "bg-[#FFC107] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.4)]" 
                   : "text-gray-500 hover:text-white hover:bg-white/10"
               }`}
             >
@@ -183,7 +183,7 @@ export default function Portfolio() {
                       {/* Badges */}
                       <div className="absolute top-4 left-4 z-20">
                          {item.type === "video" ? (
-                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-colors">
+                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-[#FFC107] group-hover:text-[#FFC107] transition-colors">
                              <Play className="w-4 h-4 fill-current" />
                            </div>
                          ) : (
@@ -198,17 +198,17 @@ export default function Portfolio() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                       
                       <div className="transform md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300">
-                        <p className="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] mb-2 font-bold">
+                        <p className="text-[#FFC107] text-[10px] uppercase tracking-[0.2em] mb-2 font-bold">
                           {item.category}
                         </p>
                         
                         <h3 className="text-xl font-display font-bold text-white mb-1 leading-tight">{item.title}</h3>
                         
                         <div className="flex items-center gap-2 text-gray-400 text-xs mb-3">
-                          <MapPin className="w-3 h-3 text-[#D4AF37]" /> {item.venue}
+                          <MapPin className="w-3 h-3 text-[#FFC107]" /> {item.venue}
                         </div>
                         
-                        <p className="text-gray-300 text-xs leading-relaxed border-l-2 border-[#D4AF37] pl-3 mb-4">
+                        <p className="text-gray-300 text-xs leading-relaxed border-l-2 border-[#FFC107] pl-3 mb-4">
                           {item.desc}
                         </p>
                         
@@ -236,7 +236,7 @@ export default function Portfolio() {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <button className="px-8 py-4 bg-[#111] border border-neutral-800 text-white font-bold rounded-full hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all flex items-center gap-2">
+            <button className="px-8 py-4 bg-[#111] border border-neutral-800 text-white font-bold rounded-full hover:bg-[#FFC107] hover:text-black hover:border-[#FFC107] transition-all flex items-center gap-2">
                <Instagram className="w-4 h-4" /> Instagram Feed
             </button>
           </a>

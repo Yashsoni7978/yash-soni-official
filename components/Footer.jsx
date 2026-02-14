@@ -12,7 +12,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center ${className}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#D4AF37", 
+      backgroundColor: "#FFC107", 
     }}
   >
     {children}
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* COL 2: INSTANT ACTIONS (WhatsApp/Call) */}
           <div>
-            <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-8">Book Instantly</h4>
+            <h4 className="text-[#FFC107] font-bold uppercase tracking-widest text-xs mb-8">Book Instantly</h4>
             <div className="flex flex-col gap-4">
               <ContactButton 
                 href="https://wa.me/917737877978" 
@@ -63,7 +63,7 @@ export default function Footer() {
                 icon={<Phone className="w-5 h-5" />} 
                 label="Call Directly" 
                 subLabel="+91 77378 77978"
-                color="hover:bg-[#D4AF37] hover:text-black"
+                color="hover:bg-[#FFC107] hover:text-black"
               />
               <ContactButton 
                 href="mailto:info@yashsoni.in" 
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* COL 3: VERIFIED PROFILES (The "Trust" Stack) */}
           <div>
-            <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-8">Verified On</h4>
+            <h4 className="text-[#FFC107] font-bold uppercase tracking-widest text-xs mb-8">Verified On</h4>
             <ul className="space-y-2">
               <ProfileLink href="https://www.wedmegood.com/profile/Anchor-Yash-Soni-2555694" text="WedMeGood" />
               <ProfileLink href="#" text="WeddingBazaar" />
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* COL 4: NAVIGATION */}
           <div>
-            <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-8">Explore</h4>
+            <h4 className="text-[#FFC107] font-bold uppercase tracking-widest text-xs mb-8">Explore</h4>
             <ul className="space-y-3">
               <FooterLink href="/" text="Home" />
               <FooterLink href="/about" text="About Yash" />
@@ -113,8 +113,8 @@ export default function Footer() {
             <p>© {currentYear} Anchor Yash Soni.</p>
             <p>Jaipur, Rajasthan • Available Globally</p>
             <div className="flex gap-4 mt-2">
-               <Link href="/privacy" className="hover:text-[#D4AF37]">Privacy Policy</Link>
-               <Link href="/terms" className="hover:text-[#D4AF37]">Terms</Link>
+               <Link href="/privacy" className="hover:text-[#FFC107]">Privacy Policy</Link>
+               <Link href="/terms" className="hover:text-[#FFC107]">Terms</Link>
             </div>
           </div>
 
@@ -158,16 +158,16 @@ const ProfileLink = ({ href, text, highlight }) => (
       rel="noopener noreferrer" 
       className={`flex items-center justify-between text-sm py-2 px-3 rounded-lg border border-transparent hover:border-neutral-800 hover:bg-[#111] transition-all group ${highlight ? 'text-white font-bold bg-[#111] border-neutral-800' : 'text-gray-400'}`}
     >
-      <span className="group-hover:text-[#D4AF37] transition-colors">{text}</span>
-      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#D4AF37] transition-opacity" />
+      <span className="group-hover:text-[#FFC107] transition-colors">{text}</span>
+      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#FFC107] transition-opacity" />
     </a>
   </li>
 );
 
 const FooterLink = ({ href, text }) => (
   <li>
-    <Link href={href} className="text-gray-400 hover:text-[#D4AF37] text-sm transition-colors flex items-center gap-2 group">
-      <span className="w-1 h-1 rounded-full bg-neutral-800 group-hover:bg-[#D4AF37] transition-colors"></span>
+    <Link href={href} className="text-gray-400 hover:text-[#FFC107] text-sm transition-colors flex items-center gap-2 group">
+      <span className="w-1 h-1 rounded-full bg-neutral-800 group-hover:bg-[#FFC107] transition-colors"></span>
       {text}
     </Link>
   </li>
@@ -179,7 +179,7 @@ const SocialIcon = ({ href, icon, label }) => (
     target="_blank" 
     rel="noopener noreferrer"
     aria-label={label}
-    className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300"
+    className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-[#FFC107] hover:border-[#FFC107] transition-all duration-300"
   >
     {icon}
   </a>

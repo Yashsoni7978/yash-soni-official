@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
-const GOLD_COLOR = "#D4AF37";
+const GOLD_COLOR = "#FFC107";
 
 const style = `
   @keyframes shimmer {
@@ -53,7 +53,7 @@ const GoldTextureText = ({ children, className }) => (
     className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: "#D4AF37", 
+      backgroundColor: "#FFC107", 
     }}
   >
     {children}
@@ -74,11 +74,11 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4 flex items-center gap-3 justify-center md:justify-start font-bold">
-        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+      <p className="text-[#FFC107] text-xs uppercase tracking-[0.3em] mb-4 flex items-center gap-3 justify-center md:justify-start font-bold">
+        {align === "center" && <span className="w-8 h-[1px] bg-[#FFC107]"></span>}
         {subtitle}
-        {align !== "center" && <span className="w-12 h-[1px] bg-[#D4AF37]"></span>}
-        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+        {align !== "center" && <span className="w-12 h-[1px] bg-[#FFC107]"></span>}
+        {align === "center" && <span className="w-8 h-[1px] bg-[#FFC107]"></span>}
       </p>
       <h2 className="text-4xl md:text-6xl font-display font-black leading-tight text-white">
         {title}
@@ -167,7 +167,7 @@ const FAQItem = ({ question, answer }) => {
     <div 
       className={`group rounded-2xl border transition-all duration-300 ${
         isOpen 
-          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
+          ? "border-[#FFC107] bg-[#FFC107]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
           : "border-white/10 bg-transparent hover:border-white/20"
       }`}
     >
@@ -176,12 +176,12 @@ const FAQItem = ({ question, answer }) => {
         className="w-full flex justify-between items-center p-6 text-left"
       >
         <span className={`font-bold text-lg md:text-xl pr-4 transition-colors ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#FFC107]" : "text-zinc-200 group-hover:text-white"
         }`}>
           {question}
         </span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
-          isOpen ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+          isOpen ? "bg-[#FFC107] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#FFC107] group-hover:text-[#FFC107]"
         }`}>
           {isOpen ? <ChevronDown size={18} className="rotate-180" /> : <ChevronDown size={18} />}
         </div>
@@ -194,7 +194,7 @@ const FAQItem = ({ question, answer }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
+            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#FFC107]/20 mt-2">
               <div className="pt-4">{answer}</div>
             </div>
           </motion.div>
@@ -205,21 +205,21 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const VisualServiceCard = ({ title, subtitle, img, icon, desc, tags, highlight }) => (
-  <div className={`group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer ${highlight ? 'ring-2 ring-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.2)]' : 'border border-neutral-900'}`}>
+  <div className={`group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer ${highlight ? 'ring-2 ring-[#FFC107] shadow-[0_0_40px_rgba(212,175,55,0.2)]' : 'border border-neutral-900'}`}>
     <div className="absolute inset-0">
        <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" />
        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-80"></div>
     </div>
     <div className="absolute inset-0 p-8 flex flex-col justify-end z-20">
        <div className="transform transition-all duration-500 group-hover:-translate-y-4">
-          <div className={`w-14 h-14 mb-6 rounded-full flex items-center justify-center transition-all duration-500 ${highlight ? 'bg-[#D4AF37] text-black' : 'bg-black/50 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 group-hover:bg-[#D4AF37] group-hover:text-black'}`}>
+          <div className={`w-14 h-14 mb-6 rounded-full flex items-center justify-center transition-all duration-500 ${highlight ? 'bg-[#FFC107] text-black' : 'bg-black/50 backdrop-blur-md text-[#FFC107] border border-[#FFC107]/30 group-hover:bg-[#FFC107] group-hover:text-black'}`}>
             {icon}
           </div>
-          <p className="text-[#D4AF37] text-xs uppercase tracking-widest font-bold mb-2">{subtitle}</p>
+          <p className="text-[#FFC107] text-xs uppercase tracking-widest font-bold mb-2">{subtitle}</p>
           <h3 className="text-3xl font-display font-bold text-white mb-0 group-hover:mb-4 transition-all">{title}</h3>
        </div>
        <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 delay-100 overflow-hidden">
-          <p className="text-gray-300 text-sm leading-relaxed font-light mb-6 border-l-2 border-[#D4AF37] pl-4">
+          <p className="text-gray-300 text-sm leading-relaxed font-light mb-6 border-l-2 border-[#FFC107] pl-4">
             {desc}
           </p>
           <div className="flex flex-wrap gap-2">
@@ -235,12 +235,12 @@ const VisualServiceCard = ({ title, subtitle, img, icon, desc, tags, highlight }
 );
 
 const FeatureRow = ({ icon, title, desc }) => (
-  <div className="flex gap-5 group p-6 rounded-xl border border-white/5 hover:border-[#D4AF37]/30 hover:bg-white/5 transition-all">
-    <div className="w-14 h-14 rounded-full bg-[#0a0a0a] flex items-center justify-center text-[#D4AF37] shrink-0 group-hover:scale-110 transition-all duration-500 border border-white/10">
+  <div className="flex gap-5 group p-6 rounded-xl border border-white/5 hover:border-[#FFC107]/30 hover:bg-white/5 transition-all">
+    <div className="w-14 h-14 rounded-full bg-[#0a0a0a] flex items-center justify-center text-[#FFC107] shrink-0 group-hover:scale-110 transition-all duration-500 border border-white/10">
       {icon}
     </div>
     <div>
-      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors">{title}</h4>
+      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-[#FFC107] transition-colors">{title}</h4>
       <p className="text-gray-400 text-sm leading-relaxed font-light max-w-md">{desc}</p>
     </div>
   </div>
@@ -250,7 +250,7 @@ const FeatureRow = ({ icon, title, desc }) => (
 
 export default function WeddingAnchor() {
   return (
-    <div className="bg-[#050505] text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans relative">
+    <div className="bg-[#050505] text-white min-h-screen selection:bg-[#FFC107] selection:text-black font-sans relative">
       <style>{style}</style>
       
       {/* 1. HERO SECTION (NEW SLIDER DESIGN) */}
@@ -259,9 +259,9 @@ export default function WeddingAnchor() {
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
-            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md mb-8 shadow-2xl">
-              <Star className="w-4 h-4 text-[#D4AF37] fill-current" />
-              <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">
+            <div className="inline-flex items-center gap-2 border border-[#FFC107]/50 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md mb-8 shadow-2xl">
+              <Star className="w-4 h-4 text-[#FFC107] fill-current" />
+              <span className="text-[#FFC107] text-xs uppercase tracking-[0.2em] font-bold">
                 Premium Wedding Emcee
               </span>
             </div>
@@ -277,7 +277,7 @@ export default function WeddingAnchor() {
             
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               <Link href="/contact">
-                <button className="group relative px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest overflow-hidden rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                <button className="group relative px-10 py-4 bg-[#FFC107] text-black font-bold text-sm uppercase tracking-widest overflow-hidden rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(212,175,55,0.4)]">
                   <span className="relative z-10 flex items-center gap-2">Check Availability <ArrowRight className="w-4 h-4" /></span>
                 </button>
               </Link>
@@ -297,13 +297,13 @@ export default function WeddingAnchor() {
             <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
               Most anchors just read names off a paper. <strong className="text-white font-bold">I don't.</strong>
             </p>
-            <p className="text-gray-400 text-lg leading-relaxed mb-12 border-l-2 border-[#D4AF37] pl-6 font-light">
+            <p className="text-gray-400 text-lg leading-relaxed mb-12 border-l-2 border-[#FFC107] pl-6 font-light">
               I bridge the gap between the Ladki-walas and Ladke-walas, turning a room full of strangers into one big, loud, happy family.
             </p>
             
             <div className="space-y-6">
-              <FeatureRow icon={<Heart className="text-[#D4AF37]" />} title="Emotional Intelligence" desc="Knowing when to hype the crowd and when to let silence speak during rituals." />
-              <FeatureRow icon={<Sparkles className="text-[#D4AF37]" />} title="Unscripted Wit" desc="Spontaneous humor that feels natural, not rehearsed. No cringy jokes." />
+              <FeatureRow icon={<Heart className="text-[#FFC107]" />} title="Emotional Intelligence" desc="Knowing when to hype the crowd and when to let silence speak during rituals." />
+              <FeatureRow icon={<Sparkles className="text-[#FFC107]" />} title="Unscripted Wit" desc="Spontaneous humor that feels natural, not rehearsed. No cringy jokes." />
             </div>
           </div>
           
@@ -315,7 +315,7 @@ export default function WeddingAnchor() {
              <div className="absolute bottom-0 left-0 w-4/5 h-4/5 z-10 border-4 border-[#050505] rounded-xl overflow-hidden shadow-2xl">
                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" className="w-full h-full object-cover scale-110" alt="Yash Soni Hosting" />
                 {/* Gold Frame Accent */}
-                <div className="absolute inset-0 border-2 border-[#D4AF37]/50 m-4 rounded-lg pointer-events-none"></div>
+                <div className="absolute inset-0 border-2 border-[#FFC107]/50 m-4 rounded-lg pointer-events-none"></div>
              </div>
           </div>
 
@@ -330,9 +330,9 @@ export default function WeddingAnchor() {
            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
               {WEDDING_TYPES.map((wedding, idx) => (
                   <ScrollReveal key={idx} delay={idx * 0.1}>
-                    <div className="bg-[#111] border border-neutral-800 p-8 rounded-xl hover:border-[#D4AF37] hover:shadow-[0_0_20px_rgba(212,175,55,0.1)] transition-all duration-300 group cursor-default">
+                    <div className="bg-[#111] border border-neutral-800 p-8 rounded-xl hover:border-[#FFC107] hover:shadow-[0_0_20px_rgba(212,175,55,0.1)] transition-all duration-300 group cursor-default">
                         <div className="text-4xl mb-6 grayscale group-hover:grayscale-0 transition-all duration-300">{wedding.icon}</div>
-                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{wedding.title}</h3>
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#FFC107] transition-colors">{wedding.title}</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">{wedding.desc}</p>
                     </div>
                   </ScrollReveal>
@@ -349,8 +349,8 @@ export default function WeddingAnchor() {
              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
                  {EVENT_FLOW.map((event, i) => (
                      <ScrollReveal key={i} delay={i * 0.05}>
-                       <div className="bg-neutral-900/30 border border-neutral-800 p-6 rounded-lg text-center hover:bg-[#D4AF37] hover:text-black transition-all duration-300 cursor-default group hover:scale-105">
-                           <event.icon className="w-6 h-6 mx-auto mb-3 text-[#D4AF37] group-hover:text-black transition-colors" />
+                       <div className="bg-neutral-900/30 border border-neutral-800 p-6 rounded-lg text-center hover:bg-[#FFC107] hover:text-black transition-all duration-300 cursor-default group hover:scale-105">
+                           <event.icon className="w-6 h-6 mx-auto mb-3 text-[#FFC107] group-hover:text-black transition-colors" />
                            <p className="font-bold uppercase tracking-wider text-xs md:text-sm">{event.title}</p>
                        </div>
                      </ScrollReveal>
@@ -421,7 +421,7 @@ export default function WeddingAnchor() {
          </div>
          <div className="text-center mt-10">
             <Link href="/portfolio">
-               <button className="flex items-center gap-2 mx-auto text-[#D4AF37] uppercase tracking-widest text-xs font-bold border-b border-[#D4AF37] pb-1 hover:text-white hover:border-white transition-all">
+               <button className="flex items-center gap-2 mx-auto text-[#FFC107] uppercase tracking-widest text-xs font-bold border-b border-[#FFC107] pb-1 hover:text-white hover:border-white transition-all">
                   <Camera className="w-4 h-4" /> View Full Gallery
                </button>
             </Link>
@@ -432,7 +432,7 @@ export default function WeddingAnchor() {
       <section className="py-20 bg-[#080808] border-y border-neutral-900 overflow-hidden relative z-10">
         <div className="container mx-auto px-4 mb-10">
            <div className="flex justify-between items-end">
-             <h2 className="text-3xl font-display font-bold">Watch Me <span className="text-[#D4AF37]">Live</span></h2>
+             <h2 className="text-3xl font-display font-bold">Watch Me <span className="text-[#FFC107]">Live</span></h2>
            </div>
         </div>
         <div className="flex gap-6 overflow-x-auto pb-8 px-4 no-scrollbar">
@@ -440,7 +440,7 @@ export default function WeddingAnchor() {
              <div key={i} className="min-w-[350px] md:min-w-[450px] aspect-video bg-[#111] relative group rounded-xl overflow-hidden cursor-pointer border border-neutral-800">
                 <img src={`https://images.unsplash.com/photo-${i === 1 ? '1545232979-8bf68ee9b1af' : '1511578314322-379afb476865'}?w=800&q=80`} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="w-16 h-16 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-black transition-all shadow-xl">
+                   <div className="w-16 h-16 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 group-hover:bg-[#FFC107] group-hover:border-[#FFC107] group-hover:text-black transition-all shadow-xl">
                       <Play className="w-6 h-6 fill-current" />
                    </div>
                 </div>
@@ -463,7 +463,7 @@ export default function WeddingAnchor() {
       </section>
 
       {/* 9. FINAL CTA */}
-      <section className="py-32 bg-[#D4AF37] text-black text-center relative overflow-hidden z-10">
+      <section className="py-32 bg-[#FFC107] text-black text-center relative overflow-hidden z-10">
          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-multiply"></div>
          <div className="container mx-auto px-4 relative z-10">
             <h2 className="text-4xl md:text-7xl font-display font-black mb-6">Dates Filling Fast for 2026</h2>
