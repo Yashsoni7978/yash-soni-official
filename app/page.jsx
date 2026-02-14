@@ -159,39 +159,6 @@ const FilmGrain = () => (
   </div>
 );
 
-const HeroSlider = () => {
-  const images = [
-    "/hero-slide-1.webp", 
-    "/hero-slide-2.webp", 
-    "/hero-slide-3.webp"
-  ];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => setIndex((i) => (i + 1) % images.length), 4000);
-    return () => clearInterval(timer);
-  }, [images.length]);
-
-  return (
-    <div className="absolute inset-0 z-0 bg-black">
-      <AnimatePresence mode="popLayout">
-        <motion.img
-          key={index}
-          src={images[index]}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }} 
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5 }}
-          className="w-full h-full object-cover absolute inset-0 grayscale-[20%]"
-          alt="Anchor Yash Event"
-        />
-      </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/60 to-transparent z-10" />
-      <FilmGrain />
-    </div>
-  );
-};
-
 const ScrollReveal = ({ children, delay = 0, className = "" }) => (
   <motion.div
     initial="hidden"
@@ -263,9 +230,21 @@ export default function HomePage() {
       <style>{style}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION (Static Image) */}
       <section className="relative h-screen w-full flex items-center overflow-hidden">
-        <HeroSlider />
+        <div className="absolute inset-0 z-0 bg-black">
+          <motion.img
+            src="/hero-slide-1.webp"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }} 
+            transition={{ duration: 1.5 }}
+            className="w-full h-full object-cover absolute inset-0"
+            alt="Anchor Yash Event"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/60 to-transparent z-10" />
+          <FilmGrain />
+        </div>
+
         <div className="container mx-auto px-6 z-30 pt-20">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -327,13 +306,13 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 gap-4">
              <ScrollReveal delay={0.2}>
-               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
-                 <img src="/intro-portrait-top.webp" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash Portrait" />
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50 group">
+                 <img src="/intro-portrait-top.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Portrait" />
                </div>
              </ScrollReveal>
              <ScrollReveal delay={0.4} className="mt-12">
-               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
-                 <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Anchor Yash Event Interaction" />
+               <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50 group">
+                 <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Event Interaction" />
                </div>
              </ScrollReveal>
           </div>
@@ -394,11 +373,11 @@ export default function HomePage() {
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {SIGNATURE_SERVICES.map((service, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
-              <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50">
                 <img 
                   src={service.img} 
                   alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
                 
