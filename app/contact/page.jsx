@@ -1,12 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  Phone, Mail, MapPin, Send, MessageCircle, 
-  Instagram, Youtube, Facebook, ArrowRight, 
-  CheckCircle2, HelpCircle, ChevronDown, Calendar, Minus, Plus 
-} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Play, MapPin, ArrowUpRight, Camera, Instagram, Youtube } from "lucide-react";
 
 // --- 1. LUXURY TEXTURE ASSETS ---
 const GoldTextureText = ({ children, className }) => (
@@ -21,277 +17,268 @@ const GoldTextureText = ({ children, className }) => (
   </span>
 );
 
-// --- 2. FAQ COMPONENT ---
-const FAQItem = ({ q, a }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  return (
-    <div 
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-      className={`group rounded-2xl border transition-all duration-300 mb-4 ${
-        isOpen 
-          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
-          : "border-white/10 bg-transparent hover:border-white/20" 
-      }`}
-    >
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
-      >
-        <span className={`font-semibold text-[15px] pr-4 transition-colors ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
-        }`}>
-          {q}
-        </span>
-        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
-          isOpen ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
-        }`}>
-          {isOpen ? <Minus size={16} /> : <Plus size={16} />}
-        </div>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
-          >
-            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
-              <div className="pt-4">{a}</div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+// --- 2. PORTFOLIO DATA (Using Your Local Images & New Links) ---
+const portfolioItems = [
+  {
+    id: 1,
+    type: "video",
+    category: "Wedding",
+    title: "The Royal Sangeet",
+    venue: "Fairmont, Jaipur",
+    desc: "500+ guests. High-octane energy. Non-stop dancing.",
+    image: "/gallery-1.webp",
+    link: "https://www.youtube.com/@Anchor_Yash",
+    height: "h-96" // Tall
+  },
+  {
+    id: 2,
+    type: "photo",
+    category: "Corporate",
+    title: "Tech Summit 2025",
+    venue: "Marriott, Jaipur",
+    desc: "Hosting the annual awards for top industry leaders.",
+    image: "/service-corporate.webp",
+    link: "https://instagram.com/anchor_yash_official",
+    height: "h-64" // Short
+  },
+  {
+    id: 3,
+    type: "photo",
+    category: "Wedding",
+    title: "Varmala Moment",
+    venue: "Rambagh Palace",
+    desc: "Orchestrating the emotional high-point with poetic flair.",
+    image: "/gallery-3.webp",
+    link: "https://instagram.com/best_anchor_in_jaipur",
+    height: "h-80" // Medium
+  },
+  {
+    id: 4,
+    type: "video",
+    category: "Haldi",
+    title: "The Holi Haldi",
+    venue: "Chomu Palace",
+    desc: "Flower holi, anchor-led games, and pure chaos.",
+    image: "/gallery-4.webp",
+    link: "https://www.youtube.com/@Anchor_Yash",
+    height: "h-72" 
+  },
+  {
+    id: 5,
+    type: "photo",
+    category: "Social",
+    title: "Fashion Ramp Walk",
+    venue: "The Lalit, Jaipur",
+    desc: "Driving energy and pace for a major designer showcase.",
+    image: "/service-fashion.webp",
+    link: "https://instagram.com/anchor_yash_official",
+    height: "h-64"
+  },
+  {
+    id: 6,
+    type: "video",
+    category: "Wedding",
+    title: "Bride & Groom Entry",
+    venue: "Le Meridien",
+    desc: "Creating a cinematic entry moment.",
+    image: "/service-wedding.webp",
+    link: "https://www.youtube.com/@Anchor_Yash",
+    height: "h-96"
+  },
+  {
+    id: 7,
+    type: "photo",
+    category: "Corporate",
+    title: "Gala Dinner",
+    venue: "Taj Jai Mahal",
+    desc: "Networking night with stakeholders and VIPs.",
+    image: "/gallery-5.webp",
+    link: "https://instagram.com/best_anchor_in_jaipur",
+    height: "h-80"
+  },
+  {
+    id: 8,
+    type: "video",
+    category: "Social",
+    title: "Concert Hosting",
+    venue: "JECC, Jaipur",
+    desc: "Opening and hyping the crowd for a major artist.",
+    image: "/gallery-6.webp",
+    link: "https://www.youtube.com/@Anchor_Yash",
+    height: "h-72"
+  },
+];
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    date: "",
-    type: "Wedding / Reception",
-    location: "",
-    message: ""
-  });
+const categories = ["All", "Wedding", "Corporate", "Haldi", "Social"];
 
-  // --- WHATSAPP LOGIC ---
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const text = `*New Inquiry from Website*%0A%0A👤 Name: ${formData.name}%0A📅 Date: ${formData.date}%0A🎤 Event: ${formData.type}%0A📍 Venue: ${formData.location}%0A📝 Note: ${formData.message}`;
-    window.open(`https://wa.me/917737877978?text=${text}`, '_blank');
-  };
+export default function Portfolio() {
+  const [activeFilter, setActiveFilter] = useState("All");
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const filteredItems = activeFilter === "All" 
+    ? portfolioItems 
+    : portfolioItems.filter(item => item.category === activeFilter);
+
+  // JSON-LD Schema for the Portfolio Gallery
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Anchor Yash Soni Portfolio",
+    "description": "Live event hosting portfolio of Anchor Yash Soni.",
+    "url": "https://yashsoni.in/portfolio",
+    "author": {
+      "@type": "Person",
+      "name": "Yash Soni"
+    }
   };
 
   return (
     <div className="bg-black text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans pt-32 pb-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       
-      {/* --- AVAILABILITY TICKER --- */}
-      <div className="fixed top-20 left-0 w-full bg-[#D4AF37] text-black text-[10px] md:text-xs font-bold uppercase tracking-widest py-2 z-20 overflow-hidden shadow-lg">
-         <div className="whitespace-nowrap animate-marquee">
-           Now Booking Dates for Winter 2025 & 2026 • Limited Slots Available • Contact Directly for Urgent Bookings • 
-           Now Booking Dates for Winter 2025 & 2026 • Limited Slots Available • Contact Directly for Urgent Bookings •
-         </div>
+      {/* --- HEADER --- */}
+      <div className="container mx-auto px-4 mb-20 text-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <p className="text-[#D4AF37] text-xs uppercase tracking-[0.4em] mb-4 font-bold">Selected Works</p>
+          <h1 className="text-6xl md:text-8xl font-display font-black mb-8 leading-tight">
+            The <GoldTextureText>Showreel</GoldTextureText>
+          </h1>
+          <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg leading-relaxed">
+            A curated collection of moments where energy meets elegance. <br className="hidden md:block" />
+            From high-octane sangeets to prestigious corporate galas.
+          </p>
+        </motion.div>
       </div>
 
-      <div className="container mx-auto px-4 mt-12">
-        
-        {/* --- HEADER --- */}
-        <div className="text-center mb-20">
-          <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center justify-center gap-2">
-            <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Let's Create Magic <span className="w-8 h-[1px] bg-[#D4AF37]"></span>
-          </p>
-          <h1 className="text-5xl md:text-7xl font-display font-black mb-6 leading-tight">
-            Ready to <GoldTextureText>Elevate</GoldTextureText> <br className="hidden md:block"/> Your Event?
-          </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">
-            You've planned the decor, the food, and the guest list. Now, let's secure the *voice* that will tie it all together.
-          </p>
+      {/* --- FILTER BAR --- */}
+      <div className="container mx-auto px-4 mb-16 sticky top-20 z-30">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 bg-black/80 backdrop-blur-md py-4 border-y border-neutral-900 w-fit mx-auto px-8 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`px-6 py-2 text-xs md:text-sm uppercase tracking-widest rounded-full transition-all duration-300 ${
+                activeFilter === cat 
+                  ? "bg-[#D4AF37] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.4)]" 
+                  : "text-gray-500 hover:text-white hover:bg-white/10"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
+      </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 max-w-7xl mx-auto">
-          
-          {/* --- LEFT SIDE: CONTEXT & TRUST --- */}
-          <div className="lg:col-span-5 space-y-12">
-            
-            {/* Direct Contact Options */}
-            <div className="bg-[#111] border border-neutral-800 p-8 rounded-2xl space-y-6 hover:border-[#D4AF37]/50 transition-colors duration-500">
-               <h3 className="text-xl font-bold text-white mb-6">Quick Connect</h3>
-               <a href="tel:+917737877978" className="flex items-center gap-4 group">
-                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center border border-neutral-800 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-colors">
-                   <Phone className="w-5 h-5" />
-                 </div>
-                 <div>
-                   <p className="text-gray-500 text-xs uppercase tracking-widest">Call Me</p>
-                   <p className="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">+91 77378 77978</p>
-                 </div>
-               </a>
-               <a href="mailto:info@yashsoni.in" className="flex items-center gap-4 group">
-                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center border border-neutral-800 text-white group-hover:bg-white group-hover:text-black transition-colors">
-                   <Mail className="w-5 h-5" />
-                 </div>
-                 <div>
-                   <p className="text-gray-500 text-xs uppercase tracking-widest">Email Me</p>
-                   <p className="text-lg font-bold text-white group-hover:text-white transition-colors">info@yashsoni.in</p>
-                 </div>
-               </a>
-            </div>
-
-            {/* Why Book Now? */}
-            <div>
-               <h3 className="text-xl font-bold text-white mb-6">Why Secure Your Date Early?</h3>
-               <ul className="space-y-4">
-                 {[
-                   "I only host one event per day to ensure 100% energy.",
-                   "Dates for Nov-Feb (Wedding Season) fill up 6 months in advance.",
-                   "Early booking locks in current pricing before seasonal hikes."
-                 ].map((item, i) => (
-                   <li key={i} className="flex gap-3 text-gray-400 text-sm font-light leading-relaxed">
-                     <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                     {item}
-                   </li>
-                 ))}
-               </ul>
-            </div>
-
-            {/* Pre-Booking FAQ */}
-            <div>
-               <h3 className="text-xl font-bold text-white mb-4">Before You Book</h3>
-               <div className="mt-6">
-                 <FAQItem q="Do you travel outside Jaipur?" a="Yes! 'Have Mic, Will Travel'. I frequently host destination weddings globally. Travel & stay are typically arranged by the client." />
-                 <FAQItem q="Can we meet before booking?" a="Absolutely. A strong connection is key. We can schedule a Zoom call or meet for coffee in Jaipur to discuss your vision." />
-                 <FAQItem q="What are your payment terms?" a="A 50% advance secures and blocks your date. The remaining balance is cleared on the day of the event prior to the stage time." />
-                 <FAQItem q="Do you take last-minute bookings?" a="If the date is open, yes. However, a minimum of 48 hours' notice is required to properly curate games, scripts, and understand your crowd." />
-               </div>
-            </div>
-
-          </div>
-
-          {/* --- RIGHT SIDE: THE HUMANIZED FORM --- */}
-          <div className="lg:col-span-7">
-            <div className="bg-[#111] border border-neutral-800 p-8 md:p-10 rounded-3xl relative overflow-hidden shadow-2xl hover:border-[#D4AF37]/30 transition-colors duration-500">
-              
-              {/* Background Glow */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37] opacity-10 blur-[100px] rounded-full pointer-events-none"></div>
-
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-8">
-                   <h3 className="text-2xl font-display font-bold">Fast Inquiry Form</h3>
-                   <span className="flex items-center gap-2 text-[#25D366] text-[10px] md:text-xs font-bold uppercase tracking-widest bg-[#25D366]/10 px-3 py-1 rounded-full border border-[#25D366]/20">
-                     <MessageCircle className="w-4 h-4" /> WhatsApp Enabled
-                   </span>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">What should we call you?</label>
-                      <input 
-                        type="text" 
-                        name="name"
-                        required
-                        placeholder="Your Name"
-                        className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#D4AF37] focus:outline-none transition-colors placeholder:text-neutral-700"
-                        onChange={handleInputChange}
+      {/* --- MASONRY GRID --- */}
+      <div className="container mx-auto px-4">
+        {/* CSS Columns for smooth Masonry Layout */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          <AnimatePresence>
+            {filteredItems.map((item) => (
+              <motion.div
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+                key={item.id}
+                className="break-inside-avoid mb-6"
+              >
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <div className="group relative rounded-xl overflow-hidden cursor-pointer border border-neutral-900 bg-[#0a0a0a] hover:border-[#D4AF37]/50 transition-colors duration-500 shadow-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+                    
+                    {/* Image */}
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={`Anchor Yash Soni hosting ${item.category} event at ${item.venue} - ${item.title}`} 
+                        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                        loading="lazy"
                       />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">Event Date</label>
-                      <div className="relative">
-                        <input 
-                          type="date" 
-                          name="date"
-                          required
-                          className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#D4AF37] focus:outline-none transition-colors appearance-none"
-                          onChange={handleInputChange}
-                        />
-                        <Calendar className="absolute right-4 top-4 text-neutral-600 w-5 h-5 pointer-events-none" />
+                      
+                      {/* Badges */}
+                      <div className="absolute top-4 left-4 z-20">
+                         {item.type === "video" ? (
+                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-colors">
+                             <Play className="w-4 h-4 fill-current" />
+                           </div>
+                         ) : (
+                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-white transition-colors">
+                             <Camera className="w-4 h-4" />
+                           </div>
+                         )}
                       </div>
                     </div>
-                  </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                       <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">Event Type</label>
-                       <div className="relative">
-                         <select 
-                           name="type"
-                           className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#D4AF37] focus:outline-none transition-colors appearance-none cursor-pointer"
-                           onChange={handleInputChange}
-                         >
-                           <option>Wedding / Reception</option>
-                           <option>Sangeet / Haldi</option>
-                           <option>Corporate Gala / Summit</option>
-                           <option>Birthday / Anniversary</option>
-                           <option>Fashion Show / Ramp</option>
-                           <option>Other</option>
-                         </select>
-                         <ChevronDown className="absolute right-4 top-4 text-neutral-600 w-5 h-5 pointer-events-none" />
-                       </div>
+                    {/* Dark Overlay with Content */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                      
+                      <div className="transform md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] mb-2 font-bold drop-shadow-md">
+                          {item.category}
+                        </p>
+                        
+                        <h3 className="text-2xl font-display font-bold text-white mb-2 leading-tight">{item.title}</h3>
+                        
+                        <div className="flex items-center gap-2 text-gray-300 text-xs mb-3 font-medium">
+                          <MapPin className="w-3 h-3 text-[#D4AF37]" /> {item.venue}
+                        </div>
+                        
+                        <p className="text-gray-400 text-sm leading-relaxed border-l-2 border-[#D4AF37] pl-3 mb-5 font-light">
+                          {item.desc}
+                        </p>
+                        
+                        <div className="flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-widest group/link">
+                          {item.type === "video" ? "Watch on YouTube" : "View on Instagram"} 
+                          <ArrowUpRight className="w-3 h-3 text-[#D4AF37] group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                        </div>
+                      </div>
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">City / Venue</label>
-                      <input 
-                        type="text" 
-                        name="location"
-                        required
-                        placeholder="e.g. Fairmont Jaipur"
-                        className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#D4AF37] focus:outline-none transition-colors placeholder:text-neutral-700"
-                        onChange={handleInputChange}
-                      />
-                    </div>
+
                   </div>
-
-                  <div className="space-y-2">
-                    <label className="text-xs uppercase tracking-widest text-gray-500 font-bold ml-1">Any specific requirements? (Optional)</label>
-                    <textarea 
-                      name="message"
-                      rows={4}
-                      placeholder="Tell me a bit about the vibe you want... e.g. 'We want high energy couple games!' or 'It's a formal awards night.'"
-                      className="w-full bg-black border border-neutral-800 rounded-xl p-4 text-white focus:border-[#D4AF37] focus:outline-none transition-colors placeholder:text-neutral-700 resize-none"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-
-                  <button 
-                    type="submit"
-                    className="w-full bg-[#D4AF37] text-black font-bold text-lg p-5 rounded-xl hover:bg-white transition-all flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(212,175,55,0.3)] transform hover:scale-[1.02]"
-                  >
-                    Start Conversation <Send className="w-5 h-5" />
-                  </button>
-                  
-                  <p className="text-center text-[10px] text-gray-600 mt-4 uppercase tracking-widest">
-                    *Clicking this will open WhatsApp with your details pre-filled.
-                  </p>
-
-                </form>
-              </div>
-            </div>
-          </div>
-
+                </a>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
-        
-        {/* --- SOCIAL PROOF STRIP --- */}
-        <div className="mt-32 pt-16 border-t border-neutral-900 text-center">
-           <p className="text-neutral-600 text-xs font-bold uppercase tracking-[0.3em] mb-10">Verified & Trusted On</p>
-           <div className="flex flex-wrap justify-center gap-8 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-              {["WedMeGood", "WeddingWire", "Google Reviews", "StarClinch", "Justdial"].map((brand, i) => (
-                <span key={i} className="text-xl md:text-3xl font-black text-white hover:text-[#D4AF37] transition-colors">{brand}</span>
-              ))}
-           </div>
-        </div>
-
       </div>
+
+      {/* --- FOOTER CTA --- */}
+      <div className="text-center mt-32 border-t border-neutral-900 pt-20 px-4">
+        <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">Want to see more?</h2>
+        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          <a 
+            href="https://instagram.com/anchor_yash_official" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <button className="w-full px-6 py-4 bg-[#111] border border-neutral-800 text-white text-sm font-bold rounded-full hover:bg-gradient-to-r hover:from-[#f09433] hover:to-[#e6683c] hover:border-transparent transition-all flex items-center justify-center gap-3 shadow-lg">
+               <Instagram className="w-5 h-5" /> @anchor_yash_official
+            </button>
+          </a>
+          <a 
+            href="https://instagram.com/best_anchor_in_jaipur" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <button className="w-full px-6 py-4 bg-[#111] border border-neutral-800 text-white text-sm font-bold rounded-full hover:bg-gradient-to-r hover:from-[#f09433] hover:to-[#e6683c] hover:border-transparent transition-all flex items-center justify-center gap-3 shadow-lg">
+               <Instagram className="w-5 h-5" /> @best_anchor_in_jaipur
+            </button>
+          </a>
+          <a 
+            href="https://www.youtube.com/@Anchor_Yash" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <button className="w-full px-6 py-4 bg-[#111] border border-neutral-800 text-white text-sm font-bold rounded-full hover:bg-red-600 hover:border-red-600 transition-all flex items-center justify-center gap-3 shadow-lg">
+               <Youtube className="w-5 h-5" /> YouTube Channel
+            </button>
+          </a>
+        </div>
+      </div>
+
     </div>
   );
 }
