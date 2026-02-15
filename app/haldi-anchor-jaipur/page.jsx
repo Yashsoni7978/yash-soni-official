@@ -60,7 +60,7 @@ export default function HaldiAnchor() {
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-pink-500 selection:text-white">
       
       {/* --- 1. HERO: THE MONEY SECTION (SEO Optimized H1) --- */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
         {/* Background - High Energy Haldi Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/60 to-purple-900/30 z-10" />

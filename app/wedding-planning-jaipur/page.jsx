@@ -49,7 +49,7 @@ export default function WeddingPlanning() {
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#FFD700] selection:text-black">
       
       {/* --- 1. HERO: THE INSIDER'S PROMISE --- */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
         {/* Background: Aspirational Wedding Setup */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40 z-10" />

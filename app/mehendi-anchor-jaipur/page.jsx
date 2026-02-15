@@ -60,7 +60,7 @@ export default function MehendiAnchor() {
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-green-500 selection:text-black">
       
       {/* --- 1. HERO: THE VIBE DOCTOR --- */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
         {/* Background - Lush Green/Floral Vibe */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/50 to-green-900/20 z-10" />

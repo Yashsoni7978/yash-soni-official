@@ -6,20 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   Mic2, Briefcase, Award, TrendingUp, Users, ArrowRight, 
   CheckCircle, Building2, Globe, ChevronDown, FileText, 
-  MonitorPlay, Calendar, MapPin, Instagram, Youtube, Minus, Plus
+  MonitorPlay, Calendar, MapPin, Instagram, Youtube, Minus, Plus 
 } from "lucide-react";
 
 // --- REUSABLE COMPONENTS ---
-const GOLD_COLOR = "#D4AF37";
-
-const GoldTextureText = ({ children, className }) => (
-  <span 
-    className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
-    style={{ 
-      backgroundImage: "url('/gold-texture.png')", 
-      backgroundColor: GOLD_COLOR, 
-    }}
-  >
+const TextureText = ({ children, className }) => (
+  <span className={`bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-500 ${className}`}>
     {children}
   </span>
 );
@@ -32,11 +24,11 @@ const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-3 justify-center md:justify-start">
-        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+      <p className="text-blue-500 text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center gap-3 justify-center md:justify-start">
+        {align === "center" && <span className="w-8 h-[1px] bg-blue-500"></span>}
         {subtitle}
-        {align !== "center" && <span className="w-12 h-[1px] bg-[#D4AF37]"></span>}
-        {align === "center" && <span className="w-8 h-[1px] bg-[#D4AF37]"></span>}
+        {align !== "center" && <span className="w-12 h-[1px] bg-blue-500"></span>}
+        {align === "center" && <span className="w-8 h-[1px] bg-blue-500"></span>}
       </p>
       <h2 className={`text-4xl md:text-6xl font-display font-black leading-tight ${dark ? 'text-black' : 'text-white'}`}>
         {title}
@@ -45,7 +37,7 @@ const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
   </div>
 );
 
-// --- FAQ COMPONENT (Matches Home Page) ---
+// --- FAQ COMPONENT (Adapted to Blue Corporate Theme) ---
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   
@@ -55,7 +47,7 @@ const FAQItem = ({ question, answer }) => {
       onMouseLeave={() => setIsOpen(false)}
       className={`group rounded-2xl border transition-all duration-300 mb-4 ${
         isOpen 
-          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
+          ? "border-blue-500 bg-blue-500/10 shadow-[0_0_15px_rgba(59,130,246,0.15)]" 
           : "border-white/10 bg-transparent hover:border-white/20" 
       }`}
     >
@@ -64,12 +56,12 @@ const FAQItem = ({ question, answer }) => {
         className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-[15px] pr-4 transition-colors ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-blue-400" : "text-zinc-200 group-hover:text-white"
         }`}>
           {question}
         </span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
-          isOpen ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+          isOpen ? "bg-blue-500 text-white" : "bg-transparent border border-white/30 text-white group-hover:border-blue-500 group-hover:text-blue-500"
         }`}>
           {isOpen ? <Minus size={16} /> : <Plus size={16} />}
         </div>
@@ -82,7 +74,7 @@ const FAQItem = ({ question, answer }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
+            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-blue-500/20 mt-2">
               <div className="pt-4">{answer}</div>
             </div>
           </motion.div>
@@ -94,16 +86,16 @@ const FAQItem = ({ question, answer }) => {
 
 export default function CorporateAnchor() {
   return (
-    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-blue-600 selection:text-white">
       
       {/* --- 1. CORPORATE HERO SECTION --- */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
+      <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
+        {/* Background - Professional/Stage Vibe */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-[#D4AF37]/10 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-blue-900/10 z-10" />
           <img 
             src="/service-corporate.webp" 
-            className="w-full h-full object-cover opacity-40 grayscale" 
+            className="w-full h-full object-cover opacity-50 grayscale" 
             alt="Corporate Event Anchor Jaipur"
           />
         </div>
@@ -112,30 +104,31 @@ export default function CorporateAnchor() {
           <div className="max-w-5xl">
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               
-              <div className="inline-flex items-center gap-2 border border-[#D4AF37]/30 px-5 py-2 rounded-full bg-[#D4AF37]/10 backdrop-blur-md mb-8">
-                <Building2 className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">
+              <div className="inline-flex items-center gap-2 border border-blue-500/30 px-5 py-2 rounded-full bg-blue-900/10 backdrop-blur-md mb-8">
+                <Building2 className="w-4 h-4 text-blue-400" />
+                <span className="text-blue-200 text-xs uppercase tracking-[0.2em] font-bold">
                   Corporate & Business Events
                 </span>
               </div>
 
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 tracking-tight">
-                Command <br /> <GoldTextureText>The Room.</GoldTextureText>
+                Command <br /> <TextureText>The Room.</TextureText>
               </h1>
               
-              <p className="text-gray-400 text-xl md:text-2xl font-light leading-relaxed max-w-2xl mb-12 border-l-4 border-[#D4AF37] pl-8">
+              <p className="text-gray-400 text-xl md:text-2xl font-light leading-relaxed max-w-2xl mb-12 border-l-4 border-blue-600 pl-8">
                 When the CEO speaks, the audience should listen. <br />
                 I bridge the gap between your brand's message and the audience's attention span.
               </p>
               
+              {/* UPDATED BUTTONS */}
               <div className="flex flex-col sm:flex-row gap-5">
                 <Link href="/contact">
-                  <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                  <button className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-blue-50 transition-colors rounded-full shadow-[0_0_30px_rgba(255,255,255,0.2)]">
                     Book Now
                   </button>
                 </Link>
                 <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer">
-                  <button className="px-10 py-4 border border-[#D4AF37]/50 text-[#D4AF37] font-bold uppercase tracking-widest hover:bg-[#D4AF37]/10 transition-colors rounded-full flex items-center justify-center gap-3 w-full sm:w-auto">
+                  <button className="px-10 py-4 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white/10 transition-colors rounded-full flex items-center justify-center gap-3 w-full sm:w-auto">
                      <Instagram className="w-4 h-4" /> Instagram
                   </button>
                 </a>
@@ -147,6 +140,7 @@ export default function CorporateAnchor() {
       </section>
 
       {/* --- 2. THE "WHY ME" SECTION (Stats & Authority) --- */}
+      {/* Fake Marquee section completely removed! */}
       <section className="py-32 container mx-auto px-4 border-t border-white/10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
            <div>
@@ -178,25 +172,25 @@ export default function CorporateAnchor() {
          </div>
          
          <div className="container mx-auto px-4 mt-10">
-            <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer" className="relative aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl group cursor-pointer block hover:border-[#D4AF37]/50 transition-colors duration-500">
-               <img src="/gallery-5.webp" className="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0" alt="Showreel Cover" />
+            <div className="relative aspect-video w-full max-w-5xl mx-auto bg-black rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl group cursor-pointer hover:border-blue-500/50 transition-colors duration-500">
+               <img src="/gallery-5.webp" className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700" alt="Showreel Cover" />
                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:border-[#D4AF37] transition-all duration-300">
-                     <MonitorPlay className="w-8 h-8 text-white group-hover:text-[#D4AF37] fill-current transition-colors" />
+                  <div className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                     <MonitorPlay className="w-8 h-8 text-white fill-current" />
                   </div>
                </div>
                <div className="absolute bottom-8 left-8">
-                  <p className="text-white font-bold text-xl md:text-2xl">Corporate Showreel</p>
-                  <p className="text-[#D4AF37] text-xs md:text-sm uppercase tracking-widest mt-1">Highlights & Testimonials</p>
+                  <p className="text-white font-bold text-xl md:text-2xl">Corporate Showreel 2025</p>
+                  <p className="text-blue-400 text-xs md:text-sm uppercase tracking-widest mt-1">Highlights & Testimonials</p>
                </div>
-            </a>
+            </div>
 
-            {/* Social Links for Videos */}
+            {/* UPDATED: Added Social Links for Videos */}
             <div className="flex flex-wrap justify-center gap-6 md:gap-10 mt-10">
-               <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#D4AF37] hover:text-white uppercase tracking-widest text-xs font-bold transition-colors">
+               <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 hover:text-white uppercase tracking-widest text-xs font-bold transition-colors">
                  <Youtube size={18} /> Watch on YouTube
                </a>
-               <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#D4AF37] hover:text-white uppercase tracking-widest text-xs font-bold transition-colors">
+               <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-400 hover:text-white uppercase tracking-widest text-xs font-bold transition-colors">
                  <Instagram size={18} /> View on Instagram
                </a>
             </div>
@@ -209,32 +203,32 @@ export default function CorporateAnchor() {
         
         <div className="grid md:grid-cols-3 gap-6 mt-16">
            <CorpCard 
-             icon={<Award className="w-8 h-8 text-[#D4AF37]" />}
+             icon={<Award className="w-8 h-8 text-blue-400" />}
              title="Award Nights"
              desc="High-energy hosting that keeps the momentum going through 50+ award categories without letting the audience doze off."
            />
            <CorpCard 
-             icon={<TrendingUp className="w-8 h-8 text-[#D4AF37]" />}
+             icon={<TrendingUp className="w-8 h-8 text-blue-400" />}
              title="Conferences & Summits"
              desc="Formal, articulate, and script-perfect. I moderate panels, introduce keynote speakers, and handle Q&A sessions with intellect."
            />
            <CorpCard 
-             icon={<Users className="w-8 h-8 text-[#D4AF37]" />}
+             icon={<Users className="w-8 h-8 text-blue-400" />}
              title="Product Launches"
              desc="Building the hype before the reveal. I work with light & sound teams to create a 'Steve Jobs' moment for your product."
            />
            <CorpCard 
-             icon={<Mic2 className="w-8 h-8 text-[#D4AF37]" />}
+             icon={<Mic2 className="w-8 h-8 text-blue-400" />}
              title="Gala Dinners"
              desc="The perfect blend of formal and fun. Networking games, light engagement, and ensuring the VIPs feel honored."
            />
            <CorpCard 
-             icon={<Building2 className="w-8 h-8 text-[#D4AF37]" />}
+             icon={<Building2 className="w-8 h-8 text-blue-400" />}
              title="Dealer Meets"
              desc="Motivating your sales network. High-octane anchoring that leaves your partners feeling valued and charged up."
            />
            <CorpCard 
-             icon={<Globe className="w-8 h-8 text-[#D4AF37]" />}
+             icon={<Globe className="w-8 h-8 text-blue-400" />}
              title="Team Building"
              desc="Interactive activities that break siloes. Turning a group of colleagues into a cohesive team through fun engagement."
            />
@@ -281,7 +275,7 @@ export default function CorporateAnchor() {
       {/* --- 6. CORPORATE FAQ --- */}
       <section className="py-32 max-w-4xl mx-auto px-4">
         <SectionHeading subtitle="Details" title="Vendor Questions" align="center" />
-        <div className="space-y-4 mt-12">
+        <div className="space-y-4 mt-8">
            <FAQItem question="Do you provide a GST Invoice?" answer="Yes, I am a registered entity and provide a fully compliant GST invoice for all corporate bookings." />
            <FAQItem question="Are you comfortable with teleprompters?" answer="Absolutely. For high-stakes summits, I am trained to read from teleprompters naturally while maintaining eye contact with the audience." />
            <FAQItem question="Do you travel for events?" answer="Yes. While based in Jaipur, 60% of my corporate work happens in Delhi, Mumbai, and Bangalore. Travel logistics are handled by the client." />
@@ -290,15 +284,15 @@ export default function CorporateAnchor() {
       </section>
 
       {/* --- 7. FINAL CTA --- */}
-      <section className="py-32 bg-black text-white text-center relative overflow-hidden border-t border-white/10">
-         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent opacity-60 pointer-events-none" />
+      <section className="py-32 bg-blue-700 text-white text-center relative overflow-hidden">
+         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
          <div className="container mx-auto px-4 relative z-10">
             <h2 className="text-4xl md:text-6xl font-display font-black mb-8">Ready to Elevate Your Event?</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-xl font-light">
+            <p className="text-blue-100 max-w-2xl mx-auto mb-12 text-xl font-light">
                Don't risk your brand reputation with an amateur. <br /> Hire a host who understands business.
             </p>
             <Link href="/contact">
-               <button className="px-12 py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+               <button className="px-12 py-5 bg-white text-blue-900 font-bold uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl">
                   Check Availability
                </button>
             </Link>
@@ -312,18 +306,18 @@ export default function CorporateAnchor() {
 // --- SUB COMPONENTS ---
 
 const StatCard = ({ num, label }) => (
-  <div className="bg-[#111] p-6 rounded-xl border border-neutral-800 text-center hover:border-[#D4AF37]/50 transition-colors">
+  <div className="bg-[#111] p-6 rounded-xl border border-neutral-800 text-center hover:border-blue-500/50 transition-colors">
      <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">{num}</h3>
      <p className="text-gray-500 text-[10px] uppercase tracking-widest">{label}</p>
   </div>
 );
 
 const CorpCard = ({ icon, title, desc }) => (
-  <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl hover:border-[#D4AF37]/50 transition-colors group hover:-translate-y-2 duration-300">
-     <div className="mb-6 bg-neutral-900 w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors text-[#D4AF37]">
+  <div className="bg-[#0a0a0a] border border-neutral-800 p-8 rounded-2xl hover:border-blue-500/50 transition-colors group hover:-translate-y-2 duration-300">
+     <div className="mb-6 bg-neutral-900 w-16 h-16 rounded-full flex items-center justify-center group-hover:bg-blue-900/20 transition-colors text-blue-500">
         {icon}
      </div>
-     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{title}</h3>
+     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{title}</h3>
      <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
   </div>
 );
@@ -331,7 +325,7 @@ const CorpCard = ({ icon, title, desc }) => (
 const CheckItem = ({ title, desc }) => (
   <div className="flex gap-5 group">
      <div className="mt-1 flex-shrink-0">
-        <CheckCircle className="w-6 h-6 text-[#D4AF37] group-hover:scale-110 transition-transform" />
+        <CheckCircle className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
      </div>
      <div>
         <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
@@ -343,11 +337,11 @@ const CheckItem = ({ title, desc }) => (
 const TimelineItem = ({ step, title, desc, side }) => (
   <div className={`flex flex-col md:flex-row items-center gap-8 mb-16 relative ${side === 'right' ? 'md:flex-row-reverse' : ''}`}>
      {/* Dot */}
-     <div className="absolute left-4 md:left-1/2 top-0 w-4 h-4 bg-[#D4AF37] rounded-full md:-translate-x-1/2 shadow-[0_0_20px_rgba(212,175,55,0.5)] z-10 hidden md:block"></div>
+     <div className="absolute left-4 md:left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full md:-translate-x-1/2 shadow-[0_0_20px_rgba(59,130,246,0.5)] z-10 hidden md:block"></div>
      
      {/* Content */}
-     <div className={`w-full md:w-1/2 p-8 bg-[#111] border border-neutral-800 rounded-2xl hover:border-[#D4AF37]/30 transition-colors ${side === 'right' ? 'text-left md:text-left' : 'text-left md:text-right'}`}>
-        <span className="text-4xl font-display font-bold text-[#D4AF37]/50 mb-4 block">{step}</span>
+     <div className={`w-full md:w-1/2 p-8 bg-[#111] border border-neutral-800 rounded-2xl hover:border-blue-500/30 transition-colors ${side === 'right' ? 'text-left md:text-left' : 'text-left md:text-right'}`}>
+        <span className="text-4xl font-display font-bold text-blue-900 mb-4 block">{step}</span>
         <h3 className="text-2xl font-bold text-white mb-3">{title}</h3>
         <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
      </div>
