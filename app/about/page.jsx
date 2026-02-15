@@ -1,29 +1,9 @@
+"use client";
+
+import { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Star, Mic, Sparkles, Quote, MapPin, Calendar, Briefcase, Zap, Globe, ShieldAlert, Layers } from "lucide-react";
-
-// --- ADVANCED SEO METADATA ---
-export const metadata = {
-  title: "About Anchor Yash Soni | Premium Event Emcee in Jaipur",
-  description: "With over 5 years of experience and 1100+ live events, Anchor Yash Soni is Jaipur's top choice for luxury weddings, sangeets, and corporate hosting.",
-  keywords: ["Anchor Yash Soni", "About Yash Soni", "Best Anchor in Jaipur", "Professional Emcee Rajasthan", "Luxury Event Host"],
-  openGraph: {
-    title: "About Anchor Yash Soni | Premium Event Emcee",
-    description: "The difference between a mic holder and a Master of Ceremonies. 1100+ stages later, I’m just getting started.",
-    url: "https://yashsoni.in/about",
-    siteName: "Anchor Yash Soni",
-    images: [
-      {
-        url: "/intro-portrait-top.webp",
-        width: 1200,
-        height: 630,
-        alt: "Anchor Yash Soni - Premium Event Host",
-      },
-    ],
-    locale: "en_IN",
-    type: "profile",
-  },
-};
 
 // --- 1. LUXURY TEXTURE ASSETS ---
 const GoldTextureText = ({ children, className }) => (
@@ -38,10 +18,7 @@ const GoldTextureText = ({ children, className }) => (
   </span>
 );
 
-// --- 2. ANIMATION HELPERS (Client Component Wrapper) ---
-"use client";
-import { useRef } from "react";
-
+// --- 2. ANIMATION HELPERS ---
 const FadeIn = ({ children, delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -66,14 +43,12 @@ export default function About() {
         <div className="lg:w-1/2 h-[60vh] lg:h-screen lg:sticky lg:top-0 relative overflow-hidden border-r border-neutral-900 z-10">
           <div className="absolute inset-0 bg-black/20 z-10" />
           
-          {/* UPDATED: Original full-color image (removed grayscale classes) */}
           <img 
             src="/intro-portrait-top.webp" 
             alt="Anchor Yash Soni - Premium Event Emcee in Jaipur" 
             className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
           />
           
-          {/* Floating Name (Desktop) - UPDATED with Gold Texture */}
           <div className="absolute bottom-10 left-10 z-20 hidden lg:block">
             <p className="text-white/80 text-sm uppercase tracking-[0.4em] mb-2 font-bold drop-shadow-md">
               <GoldTextureText>The Host</GoldTextureText>
