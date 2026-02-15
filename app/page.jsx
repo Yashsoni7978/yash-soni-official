@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
-const GOLD_COLOR = "#D4AF37"; // Reverted to the premium, elegant royal gold
+const GOLD_COLOR = "#D4AF37";
 
 const style = `
   @keyframes shimmer {
@@ -167,7 +167,7 @@ const GALLERY_IMAGES = [
 
 // --- 4. SUB-COMPONENTS ---
 
-// Explicitly using the .png file and the molten shimmer animation for the YASH text
+// Ensuring gold-texture.png is used universally for textured elements
 const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
@@ -245,7 +245,6 @@ const FAQItem = ({ q, a }) => {
 
 export default function HomePage() {
   
-  // High-End SEO Local Business Schema
   const schemaData = {
     "@context": "https://schema.org",
     "@type": ["Person", "EntertainmentBusiness"],
@@ -253,7 +252,7 @@ export default function HomePage() {
     "jobTitle": "Premium Event Anchor & Emcee",
     "description": "Award-winning premium event anchor, wedding emcee, and corporate host based in Jaipur, Rajasthan.",
     "url": "https://yashsoni.in",
-    "image": "https://yashsoni.in/hero-slide-1.webp",
+    "image": "https://yashsoni.in/hero-slide-1.jpg",
     "telephone": "+91-7737877978",
     "priceRange": "$$$",
     "address": {
@@ -276,7 +275,7 @@ export default function HomePage() {
       <section className="relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
           <motion.img
-            src="/hero-slide-1.webp"
+            src="/hero-slide-1.jpg" // FIXED: Looking for .jpg format. Change to .png if necessary.
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }} 
             transition={{ duration: 1.5 }}
