@@ -51,6 +51,36 @@ const navLinks = [
   },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "/blog" },
+  
+  // --- TEMPORARY ALL-PAGES DROPDOWN ---
+  {
+    name: "Temp",
+    href: "#",
+    dropdown: [
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Anchor in Jaipur", href: "/anchor-in-jaipur" },
+      { name: "Artist Mgmt", href: "/artist-management-jaipur" },
+      { name: "Blog", href: "/blog" },
+      { name: "Contact", href: "/contact" },
+      { name: "Corporate Anchor", href: "/corporate-event-anchor-jaipur" },
+      { name: "Destination Wedding", href: "/destination-wedding-anchor" },
+      { name: "Event Designing", href: "/event-designing" },
+      { name: "Event Mgmt Company", href: "/event-management-company-jaipur" },
+      { name: "Event Planning", href: "/event-planning-jaipur" },
+      { name: "Haldi Anchor", href: "/haldi-anchor-jaipur" },
+      { name: "Mall Activation", href: "/mall-activation-anchor" },
+      { name: "Mehendi Anchor", href: "/mehendi-anchor-jaipur" },
+      { name: "Portfolio", href: "/portfolio" },
+      { name: "Sangeet Anchor", href: "/sangeet-anchor-jaipur" },
+      { name: "Services", href: "/services" },
+      { name: "Team Building", href: "/team-building-host" },
+      { name: "Wedding Anchor", href: "/wedding-anchor-jaipur" },
+      { name: "Wedding Planning", href: "/wedding-planning-jaipur" }
+    ],
+  },
+  // -------------------------------------
+
   { name: "Contact", href: "/contact" },
 ];
 
@@ -94,7 +124,7 @@ export default function Navbar() {
           </a>
 
           {/* 2. DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
               <div 
                 key={link.name} 
@@ -102,10 +132,9 @@ export default function Navbar() {
                 onMouseEnter={() => setActiveDropdown(link.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                {/* Changed to font-medium for a lighter, premium look */}
                 <Link
                   href={link.href}
-                  className={`text-xs xl:text-sm font-medium uppercase tracking-widest flex items-center gap-1 transition-colors ${
+                  className={`text-[10px] xl:text-xs font-medium uppercase tracking-widest flex items-center gap-1 transition-colors ${
                     activeDropdown === link.name ? "text-[#D4AF37]" : "text-gray-300 hover:text-white"
                   }`}
                 >
@@ -123,12 +152,13 @@ export default function Navbar() {
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 w-64 bg-black border border-[#D4AF37]/30 shadow-[0_0_30px_rgba(0,0,0,0.8)] rounded-xl overflow-hidden mt-4 p-2"
                     >
+                       {/* This wrapper ensures long dropdowns like the 'Temp' one get a scrollbar instead of breaking the page */}
                        <div className="max-h-[60vh] overflow-y-auto custom-scrollbar">
                         {link.dropdown.map((sub) => (
                             <Link
                             key={sub.name}
                             href={sub.href}
-                            className="block px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-[#D4AF37] hover:bg-white/5 rounded-lg transition-all"
+                            className="block px-4 py-3 text-[10px] xl:text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-[#D4AF37] hover:bg-white/5 rounded-lg transition-all"
                             >
                             {sub.name}
                             </Link>
@@ -178,7 +208,7 @@ export default function Navbar() {
                      <div className="flex flex-col">
                        <button 
                          onClick={() => setMobileExpanded(mobileExpanded === link.name ? null : link.name)}
-                         className="flex items-center justify-between text-2xl font-black text-white uppercase tracking-tight w-full"
+                         className="flex items-center justify-between text-xl md:text-2xl font-black text-white uppercase tracking-tight w-full"
                        >
                          {link.name}
                          <ChevronRight 
@@ -200,7 +230,7 @@ export default function Navbar() {
                                    key={sub.name}
                                    href={sub.href}
                                    onClick={() => setIsOpen(false)}
-                                   className="text-sm font-medium text-gray-400 uppercase tracking-widest hover:text-[#D4AF37]"
+                                   className="text-xs md:text-sm font-medium text-gray-400 uppercase tracking-widest hover:text-[#D4AF37]"
                                  >
                                    {sub.name}
                                  </Link>
@@ -214,7 +244,7 @@ export default function Navbar() {
                      <Link 
                        href={link.href}
                        onClick={() => setIsOpen(false)}
-                       className="block text-2xl font-black text-white uppercase tracking-tight hover:text-[#D4AF37] transition-colors"
+                       className="block text-xl md:text-2xl font-black text-white uppercase tracking-tight hover:text-[#D4AF37] transition-colors"
                      >
                        {link.name}
                      </Link>
@@ -230,8 +260,8 @@ export default function Navbar() {
                  </Link>
                </div>
                
-               {/* Fixed Social Links with correct handles */}
-               <div className="flex justify-center gap-6 mt-4 text-gray-500 text-[10px] uppercase tracking-widest font-bold">
+               {/* Fixed Social Links */}
+               <div className="flex justify-center gap-4 md:gap-6 mt-4 text-gray-500 text-[10px] uppercase tracking-widest font-bold">
                  <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Instagram 1</a>
                  <a href="https://instagram.com/best_anchor_in_jaipur" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Instagram 2</a>
                  <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">YouTube</a>
