@@ -2,10 +2,27 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ChevronRight, MessageCircle, Users, Target, Trophy, Smile, Zap, Activity, Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  ChevronRight, Users, Target, Trophy, Smile, Zap, 
+  Activity, Plus, Minus, Briefcase, Sparkles, Globe 
+} from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
+// --- BRANDING COMPONENTS ---
+const GOLD_COLOR = "#D4AF37";
+
+const GoldTextureText = ({ children, className }) => (
+  <span 
+    className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
+    style={{ 
+      backgroundImage: "url('/gold-texture.png')", 
+      backgroundColor: GOLD_COLOR, 
+    }}
+  >
+    {children}
+  </span>
+);
+
 const ScrollReveal = ({ children, delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -17,53 +34,47 @@ const ScrollReveal = ({ children, delay = 0 }) => (
   </motion.div>
 );
 
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
-
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
-    }}
-  >
-    {children}
-  </motion.div>
-);
-
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border-b border-neutral-800">
+    <div 
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+      className={`group rounded-2xl border transition-all duration-300 mb-4 ${
+        isOpen 
+          ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
+          : "border-white/10 bg-transparent hover:border-white/20" 
+      }`}
+    >
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-4 text-left group"
+        className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
       >
-        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-amber-500' : 'text-gray-300 group-hover:text-amber-500'}`}>
+        <span className={`font-semibold text-[15px] pr-4 transition-colors ${
+          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+        }`}>
           {question}
         </span>
-        {isOpen ? <Minus className="w-5 h-5 text-amber-500" /> : <Plus className="w-5 h-5 text-gray-500" />}
+        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
+          isOpen ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+        }`}>
+          {isOpen ? <Minus size={16} /> : <Plus size={16} />}
+        </div>
       </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-4 text-gray-400 text-sm leading-relaxed">{answer}</p>
-      </motion.div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
+              <div className="pt-4">{answer}</div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -87,188 +98,170 @@ const activityTypes = [
 
 const teamBuildingFAQs = [
   { question: "Why do we need a professional host for team building?", answer: "An internal HR manager can organize games, but a professional host brings neutral authority, high energy, and the skill to manage crowd dynamics without office politics coming into play." },
-  { question: "Can you manage large groups (100+ employees)?", answer: "Yes, I specialize in large-format engagement. I use microphones, clear instructions, and subgroup division strategies to ensure 100 or 1000 employees are all engaged simultaneously." },
-  { question: "Do you bring your own props and materials?", answer: "Yes, for standard games (ropes, balls, placards, blindfolds), I bring my own kit. For specialized setups (like drum circles or paintball), I coordinate with vendors." },
-  { question: "Can you conduct indoor activities for small offices?", answer: "Absolutely. I have a 'Conference Room' module designed specifically for small spaces, focusing on mental challenges, quizzes, and seated ice-breakers." },
-  { question: "Do you do virtual team building?", answer: "Yes, I host engaging Zoom/Teams sessions with virtual scavenger hunts, Pictionary, and polls for remote teams." },
-  { question: "How long does a typical session last?", answer: "A standard high-energy session lasts 60 to 90 minutes. Full-day offsite facilitation can range from 4 to 6 hours with breaks." }
+  { question: "Can you manage large groups (100+ employees)?", answer: "Yes, I specialize in large-format engagement. I use microphones, clear instructions, and subgroup division strategies to ensure everyone is engaged simultaneously." },
+  { question: "Do you bring your own props and materials?", answer: "Yes, for standard games (ropes, balls, placards, blindfolds), I bring my own kit. You just show up and play." },
+  { question: "Can you conduct indoor activities for small offices?", answer: "Absolutely. I have a 'Conference Room' module designed specifically for small spaces, focusing on mental challenges and quizzes." },
+  { question: "Do you do virtual team building?", answer: "Yes, I host engaging Zoom/Teams sessions with virtual scavenger hunts and Pictionary for remote teams." },
+  { question: "How long does a typical session last?", answer: "A standard high-energy session lasts 60 to 90 minutes. Full-day facilitation can range from 4 to 6 hours." }
 ];
 
 export default function TeamBuildingHost() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Team Building Host Jaipur",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "areaServed": "Jaipur, Rajasthan",
-    },
-    "serviceType": "Corporate Team Building",
-    "description": "Energetic team building host and game show anchor for corporate offsites and employee engagement in Jaipur.",
-  };
-
   return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-4 relative text-center">
+      <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-[#050505] z-10" />
+          <img 
+            src="/service-corporate.webp" 
+            className="w-full h-full object-cover opacity-40 grayscale" 
+            alt="Corporate Team Building Host Jaipur"
+          />
+        </div>
+
+        <div className="relative z-20 container mx-auto px-4 text-center">
           <ScrollReveal>
-            <span className="text-amber-500 text-sm font-medium uppercase tracking-wider">
-              Employee Engagement Specialist
-            </span>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mt-4 mb-6">
-              Team Building Host in <span className="text-amber-500">Jaipur</span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              Recharge your workforce. Transform groups of strangers into a unified, high-performing team through energy, laughter, and strategic play.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all hover:scale-105 flex items-center gap-2">
-                  Book for Offsite <ChevronRight className="w-5 h-5" />
-                </button>
-              </Link>
+            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/30 px-5 py-2 rounded-full bg-[#D4AF37]/10 backdrop-blur-md mb-8">
+                <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+                <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">
+                  Engagement & Bonding Specialist
+                </span>
             </div>
+            <h1 className="text-5xl md:text-8xl font-display font-black leading-tight mb-6">
+              Team Building <br /> <GoldTextureText>Host in Jaipur</GoldTextureText>
+            </h1>
+            <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+              Recharge your workforce. Transform groups of strangers into a unified, high-performing team through unscripted energy and strategic play.
+            </p>
+            <Link href="/contact">
+              <button className="px-10 py-4 bg-[#D4AF37] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                Book for Offsite
+              </button>
+            </Link>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
+      <section className="py-32 bg-[#080808] border-y border-white/5">
         <div className="container mx-auto px-4 max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
-              More Than Just <span className="text-amber-500">Games</span>
+            <h2 className="text-3xl md:text-5xl font-display font-black mb-10 text-center uppercase tracking-tight">
+              More Than Just <GoldTextureText>Games</GoldTextureText>
             </h2>
-            <div className="text-gray-400 text-lg leading-relaxed space-y-6 text-center">
+            <div className="text-gray-400 text-lg md:text-xl leading-relaxed space-y-8 text-center font-light">
               <p>
-                In the corporate world, "Team Building" often gets a bad reputation for being awkward or forced. My goal is to change that. I believe the best team bonding happens when people forget they are at work.
+                In the corporate world, "Team Building" often gets a bad reputation for being awkward. <strong className="text-white">I change that.</strong> Bonding happens best when people forget they are at work.
               </p>
               <p>
-                As a Team Building Host, I don't just run drills; I create an atmosphere of psychological safety where the intern feels comfortable high-fiving the CEO. Whether it's a 2-day residential offsite in a Rajasthan resort or a quick 2-hour energy booster in your Jaipur office, I bring the spark that reignites connection.
+                I create an atmosphere of <strong className="text-[#D4AF37]">psychological safety</strong> where the intern feels comfortable high-fiving the CEO. Whether it's a 2-day residential offsite or a quick office booster, I bring the spark that reignites connection.
               </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-20 container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-              Engagement <span className="text-amber-500">Modules</span>
-            </h2>
-          </div>
-        </ScrollReveal>
+      {/* Services/Modules */}
+      <section className="py-32 container mx-auto px-4">
+        <div className="text-center mb-20">
+          <ScrollReveal>
+            <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] font-bold mb-4">The Strategy</p>
+            <h2 className="text-4xl md:text-6xl font-display font-black">Engagement <GoldTextureText>Modules</GoldTextureText></h2>
+          </ScrollReveal>
+        </div>
 
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamBuildingServices.map((service) => (
-            <StaggerItem key={service.title}>
-              <motion.div
-                className="h-full flex flex-col p-6 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                whileHover={{ y: -4 }}
-              >
-                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-500">
-                  <service.icon className="w-6 h-6" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamBuildingServices.map((service, idx) => (
+            <ScrollReveal key={service.title} delay={idx * 0.1}>
+              <div className="h-full flex flex-col p-8 bg-neutral-900/50 border border-white/5 rounded-3xl hover:border-[#D4AF37]/50 transition-all duration-500 group">
+                <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-2xl flex items-center justify-center mb-8 text-[#D4AF37] group-hover:scale-110 transition-transform">
+                  <service.icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-lg font-display font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm flex-grow">{service.description}</p>
-              </motion.div>
-            </StaggerItem>
+                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed font-light">{service.description}</p>
+              </div>
+            </ScrollReveal>
           ))}
-        </StaggerContainer>
+        </div>
       </section>
 
-      {/* Activity Types */}
-      <section className="py-20 bg-neutral-900 border-y border-neutral-800">
+      {/* Activity Grid */}
+      <section className="py-32 bg-[#0a0a0a] border-y border-white/5">
         <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-4">
-                Popular <span className="text-amber-500">Activities</span>
-              </h2>
-            </div>
-          </ScrollReveal>
+          <div className="text-center mb-20">
+            <ScrollReveal>
+              <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] font-bold mb-4">The Fun Menu</p>
+              <h2 className="text-4xl md:text-6xl font-display font-black">Popular <GoldTextureText>Activities</GoldTextureText></h2>
+            </ScrollReveal>
+          </div>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {activityTypes.map((activity) => (
-              <StaggerItem key={activity.title}>
-                <motion.div
-                  className="h-full flex flex-col p-6 bg-black border border-neutral-800 rounded-xl hover:border-amber-500/50 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h3 className="text-lg font-display font-bold mb-3 flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-amber-500" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {activityTypes.map((activity, idx) => (
+              <ScrollReveal key={activity.title} delay={idx * 0.1}>
+                <div className="h-full flex flex-col p-8 bg-black border border-white/5 rounded-2xl hover:border-[#D4AF37]/30 transition-all duration-500 hover:-translate-y-2">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
+                    <Zap className="w-5 h-5 text-[#D4AF37]" />
                     {activity.title}
                   </h3>
-                  <p className="text-gray-400 text-sm flex-grow">{activity.description}</p>
-                </motion.div>
-              </StaggerItem>
+                  <p className="text-gray-400 text-sm leading-relaxed font-light">{activity.description}</p>
+                </div>
+              </ScrollReveal>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-20 container mx-auto px-4">
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: Users, number: "50+", label: "Offsites Hosted" },
-            { icon: Activity, number: "High", label: "Energy Levels" },
-            { icon: Smile, number: "100%", label: "Employee Smiles" },
-            { icon: Trophy, number: "200+", label: "Games Conducted" },
-          ].map((stat) => (
-            <StaggerItem key={stat.label}>
-              <motion.div
-                className="text-center p-6 bg-neutral-900 border border-neutral-800 rounded-xl"
-                whileHover={{ scale: 1.05 }}
-              >
-                <stat.icon className="w-8 h-8 text-amber-500 mx-auto mb-4" />
-                <div className="text-3xl font-display font-bold text-amber-500 mb-2">{stat.number}</div>
-                <p className="text-gray-400 text-sm">{stat.label}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+      <section className="py-32 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Users, number: "50+", label: "Offsites Hosted" },
+              { icon: Activity, number: "High", label: "Energy Levels" },
+              { icon: Smile, number: "100%", label: "Employee Smiles" },
+              { icon: Trophy, number: "200+", label: "Games Conducted" },
+            ].map((stat, idx) => (
+              <ScrollReveal key={stat.label} delay={idx * 0.1}>
+                <div className="text-center p-8 bg-[#080808] border border-white/5 rounded-3xl group hover:border-[#D4AF37]/50 transition-colors">
+                  <stat.icon className="w-10 h-10 text-[#D4AF37] mx-auto mb-6 group-hover:scale-110 transition-transform" />
+                  <div className="text-4xl font-display font-black text-white mb-2">{stat.number}</div>
+                  <p className="text-[#D4AF37] text-xs uppercase tracking-widest font-bold">{stat.label}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-display font-bold text-center mb-12">Team Building FAQs</h2>
-        <div className="space-y-2">
+      <section className="py-32 container mx-auto px-4 max-w-4xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-display font-black">Team <GoldTextureText>FAQs</GoldTextureText></h2>
+        </div>
+        <div className="mt-12">
           {teamBuildingFAQs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-neutral-900 border-t border-neutral-800">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
+      {/* Final CTA */}
+      <section className="py-32 bg-black text-center relative overflow-hidden border-t border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+        <div className="container mx-auto px-4 relative max-w-3xl">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Energize Your <span className="text-amber-500">Workforce</span>
+            <h2 className="text-4xl md:text-7xl font-display font-black mb-8 leading-tight">
+              Energize Your <br /> <GoldTextureText>Workforce</GoldTextureText>
             </h2>
-            <p className="text-gray-400 mb-8">
-              Let's plan an activity session that your team will actually enjoy. No boring trust falls, just pure engagement.
+            <p className="text-gray-400 mb-12 text-lg font-light leading-relaxed">
+              Let's plan an activity session that your team will actually enjoy. No boring trust falls, just pure engagement and meaningful bonding.
             </p>
-            <div className="flex justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-600 transition-all flex items-center gap-2">
-                  Get a Quote <ChevronRight className="w-5 h-5" />
-                </button>
-              </Link>
-            </div>
+            <Link href="/contact">
+              <button className="px-12 py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                Get a Custom Quote
+              </button>
+            </Link>
           </ScrollReveal>
         </div>
       </section>

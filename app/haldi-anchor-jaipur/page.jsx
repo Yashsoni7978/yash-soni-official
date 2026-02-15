@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   Sun, Music, Smile, Heart, Zap, Trophy, 
   Users, Camera, ArrowRight, Play, Star, 
-  ChevronDown, PartyPopper, Sparkles 
+  ChevronDown, PartyPopper, Sparkles, Minus, Plus 
 } from "lucide-react";
 
 // --- 1. CUSTOM TEXTURE FOR HALDI VIBE (Ultra-Vibrant Gradient) ---
@@ -28,9 +28,9 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
     >
       <div className={`flex items-center gap-2 mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}>
         <Sun className="w-5 h-5 text-yellow-400 animate-spin-slow" />
-        <p className="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold">
+        <span className="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold">
           {subtitle}
-        </p>
+        </span>
       </div>
       <h2 className="text-4xl md:text-6xl font-display font-black text-white leading-tight">
         {title}
@@ -39,26 +39,48 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
   </div>
 );
 
-// --- 2. EXPANDED SEO & CONTENT DATA (Long-tail keyword focused) ---
+// --- 2. EXPANDED SEO & CONTENT DATA (16 Targeted FAQs) ---
 const FAQS = [
   { q: "Why hire a specialized Haldi Games Anchor?", a: "A Haldi requires a completely different energy than a formal reception. It’s loud, messy, and intimate. You need a specialized emcee who excels at high-energy crowd control, interactive games, and bringing out the crazy side of your family without making it awkward." },
-  { q: "Do you travel for Destination Weddings?", a: "Absolutely. Whether your Haldi is in a heritage palace in Rajasthan or a beachfront resort in Goa, I travel globally to bring unmatched energy to your destination wedding." },
-  { q: "What kind of interactive Haldi games do you play?", a: "I completely customize the games based on your crowd. We do everything from high-voltage Tug-of-War (Bride Squad vs. Groom Squad) and Saree Draping Challenges for the boys, to intimate Couple Trivia and Bollywood Dance-Offs." },
+  { q: "Do you host combined Haldi ceremonies (Bride & Groom together)?", a: "Yes! Combined Haldis are my favorite. It allows for incredible 'Bride Squad vs. Groom Squad' game dynamics, creating massive energy and unforgettable photos." },
+  { q: "Do you travel for Destination Weddings?", a: "Absolutely. Whether your Haldi is in a heritage palace in Jaipur or a beachfront resort in Goa, I travel globally to bring unmatched energy to your destination wedding." },
+  { q: "What kind of interactive Haldi games do you play?", a: "I completely customize the games based on your crowd. We do everything from high-voltage Tug-of-War and Saree Draping Challenges for the boys, to intimate Couple Trivia and Bollywood Dance-Offs." },
   { q: "Do you bring the props for the games?", a: "Yes! I bring a dedicated 'Fun Kit' loaded with buzzers, blindfolds, placards, and game accessories. You just show up and play." },
-  { q: "Will the games be too messy or wild for elders?", a: "Not at all. I categorize the interactions. We have 'Messy & Wild' games for the friends and cousins, and 'Classy & Entertaining' games for the elders. Dadis and Nanis love judging the contests while the youth gets dirty!" },
+  { q: "Will the games be too messy or wild for elders?", a: "Not at all. I categorize the interactions. We have 'Messy & Wild' games for the friends, and 'Classy & Entertaining' games for the elders. Dadis and Nanis love judging the contests while the youth gets dirty!" },
   { q: "Do you handle the Dholwala and DJ coordination?", a: "Yes. The music makes the Haldi. I coordinate directly with your DJ and Dhol team to sync the beats with my commentary, the games, and the couple's grand entry." },
+  { q: "Do you coordinate with the photographers?", a: "Always. I ensure the photographers are in position before executing high-impact moments like the Phoolon Ki Holi or the winning game celebrations so you get the perfect candid shots." },
   { q: "Can you host a Phoolon Ki Holi?", a: "100%. It is the most photogenic part of the ceremony. I choreograph the entire flower shower so your wedding photographers get those perfect, viral-worthy shots." },
-  { q: "What if my family members are shy to play?", a: "That is exactly why you hire a professional. I don't force anyone; I use seamless 'Ice-Breakers' that naturally pull people in. Within the first 15 minutes, even the shyest relatives are shouting answers and cheering." },
+  { q: "What if my family members are shy to play?", a: "That is exactly why you hire a professional. I don't force anyone; I use seamless 'Ice-Breakers' that naturally pull people in. Within the first 15 minutes, even the shyest relatives are cheering." },
+  { q: "What happens if our event timeline is running late?", a: "Indian weddings are rarely on time! I am fully adaptable. If we are running behind, I seamlessly condense the games to keep the energy high without disrupting your checkout or next event." },
   { q: "Do you wear yellow to match the Haldi theme?", a: "Always. I wear vibrant, premium traditional wear (usually yellow, mustard, or floral) to blend perfectly into your Haldi aesthetics like a true family member." },
   { q: "What languages do you host in?", a: "I seamlessly switch between English, Hindi, and regional touches like Marwari or Punjabi. I make sure the NRI friends and the local relatives all feel equally involved." },
+  { q: "What is the ideal time to start the Haldi games?", a: "It depends on your schedule, but mid-morning (11 AM) or late afternoon (4 PM) works best for lighting and energy. We usually play games before the actual paste is applied!" },
   { q: "How long is your Haldi hosting package?", a: "Typically 3 to 4 hours. I am there from the first welcome dhol beat to the final 'throw the groom in the pool' moment." },
-  { q: "How do we secure our wedding date?", a: "Hit the 'Book The Vibe' button. Haldi dates, especially morning slots during peak wedding season, book out months in advance!" }
+  { q: "How do we secure our wedding date?", a: "Hit the 'Secure Your Date' button. Haldi dates, especially morning slots during peak wedding season, book out 6-8 months in advance!" }
 ];
 
 export default function HaldiAnchor() {
+  
+  // --- INJECT JSON-LD SCHEMA FOR SEO ---
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-pink-500 selection:text-white">
       
+      {/* INJECT SCHEMA MARKUP INTO THE DOM */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       {/* --- 1. HERO: THE MONEY SECTION (SEO Optimized H1) --- */}
       <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
         {/* Background - High Energy Haldi Image */}
@@ -92,7 +114,7 @@ export default function HaldiAnchor() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <Link href="/contact">
+              <Link href="/contact" aria-label="Book Haldi Games Anchor">
                 <button className="px-10 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-black font-black uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_30px_rgba(234,179,8,0.5)]">
                   Secure Your Date
                 </button>
@@ -124,7 +146,6 @@ export default function HaldiAnchor() {
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
-           {/* High Energy Category */}
            <GameCategory 
               title="High Voltage" 
               color="yellow"
@@ -136,7 +157,6 @@ export default function HaldiAnchor() {
                   "Musical Chairs (Extreme Haldi Edition)"
               ]}
            />
-           {/* Couple Chemistry Category */}
            <GameCategory 
               title="Couple Chemistry" 
               color="pink"
@@ -148,7 +168,6 @@ export default function HaldiAnchor() {
                   "Blindfold Partner Search"
               ]}
            />
-           {/* Crowd Chaos Category */}
            <GameCategory 
               title="Crowd Chaos" 
               color="purple"
@@ -168,7 +187,7 @@ export default function HaldiAnchor() {
          <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                <div className="relative h-[600px] group rounded-3xl overflow-hidden border border-yellow-500/30 shadow-2xl">
-                  <img src="/gallery-3.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="High Energy Haldi Event Anchor Hosting Games" />
+                  <img src="/gallery-3.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="High Energy Haldi Event Anchor Hosting Games" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-10">
                       <h3 className="text-5xl font-display font-black text-yellow-400 mb-4 drop-shadow-lg">The Experience</h3>
@@ -204,7 +223,7 @@ export default function HaldiAnchor() {
         <SectionHeading subtitle="Good to Know" title="Frequently Asked Questions" align="center" />
         <div className="space-y-4 mt-12">
            {FAQS.map((faq, idx) => (
-              <FAQItem key={idx} question={faq.q} answer={faq.a} />
+              <FAQItem key={idx} question={faq.q} answer={faq.a} id={`faq-${idx}`} />
            ))}
         </div>
       </section>
@@ -217,7 +236,7 @@ export default function HaldiAnchor() {
             <p className="text-white max-w-2xl mx-auto mb-12 text-2xl font-bold drop-shadow-md">
                Warning: Booking me may result in excessive laughter and sore feet from dancing.
             </p>
-            <Link href="/contact">
+            <Link href="/contact" aria-label="Contact Yash Soni">
                <button className="px-12 py-5 bg-black text-white font-black uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl border-2 border-black hover:border-white">
                   Check Availability Now
                </button>
@@ -264,28 +283,49 @@ const GameCategory = ({ title, color, icon, games }) => {
     );
 };
 
-const FAQItem = ({ question, answer }) => {
+// --- UPDATED MAIN-PAGE STYLE FAQ ITEM (Haldi Colors) ---
+const FAQItem = ({ question, answer, id }) => {
   const [isOpen, setIsOpen] = useState(false);
+  
   return (
-    <div className="border border-neutral-800 bg-[#0a0a0a] rounded-2xl overflow-hidden transition-all duration-300 hover:border-yellow-500/50">
+    <div 
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+      className={`group rounded-2xl border transition-all duration-300 ${
+        isOpen 
+          ? "border-yellow-500 bg-yellow-500/5 shadow-[0_0_15px_rgba(234,179,8,0.15)]" 
+          : "border-white/10 bg-transparent hover:border-white/20" 
+      }`}
+    >
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full p-6 text-left hover:bg-neutral-900 transition-colors"
+        aria-expanded={isOpen}
+        aria-controls={id}
+        className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
       >
-        <span className="font-bold text-white text-xl pr-8 leading-snug">{question}</span>
-        <div className={`p-2 rounded-full shrink-0 transition-colors ${isOpen ? 'bg-yellow-500/20' : 'bg-neutral-800'}`}>
-          <ChevronDown className={`w-5 h-5 text-yellow-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        <span className={`font-semibold text-lg pr-4 transition-colors ${
+          isOpen ? "text-yellow-400" : "text-zinc-200 group-hover:text-white"
+        }`}>
+          {question}
+        </span>
+        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
+          isOpen ? "bg-yellow-500 text-black" : "bg-transparent border border-white/30 text-white group-hover:border-yellow-500 group-hover:text-yellow-500"
+        }`}>
+          {isOpen ? <Minus size={16} aria-hidden="true" /> : <Plus size={16} aria-hidden="true" />}
         </div>
       </button>
       <AnimatePresence>
         {isOpen && (
           <motion.div 
+            id={id}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <p className="p-6 pt-0 text-gray-300 leading-relaxed text-base font-medium border-t border-neutral-800/50 mt-2 pt-4">{answer}</p>
+            <div className="px-6 pb-6 pt-0 text-gray-400 text-sm leading-relaxed border-t border-yellow-500/20 mt-2">
+              <div className="pt-4">{answer}</div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
