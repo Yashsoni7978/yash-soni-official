@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
-const GOLD_COLOR = "#D4AF37";
+const GOLD_COLOR = "#D4AF37"; // Warm, royal gold matching your screenshots
 
 const style = `
   @keyframes shimmer {
@@ -167,7 +167,7 @@ const GALLERY_IMAGES = [
 
 // --- 4. SUB-COMPONENTS ---
 
-// Ensuring gold-texture.png is used universally for textured elements
+// Explicitly using the .png file and conditionally applying the animated shimmer
 const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
@@ -252,7 +252,7 @@ export default function HomePage() {
     "jobTitle": "Premium Event Anchor & Emcee",
     "description": "Award-winning premium event anchor, wedding emcee, and corporate host based in Jaipur, Rajasthan.",
     "url": "https://yashsoni.in",
-    "image": "https://yashsoni.in/hero-slide-1.jpg",
+    "image": "https://yashsoni.in/hero-slide-1.webp",
     "telephone": "+91-7737877978",
     "priceRange": "$$$",
     "address": {
@@ -275,7 +275,7 @@ export default function HomePage() {
       <section className="relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
           <motion.img
-            src="/hero-slide-1.jpg" // FIXED: Looking for .jpg format. Change to .png if necessary.
+            src="/hero-slide-1.webp" // FIXED: Reverted to .webp explicitly based on your screenshot!
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }} 
             transition={{ duration: 1.5 }}
@@ -300,6 +300,7 @@ export default function HomePage() {
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.95]">
               ANCHOR <br />
+              {/* Animated molten gold effect applied exclusively here */}
               <GoldTextureText animate={true}>YASH</GoldTextureText>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-2xl font-light leading-relaxed">
@@ -343,7 +344,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-4">
              <ScrollReveal delay={0.2}>
                <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50 group">
-                 <img src="/intro-portrait-top.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Soni professional portrait in a luxury suit" />
+                 <img src="/intro-portrait-top.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Soni professional portrait in a luxury suit" />
                </div>
              </ScrollReveal>
              <ScrollReveal delay={0.4} className="mt-12">
