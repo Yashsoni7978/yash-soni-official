@@ -21,7 +21,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   {
     name: "Anchoring",
-    href: "/services",
+    href: "#", // <-- Changed to "#" so it acts purely as a dropdown trigger
     dropdown: [
       { name: "Wedding Anchor", href: "/wedding-anchor-jaipur" },
       { name: "Sangeet Anchor", href: "/sangeet-anchor-jaipur" },
@@ -72,17 +72,17 @@ export default function Navbar() {
 
   return (
     <>
-      {/* --- DESKTOP & MOBILE EDGE-TO-EDGE NAVBAR (Slimmer Height) --- */}
+      {/* --- DESKTOP & MOBILE EDGE-TO-EDGE NAVBAR --- */}
       <header 
         className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 border-b ${
           scrolled || isOpen
-            ? "bg-[#0a0a0a]/95 backdrop-blur-xl border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.8)] py-3" // Much thinner when scrolled
-            : "bg-[#050505]/70 backdrop-blur-lg border-white/5 py-4" // Thinner initial state
+            ? "bg-[#0a0a0a]/95 backdrop-blur-xl border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.8)] py-3"
+            : "bg-[#050505]/70 backdrop-blur-lg border-white/5 py-4"
         }`}
       >
         <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
             
-          {/* BRAND LOGO (Full Image Gold, No Mic) */}
+          {/* BRAND LOGO */}
           <Link href="/" onClick={() => setIsOpen(false)} className="relative z-[101] flex items-center group shrink-0">
             <span className="text-xl font-display font-black tracking-[0.2em] uppercase group-hover:scale-105 transition-transform duration-500">
               <GoldTextureText>ANCHOR YASH</GoldTextureText>
@@ -98,22 +98,41 @@ export default function Navbar() {
                 onMouseEnter={() => setActiveDropdown(link.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link
-                  href={link.href}
-                  className={`text-[12px] font-bold uppercase tracking-widest flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
-                    activeDropdown === link.name 
-                      ? "bg-[#161616] text-white border border-white/10 shadow-inner" 
-                      : "text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
-                  }`}
-                >
-                  {link.name}
-                  {link.dropdown && (
-                    <ChevronDown 
-                      size={14} 
-                      className={`transition-transform duration-300 ${activeDropdown === link.name ? "rotate-180 text-[#D4AF37]" : ""}`} 
-                    />
-                  )}
-                </Link>
+                {/* Condition: If href is "#", render a button instead of a Link to prevent routing errors */}
+                {link.href === "#" ? (
+                  <button
+                    className={`text-[12px] font-bold uppercase tracking-widest flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
+                      activeDropdown === link.name 
+                        ? "bg-[#161616] text-white border border-white/10 shadow-inner" 
+                        : "text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
+                    }`}
+                  >
+                    {link.name}
+                    {link.dropdown && (
+                      <ChevronDown 
+                        size={14} 
+                        className={`transition-transform duration-300 ${activeDropdown === link.name ? "rotate-180 text-[#D4AF37]" : ""}`} 
+                      />
+                    )}
+                  </button>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={`text-[12px] font-bold uppercase tracking-widest flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
+                      activeDropdown === link.name 
+                        ? "bg-[#161616] text-white border border-white/10 shadow-inner" 
+                        : "text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
+                    }`}
+                  >
+                    {link.name}
+                    {link.dropdown && (
+                      <ChevronDown 
+                        size={14} 
+                        className={`transition-transform duration-300 ${activeDropdown === link.name ? "rotate-180 text-[#D4AF37]" : ""}`} 
+                      />
+                    )}
+                  </Link>
+                )}
 
                 {/* Desktop Hover Dropdown (Rounded Boxes) */}
                 <AnimatePresence>
@@ -147,15 +166,12 @@ export default function Navbar() {
 
           {/* RIGHT SIDE: CTA & MOBILE TOGGLE */}
           <div className="flex items-center gap-4 shrink-0 relative z-[101]">
-            
-            {/* Desktop CTA Button (Solid Gold) */}
             <Link href="/contact" className="hidden xl:block">
               <button className="px-6 py-2.5 bg-[#D4AF37] text-black text-xs font-black uppercase tracking-widest rounded-full hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
                 Inquire Now
               </button>
             </Link>
 
-            {/* Mobile Menu Toggle */}
             <button 
               onClick={() => setIsOpen(!isOpen)} 
               className="xl:hidden text-white p-2 focus:outline-none hover:text-[#D4AF37] transition-colors bg-white/5 rounded-full border border-white/10"
@@ -184,6 +200,7 @@ export default function Navbar() {
                {navLinks.map((link) => (
                  <div key={link.name} className="border-b border-white/10 pb-5 last:border-0">
                    
+                   {/* Mobile already handles dropdowns purely as buttons, so it won't route anywhere! */}
                    {link.dropdown ? (
                      <div className="flex flex-col">
                        <button 
@@ -233,7 +250,6 @@ export default function Navbar() {
                  </div>
                ))}
 
-               {/* Mobile CTA (Solid Gold) */}
                <div className="mt-12">
                  <Link href="/contact" onClick={() => setIsOpen(false)}>
                    <button className="w-full py-4 bg-[#D4AF37] text-black text-sm font-black uppercase tracking-widest rounded-2xl shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:bg-white transition-colors">
@@ -242,7 +258,6 @@ export default function Navbar() {
                  </Link>
                </div>
                
-               {/* Mobile Contact Footer */}
                <div className="mt-8 flex flex-col items-center justify-center gap-2 text-gray-500 text-[10px] uppercase tracking-[0.2em] font-bold">
                  <a href="tel:+917737877978" className="hover:text-white transition-colors">Direct: +91 77378 77978</a>
                  <a href="mailto:yashsoni7978@gmail.com" className="hover:text-white transition-colors">yashsoni7978@gmail.com</a>
