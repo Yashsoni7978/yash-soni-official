@@ -9,7 +9,7 @@ import {
 // --- 1. LUXURY TEXTURE ASSETS ---
 const GoldTextureText = ({ children, className }) => (
   <span 
-    className={`bg-clip-text text-transparent bg-cover bg-center ${className}`}
+    className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
       backgroundImage: "url('/gold-texture.png')", 
       backgroundColor: "#D4AF37", 
@@ -47,7 +47,7 @@ export default function Footer() {
             
             <div className="flex gap-4">
               <SocialIcon href="https://instagram.com/anchor_yash_official" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
-              <SocialIcon href="https://www.youtube.com/@Anchor_Yash" icon={<Youtube className="w-5 h-5" />} label="YouTube" />
+              <SocialIcon href="https://www.youtube.com/@anchor_yash" icon={<Youtube className="w-5 h-5" />} label="YouTube" />
               <SocialIcon href="https://facebook.com" icon={<Facebook className="w-5 h-5" />} label="Facebook" />
             </div>
           </div>
@@ -83,13 +83,13 @@ export default function Footer() {
           {/* COL 3: VERIFIED PROFILES */}
           <div>
             <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-8">Verified On</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               <ProfileLink href="https://www.wedmegood.com/profile/Anchor-Yash-Soni-2555694" text="WedMeGood" />
               <ProfileLink href="#" text="WeddingWire" />
               <ProfileLink href="#" text="StarClinch" />
               <ProfileLink href="#" text="ShaadiDukaan" />
               <ProfileLink href="#" text="Justdial" />
-              {/* Fixed the chunky background bug here */}
+              {/* FIXED: The highlighted profile link is now sleek and elegant */}
               <ProfileLink href="https://share.google/pMZGzEGOhXnJpLq5g" text="Google Reviews" highlight />
             </ul>
           </div>
@@ -155,21 +155,32 @@ const ContactButton = ({ href, icon, label, subLabel, color }) => (
   </a>
 );
 
-// Fixed the highlight logic so it looks elegant instead of blocky
+// --- FIXED PROFILE LINK ---
+// Removed the blocky background, adjusted flexbox, and added elegant text-based styling.
 const ProfileLink = ({ href, text, highlight }) => (
   <li>
     <a 
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className={`flex items-center justify-between text-sm py-2 px-4 rounded-xl border transition-all duration-300 group ${
+      className={`inline-flex items-center gap-2 text-sm transition-all duration-300 group ${
         highlight 
-          ? 'text-[#D4AF37] font-bold border-[#D4AF37]/30 bg-[#D4AF37]/5 hover:bg-[#D4AF37]/10' 
-          : 'text-gray-400 font-light border-transparent hover:border-[#D4AF37]/30 hover:bg-[#D4AF37]/5'
+          ? 'text-[#D4AF37] font-bold tracking-wide' 
+          : 'text-gray-400 font-light hover:text-[#D4AF37]'
       }`}
     >
-      <span className={highlight ? '' : 'group-hover:text-[#D4AF37] transition-colors'}>{text}</span>
-      <ExternalLink className={`w-3 h-3 transition-opacity ${highlight ? 'opacity-100 text-[#D4AF37]' : 'opacity-0 group-hover:opacity-100 text-[#D4AF37]'}`} />
+      <span className={`relative ${
+        highlight 
+          ? 'after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[1px] after:bg-[#D4AF37]/50' 
+          : ''
+      }`}>
+        {text}
+      </span>
+      <ExternalLink className={`w-3.5 h-3.5 transition-all ${
+        highlight 
+          ? 'opacity-100 text-[#D4AF37] group-hover:translate-x-1 group-hover:-translate-y-1' 
+          : 'opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 text-[#D4AF37]'
+      }`} />
     </a>
   </li>
 );
