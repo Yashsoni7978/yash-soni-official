@@ -23,7 +23,7 @@ export const metadata = {
   authors: [{ name: "Yash Soni" }],
   creator: "Yash Soni",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.jpg",
   },
   openGraph: {
     type: "website",
@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
                 "https://www.instagram.com/anchor_yash_official",
                 "https://www.instagram.com/best_anchor_jaipur",
                 "https://www.youtube.com/@anchor_yash",
-                "https://www.linkedin.com/in/yash-soni-anchor"
+              
               ]
             }
           `}
