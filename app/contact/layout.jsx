@@ -1,20 +1,12 @@
 export const metadata = {
-  title: "Contact Anchor Yash Soni | Book Best Event Emcee in Jaipur",
-  description: "Ready to elevate your event? Check availability and book Anchor Yash Soni for weddings, sangeets, and corporate events in Jaipur and worldwide.",
-  keywords: ["Hire Anchor Yash Soni", "Book Wedding Anchor Jaipur", "Contact Event Emcee Rajasthan", "Anchor Yash Phone Number", "Jaipur Anchor Booking"],
+  title: "Contact Yash Soni | Luxury Event Anchor & Planner Jaipur",
+  description: "Get in touch with Yash Soni to book premium event anchoring, luxury wedding planning, and corporate event management in Jaipur and worldwide.",
+  keywords: ["Contact Yash Soni", "Book Event Anchor Jaipur", "Hire Wedding Planner Rajasthan", "Event Management Inquiry Jaipur"],
   openGraph: {
-    title: "Contact Anchor Yash Soni | Book Premium Event Host",
-    description: "You've planned the decor and the food. Now, secure the voice that ties it all together.",
+    title: "Contact Yash Soni | The Premium Event Agency",
+    description: "Ready to elevate your event? Let's discuss your vision, logistics, and dates.",
     url: "https://yashsoni.in/contact",
     siteName: "Anchor Yash Soni",
-    images: [
-      {
-        url: "/intro-portrait-top.webp",
-        width: 1200,
-        height: 630,
-        alt: "Contact Anchor Yash Soni for premium live events",
-      },
-    ],
     locale: "en_IN",
     type: "website",
   },
