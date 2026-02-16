@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Calculator, MapPin, Utensils, Truck, Gift, Users, 
-  Crown, Sparkles, Minus, Plus, ShieldCheck, Clock
+  Calculator, MapPin, Utensils, Truck, 
+  Crown, Sparkles, Minus, Plus
 } from "lucide-react";
 
 // --- CUSTOM LUXURY BRANDING ---
@@ -119,14 +119,14 @@ export default function WeddingPlanning() {
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       
       {/* 1. THE LUXURY HERO */}
-      <section className="relative min-h-screen flex flex-col justify-center p-6 md:p-20 overflow-hidden border-b border-white/5">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070')] bg-cover bg-fixed bg-center opacity-30 grayscale-[30%]"></div>
+      <section className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070')] bg-cover bg-fixed bg-center opacity-40 grayscale-[30%]"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto pt-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
-            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-6 py-2 rounded-full bg-[#D4AF37]/10 backdrop-blur-xl mb-8">
+            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2 rounded-full bg-black/60 backdrop-blur-xl mb-8 shadow-2xl">
               <Crown className="w-4 h-4 text-[#D4AF37]" />
               <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">
                 Strategic Planning & Management
@@ -143,7 +143,7 @@ export default function WeddingPlanning() {
                </p>
                <div className="flex gap-6 shrink-0">
                  <Link href="/contact">
-                   <button className="px-12 py-6 bg-[#D4AF37] text-black font-black uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)] rounded-full">
+                   <button className="px-12 py-6 bg-[#D4AF37] text-black font-black uppercase tracking-widest hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.4)] rounded-full">
                      Consult The Firm
                    </button>
                  </Link>
@@ -168,14 +168,14 @@ export default function WeddingPlanning() {
       <section className="py-32 container mx-auto px-6">
          <SectionHeading subtitle="Capabilities" title="The Architecture of Events." />
          
-         <div className="grid lg:grid-cols-2 gap-16 mt-20">
+         <div className="grid lg:grid-cols-2 gap-16 mt-20 relative items-start">
             {/* Sticky Image Context */}
             <div className="hidden lg:block relative h-[600px] sticky top-32 rounded-3xl overflow-hidden border border-[#D4AF37]/30 shadow-2xl">
                 <img src="/gallery-4.webp" className="w-full h-full object-cover grayscale-[20%]" alt="Event Planning Strategy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div className="absolute bottom-10 left-10">
-                    <p className="text-[#D4AF37] font-bold tracking-widest uppercase text-sm mb-2">The Standard</p>
-                    <p className="text-white text-3xl font-display font-bold">Zero Compromise.</p>
+                    <p className="text-[#D4AF37] font-bold tracking-widest uppercase text-sm mb-2 drop-shadow-md">The Standard</p>
+                    <p className="text-white text-4xl font-display font-bold drop-shadow-lg">Zero Compromise.</p>
                 </div>
             </div>
 
@@ -183,7 +183,7 @@ export default function WeddingPlanning() {
             <div className="space-y-8">
                 {services.map((service, i) => (
                     <div key={i} className="p-10 bg-[#0a0a0a] border border-white/5 hover:border-[#D4AF37]/50 transition-all duration-500 rounded-3xl group">
-                        <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-[#D4AF37] mb-8 group-hover:bg-[#D4AF37] group-hover:text-black transition-colors">
+                        <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-8 group-hover:bg-[#D4AF37] group-hover:text-black transition-colors border border-[#D4AF37]/20 group-hover:border-[#D4AF37]">
                             {service.icon}
                         </div>
                         <p className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold mb-3">{service.subtitle}</p>
@@ -205,7 +205,7 @@ export default function WeddingPlanning() {
 
             <div className="grid md:grid-cols-4 gap-6">
                {processSteps.map((step, i) => (
-                  <div key={i} className="p-10 bg-[#050505] border border-white/10 hover:border-[#D4AF37]/40 transition-all group rounded-3xl relative overflow-hidden">
+                  <div key={i} className="p-10 bg-[#050505] border border-white/10 hover:border-[#D4AF37]/40 transition-all group rounded-3xl relative overflow-hidden shadow-xl">
                      <div className="absolute top-0 right-0 p-6 text-7xl font-black text-white/5 group-hover:text-[#D4AF37]/10 transition-colors">
                         {step.num}
                      </div>
@@ -224,14 +224,14 @@ export default function WeddingPlanning() {
         <div className="container mx-auto px-6">
             <SectionHeading subtitle="The Playground" title="Iconic Venues." align="center" />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px] mt-16">
-                <div className="col-span-2 relative rounded-2xl overflow-hidden group border border-white/10">
+                <div className="col-span-2 relative rounded-3xl overflow-hidden group border border-white/10">
                     <img src="https://images.unsplash.com/photo-1587271407850-8d4389106628?q=80&w=2000" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale-[20%]" alt="Palace Wedding" />
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all"></div>
                 </div>
-                <div className="relative rounded-2xl overflow-hidden group border border-[#D4AF37]/40 shadow-lg">
+                <div className="relative rounded-3xl overflow-hidden group border border-[#D4AF37]/40 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
                     <img src="https://images.unsplash.com/photo-1604904839548-93a3074b4731?q=80&w=1000" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Luxury Setup" />
                 </div>
-                <div className="relative rounded-2xl overflow-hidden group border border-white/10">
+                <div className="relative rounded-3xl overflow-hidden group border border-white/10">
                     <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Wedding Vibe" />
                 </div>
             </div>
@@ -250,7 +250,7 @@ export default function WeddingPlanning() {
 
       {/* 7. FINAL CALL TO ART */}
       <section className="py-40 text-center relative overflow-hidden border-t border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/10 via-transparent to-transparent opacity-60 mix-blend-overlay"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-5xl md:text-8xl font-display font-black mb-10 text-white uppercase tracking-tighter">
             READY TO <br/> <GoldTextureText className="italic pr-4">SCALE.</GoldTextureText>
@@ -260,7 +260,7 @@ export default function WeddingPlanning() {
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-6">
             <Link href="/contact">
-              <button className="px-14 py-6 bg-[#D4AF37] text-black font-black uppercase tracking-widest hover:bg-white transition-transform rounded-full shadow-[0_0_40px_rgba(212,175,55,0.5)]">
+              <button className="px-14 py-6 bg-[#D4AF37] text-black font-black uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-[0_0_40px_rgba(212,175,55,0.5)]">
                 Get A Quote
               </button>
             </Link>
