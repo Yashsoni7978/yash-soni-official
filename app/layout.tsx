@@ -23,7 +23,7 @@ export const metadata = {
   authors: [{ name: "Yash Soni" }],
   creator: "Yash Soni",
   icons: {
-    icon: "/favicon.jpg",
+    icon: "/favicon.ico",
   },
   openGraph: {
     type: "website",
