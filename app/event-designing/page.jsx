@@ -2,362 +2,303 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Phone, MessageCircle, MapPin, CheckCircle, 
-  Palette, PenTool, Image as ImageIcon, Lightbulb, 
-  Layers, ChevronRight, Plus, Minus, Wand2 
+  Palette, Image as ImageIcon, Lightbulb, Layers, 
+  ChevronRight, Plus, Minus, Wand2, Sparkles, Star, 
+  Crown, Gem, Diamond, Camera, MessageCircle, MapPin, Phone
 } from "lucide-react";
 
-// --- INLINE ANIMATION COMPONENTS ---
-const ScrollReveal = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
+// --- ROYAL BRANDING ---
+const GOLD_COLOR = "#D4AF37";
+const PINK_ACCENT = "#F4C2C2"; // Royal Rose Gold / Soft Pink
+
+const GoldTextureText = ({ children, className }) => (
+  <span 
+    className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
+    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: GOLD_COLOR }}
   >
     {children}
-  </motion.div>
+  </span>
 );
 
-const StaggerContainer = ({ children, className }) => (
-  <motion.div
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      show: { transition: { staggerChildren: 0.2 } }
-    }}
-    className={className}
-  >
+const DiamondText = ({ children, className }) => (
+  <span className={`bg-clip-text text-transparent bg-gradient-to-r from-white via-pink-100 to-gray-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] ${className || ""}`}>
     {children}
-  </motion.div>
+  </span>
 );
 
-const StaggerItem = ({ children }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      show: { opacity: 1, y: 0 }
-    }}
-  >
-    {children}
-  </motion.div>
+const SectionHeading = ({ subtitle, title, align = "left" }) => (
+  <div className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className={`flex items-center gap-3 mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}>
+        <Crown className="w-5 h-5 text-[#D4AF37]" />
+        <span className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] font-bold">{subtitle}</span>
+      </div>
+      <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight uppercase tracking-tight">
+        {title}
+      </h2>
+    </motion.div>
+  </div>
 );
 
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-neutral-800">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full py-4 text-left group"
-      >
-        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-amber-500' : 'text-gray-300 group-hover:text-amber-500'}`}>
-          {question}
-        </span>
-        {isOpen ? <Minus className="w-5 h-5 text-amber-500" /> : <Plus className="w-5 h-5 text-gray-500" />}
-      </button>
-      <motion.div 
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <p className="pb-4 text-gray-400 text-sm leading-relaxed">{answer}</p>
-      </motion.div>
-    </div>
-  );
-};
-
-// --- DATA ---
+// --- EXTENDED DATA ---
 const designServices = [
-  { icon: Palette, title: "Theme Conceptualization", description: "We don't just copy Pinterest. We create unique themes (Royal Rajasthan, Bohemian, Tropical, Cyber-Punk) tailored to your story and venue." },
-  { icon: ImageIcon, title: "3D Visualization", description: "See it before we build it. We work with 3D artists to create realistic renders of the stage, mandap, and entry passages so there are no surprises." },
-  { icon: Lightbulb, title: "Lighting Design", description: "Lighting is 50% of the decor. I ensure the stage lighting is calibrated for photography, video, and live ambiance." },
-  { icon: Layers, title: "Fabrication Oversight", description: "I supervise the fabricators to ensure the actual build matches the 3D render. No 'expectation vs reality' memes here." },
+  { icon: Palette, title: "Bespoke Moodboarding", description: "Curating a sensory journey with royal textures, diamond finishes, and palatial color palettes. No recycled ideas." },
+  { icon: ImageIcon, title: "3D Spatial Visualization", description: "Walk through your wedding mandap in ultra-realistic 3D before a single fabric is draped. Pure visual precision." },
+  { icon: Lightbulb, title: "Cinematic Lighting", description: "Architectural lighting designed specifically to make your jewelry and haute couture attire shine flawlessly on camera." },
+  { icon: Gem, title: "Artistic Curation", description: "Sourcing hand-picked crystal chandeliers, antique silver, and exotic global florals for a museum-grade finish." },
 ];
 
-const designProcess = [
-  { title: "The Discovery", description: "We analyze your venue and your personal style. We create a 'Mood Board' with color palettes, textures, and reference images." },
-  { title: "The Blueprint", description: "We create 2D layouts for seating and 3D renders for the main structures (Stage/Bar). You approve every corner." },
-  { title: "Vendor Matching", description: "I match the design with the right fabricator. Some are good at floral, others at carpentry. I hire the specialist for the job." },
-  { title: "The Setup", description: "My team is on-site 24 hours prior, checking finishes, floral freshness, and light angles." },
+const royalThemes = [
+  { title: "The Royal Rajputana", desc: "Velvet drapes, antique gold accents, and heritage structures fit for Rambagh Palace.", img: "/gallery-5.webp" },
+  { title: "Diamond & Crystal", desc: "A modern wonderland of glass, mirrors, and thousands of hanging crystals.", img: "/service-fashion.webp" },
+  { title: "Enchanted Rose Garden", desc: "Lush, imported florals in soft pinks and whites for a surreal Sangeet or Mehendi.", img: "/gallery-1.webp" },
 ];
 
-const designFAQs = [
-  { question: "Do you own the decor materials?", answer: "No, and that's good for you. Decorators who own materials force you to use their old stock. As Designers, we source fresh, trending materials specific to your theme." },
-  { question: "Can I see what the stage will look like beforehand?", answer: "Yes! For major events, we provide 3D Walkthroughs or Renders so you know exactly how the venue will look." },
-  { question: "Do you handle floral arrangements?", answer: "We curate the floral design and source the flowers from wholesale markets (often flown in from Bangalore/Thailand) to ensure freshness and lower costs." },
-  { question: "Why hire an Anchor for Design?", answer: "Because I know the 'Camera Angle'. I know what background looks good in your wedding film and how the stage lights affect your makeup." }
-];
-
-const whyTrustUs = [
-  { label: "Camera-Ready Aesthetic", detail: "Designs optimized for photography & video." },
-  { label: "3D Visualization", detail: "See the event before spending a rupee." },
-  { label: "Fresh Concepts", detail: "We don't recycle old props." },
-  { label: "Lighting Mastery", detail: "Ambiance control for the perfect vibe." },
+const FAQS = [
+  { q: "Why should I hire a designer instead of a standard decorator?", a: "Standard decorators provide what they already have sitting in a warehouse. We design what your dream demands. We act as your Creative Directors, crafting one-of-a-kind themes that have never been seen before in Jaipur." },
+  { q: "How does 3D visualization help my wedding budget?", a: "It eliminates expensive guesswork. By seeing the realistic render beforehand, you avoid last-minute changes and ensure your vision and reality are 100% aligned before fabrication begins." },
+  { q: "Can you design for heritage palaces like Rambagh or City Palace?", a: "Palace designing is our absolute specialty. We respect historical architecture while adding modern royal elegance that complements the venue's centuries-old heritage." },
+  { q: "Do you work with global floral designers?", a: "Yes. For our 'Diamond' tier packages, we coordinate with international florists to source the rarest, most exotic blooms for your centerpieces, varmala, and entry passages." },
+  { q: "How is the fabrication managed?", a: "Once you approve the 3D design, we hire specialized artisans, carpenters, and lighting engineers to build it perfectly. We oversee every inch of the on-site production." }
 ];
 
 export default function EventDesigning() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Event Designing Services Jaipur",
-    "provider": {
-      "@type": "Person",
-      "name": "Anchor Yash Soni",
-      "url": "https://yashsoni.in",
-      "telephone": "+917737877978",
-      "areaServed": "Jaipur, Rajasthan",
-    },
-    "serviceType": "Event Decor & Design",
-    "description": "Creative event designing, 3D visualization, and theme conceptualization for weddings and corporate events in Jaipur.",
-  };
+  const [activeFaq, setActiveFaq] = useState(null);
 
   return (
-    <div className="bg-neutral-950 text-white min-h-screen">
+    <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       
-      {/* Schema Injection */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      {/* 1. HERO: THE PALACE BLUEPRINT */}
+      <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#050505] z-10" />
+          <img src="/gallery-6.webp" className="w-full h-full object-cover scale-105 animate-slow-zoom grayscale-[20%]" alt="Royal Wedding Design" />
+        </div>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
-        <div className="container mx-auto px-4 relative">
-          <ScrollReveal className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-purple-400 font-medium">
-              Concept • Decor • Ambiance
-            </p>
-            <h1 className="mt-4 text-4xl md:text-6xl font-display font-bold leading-tight">
-              Your Vision. <br />
-              <span className="text-purple-500">Visualized.</span>
+        <div className="relative z-20 container mx-auto px-4 text-center">
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/30 px-6 py-2 rounded-full bg-black/40 backdrop-blur-xl mb-10 shadow-2xl">
+              <Diamond className="w-4 h-4 text-pink-300" />
+              <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">Atmosphere • Elegance • Engineering</span>
+            </div>
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black leading-[0.85] mb-8 uppercase tracking-tighter">
+              Bespoke <br /> <DiamondText>Visual Luxury.</DiamondText>
             </h1>
-            <p className="mt-5 text-lg text-gray-400 max-w-2xl leading-relaxed">
-              We don't just decorate; we design experiences. From 3D renders to the final floral touch, 
-              we bridge the gap between your imagination and reality.
+            <p className="text-gray-200 text-xl md:text-2xl max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+              We don't just decorate; we <span className="text-pink-300 font-bold italic">engineer dreams</span>. From 3D architectural renders to the final diamond-finish touch, we build the best weddings in the world.
             </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition-all hover:scale-105">
-                  Start Designing
+                <button className="px-12 py-5 bg-gradient-to-r from-[#D4AF37] to-[#b48f25] text-black font-black uppercase tracking-widest rounded-full hover:scale-105 transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)]">
+                  Begin Designing
                 </button>
               </Link>
-              <a href="https://wa.me/917737877978?text=Hi%20Yash,%20I%20need%20help%20designing%20my%20event%20decor." target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-full hover:border-purple-500 hover:text-purple-500 transition-all hover:scale-105 flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp
-                </button>
-              </a>
             </div>
-          </ScrollReveal>
+          </motion.div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-14">
-          
-          {/* Left: Text Content */}
-          <div className="lg:col-span-2 space-y-16">
-            
-            {/* The Creative Director Angle */}
-            <ScrollReveal>
-              <h2 className="text-3xl font-display font-bold mb-6">
-                The <span className="text-purple-500">Creative Director</span> Approach
-              </h2>
-              <div className="space-y-4 text-gray-400 leading-relaxed">
-                <p>
-                  Most decorators try to sell you what they have in their warehouse (the same old props). 
-                  <strong>I design what YOU want.</strong>
-                </p>
-                <p>
-                  My role is that of a Creative Director. I work with you to build a Moodboard and a 3D Concept. 
-                  Once we lock the look, I hire the specific specialists (Carpenters, Florists, Lighting Engineers) 
-                  to build it exactly as planned.
-                </p>
-                <p>
-                  <strong>The Anchor's Edge:</strong> I know how a stage looks through a camera lens. 
-                  I ensure your decor isn't just pretty to the eye, but optimized for your wedding film and photos.
-                </p>
+      {/* 2. MILESTONES / STATS (New Section) */}
+      <section className="py-20 bg-[#0a0a0a] border-y border-[#D4AF37]/20 relative z-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { val: "150+", label: "Luxury Events Designed" },
+              { val: "50+", label: "Palaces Transformed" },
+              { val: "100%", label: "Bespoke 3D Concepts" },
+              { val: "∞", label: "Unforgettable Memories" }
+            ].map((stat, i) => (
+              <div key={i} className="space-y-2 group">
+                <h3 className="text-5xl md:text-6xl font-display font-black text-white group-hover:text-[#D4AF37] transition-colors">{stat.val}</h3>
+                <p className="text-pink-200 text-xs uppercase tracking-widest font-bold">{stat.label}</p>
               </div>
-            </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Why Trust Us List */}
-            <ScrollReveal>
-               <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl">
-                  <h3 className="text-xl font-bold text-white mb-6 border-b border-neutral-800 pb-4">The Aesthetic Promise</h3>
-                  <ul className="space-y-4">
-                    {whyTrustUs.map((item) => (
-                      <li key={item.label} className="flex items-start gap-3">
-                        <CheckCircle className="w-6 h-6 text-purple-500 flex-shrink-0" />
-                        <span className="text-gray-400">
-                          <strong className="text-white">{item.label}</strong> – {item.detail}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-               </div>
-            </ScrollReveal>
-
-            {/* Core Services Grid */}
-            <ScrollReveal>
-              <h2 className="text-3xl font-display font-bold mb-8">
-                Design <span className="text-purple-500">Services</span>
-              </h2>
-              <div className="grid sm:grid-cols-2 gap-6">
-                {designServices.map((service) => (
-                  <div
-                    key={service.title}
-                    className="bg-black border border-neutral-800 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-neutral-900 rounded-lg flex items-center justify-center mb-4 text-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                      <service.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-display font-bold text-lg mb-2 text-white">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-gray-400 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
-
-            {/* The Process */}
-            <ScrollReveal>
-              <h2 className="text-3xl font-display font-bold mb-8">
-                From <span className="text-purple-500">Moodboard</span> to Reality
-              </h2>
-              <div className="space-y-4">
-                {designProcess.map((step, index) => (
-                  <div key={step.title} className="flex gap-6 group">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-purple-500 font-bold bg-neutral-900 group-hover:border-purple-500 transition-colors">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1 flex items-center gap-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
-
-            {/* FAQ Section */}
-            <div className="max-w-3xl">
-                <h2 className="text-3xl font-display font-bold mb-8">Design FAQs</h2>
-                <div className="space-y-2">
-                {designFAQs.map((faq, index) => (
-                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                ))}
-                </div>
+      {/* 3. THE PHILOSOPHY */}
+      <section className="py-32 bg-[#050505] relative">
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <SectionHeading subtitle="The Standard" title="The Creative Director Approach." />
+            <div className="space-y-8 text-gray-300 text-lg font-light leading-relaxed">
+              <p>Most decorators sell you what they own in a warehouse. <strong className="text-white font-bold italic underline decoration-[#D4AF37]">We design what your story demands.</strong></p>
+              <p>Our studio acts as the <GoldTextureText className="font-bold">Creative Directing</GoldTextureText> arm for your wedding. We build a Moodboard and a 3D Concept unique to your persona. Once the aesthetic is locked, we oversee specialized fabricators to ensure the physical build is a flawless replica of the vision.</p>
+              <p className="border-l-2 border-pink-300 pl-6 text-pink-100/80">
+                Every design we create is optimized for premium event cinematography. We control the lighting, the floral textures, and the spatial flow so your photos look like a royal editorial.
+              </p>
             </div>
+          </div>
+          <div className="relative group">
+            <div className="absolute inset-0 bg-[#D4AF37]/10 rounded-3xl blur-3xl group-hover:bg-pink-400/10 transition-colors" />
+            <img src="/service-wedding.webp" className="relative z-10 rounded-3xl border border-[#D4AF37]/30 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]" alt="Luxury Stage Design" />
+          </div>
+        </div>
+      </section>
 
-            {/* Internal Links */}
-            <ScrollReveal>
-              <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-8">
-                <h3 className="font-display font-bold text-lg mb-4">
-                  Bring the Design to Life
-                </h3>
-                <div className="flex flex-wrap gap-4">
-                  <Link href="/event-management-company-jaipur">
-                    <button className="px-6 py-2 border border-neutral-700 text-white hover:border-purple-500 hover:text-purple-500 rounded-lg transition-all text-sm font-bold">
-                      Explore Production & Execution
-                    </button>
-                  </Link>
-                  <Link href="/wedding-anchor-jaipur">
-                    <button className="px-6 py-2 border border-neutral-700 text-white hover:border-purple-500 hover:text-purple-500 rounded-lg transition-all text-sm font-bold">
-                      Wedding Hosting
-                    </button>
-                  </Link>
+      {/* 4. SIGNATURE THEMES (New Section) */}
+      <section className="py-32 bg-[#0a0a0a] border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <SectionHeading subtitle="Aesthetics" title="Signature Collections." align="center" />
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {royalThemes.map((theme, i) => (
+              <div key={i} className="group relative h-[450px] rounded-3xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 transition-colors duration-500">
+                <img src={theme.img} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0" alt={theme.title} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-8 flex flex-col justify-end">
+                  <h3 className="text-3xl font-display font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{theme.title}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed font-light">{theme.desc}</p>
                 </div>
               </div>
-            </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. DESIGN SERVICES */}
+      <section className="py-32 container mx-auto px-4">
+        <div className="text-center mb-24">
+          <SectionHeading subtitle="The Toolkit" title="Design Infrastructure." align="center" />
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {designServices.map((service, idx) => (
+            <div key={idx} className="p-10 bg-[#0a0a0a] border border-white/5 rounded-[2.5rem] hover:border-[#D4AF37]/50 hover:bg-[#111] transition-all duration-500 group">
+              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-all shadow-lg">
+                <service.icon className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-tighter group-hover:text-pink-200 transition-colors">{service.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed font-light">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 6. VISUAL MASTERPIECE GALLERY (New Section) */}
+      <section className="py-32 bg-[#080808] border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <SectionHeading subtitle="The Canvas" title="Masterpieces." align="center" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] mt-16">
+            <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden border border-white/10 group">
+              <img src="/gallery-4.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Design" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <img src="/gallery-2.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Design" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <img src="/gallery-3.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Design" />
+            </div>
+            <div className="col-span-2 relative rounded-2xl overflow-hidden border border-white/10 group">
+              <img src="/gallery-1.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Design" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. FAQ SECTION & CONSULTATION SPLIT */}
+      <section className="py-32 container mx-auto px-4">
+        <div className="grid lg:grid-cols-12 gap-16">
+          <div className="lg:col-span-7">
+            <SectionHeading subtitle="Inquiries" title="Design FAQs" />
+            <div className="mt-12 space-y-4">
+              {FAQS.map((faq, idx) => (
+                <div 
+                  key={idx}
+                  onMouseEnter={() => setActiveFaq(idx)}
+                  onMouseLeave={() => setActiveFaq(null)}
+                  className={`group rounded-2xl border transition-all duration-300 ${activeFaq === idx ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" : "border-white/10 bg-transparent hover:border-white/20"}`}
+                >
+                  <button className="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span className={`font-semibold text-[15px] pr-4 transition-colors ${activeFaq === idx ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"}`}>
+                      {faq.q}
+                    </span>
+                    <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${activeFaq === idx ? "bg-[#D4AF37] text-black" : "bg-transparent border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"}`}>
+                      {activeFaq === idx ? <Minus size={16} /> : <Plus size={16} />}
+                    </div>
+                  </button>
+                  <AnimatePresence>
+                    {activeFaq === idx && (
+                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
+                        <div className="px-6 pb-6 pt-0 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/20 mt-2">
+                          <div className="pt-4">{faq.a}</div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right: Sticky Booking Card */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-28 bg-neutral-900 border border-neutral-800 rounded-2xl p-8 space-y-6">
-              <h3 className="text-xl font-display font-bold">
-                Get a Design Consultation
+          {/* Sticky Consultation Sidebar */}
+          <aside className="lg:col-span-5">
+            <div className="sticky top-32 bg-[#0a0a0a] border border-[#D4AF37]/30 rounded-[2.5rem] p-10 space-y-8 shadow-[0_0_40px_rgba(212,175,55,0.1)]">
+              <h3 className="text-3xl font-display font-black uppercase tracking-tight leading-none">
+                Design <br /> <GoldTextureText>Consultation</GoldTextureText>
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Have a theme in mind? Let's create a moodboard and see how we can bring it to life within your budget.
+              <p className="text-gray-400 text-base font-medium leading-relaxed">
+                Have a palace or a theme in mind? Let's build a moodboard and visualize your event before you spend a single rupee on fabrication.
               </p>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-purple-500 flex-shrink-0" />
+              <div className="space-y-6">
+                <div className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#D4AF37] border border-white/10 group-hover:border-[#D4AF37] transition-all">
+                    <Phone className="w-5 h-5" />
+                  </div>
                   <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wide">
-                      Call / WhatsApp
-                    </p>
-                    <p className="font-bold text-white">+91 77378 77978</p>
+                    <p className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">VIP Line</p>
+                    <p className="font-bold text-white text-lg">+91 77378 77978</p>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                <div className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#D4AF37] border border-white/10 group-hover:border-[#D4AF37] transition-all">
+                    <MapPin className="w-5 h-5" />
+                  </div>
                   <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wide">
-                      Studio Base
-                    </p>
-                    <p className="font-bold text-white text-sm">Jaipur, Rajasthan</p>
+                    <p className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">Studio HQ</p>
+                    <p className="font-bold text-white text-lg">Jaipur, Rajasthan</p>
                   </div>
                 </div>
               </div>
-
-              <div className="space-y-3 pt-4">
-                <Link href="/contact" className="block">
-                  <button className="w-full py-4 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition-all flex items-center justify-center gap-2">
-                    Start Consultation <Wand2 className="w-4 h-4" />
+              <div className="pt-6 space-y-4">
+                <Link href="/contact">
+                  <button className="w-full py-5 bg-[#D4AF37] text-black font-black uppercase tracking-widest rounded-2xl hover:bg-white transition-all flex items-center justify-center gap-3">
+                    Start Project <Wand2 size={18} />
                   </button>
                 </Link>
-                <a
-                  href="https://wa.me/917737877978?text=Hi%20Yash,%20I%20want%20to%20discuss%20event%20decor."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <button className="w-full py-4 border border-neutral-700 text-white font-bold rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all flex items-center justify-center gap-2">
-                    <MessageCircle className="w-5 h-5" />
-                    WhatsApp Direct
+                <a href="https://wa.me/917737877978" target="_blank" rel="noopener noreferrer" className="block">
+                  <button className="w-full py-5 border border-[#D4AF37]/30 text-[#D4AF37] font-black uppercase tracking-widest rounded-2xl hover:bg-[#D4AF37]/10 transition-all flex items-center justify-center gap-3">
+                    <MessageCircle size={18} /> WhatsApp Direct
                   </button>
                 </a>
               </div>
             </div>
-          </div>
-
+          </aside>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-b from-neutral-950 to-purple-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Dream It. <span className="text-purple-500">Build It.</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-10">
-              Stop settling for standard decor packages. Let's create something unique.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <button className="px-10 py-5 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition-all hover:scale-105">
-                  Book Design Session
-                </button>
-              </Link>
-            </div>
-          </ScrollReveal>
+      {/* 8. CTA FOOTER */}
+      <section className="py-40 bg-black text-center relative overflow-hidden border-t border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-pink-300/10 via-transparent to-transparent opacity-60 mix-blend-overlay" />
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-5xl md:text-8xl font-display font-black uppercase tracking-tighter mb-8 text-white">
+            Dream It. <DiamondText>Design It.</DiamondText>
+          </h2>
+          <p className="text-[#D4AF37] text-xl max-w-2xl mx-auto mb-12 font-medium italic drop-shadow-md">
+            "Stop settling for standard decor catalogs. Let’s build something the world has never seen before."
+          </p>
+          <Link href="/contact">
+            <button className="px-14 py-6 bg-white text-black font-black uppercase tracking-widest rounded-full hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.4)]">
+              Book Design Session
+            </button>
+          </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

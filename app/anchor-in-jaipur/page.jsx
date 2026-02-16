@@ -50,7 +50,7 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
   </div>
 );
 
-// --- HUMANIZED SEO DATA (12 FAQs Targeted for Search) ---
+// --- HUMANIZED SEO DATA ---
 const FAQS = [
   { q: "Who is the best anchor in Jaipur for weddings and corporate events?", a: "With over 5 years of experience and 1100+ successful events, I specialize in premium, high-energy hosting. I don't treat your event like 'just another gig.' I live here, I know the top luxury venues, the premium vendors, and the exact vibe of this city." },
   { q: "Have you hosted events at our Jaipur wedding venue before?", a: "If it is a premium venue in Jaipur, 99% yes. From the grand ballrooms of Fairmont and Marriott to the heritage courtyards of Diggi Palace, Jai Mahal, and Rambagh Palace, I am a trusted emcee across the city's finest locations." },
@@ -58,7 +58,7 @@ const FAQS = [
   { q: "Do you charge extra travel fees for destination weddings in Kukas or Amer?", a: "No. Whether your luxury wedding is at Le Meridien in Kukas or a resort on Sikar Road, it is all considered 'Local' for me. No flight tickets or hotel stays required for Jaipur events." },
   { q: "Do you also host corporate events and awards nights in Jaipur?", a: "Yes. I am highly versatile. I regularly anchor formal corporate summits, product launches, and gala dinners at major hubs like JECC Sitapura and Birla Auditorium, adapting my tone perfectly to a professional room." },
   { q: "Our family loves Marwari culture. Can you host in local languages?", a: "Khamma Ghani! Being a local Rajasthan anchor, I seamlessly switch between fluent Hindi, sophisticated English for global guests, and enough warm Marwari banter to make your Dadi-Sa laugh and feel right at home." },
-  { q: "What is the cost of hiring a premium wedding anchor in Jaipur?", a: "My rates reflect premium, unscripted quality. Pricing depends on the dates, guest count, and the number of events (like Haldi, Sangeet, and Varmala). Click 'Book The Best' below for a customized quote." },
+  { q: "What is the cost of hiring a premium wedding anchor in Jaipur?", a: "My rates reflect premium, unscripted quality. Pricing depends on the dates, guest count, and the number of events (like Haldi, Sangeet, and Varmala). Click 'Book Now' below for a customized quote." },
   { q: "Do you provide your own sound system and DJ?", a: "I am a specialist on the mic. I work seamlessly with your hired DJ and sound production team. If you need trusted recommendations for Jaipur's best event vendors, I am happy to help!" },
   { q: "How far in advance should we book a Jaipur event anchor?", a: "Jaipur's peak destination wedding season (November to February) is incredibly busy. Premium dates often get locked 6-8 months in advance. Once your venue is booked, your anchor should be next." },
   { q: "Can you host both the Haldi games and the Sangeet night?", a: "Yes! That is highly recommended. By the time the Sangeet starts, your guests already know my energy from the interactive Haldi games, making the evening celebrations twice as engaging." },
@@ -73,8 +73,8 @@ export default function JaipurAnchor() {
       {/* --- BACKGROUND ROYAL TEXTURE --- */}
       <div className="fixed inset-0 pointer-events-none opacity-10" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/arabesque.png")' }}></div>
 
-      {/* --- 1. HERO: THE ROYAL WELCOME (SEO H1 Focused) --- */}
-      <section className="relative h-[95vh] flex items-center justify-center overflow-hidden">
+      {/* --- 1. HERO: FIXED OVERLAP --- */}
+      <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#2a0a15]/80 to-[#3d0c0c]/60 z-10" />
           
@@ -85,7 +85,7 @@ export default function JaipurAnchor() {
           />
         </div>
 
-        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-8 py-3 rounded-full bg-black/60 backdrop-blur-xl mb-10 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
@@ -95,7 +95,6 @@ export default function JaipurAnchor() {
               </span>
             </div>
 
-            {/* SEO Keyword Heavy H1 */}
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black leading-[0.9] mb-8 drop-shadow-2xl">
               Jaipur's <RoyalPinkText>Premier</RoyalPinkText> <br /> <GoldTextureText>Wedding & Event Anchor.</GoldTextureText>
             </h1>
@@ -259,7 +258,7 @@ const FAQItem = ({ question, answer }) => {
     <div 
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      className={`group rounded-2xl border transition-all duration-300 ${
+      className={`group rounded-2xl border transition-all duration-300 mb-4 ${
         isOpen 
           ? "border-[#D4AF37] bg-[#D4AF37]/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]" 
           : "border-white/10 bg-transparent hover:border-white/20" 
