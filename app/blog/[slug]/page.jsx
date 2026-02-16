@@ -1,8 +1,8 @@
 "use client";
 import { useParams, notFound } from "next/navigation";
-import { BLOG_POSTS } from "../../data/blogs";
+import { BLOG_POSTS } from "../../../data/blogs"; // Corrected deep path
 import Link from "next/link";
-import { ArrowLeft, Clock, Calendar, MessageCircle } from "lucide-react";
+import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -11,42 +11,27 @@ export default function BlogPost() {
   if (!post) return notFound();
 
   return (
-    <main className="min-h-screen bg-white text-black font-sans selection:bg-[#D4AF37]">
-      {/* Editorial Header */}
-      <div className="h-[80vh] w-full relative overflow-hidden bg-zinc-900">
+    <main className="min-h-screen bg-white text-black font-sans">
+      <div className="h-[75vh] w-full relative overflow-hidden bg-zinc-900">
         <img src={post.image} className="w-full h-full object-cover" alt={post.title} />
         <div className="absolute inset-0 bg-black/50 flex items-end p-6 md:p-20">
           <div className="max-w-5xl">
             <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold uppercase text-white mb-8 hover:text-[#D4AF37] transition-all">
-              <ArrowLeft size={16} /> The Journal
+              <ArrowLeft size={16} /> Back to Blog
             </Link>
             <h1 className="text-5xl md:text-8xl font-black text-white uppercase leading-[0.95] tracking-tighter">{post.title}</h1>
           </div>
         </div>
       </div>
 
-      {/* Semantic Content Area */}
-      <article className="max-w-3xl mx-auto py-24 px-6">
-        <div className="flex flex-wrap gap-6 mb-12 text-zinc-400 font-bold uppercase text-[10px] tracking-widest border-b border-zinc-100 pb-8">
-          <span className="bg-[#D4AF37] text-black px-4 py-1 rounded-full">Primary Topic: {post.category}</span>
-          <span className="flex items-center gap-2"><Calendar size={14} /> Published {post.fullDate}</span>
-          <span className="flex items-center gap-2"><Clock size={14} /> {post.readTime} Read</span>
+      <article className="max-w-3xl mx-auto py-24 px-6 prose prose-xl">
+        <div className="flex gap-6 mb-12 text-zinc-400 font-bold uppercase text-[10px] tracking-widest border-b border-zinc-100 pb-8">
+          <span className="bg-[#D4AF37] text-black px-4 py-1 rounded-full">{post.category}</span>
+          <span>{post.fullDate}</span>
+          <span>{post.readTime} Read</span>
         </div>
-
-        {/* Structured Text Content */}
         <div className="whitespace-pre-wrap text-zinc-800 text-xl leading-relaxed font-light">
           {post.content}
-        </div>
-
-        {/* Dynamic CTA */}
-        <div className="mt-20 p-12 bg-zinc-50 rounded-[3rem] border border-zinc-100 text-center">
-           <h3 className="text-3xl font-black uppercase mb-4">Planning a similar event?</h3>
-           <p className="text-zinc-500 mb-8 font-light">Let's discuss the logistics and anchoring for your vision.</p>
-           <Link href="/contact">
-              <button className="px-10 py-5 bg-black text-white font-black uppercase tracking-widest text-xs rounded-full hover:bg-[#D4AF37] transition-all">
-                 Inquire Now <MessageCircle className="inline ml-2" size={16} />
-              </button>
-           </Link>
         </div>
       </article>
     </main>

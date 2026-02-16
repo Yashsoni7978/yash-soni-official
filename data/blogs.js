@@ -1,32 +1,32 @@
-export const blogs = [
+// data/blogs.js
+export const BLOG_POSTS = [
   {
     id: 1,
-    title: "10 Trending Sangeet Games for 2026",
-    slug: "trending-sangeet-games-2026", // This becomes the URL (yashsoni.in/blog/trending-sangeet-games-2026)
-    date: "January 10, 2026",
-    readTime: "5 min read",
-    image: "/sangeet-event.jpg", // Put this image in your public folder
-    excerpt: "Ditch the musical chairs. Here are the top trending games for Ladkewale vs Ladkiwale that will set the stage on fire.",
+    slug: "ultimate-guide-jaipur-palace-weddings",
+    category: "Luxury Weddings",
+    date: "22 Feb",
+    fullDate: "February 22, 2026",
+    readTime: "8 min",
+    title: "The Ultimate Guide to Palace Weddings in Jaipur",
+    desc: "Everything you need to know about planning a royal destination wedding at Rambagh or Fairmont.",
+    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800",
+    featured: true,
     content: `
-      <p>The Sangeet night is the soul of an Indian wedding. It's where the competition heats up between the Ladkewale and Ladkiwale.</p>
-      <h3>1. The Shoe Game (With a Twist)</h3>
-      <p>Instead of just the couple, we involve the parents too! It creates hilarious moments.</p>
-      <h3>2. Dance Off</h3>
-      <p>A structured dance battle with random songs thrown at both teams.</p>
+      ### The Pink City Grandeur
+      Planning a wedding in Jaipur is a historical production...
     `
   },
   {
     id: 2,
-    title: "Why You Need a Professional Anchor for Corporate Events",
-    slug: "professional-corporate-anchor-benefits",
-    date: "February 2, 2026",
-    readTime: "4 min read",
-    image: "/corporate-event.jpg",
-    excerpt: "A corporate event isn't just about speeches. It's about brand image. Here is why a professional emcee is your biggest asset.",
-    content: `
-      <p>Corporate events are often seen as boring. A professional anchor changes that perception instantly.</p>
-      <h3>Engagement is Key</h3>
-      <p>Keeping 500 employees awake during a 2-hour presentation requires skill, wit, and timing.</p>
-    `
+    slug: "overcoming-laziness-in-sports",
+    category: "Anchoring",
+    date: "12 Feb",
+    fullDate: "February 12, 2026",
+    readTime: "5 min",
+    title: "OVERCOMING LAZINESS IN SPORTS AND LIFE",
+    desc: "How to stay motivated when the physical demand gets high during events.",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800",
+    isVertical: true,
+    content: "When hosting back-to-back sangeets, physical stamina is key..."
   }
 ];
