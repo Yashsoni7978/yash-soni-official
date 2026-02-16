@@ -45,7 +45,7 @@ const navLinks = [
       { name: "Artist Management", href: "/artist-management-jaipur" },
     ],
   },
-  { name: "Showreel", href: "/portfolio" },
+  { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "/blog" },
 ];
 
@@ -85,7 +85,7 @@ export default function Navbar() {
           {/* BRAND LOGO (Full Image Gold, No Mic) */}
           <Link href="/" onClick={() => setIsOpen(false)} className="relative z-[101] flex items-center group shrink-0">
             <span className="text-xl font-display font-black tracking-[0.2em] uppercase group-hover:scale-105 transition-transform duration-500">
-              <GoldTextureText>YASH SONI</GoldTextureText>
+              <GoldTextureText>ANCHOR YASH</GoldTextureText>
             </span>
           </Link>
 
