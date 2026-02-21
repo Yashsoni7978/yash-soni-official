@@ -9,13 +9,12 @@ export default function robots() {
         ],
         disallow: [
           '/private/',
-          '/_next/',     // Prevents crawling of internal Next.js build files
           '/admin/',     // If you have a hidden admin panel
-          '/api/',       // Prevents crawling of your backend API routes
+          '/api/',       // Prevents crawling of your backend API routes (except the OG allowed above)
           '/*.json$',    // Prevents crawling of internal data files
         ],
       },
     ],
-    sitemap: 'https://yashsoni.in/sitemap.xml',
+    sitemap: 'https://yashsoni.in/sitemap.xml', // This perfectly matches the sitemap.js we just created!
   }
 }
