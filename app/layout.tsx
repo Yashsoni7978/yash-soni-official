@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
               "sameAs": [
                 "https://www.instagram.com/anchor_yash_official",
                 "https://www.instagram.com/best_anchor_jaipur",
-                "https://www.youtube.com/@anchor_yash",
+                "https://www.youtube.com/@anchor_yash"
               
               ]
             }
