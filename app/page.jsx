@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; // <-- NEW: Imported Next.js Image Component
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Play, Minus, Plus, Star, 
@@ -10,7 +11,7 @@ import {
 } from "lucide-react";
 
 // --- 1. CONFIGURATION & STYLES ---
-const GOLD_COLOR = "#D4AF37"; // Warm, royal gold matching your screenshots
+const GOLD_COLOR = "#D4AF37"; 
 
 const style = `
   @keyframes shimmer {
@@ -167,7 +168,6 @@ const GALLERY_IMAGES = [
 
 // --- 4. SUB-COMPONENTS ---
 
-// Explicitly using the .png file and conditionally applying the animated shimmer
 const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
@@ -271,17 +271,24 @@ export default function HomePage() {
       <style>{style}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       
-      {/* 1. HERO SECTION (Static Image) */}
+      {/* 1. HERO SECTION (Optimized Image with Priority) */}
       <section className="relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
-          <motion.img
-            src="/hero-slide-1.webp" // FIXED: Reverted to .webp explicitly based on your screenshot!
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }} 
             transition={{ duration: 1.5 }}
-            className="w-full h-full object-cover absolute inset-0"
-            alt="Anchor Yash Soni hosting a premium live event on stage"
-          />
+            className="absolute inset-0"
+          >
+            <Image
+              src="/hero-slide-1.webp" 
+              alt="Anchor Yash Soni hosting a premium live event on stage"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          </motion.div>
           <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/60 to-transparent z-10" />
           <FilmGrain />
         </div>
@@ -300,7 +307,6 @@ export default function HomePage() {
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[0.95]">
               ANCHOR <br />
-              {/* Animated molten gold effect applied exclusively here */}
               <GoldTextureText animate={true}>YASH</GoldTextureText>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-2xl font-light leading-relaxed">
@@ -322,7 +328,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. INTRODUCTION SECTION */}
+      {/* 2. INTRODUCTION SECTION (Optimized Images) */}
       <section className="py-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
@@ -344,21 +350,31 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-4">
              <ScrollReveal delay={0.2}>
                <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50 group">
-                 <img src="/intro-portrait-top.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Soni professional portrait in a luxury suit" />
+                 <Image 
+                   src="/intro-portrait-top.webp" 
+                   alt="Anchor Yash Soni professional portrait in a luxury suit"
+                   fill
+                   sizes="(max-width: 768px) 50vw, 25vw"
+                   className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                 />
                </div>
              </ScrollReveal>
              <ScrollReveal delay={0.4} className="mt-12">
                <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50 group">
-                 <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Anchor Yash Soni engaging dynamically with a wedding crowd" />
+                 <Image 
+                   src="/intro-portrait-bottom.webp" 
+                   alt="Anchor Yash Soni engaging dynamically with a wedding crowd"
+                   fill
+                   sizes="(max-width: 768px) 50vw, 25vw"
+                   className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                 />
                </div>
              </ScrollReveal>
           </div>
         </div>
       </section>
 
-      
       {/* 3. STATS SECTION */}
-      
       <section className="py-20 bg-zinc-950 border-b border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-transparent to-transparent opacity-40 pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
@@ -378,7 +394,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. FEATURED MARQUEE (Boxed Title Only) */}
+      {/* 4. FEATURED MARQUEE */}
       <section className="py-20 bg-black border-y border-white/5 relative z-20">
         <div className="container mx-auto px-6 mb-10 flex justify-center">
           <h2 className="inline-block text-center text-xs md:text-sm font-black tracking-[0.3em] text-white/40 uppercase border border-white/10 bg-white/5 rounded-full px-8 py-3 backdrop-blur-md">
@@ -402,7 +418,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. SIGNATURE SERVICES */}
+      {/* 5. SIGNATURE SERVICES (Optimized Images) */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -415,10 +431,12 @@ export default function HomePage() {
           {SIGNATURE_SERVICES.map((service, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
               <div className="relative h-[500px] rounded-2xl overflow-hidden group border border-white/10 shadow-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#D4AF37]/50">
-                <img 
+                <Image 
                   src={service.img} 
                   alt={`Anchor Yash Soni performing - ${service.title}`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
                 
@@ -481,7 +499,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. MOMENTS OF MAGIC */}
+      {/* 8. MOMENTS OF MAGIC (Optimized Images) */}
       <section className="py-24 bg-zinc-900/30 overflow-hidden">
         <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
           <div>
@@ -500,10 +518,12 @@ export default function HomePage() {
                 key={idx} 
                 className="relative w-[280px] md:w-[350px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shrink-0 group cursor-pointer"
               >
-                <img 
+                <Image 
                   src={img} 
                   alt={`Anchor Yash Soni live stage moment ${idx + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
+                  fill
+                  sizes="(max-width: 768px) 280px, 350px"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -600,7 +620,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. FAQ (12 Questions) */}
+      {/* 11. FAQ */}
       <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <ScrollReveal>
