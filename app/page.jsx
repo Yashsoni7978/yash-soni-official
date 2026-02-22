@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image"; // <-- NEW: Imported Next.js Image Component
+import Image from "next/image"; 
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Play, Minus, Plus, Star, 
@@ -271,15 +271,11 @@ export default function HomePage() {
       <style>{style}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       
-      {/* 1. HERO SECTION (Optimized Image with Priority) */}
+      {/* 1. HERO SECTION (Fixed LCP: Instant Render without Motion wrapper) */}
       <section className="relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }} 
-            transition={{ duration: 1.5 }}
-            className="absolute inset-0"
-          >
+          {/* Replaced <motion.div> with standard <div> so the browser paints it instantly */}
+          <div className="absolute inset-0 opacity-60">
             <Image
               src="/hero-slide-1.webp" 
               alt="Anchor Yash Soni hosting a premium live event on stage"
@@ -288,7 +284,7 @@ export default function HomePage() {
               sizes="100vw"
               className="object-cover"
             />
-          </motion.div>
+          </div>
           <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/60 to-transparent z-10" />
           <FilmGrain />
         </div>
@@ -328,7 +324,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. INTRODUCTION SECTION (Optimized Images) */}
+      {/* 2. INTRODUCTION SECTION */}
       <section className="py-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
@@ -418,7 +414,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. SIGNATURE SERVICES (Optimized Images) */}
+      {/* 5. SIGNATURE SERVICES */}
       <section className="py-24 container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -499,7 +495,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. MOMENTS OF MAGIC (Optimized Images) */}
+      {/* 8. MOMENTS OF MAGIC */}
       <section className="py-24 bg-zinc-900/30 overflow-hidden">
         <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
           <div>
