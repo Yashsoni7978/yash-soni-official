@@ -1,4 +1,4 @@
-import { BLOG_POSTS } from "../../../data/blogs"; //
+import { BLOG_POSTS } from "../../../data/blogs"; 
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
@@ -6,12 +6,12 @@ export async function generateMetadata({ params }) {
 
   if (!post) {
     return {
-      title: "Post Not Found | Anchor Yash",
+      title: "Post Not Found", 
     };
   }
 
   return {
-    title: `${post.title} | Anchor Yash Blog`,
+    title: post.title, // <--- FIXED: Removed the extra text here!
     description: post.desc,
     openGraph: {
       title: post.title,
