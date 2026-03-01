@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Script from "next/script";
-
+import FloatingContact from "../components/FloatingContact";
 // GLOBAL METADATA CONFIGURATION
 export const metadata = {
   metadataBase: new URL('https://yashsoni.in'),
