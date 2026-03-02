@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Script from "next/script";
 import FloatingContact from "../components/FloatingContact";
+import { GoogleAnalytics } from '@next/third-parties/google'; // 1. Imported Google Analytics
+
 // GLOBAL METADATA CONFIGURATION
 export const metadata = {
   metadataBase: new URL('https://yashsoni.in'),
@@ -97,6 +99,9 @@ export default function RootLayout({ children }) {
 
         <Footer />
       </body>
+      
+      {/* 2. Google Analytics Tracking ID injected here */}
+      <GoogleAnalytics gaId="G-JYPPJ3TDHB" />
     </html>
   );
 }
