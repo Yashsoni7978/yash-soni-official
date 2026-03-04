@@ -271,17 +271,17 @@ export default function HomePage() {
       <style>{style}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       
-      {/* 1. HERO SECTION (Fixed LCP: Instant Render without Motion wrapper) */}
+      {/* 1. HERO SECTION */}
       <section className="relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
-          {/* Replaced <motion.div> with standard <div> so the browser paints it instantly */}
           <div className="absolute inset-0 opacity-60">
             <Image
               src="/hero-slide-1.webp" 
               alt="Anchor Yash Soni hosting a premium live event on stage"
               fill
               priority
-              sizes="100vw"
+              quality={100}
+              unoptimized={true}
               className="object-cover"
             />
           </div>
@@ -350,7 +350,8 @@ export default function HomePage() {
                    src="/intro-portrait-top.webp" 
                    alt="Anchor Yash Soni professional portrait in a luxury suit"
                    fill
-                   sizes="(max-width: 768px) 50vw, 25vw"
+                   quality={100}
+                   unoptimized={true}
                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
                  />
                </div>
@@ -361,7 +362,8 @@ export default function HomePage() {
                    src="/intro-portrait-bottom.webp" 
                    alt="Anchor Yash Soni engaging dynamically with a wedding crowd"
                    fill
-                   sizes="(max-width: 768px) 50vw, 25vw"
+                   quality={100}
+                   unoptimized={true}
                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
                  />
                </div>
@@ -431,7 +433,8 @@ export default function HomePage() {
                   src={service.img} 
                   alt={`Anchor Yash Soni performing - ${service.title}`} 
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={100}
+                  unoptimized={true}
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
@@ -518,7 +521,8 @@ export default function HomePage() {
                   src={img} 
                   alt={`Anchor Yash Soni live stage moment ${idx + 1}`} 
                   fill
-                  sizes="(max-width: 768px) 280px, 350px"
+                  quality={100}
+                  unoptimized={true}
                   className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
