@@ -9,7 +9,7 @@ import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
-    style={{ backgroundImage: "url('/gold-texture.png')" }}
+    style={{ backgroundImage: "url('/gold-texture.webp')" }}
   >
     {children}
   </span>

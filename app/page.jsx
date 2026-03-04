@@ -171,7 +171,7 @@ const GALLERY_IMAGES = [
 const GoldTextureText = ({ children, className = "", animate = false }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${animate ? 'sparkle-text' : ''} ${className}`}
-    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: GOLD_COLOR }}
+    style={{ backgroundImage: "url('/gold-texture.webp')", backgroundColor: GOLD_COLOR }}
   >
     {children}
   </span>

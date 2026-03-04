@@ -16,7 +16,7 @@ const PINK_ACCENT = "#F4C2C2"; // Royal Rose Gold / Soft Pink
 const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
-    style={{ backgroundImage: "url('/gold-texture.png')", backgroundColor: GOLD_COLOR }}
+    style={{ backgroundImage: "url('/gold-texture.webp')", backgroundColor: GOLD_COLOR }}
   >
     {children}
   </span>

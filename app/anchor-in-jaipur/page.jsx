@@ -15,7 +15,7 @@ const GoldTextureText = ({ children, className }) => (
   <span 
     className={`bg-clip-text text-transparent bg-cover bg-center ${className || ""}`}
     style={{ 
-      backgroundImage: "url('/gold-texture.png')", 
+      backgroundImage: "url('/gold-texture.webp')", 
       backgroundColor: GOLD_COLOR, 
     }}
   >
@@ -89,7 +89,7 @@ export default function JaipurAnchor() {
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-8 py-3 rounded-full bg-black/60 backdrop-blur-xl mb-10 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
-              <img src="/gold-texture.png" className="w-6 h-6 rounded-full animate-spin-slow" alt="Gold Crown Icon" />
+              <img src="/gold-texture.webp" className="w-6 h-6 rounded-full animate-spin-slow" alt="Gold Crown Icon" />
               <span className="text-[#D4AF37] text-sm uppercase tracking-[0.25em] font-bold">
                 Rated #1 Event Host in Rajasthan
               </span>
