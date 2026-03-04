@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image"; // <-- Next.js Image Optimization
-import { Star, Briefcase, Zap, Quote, MapPin, ShieldAlert } from "lucide-react";
+import { Star, Briefcase, Zap, Quote, MapPin, ShieldAlert, Sparkles } from "lucide-react";
 
 // --- 1. LUXURY TEXTURE ASSETS (Changed to .webp) ---
 const GoldTextureText = ({ children, className }) => (
