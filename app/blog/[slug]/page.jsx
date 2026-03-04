@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image"; 
-import ReactMarkdown from 'react-markdown'; // <-- ADDED THIS BACK
+import ReactMarkdown from 'react-markdown'; 
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { BLOG_POSTS } from "../../../data/blogs"; 
 
@@ -55,6 +55,8 @@ export default async function BlogPost({ params }) {
             alt={post.title}
             fill
             priority 
+            unoptimized={true} // Keeps your luxury images crystal clear
+            quality={100}
             className="object-cover opacity-50 grayscale-[20%]"
             sizes="100vw"
           />
@@ -82,9 +84,28 @@ export default async function BlogPost({ params }) {
           <span className="flex items-center gap-2 mt-1"><Clock size={14} className="text-[#D4AF37]" /> {post.readTime} Read</span>
         </div>
 
-        {/* --- THE FIX IS HERE --- */}
+        {/* --- UPGRADED REACT MARKDOWN --- */}
         <div className="text-zinc-300 leading-relaxed max-w-none">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown
+            components={{
+              // This tells ReactMarkdown to convert any Markdown image into a high-speed Next.js Image
+              img: ({ node, ...props }) => (
+                <span className="block relative w-full aspect-[16/9] my-12 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-white/10">
+                  <Image
+                    src={props.src}
+                    alt={props.alt || "Anchor Yash Soni Luxury Event"}
+                    fill
+                    unoptimized={true}
+                    quality={100}
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 800px"
+                  />
+                </span>
+              ),
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </div>
 
       </article>
