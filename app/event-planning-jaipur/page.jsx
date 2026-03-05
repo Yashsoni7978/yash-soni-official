@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; // <-- Added Next.js Image Optimization
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Calculator, MapPin, Utensils, Truck, 
@@ -120,7 +121,17 @@ export default function WeddingPlanning() {
       
       {/* 1. THE LUXURY HERO */}
       <section className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden border-b border-white/5">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070')] bg-cover bg-fixed bg-center opacity-40 grayscale-[30%]"></div>
+        <div className="absolute inset-0 opacity-40 grayscale-[30%]">
+          <Image 
+            src="/white-flower-mandap-jaipur.webp" 
+            alt="Luxury Event Planning in Jaipur"
+            fill
+            priority 
+            quality={100}
+            unoptimized={true}
+            className="object-cover bg-fixed" 
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
@@ -171,7 +182,15 @@ export default function WeddingPlanning() {
          <div className="grid lg:grid-cols-2 gap-16 mt-20 relative items-start">
             {/* Sticky Image Context */}
             <div className="hidden lg:block relative h-[600px] sticky top-32 rounded-3xl overflow-hidden border border-[#D4AF37]/30 shadow-2xl">
-                <img src="/gallery-4.webp" className="w-full h-full object-cover grayscale-[20%]" alt="Event Planning Strategy" />
+                <Image 
+                  src="/corporate-gala-dinner-green.webp" 
+                  alt="Event Planning Strategy"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={100}
+                  unoptimized={true}
+                  className="object-cover grayscale-[20%]" 
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div className="absolute bottom-10 left-10">
                     <p className="text-[#D4AF37] font-bold tracking-widest uppercase text-sm mb-2 drop-shadow-md">The Standard</p>
@@ -224,16 +243,44 @@ export default function WeddingPlanning() {
         <div className="container mx-auto px-6">
             <SectionHeading subtitle="The Playground" title="Iconic Venues." align="center" />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px] mt-16">
+                
                 <div className="col-span-2 relative rounded-3xl overflow-hidden group border border-white/10">
-                    <img src="https://images.unsplash.com/photo-1587271407850-8d4389106628?q=80&w=2000" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale-[20%]" alt="Palace Wedding" />
+                    <Image 
+                      src="/jal-mahal-jaipur-artist.webp" 
+                      alt="Palace Wedding Venue"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      quality={100}
+                      unoptimized={true}
+                      className="object-cover transition-transform duration-700 group-hover:scale-105 grayscale-[20%]" 
+                    />
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all"></div>
                 </div>
+                
                 <div className="relative rounded-3xl overflow-hidden group border border-[#D4AF37]/40 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
-                    <img src="https://images.unsplash.com/photo-1604904839548-93a3074b4731?q=80&w=1000" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Luxury Setup" />
+                    <Image 
+                      src="/bride-groom-white-decor.webp" 
+                      alt="Luxury Setup"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      quality={100}
+                      unoptimized={true}
+                      className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
                 </div>
+                
                 <div className="relative rounded-3xl overflow-hidden group border border-white/10">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Wedding Vibe" />
+                    <Image 
+                      src="/sangeet-red-glitter-stage.webp" 
+                      alt="Wedding Vibe"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      quality={100}
+                      unoptimized={true}
+                      className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
                 </div>
+
             </div>
         </div>
       </section>

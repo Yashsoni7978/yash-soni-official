@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; 
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   MapPin, Utensils, Truck, Users, 
@@ -94,7 +95,17 @@ export default function WeddingPlanning() {
       
       {/* 1. THE ELITE HERO */}
       <section className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden border-b border-white/5">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070')] bg-cover bg-fixed bg-center opacity-40 grayscale-[20%]"></div>
+        <div className="absolute inset-0 opacity-40 grayscale-[20%]">
+          <Image 
+            src="/white-flower-mandap-jaipur.webp" 
+            alt="Luxury white floral mandap at a Jaipur palace wedding"
+            fill
+            priority // Forces instant loading for Lighthouse score
+            quality={100}
+            unoptimized={true}
+            className="object-cover bg-fixed" 
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent"></div>
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
@@ -128,7 +139,7 @@ export default function WeddingPlanning() {
         </div>
       </section>
 
-      {/* 2. THE PHILOSOPHY (Replacing Anchor Advantage) */}
+      {/* 2. THE PHILOSOPHY */}
       <section className="py-32 bg-[#080808] border-b border-white/5 relative z-20">
          <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -141,21 +152,29 @@ export default function WeddingPlanning() {
                      <div className="flex gap-5 items-start group">
                         <ShieldCheck className="w-8 h-8 text-[#D4AF37] shrink-0 mt-1" />
                         <div>
-                           <h4 className="text-xl font-bold text-white mb-2">Unrestricted Procurement</h4>
+                           <h3 className="text-xl font-bold text-white mb-2">Unrestricted Procurement</h3>
                            <p className="text-gray-400 font-light text-sm leading-relaxed">Direct access to the top 1% of venues, designers, and culinary masters. No middlemen. No compromises.</p>
                         </div>
                      </div>
                      <div className="flex gap-5 items-start group">
                         <Users className="w-8 h-8 text-[#D4AF37] shrink-0 mt-1" />
                         <div>
-                           <h4 className="text-xl font-bold text-white mb-2">Discreet Management</h4>
+                           <h3 className="text-xl font-bold text-white mb-2">Discreet Management</h3>
                            <p className="text-gray-400 font-light text-sm leading-relaxed">Our shadow teams operate silently in the background, ensuring your family remains as guests at their own celebration.</p>
                         </div>
                      </div>
                   </div>
                </div>
                <div className="relative h-[700px] w-full rounded-3xl overflow-hidden border border-[#D4AF37]/30 shadow-[0_0_50px_rgba(212,175,55,0.15)] group">
-                  <img src="https://images.unsplash.com/photo-1544728135-e117a0b30bb0?q=80&w=2000" className="w-full h-full object-cover grayscale-[10%] group-hover:scale-105 transition-transform duration-1000" alt="Luxury Wedding Planning" />
+                  <Image 
+                    src="/vintage-car-couple-shoot.webp" 
+                    alt="Luxury wedding couple shoot with vintage car in Jaipur"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={100}
+                    unoptimized={true}
+                    className="object-cover grayscale-[10%] group-hover:scale-105 transition-transform duration-1000" 
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90"></div>
                   <div className="absolute bottom-10 left-10 right-10">
                      <p className="text-[#D4AF37] text-sm uppercase tracking-widest font-bold mb-2">The Signature Experience</p>
@@ -166,13 +185,21 @@ export default function WeddingPlanning() {
          </div>
       </section>
 
-      {/* 3. CAPABILITIES (Vertical Vendor Cards) */}
+      {/* 3. CAPABILITIES */}
       <section className="py-32 container mx-auto px-6">
          <SectionHeading subtitle="The Framework" title="Elite Capabilities." align="center" />
          
          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
              <div className="relative h-[500px] rounded-3xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-xl">
-                 <img src="https://images.unsplash.com/photo-1587271407850-8d4389106628?w=800&q=80" className="absolute inset-0 w-full h-full object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" alt="Palatial Venues" />
+                 <Image 
+                   src="/jal-mahal-jaipur-artist.webp" 
+                   alt="Jal Mahal Jaipur palace venue"
+                   fill
+                   sizes="(max-width: 768px) 100vw, 25vw"
+                   quality={100}
+                   unoptimized={true}
+                   className="object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" 
+                 />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
                  <div className="absolute bottom-0 left-0 p-8 w-full">
                     <MapPin className="text-[#D4AF37] w-10 h-10 mb-4" />
@@ -182,7 +209,15 @@ export default function WeddingPlanning() {
              </div>
 
              <div className="relative h-[500px] rounded-3xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-xl">
-                 <img src="https://images.unsplash.com/photo-1519225421980-715cb0201b28?w=800&q=80" className="absolute inset-0 w-full h-full object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" alt="Cinematic Production" />
+                 <Image 
+                   src="/bride-groom-white-decor.webp" 
+                   alt="Cinematic luxury wedding decor in white"
+                   fill
+                   sizes="(max-width: 768px) 100vw, 25vw"
+                   quality={100}
+                   unoptimized={true}
+                   className="object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" 
+                 />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
                  <div className="absolute bottom-0 left-0 p-8 w-full">
                     <Gem className="text-[#D4AF37] w-10 h-10 mb-4" />
@@ -192,7 +227,15 @@ export default function WeddingPlanning() {
              </div>
 
              <div className="relative h-[500px] rounded-3xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-xl">
-                 <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80" className="absolute inset-0 w-full h-full object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" alt="Haute Cuisine" />
+                 <Image 
+                   src="/corporate-gala-dinner-green.webp" 
+                   alt="Haute cuisine setup at gala dinner"
+                   fill
+                   sizes="(max-width: 768px) 100vw, 25vw"
+                   quality={100}
+                   unoptimized={true}
+                   className="object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" 
+                 />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
                  <div className="absolute bottom-0 left-0 p-8 w-full">
                     <Utensils className="text-[#D4AF37] w-10 h-10 mb-4" />
@@ -202,7 +245,15 @@ export default function WeddingPlanning() {
              </div>
 
              <div className="relative h-[500px] rounded-3xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-xl">
-                 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" className="absolute inset-0 w-full h-full object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" alt="VIP Hospitality" />
+                 <Image 
+                   src="/haldi-bride-groom-family.webp" 
+                   alt="VIP family hospitality at destination wedding"
+                   fill
+                   sizes="(max-width: 768px) 100vw, 25vw"
+                   quality={100}
+                   unoptimized={true}
+                   className="object-cover grayscale-[30%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000" 
+                 />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
                  <div className="absolute bottom-0 left-0 p-8 w-full">
                     <Truck className="text-[#D4AF37] w-10 h-10 mb-4" />
@@ -213,7 +264,7 @@ export default function WeddingPlanning() {
          </div>
       </section>
 
-      {/* 4. THE BLUEPRINT (Process) */}
+      {/* 4. THE BLUEPRINT */}
       <section className="py-32 bg-[#0a0a0a] border-y border-white/5">
          <div className="container mx-auto px-6">
             <div className="mb-20 text-center">
@@ -241,33 +292,70 @@ export default function WeddingPlanning() {
          </div>
       </section>
 
-      {/* 5. VISUAL MASTERPIECE (Moodboard) */}
+      {/* 5. VISUAL MASTERPIECE */}
       <section className="py-32 bg-[#050505]">
           <div className="container mx-auto px-6 text-center">
               <SectionHeading subtitle="The Execution" title="We Visualize. Then We Build." align="center" />
               <p className="text-gray-400 mb-16 text-xl font-light max-w-2xl mx-auto">Ensuring every venue corner looks exactly as envisioned before a single guest arrives.</p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[700px] p-6 bg-[#0a0a0a] rounded-[2.5rem] border border-white/5 relative shadow-2xl">
+                  
                   <div className="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl border border-[#D4AF37]/30">
-                      <img src="https://images.unsplash.com/photo-1520857014576-2c4f4c972b57?w=1000&q=80" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" alt="Floral Mandap" />
+                      <Image 
+                        src="/rose-petal-tree-background.webp" 
+                        alt="Floral Mandap Architecture"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        quality={100}
+                        unoptimized={true}
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" 
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                       <div className="absolute bottom-6 left-6"><p className="text-white text-sm uppercase tracking-widest font-bold">Mandap Architecture</p></div>
                   </div>
+                  
                   <div className="relative group overflow-hidden rounded-2xl border border-white/10 hover:border-[#D4AF37]/50 transition-colors">
-                      <img src="https://images.unsplash.com/photo-1519225421980-715cb0201b28?w=800&q=80" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" alt="Tablescape" />
+                      <Image 
+                        src="/indian-bride-solo-decor.webp" 
+                        alt="Tablescape Decor"
+                        fill
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        quality={100}
+                        unoptimized={true}
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" 
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                       <div className="absolute bottom-6 left-6"><p className="text-white text-xs uppercase tracking-widest font-bold">Tablescapes</p></div>
                   </div>
+                  
                   <div className="relative group overflow-hidden rounded-2xl border border-white/10 hover:border-[#D4AF37]/50 transition-colors">
-                      <img src="https://images.unsplash.com/photo-1561344640-2453889cde5b?w=800&q=80" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" alt="Florals" />
+                      <Image 
+                        src="/bride-groom-flower-petals.webp" 
+                        alt="Floral Curation"
+                        fill
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        quality={100}
+                        unoptimized={true}
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" 
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                       <div className="absolute bottom-6 left-6"><p className="text-white text-xs uppercase tracking-widest font-bold">Floral Curation</p></div>
                   </div>
+                  
                   <div className="col-span-2 relative group overflow-hidden rounded-2xl border border-white/10 hover:border-[#D4AF37]/50 transition-colors">
-                      <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f164?w=1000&q=80" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" alt="Sangeet Setup" />
+                      <Image 
+                        src="/sangeet-red-glitter-stage.webp" 
+                        alt="Sangeet Lighting Design"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        quality={100}
+                        unoptimized={true}
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0" 
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                       <div className="absolute bottom-6 left-6"><p className="text-white text-xs uppercase tracking-widest font-bold">Lighting Design</p></div>
                   </div>
+
               </div>
           </div>
       </section>
