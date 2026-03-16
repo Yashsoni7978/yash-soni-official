@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Script from "next/script";
 import FloatingContact from "../components/FloatingContact";
-import { GoogleAnalytics } from '@next/third-parties/google'; // 1. Imported Google Analytics
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 // GLOBAL METADATA CONFIGURATION
 export const metadata = {
@@ -14,6 +14,9 @@ export const metadata = {
     template: "%s | Anchor Yash Soni"
   },
   description: "Jaipur's premier award-winning anchor for luxury weddings, corporate summits, and international events. 5+ years of unscripted energy.",
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     "Anchor Yash Soni", 
     "Best Anchor in Jaipur", 
@@ -81,7 +84,6 @@ export default function RootLayout({ children }) {
                 "https://www.instagram.com/anchor_yash_official",
                 "https://www.instagram.com/best_anchor_jaipur",
                 "https://www.youtube.com/@anchor_yash"
-              
               ]
             }
           `}
