@@ -152,19 +152,5 @@ export const metadata = {
 };
 
 export default function WeddingAnchorLayout({ children }) {
-  return (
-    <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      </head>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

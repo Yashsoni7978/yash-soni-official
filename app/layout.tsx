@@ -5,6 +5,15 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 import FloatingContact from "../components/FloatingContact";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  weight: ["400", "700", "900"],
+});
+
 
 // ═══════════════════════════════════════════════════════════
 // GLOBAL SEO METADATA — SERVER COMPONENT
@@ -91,12 +100,7 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
-  },
-
-  // ── VERIFICATION ──
-  verification: {
-    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN', // Replace with real token
-  },
+  }
 };
 
 // ═══════════════════════════════════════════════════════════
@@ -226,7 +230,7 @@ const breadcrumbSchema = {
 // ═══════════════════════════════════════════════════════════
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className="scroll-smooth">
+    <html lang="en-IN" className={`scroll-smooth ${playfair.variable}`}>
       <head>
         {/* ── GEO META TAGS (Critical for local search) ── */}
         <meta name="geo.region" content="IN-RJ" />

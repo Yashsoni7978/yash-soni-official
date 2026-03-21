@@ -133,23 +133,5 @@ export const metadata = {
 };
 
 export default function AboutLayout({ children }) {
-  return (
-    <>
-      <head>
-        <meta name="geo.region" content="IN-RJ" />
-        <meta name="geo.placename" content="Jaipur, Rajasthan, India" />
-        <meta name="geo.position" content="26.9124;75.7873" />
-        <meta name="ICBM" content="26.9124, 75.7873" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      </head>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
