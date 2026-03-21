@@ -1,5 +1,8 @@
 // app/best-anchor-in-jaipur/layout.jsx
-// SERVER COMPONENT — metadata only, NO manual <head> tags in App Router layouts
+// SERVER COMPONENT
+// RULE: This file ONLY exports metadata + a simple layout wrapper.
+// NO <head> tags. NO <script> tags. NO dangerouslySetInnerHTML.
+// Schemas go in page.jsx (client component body). Geo signals go in metadata.other.
 
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
@@ -80,7 +83,7 @@ export const metadata = {
     images: ["/og-image.jpg"],
   },
 
-  // Geo signals via Other metadata
+  // Geo signals — Next.js renders these as <meta> tags correctly
   other: {
     "geo.region": "IN-RJ",
     "geo.placename": "Jaipur, Rajasthan, India",
@@ -89,6 +92,7 @@ export const metadata = {
   },
 };
 
+// Layout: just pass children through. Nothing else.
 export default function BestAnchorJaipurLayout({ children }) {
   return <>{children}</>;
 }
