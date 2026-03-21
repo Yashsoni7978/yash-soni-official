@@ -284,7 +284,7 @@ export default function BestAnchorJaipurPage() {
       {/* ══════════════════════════════════════════
           BREADCRUMB
       ══════════════════════════════════════════ */}
-      <nav className="pt-24 md:pt-28 pb-0 px-5 md:px-10">
+      <nav className="pt-24 md:pt-28 pb-0 px-5 md:px-10 sr-only">
         <div className="max-w-6xl mx-auto flex items-center gap-2 text-xs text-zinc-600">
           <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
           <span>›</span>

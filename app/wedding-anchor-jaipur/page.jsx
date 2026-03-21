@@ -243,7 +243,8 @@ export default function WeddingAnchor() {
       {/* ══════════════════════════════════════
           BREADCRUMB
       ══════════════════════════════════════ */}
-      <nav className="pt-24 md:pt-28 pb-0 px-5 md:px-10 max-w-6xl mx-auto">
+      <nav className="pt-24 md:pt-28 pb-0 px-5 md:px-10 max-w-6xl mx-auto sr-only">
+
         <div className="flex items-center gap-2 text-xs text-zinc-600">
           <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
           <span>›</span>
