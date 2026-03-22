@@ -5,13 +5,21 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 import FloatingContact from "../components/FloatingContact";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
   weight: ["400", "700", "900"],
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+  weight: ["300", "400", "600"],
+  style: ["normal", "italic"],
 });
 
 
@@ -95,6 +103,11 @@ export const metadata = {
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description: "1100+ events. Jaipur's most commanding anchor for weddings, corporate events & Sangeets.",
     images: ["/og-image.jpg"],
+  },
+
+  // ── GSC VERIFICATION ── Add your token from search.google.com/search-console
+  verification: {
+    google: "YOUR_GSC_TOKEN_HERE",
   },
 
   icons: {
@@ -230,7 +243,7 @@ const breadcrumbSchema = {
 // ═══════════════════════════════════════════════════════════
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className={`scroll-smooth ${playfair.variable}`}>
+    <html lang="en-IN" className={`scroll-smooth ${playfair.variable} ${cormorant.variable}`}>
       <head>
         {/* ── GEO META TAGS (Critical for local search) ── */}
         <meta name="geo.region" content="IN-RJ" />
@@ -277,5 +290,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-
