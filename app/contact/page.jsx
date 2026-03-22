@@ -48,7 +48,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     date: "",
-    type: "Wedding Planning",
+    type: "Wedding Anchoring",
     location: "",
     message: ""
   });
@@ -70,17 +70,18 @@ export default function Contact() {
 
   return (
     <div className="bg-[#050505] text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans pt-32 pb-20 relative overflow-hidden">
+      <style>{`@keyframes marquee-contact{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}`}</style>
       
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#D4AF37]/5 via-[#050505] to-[#050505] opacity-60 pointer-events-none"></div>
 
       {/* --- AVAILABILITY TICKER --- */}
       <div className="fixed top-20 left-0 w-full bg-gradient-to-r from-[#D4AF37] to-[#b48f25] text-black text-[10px] md:text-xs font-black uppercase tracking-[0.2em] py-2 z-20 overflow-hidden shadow-lg border-y border-[#D4AF37]">
-         <div className="whitespace-nowrap animate-marquee flex items-center">
-            Now Booking Dates for Winter 2025 & 2026 <Diamond className="w-3 h-3 mx-4 inline" /> 
+         <div className="whitespace-nowrap flex items-center" style={{animation:"marquee-contact 28s linear infinite"}}>
+            Now Booking Dates for 2026 & Early 2027 <Diamond className="w-3 h-3 mx-4 inline" /> 
             Limited Slots Available <Diamond className="w-3 h-3 mx-4 inline" /> 
             Contact Directly for Urgent Bookings <Diamond className="w-3 h-3 mx-4 inline" />
-            Now Booking Dates for Winter 2025 & 2026 <Diamond className="w-3 h-3 mx-4 inline" /> 
+            Now Booking Dates for 2026 & Early 2027 <Diamond className="w-3 h-3 mx-4 inline" /> 
             Limited Slots Available <Diamond className="w-3 h-3 mx-4 inline" /> 
             Contact Directly for Urgent Bookings <Diamond className="w-3 h-3 mx-4 inline" />
          </div>
@@ -219,10 +220,16 @@ export default function Contact() {
                          onChange={handleInputChange}
                          value={formData.type}
                        >
-                         <option>Luxury Wedding Planning</option>
                          <option>Wedding Anchoring</option>
+                         <option>Sangeet Anchoring</option>
+                         <option>Haldi Anchoring</option>
+                         <option>Mehendi Anchoring</option>
+                         <option>Corporate Event Anchor</option>
+                         <option>Destination Wedding Anchor</option>
+                         <option>Team Building Host</option>
+                         <option>Celebrity / Public Event</option>
+                         <option>Luxury Wedding Planning</option>
                          <option>Event Designing & 3D</option>
-                         <option>Corporate Gala Management</option>
                          <option>Artist Booking</option>
                        </select>
                     </div>
@@ -271,9 +278,18 @@ export default function Contact() {
         {/* --- SOCIAL PROOF STRIP --- */}
         <div className="mt-32 pt-16 border-t border-white/5 text-center">
            <p className="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Verified & Trusted On</p>
-           <div className="flex flex-wrap justify-center gap-10 md:gap-20 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-              {["WedMeGood", "WeddingWire", "Google Reviews", "StarClinch", "Justdial"].map((brand, i) => (
-                <span key={i} className="text-xl md:text-3xl font-display font-black text-white">{brand}</span>
+           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 hover:opacity-100 transition-all duration-700">
+              {[
+                { name: "WedMeGood", href: "https://www.wedmegood.com/profile/anchor-yash-25628297" },
+                { name: "WeddingWire", href: "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166" },
+                { name: "Google Reviews", href: "https://share.google/pMZGzEGOhXnJpLq5g" },
+                { name: "StarClinch", href: "https://starclinch.com/artists/anchor-yash-soni" },
+                { name: "Justdial", href: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET" },
+              ].map((brand, i) => (
+                <a key={i} href={brand.href} target="_blank" rel="noopener noreferrer"
+                  className="text-xl md:text-2xl font-black text-white hover:text-[#D4AF37] transition-colors">
+                  {brand.name}
+                </a>
               ))}
            </div>
         </div>
