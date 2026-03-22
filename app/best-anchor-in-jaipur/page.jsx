@@ -191,7 +191,7 @@ function ImageSlider() {
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               transition={{ duration: 0.9 }}>
               <Image src={img.src} alt={`${img.caption} — Anchor Yash Soni best anchor in Jaipur`}
-                fill quality={90} className="object-cover" priority={i === 0} />
+                fill quality={100} className="object-cover" priority={i === 0} />
             </motion.div>
           )}
         </AnimatePresence>
@@ -398,10 +398,10 @@ export default function BestAnchorJaipurPage() {
 
           <Reveal delay={0.15} className="grid grid-cols-2 gap-3">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group hover:border-[#D4AF37]/40 transition-all">
-              <Image src="/intro-portrait-top.webp" alt="Anchor Yash Soni best anchor in Jaipur" fill quality={90} className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/intro-portrait-top.webp" alt="Anchor Yash Soni best anchor in Jaipur" fill quality={100} className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group hover:border-[#D4AF37]/40 transition-all mt-8">
-              <Image src="/intro-portrait-bottom.webp" alt="Anchor Yash Soni wedding event Jaipur" fill quality={90} className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/intro-portrait-bottom.webp" alt="Anchor Yash Soni wedding event Jaipur" fill quality={100} className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
           </Reveal>
         </div>

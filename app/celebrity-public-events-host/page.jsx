@@ -383,7 +383,7 @@ export default function CelebrityAnchorPage() {
                 <Image
                   src="/gallery-6.webp"
                   alt="Anchor Yash Soni at a public event in Jaipur"
-                  fill quality={85}
+                  fill quality={100}
                   className="object-cover grayscale opacity-60"
                   sizes="(max-width:1024px) 75vw, 37vw"
                 />
@@ -392,7 +392,7 @@ export default function CelebrityAnchorPage() {
                 <Image
                   src="/intro-portrait-bottom.webp"
                   alt="Anchor Yash Soni celebrity event host Jaipur"
-                  fill quality={90}
+                  fill quality={100}
                   className="object-cover"
                   sizes="(max-width:1024px) 75vw, 37vw"
                 />
@@ -511,7 +511,7 @@ export default function CelebrityAnchorPage() {
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  fill quality={85}
+                  fill quality={100}
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                   sizes="(max-width:768px) 50vw, 33vw"
                 />

@@ -430,7 +430,7 @@ export default function MehendiAnchor() {
               <Image
                 src="/gallery-2.webp"
                 alt="Anchor Yash Soni hosting Mehendi ceremony in Jaipur"
-                fill quality={90}
+                fill quality={100}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
@@ -516,7 +516,7 @@ export default function MehendiAnchor() {
               <Image
                 src="/gallery-3.webp"
                 alt="Mehendi ceremony in Jaipur with interactive crowd games"
-                fill quality={85}
+                fill quality={100}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />

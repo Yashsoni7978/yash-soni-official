@@ -385,7 +385,7 @@ export default function SangeetAnchor() {
               <Image
                 src="/gallery-4.webp"
                 alt="Anchor Yash Soni hosting Sangeet night in Jaipur"
-                fill quality={90}
+                fill quality={100}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
@@ -450,7 +450,7 @@ export default function SangeetAnchor() {
               <Image
                 src="/gallery-1.webp"
                 alt="Anchor Yash Soni directing Sangeet energy in Jaipur"
-                fill quality={90}
+                fill quality={100}
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />

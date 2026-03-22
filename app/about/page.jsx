@@ -211,7 +211,7 @@ export default function AboutPage() {
               <Image
                 src="/intro-portrait-bottom.webp"
                 alt="Anchor Yash Soni on stage at a Jaipur event"
-                fill quality={90}
+                fill quality={100}
                 className="object-cover"
                 sizes="(max-width:768px) 100vw, 50vw"
               />
@@ -250,7 +250,7 @@ export default function AboutPage() {
               <Image
                 src="/service-wedding.webp"
                 alt="Anchor Yash Soni commanding a wedding crowd in Jaipur"
-                fill quality={90}
+                fill quality={100}
                 className="object-cover"
                 sizes="(max-width:768px) 100vw, 50vw"
               />
@@ -418,7 +418,7 @@ export default function AboutPage() {
           <Image
             src="/service-corporate.webp"
             alt=""
-            fill quality={60}
+            fill quality={100}
             className="object-cover opacity-10 grayscale"
             sizes="100vw"
             aria-hidden="true"
