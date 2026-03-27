@@ -1,56 +1,107 @@
-import { BLOG_POSTS } from '../data/blogs'; // Adjust this import path if your data folder is somewhere else
+// app/sitemap.js
+// ─────────────────────────────────────────────────────────────
+// Dynamic sitemap — auto-updates when new blog posts are added.
+// Served at https://yashsoni.in/sitemap.xml by Next.js.
+// ─────────────────────────────────────────────────────────────
+
+import { BLOG_POSTS } from '../data/blogs';
+
+const BASE = 'https://yashsoni.in';
+const NOW  = new Date().toISOString();
 
 export default function sitemap() {
-  const baseUrl = 'https://yashsoni.in';
 
-  // --- 1. CORE STATIC ROUTES ---
-  // We set the homepage to priority 1.0, and major services to 0.8
-  const staticRoutes = [
-    '',
-    '/about',
+  // ── TIER 1: Homepage (1.0) ────────────────────────────────
+  const homepage = [
+    {
+      url: BASE,
+      lastModified: NOW,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+  ];
+
+  // ── TIER 2: Money pages (0.9) ─────────────────────────────
+  // Pages with direct booking intent — highest crawl priority.
+  // /best-anchor-in-jaipur was missing from old sitemap — fixed.
+  const moneyPages = [
+    '/best-anchor-in-jaipur',
     '/anchor-in-jaipur',
-    '/artist-management-jaipur',
-    '/blog',
-    '/celebrity-public-events-host',
-    '/contact',
-    '/corporate-event-anchor-jaipur',
-    '/destination-wedding-anchor',
-    '/event-designing',
-    '/event-management-jaipur',
-    '/event-planning-jaipur',
+    '/wedding-anchor-jaipur',
+    '/sangeet-anchor-jaipur',
     '/haldi-anchor-jaipur',
     '/mehendi-anchor-jaipur',
+    '/corporate-event-anchor-jaipur',
+    '/destination-wedding-anchor',
+  ].map(route => ({
+    url: `${BASE}${route}`,
+    lastModified: NOW,
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
+
+  // ── TIER 3: Brand pages (0.8) ─────────────────────────────
+  const brandPages = [
+    '/about',
     '/portfolio',
-    '/sangeet-anchor-jaipur',
+    '/contact',
+  ].map(route => ({
+    url: `${BASE}${route}`,
+    lastModified: NOW,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  // ── TIER 4: Supporting service pages (0.7) ────────────────
+  const supportPages = [
+    '/event-management-jaipur',
+    '/event-planning-jaipur',
+    '/wedding-planning-jaipur',
+    '/event-designing',
+    '/celebrity-public-events-host',
     '/team-building-host',
-    '/wedding-anchor-jaipur',
-    '/wedding-planning-jaipur'
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1.0 : 0.8,
-  }));
-
-  // --- 2. DYNAMIC LOCATION ROUTES ---
-  // Your build showed 6 total location paths. Adjust these 6 cities as needed based on your actual data!
-  const destinationCities = ['jaipur', 'udaipur', 'jodhpur', 'jaisalmer', 'pushkar', 'goa']; 
-  const locationRoutes = destinationCities.map((city) => ({
-    url: `${baseUrl}/locations/${city}`,
-    lastModified: new Date(),
+    '/artist-management-jaipur',
+    '/blog',
+  ].map(route => ({
+    url: `${BASE}${route}`,
+    lastModified: NOW,
     changeFrequency: 'monthly',
-    priority: 0.7, // Slightly lower than core service pages
+    priority: 0.7,
   }));
 
-  // --- 3. DYNAMIC BLOG ROUTES ---
-  // This automatically pulls from your blogs.js array so you never have to manually update the sitemap when you write a new blog!
-  const blogRoutes = BLOG_POSTS.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(), 
+  // ── TIER 5: Location pages (0.7) ──────────────────────────
+  const locationPages = [
+    'jaipur', 'udaipur', 'jodhpur', 'jaisalmer', 'pushkar', 'goa',
+  ].map(city => ({
+    url: `${BASE}/locations/${city}`,
+    lastModified: NOW,
     changeFrequency: 'monthly',
-    priority: 0.6,
+    priority: 0.7,
   }));
 
-  // Combine them all and return
-  return [...staticRoutes, ...locationRoutes, ...blogRoutes];
+  // ── TIER 6: Blog posts (0.6) ──────────────────────────────
+  // Dynamically pulled from blogs.js — new posts appear automatically.
+  const blogPages = BLOG_POSTS.map(post => {
+    // Convert "March 01, 2026" → proper ISO date for lastModified
+    let lastMod = NOW;
+    if (post.fullDate) {
+      const parsed = new Date(post.fullDate);
+      if (!isNaN(parsed.getTime())) lastMod = parsed.toISOString();
+    }
+    return {
+      url: `${BASE}/blog/${post.slug}`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    };
+  });
+
+  return [
+    ...homepage,
+    ...moneyPages,
+    ...brandPages,
+    ...supportPages,
+    ...locationPages,
+    ...blogPages,
+  ];
 }
