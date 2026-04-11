@@ -1,0 +1,268 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+// @ts-nocheck
+import "./globals.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Script from "next/script";
+import FloatingContact from "../components/FloatingContact";
+
+import { Playfair_Display, Cormorant_Garamond } from "next/font/google";
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  weight: ["400", "700", "900"],
+});
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+  weight: ["300", "400", "600"],
+  style: ["normal", "italic"],
+});
+// ═══════════════════════════════════════════════════════════
+// GLOBAL SEO METADATA — SERVER COMPONENT
+// All metadata lives here. Never put metadata in client components.
+// ═══════════════════════════════════════════════════════════
+export const metadata = {
+  metadataBase: new URL('https://yashsoni.in'),
+  title: {
+    default: "Best Anchor in Jaipur | Anchor Yash Soni — Wedding, Corporate & Event Host",
+    template: "%s | Anchor Yash Soni — Jaipur"
+  },
+  description: "Looking for the best anchor in Jaipur? Anchor Yash Soni has hosted 1100+ events — from palace weddings in Kukas & Amer Road to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura. Jaipur's most trusted event host.",
+  keywords: [
+    "best anchor in jaipur",
+    "best wedding anchor in jaipur",
+    "anchor in jaipur",
+    "anchors in jaipur",
+    "anchor jaipur",
+    "anchor yash soni",
+    "anchor yash",
+    "wedding anchor jaipur",
+    "sangeet anchor jaipur",
+    "corporate anchor jaipur",
+    "anchor for birthday party jaipur",
+    "farmhouse wedding anchor jaipur",
+    "anchor in rajasthan",
+    "event host jaipur",
+    "wedding emcee jaipur",
+    "anchor for events jaipur",
+    "NRI wedding anchor jaipur",
+    "destination wedding anchor rajasthan",
+    "haldi anchor jaipur",
+    "mehendi anchor jaipur",
+  ],
+  authors: [{ name: "Yash Soni", url: "https://yashsoni.in" }],
+  creator: "Yash Soni",
+  // ── CANONICAL & ALTERNATES ──
+  alternates: {
+    canonical: 'https://yashsoni.in',
+  },
+  // ── ROBOTS ──
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // ── OPEN GRAPH ──
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://yashsoni.in",
+    siteName: "Anchor Yash Soni",
+    title: "Best Anchor in Jaipur | Anchor Yash Soni",
+    description: "1100+ events. 10,000+ crowd commanded. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
+    images: [{
+      url: "/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Anchor Yash Soni — Best Anchor in Jaipur on stage",
+    }],
+  },
+  // ── TWITTER ──
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Anchor in Jaipur | Anchor Yash Soni",
+    description: "1100+ events. Jaipur's most commanding anchor for weddings, corporate events & Sangeets.",
+    images: ["/og-image.jpg"],
+  },
+  // ── GSC VERIFICATION ── Add your token from search.google.com/search-console
+  verification: {
+    google: "YOUR_GSC_TOKEN_HERE",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  }
+};
+// ═══════════════════════════════════════════════════════════
+// JSON-LD SCHEMAS
+// Injected server-side so Google crawls instantly
+// ═══════════════════════════════════════════════════════════
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://yashsoni.in/#business",
+  "name": "Anchor Yash Soni",
+  "alternateName": ["Best Anchor in Jaipur", "Anchor Yash", "Yash Soni Anchor"],
+  "description": "Anchor Yash Soni is the best anchor in Jaipur with 1100+ events hosted across Rajasthan and India. Specialist in luxury weddings, Sangeet ceremonies, corporate award nights, Haldi, Mehendi, and VIP events. Bilingual Hindi/English host serving Kukas, Amer Road, Ajmer Road, Sitapura JECC, Mansarovar and all major event venues in Jaipur.",
+  "url": "https://yashsoni.in",
+  "telephone": "+917737877978",
+  "email": "info@yashsoni.in",
+  "priceRange": "₹₹₹₹",
+  "image": "https://yashsoni.in/og-image.jpg",
+  "founder": {
+    "@type": "Person",
+    "name": "Yash Soni",
+    "jobTitle": "Premium Event Anchor & Emcee",
+    "knowsLanguage": ["Hindi", "English", "Rajasthani"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jhotwara",
+    "addressLocality": "Jaipur",
+    "addressRegion": "Rajasthan",
+    "postalCode": "302012",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.9124,
+    "longitude": 75.7873
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Jaipur" },
+    { "@type": "AdministrativeArea", "name": "Rajasthan" },
+    { "@type": "Country", "name": "India" }
+  ],
+  "serviceType": [
+    "Wedding Anchor",
+    "Sangeet Host",
+    "Corporate Event Anchor",
+    "Birthday Party Anchor",
+    "Haldi Games Host",
+    "Mehendi Anchor",
+    "Farmhouse Wedding Host",
+    "VIP Event Emcee",
+    "Destination Wedding Anchor",
+    "Award Night Host"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Event Anchoring Services in Jaipur",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Wedding Ceremony Anchor Jaipur" },
+      { "@type": "Offer", "name": "Sangeet & Mehndi Host Jaipur" },
+      { "@type": "Offer", "name": "Corporate Event Anchor Jaipur" },
+      { "@type": "Offer", "name": "Birthday Party Anchor Jaipur" },
+      { "@type": "Offer", "name": "Farmhouse Wedding Anchor Ajmer Road" },
+      { "@type": "Offer", "name": "Palace Wedding Anchor Kukas Amer Road" },
+      { "@type": "Offer", "name": "Corporate Anchor JECC Sitapura" },
+      { "@type": "Offer", "name": "Haldi Games Host Jaipur" },
+      { "@type": "Offer", "name": "Mehendi Ceremony Host Jaipur" }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "200",
+    "bestRating": "5"
+  },
+  "sameAs": [
+    "https://www.instagram.com/anchor_yash_official",
+    "https://www.instagram.com/best_anchor_jaipur",
+    "https://www.youtube.com/@anchor_yash",
+    "https://www.wedmegood.com/profile/anchor-yash-25628297",
+    "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"
+  ]
+};
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yash Soni",
+  "jobTitle": "Premium Event Anchor & Emcee",
+  "description": "Best anchor in Jaipur with 1100+ events hosted. Expert in luxury weddings, Sangeet ceremonies, corporate events, and destination weddings across Rajasthan.",
+  "url": "https://yashsoni.in",
+  "image": "https://yashsoni.in/og-image.jpg",
+  "telephone": "+917737877978",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Anchor Yash Soni"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jaipur",
+    "addressRegion": "Rajasthan",
+    "addressCountry": "IN"
+  },
+  "knowsLanguage": ["Hindi", "English", "Rajasthani"],
+  "sameAs": [
+    "https://www.instagram.com/anchor_yash_official",
+    "https://www.youtube.com/@anchor_yash"
+  ]
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yashsoni.in"
+    }
+  ]
+};
+// ═══════════════════════════════════════════════════════════
+// ROOT LAYOUT
+// ═══════════════════════════════════════════════════════════
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en-IN" className={`scroll-smooth ${playfair.variable} ${cormorant.variable}`}>
+      <head>
+        {/* ── GEO META TAGS (Critical for local search) ── */}
+        <meta name="geo.region" content="IN-RJ" />
+        <meta name="geo.placename" content="Jaipur, Rajasthan, India" />
+        <meta name="geo.position" content="26.9124;75.7873" />
+        <meta name="ICBM" content="26.9124, 75.7873" />
+        {/* ── THEME COLOR ── */}
+        <meta name="theme-color" content="#020202" />
+        {/* ── JSON-LD SCHEMAS (inline = crawled immediately) ── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      </head>
+      <body className="bg-black text-white antialiased relative">
+        {/* ── FIXED NAVBAR ── */}
+        <header className="fixed top-0 left-0 w-full z-[10000]">
+          <Navbar />
+        </header>
+        {/* ── MAIN CONTENT ── */}
+        <main id="main-content" className="min-h-screen relative z-0 pt-20 md:pt-24 lg:pt-28">
+          {children}
+        </main>
+        <Footer />
+        <FloatingContact />
+      </body>
+      {/* ── GOOGLE ANALYTICS ── */}
+      <GoogleAnalytics gaId="G-JYPPJ3TDHB" />
+    </html>
+  );
+}
