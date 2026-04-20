@@ -36,7 +36,7 @@ const ScrollReveal = ({ children, delay = 0, className = "" }) => (
 const G = ({ children, className = "" }) => (
   <span
     className={`bg-clip-text text-transparent bg-cover bg-center sparkle-text ${className}`}
-    style={{ backgroundImage: "url('/gold-texture.webp')", backgroundColor: "#D4AF37" }}
+    style={{ backgroundImage: "linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)", backgroundColor: "#D4AF37" }}
   >
     {children}
   </span>

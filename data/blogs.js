@@ -1,9 +1,16 @@
+import { NEW_BLOGS_BATCH_1 } from './blogs_14_15';
+import { NEW_BLOGS_BATCH_2 } from './blogs_16_17';
+import { NEW_BLOGS_BATCH_3 } from './blogs_18_19';
+import { NEW_BLOGS_BATCH_4 } from './blogs_20_21';
+import { NEW_BLOGS_BATCH_5 } from './blogs_22_23';
+import { NEW_BLOGS_BATCH_6 } from './blogs_24';
+
 // ===================================================
 // MASTER BLOG DATA - YASHSONI.IN
-// All 13 Blogs Combined into a Single Array (PART 1)
+// All Blogs Combined into a Single Array
 // ===================================================
 
-export const BLOG_POSTS = [
+const OLD_BLOGS = [
 
   // ==========================================
   // BLOG 1: SANGEET CEREMONY GUIDE
@@ -1522,6 +1529,16 @@ Also available for [team building events](https://yashsoni.in/team-building-host
 Call or WhatsApp: 7737877978 | Website: www.yashsoni.in`
   }
 
+];
+
+export const BLOG_POSTS = [
+  ...OLD_BLOGS,
+  ...NEW_BLOGS_BATCH_1,
+  ...NEW_BLOGS_BATCH_2,
+  ...NEW_BLOGS_BATCH_3,
+  ...NEW_BLOGS_BATCH_4,
+  ...NEW_BLOGS_BATCH_5,
+  ...NEW_BLOGS_BATCH_6
 ];
 
 export default BLOG_POSTS;

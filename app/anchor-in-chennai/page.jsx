@@ -21,7 +21,7 @@ const css = `
 const G = ({ children }) => (
   <span
     className="bg-clip-text text-transparent bg-cover bg-center"
-    style={{ backgroundImage: "url('/gold-texture.webp')", backgroundColor: GOLD }}
+    style={{ backgroundImage: "linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)", backgroundColor: GOLD }}
   >
     {children}
   </span>
@@ -248,7 +248,7 @@ export default function ChennaiPage() {
               <span className="block text-white text-[15vw] md:text-[11vw] lg:text-[8.5rem] opacity-90 drop-shadow-2xl">ANCHOR</span>
               <span
                 className="block text-[14vw] md:text-[10vw] lg:text-[7.5rem] bg-clip-text text-transparent bg-cover bg-center mt-2 pb-4"
-                style={{ backgroundImage: "url('/gold-texture.webp')" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)" }}
               >
                 CHENNAI
               </span>

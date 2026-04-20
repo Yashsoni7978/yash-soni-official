@@ -29,7 +29,7 @@ const css = `
 const G = ({ children, serif = false, shimmer = false }) => (
   <span
     className={`bg-clip-text text-transparent bg-cover bg-center ${shimmer ? "shimmer" : ""} ${serif ? "serif" : ""}`}
-    style={{ backgroundImage: "url('/gold-texture.webp')", backgroundColor: "#D4AF37" }}
+    style={{ backgroundImage: "linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)", backgroundColor: "#D4AF37" }}
   >
     {children}
   </span>

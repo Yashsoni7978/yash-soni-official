@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Gradient Demo</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+        h1 {
+            color: white;
+            margin-bottom: 40px;
+        }
+        .demo-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            width: 300px;
+            height: 250px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+        .card h2 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #000;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .card p {
+            color: rgba(0,0,0,0.8);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Gradient 1: Classic Royal Gold */
+        .gold-classic {
+            background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        }
+
+        /* Gradient 2: Subtle Metallic Gold */
+        .gold-subtle {
+            background: linear-gradient(135deg, #C5A059, #DFCH8, #D4AF37, #E6D089, #B89241);
+        }
+
+        /* Gradient 3: High Contrast Luxury Gold */
+        .gold-high-contrast {
+            background: linear-gradient(135deg, #8A5A19, #E8C372, #D4AF37, #FDF0A6, #8A5A19);
+        }
+
+        /* Gradient 4: Soft Matte Gold */
+        .gold-matte {
+            background: linear-gradient(135deg, #D4AF37, #E2CA76, #C5A03A);
+        }
+        
+        /* Gradient 4: Rose Gold */
+        .gold-rose {
+            background: linear-gradient(135deg, #B76E79, #E0BFB8, #C07C88, #F0E6D2, #C07C88);
+        }
+
+        /* Gradient 5: Pale Platinum Gold */
+        .gold-platinum {
+            background: linear-gradient(135deg, #E5E4E2, #FAF9F6, #D4CFC7, #F2EFE9, #B5B2AB);
+        }
+
+        /* Gradient 6: 3D Gleaming Gold (Sharp shine) */
+        .gold-gleaming {
+            background: linear-gradient(135deg, #B38728 0%, #FBF5B7 40%, #FDFFE1 50%, #FBF5B7 60%, #AA771C 100%);
+        }
+
+        /* Gradient 7: Deep Antique Bronze */
+        .gold-bronze {
+            background: linear-gradient(135deg, #604020, #A88143, #7A542E, #C7A263, #604020);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Pick Your Premium Gold CSS Gradient</h1>
+    
+    <div class="demo-container">
+        
+        <div class="card gold-classic">
+            <h2>Option 1</h2>
+            <p>Classic Royal Gold</p>
+            <p style="font-family: monospace; font-size: 10px; margin-top: 20px;">linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)</p>
+        </div>
+
+        <div class="card gold-high-contrast">
+            <h2>Option 2</h2>
+            <p>High Contrast Luxury</p>
+            <p style="font-family: monospace; font-size: 10px; margin-top: 20px;">linear-gradient(135deg, #8A5A19, #E8C372, #D4AF37, #FDF0A6, #8A5A19)</p>
+        </div>
+
+        <div class="card gold-matte">
+            <h2>Option 3</h2>
+            <p>Soft Matte Gold</p>
+            <p style="font-family: monospace; font-size: 10px; margin-top: 20px;">linear-gradient(135deg, #D4AF37, #E2CA76, #C5A03A)</p>
+        </div>
+
+        <div class="card gold-rose">
+            <h2>Option 4</h2>
+            <p>Rose Gold (Luxury Wedding)</p>
+            <p style="font-family: monospace; font-size: 10px; margin-top: 20px;">linear-gradient(135deg, #B76E79, #E0BFB8, #C07C88, #F0E6D2, #C07C88)</p>
+        </div>
+
+        <div class="card gold-platinum">
+            <h2>Option 5</h2>
+            <p>Pale Platinum Gold</p>
+            <p style="font-family: monospace; font-size: 10px; margin-top: 20px;">linear-gradient(135deg, #E5E4E2, #FAF9F6, #D4CFC7, #F2EFE9, #B5B2AB)</p>
+        </div>
+
+        <div class="card gold-gleaming">
+            <h2>Option 6</h2>
+            <p>3D Gleaming Gold (Sharp Shine)</p>
+            <p style="font-family: monospace; font-size: 10px; margin-top: 20px;">linear-gradient(135deg, #B38728 0%, #FBF5B7 40%, #FDFFE1 50%, ...)</p>
+        </div>
+
+        <div class="card gold-bronze">
+            <h2>Option 7</h2>
+            <p>Deep Antique Bronze</p>
+            <p style="font-family: monospace; font-size: 10px; margin-top: 20px;">linear-gradient(135deg, #604020, #A88143, #7A542E, #C7A263, #604020)</p>
+        </div>
+
+    </div>
+</body>
+</html>
