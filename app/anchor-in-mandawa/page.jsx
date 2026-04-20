@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
@@ -233,11 +234,7 @@ export default function MandawaPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/bride-groom-fort-shoot.webp"
-            alt="Best Anchor in Mandawa — Shekhawati fresco havelis at twilight"
-            className="w-full h-full object-cover slow-zoom"
-          />
+          <Image src="/bride-groom-fort-shoot.webp" alt="Best Anchor in Mandawa — Shekhawati fresco havelis at twilight" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -326,13 +323,11 @@ export default function MandawaPage() {
             </Reveal>
             <div className="grid grid-cols-2 gap-4">
               <Reveal className="mt-12">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group">
-                  <img src="/intro-portrait-top.webp" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" alt="Yash Soni Anchor" />
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group relative"><Image src="/intro-portrait-top.webp" alt="Yash Soni Anchor" fill sizes="(max-width:768px) 50vw, 30vw" className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
                 </div>
               </Reveal>
               <Reveal>
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group">
-                  <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" alt="Anchor Yash in Mandawa" />
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group relative"><Image src="/intro-portrait-bottom.webp" alt="Anchor Yash in Mandawa" fill sizes="(max-width:768px) 50vw, 30vw" className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
                 </div>
               </Reveal>
             </div>
@@ -497,12 +492,8 @@ export default function MandawaPage() {
           {[...Array(3)].map((_, r) => (
             <div key={r} className="flex gap-5 shrink-0">
               {["/gallery-3.webp","/gallery-1.webp","/gallery-5.webp","/gallery-2.webp","/gallery-4.webp"].map((src, i) => (
-                <div key={i} className="w-56 h-72 md:w-72 md:h-96 rounded-2xl overflow-hidden border border-white/8 shrink-0">
-                  <img
-                    src={src}
-                    alt={`Anchor Yash Soni Mandawa Shekhawati event ${i + 1}`}
-                    className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-                  />
+                <div key={i} className="w-56 h-72 md:w-72 md:h-96 rounded-2xl overflow-hidden border border-white/8 shrink-0 relative">
+                  <Image src={src} alt={`Anchor Yash Soni Mandawa Shekhawati event ${i + 1}`} fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
                 </div>
               ))}
             </div>
@@ -515,11 +506,7 @@ export default function MandawaPage() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="aspect-video rounded-2xl overflow-hidden border border-[#D4AF37]/20 relative group">
-              <img
-                src="/bride-groom-fort-shoot.webp"
-                alt="Mandawa Shekhawati Fresco Heritage"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-              />
+              <Image src="/bride-groom-fort-shoot.webp" alt="Mandawa Shekhawati Fresco Heritage" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest mb-1">Mandawa · Shekhawati · The Open-Air Gallery</p>

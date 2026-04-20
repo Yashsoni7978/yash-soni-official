@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
@@ -211,8 +212,7 @@ export default function ChittorgarhPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src="/bride-groom-fort-shoot.webp" alt="Best Anchor in Chittorgarh — Rajput Fort of Honour at dusk" className="w-full h-full object-cover slow-zoom" />
+        <div className="absolute inset-0 z-0"><div class="relative w-full h-full"><Image src="/bride-groom-fort-shoot.webp" alt="Best Anchor in Chittorgarh — Rajput Fort of Honour at dusk" fill priority sizes="100vw" className="object-cover slow-zoom" /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -283,13 +283,11 @@ export default function ChittorgarhPage() {
             </Reveal>
             <div className="grid grid-cols-2 gap-4">
               <Reveal className="mt-12">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group">
-                  <img src="/intro-portrait-top.webp" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" alt="Yash Soni Anchor" />
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group relative"><Image src="/intro-portrait-top.webp" alt="Yash Soni Anchor" fill sizes="(max-width:768px) 50vw, 30vw" className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
                 </div>
               </Reveal>
               <Reveal>
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group">
-                  <img src="/intro-portrait-bottom.webp" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" alt="Anchor Yash at Chittorgarh" />
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group relative"><Image src="/intro-portrait-bottom.webp" alt="Anchor Yash at Chittorgarh" fill sizes="(max-width:768px) 50vw, 30vw" className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
                 </div>
               </Reveal>
             </div>
@@ -436,8 +434,8 @@ export default function ChittorgarhPage() {
           {[...Array(3)].map((_, r) => (
             <div key={r} className="flex gap-5 shrink-0">
               {["/gallery-1.webp","/gallery-5.webp","/gallery-3.webp","/gallery-2.webp","/gallery-4.webp"].map((src, i) => (
-                <div key={i} className="w-56 h-72 md:w-72 md:h-96 rounded-2xl overflow-hidden border border-white/8 shrink-0">
-                  <img src={src} alt={`Anchor Yash Soni Chittorgarh heritage event ${i + 1}`} className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
+                <div key={i} className="w-56 h-72 md:w-72 md:h-96 rounded-2xl overflow-hidden border border-white/8 shrink-0 relative">
+                  <Image src={src} alt={`Anchor Yash Soni Chittorgarh heritage event ${i + 1}`} fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
                 </div>
               ))}
             </div>
@@ -449,8 +447,7 @@ export default function ChittorgarhPage() {
       <section className="py-20 md:py-28 px-5 md:px-12 bg-zinc-950 border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
-            <div className="aspect-video rounded-2xl overflow-hidden border border-[#D4AF37]/20 relative group">
-              <img src="/bride-groom-fort-shoot.webp" alt="Chittorgarh Fort Scale" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+            <div className="aspect-video rounded-2xl overflow-hidden border border-[#D4AF37]/20 relative group"><Image src="/bride-groom-fort-shoot.webp" alt="Chittorgarh Fort Scale" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest mb-1">Chittorgarh · India's Fort of Honour</p>

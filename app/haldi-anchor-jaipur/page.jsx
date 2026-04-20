@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -167,7 +168,7 @@ export default function HaldiAnchor() {
          <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                <div className="relative h-[600px] group rounded-3xl overflow-hidden border border-yellow-500/30 shadow-2xl">
-                  <img src="/gallery-3.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="High Energy Haldi Event Anchor Hosting Games" loading="lazy" />
+                  <Image src="/gallery-3.webp" alt="High Energy Haldi Event Anchor Hosting Games" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-10">
                       <h3 className="text-5xl font-display font-black text-yellow-400 mb-4 drop-shadow-lg">The Experience</h3>

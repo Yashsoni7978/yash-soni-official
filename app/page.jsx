@@ -215,7 +215,9 @@ export default function HomePage() {
           <Image
             src="/hero-slide-1.webp"
             alt="Anchor Yash Soni hosting a premium live event on stage"
-            fill priority quality={90}
+            fill priority
+            sizes="100vw"
+            quality={75}
             className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
@@ -250,12 +252,18 @@ export default function HomePage() {
             {/* CTAs — stacked on mobile, side by side on md+ */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-black font-bold text-base rounded-full hover:bg-white transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                <button 
+                  aria-label="Secure your date via WhatsApp"
+                  className="w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-black font-bold text-base rounded-full hover:bg-white transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+                >
                   SECURE YOUR DATE →
                 </button>
               </a>
               <Link href="/portfolio" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto px-8 py-4 border-2 border-[#D4AF37]/60 text-[#D4AF37] font-bold text-base rounded-full hover:bg-[#D4AF37]/10 transition-all hover:scale-105 flex items-center justify-center gap-3">
+                <button 
+                  aria-label="View portfolio"
+                  className="w-full sm:w-auto px-8 py-4 border-2 border-[#D4AF37]/60 text-[#D4AF37] font-bold text-base rounded-full hover:bg-[#D4AF37]/10 transition-all hover:scale-105 flex items-center justify-center gap-3"
+                >
                   <Play size={16} fill="currentColor" /> VIEW PORTFOLIO
                 </button>
               </Link>
@@ -312,12 +320,26 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3 md:gap-4">
               <ScrollReveal delay={0.15}>
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 group transition-all duration-500">
-                  <Image src="/intro-portrait-top.webp" alt="Anchor Yash Soni professional portrait" fill quality={100} className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <Image 
+                    src="/intro-portrait-top.webp" 
+                    alt="Anchor Yash Soni professional portrait" 
+                    fill 
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    quality={70} 
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={0.25} className="mt-8 md:mt-12">
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 group transition-all duration-500">
-                  <Image src="/intro-portrait-bottom.webp" alt="Anchor Yash Soni engaging with a wedding crowd" fill quality={100} className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <Image 
+                    src="/intro-portrait-bottom.webp" 
+                    alt="Anchor Yash Soni engaging with a wedding crowd" 
+                    fill 
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    quality={70} 
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
                 </div>
               </ScrollReveal>
             </div>
@@ -363,7 +385,14 @@ export default function HomePage() {
               <ScrollReveal key={i} delay={i * 0.12}>
                 <Link href={s.href}>
                   <div className="relative h-[440px] md:h-[520px] rounded-2xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.25)] cursor-pointer">
-                    <Image src={s.img} alt={`${s.title} — Anchor Yash Soni`} fill quality={100} className="object-cover transition-transform duration-700 group-hover:scale-108" />
+                    <Image 
+                      src={s.img} 
+                      alt={`${s.title} — Anchor Yash Soni`} 
+                      fill 
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={70} 
+                      className="object-cover transition-transform duration-700 group-hover:scale-108" 
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent opacity-90 group-hover:opacity-75 transition-opacity" />
                     <div className="absolute top-4 left-4">
                       <span className="text-[10px] uppercase tracking-widest bg-[#D4AF37] text-black px-3 py-1 rounded-full font-bold">{s.tag}</span>
@@ -468,7 +497,10 @@ export default function HomePage() {
                 ))}
               </div>
               <Link href="/anchor-in-jaipur">
-                <button className="px-7 py-3 bg-[#D4AF37] text-black text-sm font-bold rounded-full hover:bg-white transition-all inline-flex items-center gap-2">
+                <button 
+                  aria-label="See why clients choose Yash"
+                  className="px-7 py-3 bg-[#D4AF37] text-black text-sm font-bold rounded-full hover:bg-white transition-all inline-flex items-center gap-2"
+                >
                   See Why Clients Choose Yash <ArrowRight size={14} />
                 </button>
               </Link>
@@ -545,7 +577,9 @@ export default function HomePage() {
                 <Image
                   src={img}
                   alt={`Anchor Yash Soni live moment ${(i % 6) + 1}`}
-                  fill quality={100}
+                  fill 
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  quality={65}
                   className="object-cover transition-transform duration-700 group-hover:scale-108 grayscale group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

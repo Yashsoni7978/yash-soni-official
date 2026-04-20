@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -248,7 +249,7 @@ const RoyalBenefitCard = ({ icon, title, desc }) => (
 );
 const VenueCard = ({ name, img, span = "", highlight = false }) => (
   <div className={`relative group overflow-hidden rounded-2xl border ${highlight ? "border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.15)]" : "border-[#D4AF37]/20"} ${span}`}>
-    <img src={img} alt={name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+    <Image src={img} alt={name} fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
     <div className="absolute inset-0 border-2 border-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-400 m-2 rounded-xl pointer-events-none" />
     <p className="absolute bottom-4 left-4 text-white text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">{name}</p>
@@ -319,9 +320,6 @@ export default function JaipurAnchor() {
       {/* Schemas in body — this is correct for Next.js App Router */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
-      {/* Subtle bg texture */}
-      <div className="fixed inset-0 pointer-events-none opacity-[0.04]"
-        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/arabesque.png')" }} />
       {/* ══════════════════════════════════════
           BREADCRUMB
       ══════════════════════════════════════ */}
@@ -338,11 +336,7 @@ export default function JaipurAnchor() {
       <section className="relative min-h-screen pt-16 pb-20 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-[#050505]/30 z-10" />
-          <img
-            src="/service-corporate.webp"
-            className="w-full h-full object-cover slow-zoom"
-            alt="Anchor Yash Soni — best anchor in Jaipur hosting a premium event"
-          />
+          <Image src="/service-corporate.webp" alt="Anchor Yash Soni — best anchor in Jaipur hosting a premium event" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
         </div>
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
@@ -432,28 +426,28 @@ export default function JaipurAnchor() {
         <SectionHeading subtitle="Event Portfolio" title="Unforgettable Moments in The Pink City." />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[250px]">
           <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
-            <img src="/gallery-1.webp" alt="Anchor Yash Soni hosting Haldi ceremony in Jaipur" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/gallery-1.webp" alt="Anchor Yash Soni hosting Haldi ceremony in Jaipur" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
-            <img src="/gallery-2.webp" alt="Best anchor in Jaipur crowd interaction at destination wedding" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/gallery-2.webp" alt="Best anchor in Jaipur crowd interaction at destination wedding" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
-            <img src="/gallery-3.webp" alt="Sangeet anchor Jaipur high energy crowd" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/gallery-3.webp" alt="Sangeet anchor Jaipur high energy crowd" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
-            <img src="/gallery-4.webp" alt="Corporate event anchor Jaipur on stage" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/gallery-4.webp" alt="Corporate event anchor Jaipur on stage" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
-            <img src="/gallery-5.webp" alt="Anchor Yash Soni Varmala ceremony Jaipur" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/gallery-5.webp" alt="Anchor Yash Soni Varmala ceremony Jaipur" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
           </div>
           {/* Extra image added */}
           <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
-            <img src="/gallery-5.webp" alt="Anchor in Jaipur luxury wedding venue" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/gallery-5.webp" alt="Anchor in Jaipur luxury wedding venue" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
           </div>
         </div>
@@ -469,7 +463,7 @@ export default function JaipurAnchor() {
               <Reveal key={i} delay={i * 0.07}>
                 <Link href={s.href}>
                   <div className="relative h-[280px] md:h-[320px] rounded-2xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all cursor-pointer">
-                    <img src={s.img} alt={`${s.title} — anchor in Jaipur`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 grayscale group-hover:grayscale-0" />
+                    <Image src={s.img} alt={`${s.title} — anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                     <div className="absolute top-4 left-4">
                       <span className="text-[9px] uppercase tracking-widest bg-[#D4AF37] text-black px-2.5 py-1 rounded-full font-bold">Jaipur</span>

@@ -8,12 +8,14 @@ import Script from "next/script";
 import FloatingContact from "../components/FloatingContact";
 
 import { Playfair_Display, Cormorant_Garamond } from "next/font/google";
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
   weight: ["400", "700", "900"],
 });
+
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
@@ -21,9 +23,9 @@ const cormorant = Cormorant_Garamond({
   weight: ["300", "400", "600"],
   style: ["normal", "italic"],
 });
+
 // ═══════════════════════════════════════════════════════════
 // GLOBAL SEO METADATA — SERVER COMPONENT
-// All metadata lives here. Never put metadata in client components.
 // ═══════════════════════════════════════════════════════════
 export const metadata = {
   metadataBase: new URL('https://yashsoni.in'),
@@ -56,11 +58,9 @@ export const metadata = {
   ],
   authors: [{ name: "Yash Soni", url: "https://yashsoni.in" }],
   creator: "Yash Soni",
-  // ── CANONICAL & ALTERNATES ──
   alternates: {
     canonical: 'https://yashsoni.in',
   },
-  // ── ROBOTS ──
   robots: {
     index: true,
     follow: true,
@@ -72,7 +72,6 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  // ── OPEN GRAPH ──
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -87,25 +86,24 @@ export const metadata = {
       alt: "Anchor Yash Soni — Best Anchor in Jaipur on stage",
     }],
   },
-  // ── TWITTER ──
   twitter: {
     card: "summary_large_image",
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description: "1100+ events. Jaipur's most commanding anchor for weddings, corporate events & Sangeets.",
     images: ["/og-image.jpg"],
   },
-  // ── GSC VERIFICATION ── Add your token from search.google.com/search-console
-  verification: {
-    google: "YOUR_GSC_TOKEN_HERE",
-  },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  verification: {
+    google: "yashsoniaudit",
   }
 };
+
 // ═══════════════════════════════════════════════════════════
 // JSON-LD SCHEMAS
-// Injected server-side so Google crawls instantly
 // ═══════════════════════════════════════════════════════════
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -144,32 +142,8 @@ const localBusinessSchema = {
     { "@type": "Country", "name": "India" }
   ],
   "serviceType": [
-    "Wedding Anchor",
-    "Sangeet Host",
-    "Corporate Event Anchor",
-    "Birthday Party Anchor",
-    "Haldi Games Host",
-    "Mehendi Anchor",
-    "Farmhouse Wedding Host",
-    "VIP Event Emcee",
-    "Destination Wedding Anchor",
-    "Award Night Host"
+    "Wedding Anchor", "Sangeet Host", "Corporate Event Anchor", "Birthday Party Anchor", "Haldi Games Host", "Mehendi Anchor", "Farmhouse Wedding Host", "VIP Event Emcee", "Destination Wedding Anchor", "Award Night Host"
   ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Event Anchoring Services in Jaipur",
-    "itemListElement": [
-      { "@type": "Offer", "name": "Wedding Ceremony Anchor Jaipur" },
-      { "@type": "Offer", "name": "Sangeet & Mehndi Host Jaipur" },
-      { "@type": "Offer", "name": "Corporate Event Anchor Jaipur" },
-      { "@type": "Offer", "name": "Birthday Party Anchor Jaipur" },
-      { "@type": "Offer", "name": "Farmhouse Wedding Anchor Ajmer Road" },
-      { "@type": "Offer", "name": "Palace Wedding Anchor Kukas Amer Road" },
-      { "@type": "Offer", "name": "Corporate Anchor JECC Sitapura" },
-      { "@type": "Offer", "name": "Haldi Games Host Jaipur" },
-      { "@type": "Offer", "name": "Mehendi Ceremony Host Jaipur" }
-    ]
-  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -184,6 +158,7 @@ const localBusinessSchema = {
     "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"
   ]
 };
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -209,6 +184,7 @@ const personSchema = {
     "https://www.youtube.com/@anchor_yash"
   ]
 };
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -221,6 +197,7 @@ const breadcrumbSchema = {
     }
   ]
 };
+
 // ═══════════════════════════════════════════════════════════
 // ROOT LAYOUT
 // ═══════════════════════════════════════════════════════════
@@ -228,14 +205,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN" className={`scroll-smooth ${playfair.variable} ${cormorant.variable}`}>
       <head>
-        {/* ── GEO META TAGS (Critical for local search) ── */}
         <meta name="geo.region" content="IN-RJ" />
         <meta name="geo.placename" content="Jaipur, Rajasthan, India" />
         <meta name="geo.position" content="26.9124;75.7873" />
         <meta name="ICBM" content="26.9124, 75.7873" />
-        {/* ── THEME COLOR ── */}
         <meta name="theme-color" content="#020202" />
-        {/* ── JSON-LD SCHEMAS (inline = crawled immediately) ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -250,19 +224,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-black text-white antialiased relative">
-        {/* ── FIXED NAVBAR ── */}
         <header className="fixed top-0 left-0 w-full z-[10000]">
           <Navbar />
         </header>
-        {/* ── MAIN CONTENT ── */}
         <main id="main-content" className="min-h-screen relative z-0 pt-20 md:pt-24 lg:pt-28">
           {children}
         </main>
         <Footer />
         <FloatingContact />
+        <GoogleAnalytics gaId="G-JYPPJ3TDHB" />
       </body>
-      {/* ── GOOGLE ANALYTICS ── */}
-      <GoogleAnalytics gaId="G-JYPPJ3TDHB" />
     </html>
   );
 }
