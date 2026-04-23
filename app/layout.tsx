@@ -31,7 +31,7 @@ export const metadata = {
   metadataBase: new URL('https://yashsoni.in'),
   title: {
     default: "Best Anchor in Jaipur | Anchor Yash Soni — Wedding, Corporate & Event Host",
-    template: "%s | Anchor Yash Soni — Jaipur"
+    template: "%s | Yash Soni"
   },
   description: "Looking for the best anchor in Jaipur? Anchor Yash Soni has hosted 1100+ events — from palace weddings in Kukas & Amer Road to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura. Jaipur's most trusted event host.",
   keywords: [
@@ -59,7 +59,7 @@ export const metadata = {
   authors: [{ name: "Yash Soni", url: "https://yashsoni.in" }],
   creator: "Yash Soni",
   alternates: {
-    canonical: 'https://yashsoni.in',
+    canonical: './',
   },
   robots: {
     index: true,

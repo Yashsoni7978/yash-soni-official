@@ -19,7 +19,7 @@ const staggerContainer = {
   },
 };
 
-export default function ArtistManagementJaipur() {
+export default function SangeetDecorationJaipur() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -50,10 +50,10 @@ export default function ArtistManagementJaipur() {
             The Jaipur Standard
           </span>
           <h1 className="font-['Runiga'] text-5xl md:text-7xl lg:text-[100px] leading-[0.85] text-[#1A1A1A] mb-8">
-            Curating Global Talent
+            The Sangeet Spectacle
           </h1>
           <p className="font-['Amandine'] text-3xl md:text-5xl text-[#D4AF37] mb-10">
-            Premium artist and celebrity management
+            High-octane Sangeet stage design & decoration
           </p>
           <a href="#contact" className="inline-block font-['Rekalgera'] uppercase tracking-[0.2em] text-xs md:text-sm bg-[#1A1A1A] text-[#FAF9F6] px-10 py-5 hover:bg-[#097969] transition-all duration-500 hover:shadow-[0_0_30px_rgba(9,121,105,0.4)]">
             Design Your Event
@@ -505,7 +505,7 @@ export default function ArtistManagementJaipur() {
       <section className="py-12 bg-[#1A1A1A] text-center px-6">
         <div className="max-w-5xl mx-auto border-t border-[#FAF9F6]/10 pt-12">
           <p className="font-sans text-[10px] md:text-xs text-[#FAF9F6]/30 leading-loose text-justify text-balance">
-            Jaipur's leading artist management agency. We secure A-list celebrities, global performers, and elite live bands for luxury weddings and corporate galas. Artist Management Agency Jaipur execution managed by Anchor Yash Soni across Rambagh Palace, Fairmont, and elite destinations.
+            Mind-blowing Sangeet decoration in Jaipur. We design massive crystal stages, dynamic lighting arrays, and mirror-work setups for elite celebrations. Sangeet Decoration Jaipur execution managed by Anchor Yash Soni across Rambagh Palace, Fairmont, and elite destinations.
           </p>
         </div>
       </section>

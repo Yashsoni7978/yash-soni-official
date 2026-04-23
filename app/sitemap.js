@@ -1,156 +1,60 @@
-// app/sitemap.js
-// ─────────────────────────────────────────────────────────────
-// Dynamic sitemap — auto-updates when new blog posts are added.
-// Served at https://yashsoni.in/sitemap.xml by Next.js.
-// ─────────────────────────────────────────────────────────────
+import fs from 'fs';
+import path from 'path';
 
-import { BLOG_POSTS } from '../data/blogs';
+const BASE_URL = 'https://yashsoni.in';
 
-const BASE = 'https://yashsoni.in';
-const NOW  = new Date().toISOString();
+// Pages to exclude from sitemap (no-index, API routes, internal components, etc.)
+const EXCLUDE = ['api', '_components', 'locations', 'favicon.ico', 'icon.png', 'apple-icon.png', 'opengraph-image.png', 'twitter-image.png', 'robots.txt'];
+
+function getRoutes(dir, base = '') {
+  const routes = [];
+  if (!fs.existsSync(dir)) return routes;
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    if (EXCLUDE.includes(entry.name)) continue;
+    if (entry.name.startsWith('(')) continue; // route groups
+    if (entry.name.startsWith('[')) continue; // dynamic routes handled separately
+
+    const routePath = `${base}/${entry.name}`;
+    const pagePath = path.join(dir, entry.name, 'page.jsx');
+    const pageTsx  = path.join(dir, entry.name, 'page.tsx');
+
+    if (fs.existsSync(pagePath) || fs.existsSync(pageTsx)) {
+      routes.push(routePath);
+    }
+    
+    // Recursive scan for nested routes
+    routes.push(...getRoutes(path.join(dir, entry.name), routePath));
+  }
+  return routes;
+}
+
+// SEO Priority Scoring Logic
+function getPriority(route) {
+  if (route === '/') return '1.0';
+  if (route.includes('anchor-in-rajasthan')) return '1.0';
+  if (route.includes('anchor-in-jaipur'))    return '0.9';
+  if (route.startsWith('/anchor-in-'))       return '0.9';
+  if (route.startsWith('/blog/'))            return '0.6';
+  return '0.8';
+}
 
 export default function sitemap() {
+  const appDir = path.join(process.cwd(), 'app');
+  const staticRoutes = getRoutes(appDir);
 
-  // ── TIER 1: Homepage (1.0) ────────────────────────────────
-  const homepage = [
-    {
-      url: BASE,
-      lastModified: NOW,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-  ];
+  // Pull blog slugs from data file
+  const { BLOG_POSTS } = require('../data/blogs.js');
+  const blogRoutes = BLOG_POSTS.map(b => `/blog/${b.slug}`);
 
-  // ── TIER 2: Money pages (0.9) ─────────────────────────────
-  // Pages with direct booking intent — highest crawl priority.
-  // /best-anchor-in-jaipur was missing from old sitemap — fixed.
-  const moneyPages = [
-    '/best-anchor-in-jaipur',
-    '/anchor-in-jaipur',
-    '/wedding-anchor-jaipur',
-    '/sangeet-anchor-jaipur',
-    '/haldi-anchor-jaipur',
-    '/mehendi-anchor-jaipur',
-    '/corporate-event-anchor-jaipur',
-    '/destination-wedding-anchor',
-    '/anchor-for-birthday-party-jaipur',
-    '/engagement-roka-ceremony-anchor',
-    '/award-night-anchor-jaipur',
-    '/locations',
-  ].map(route => ({
-    url: `${BASE}${route}`,
-    lastModified: NOW,
-    changeFrequency: 'weekly',
-    priority: 0.9,
+  const allRoutes = ['/', ...staticRoutes, ...blogRoutes];
+
+  return [...new Set(allRoutes)].map(route => ({
+    url: `${BASE_URL}${route}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: route === '/' ? 'daily' : 'weekly',
+    priority: getPriority(route),
   }));
-
-  // ── TIER 3: Brand pages (0.8) ─────────────────────────────
-  const brandPages = [
-    '/about',
-    '/portfolio',
-    '/contact',
-  ].map(route => ({
-    url: `${BASE}${route}`,
-    lastModified: NOW,
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  }));
-
-  // ── TIER 4: Supporting service pages (0.7) ────────────────
-  const supportPages = [
-    '/event-management-jaipur',
-    '/event-planning-jaipur',
-    '/wedding-planning-jaipur',
-    '/event-designing',
-    '/celebrity-public-events-host',
-    '/team-building-host',
-    '/artist-management-jaipur',
-    '/blog',
-  ].map(route => ({
-    url: `${BASE}${route}`,
-    lastModified: NOW,
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }));
-
-  // ── TIER 5: Rajasthan City Pages (0.8) ───────────────────
-  // High-authority landing pages for Rajasthan's core destination cities.
-  const rajasthanLocations = [
-    '/anchor-in-udaipur',
-    '/anchor-in-jodhpur',
-    '/anchor-in-jaisalmer',
-    '/anchor-in-pushkar',
-    '/anchor-in-alwar',
-    '/anchor-in-mount-abu',
-    '/anchor-in-mandawa',
-    '/anchor-in-ranthambore',
-    '/anchor-in-kumbhalgarh',
-    '/anchor-in-kota',
-    '/anchor-in-bikaner',
-    '/anchor-in-bharatpur',
-    '/anchor-in-chittorgarh',
-  ].map(route => ({
-    url: `${BASE}${route}`,
-    lastModified: NOW,
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
-
-  // ── TIER 6: National City Pages (0.8) ────────────────────
-  const nationalLocations = [
-    '/anchor-in-agra',
-    '/anchor-in-alibaug',
-    '/anchor-in-andaman',
-    '/anchor-in-bangalore',
-    '/anchor-in-chennai',
-    '/anchor-in-coorg',
-    '/anchor-in-delhi',
-    '/anchor-in-dharamshala',
-    '/anchor-in-goa',
-    '/anchor-in-haridwar',
-    '/anchor-in-hyderabad',
-    '/anchor-in-kolkata',
-    '/anchor-in-manali',
-    '/anchor-in-mumbai',
-    '/anchor-in-mussoorie',
-    '/anchor-in-nainital',
-    '/anchor-in-neemrana',
-    '/anchor-in-ooty',
-    '/anchor-in-rishikesh',
-    '/anchor-in-shimla',
-    '/anchor-in-varanasi',
-  ].map(route => ({
-    url: `${BASE}${route}`,
-    lastModified: NOW,
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
-
-  // ── TIER 7: Blog posts (0.6) ──────────────────────────────
-  // Dynamically pulled from blogs.js — new posts appear automatically.
-  const blogPages = BLOG_POSTS.map(post => {
-    // Convert "March 01, 2026" → proper ISO date for lastModified
-    let lastMod = NOW;
-    if (post.fullDate) {
-      const parsed = new Date(post.fullDate);
-      if (!isNaN(parsed.getTime())) lastMod = parsed.toISOString();
-    }
-    return {
-      url: `${BASE}/blog/${post.slug}`,
-      lastModified: lastMod,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    };
-  });
-
-  return [
-    ...homepage,
-    ...moneyPages,
-    ...brandPages,
-    ...supportPages,
-    ...rajasthanLocations,
-    ...nationalLocations,
-    ...blogPages,
-  ];
-
 }

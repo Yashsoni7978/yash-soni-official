@@ -19,7 +19,7 @@ const staggerContainer = {
   },
 };
 
-export default function ArtistManagementJaipur() {
+export default function LuxuryEventPlanningJaipur() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -31,7 +31,7 @@ export default function ArtistManagementJaipur() {
       <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
-            src="/sangeet_hero_1776855109279.png"
+            src="/ivory_hero_wedding_1776853928413.png"
             alt="Luxury Wedding in Jaipur"
             fill
             className="object-cover object-top"
@@ -50,10 +50,10 @@ export default function ArtistManagementJaipur() {
             The Jaipur Standard
           </span>
           <h1 className="font-['Runiga'] text-5xl md:text-7xl lg:text-[100px] leading-[0.85] text-[#1A1A1A] mb-8">
-            Curating Global Talent
+            Execute The Impossible
           </h1>
           <p className="font-['Amandine'] text-3xl md:text-5xl text-[#D4AF37] mb-10">
-            Premium artist and celebrity management
+            Curating royal experiences across Rajasthan
           </p>
           <a href="#contact" className="inline-block font-['Rekalgera'] uppercase tracking-[0.2em] text-xs md:text-sm bg-[#1A1A1A] text-[#FAF9F6] px-10 py-5 hover:bg-[#097969] transition-all duration-500 hover:shadow-[0_0_30px_rgba(9,121,105,0.4)]">
             Design Your Event
@@ -505,7 +505,7 @@ export default function ArtistManagementJaipur() {
       <section className="py-12 bg-[#1A1A1A] text-center px-6">
         <div className="max-w-5xl mx-auto border-t border-[#FAF9F6]/10 pt-12">
           <p className="font-sans text-[10px] md:text-xs text-[#FAF9F6]/30 leading-loose text-justify text-balance">
-            Jaipur's leading artist management agency. We secure A-list celebrities, global performers, and elite live bands for luxury weddings and corporate galas. Artist Management Agency Jaipur execution managed by Anchor Yash Soni across Rambagh Palace, Fairmont, and elite destinations.
+            Anchor Yash Soni is widely recognized as the best luxury event planner in Jaipur, Rajasthan. Specializing in high-end destination weddings, corporate gala dinners, and VIP event management across India. Our expertise spans top heritage venues including Rambagh Palace, Taj Amer, The Oberoi Rajvilas, Fairmont Jaipur, and Umaid Bhawan Palace in Jodhpur. We offer comprehensive services including bespoke wedding decoration, floral design, royal hospitality, celebrity artist management, and end-to-end event logistics for NRI and HNI clients seeking a royal wedding experience in Rajasthan. Whether it's a Sangeet decoration in Jaipur, a Haldi ceremony in Udaipur, or an award night, our execution is unparalleled.
           </p>
         </div>
       </section>

@@ -1,512 +1,528 @@
 "use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Briefcase, Building2, CalendarCheck, Crown, Gem, Globe, Heart, MapPin, Mic2, Minus, Music, Plus, ShieldCheck, Sparkles, Star, Users } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-
-
-
-// ─────────────────────────────────────────────
-// CONFIG
-// ─────────────────────────────────────────────
-const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20looking%20for%20premium%20event%20management%20in%20Jaipur.%20I%27d%20like%20to%20discuss%20my%20event.";
-const GOLD = "#D4AF37";
-const css = `
-  @keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-  .gs{background:linear-gradient(120deg,#a8891a 0%,${GOLD} 35%,#f0d878 55%,${GOLD} 75%,#a8891a 100%);background-size:300% auto;animation:shimmer 4s linear infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-`;
-const G = ({ children, className = "" }) => (
-  <span className={`bg-clip-text text-transparent bg-cover bg-center ${className}`}
-    style={{ backgroundImage:"linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)", backgroundColor: GOLD }}>
-    {children}
-  </span>
-);
-const Reveal = ({ children, delay = 0, className = "" }) => (
-  <motion.div initial={{ opacity:0, y:28 }} whileInView={{ opacity:1, y:0 }}
-    viewport={{ once:true, margin:"-60px" }} transition={{ duration:.75, delay, ease:[.22,1,.36,1] }}
-    className={className}>
-    {children}
-  </motion.div>
-);
-const SectionHeading = ({ subtitle, title, align = "left" }) => (
-  <div className={`mb-10 md:mb-14 ${align==="center"?"text-center":"text-left"}`}>
-    <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:.6 }}>
-      <div className={`flex items-center gap-3 mb-4 ${align==="center"?"justify-center":"justify-start"}`}>
-        <Crown className="w-4 h-4 text-[#D4AF37]" />
-        <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold">{subtitle}</span>
-      </div>
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight uppercase tracking-tight">{title}</h2>
-    </motion.div>
-  </div>
-);
-const FAQItem = ({ question, answer, id }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}
-      className={`group rounded-2xl border transition-all duration-300 ${isOpen?"border-[#D4AF37]/60 bg-[#D4AF37]/5":"border-white/10 hover:border-white/20"}`}>
-      <button onClick={() => setIsOpen(o=>!o)} aria-expanded={isOpen} aria-controls={id}
-        className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none">
-        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${isOpen?"text-[#D4AF37]":"text-zinc-200 group-hover:text-white"}`}>{question}</span>
-        <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all mt-0.5 ${isOpen?"bg-[#D4AF37] text-black":"border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"}`}>
-          {isOpen ? <Minus size={14} aria-hidden="true"/> : <Plus size={14} aria-hidden="true"/>}
-        </div>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div id={id} initial={{ height:0, opacity:0 }} animate={{ height:"auto", opacity:1 }} exit={{ height:0, opacity:0 }} className="overflow-hidden">
-            <div className="px-5 md:px-6 pb-5 md:pb-6 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4">{answer}</div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
+const fadeInUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } },
 };
-// ─────────────────────────────────────────────
-// DATA
-// ─────────────────────────────────────────────
-// Real numbers — no vague stats
-const STATS = [
-  { val: "1100+", label: "Events Hosted",      sub: "Anchoring & production" },
-  { val: "70+",   label: "Corporate Brands",   sub: "National & international" },
-  { val: "4.9★",  label: "Client Rating",      sub: "200+ verified reviews" },
-  { val: "JECC",  label: "Sitapura Specialist", sub: "Largest Jaipur venue" },
-];
-const PILLARS = [
-  {
-    icon: Gem,
-    title: "Elite Vendor Sourcing",
-    desc: "We do not rely on standard vendor lists. We negotiate and source the top caterers, decorators, and technicians across India — no compromises on quality for any budget tier.",
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
   },
-  {
-    icon: ShieldCheck,
-    title: "Crisis Mitigation",
-    desc: "Events are unpredictable. Our management team anticipates logistical failures, weather changes, and schedule delays — resolving them silently while guests remain completely unaware.",
-  },
-  {
-    icon: Users,
-    title: "Hospitality & Protocol",
-    desc: "VIP airport transfers, luxury fleet coordination, 24/7 shadow teams for family members, dedicated hospitality desks. People are managed as flawlessly as the production.",
-  },
-];
-const CAPABILITIES = [
-  {
-    title: "Destination Weddings",
-    items: [
-      "Palace buyouts — Fairmont, Rambagh, Leela",
-      "Multi-day logistics management",
-      "Guest RSVP & hospitality desk",
-      "NRI & international guest coordination",
-    ],
-  },
-  {
-    title: "Corporate Galas",
-    items: [
-      "CEO summits & conferences",
-      "Product launches & brand events",
-      "Award ceremonies at JECC Sitapura",
-      "Dealer meets & annual days",
-    ],
-  },
-  {
-    title: "High-Profile Events",
-    items: [
-      "Celebrity & artist management",
-      "Private concerts & music events",
-      "Security protocol coordination",
-      "Broadcast & livestream production",
-    ],
-  },
-];
-const VENUES = [
-  { name: "JECC Sitapura",    area: "Sitapura, Jaipur",  note: "1,000+ capacity" },
-  { name: "Fairmont Jaipur",  area: "Amer Road",         note: "5-Star" },
-  { name: "Rambagh Palace",   area: "Bhawani Singh Road",note: "Heritage Palace" },
-  { name: "Leela Palace",     area: "Civil Lines",       note: "5-Star" },
-  { name: "Birla Auditorium", area: "Statue Circle",     note: "Conference" },
-  { name: "ITC Rajputana",    area: "Palace Road",       note: "5-Star" },
-];
-const TESTIMONIALS = [
-  {
-    name: "Events Head, National Brand",
-    quote: "Yash's management team handled a 3-day corporate summit at JECC Sitapura for 800 delegates. The logistics — venue setup, vendor coordination, speaker management, and hospitality — ran without a single visible glitch. Shadow management at its best.",
-    event: "Corporate Summit · JECC Sitapura, Jaipur",
-    guests: "800 delegates, 3 days",
-  },
-  {
-    name: "Singhania Family",
-    quote: "Our destination wedding had guests flying in from four countries. The hospitality desk, airport transfers, and suite allocations were managed so smoothly that our international guests thought Jaipur had a world-class concierge standard. It does — because of this team.",
-    event: "Destination Wedding · Fairmont Jaipur",
-    guests: "NRI family, 400 guests",
-  },
-  {
-    name: "Marketing Director",
-    quote: "The product launch at Marriott required artist management, a full broadcast setup, and a live audience of 300. Every element was executed on time, on brand, and on camera. The CEO asked specifically for the same team next quarter.",
-    event: "Product Launch · Marriott, JLN Marg, Jaipur",
-    guests: "300 guests, live broadcast",
-  },
-];
-const FAQS = [
-  {
-    q: "Who is the best event management company in Jaipur?",
-    a: "Anchor Yash Soni's event management service is a 4.9★ rated operation with 1,100+ events executed and 70+ national brands served. Specialisations include destination wedding management, corporate gala production at JECC Sitapura, VIP hospitality management, and shadow management for large-format events at Fairmont, Rambagh Palace, and Leela Palace Jaipur.",
-  },
-  {
-    q: "Do you only manage events in Jaipur?",
-    a: "While Jaipur is the headquarters and we hold deep relationships with all major Jaipur venues (JECC Sitapura, Fairmont, Rambagh, Leela, Birla Auditorium), we execute destination weddings and corporate galas across Rajasthan — Udaipur, Jodhpur, Jaisalmer — and nationally for the right engagements.",
-  },
-  {
-    q: "We already have a decorator. Can you just provide management?",
-    a: "Yes. Shadow Management is available as a standalone service. Our team acts as Executive Producers — overseeing your hired decorators and vendors, managing the timeline, coordinating on-ground logistics, and handling everything that goes wrong before the client notices.",
-  },
-  {
-    q: "How do you handle VIP and international guest hospitality?",
-    a: "A dedicated Hospitality Desk is deployed at the venue hotel. Luxury fleet coordination handles airport pickups and transfers. Shadow managers are assigned to VIP family members. Room allocation, welcome hampers, dietary management, and 24/7 support are all standard for high-tier bookings.",
-  },
-  {
-    q: "Can you manage celebrity artists or Bollywood performers?",
-    a: "Yes. Artist management covers complex technical riders, secure travel arrangements, green room protocols, and backstage coordination required for high-profile performers. The management team has handled celebrity appearances and live concert production across Rajasthan.",
-  },
-  {
-    q: "What is shadow management and how does it work?",
-    a: "Shadow management means deploying a dedicated coordinator to key stakeholders — typically one for the bride, one for the groom, one for each set of parents — who manages every logistical issue before it reaches the family. Guests celebrate. We manage. Shadow management is how a 400-person wedding feels effortless.",
-  },
-  {
-    q: "Do you manage corporate events at JECC Sitapura?",
-    a: "Yes. JECC Sitapura is Jaipur's largest convention centre and is a core specialisation. National brand summits, government events, annual day celebrations, award galas, and dealer meets for 500–2,000 delegates have all been executed at JECC. The venue's specific operational protocols and technical setup are well known from prior events.",
-  },
-  {
-    q: "How far in advance should we book event management in Jaipur?",
-    a: "For large-format events at palace properties and JECC Sitapura, 3–4 months minimum. For destination wedding management, 6–8 months is strongly recommended. No waitlists are maintained. Reach out via WhatsApp as soon as the venue and dates are confirmed.",
-  },
-  {
-    q: "What events do you manage and what does the scope include?",
-    a: "Full-scope management covers destination weddings, corporate summits, product launches, award ceremonies, dealer meets, annual days, private concerts, and celebrity events. Scope includes vendor sourcing and negotiation, complete timeline management, on-site team deployment, VIP hospitality, artist coordination, and real-time crisis management.",
-  },
-];
-const RELATED = [
-  { icon: Heart,    label: "Wedding Planning",  href: "/wedding-planning-jaipur",       desc: "Full planning service" },
-  { icon: Building2,label: "Corporate Anchor",  href: "/corporate-event-anchor-jaipur", desc: "Award nights & summits" },
-  { icon: Globe,    label: "Destination Wedding",href: "/destination-wedding-anchor",   desc: "Udaipur, Jodhpur, Goa" },
-  { icon: Crown,    label: "Best Anchor Jaipur", href: "/best-anchor-in-jaipur",        desc: "All formats" },
-];
-// FAQ schema
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
 };
-// ─────────────────────────────────────────────
-// MAIN PAGE
-// ─────────────────────────────────────────────
-export default function EventManagement() {
+
+export default function EventManagementJaipur() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: containerRef });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
   return (
-    <div className="bg-[#050505] text-white selection:bg-[#D4AF37] selection:text-black font-sans">
-      <style>{css}</style>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
-      <nav className="sr-only">
-        <Link href="/">Home</Link> ›
-        <Link href="/best-anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
-        <span>Event Management Jaipur</span>
-      </nav>
-      {/* ══════════════════════════════════════
-          1. HERO — local image, no Unsplash
-      ══════════════════════════════════════ */}
-      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24 px-6 md:px-20">
-        {/* FIX: next/image with local image — no Unsplash */}
-        <div className="absolute inset-0 z-0">
+    <div ref={containerRef} className="bg-[#FAF9F6] text-[#1A1A1A] w-full min-h-screen overflow-hidden selection:bg-[#D4AF37] selection:text-white">
+      
+      {/* 1. THE CINEMATIC HERO (100vh) */}
+      <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24">
+        <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
-            src="/gallery-4.webp"
-            alt="Premium event management Jaipur — Anchor Yash Soni"
-            fill priority quality={100}
-            className="object-cover"
-            sizes="100vw"
-            style={{ filter:"grayscale(15%)", opacity:.45 }}
+            src="/ivory_hero_wedding_1776853928413.png"
+            alt="Luxury Wedding in Jaipur"
+            fill
+            className="object-cover object-top"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent"/>
+        </motion.div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAF9F6] via-[#FAF9F6]/50 to-transparent"></div>
+
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          className="relative z-20 backdrop-blur-xl bg-white/60 p-8 md:p-14 lg:p-20 max-w-3xl shadow-2xl border-l-4 border-[#097969]"
+        >
+          <span className="font-['Rekalgera'] uppercase tracking-[0.3em] text-[#097969] text-xs md:text-sm mb-6 block">
+            The Jaipur Standard
+          </span>
+          <h1 className="font-['Runiga'] text-5xl md:text-7xl lg:text-[100px] leading-[0.85] text-[#1A1A1A] mb-8">
+            Flawless Event Execution
+          </h1>
+          <p className="font-['Amandine'] text-3xl md:text-5xl text-[#D4AF37] mb-10">
+            End-to-end event management in Jaipur
+          </p>
+          <a href="#contact" className="inline-block font-['Rekalgera'] uppercase tracking-[0.2em] text-xs md:text-sm bg-[#1A1A1A] text-[#FAF9F6] px-10 py-5 hover:bg-[#097969] transition-all duration-500 hover:shadow-[0_0_30px_rgba(9,121,105,0.4)]">
+            Design Your Event
+          </a>
+        </motion.div>
+      </section>
+
+      {/* 2. THE TRUST BAR */}
+      <section className="relative z-30 w-full bg-[#097969] py-8 border-y border-[#D4AF37]/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+            <span className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-sm lg:text-lg uppercase">
+              1100+ Events Hosted
+            </span>
+            <span className="hidden md:block text-[#D4AF37] opacity-60">|</span>
+            <span className="font-['Rekalgera'] text-[#D4AF37] tracking-[0.2em] text-sm lg:text-lg uppercase">
+              Heritage Venues
+            </span>
+            <span className="hidden md:block text-[#D4AF37] opacity-60">|</span>
+            <span className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-sm lg:text-lg uppercase">
+              End-to-End Execution
+            </span>
+          </div>
         </div>
-        <div className="relative z-10 w-full max-w-7xl mx-auto">
-          <motion.div initial={{ opacity:0, y:30 }} animate={{ opacity:1, y:0 }} transition={{ duration:1 }}>
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-px bg-[#D4AF37]"/>
-              <span className="text-[#D4AF37] font-bold tracking-[0.4em] uppercase text-xs">Anchor Yash Soni · Event Management</span>
-            </div>
-            {/* H1 */}
-            <h1 className="text-5xl md:text-[7rem] lg:text-[8.5rem] font-black leading-none mb-10 tracking-tighter uppercase">
-              FLAWLESS<br />
-              <span className="gs italic pr-4">EXECUTION.</span>
-            </h1>
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 border-t border-white/10 pt-10">
-              <div>
-                <p className="max-w-xl text-zinc-300 text-base md:text-xl font-light leading-relaxed mb-3">
-                  Beyond planning. We engineer high-end experiences for Jaipur&apos;s most prestigious events — JECC Sitapura, Fairmont, Rambagh Palace, and Leela Palace.
-                </p>
-                <p className="text-zinc-500 text-sm">
-                  70+ national brands &nbsp;·&nbsp; 4.9★ rated &nbsp;·&nbsp; Destination weddings &amp; corporate galas
-                </p>
-              </div>
-              {/* PRIMARY: WhatsApp */}
-              <a href={WA} target="_blank" rel="noopener noreferrer" className="shrink-0">
-                <button className="px-10 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.4)] active:scale-95">
-                  Hire The Firm →
-                </button>
-              </a>
-            </div>
+      </section>
+
+      {/* 3. THE ROYAL PRELUDE */}
+      <section className="py-32 px-6 md:px-12 lg:px-24 bg-[#FAF9F6]">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+          className="max-w-4xl mx-auto text-center"
+        >
+          <span className="font-['Orange_Avenue'] text-4xl text-[#D4AF37] mb-6 block">Welcome to Royalty</span>
+          <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-[#1A1A1A] leading-tight mb-10">
+            Jaipur is not just a destination. It is an emotion written in pink sandstone and gold.
+          </h2>
+          <p className="font-sans text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+            As the premier luxury event planner in Rajasthan, we don't just organize events; we author legacies. From the sprawling courtyards of Rambagh Palace to the illuminated majesty of Amer Fort, your celebration deserves a canvas that is nothing short of historic. We specialize in transforming these monumental spaces into intimate, bespoke experiences that echo your personal love story or corporate triumph.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* 4. THE EDITORIAL LOOKBOOK (Masonry Faux-Motion) */}
+      <section className="py-20 w-full bg-[#FAF9F6] overflow-hidden">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="w-full"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
+            <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
+              <Image src="/ivory_mandap_decor_1776853945636.png" alt="White Flower Mandap" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+            </motion.div>
+            <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden">
+              <Image src="/ivory_sangeet_stage_1776854029383.png" alt="Varmala Fireworks" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+            </motion.div>
+            <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
+              <Image src="/ivory_bride_entry_1776853994383.png" alt="Bride Entry White Floral" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* 5. THE MANIFESTO */}
+      <section className="py-40 px-6 md:px-12 lg:px-24 bg-[#FAF9F6]">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="max-w-6xl mx-auto text-center"
+        >
+          <p className="font-['Kugile_Regular'] text-5xl md:text-7xl lg:text-[90px] leading-[1.1] text-[#1A1A1A]">
+            "True luxury is <span className="text-[#D4AF37]">invisible</span>. It is the flawless execution of a thousand unseen details."
+          </p>
+        </motion.div>
+      </section>
+
+      {/* 6. THE SIGNATURE SERVICES BENTO */}
+      <section className="py-24 px-6 md:px-12 lg:px-24 bg-[#FAF9F6]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-20">
+            <h2 className="font-['Runiga'] text-6xl md:text-8xl text-[#1A1A1A]">Our Arsenal</h2>
+            <p className="font-['Amandine'] text-4xl text-[#097969] mt-2">The architecture of a perfect event</p>
+          </div>
+          
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {/* Card 1 */}
+            <motion.div variants={fadeInUp} className="bg-white p-12 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.03)] flex flex-col justify-end min-h-[450px] group hover:-translate-y-2 transition-all duration-500">
+              <h3 className="font-['The_Seasons'] text-4xl text-[#1A1A1A] mb-4">Heritage Venues</h3>
+              <p className="font-sans text-lg text-gray-500 font-light max-w-md">
+                Exclusive access to Rajasthan's most coveted palaces, heritage forts, and luxury estates. We secure the impossible spaces.
+              </p>
+            </motion.div>
+            
+            {/* Card 2 */}
+            <motion.div variants={fadeInUp} className="bg-[#1A1A1A] p-12 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.08)] flex flex-col justify-end min-h-[450px] group hover:-translate-y-2 transition-all duration-500">
+              <h3 className="font-['The_Seasons'] text-4xl text-[#FAF9F6] mb-4 flex items-center gap-4">
+                Design & Decor
+                <span className="text-[#D4AF37] font-['Orange_Avenue'] text-3xl lowercase mt-1">bespoke</span>
+              </h3>
+              <p className="font-sans text-lg text-gray-400 font-light max-w-md">
+                Immersive spatial design using premium ivory florals, bespoke silk fabrics, and structural art that defies gravity.
+              </p>
+            </motion.div>
+
+            {/* Card 3 */}
+            <motion.div variants={fadeInUp} className="bg-[#097969] p-12 lg:p-16 shadow-[0_20px_60px_rgba(9,121,105,0.1)] flex flex-col justify-end min-h-[450px] group hover:-translate-y-2 transition-all duration-500">
+              <h3 className="font-['The_Seasons'] text-4xl text-[#FAF9F6] mb-4">Royal Hospitality</h3>
+              <p className="font-sans text-lg text-[#FAF9F6]/80 font-light max-w-md">
+                White-glove shadow management, dedicated VIP protocol, and 24/7 concierge for your esteemed guests.
+              </p>
+            </motion.div>
+
+            {/* Card 4 */}
+            <motion.div variants={fadeInUp} className="bg-white border border-[#D4AF37]/20 p-12 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.02)] flex flex-col justify-end min-h-[450px] group hover:-translate-y-2 transition-all duration-500">
+              <h3 className="font-['The_Seasons'] text-4xl text-[#1A1A1A] mb-4">Seamless Logistics</h3>
+              <p className="font-sans text-lg text-gray-500 font-light max-w-md">
+                Precision planning, from private charter flight coordination to vintage car transport arrays across the desert.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          2. STATS — real numbers
-      ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-[#D4AF37]/12">
-        <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {STATS.map((s, i) => (
-              <Reveal key={i} delay={i * 0.07}>
-                <div className="text-center py-10 md:py-14 px-3 border-r border-white/5 last:border-r-0">
-                  <div className="text-4xl md:text-5xl font-black mb-1 gs">{s.val}</div>
-                  <div className="text-zinc-300 text-[11px] uppercase tracking-widest font-semibold mb-1">{s.label}</div>
-                  <div className="text-zinc-600 text-[9px] uppercase tracking-wider">{s.sub}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+
+      {/* 7. THE HERITAGE MARQUEE */}
+      <section className="py-20 bg-[#1A1A1A] overflow-hidden whitespace-nowrap flex items-center border-y border-[#D4AF37]/20">
+        <div className="animate-[scroll_40s_linear_infinite] flex gap-16 items-center">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex gap-16 items-center">
+              <span className="font-['Rekalgera'] text-6xl text-[#FAF9F6]/20 uppercase">Rambagh Palace</span>
+              <span className="text-[#D4AF37] text-4xl">✦</span>
+              <span className="font-['Rekalgera'] text-6xl text-[#FAF9F6]/20 uppercase">Taj Amer</span>
+              <span className="text-[#D4AF37] text-4xl">✦</span>
+              <span className="font-['Rekalgera'] text-6xl text-[#FAF9F6]/20 uppercase">Fairmont Jaipur</span>
+              <span className="text-[#D4AF37] text-4xl">✦</span>
+              <span className="font-['Rekalgera'] text-6xl text-[#FAF9F6]/20 uppercase">The Oberoi Rajvilas</span>
+              <span className="text-[#D4AF37] text-4xl">✦</span>
+            </div>
+          ))}
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          3. PILLARS — 3 management cards
-      ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeading subtitle="Our Methodology" title="The Pillars of Control." />
-          <div className="grid lg:grid-cols-3 gap-5">
-            {PILLARS.map((item, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <div className="p-8 bg-zinc-900/50 border border-white/8 hover:border-[#D4AF37]/40 transition-all duration-400 rounded-2xl group h-full">
-                  <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-400">
-                    <item.icon className="w-7 h-7"/>
-                  </div>
-                  <h3 className="text-xl font-black text-white mb-4 uppercase tracking-tight group-hover:text-[#D4AF37] transition-colors">{item.title}</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* ══════════════════════════════════════
-          4. INTRO BODY — location keywords
-      ══════════════════════════════════════ */}
-      <section className="py-10 md:py-16 bg-zinc-950 border-y border-white/5 px-6 md:px-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <Reveal>
-            <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-4 font-bold">Jaipur's Event Management Specialists</p>
-            <h2 className="text-2xl md:text-3xl font-black mb-6 leading-tight">
-              From JECC Sitapura to <G>Rambagh Palace.</G>
-            </h2>
-            <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light max-w-2xl mx-auto mb-4">
-              Every significant event venue in Jaipur has been worked with — JECC Sitapura for national brand summits and award galas, Fairmont Jaipur for destination weddings and corporate dinners, Rambagh Palace and Leela Palace for heritage luxury events, Birla Auditorium for conferences, and the major farmhouse properties on Ajmer Road for wedding weekends.
+
+      {/* 8. THE MASTERMIND */}
+      <section className="py-32 px-6 md:px-12 lg:px-24 bg-[#FAF9F6]">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2 relative aspect-[4/5]"
+          >
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl" />
+            <div className="absolute -bottom-8 -right-8 bg-[#097969] p-8 text-[#FAF9F6]">
+              <span className="font-['Rekalgera'] text-4xl">1100+</span>
+              <span className="font-sans block text-sm tracking-widest uppercase mt-2">Masterpieces</span>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2"
+          >
+            <span className="font-['Amandine'] text-4xl text-[#097969] mb-4 block">The Mastermind</span>
+            <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#1A1A1A] mb-8">Anchor Yash Soni</h2>
+            <p className="font-sans text-xl text-gray-600 font-light leading-relaxed mb-8">
+              A visionary in the realm of luxury celebrations. With over a decade of dominating the stage and orchestrating Rajasthan's most elite events, Yash doesn't just plan weddings; he anchors the entire emotional and operational spectrum of your celebration.
             </p>
-            <p className="text-zinc-400 text-sm leading-relaxed font-light max-w-2xl mx-auto">
-              The 70+ national brands and 4.9★ rating across 200+ verified reviews come from one discipline: managing the logistics that nobody sees, so the experiences everyone remembers feel effortless.
+            <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
+              His voice has commanded crowds of 10,000, and his eye for detail ensures that the white ivory roses on your mandap match the exact shade of your bridal silhouette.
             </p>
-          </Reveal>
+            <Image src="/favicon.png" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
+          </motion.div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          5. GALLERY — local images only, no Unsplash
-      ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeading subtitle="The Work" title="In Action." align="center"/>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 h-[300px] md:h-[480px]">
+
+      {/* 9. CURATED STAGES OF CELEBRATION */}
+      <section className="py-32 bg-[#1A1A1A] text-[#FAF9F6] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#097969]/10 rounded-full blur-[150px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-24">
+          <h2 className="font-['The_Seasons'] text-6xl md:text-8xl mb-24 text-center">The Royal Timeline</h2>
+          
+          <div className="space-y-24 border-l border-[#D4AF37]/30 ml-4 md:ml-12 pl-8 md:pl-16 relative">
             {[
-              { src:"/gallery-5.webp",                alt:"Corporate event management Jaipur",        span:"col-span-2 row-span-2" },
-              { src:"/gallery-2.webp",                alt:"Luxury event production Jaipur" },
-              { src:"/gallery-3.webp",                alt:"VIP hospitality event Jaipur" },
-              { src:"/vintage-car-couple-shoot.webp", alt:"Wedding management Jaipur",               span:"col-span-2 md:col-span-1" },
-              { src:"/gallery-1.webp",                alt:"Destination wedding management Jaipur" },
-            ].map((img, i) => (
-              <Reveal key={i} delay={i * 0.06}>
-                <div className={`relative group overflow-hidden rounded-2xl border border-white/8 hover:border-[#D4AF37]/40 transition-all ${img.span||""}`}>
-                  <Image
-                    src={img.src} alt={img.alt} fill quality={100}
-                    className="object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-600"
-                    sizes="(max-width:768px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"/>
+              { title: "The Welcome", desc: "A grand Rajasthani Swagat with folk musicians, rose petal showers, and vintage car arrivals.", img: "/ivory_vintage_car_1776854011319.png" },
+              { title: "The Haldi & Mehendi", desc: "Vibrant yellow and emerald themes. Interactive games, floral jewelry, and sun-kissed courtyards.", img: "/ivory_palace_venue_1776853964418.png" },
+              { title: "The Sangeet Gala", desc: "High-octane glamour. Crystal stages, celebrity performers, and synchronized pyrotechnics.", img: "/ivory_sangeet_stage_1776854029383.png" },
+              { title: "The Varmala & Pheras", desc: "The crescendo. A floating mandap under the stars, chanting priests, and color-smoke fireworks.", img: "/ivory_hero_wedding_1776853928413.png" }
+            ].map((stage, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                {/* Timeline Dot */}
+                <div className="absolute -left-[41px] md:-left-[73px] top-4 w-4 h-4 rounded-full bg-[#D4AF37] shadow-[0_0_15px_#D4AF37]"></div>
+                
+                <div className="flex flex-col md:flex-row gap-12 items-start">
+                  <div className="w-full md:w-1/2">
+                    <span className="font-['Orange_Avenue'] text-3xl text-[#D4AF37] block mb-2">Chapter 0{idx + 1}</span>
+                    <h3 className="font-['The_Seasons'] text-4xl md:text-5xl mb-4">{stage.title}</h3>
+                    <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
+                  </div>
+                  <div className="w-full md:w-1/2 aspect-video relative overflow-hidden">
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                  </div>
                 </div>
-              </Reveal>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          6. CAPABILITIES — 3 col bento
-      ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <Reveal>
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold block mb-4">The Portfolio</span>
-              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-                The <G>Portfolio.</G>
-              </h2>
-              <p className="text-zinc-500 text-sm mt-3 italic">Scalable logistics for every magnitude.</p>
-            </Reveal>
-          </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {CAPABILITIES.map((cap, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <div className="p-8 border border-white/10 rounded-2xl relative overflow-hidden group hover:border-[#D4AF37]/30 transition-all duration-400 bg-[#050505] h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"/>
-                  <h3 className="text-base font-black text-white mb-6 uppercase tracking-[0.18em] group-hover:text-[#D4AF37] transition-colors">{cap.title}</h3>
-                  <ul className="space-y-3">
-                    {cap.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-zinc-400 text-sm">
-                        <Sparkles className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5"/>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
+
+      {/* 10. THE ART OF CURATION */}
+      <section className="py-32 px-6 bg-[#FAF9F6] text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto"
+        >
+          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover" />
+          <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#1A1A1A] mb-8">Obsessive Perfection</h2>
+          <p className="font-sans text-2xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
+            From the specific weave of the silk napkins to the exact tempo of the bride's entry track, we operate in the micro-details that separate a good event from a legendary one.
+          </p>
+        </motion.div>
       </section>
-      {/* ══════════════════════════════════════
-          7. VENUE EXPERTISE — SEO keyword grid
-      ══════════════════════════════════════ */}
-      <section className="py-14 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2 font-bold">Venue Expertise</p>
-              <h2 className="text-2xl md:text-3xl font-black text-white">
-                Key Jaipur <G>Event Venues.</G>
-              </h2>
+
+      {/* 11. DESTINATION SPOTLIGHT */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div>
+              <h2 className="font-['The_Seasons'] text-6xl text-[#1A1A1A]">The Rajasthan Canvas</h2>
+              <p className="font-['Amandine'] text-3xl text-[#097969] mt-2">Palaces that breathe history</p>
             </div>
-          </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            {VENUES.map((v, i) => (
-              <Reveal key={i} delay={i * 0.05}>
-                <div className="border border-white/10 hover:border-[#D4AF37]/40 transition-all rounded-xl p-4 text-center group bg-zinc-900/20">
-                  <MapPin size={12} className="text-[#D4AF37] mx-auto mb-2"/>
-                  <p className="text-white text-xs font-semibold group-hover:text-[#D4AF37] transition-colors">{v.name}</p>
-                  <p className="text-zinc-600 text-[9px] mt-0.5">{v.area}</p>
-                  <span className="text-[8px] bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/15 px-2 py-0.5 rounded-full mt-1.5 inline-block uppercase tracking-wide font-bold">{v.note}</span>
-                </div>
-              </Reveal>
-            ))}
+            <a href="#" className="font-['Rekalgera'] text-[#D4AF37] uppercase tracking-widest border-b border-[#D4AF37] pb-1 mt-6 md:mt-0">View All Locations</a>
           </div>
-        </div>
-      </section>
-      {/* ══════════════════════════════════════
-          8. TESTIMONIALS — NEW
-      ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeading subtitle="4.9★ Verified Reviews" title="What Clients Say." align="center"/>
-          <div className="grid md:grid-cols-3 gap-5">
-            {TESTIMONIALS.map((t, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
-                  className="flex flex-col h-full border border-white/10 rounded-2xl p-6 hover:border-[#D4AF37]/40 transition-all bg-zinc-900/20 hover:bg-zinc-900/50 group cursor-pointer">
-                  <div className="flex gap-0.5 mb-3">
-                    {[...Array(5)].map((_,j) => <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]"/>)}
-                  </div>
-                  <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
-                  <div>
-                    <p className="text-white font-bold text-xs group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
-                    <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
-                    <p className="text-[#D4AF37] text-[9px] uppercase tracking-wider mt-0.5">{t.guests}</p>
-                  </div>
-                </a>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* ══════════════════════════════════════
-          9. FAQ — 9 questions
-      ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-6 md:px-10">
-        <div className="max-w-4xl mx-auto">
-          <SectionHeading subtitle="Inquiries" title="Management FAQs." align="center"/>
-          <div className="flex flex-col gap-3">
-            {FAQS.map((faq, idx) => (
-              <Reveal key={idx} delay={idx * 0.025}>
-                <FAQItem question={faq.q} answer={faq.a} id={`faq-em-${idx}`}/>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* ══════════════════════════════════════
-          10. RELATED — internal links
-      ══════════════════════════════════════ */}
-      <section className="py-14 bg-zinc-950 border-y border-white/5 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2 font-bold">All Services</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-white">Management is One Part. <G>We Cover Everything.</G></h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="group cursor-pointer">
+              <div className="relative aspect-[4/5] overflow-hidden mb-6">
+                <Image src="/ivory_palace_venue_1776853964418.png" alt="Jaipur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+              </div>
+              <h3 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Jaipur</h3>
+              <p className="font-sans text-gray-500 mt-2">The Pink City of Royals</p>
             </div>
-          </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {RELATED.map((r, i) => (
-              <Reveal key={i} delay={i * 0.06}>
-                <Link href={r.href}>
-                  <div className="border border-white/10 rounded-2xl p-5 text-center hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-zinc-900/20 hover:bg-zinc-900/50">
-                    <r.icon size={18} className="text-[#D4AF37] mx-auto mb-2"/>
-                    <p className="text-white text-sm font-semibold group-hover:text-[#D4AF37] transition-colors">{r.label}</p>
-                    <p className="text-zinc-600 text-[10px] mt-1">{r.desc}</p>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
+            <div className="group cursor-pointer md:mt-16">
+              <div className="relative aspect-[4/5] overflow-hidden mb-6">
+                <Image src="/hawa-mahal-portrait.webp" alt="Udaipur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+              </div>
+              <h3 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Udaipur</h3>
+              <p className="font-sans text-gray-500 mt-2">The City of Lakes</p>
+            </div>
+            <div className="group cursor-pointer">
+              <div className="relative aspect-[4/5] overflow-hidden mb-6">
+                <Image src="/ivory_mandap_decor_1776853945636.png" alt="Jodhpur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+              </div>
+              <h3 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Jodhpur</h3>
+              <p className="font-sans text-gray-500 mt-2">The Blue City Heritage</p>
+            </div>
           </div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          11. FINAL CTA
-      ══════════════════════════════════════ */}
-      <section className="py-28 text-center relative overflow-hidden border-t border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/8 to-transparent pointer-events-none"/>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-          <span className="font-black text-[18vw] text-white/[0.025] leading-none whitespace-nowrap uppercase">EXECUTE</span>
+
+      {/* 12. IMMERSIVE MOMENTS GALLERY (Horizontal Scroll Simulation) */}
+      <section className="py-32 bg-[#FAF9F6] overflow-hidden">
+        <h2 className="font-['The_Seasons'] text-center text-5xl md:text-7xl mb-16 text-[#1A1A1A]">Captured <span className="font-['Amandine'] text-[#097969]">Elegance</span></h2>
+        <div className="flex gap-6 px-6 overflow-x-auto pb-12 snap-x snap-mandatory hide-scrollbar">
+          {[
+            "/ivory_palace_venue_1776853964418.png", "/ivory_bride_entry_1776853994383.png", "/ivory_sangeet_stage_1776854029383.png", 
+            "/ivory_vintage_car_1776854011319.png", "/ivory_mandap_decor_1776853945636.png"
+          ].map((img, i) => (
+            <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0">
+              <Image src={img} alt="Gallery" fill className="object-cover" />
+            </div>
+          ))}
         </div>
-        <div className="container mx-auto px-5 relative z-10 max-w-xl">
-          <Reveal>
-            <h2 className="text-4xl md:text-7xl font-black mb-8 text-white uppercase tracking-tighter leading-[0.9]">
-              READY TO<br /><G className="italic">EXECUTE.</G>
-            </h2>
-            <p className="text-zinc-400 text-base max-w-lg mx-auto mb-3 font-light">
-              You celebrate. We manage the chaos.
+      </section>
+
+      {/* 13. THE ROYAL DIARY (Testimonials) */}
+      <section className="py-40 px-6 bg-[#097969] text-[#FAF9F6] relative">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('/gold-texture.webp')] mix-blend-overlay"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <span className="font-['Orange_Avenue'] text-4xl text-[#D4AF37] mb-8 block">The Royal Diary</span>
+          <p className="font-['The_Seasons'] text-4xl md:text-6xl leading-tight mb-12">
+            "We wanted a wedding that felt like a movie, but what Yash and his team delivered was a masterpiece. From the floral installations to managing 500 VIPs smoothly, it was flawless."
+          </p>
+          <span className="font-['Rekalgera'] tracking-widest uppercase text-sm block">The Singhania Family</span>
+          <span className="font-sans text-sm text-white/60 block mt-2">Rambagh Palace, Jaipur</span>
+        </div>
+      </section>
+
+      {/* 14. NUMBERS THAT SPEAK */}
+      <section className="py-24 bg-[#1A1A1A] border-b border-[#D4AF37]/20">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          {[
+            { num: "1100+", label: "Events Mastered" },
+            { num: "50+", label: "Palaces Unlocked" },
+            { num: "10k+", label: "VIPs Hosted" },
+            { num: "100%", label: "Flawless Execution" }
+          ].map((stat, i) => (
+            <div key={i}>
+              <h3 className="font-['Runiga'] text-5xl md:text-7xl text-[#D4AF37] mb-4">{stat.num}</h3>
+              <p className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-xs uppercase">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 15. THE WHITE-GLOVE PROMISE (Deliverables) */}
+      <section className="py-32 px-6 md:px-12 max-w-7xl mx-auto bg-[#FAF9F6]">
+        <div className="flex flex-col lg:flex-row gap-20">
+          <div className="lg:w-1/3">
+            <h2 className="font-['Runiga'] text-6xl text-[#1A1A1A] mb-6">The Promise</h2>
+            <p className="font-sans text-gray-500 leading-relaxed">
+              We leave absolutely nothing to chance. Our scope of work is comprehensive, covering every conceivable angle of luxury event production.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp to discuss your event logistics.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer">
-              <button className="inline-flex items-center gap-2 px-14 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
-                <CalendarCheck size={16}/> Schedule a Meeting
-              </button>
-            </a>
-            <div className="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/wedding-planning-jaipur"       className="hover:text-[#D4AF37] transition-colors">Wedding Planning</Link>
-              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Corporate Events</Link>
-              <Link href="/destination-wedding-anchor"    className="hover:text-[#D4AF37] transition-colors">Destination Wedding</Link>
-              <Link href="/event-designing"               className="hover:text-[#D4AF37] transition-colors">Event Designing</Link>
-              <Link href="/best-anchor-in-jaipur"         className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>
-              <Link href="/contact"                       className="hover:text-[#D4AF37] transition-colors">Contact</Link>
-            </div>
-          </Reveal>
+          </div>
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8">
+            {[
+              "Venue Scouting & Contracting", "Bespoke Thematic Decor", 
+              "Celebrity Artist Management", "Menu Curation & Mixology",
+              "RSVP & Shadow Management", "Security & Protocol",
+              "Logistics & Transport Array", "Show Calling & Production"
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 items-start">
+                <span className="text-[#D4AF37] text-2xl mt-1">❖</span>
+                <span className="font-['The_Seasons'] text-2xl text-[#1A1A1A]">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* 16. THE ULTIMATE FAQ */}
+      <section className="py-32 bg-white px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-['The_Seasons'] text-5xl md:text-6xl text-[#1A1A1A] mb-4">Questions of Elegance</h2>
+            <p className="font-['Rekalgera'] text-[#097969] tracking-widest uppercase text-sm">Frequently Asked</p>
+          </div>
+          
+          <div className="space-y-6">
+            {[
+              { q: "What is the starting budget for a destination wedding in Jaipur?", a: "Luxury is bespoke, but an elite heritage wedding in Jaipur typically begins at ₹1.5 Cr, scaling with guest count, venue prestige, and decor opulence." },
+              { q: "Do you handle international guest logistics?", a: "Absolutely. Our concierge team manages everything from private charter clearances to visa assistance and dedicated airport lounges." },
+              { q: "How far in advance should we secure your services?", a: "To ensure access to premier dates at properties like Rambagh or Taj, we recommend engaging our team 8 to 12 months prior to the celebration." }
+            ].map((faq, i) => (
+              <div key={i} className="border-b border-[#1A1A1A]/10 pb-6">
+                <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-[#1A1A1A] mb-3">{faq.q}</h3>
+                <p className="font-sans text-gray-600 font-light leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 17. PRESS & RECOGNITION */}
+      <section className="py-20 bg-[#FAF9F6] border-t border-gray-200 text-center">
+        <span className="font-['Rekalgera'] text-gray-400 tracking-[0.3em] uppercase text-xs mb-8 block">Recognized For Excellence</span>
+        <div className="flex flex-wrap justify-center gap-12 opacity-40 grayscale">
+          {/* Simulated Logos using text for elegance */}
+          <span className="font-['Runiga'] text-3xl">VOGUE</span>
+          <span className="font-['The_Seasons'] text-3xl">WEDMEGOOD</span>
+          <span className="font-['Runiga'] text-3xl">HARPER'S</span>
+          <span className="font-['The_Seasons'] text-3xl">WEDDING SUTRA</span>
+        </div>
+      </section>
+
+      {/* 18 & 19. THE FINAL CTA & SIGNATURE */}
+      <section className="relative py-40 md:py-64 bg-[#1A1A1A] overflow-hidden flex flex-col items-center justify-center text-center px-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="relative z-20 flex flex-col items-center"
+        >
+          <h2 className="font-['Runiga'] text-5xl md:text-8xl lg:text-[120px] text-[#D4AF37] leading-[0.8] mb-16 mix-blend-lighten">
+            Let's Create<br />Something Royal.
+          </h2>
+          
+          <a
+            href="https://wa.me/917737877978" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#097969] text-[#FAF9F6] font-['Rekalgera'] uppercase tracking-[0.25em] px-12 py-6 text-sm hover:bg-[#FAF9F6] hover:text-[#097969] transition-all duration-500 shadow-[0_0_60px_rgba(9,121,105,0.4)]"
+          >
+            Start The Conversation
+          </a>
+        </motion.div>
+
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none z-10 opacity-[0.03]">
+          <span className="font-['Medino'] text-[150px] md:text-[300px] lg:text-[500px] text-[#FAF9F6] whitespace-nowrap select-none">
+            Yash Soni
+          </span>
+        </div>
+      </section>
+
+      {/* 20. THE ECOSYSTEM INTERLINKS */}
+      <section className="py-20 bg-[#FAF9F6] px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="font-['The_Seasons'] text-4xl text-[#1A1A1A] mb-12">Explore Our Ecosystem</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { label: "Wedding Planning", url: "/wedding-planning-jaipur" },
+              { label: "Event Planning", url: "/event-planning-jaipur" },
+              { label: "Event Management", url: "/event-management-jaipur" },
+              { label: "Event Designing", url: "/event-designing" },
+              { label: "Artist Management", url: "/artist-management-jaipur" },
+              { label: "Luxury Rajasthan", url: "/luxury-wedding-planner-rajasthan" },
+              { label: "Wedding Decor", url: "/wedding-decoration-jaipur" },
+              { label: "Sangeet Decor", url: "/sangeet-decoration-jaipur" },
+              { label: "Wedding Catering", url: "/wedding-catering-jaipur" },
+              { label: "Destination Planning", url: "/destination-wedding-planner-jaipur" },
+              { label: "Gala Dinners", url: "/gala-dinner-event-planner" },
+              { label: "Corporate Events", url: "/corporate-event-management-company" },
+              { label: "Haldi Decor", url: "/haldi-decoration-jaipur" },
+              { label: "Heritage Venues", url: "/wedding-venue-jaipur" },
+              { label: "Theme Weddings", url: "/theme-wedding-organizer-india" }
+            ].map((link, i) => (
+              <a key={i} href={link.url} className="font-['Rekalgera'] text-[#1A1A1A] hover:text-[#097969] uppercase tracking-widest text-[10px] md:text-xs border border-[#1A1A1A]/10 px-6 py-3 hover:border-[#097969] hover:shadow-[0_5px_15px_rgba(9,121,105,0.05)] transition-all duration-300">
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 21. SEO PILLAR FOOTER */}
+      <section className="py-12 bg-[#1A1A1A] text-center px-6">
+        <div className="max-w-5xl mx-auto border-t border-[#FAF9F6]/10 pt-12">
+          <p className="font-sans text-[10px] md:text-xs text-[#FAF9F6]/30 leading-loose text-justify text-balance">
+            The best event management company in Jaipur. Specializing in VIP protocol, massive corporate summits, and luxury event production. Event Management Company Jaipur execution managed by Anchor Yash Soni across Rambagh Palace, Fairmont, and elite destinations.
+          </p>
+        </div>
+      </section>
+
+      <style jsx global>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>
   );
 }
