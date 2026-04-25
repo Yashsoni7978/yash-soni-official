@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { BLOG_POSTS } from '../data/blogs';
 
 const BASE_URL = 'https://yashsoni.in';
 
@@ -46,7 +47,6 @@ export default function sitemap() {
   const staticRoutes = getRoutes(appDir);
 
   // Pull blog slugs from data file
-  const { BLOG_POSTS } = require('../data/blogs.js');
   const blogRoutes = BLOG_POSTS.map(b => `/blog/${b.slug}`);
 
   const allRoutes = ['/', ...staticRoutes, ...blogRoutes];
