@@ -320,7 +320,7 @@ export default function WeddingAnchor() {
                 className="w-full h-full object-cover"
                 alt="Anchor Yash Soni — best wedding anchor in Jaipur hosting a luxury Rajasthan wedding"
                 priority
-              / />
+              />
               <div className="absolute inset-0 border-2 border-[#D4AF37]/20 m-5 rounded-2xl pointer-events-none" />
               {/* Credential overlay */}
               <div className="absolute bottom-6 left-6 right-6">
@@ -441,7 +441,7 @@ export default function WeddingAnchor() {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 grayscale group-hover:grayscale-0"
                       alt={`${item.title} — best wedding anchor in Jaipur`}
                       
-                    / />
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8 flex flex-col justify-end">
                       <item.icon className="w-10 h-10 text-[#D4AF37] mb-4" />
                       <h3 className="text-3xl md:text-4xl font-black text-white mb-2 uppercase">{item.title}</h3>

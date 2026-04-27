@@ -262,7 +262,7 @@ export default function NeemranaPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div class="relative w-full h-full"><Image src="/backgrounds/neemrana_bg.webp" alt="Best Anchor in Neemrana — Corporate Retreats & Fort Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/neemrana_bg.webp" alt="Best Anchor in Neemrana — Corporate Retreats & Fort Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>

@@ -123,7 +123,7 @@ export default function DestinationWeddingPlannerJaipur() {
           variants={fadeInUp}
           className="max-w-6xl mx-auto text-center"
         >
-          <p className="font-['Kugile_Regular'] text-5xl md:text-7xl lg:text-[90px] leading-[1.1] text-[#1A1A1A]">"Distance is an <span className=\"text-[#D4AF37]\">opportunity</span>. It is the chance to host your family in a world entirely of your own making."</p>
+          <p className="font-['Kugile_Regular'] text-5xl md:text-7xl lg:text-[90px] leading-[1.1] text-[#1A1A1A]">"Distance is an <span className="text-[#D4AF37]">opportunity</span>. It is the chance to host your family in a world entirely of your own making."</p>
         </motion.div>
       </section>
 

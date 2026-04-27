@@ -4,8 +4,8 @@ import { BLOG_POSTS } from '../data/blogs';
 
 const BASE_URL = 'https://yashsoni.in';
 
-// Pages to exclude from sitemap (no-index, API routes, internal components, etc.)
-const EXCLUDE = ['api', '_components', 'locations', 'favicon.ico', 'icon.webp', 'apple-icon.webp', 'opengraph-image.webp', 'twitter-image.webp', 'robots.txt'];
+// Pages to exclude from sitemap
+const EXCLUDE = ['api', '_components', 'locations'];
 
 function getRoutes(dir, base = '') {
   const routes = [];
@@ -19,10 +19,11 @@ function getRoutes(dir, base = '') {
     if (entry.name.startsWith('[')) continue; // dynamic routes handled separately
 
     const routePath = `${base}/${entry.name}`;
-    const pagePath = path.join(dir, entry.name, 'page.jsx');
-    const pageTsx  = path.join(dir, entry.name, 'page.tsx');
+    // Support both page.jsx and page.tsx
+    const hasPage = fs.existsSync(path.join(dir, entry.name, 'page.jsx')) || 
+                    fs.existsSync(path.join(dir, entry.name, 'page.tsx'));
 
-    if (fs.existsSync(pagePath) || fs.existsSync(pageTsx)) {
+    if (hasPage) {
       routes.push(routePath);
     }
     
@@ -35,10 +36,9 @@ function getRoutes(dir, base = '') {
 // SEO Priority Scoring Logic
 function getPriority(route) {
   if (route === '/') return '1.0';
-  if (route.includes('anchor-in-rajasthan')) return '1.0';
-  if (route.includes('anchor-in-jaipur'))    return '0.9';
-  if (route.startsWith('/anchor-in-'))       return '0.9';
-  if (route.startsWith('/blog/'))            return '0.6';
+  if (route === '/anchor-in-rajasthan') return '1.0';
+  if (route.startsWith('/anchor-in-')) return '0.9';
+  if (route.startsWith('/blog/')) return '0.7';
   return '0.8';
 }
 
@@ -51,6 +51,7 @@ export default function sitemap() {
 
   const allRoutes = ['/', ...staticRoutes, ...blogRoutes];
 
+  // Return formatted sitemap object
   return [...new Set(allRoutes)].map(route => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date().toISOString(),
@@ -58,4 +59,3 @@ export default function sitemap() {
     priority: getPriority(route),
   }));
 }
-

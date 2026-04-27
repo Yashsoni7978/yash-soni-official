@@ -123,7 +123,7 @@ export default function WeddingPlanningJaipur() {
           variants={fadeInUp}
           className="max-w-6xl mx-auto text-center"
         >
-          <p className="font-['Kugile_Regular'] text-5xl md:text-7xl lg:text-[90px] leading-[1.1] text-[#1A1A1A]">"A great wedding is not measured by its cost, but by the <span className=\"text-[#D4AF37]\">emotions</span> it anchors for a lifetime."</p>
+          <p className="font-['Kugile_Regular'] text-5xl md:text-7xl lg:text-[90px] leading-[1.1] text-[#1A1A1A]">"A great wedding is not measured by its cost, but by the <span className="text-[#D4AF37]">emotions</span> it anchors for a lifetime."</p>
         </motion.div>
       </section>
 

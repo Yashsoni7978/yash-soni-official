@@ -183,7 +183,7 @@ export default function Portfolio() {
                         alt={`Anchor Yash Soni hosting ${item.category} event at ${item.venue} - ${item.title}`} 
                         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                         
-                      / />
+                      />
                       {/* Badges */}
                       <div className="absolute top-4 left-4 z-20">
                          {item.type === "video" ? (

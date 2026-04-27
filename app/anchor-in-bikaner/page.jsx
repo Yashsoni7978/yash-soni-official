@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Image from 'next/image';
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
@@ -246,7 +245,7 @@ export default function BikanerPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div class="relative w-full h-full"><Image src="/vintage-car-couple-shoot.webp" alt="Best Anchor in Bikaner — Junagarh Fort at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/vintage-car-couple-shoot.webp" alt="Best Anchor in Bikaner — Junagarh Fort at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
