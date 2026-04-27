@@ -10,7 +10,7 @@ const localBusinessSchema = {
   url: "https://yashsoni.in",
   telephone: "+917737877978",
   email: "info@yashsoni.in",
-  image: "https://yashsoni.in/og-image.jpg",
+  image: "https://yashsoni.in/og-image.webp",
   priceRange: "₹₹₹",
   currenciesAccepted: "INR",
   paymentAccepted: "Cash, Bank Transfer, UPI",
@@ -96,7 +96,7 @@ export const metadata = {
       "Book Jaipur's 4.9★ event anchor. WhatsApp directly or call +91 77378 77978. Peak season books 6–8 months in advance.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Contact Anchor Yash Soni — Book Event Anchor in Jaipur",
@@ -107,7 +107,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Contact Anchor Yash Soni | Book Event Anchor in Jaipur",
     description: "4.9★. WhatsApp directly or call +91 77378 77978.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

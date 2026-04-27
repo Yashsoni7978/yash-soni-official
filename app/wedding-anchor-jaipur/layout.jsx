@@ -119,7 +119,7 @@ export const metadata = {
       "4.9★. 1100+ weddings. Jaipur's most trusted wedding anchor for Sangeet, Varmala, Baraat & NRI destination weddings.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Best Wedding Anchor in Jaipur",
@@ -130,7 +130,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Best Wedding Anchor in Jaipur | Anchor Yash Soni",
     description: "4.9★ rated. 1100+ weddings. The anchor Jaipur's elite families choose.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

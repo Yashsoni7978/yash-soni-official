@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Camera, Instagram, MapPin, Play, Youtube } from "lucide-react";
@@ -178,12 +179,11 @@ export default function Portfolio() {
                   <div className="group relative rounded-xl overflow-hidden cursor-pointer border border-neutral-900 bg-[#0a0a0a] hover:border-[#D4AF37]/50 transition-colors duration-500 shadow-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]">
                     {/* Image */}
                     <div className="relative overflow-hidden">
-                      <img 
-                        src={item.image} 
+                      <Image src={item.image} 
                         alt={`Anchor Yash Soni hosting ${item.category} event at ${item.venue} - ${item.title}`} 
                         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                        loading="lazy"
-                      />
+                        
+                      / />
                       {/* Badges */}
                       <div className="absolute top-4 left-4 z-20">
                          {item.type === "video" ? (

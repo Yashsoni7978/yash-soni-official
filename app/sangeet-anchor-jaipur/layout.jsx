@@ -87,7 +87,7 @@ export const metadata = {
       "4.9★ Sangeet anchor. Dance floors packed until 4 AM. Farmhouse Sangeets on Ajmer Road & palace events in Kukas, Jaipur.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Best Sangeet Anchor in Jaipur on stage",
@@ -98,7 +98,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Best Sangeet Anchor in Jaipur | Anchor Yash Soni",
     description: "4.9★. Dance floors packed until 4 AM. Jaipur's best Sangeet host.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

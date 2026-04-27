@@ -11,7 +11,7 @@ export const NEW_BLOGS_BATCH_6 = [
     readTime: "10 min",
     title: "Local Jaipur Wedding Planner vs. Your Home-City Planner: The Honest Truth",
     desc: "NRI and metro couples debating this constantly. Should you fly your Delhi planner to Jaipur, or hire locally? Data-backed breakdown of costs, vendor networks, and hidden markups.",
-    image: "/wedding-planner-team-blog.png",
+    image: "/wedding-planner-team-blog.webp",
     content: `
 A bride from South Mumbai books Fairmont Jaipur for her destination wedding. She immediately calls her family's trusted event planner — who has organized three previous family events in Mumbai — and says, "We are getting married in Rajasthan. You are leading the entire production."
 
@@ -122,3 +122,4 @@ Looking to assemble your complete local Jaipur vendor dream team? Let's talk.
 `
   }
 ];
+

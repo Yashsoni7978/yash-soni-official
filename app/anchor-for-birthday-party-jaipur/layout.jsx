@@ -86,13 +86,13 @@ export const metadata = {
     siteName: "Anchor Yash Soni",
     title: "Anchor for Birthday Party Jaipur | Yash Soni",
     description: "Custom scripted, bilingual birthday party anchor in Jaipur. Milestone birthdays, kids parties, surprise events & celebrity galas.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Birthday Party Anchor Jaipur — Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Birthday Party Anchor Jaipur — Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Birthday Party Anchor Jaipur | Yash Soni",
     description: "Custom scripted. Bilingual. 1100+ events. Professional birthday party anchor in Jaipur.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ", "geo.placename": "Jaipur, Rajasthan, India",

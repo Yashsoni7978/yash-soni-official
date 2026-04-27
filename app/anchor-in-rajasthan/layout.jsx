@@ -93,13 +93,13 @@ export const metadata = {
     siteName: "Anchor Yash Soni",
     title: "Anchor in Rajasthan | Yash Soni — Jaipur · Udaipur · Jodhpur · Jaisalmer",
     description: "Premier event anchor across all of Rajasthan. Palace weddings, destination events & corporate galas across every major Rajasthan city.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Anchor in Rajasthan — Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Anchor in Rajasthan — Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Anchor in Rajasthan | Yash Soni",
     description: "Jaipur · Udaipur · Jodhpur · Jaisalmer · Pushkar. 1100+ events. Palace weddings & destination events across Rajasthan.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ", "geo.placename": "Rajasthan, India",

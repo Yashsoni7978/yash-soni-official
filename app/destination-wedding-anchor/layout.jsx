@@ -112,7 +112,7 @@ export const metadata = {
       "4.9★ destination wedding anchor. Udaipur, Jodhpur, Goa & international. Full 2–3 day wedding package. NRI bilingual specialist.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Destination Wedding Anchor India",
@@ -123,7 +123,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Destination Wedding Anchor India | Anchor Yash Soni",
     description: "4.9★. Udaipur, Jodhpur, Goa, Dubai & international. NRI specialist.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

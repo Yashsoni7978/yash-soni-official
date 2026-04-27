@@ -19,7 +19,7 @@ function processDirectory(directory) {
             
             // Replace double quote version
             content = content.replace(/"url\('\/gold-texture\.webp'\)"/g, `"${gradient}"`);
-            content = content.replace(/"url\('\/gold-texture\.png'\)"/g, `"${gradient}"`);
+            content = content.replace(/"url\('\/gold-texture\.webp'\)"/g, `"${gradient}"`);
             
             // Replace single quote version if it exists
             content = content.replace(/'url\(\\"\/gold-texture\.webp\\"\)'/g, `'${gradient}'`);

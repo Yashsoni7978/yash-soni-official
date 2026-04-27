@@ -60,7 +60,7 @@ export const metadata = {
       "1100+ events. 4.9★ across 200+ reviews. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Best Anchor in Jaipur on stage",
@@ -72,7 +72,7 @@ export const metadata = {
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description:
       "4.9★ rated. 1100+ events. Jaipur's most commanding anchor for weddings, Sangeets & corporate events.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   // Geo signals — Next.js renders these as <meta> tags correctly
   other: {

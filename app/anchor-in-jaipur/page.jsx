@@ -293,7 +293,40 @@ const FAQItem = ({ question, answer }) => {
 // ─────────────────────────────────────────────
 export default function JaipurAnchor() {
   // Schemas injected here (page body, not layout head)
-  const faqSchema = {
+  
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Anchor Yash Soni",
+  "image": "https://yashsoni.in/og-image.webp",
+  "@id": "https://yashsoni.in/#organization",
+  "url": "https://yashsoni.in",
+  "telephone": "+917737877978",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vaishali Nagar",
+    "addressLocality": "Jaipur",
+    "postalCode": "302021",
+    "addressRegion": "RJ",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.9124,
+    "longitude": 75.7873
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://www.instagram.com/anchoryashsoni",
+    "https://www.facebook.com/anchoryashsoni"
+  ]
+};
+const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: FAQS.map(f => ({
@@ -318,7 +351,7 @@ export default function JaipurAnchor() {
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black relative">
       <style>{style}</style>
       {/* Schemas in body — this is correct for Next.js App Router */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
       {/* ══════════════════════════════════════
           BREADCRUMB

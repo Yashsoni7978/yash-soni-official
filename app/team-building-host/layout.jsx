@@ -88,7 +88,7 @@ export const metadata = {
       "4.9★ rated. Employee engagement, drum circles & scavenger hunts for 50–1,000+ employees. Jaipur's trusted team building host.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Corporate Team Building Host Jaipur",
@@ -99,7 +99,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Corporate Team Building Host Jaipur | Anchor Yash Soni",
     description: "4.9★. Employee engagement & team bonding for 50–1,000+ employees.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

@@ -88,7 +88,7 @@ export const metadata = {
       "Music concerts, fashion shows, luxury launches & Bollywood events. 5,000+ crowd management. 4.9★ rated Jaipur celebrity events anchor.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Celebrity & Public Events Host Jaipur",
@@ -99,7 +99,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Celebrity & Public Events Host Jaipur | Anchor Yash Soni",
     description: "4.9★. Concerts, fashion shows, luxury launches. 5,000+ crowd management.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

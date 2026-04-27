@@ -5,7 +5,7 @@ import { BLOG_POSTS } from '../data/blogs';
 const BASE_URL = 'https://yashsoni.in';
 
 // Pages to exclude from sitemap (no-index, API routes, internal components, etc.)
-const EXCLUDE = ['api', '_components', 'locations', 'favicon.ico', 'icon.png', 'apple-icon.png', 'opengraph-image.png', 'twitter-image.png', 'robots.txt'];
+const EXCLUDE = ['api', '_components', 'locations', 'favicon.ico', 'icon.webp', 'apple-icon.webp', 'opengraph-image.webp', 'twitter-image.webp', 'robots.txt'];
 
 function getRoutes(dir, base = '') {
   const routes = [];
@@ -58,3 +58,4 @@ export default function sitemap() {
     priority: getPriority(route),
   }));
 }
+

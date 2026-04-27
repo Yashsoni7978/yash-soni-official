@@ -11,7 +11,7 @@ const localBusinessSchema = {
   url: "https://yashsoni.in",
   telephone: "+917737877978",
   priceRange: "₹₹₹₹",
-  image: "https://yashsoni.in/og-image.jpg",
+  image: "https://yashsoni.in/og-image.webp",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Jhotwara",
@@ -106,13 +106,13 @@ export const metadata = {
     title: "Best Anchor in Jaipur | Anchor Yash Soni — 4.9★",
     description:
       "4.9★ rated local Jaipur anchor. 1100+ events at Rambagh Palace, Fairmont, Kukas, Ajmer Road & JECC Sitapura.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Best Anchor in Jaipur — Anchor Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Jaipur — Anchor Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description: "4.9★ rated. 1100+ events. Jaipur's most trusted local event anchor.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

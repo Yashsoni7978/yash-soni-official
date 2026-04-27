@@ -33,7 +33,7 @@ const localBusinessSchema = {
   email: "bookings@yashsoni.in",
   priceRange: "₹₹₹₹₹",
   image: OG_IMAGE,
-  logo: `https://${DOMAIN}/logo.png`,
+  logo: `https://${DOMAIN}/logo.webp`,
   sameAs: [
     "https://www.instagram.com/yashsoni_official",
     "https://www.youtube.com/@anchorYashSoni",

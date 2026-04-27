@@ -31,7 +31,7 @@ export default function EventManagementJaipur() {
       <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
-            src="/ivory_hero_wedding_1776853928413.png"
+            src="/ivory_hero_wedding_1776853928413.webp"
             alt="Luxury Wedding in Jaipur"
             fill
             className="object-cover object-top"
@@ -110,13 +110,13 @@ export default function EventManagementJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
-              <Image src="/ivory_mandap_decor_1776853945636.png" alt="White Flower Mandap" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/ivory_mandap_decor_1776853945636.webp" alt="White Flower Mandap" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden">
-              <Image src="/ivory_sangeet_stage_1776854029383.png" alt="Varmala Fireworks" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/ivory_sangeet_stage_1776854029383.webp" alt="Varmala Fireworks" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
-              <Image src="/ivory_bride_entry_1776853994383.png" alt="Bride Entry White Floral" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/ivory_bride_entry_1776853994383.webp" alt="Bride Entry White Floral" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
             </motion.div>
           </div>
         </motion.div>
@@ -239,7 +239,7 @@ export default function EventManagementJaipur() {
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
               His voice has commanded crowds of 10,000, and his eye for detail ensures that the white ivory roses on your mandap match the exact shade of your bridal silhouette.
             </p>
-            <Image src="/favicon.png" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
+            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
           </motion.div>
         </div>
       </section>
@@ -252,10 +252,10 @@ export default function EventManagementJaipur() {
           
           <div className="space-y-24 border-l border-[#D4AF37]/30 ml-4 md:ml-12 pl-8 md:pl-16 relative">
             {[
-              { title: "The Welcome", desc: "A grand Rajasthani Swagat with folk musicians, rose petal showers, and vintage car arrivals.", img: "/ivory_vintage_car_1776854011319.png" },
-              { title: "The Haldi & Mehendi", desc: "Vibrant yellow and emerald themes. Interactive games, floral jewelry, and sun-kissed courtyards.", img: "/ivory_palace_venue_1776853964418.png" },
-              { title: "The Sangeet Gala", desc: "High-octane glamour. Crystal stages, celebrity performers, and synchronized pyrotechnics.", img: "/ivory_sangeet_stage_1776854029383.png" },
-              { title: "The Varmala & Pheras", desc: "The crescendo. A floating mandap under the stars, chanting priests, and color-smoke fireworks.", img: "/ivory_hero_wedding_1776853928413.png" }
+              { title: "The Welcome", desc: "A grand Rajasthani Swagat with folk musicians, rose petal showers, and vintage car arrivals.", img: "/ivory_vintage_car_1776854011319.webp" },
+              { title: "The Haldi & Mehendi", desc: "Vibrant yellow and emerald themes. Interactive games, floral jewelry, and sun-kissed courtyards.", img: "/ivory_palace_venue_1776853964418.webp" },
+              { title: "The Sangeet Gala", desc: "High-octane glamour. Crystal stages, celebrity performers, and synchronized pyrotechnics.", img: "/ivory_sangeet_stage_1776854029383.webp" },
+              { title: "The Varmala & Pheras", desc: "The crescendo. A floating mandap under the stars, chanting priests, and color-smoke fireworks.", img: "/ivory_hero_wedding_1776853928413.webp" }
             ].map((stage, idx) => (
               <motion.div
                 key={idx}
@@ -313,7 +313,7 @@ export default function EventManagementJaipur() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group cursor-pointer">
               <div className="relative aspect-[4/5] overflow-hidden mb-6">
-                <Image src="/ivory_palace_venue_1776853964418.png" alt="Jaipur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <Image src="/ivory_palace_venue_1776853964418.webp" alt="Jaipur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
               <h3 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Jaipur</h3>
               <p className="font-sans text-gray-500 mt-2">The Pink City of Royals</p>
@@ -327,7 +327,7 @@ export default function EventManagementJaipur() {
             </div>
             <div className="group cursor-pointer">
               <div className="relative aspect-[4/5] overflow-hidden mb-6">
-                <Image src="/ivory_mandap_decor_1776853945636.png" alt="Jodhpur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <Image src="/ivory_mandap_decor_1776853945636.webp" alt="Jodhpur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
               <h3 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Jodhpur</h3>
               <p className="font-sans text-gray-500 mt-2">The Blue City Heritage</p>
@@ -341,8 +341,8 @@ export default function EventManagementJaipur() {
         <h2 className="font-['The_Seasons'] text-center text-5xl md:text-7xl mb-16 text-[#1A1A1A]">Captured <span className="font-['Amandine'] text-[#097969]">Elegance</span></h2>
         <div className="flex gap-6 px-6 overflow-x-auto pb-12 snap-x snap-mandatory hide-scrollbar">
           {[
-            "/ivory_palace_venue_1776853964418.png", "/ivory_bride_entry_1776853994383.png", "/ivory_sangeet_stage_1776854029383.png", 
-            "/ivory_vintage_car_1776854011319.png", "/ivory_mandap_decor_1776853945636.png"
+            "/ivory_palace_venue_1776853964418.webp", "/ivory_bride_entry_1776853994383.webp", "/ivory_sangeet_stage_1776854029383.webp", 
+            "/ivory_vintage_car_1776854011319.webp", "/ivory_mandap_decor_1776853945636.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0">
               <Image src={img} alt="Gallery" fill className="object-cover" />
@@ -526,3 +526,4 @@ export default function EventManagementJaipur() {
     </div>
   );
 }
+

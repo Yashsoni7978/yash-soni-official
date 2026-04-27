@@ -274,6 +274,39 @@ const FAQS = [
     a:"Yes. Corporate events at JECC Sitapura in Jaipur, conference hotels across Udaipur and Jodhpur, and national brand summits across the state. The corporate register is completely different from wedding hosting — sharp, concise, brand-aligned, and unscripted.",
   },
 ];
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Anchor Yash Soni",
+  "image": "https://yashsoni.in/og-image.webp",
+  "@id": "https://yashsoni.in/#organization",
+  "url": "https://yashsoni.in",
+  "telephone": "+917737877978",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vaishali Nagar",
+    "addressLocality": "Jaipur",
+    "postalCode": "302021",
+    "addressRegion": "RJ",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.9124,
+    "longitude": 75.7873
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://www.instagram.com/anchoryashsoni",
+    "https://www.facebook.com/anchoryashsoni"
+  ]
+};
 const faqSchema = {
   "@context":"https://schema.org","@type":"FAQPage",
   mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })),
@@ -285,7 +318,7 @@ export default function AnchorInRajasthan() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(faqSchema) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify([faqSchema, localBusinessSchema]) }}/>
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
         <Link href="/best-anchor-in-jaipur">Best Anchor in Jaipur</Link> ›

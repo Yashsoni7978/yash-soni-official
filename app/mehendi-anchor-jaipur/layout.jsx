@@ -89,7 +89,7 @@ export const metadata = {
       "Ladies Sangeet specialist. Hands-free musical games, couple trivia, zero awkward silences. Jaipur's 4.9★ Mehendi ceremony host.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Best Mehendi Anchor in Jaipur",
@@ -100,7 +100,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Best Mehendi Anchor in Jaipur | Anchor Yash Soni",
     description: "4.9★ Mehendi host. Ladies Sangeet specialist. Zero boring waiting times.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

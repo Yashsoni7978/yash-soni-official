@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 import FloatingContact from "../components/FloatingContact";
 
-import { Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond, Cinzel, Great_Vibes, Montserrat, Spectral } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -23,6 +23,35 @@ const cormorant = Cormorant_Garamond({
   weight: ["300", "400", "600"],
   style: ["normal", "italic"],
 });
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  display: "swap",
+  weight: ["400", "700", "900"],
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
+  display: "swap",
+  weight: ["400"],
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["300", "400", "700"],
+});
+
+const spectral = Spectral({
+  subsets: ["latin"],
+  variable: "--font-spectral",
+  display: "swap",
+  weight: ["300", "400", "700"],
+});
+
 
 // ═══════════════════════════════════════════════════════════
 // GLOBAL SEO METADATA — SERVER COMPONENT
@@ -80,7 +109,7 @@ export const metadata = {
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description: "1100+ events. 10,000+ crowd commanded. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
     images: [{
-      url: "/og-image.jpg",
+      url: "/og-image.webp",
       width: 1200,
       height: 630,
       alt: "Anchor Yash Soni — Best Anchor in Jaipur on stage",
@@ -90,12 +119,12 @@ export const metadata = {
     card: "summary_large_image",
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description: "1100+ events. Jaipur's most commanding anchor for weddings, corporate events & Sangeets.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon.webp",
+    shortcut: "/favicon.webp",
+    apple: "/favicon.webp",
   },
   verification: {
     google: "yashsoniaudit",
@@ -116,7 +145,7 @@ const localBusinessSchema = {
   "telephone": "+917737877978",
   "email": "info@yashsoni.in",
   "priceRange": "₹₹₹₹",
-  "image": "https://yashsoni.in/og-image.jpg",
+  "image": "https://yashsoni.in/og-image.webp",
   "founder": {
     "@type": "Person",
     "name": "Yash Soni",
@@ -166,7 +195,7 @@ const personSchema = {
   "jobTitle": "Premium Event Anchor & Emcee",
   "description": "Best anchor in Jaipur with 1100+ events hosted. Expert in luxury weddings, Sangeet ceremonies, corporate events, and destination weddings across Rajasthan.",
   "url": "https://yashsoni.in",
-  "image": "https://yashsoni.in/og-image.jpg",
+  "image": "https://yashsoni.in/og-image.webp",
   "telephone": "+917737877978",
   "worksFor": {
     "@type": "Organization",
@@ -203,7 +232,7 @@ const breadcrumbSchema = {
 // ═══════════════════════════════════════════════════════════
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`scroll-smooth ${playfair.variable} ${cormorant.variable}`}>
+    <html lang="en-IN" className={`scroll-smooth ${playfair.variable} ${cormorant.variable} ${cinzel.variable} ${greatVibes.variable} ${montserrat.variable} ${spectral.variable}`}>
       <head>
         <meta name="geo.region" content="IN-RJ" />
         <meta name="geo.placename" content="Jaipur, Rajasthan, India" />

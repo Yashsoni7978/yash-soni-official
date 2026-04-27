@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -315,12 +316,11 @@ export default function WeddingAnchor() {
           </div>
           <div className="lg:col-span-7 relative h-[500px] md:h-[650px]">
             <div className="absolute inset-0 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="/service-wedding.webp"
+              <Image src="/service-wedding.webp"
                 className="w-full h-full object-cover"
                 alt="Anchor Yash Soni — best wedding anchor in Jaipur hosting a luxury Rajasthan wedding"
-                loading="eager"
-              />
+                priority
+              / />
               <div className="absolute inset-0 border-2 border-[#D4AF37]/20 m-5 rounded-2xl pointer-events-none" />
               {/* Credential overlay */}
               <div className="absolute bottom-6 left-6 right-6">
@@ -437,12 +437,11 @@ export default function WeddingAnchor() {
               <ScrollReveal key={idx} delay={idx * 0.1}>
                 <Link href={item.href}>
                   <div className="group relative h-[480px] md:h-[550px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl cursor-pointer hover:shadow-[0_0_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37]/40 transition-all duration-400">
-                    <img
-                      src={item.img}
+                    <Image src={item.img}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 grayscale group-hover:grayscale-0"
                       alt={`${item.title} — best wedding anchor in Jaipur`}
-                      loading="lazy"
-                    />
+                      
+                    / />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8 flex flex-col justify-end">
                       <item.icon className="w-10 h-10 text-[#D4AF37] mb-4" />
                       <h3 className="text-3xl md:text-4xl font-black text-white mb-2 uppercase">{item.title}</h3>

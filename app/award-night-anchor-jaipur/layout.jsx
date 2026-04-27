@@ -84,13 +84,13 @@ export const metadata = {
     siteName: "Anchor Yash Soni",
     title: "Award Night Anchor Jaipur | Yash Soni — JECC Sitapura & Luxury Venue Specialist",
     description: "Corporate award night anchor in Jaipur. 70+ national brands. JECC Sitapura, Fairmont & ITC Rajputana specialist.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Award Night Anchor Jaipur — Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Award Night Anchor Jaipur — Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Award Night Anchor Jaipur | Yash Soni",
     description: "Corporate award ceremonies, gala dinners & annual days. JECC Sitapura specialist. 4.9★.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ", "geo.placename": "Jaipur, Rajasthan, India",

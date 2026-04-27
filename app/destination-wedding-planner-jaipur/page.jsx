@@ -31,7 +31,7 @@ export default function DestinationWeddingPlannerJaipur() {
       <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
-            src="/destination_hero_1776855183717.png"
+            src="/destination_hero_1776855183717.webp"
             alt="Luxury Wedding in Jaipur"
             fill
             className="object-cover object-top"
@@ -49,12 +49,8 @@ export default function DestinationWeddingPlannerJaipur() {
           <span className="font-['Rekalgera'] uppercase tracking-[0.3em] text-[#097969] text-xs md:text-sm mb-6 block">
             The Jaipur Standard
           </span>
-          <h1 className="font-['Runiga'] text-5xl md:text-7xl lg:text-[100px] leading-[0.85] text-[#1A1A1A] mb-8">
-            Your Royal Destination
-          </h1>
-          <p className="font-['Amandine'] text-3xl md:text-5xl text-[#D4AF37] mb-10">
-            The finest destination wedding planner in Jaipur
-          </p>
+          <h1 className="font-['Runiga'] text-5xl md:text-7xl lg:text-[100px] leading-[0.85] text-[#1A1A1A] mb-8">The Destination Authority</h1>
+          <p className="font-['Amandine'] text-3xl md:text-5xl text-[#D4AF37] mb-10">Crafting legendary destination weddings in India's most iconic palaces</p>
           <a href="#contact" className="inline-block font-['Rekalgera'] uppercase tracking-[0.2em] text-xs md:text-sm bg-[#1A1A1A] text-[#FAF9F6] px-10 py-5 hover:bg-[#097969] transition-all duration-500 hover:shadow-[0_0_30px_rgba(9,121,105,0.4)]">
             Design Your Event
           </a>
@@ -90,12 +86,8 @@ export default function DestinationWeddingPlannerJaipur() {
           className="max-w-4xl mx-auto text-center"
         >
           <span className="font-['Orange_Avenue'] text-4xl text-[#D4AF37] mb-6 block">Welcome to Royalty</span>
-          <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-[#1A1A1A] leading-tight mb-10">
-            Jaipur is not just a destination. It is an emotion written in pink sandstone and gold.
-          </h2>
-          <p className="font-sans text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-            As the premier luxury event planner in Rajasthan, we don't just organize events; we author legacies. From the sprawling courtyards of Rambagh Palace to the illuminated majesty of Amer Fort, your celebration deserves a canvas that is nothing short of historic. We specialize in transforming these monumental spaces into intimate, bespoke experiences that echo your personal love story or corporate triumph.
-          </p>
+          <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-[#1A1A1A] leading-tight mb-10">A destination wedding is a journey. We are your compass through the sands of Rajasthan.</h2>
+          <p className="font-sans text-lg md:text-xl text-gray-600 font-light leading-relaxed">From the blue streets of Jodhpur to the golden dunes of Jaisalmer, we orchestrate multi-day celebrations that merge heritage with global luxury. No logistics too complex, no vision too grand.</p>
         </motion.div>
       </section>
 
@@ -110,13 +102,13 @@ export default function DestinationWeddingPlannerJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
-              <Image src="/ivory_mandap_decor_1776853945636.png" alt="White Flower Mandap" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/ivory_mandap_decor_1776853945636.webp" alt="White Flower Mandap" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden">
-              <Image src="/ivory_sangeet_stage_1776854029383.png" alt="Varmala Fireworks" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/ivory_sangeet_stage_1776854029383.webp" alt="Varmala Fireworks" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
-              <Image src="/ivory_bride_entry_1776853994383.png" alt="Bride Entry White Floral" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/ivory_bride_entry_1776853994383.webp" alt="Bride Entry White Floral" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
             </motion.div>
           </div>
         </motion.div>
@@ -131,9 +123,7 @@ export default function DestinationWeddingPlannerJaipur() {
           variants={fadeInUp}
           className="max-w-6xl mx-auto text-center"
         >
-          <p className="font-['Kugile_Regular'] text-5xl md:text-7xl lg:text-[90px] leading-[1.1] text-[#1A1A1A]">
-            "True luxury is <span className="text-[#D4AF37]">invisible</span>. It is the flawless execution of a thousand unseen details."
-          </p>
+          <p className="font-['Kugile_Regular'] text-5xl md:text-7xl lg:text-[90px] leading-[1.1] text-[#1A1A1A]">"Distance is an <span className=\"text-[#D4AF37]\">opportunity</span>. It is the chance to host your family in a world entirely of your own making."</p>
         </motion.div>
       </section>
 
@@ -239,7 +229,7 @@ export default function DestinationWeddingPlannerJaipur() {
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
               His voice has commanded crowds of 10,000, and his eye for detail ensures that the white ivory roses on your mandap match the exact shade of your bridal silhouette.
             </p>
-            <Image src="/favicon.png" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
+            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
           </motion.div>
         </div>
       </section>
@@ -252,11 +242,11 @@ export default function DestinationWeddingPlannerJaipur() {
           
           <div className="space-y-24 border-l border-[#D4AF37]/30 ml-4 md:ml-12 pl-8 md:pl-16 relative">
             {[
-              { title: "The Welcome", desc: "A grand Rajasthani Swagat with folk musicians, rose petal showers, and vintage car arrivals.", img: "/ivory_vintage_car_1776854011319.png" },
-              { title: "The Haldi & Mehendi", desc: "Vibrant yellow and emerald themes. Interactive games, floral jewelry, and sun-kissed courtyards.", img: "/ivory_palace_venue_1776853964418.png" },
-              { title: "The Sangeet Gala", desc: "High-octane glamour. Crystal stages, celebrity performers, and synchronized pyrotechnics.", img: "/ivory_sangeet_stage_1776854029383.png" },
-              { title: "The Varmala & Pheras", desc: "The crescendo. A floating mandap under the stars, chanting priests, and color-smoke fireworks.", img: "/ivory_hero_wedding_1776853928413.png" }
-            ].map((stage, idx) => (
+            { title: "Venue Acquisition", desc: "Securing the desert's most exclusive heritage forts.", img: "/ivory_vintage_car_1776854011319.webp" },
+            { title: "Guest Logistics", desc: "Seamless private charter and luxury fleet management.", img: "/ivory_palace_venue_1776853964418.webp" },
+            { title: "Cultural Immersion", desc: "Authentic local experiences meets global protocol.", img: "/ivory_sangeet_stage_1776854029383.webp" },
+            { title: "The Grand Finale", desc: "A world-class production in a historic setting.", img: "/ivory_hero_wedding_1776853928413.webp" }
+          ].map((stage, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 40 }}
@@ -313,7 +303,7 @@ export default function DestinationWeddingPlannerJaipur() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group cursor-pointer">
               <div className="relative aspect-[4/5] overflow-hidden mb-6">
-                <Image src="/ivory_palace_venue_1776853964418.png" alt="Jaipur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <Image src="/ivory_palace_venue_1776853964418.webp" alt="Jaipur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
               <h3 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Jaipur</h3>
               <p className="font-sans text-gray-500 mt-2">The Pink City of Royals</p>
@@ -327,7 +317,7 @@ export default function DestinationWeddingPlannerJaipur() {
             </div>
             <div className="group cursor-pointer">
               <div className="relative aspect-[4/5] overflow-hidden mb-6">
-                <Image src="/ivory_mandap_decor_1776853945636.png" alt="Jodhpur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <Image src="/ivory_mandap_decor_1776853945636.webp" alt="Jodhpur" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
               <h3 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Jodhpur</h3>
               <p className="font-sans text-gray-500 mt-2">The Blue City Heritage</p>
@@ -341,8 +331,8 @@ export default function DestinationWeddingPlannerJaipur() {
         <h2 className="font-['The_Seasons'] text-center text-5xl md:text-7xl mb-16 text-[#1A1A1A]">Captured <span className="font-['Amandine'] text-[#097969]">Elegance</span></h2>
         <div className="flex gap-6 px-6 overflow-x-auto pb-12 snap-x snap-mandatory hide-scrollbar">
           {[
-            "/ivory_palace_venue_1776853964418.png", "/ivory_bride_entry_1776853994383.png", "/ivory_sangeet_stage_1776854029383.png", 
-            "/ivory_vintage_car_1776854011319.png", "/ivory_mandap_decor_1776853945636.png"
+            "/ivory_palace_venue_1776853964418.webp", "/ivory_bride_entry_1776853994383.webp", "/ivory_sangeet_stage_1776854029383.webp", 
+            "/ivory_vintage_car_1776854011319.webp", "/ivory_mandap_decor_1776853945636.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0">
               <Image src={img} alt="Gallery" fill className="object-cover" />
@@ -526,3 +516,4 @@ export default function DestinationWeddingPlannerJaipur() {
     </div>
   );
 }
+

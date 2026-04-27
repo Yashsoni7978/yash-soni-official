@@ -11,7 +11,7 @@ export const NEW_BLOGS_BATCH_4 = [
     readTime: "11 min",
     title: "Top 10 Royal Palace Wedding Venues in Jaipur (2026-2027 Complete Guide)",
     desc: "Honest insider reviews of Rambagh, Fairmont, Jai Mahal, Samode & 6 more. Real budgets, anchor perspectives, acoustic issues & noise restrictions nobody tells you about.",
-    image: "/palace-wedding-venue-blog.png",
+    image: "/palace-wedding-venue-blog.webp",
     content: `
 When you close your eyes and imagine a "Rajasthan Destination Wedding," every visual element that appears is the same: grand stone archways flooding with golden light, horses and elephants in the Baraat procession, a bride walking down marble staircases into a courtyard that looks 400 years old. You see royalty.
 
@@ -115,7 +115,7 @@ Before depositing a single rupee into any venue, let's have a 20-minute consulta
     readTime: "9 min",
     title: "The Ultimate Jaipur Bridal Shopping Guide: Johari & Bapu Bazaar Secrets (2026)",
     desc: "Traveling to Rajasthan for wedding shopping? Your insider guide to Johari Bazaar Kundan jewelry, Gotapatti lehengas, Bapu Bazaar Juttis, and how to avoid every tourist trap.",
-    image: "/bridal-shopping-jaipur-blog.png",
+    image: "/bridal-shopping-jaipur-blog.webp",
     content: `
 If you are planning a [destination wedding in Rajasthan](https://yashsoni.in/destination-wedding-anchor), half the magic of the entire experience happens months before the actual event. It happens in the chaotic, colorful, vibrantly overwhelming streets of Jaipur's ancient bazaars.
 
@@ -212,3 +212,4 @@ Planning your destination wedding in Jaipur? Let's talk about venues, timeline, 
 `
   }
 ];
+

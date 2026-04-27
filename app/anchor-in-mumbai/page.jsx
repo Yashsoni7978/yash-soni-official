@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Image from 'next/image';
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -24,7 +25,7 @@ const css = `
 
 const G = ({ children }) => (
   <span className="bg-clip-text text-transparent bg-cover bg-center"
-    style={{ backgroundImage: "url('/texture/udaipur.png')", backgroundColor: GOLD }}>
+    style={{ backgroundImage: "url('/texture/mumbai.webp')", backgroundColor: GOLD }}>
     {children}
   </span>
 );
@@ -198,6 +199,39 @@ const FAQS = [
   },
 ];
 
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Anchor Yash Soni",
+  "image": "https://yashsoni.in/og-image.webp",
+  "@id": "https://yashsoni.in/#organization",
+  "url": "https://yashsoni.in",
+  "telephone": "+917737877978",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vaishali Nagar",
+    "addressLocality": "Jaipur",
+    "postalCode": "302021",
+    "addressRegion": "RJ",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.9124,
+    "longitude": 75.7873
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://www.instagram.com/anchoryashsoni",
+    "https://www.facebook.com/anchoryashsoni"
+  ]
+};
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
@@ -210,7 +244,7 @@ export default function MumbaiPage() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
       <style>{css}</style>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -231,7 +265,7 @@ export default function MumbaiPage() {
             {/* H1 — ANCHOR + Texture City Name */}
             <h1 className="font-black uppercase tracking-tighter leading-[0.82] mb-8">
               <span className="block text-white text-[17vw] md:text-[12vw] lg:text-[9rem] opacity-90 drop-shadow-2xl">ANCHOR</span>
-              <span className="block text-[15vw] md:text-[10vw] lg:text-[8rem] bg-clip-text text-transparent bg-cover bg-center mt-2 pb-4" style={{ backgroundImage: "url('/texture/udaipur.png')" }}>
+              <span className="block text-[15vw] md:text-[10vw] lg:text-[8rem] bg-clip-text text-transparent bg-cover bg-center mt-2 pb-4" style={{ backgroundImage: "url('/texture/mumbai.webp')" }}>
                 MUMBAI
               </span>
             </h1>

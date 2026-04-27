@@ -11,7 +11,7 @@ export const NEW_BLOGS_BATCH_5 = [
     readTime: "8 min",
     title: "The 7 Best Pre-Wedding Shoot Locations in Jaipur 2026 (Free & Paid)",
     desc: "Planning a cinematic pre-wedding shoot in Rajasthan? The complete guide to Patrika Gate, Jal Mahal, Nahargarh Fort, and 4 more — with exact timings, costs, and photographer tips.",
-    image: "/pre-wedding-jal-mahal-blog.png",
+    image: "/pre-wedding-jal-mahal-blog.webp",
     content: `
 If you are investing in a [destination wedding in Jaipur](https://yashsoni.in/anchor-in-jaipur), your pre-wedding shoot should not feel like a generic park photoshoot in your hometown city. It should look like a cinematic, high-fashion editorial campaign shot against 400-year-old Rajput architecture that no other city on earth can offer.
 
@@ -105,7 +105,7 @@ Your pre-wedding shoot sets the entire visual language of your Rajasthan wedding
     readTime: "9 min",
     title: "Planning a Winter Wedding in Jaipur: Weather, Decor, Heating & Anchor Tips",
     desc: "The complete guide to November-February destination weddings in Rajasthan. Cold nights, timeline shifts, wardrobe choices, heating costs, and how a great anchor keeps the crowd warm.",
-    image: "/winter-wedding-rajasthan-blog.png",
+    image: "/winter-wedding-rajasthan-blog.webp",
     content: `
 Ask any [wedding planner in Jaipur](https://yashsoni.in/event-planning-jaipur) for the single best time to get married in Rajasthan, and they will tell you without hesitation: **November through February.**
 
@@ -200,3 +200,4 @@ Just assume it will be colder than you expect. Shift your timeline toward the su
 `
   }
 ];
+

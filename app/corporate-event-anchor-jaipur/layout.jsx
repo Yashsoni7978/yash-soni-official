@@ -100,7 +100,7 @@ export const metadata = {
       "Award nights, conferences & galas at JECC Sitapura, JLN Marg & Birla Auditorium. 4.9★ rated corporate anchor in Jaipur.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — Corporate Event Anchor Jaipur",
@@ -111,7 +111,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni",
     description: "4.9★. Award nights, summits & gala dinners at JECC Sitapura, Jaipur.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ",

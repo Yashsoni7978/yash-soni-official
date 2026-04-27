@@ -85,13 +85,13 @@ export const metadata = {
     siteName: "Anchor Yash Soni",
     title: "Engagement & Roka Ceremony Anchor Jaipur | Yash Soni",
     description: "Custom scripted engagement, roka & ring ceremony anchor in Jaipur. Interactive games and bilingual hosting for families meeting for the first time.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Engagement Ceremony Anchor Jaipur — Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Engagement Ceremony Anchor Jaipur — Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Engagement & Roka Anchor Jaipur | Yash Soni",
     description: "Custom scripted. Bilingual. Ring ceremony, roka & engagement host in Jaipur.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   other: {
     "geo.region": "IN-RJ", "geo.placename": "Jaipur, Rajasthan, India",

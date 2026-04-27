@@ -77,11 +77,7 @@ export default function HaldiAnchor() {
         {/* Background - High Energy Haldi Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/60 to-purple-900/30 z-10" />
-          <img 
-            src="/gallery-1.webp" 
-            className="w-full h-full object-cover scale-105 animate-slow-zoom" 
-            alt="Top Haldi Games Anchor and Interactive Emcee"
-          />
+          <Image src="/gallery-1.webp" fill priority sizes="100vw" className="object-cover scale-105 animate-slow-zoom" alt="Top Haldi Games Anchor and Interactive Emcee" />
         </div>
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
@@ -168,7 +164,7 @@ export default function HaldiAnchor() {
          <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                <div className="relative h-[600px] group rounded-3xl overflow-hidden border border-yellow-500/30 shadow-2xl">
-                  <Image src="/gallery-3.webp" alt="High Energy Haldi Event Anchor Hosting Games" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" loading="lazy" />
+                  <Image src="/gallery-3.webp" alt="High Energy Haldi Event Anchor Hosting Games" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-10">
                       <h3 className="text-5xl font-display font-black text-yellow-400 mb-4 drop-shadow-lg">The Experience</h3>
@@ -208,7 +204,7 @@ export default function HaldiAnchor() {
       </section>
       {/* --- 6. CTA --- */}
       <section className="py-32 bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-600 text-center relative overflow-hidden">
-         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-multiply"></div>
+         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.webp')] mix-blend-multiply"></div>
          <div className="container mx-auto px-4 relative z-10">
             <h2 className="text-5xl md:text-7xl font-display font-black mb-8 text-white drop-shadow-lg">Let's Get This Party Started.</h2>
             <p className="text-white max-w-2xl mx-auto mb-12 text-2xl font-bold drop-shadow-md">

@@ -105,7 +105,7 @@ export const metadata = {
       "1100+ events. 4.9★ across 200+ reviews. Meet Jaipur's most trusted anchor — the story, the philosophy, the craft.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Anchor Yash Soni — About Page",
@@ -118,7 +118,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "About Anchor Yash Soni | Best Anchor in Jaipur",
     description: "4.9★. 1100+ events. The story behind Jaipur's most trusted event anchor.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
 };
 export default function AboutLayout({ children }) {
