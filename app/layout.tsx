@@ -143,14 +143,20 @@ const localBusinessSchema = {
   "description": "Anchor Yash Soni is the best anchor in Jaipur with 1100+ events hosted across Rajasthan and India. Specialist in luxury weddings, Sangeet ceremonies, corporate award nights, Haldi, Mehendi, and VIP events. Bilingual Hindi/English host serving Kukas, Amer Road, Ajmer Road, Sitapura JECC, Mansarovar and all major event venues in Jaipur.",
   "url": "https://yashsoni.in",
   "telephone": "+917737877978",
-  "email": "info@yashsoni.in",
+  "email": "info [at] yashsoni [dot] in",
   "priceRange": "₹₹₹₹",
   "image": "https://yashsoni.in/og-image.webp",
   "founder": {
     "@type": "Person",
     "name": "Yash Soni",
     "jobTitle": "Premium Event Anchor & Emcee",
-    "knowsLanguage": ["Hindi", "English", "Rajasthani"]
+    "knowsLanguage": ["Hindi", "English", "Rajasthani"],
+    "knowsAbout": ["Luxury Wedding Planning", "Corporate Event Management", "Stage Presence", "Public Speaking", "Cultural Traditions of Rajasthan", "Bilingual Hosting"],
+    "award": "1100+ Events Hosted Milestone",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Wedding Planners Association of Rajasthan"
+    }
   },
   "address": {
     "@type": "PostalAddress",
@@ -197,6 +203,9 @@ const personSchema = {
   "url": "https://yashsoni.in",
   "image": "https://yashsoni.in/og-image.webp",
   "telephone": "+917737877978",
+  "knowsAbout": ["Luxury Wedding Planning", "Corporate Event Management", "Stage Presence", "Public Speaking", "Cultural Traditions of Rajasthan", "Bilingual Hosting"],
+  "knowsLanguage": ["Hindi", "English", "Rajasthani"],
+  "award": "Best Anchor in Jaipur 4.9 Star Rating",
   "worksFor": {
     "@type": "Organization",
     "name": "Anchor Yash Soni"
@@ -207,7 +216,6 @@ const personSchema = {
     "addressRegion": "Rajasthan",
     "addressCountry": "IN"
   },
-  "knowsLanguage": ["Hindi", "English", "Rajasthani"],
   "sameAs": [
     "https://www.instagram.com/anchor_yash_official",
     "https://www.youtube.com/@anchor_yash"

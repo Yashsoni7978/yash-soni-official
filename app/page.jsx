@@ -485,7 +485,51 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* ══ SEO PILLAR: THE YASH SONI PHILOSOPHY ══ */}
+      <section className="py-24 md:py-32 bg-black border-t border-white/5 relative overflow-hidden">
+        <div className="container mx-auto px-5 md:px-10 max-w-5xl">
+          <ScrollReveal>
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-6">The Yash Soni Philosophy</p>
+                <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight uppercase tracking-tighter">
+                  Mastering the <br /><GoldText>Unscripted Moment.</GoldText>
+                </h2>
+                <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-6 font-light">
+                  True event anchoring is not about reading from a paper script or shouting over the music. It is about <strong className="text-white">vulnerability, presence, and unyielding energy</strong>. As a premier wedding anchor in Jaipur and corporate emcee across India, my approach is built on the foundation of 1,100+ live stage hours where every word is calculated for impact but delivered with raw authenticity.
+                </p>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                  Whether it is a royal destination wedding at Rambagh Palace or a high-stakes corporate summit at the Taj Palace Aerocity, the anchor acts as the heartbeat of the room. My mastery lies in <strong className="text-[#D4AF37]">Reading the Energy</strong>—knowing exactly when to elevate the room for a high-octane Sangeet performance and when to hold a space of quiet dignity for a Varmala ceremony.
+                </p>
+              </div>
+              <div className="space-y-10 lg:pt-16">
+                <div>
+                  <h3 className="text-white text-lg font-bold mb-4 uppercase tracking-widest border-l-2 border-[#D4AF37] pl-4">Zero Paper Scripts</h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed">
+                    A script is a wall between the host and the audience. By operating entirely unscripted, I maintain 100% eye contact with your guests, allowing for spontaneous wit, organic crowd-work, and the ability to pivot instantly if the event timeline shifts.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-white text-lg font-bold mb-4 uppercase tracking-widest border-l-2 border-[#D4AF37] pl-4">Bilingual Command</h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed">
+                    Hosting for the global elite requires a seamless transition between impeccable, formal English and the deep, cultural warmth of Hindi. I bridge that gap natively, ensuring international delegates and traditional family elders feel equally represented and engaged.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-white text-lg font-bold mb-4 uppercase tracking-widest border-l-2 border-[#D4AF37] pl-4">10,000+ Crowd Mastery</h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed">
+                    Scale does not intimidate; it inspires. Commanding a crowd of ten thousand requires a physical stage presence and vocal resonance that can unify massive exhibition halls and sprawling desert landscapes into a single, cohesive celebration.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* FOOTER */}
+
       <footer className="py-20 md:py-24 border-t border-white/10 bg-black text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.08),transparent_60%)] pointer-events-none" />
         <div className="container mx-auto px-5 md:px-10 relative z-10">
@@ -517,7 +561,10 @@ export default function HomePage() {
           <div className="mt-8 flex justify-center gap-6 text-zinc-600 text-[10px] tracking-widest uppercase">
             <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Instagram</a>
             <a href="https://youtube.com/@anchor_yash" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">YouTube</a>
-            <a href="mailto:info@yashsoni.in" className="hover:text-[#D4AF37] transition-colors">Email</a>
+            <a href="https://facebook.com/anchoryashsoni" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Facebook</a>
+            <a href="https://linkedin.com/in/anchoryashsoni" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">LinkedIn</a>
+            <span className="text-[#D4AF37]">info [at] yashsoni [dot] in</span>
+
           </div>
           <p className="mt-8 text-zinc-700 text-[11px]">
             © {new Date().getFullYear()} Anchor Yash Soni. All rights reserved. Jaipur, Rajasthan, India.

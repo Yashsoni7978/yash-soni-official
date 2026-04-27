@@ -13,7 +13,7 @@ const personSchema = {
   url: "https://yashsoni.in",
   image: "https://yashsoni.in/intro-portrait-top.webp",
   telephone: "+917737877978",
-  email: "info@yashsoni.in",
+  email: "info [at] yashsoni [dot] in",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Jaipur",

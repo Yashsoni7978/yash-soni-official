@@ -31,8 +31,8 @@ const css = `
 // REUSABLES
 // ─────────────────────────────────────────────
 const G = ({ children }) => (
-  <span className="bg-clip-text text-transparent bg-cover bg-center"
-    style={{ backgroundImage:"linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)", backgroundColor:GOLD }}>
+  <span className="bg-clip-text text-transparent bg-cover bg-center gold-gradient-text"
+    >
     {children}
   </span>
 );

@@ -9,7 +9,7 @@ const localBusinessSchema = {
     "Premium event anchor and emcee in Jaipur. Wedding anchoring, Sangeet hosting, Haldi hosting, corporate events, destination weddings, and team building. 4.9★ rated across 200+ verified reviews.",
   url: "https://yashsoni.in",
   telephone: "+917737877978",
-  email: "info@yashsoni.in",
+  email: "info [at] yashsoni [dot] in",
   image: "https://yashsoni.in/og-image.webp",
   priceRange: "₹₹₹",
   currenciesAccepted: "INR",

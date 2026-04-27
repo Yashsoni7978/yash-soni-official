@@ -1,0 +1,27 @@
+# Anchor Yash Soni - India's Premier Event Host
+
+> Luxury Wedding Anchor, Corporate Emcee, and High-Energy Celebrity Host based in Jaipur, Rajasthan.
+
+## About
+Yash Soni is a visionary in the realm of luxury celebrations. With over a decade of experience and 1,100+ events hosted across India, he specializes in unscripted, high-octane stage command for elite heritage weddings and corporate galas.
+
+## Core Services
+- **Luxury Wedding Anchor**: Specializing in destination weddings at heritage palaces like Rambagh Palace, Fairmont Jaipur, and Umaid Bhawan.
+- **Corporate Emcee**: Professional host for award nights, product launches, and national summits (Taj Palace, Aerocity).
+- **Celebrity Host**: Managing high-stakes public events and talent management protocols.
+- **Event Planning**: End-to-end luxury event curation in Rajasthan.
+
+## Key Destinations
+- **Jaipur**: The Pink City hub for royal heritage weddings.
+- **Udaipur**: The City of Lakes destination weddings.
+- **Delhi NCR**: Chhatarpur farmhouses and Diplomatic Enclave corporate events.
+- **Mumbai**: High-profile corporate and sea-facing luxury weddings.
+
+## Contact Information
+- **WhatsApp/Call**: +91 7737877978
+- **Website**: https://yashsoni.in
+- **Instagram**: @anchor_yash_official
+- **YouTube**: Anchor Yash Soni
+
+## Technical Integrity
+This site is built with Next.js 16, optimized for performance and accessibility. It follows high-standard SEO practices including schema.org markup for LocalBusiness and Person.

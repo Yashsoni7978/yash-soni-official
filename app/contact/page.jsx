@@ -110,13 +110,13 @@ export default function Contact() {
                    <p className="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">+91 77378 77978</p>
                  </div>
                </a>
-               <a href="mailto:info@yashsoni.in" className="flex items-center gap-5 group">
+               <a href="#" className="flex items-center gap-5 group">
                  <div className="w-14 h-14 bg-[#111] rounded-2xl flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-colors duration-500 shadow-md">
                    <Mail className="w-5 h-5" />
                  </div>
                  <div>
                    <p className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">Business Inquiries</p>
-                   <p className="text-lg font-bold text-white group-hover:text-white transition-colors">info@yashsoni.in</p>
+                   <p className="text-lg font-bold text-white group-hover:text-white transition-colors">info [at] yashsoni [dot] in</p>
                  </div>
                </a>
             </div>
