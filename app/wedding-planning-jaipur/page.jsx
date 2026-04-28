@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -24,19 +24,47 @@ export default function WeddingPlanningJaipur() {
   const { scrollYProgress } = useScroll({ target: containerRef });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
+  const heroImages = [
+    "/premium_events/luxury_wedding_mandap.webp",
+    "/premium_events/royal_rajasthan_fort.webp",
+    "/premium_events/theme_wedding_setup.webp",
+    "/premium_events/palace_wedding_decor.webp",
+    "/premium_events/grand_wedding_venue.webp",
+  ];
+  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000); // 5 seconds per slide
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div ref={containerRef} className="bg-[#FAF9F6] text-[#1A1A1A] w-full min-h-screen overflow-hidden selection:bg-[#D4AF37] selection:text-white">
       
       {/* 1. THE CINEMATIC HERO (100vh) */}
       <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
-          <Image
-            src="/premium_events/luxury_wedding_mandap.webp"
-            alt="Luxury Wedding in Jaipur"
-            fill
-            className="object-cover object-top"
-            priority
-          />
+          <AnimatePresence>
+            <motion.div
+              key={currentImageIndex}
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={heroImages[currentImageIndex]}
+                alt="Luxury Wedding in Jaipur"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </motion.div>
+          </AnimatePresence>
         </motion.div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#FAF9F6] via-[#FAF9F6]/50 to-transparent"></div>
 
