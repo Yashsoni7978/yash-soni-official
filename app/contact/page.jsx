@@ -254,10 +254,10 @@ export default function Contact() {
                 { name: "StarClinch", href: "https://starclinch.com/artists/anchor-yash-soni" },
                 { name: "Justdial", href: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET" },
               ].map((brand, i) => (
-                <a key={i} href={brand.href} target="_blank" rel="noopener noreferrer"
+                <Link key={i} href={brand.href} target="_blank" rel="noopener noreferrer"
                   className="text-xl md:text-2xl font-black text-white hover:text-[#D4AF37] transition-colors">
                   {brand.name}
-                </a>
+                </Link>
               ))}
            </div>
         </div>

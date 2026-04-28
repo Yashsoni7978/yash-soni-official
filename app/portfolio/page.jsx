@@ -1,4 +1,6 @@
 "use client";
+
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -175,7 +177,7 @@ export default function Portfolio() {
                 key={item.id}
                 className="break-inside-avoid mb-6"
               >
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <Link href={item.link} target="_blank" rel="noopener noreferrer">
                   <div className="group relative rounded-xl overflow-hidden cursor-pointer border border-neutral-900 bg-[#0a0a0a] hover:border-[#D4AF37]/50 transition-colors duration-500 shadow-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]">
                     {/* Image */}
                     <div className="relative overflow-hidden">
@@ -217,7 +219,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                   </div>
-                </a>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>

@@ -322,11 +322,11 @@ const faqSchema = {
               </p>
               {/* CTAs — stacked mobile, row desktop */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <button className="pulse-gold w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-black font-bold text-sm md:text-base uppercase tracking-widest rounded-full hover:bg-white transition-all active:scale-95">
                     Secure Your Date →
                   </button>
-                </a>
+                </Link>
                 <Link href="/portfolio" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto px-8 py-4 border-2 border-white/30 text-white font-bold text-sm md:text-base uppercase tracking-widest rounded-full hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all active:scale-95 flex items-center justify-center gap-2">
                     <Play size={14} fill="currentColor" /> Watch Reel
@@ -377,11 +377,11 @@ const faqSchema = {
               Bilingual Hindi/English. Fluent in Rajasthani culture. Zero paper scripts. <strong className="text-white">The most reviewed anchor in Jaipur.</strong>
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href={WA} target="_blank" rel="noopener noreferrer">
+              <Link href={WA} target="_blank" rel="noopener noreferrer">
                 <button className="px-6 py-3 bg-[#D4AF37] text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all">
                   Check Availability →
                 </button>
-              </a>
+              </Link>
               <Link href="/about">
                 <button className="px-6 py-3 border border-[#D4AF37]/40 text-[#D4AF37] text-xs font-medium rounded-full hover:bg-[#D4AF37]/10 transition-all">
                   About Yash
@@ -496,11 +496,11 @@ const faqSchema = {
                 </div>
               ))}
             </div>
-            <a href={WA} target="_blank" rel="noopener noreferrer">
+            <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="px-7 py-3.5 bg-[#D4AF37] text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all">
                 Book the Best Anchor in Jaipur →
               </button>
-            </a>
+            </Link>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="rounded-2xl border border-white/10 overflow-hidden bg-zinc-900/30">
@@ -766,11 +766,11 @@ const faqSchema = {
               The best anchor in Jaipur books <strong className="text-[#D4AF37]">6–8 months in advance.</strong> No waitlists. No replacements. Every event on the calendar gets complete, undivided presence.
             </p>
             <p className="text-zinc-600 text-sm mb-10">When the calendar is full — it is simply full.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="pulse-gold w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm md:text-base uppercase tracking-widest rounded-full hover:bg-white transition-all">
                 <CalendarCheck size={18} /> Claim Your Date via WhatsApp
               </button>
-            </a>
+            </Link>
             <p className="mt-5 text-zinc-600 text-[10px] uppercase tracking-widest">
               Best Anchor in Jaipur · <strong className="text-[#D4AF37]">Limited Slots</strong> · 2025–2026 Season
             </p>

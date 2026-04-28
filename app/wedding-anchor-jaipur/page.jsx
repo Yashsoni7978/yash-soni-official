@@ -271,11 +271,11 @@ export default function WeddingAnchor() {
             <p className="text-zinc-500 text-sm mb-10 tracking-wide">
               1,100+ weddings &nbsp;·&nbsp; Bilingual Hindi/English &nbsp;·&nbsp; 100% Unscripted &nbsp;·&nbsp; NRI specialist
             </p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" aria-label="Book best wedding anchor in Jaipur">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" aria-label="Book best wedding anchor in Jaipur">
               <button className="px-10 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:scale-105 hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)] active:scale-95">
                 Secure Your Wedding Date <ArrowRight className="inline ml-2 w-4 h-4" />
               </button>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -487,11 +487,11 @@ export default function WeddingAnchor() {
               Don&apos;t leave your wedding&apos;s most important voice to chance. Jaipur&apos;s most reviewed wedding anchor books <strong className="text-[#D4AF37]">6–8 months in advance.</strong>
             </p>
             <p className="text-zinc-600 text-sm mb-10">No replacements sent. No waitlist kept. One wedding per date.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-12 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
                 <CalendarCheck size={18} /> Check Availability Now
               </button>
-            </a>
+            </Link>
             <p className="text-zinc-700 text-[10px] uppercase tracking-widest mt-5">
               Best Wedding Anchor in Jaipur · <strong className="text-[#D4AF37]">Limited Dates Remaining</strong>
             </p>

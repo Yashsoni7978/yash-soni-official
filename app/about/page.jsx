@@ -368,10 +368,10 @@ export default function AboutPage() {
               { name: "StarClinch", href: "https://starclinch.com" },
               { name: "Google Reviews", href: "https://share.google/pMZGzEGOhXnJpLq5g" },
             ].map((p) => (
-              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer"
+              <Link key={p.name} href={p.href} target="_blank" rel="noopener noreferrer"
                 className="text-zinc-500 text-xs font-medium hover:text-[#D4AF37] transition-colors uppercase tracking-wider">
                 {p.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -409,11 +409,11 @@ export default function AboutPage() {
               Yash Soni
             </p>
             {/* Single, final CTA */}
-            <a href={WA} target="_blank" rel="noopener noreferrer">
+            <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.2)] active:scale-95">
                 <CalendarCheck size={17} /> Start the Conversation
               </button>
-            </a>
+            </Link>
             <p className="text-zinc-700 text-[10px] uppercase tracking-widest mt-6">
               Calendar books 6–8 months in advance &nbsp;·&nbsp; No replacements sent
             </p>

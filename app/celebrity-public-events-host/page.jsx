@@ -272,11 +272,11 @@ export default function CelebrityAnchorPage() {
               Concerts &nbsp;·&nbsp; Fashion Shows &nbsp;·&nbsp; Luxury Launches &nbsp;·&nbsp; Celebrity Events
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.35)] active:scale-95">
                   Book For Event →
                 </button>
-              </a>
+              </Link>
               <Link href="/portfolio" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm font-medium rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
                   View Portfolio
@@ -451,11 +451,11 @@ export default function CelebrityAnchorPage() {
             </div>
             {/* Quick CTA after events list */}
             <div className="mt-5 text-center">
-              <a href={WA} target="_blank" rel="noopener noreferrer">
+              <Link href={WA} target="_blank" rel="noopener noreferrer">
                 <button className="px-7 py-3 bg-[#D4AF37] text-black font-bold text-xs uppercase tracking-widest rounded-full hover:bg-white transition-all">
                   Check Availability →
                 </button>
-              </a>
+              </Link>
             </div>
           </Reveal>
         </div>
@@ -546,11 +546,11 @@ export default function CelebrityAnchorPage() {
               For events that need more than a host — they need a <strong className="text-[#D4AF37]">personality</strong>. Dates book quickly for peak season events. No replacements sent.
             </p>
             <p className="text-zinc-600 text-xs mb-8">WhatsApp the moment your event is confirmed.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.2)] active:scale-95">
                 <CalendarCheck size={16} /> Book For Event
               </button>
-            </a>
+            </Link>
             {/* Footer link strip */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
               <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>

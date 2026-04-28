@@ -49,11 +49,11 @@ export const HomeHero = ({ waLink }) => {
           </p>
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={waLink} target="_blank" rel="noopener noreferrer">
+            <Link href={waLink} target="_blank" rel="noopener noreferrer">
               <button className="px-10 py-5 bg-[#D4AF37] text-black font-black uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 text-xs md:text-sm">
                 CLAIM YOUR DATE →
               </button>
-            </a>
+            </Link>
             <div className="flex gap-2">
                <Link href="/portfolio" className="flex-1 sm:flex-none">
                  <button className="w-full px-8 py-5 border border-white/20 text-white font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-all text-[11px] md:text-xs">

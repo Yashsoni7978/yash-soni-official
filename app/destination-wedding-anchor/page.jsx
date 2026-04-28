@@ -335,11 +335,11 @@ export default function DestinationAnchor() {
               Udaipur · Jodhpur · Jaisalmer · Goa · Dubai &amp; worldwide &nbsp;·&nbsp; NRI specialist &nbsp;·&nbsp; Full 2–3 day package
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.4)] active:scale-95">
                   Check Travel Dates →
                 </button>
-              </a>
+              </Link>
               <Link href="/wedding-anchor-jaipur" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
                   Wedding Anchor →
@@ -398,11 +398,11 @@ export default function DestinationAnchor() {
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Bilingual Hindi/English. NRI protocol fluent. Every Rajasthani tradition respected and every international guest included. This is the complete destination wedding experience.
             </p>
-            <a href={WA} target="_blank" rel="noopener noreferrer">
+            <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="px-7 py-3.5 bg-[#D4AF37] text-black font-bold text-xs uppercase tracking-widest rounded-full hover:bg-white transition-all">
                 Check Destination Availability →
               </button>
-            </a>
+            </Link>
           </Reveal>
           {/* Stacked image — original design kept */}
           <Reveal delay={0.15}>
@@ -631,11 +631,11 @@ export default function DestinationAnchor() {
               Destination wedding packages block <strong className="text-[#D4AF37]">3–4 full days</strong> of the calendar. They book <strong className="text-[#D4AF37]">6–9 months in advance</strong> — faster than any other format.
             </p>
             <p className="text-zinc-600 text-xs mb-8">The moment your venue and dates are confirmed — WhatsApp immediately.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.2)] active:scale-95">
                 <CalendarCheck size={16} /> Inquire Now
               </button>
-            </a>
+            </Link>
             {/* Footer links */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
               <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>

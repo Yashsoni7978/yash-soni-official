@@ -337,11 +337,11 @@ export default function MehendiAnchor() {
               1,100+ events &nbsp;·&nbsp; Ladies Sangeet specialist &nbsp;·&nbsp; Bilingual Hindi/English
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.35)] active:scale-95">
                   Secure Your Date →
                 </button>
-              </a>
+              </Link>
               <a href="https://youtube.com/@anchoryashsoni" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-10 py-4 border border-emerald-500/30 text-emerald-300 text-sm font-medium rounded-full hover:bg-emerald-900/20 transition-all flex items-center justify-center gap-2">
                   <Play className="w-3.5 h-3.5 fill-current" /> See The Vibe
@@ -388,11 +388,11 @@ export default function MehendiAnchor() {
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Hands-free musical games. Couple trivia roasts. Dholak sessions that bridge elders and youth. And a dance floor that opens before the henna even dries.
             </p>
-            <a href={WA} target="_blank" rel="noopener noreferrer">
+            <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="px-7 py-3.5 bg-[#D4AF37] text-black font-bold text-xs uppercase tracking-widest rounded-full hover:bg-white transition-all">
                 Check Mehendi Availability →
               </button>
-            </a>
+            </Link>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-emerald-500/20 group">
@@ -623,11 +623,11 @@ export default function MehendiAnchor() {
               Mehendi and Sangeet dates fill faster than ceremony slots. Book <strong className="text-emerald-400">6–8 months in advance</strong> for peak season. No waitlist. No replacements.
             </p>
             <p className="text-zinc-600 text-xs mb-8">WhatsApp the moment your venue is confirmed.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(16,185,129,0.15)] active:scale-95">
                 <CalendarCheck size={16} /> Check Availability Now
               </button>
-            </a>
+            </Link>
             {/* Footer link strip */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
               <Link href="/best-anchor-in-jaipur" className="hover:text-emerald-400 transition-colors">Best Anchor Jaipur</Link>

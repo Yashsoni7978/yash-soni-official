@@ -346,11 +346,11 @@ export default function CorporateAnchor() {
                 70+ national brands &nbsp;·&nbsp; 4.9★ across 200+ reviews &nbsp;·&nbsp; Broadcast-ready
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.35)] active:scale-95">
                     Book Now →
                   </button>
-                </a>
+                </Link>
                 <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto px-10 py-4 border border-blue-500/40 text-blue-300 text-sm font-medium rounded-full hover:bg-blue-900/20 transition-all flex items-center justify-center gap-2">
                     <Youtube className="w-4 h-4" /> Watch Reel
@@ -624,11 +624,11 @@ export default function CorporateAnchor() {
               Don&apos;t risk your brand reputation with an amateur. Jaipur&apos;s most reviewed corporate anchor — <strong className="text-blue-400">70+ national brands</strong> have made that call.
             </p>
             <p className="text-zinc-600 text-xs mb-8">No waitlist. No replacements. WhatsApp to confirm availability.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_30px_rgba(59,130,246,0.15)] active:scale-95">
                 <CalendarCheck size={16} /> Check Availability
               </button>
-            </a>
+            </Link>
             {/* Footer links */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
               <Link href="/best-anchor-in-jaipur" className="hover:text-blue-400 transition-colors">Best Anchor Jaipur</Link>

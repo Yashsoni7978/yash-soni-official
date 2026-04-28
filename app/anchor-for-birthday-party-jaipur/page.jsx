@@ -262,11 +262,11 @@ export default function BirthdayAnchorJaipur() {
                 <p className="text-zinc-500 text-sm">Jaipur · Rajasthan · Pan-India</p>
               </div>
               <div className="flex gap-3 shrink-0 flex-wrap">
-                <a href={WA} target="_blank" rel="noopener noreferrer">
+                <Link href={WA} target="_blank" rel="noopener noreferrer">
                   <button className="px-9 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.35)] active:scale-95">
                     Book via WhatsApp →
                   </button>
-                </a>
+                </Link>
                 <Link href="/anchor-in-jaipur">
                   <button className="px-7 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
                     All Events →
@@ -564,11 +564,11 @@ export default function BirthdayAnchorJaipur() {
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-2">Peak season weekends fill 6–8 weeks in advance.</p>
             <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the date and guest count — quote within the hour.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer">
+            <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-2 px-12 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
                 <CalendarCheck size={16}/> WhatsApp to Book
               </button>
-            </a>
+            </Link>
             <div className="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[9px] uppercase tracking-widest">
               {[
                 ["/wedding-anchor-jaipur","Wedding Anchor"],

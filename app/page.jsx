@@ -473,11 +473,11 @@ export default function HomePage() {
             <p className="text-zinc-500 mb-10 text-sm">
               Calendar fills <strong className="text-[#D4AF37]">6–8 months in advance.</strong> When it&apos;s full — it&apos;s full.
             </p>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+            <Link href={WA_LINK} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center justify-center gap-3 px-8 md:px-12 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-base md:text-lg uppercase tracking-widest rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(212,175,55,0.3)] w-full sm:w-auto">
                 <CalendarCheck size={20} /> Claim Your Date via WhatsApp
               </button>
-            </a>
+            </Link>
             <p className="mt-5 text-zinc-600 text-[10px] uppercase tracking-[0.2em]">
               4.9★ Rated &nbsp;·&nbsp; <strong className="text-[#D4AF37]/70">Limited Slots Remaining</strong> &nbsp;·&nbsp; 2025–2026 Season
             </p>

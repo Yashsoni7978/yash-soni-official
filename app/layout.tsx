@@ -87,9 +87,6 @@ export const metadata = {
   ],
   authors: [{ name: "Yash Soni", url: "https://yashsoni.in" }],
   creator: "Yash Soni",
-  alternates: {
-    canonical: './',
-  },
   robots: {
     index: true,
     follow: true,

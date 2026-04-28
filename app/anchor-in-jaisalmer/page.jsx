@@ -294,11 +294,11 @@ export default function JaisalmerPage() {
               The premier choice for <G>Suryagarh luxury weddings</G>, Marriott Sangeets, and ultra-premium desert camp celebrations in the heart of the Thar Desert.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={WA} target="_blank" rel="noopener noreferrer">
+              <Link href={WA} target="_blank" rel="noopener noreferrer">
                 <button className="px-10 py-5 bg-[#D4AF37] text-black font-black uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.45)] hover:scale-105 active:scale-95">
                   SECURE YOUR DATE →
                 </button>
-              </a>
+              </Link>
               <Link href="/portfolio">
                 <button className="px-10 py-5 border border-[#D4AF37]/50 text-[#D4AF37] font-black uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
                   VIEW PORTFOLIO
@@ -680,11 +680,11 @@ export default function JaisalmerPage() {
               Jaisalmer's premium properties book out months in advance, and because of travel logistics, host block-outs in this region happen simultaneously. I do not hold dates without confirmation.
             </p>
             <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer">
+            <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE
               </button>
-            </a>
+            </Link>
           </Reveal>
         </div>
       </section>

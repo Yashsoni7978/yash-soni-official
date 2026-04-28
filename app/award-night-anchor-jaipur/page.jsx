@@ -236,11 +236,11 @@ export default function AwardNightAnchorJaipur() {
                 <p className="text-zinc-500 text-sm">70+ national brands · 4.9★ · JECC Sitapura specialist</p>
               </div>
               <div className="flex gap-3 flex-wrap shrink-0">
-                <a href={WA} target="_blank" rel="noopener noreferrer">
+                <Link href={WA} target="_blank" rel="noopener noreferrer">
                   <button className="px-9 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.35)] active:scale-95">
                     Book via WhatsApp →
                   </button>
-                </a>
+                </Link>
                 <Link href="/corporate-event-anchor-jaipur">
                   <button className="px-7 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
                     Corporate Events →
@@ -541,11 +541,11 @@ export default function AwardNightAnchorJaipur() {
               </h2>
               <p className="text-zinc-400 text-sm mb-2">Corporate dates at JECC and Fairmont fill 4–6 weeks out.</p>
               <p className="text-zinc-600 text-xs mb-8 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
-              <a href={WA} target="_blank" rel="noopener noreferrer">
+              <Link href={WA} target="_blank" rel="noopener noreferrer">
                 <button className="inline-flex items-center gap-2 px-12 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
                   <CalendarCheck size={16}/> Book via WhatsApp
                 </button>
-              </a>
+              </Link>
             </Reveal>
           </div>
         </div>

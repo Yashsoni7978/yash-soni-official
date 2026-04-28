@@ -391,11 +391,11 @@ const faqSchema = {
               Locally based &nbsp;·&nbsp; 1,100+ Jaipur events &nbsp;·&nbsp; Zero travel fees within Jaipur
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={WA} target="_blank" rel="noopener noreferrer">
+              <Link href={WA} target="_blank" rel="noopener noreferrer">
                 <button className="w-full sm:w-auto px-10 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:scale-105 hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.35)] active:scale-95">
                   Secure Your Date
                 </button>
-              </a>
+              </Link>
               <Link href="/best-anchor-in-jaipur">
                 <button className="w-full sm:w-auto px-10 py-5 border border-[#D4AF37]/40 text-[#D4AF37] text-sm font-medium uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
                   Why I&apos;m Jaipur&apos;s Most Reviewed
@@ -650,11 +650,11 @@ const faqSchema = {
               Don&apos;t fly in an outsider. The best anchor in Jaipur is <strong className="text-[#D4AF37]">already here</strong> — locally based, zero travel fees, and booked <strong className="text-[#D4AF37]">6–8 months in advance</strong> for peak season.
             </p>
             <p className="text-zinc-600 text-sm mb-10">No waitlists. No replacements. One anchor, one event, per date.</p>
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
+            <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-12 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
                 <CalendarCheck size={18} /> Check Availability
               </button>
-            </a>
+            </Link>
             <p className="text-zinc-700 text-[10px] uppercase tracking-widest mt-5">
               Best Anchor in Jaipur · <strong className="text-[#D4AF37]">Limited Slots Remaining</strong>
             </p>

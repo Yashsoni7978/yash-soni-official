@@ -1,6 +1,7 @@
 "use client";
 
-export const PlatformsMarquee = ({ platforms }) => {
+
+import Link from "next/link";export const PlatformsMarquee = ({ platforms }) => {
   return (
     <section className="py-14 md:py-16 border-y border-white/5 bg-black">
       <div className="mb-8 flex justify-center">
@@ -11,10 +12,10 @@ export const PlatformsMarquee = ({ platforms }) => {
       <div className="flex overflow-hidden mask-fade">
         <div className="flex whitespace-nowrap gap-16 md:gap-24 items-center animate-marquee w-max">
           {[...platforms, ...platforms, ...platforms].map((p, i) => (
-            <a key={i} href={p.link} target="_blank" rel="noopener noreferrer"
+            <Link key={i} href={p.link} target="_blank" rel="noopener noreferrer"
               className={`text-2xl md:text-4xl font-black text-zinc-700 uppercase transition-all duration-300 hover:scale-105 ${p.color}`}>
               {p.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

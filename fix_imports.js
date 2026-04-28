@@ -1,35 +1,26 @@
 const fs = require('fs');
 const path = require('path');
 
-const appDir = path.join(__dirname, 'app');
-const dirs = fs.readdirSync(appDir).filter(f => f.startsWith('anchor-in-'));
-
-let totalFixed = 0;
-
-for (const dir of dirs) {
-    const filePath = path.join(appDir, dir, 'page.jsx');
-    if (!fs.existsSync(filePath)) continue;
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    let original = content;
-
-    if (content.includes('<Image') || content.includes('<Image ')) {
-        const hasImport = content.includes('import Image from "next/image"') || content.includes("import Image from 'next/image'");
-        if (!hasImport) {
-            content = content.replace('"use client";', '"use client";\nimport Image from "next/image";');
-            // Check if it doesn't have semicolon
-            if (content === original) {
-                content = content.replace('"use client"', '"use client";\nimport Image from "next/image";');
-            }
-        }
+function processDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      processDirectory(fullPath);
+    } else if (file.endsWith('.jsx') || file.endsWith('.tsx') || file.endsWith('.js')) {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      if (content.includes('import Link from "next/link";import React')) {
+        content = content.replace('import Link from "next/link";import React', 'import Link from "next/link";\nimport React');
+        fs.writeFileSync(fullPath, content);
+        console.log(`Fixed formatting in ${fullPath}`);
+      }
+      if (content.includes('import Link from "next/link";import Image')) {
+        content = content.replace('import Link from "next/link";import Image', 'import Link from "next/link";\nimport Image');
+        fs.writeFileSync(fullPath, content);
+        console.log(`Fixed formatting in ${fullPath}`);
+      }
     }
-    
-    // Alwar fix: if next/image is imported as something else? or not at all.
-    if (content !== original) {
-        fs.writeFileSync(filePath, content);
-        console.log(`Added missing next/image import to ${filePath}`);
-        totalFixed++;
-    }
+  }
 }
 
-console.log('Fixed imports: ' + totalFixed);
+processDirectory(path.join(__dirname, 'app'));
