@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-rishikesh/layout.jsx
 // Ultra-Luxury Satvik Destination & Himalayan Foothills Anchor Layout
 

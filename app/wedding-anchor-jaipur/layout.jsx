@@ -60,7 +60,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
-    { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/best-anchor-in-jaipur" },
+    { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/anchor-in-jaipur" },
     { "@type": "ListItem", position: 3, name: "Wedding Anchor Jaipur", item: "https://yashsoni.in/wedding-anchor-jaipur" },
   ],
 };

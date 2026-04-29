@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-pushkar/layout.jsx
 // International NRI Wedding & Heritage Desert Anchor Layout
 

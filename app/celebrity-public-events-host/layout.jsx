@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/celebrity-public-events-host/layout.jsx
 // SERVER COMPONENT — metadata only, no head/script tags
 const serviceSchema = {
@@ -33,7 +34,7 @@ const breadcrumb = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
-    { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/best-anchor-in-jaipur" },
+    { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/anchor-in-jaipur" },
     { "@type": "ListItem", position: 3, name: "Celebrity Events Host Jaipur", item: "https://yashsoni.in/celebrity-public-events-host" },
   ],
 };

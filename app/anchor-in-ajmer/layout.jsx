@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-ajmer/layout.jsx
 // Sufi Heritage & Regional Palace Wedding Anchor — Full Schema + SEO Layout
 

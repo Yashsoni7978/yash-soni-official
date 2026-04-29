@@ -56,8 +56,8 @@ export default function BlogPage() {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent z-10"></div>
                 <div className="absolute bottom-0 p-8 md:p-12 w-full z-20">
-                  <p className="text-xs font-bold uppercase mb-4 tracking-widest text-[#D4AF37]">{featured.category} . {featured.date}</p>
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[0.9] text-white group-hover:text-[#D4AF37] transition-colors duration-500">{featured.title}</h2>
+                  <p className="text-xs font-bold uppercase mb-4 tracking-widest text-[#B5952F]">{featured.category} . {featured.date}</p>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[0.9] text-white group-hover:text-[#B5952F] transition-colors duration-500">{featured.title}</h2>
                 </div>
               </div>
             </Link>
@@ -126,7 +126,7 @@ export default function BlogPage() {
                   </div>
 
                   <div className="w-full md:w-3/5">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37] mb-2">{post.category} . {post.date}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#B5952F] mb-2">{post.category} . {post.date}</p>
                     <h3 className="text-2xl font-black uppercase leading-tight mb-4 text-white group-hover:text-gray-200">{post.title}</h3>
                     <p className="text-sm text-zinc-400 line-clamp-2 font-light">{post.desc}</p>
                   </div>

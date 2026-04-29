@@ -66,7 +66,7 @@ const PLATFORMS = [
   { name: "Justdial", link: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET", color: "hover:text-[#FF9800]" },
   { name: "ShaadiDukaan", link: "https://www.shaadidukaan.com/profile/yash-2", color: "hover:text-[#E91E63]" },
   { name: "StarClinch", link: "https://starclinch.com", color: "hover:text-[#FF5722]" },
-  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#D4AF37]" },
+  { name: "Sulekha", link: "https://sulekha.com", color: "hover:text-[#B5952F]" },
   { name: "Google Reviews", link: "https://share.google/pMZGzEGOhXnJpLq5g", color: "hover:text-[#4285F4]" },
 ];
 
@@ -154,7 +154,7 @@ export default function HomePage() {
             {STATS.map((s, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="text-center group">
-                  <s.icon size={22} className="text-[#D4AF37] mx-auto mb-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <s.icon size={22} className="text-[#B5952F] mx-auto mb-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                   <div className="text-3xl md:text-5xl font-black mb-1 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
                     {s.value}
                   </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
             <ScrollReveal>
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] mb-4 block font-bold">About Anchor Yash</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] mb-4 block font-bold">About Anchor Yash</span>
               <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
                 Beyond Announcements.<br />
                 <GoldText>Beyond Scripts.</GoldText>
@@ -186,7 +186,7 @@ export default function HomePage() {
               <p className="text-zinc-400 text-sm md:text-8 mb-4 leading-relaxed font-light">
                 Bilingual in Hindi and English. Fluent in Rajasthani culture. <strong className="text-white">Rated 4.9★ by 200+ clients across India.</strong>
               </p>
-              <Link href="/about" className="inline-flex items-center gap-2 border-b border-[#D4AF37]/50 pb-1 text-[#D4AF37] text-xs tracking-widest uppercase hover:text-white transition-colors">
+              <Link href="/about" className="inline-flex items-center gap-2 border-b border-[#D4AF37]/50 pb-1 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 Read My Story <ArrowRight size={12} />
               </Link>
             </ScrollReveal>
@@ -228,7 +228,7 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <ScrollReveal>
             <div className="text-center mb-12 md:mb-16">
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em]">What I Do</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em]">What I Do</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">
                 Signature <GoldText>Services.</GoldText>
               </h2>
@@ -266,7 +266,7 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-3 mt-10 md:mt-12">
             {SERVICE_PILLS.map((p, i) => (
               <Link key={i} href={p.href}>
-                <span className="px-5 py-2.5 rounded-full border border-[#D4AF37]/30 text-[#D4AF37] text-xs md:text-sm font-medium hover:bg-[#D4AF37]/10 hover:border-[#D4AF37] transition-all cursor-pointer whitespace-nowrap">
+                <span className="px-5 py-2.5 rounded-full border border-[#D4AF37]/30 text-[#B5952F] text-xs md:text-sm font-medium hover:bg-[#D4AF37]/10 hover:border-[#D4AF37] transition-all cursor-pointer whitespace-nowrap">
                   {p.label}
                 </span>
               </Link>
@@ -282,7 +282,7 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-3">
             {["Celebrity Weddings", "Corporate R&R Events", "Big Fat Indian Weddings", "Award Ceremonies", "Sangeet & Mehndi", "Haldi Ceremonies", "Sports Events"].map((tag, i) => (
               <ScrollReveal key={i} delay={i * 0.04}>
-                <span className="px-5 py-2.5 rounded-full border border-white/8 bg-white/4 text-zinc-300 text-sm hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
+                <span className="px-5 py-2.5 rounded-full border border-white/8 bg-white/4 text-zinc-300 text-sm hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all">
                   {tag}
                 </span>
               </ScrollReveal>
@@ -296,7 +296,7 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em]">The Yash Soni Difference</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em]">The Yash Soni Difference</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">
                 Rated 4.9★ <GoldText>For a Reason.</GoldText>
               </h2>
@@ -306,7 +306,7 @@ export default function HomePage() {
             {WHY_ME.map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="bg-zinc-900/30 p-8 md:p-10 rounded-2xl border border-white/5 hover:border-[#D4AF37]/40 transition-all duration-500 group h-full hover:-translate-y-1.5">
-                  <item.icon className="w-10 h-10 text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform" />
+                  <item.icon className="w-10 h-10 text-[#B5952F] mb-6 group-hover:scale-110 transition-transform" />
                   <h3 className="text-lg font-bold mb-3 text-white">{item.title}</h3>
                   <p className="text-zinc-400 leading-relaxed font-light text-sm">{item.text}</p>
                 </div>
@@ -321,7 +321,7 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-start">
             <ScrollReveal>
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] mb-4 block font-bold">The Market Reality</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] mb-4 block font-bold">The Market Reality</span>
               <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-tight">
                 Experience is good.<br />
                 <GoldText>Relevance is better.</GoldText>
@@ -341,7 +341,7 @@ export default function HomePage() {
                   "Cultural fluency: traditional rituals + international NRI protocol",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={16} className="text-[#D4AF37] mt-0.5 shrink-0" />
+                    <CheckCircle2 size={16} className="text-[#B5952F] mt-0.5 shrink-0" />
                     <span className="text-zinc-300 text-sm">{item}</span>
                   </div>
                 ))}
@@ -360,7 +360,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-[1fr_auto_1fr] px-5 py-3.5 border-b border-white/10 items-center">
                   <span className="text-zinc-500 text-[10px] uppercase tracking-wider">Others</span>
                   <span className="bg-[#D4AF37] text-black text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full mx-3">VS</span>
-                  <span className="text-[#D4AF37] text-[10px] uppercase tracking-wider text-right">Anchor Yash</span>
+                  <span className="text-[#B5952F] text-[10px] uppercase tracking-wider text-right">Anchor Yash</span>
                 </div>
                 {VS_DATA.map((row, i) => (
                   <div key={i} className="grid grid-cols-[1fr_1px_1fr] border-b border-white/5 last:border-0">
@@ -380,7 +380,7 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-14">
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em]">Coverage</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em]">Coverage</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">
                 Pan-India <GoldText>Authority.</GoldText>
               </h2>
@@ -391,8 +391,8 @@ export default function HomePage() {
               <ScrollReveal key={i} delay={i * 0.08}>
                 <Link href="/anchor-in-jaipur">
                   <div className="border border-white/10 rounded-xl p-5 hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-zinc-900/20 hover:bg-zinc-900/50 h-full">
-                    <MapPin size={16} className="text-[#D4AF37] mb-2.5" />
-                    <div className="text-[#D4AF37] text-[9px] uppercase tracking-[0.18em] mb-1 font-bold">{loc.area}</div>
+                    <MapPin size={16} className="text-[#B5952F] mb-2.5" />
+                    <div className="text-[#B5952F] text-[9px] uppercase tracking-[0.18em] mb-1 font-bold">{loc.area}</div>
                     <div className="text-zinc-300 text-[11px] mb-2 font-medium leading-snug">{loc.zones}</div>
                     <p className="text-zinc-600 text-[11px] leading-relaxed hidden md:block">{loc.desc}</p>
                   </div>
@@ -411,7 +411,7 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <ScrollReveal>
             <div className="text-center mb-14 md:mb-20">
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em]">How It Works</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em]">How It Works</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">
                 From First Call to <GoldText>Standing Ovation.</GoldText>
               </h2>
@@ -421,7 +421,7 @@ export default function HomePage() {
             {PROCESS.map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="relative pl-10 md:pl-8 border-l md:border-l border-white/10 hover:border-[#D4AF37] transition-colors group h-full">
-                  <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[9px] text-[#D4AF37] font-bold group-hover:scale-125 transition-transform">
+                  <span className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[9px] text-[#B5952F] font-bold group-hover:scale-125 transition-transform">
                     {step.num}
                   </span>
                   <h3 className="text-base font-bold mb-2 text-white">{step.title}</h3>
@@ -441,7 +441,7 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <ScrollReveal>
             <div className="text-center mb-12 md:mb-16">
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em]">People Also Ask</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em]">People Also Ask</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">
                 Frequently Asked <GoldText>Questions.</GoldText>
               </h2>
@@ -461,8 +461,8 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10 text-center relative z-10 max-w-xl">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-5 py-2 mb-8">
-              <ShieldCheck size={13} className="text-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">Limited Availability</span>
+              <ShieldCheck size={13} className="text-[#B5952F]" />
+              <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">Limited Availability</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black mb-5 tracking-tight leading-[0.95]">
               Your Date <br /><GoldText>Won&apos;t Wait.</GoldText>
@@ -471,7 +471,7 @@ export default function HomePage() {
               I do not maintain a waitlist. I do not send replacements. Every event gets my complete, undivided presence.
             </p>
             <p className="text-zinc-500 mb-10 text-sm">
-              Calendar fills <strong className="text-[#D4AF37]">6–8 months in advance.</strong> When it&apos;s full — it&apos;s full.
+              Calendar fills <strong className="text-[#B5952F]">6–8 months in advance.</strong> When it&apos;s full — it&apos;s full.
             </p>
             <Link href={WA_LINK} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center justify-center gap-3 px-8 md:px-12 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-base md:text-lg uppercase tracking-widest rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(212,175,55,0.3)] w-full sm:w-auto">
@@ -479,7 +479,7 @@ export default function HomePage() {
               </button>
             </Link>
             <p className="mt-5 text-zinc-600 text-[10px] uppercase tracking-[0.2em]">
-              4.9★ Rated &nbsp;·&nbsp; <strong className="text-[#D4AF37]/70">Limited Slots Remaining</strong> &nbsp;·&nbsp; 2025–2026 Season
+              4.9★ Rated &nbsp;·&nbsp; <strong className="text-[#B5952F]/70">Limited Slots Remaining</strong> &nbsp;·&nbsp; 2025–2026 Season
             </p>
           </ScrollReveal>
         </div>
@@ -492,7 +492,7 @@ export default function HomePage() {
           <ScrollReveal>
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
-                <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-6">The Yash Soni Philosophy</p>
+                <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-6">The Yash Soni Philosophy</p>
                 <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight uppercase tracking-tighter">
                   Mastering the <br /><GoldText>Unscripted Moment.</GoldText>
                 </h2>
@@ -500,7 +500,7 @@ export default function HomePage() {
                   True event anchoring is not about reading from a paper script or shouting over the music. It is about <strong className="text-white">vulnerability, presence, and unyielding energy</strong>. As a premier wedding anchor in Jaipur and corporate emcee across India, my approach is built on the foundation of 1,100+ live stage hours where every word is calculated for impact but delivered with raw authenticity.
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Whether it is a royal destination wedding at Rambagh Palace or a high-stakes corporate summit at the Taj Palace Aerocity, the anchor acts as the heartbeat of the room. My mastery lies in <strong className="text-[#D4AF37]">Reading the Energy</strong>—knowing exactly when to elevate the room for a high-octane Sangeet performance and when to hold a space of quiet dignity for a Varmala ceremony.
+                  Whether it is a royal destination wedding at Rambagh Palace or a high-stakes corporate summit at the Taj Palace Aerocity, the anchor acts as the heartbeat of the room. My mastery lies in <strong className="text-[#B5952F]">Reading the Energy</strong>—knowing exactly when to elevate the room for a high-octane Sangeet performance and when to hold a space of quiet dignity for a Varmala ceremony.
                 </p>
               </div>
               <div className="space-y-10 lg:pt-16">
@@ -555,15 +555,15 @@ export default function HomePage() {
               { label: "Blog", href: "/blog" },
               { label: "Contact", href: "/contact" },
             ].map((l, i) => (
-              <Link key={i} href={l.href} className="hover:text-[#D4AF37] transition-colors">{l.label}</Link>
+              <Link key={i} href={l.href} className="hover:text-[#B5952F] transition-colors">{l.label}</Link>
             ))}
           </div>
           <div className="mt-8 flex justify-center gap-6 text-zinc-600 text-[10px] tracking-widest uppercase">
-            <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Instagram</a>
-            <a href="https://youtube.com/@anchor_yash" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">YouTube</a>
-            <a href="https://facebook.com/anchoryashsoni" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">Facebook</a>
-            <a href="https://linkedin.com/in/anchoryashsoni" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">LinkedIn</a>
-            <span className="text-[#D4AF37]">info [at] yashsoni [dot] in</span>
+            <a href="https://instagram.com/anchor_yash_official" target="_blank" rel="noopener noreferrer" className="hover:text-[#B5952F] transition-colors">Instagram</a>
+            <a href="https://youtube.com/@anchor_yash" target="_blank" rel="noopener noreferrer" className="hover:text-[#B5952F] transition-colors">YouTube</a>
+            <a href="https://facebook.com/anchoryashsoni" target="_blank" rel="noopener noreferrer" className="hover:text-[#B5952F] transition-colors">Facebook</a>
+            <a href="https://linkedin.com/in/anchoryashsoni" target="_blank" rel="noopener noreferrer" className="hover:text-[#B5952F] transition-colors">LinkedIn</a>
+            <span className="text-[#B5952F]">info [at] yashsoni [dot] in</span>
 
           </div>
           <p className="mt-8 text-zinc-700 text-[11px]">

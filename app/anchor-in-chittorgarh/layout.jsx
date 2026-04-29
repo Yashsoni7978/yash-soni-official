@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-chittorgarh/layout.jsx
 const CITY     = "Chittorgarh";
 const SLUG     = "anchor-in-chittorgarh";

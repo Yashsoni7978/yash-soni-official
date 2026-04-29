@@ -69,9 +69,9 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
 // Fixed: real credibility numbers, not vague qualifiers
 const STATS = [
   { val: "1100+", label: "Events Hosted", icon: Mic2, color: "text-emerald-400" },
-  { val: "4.9★", label: "Client Rating", icon: Star, color: "text-[#D4AF37]" },
+  { val: "4.9★", label: "Client Rating", icon: Star, color: "text-[#B5952F]" },
   { val: "3-4 hrs", label: "Zero Boring Moments", icon: Music, color: "text-emerald-400" },
-  { val: "200+", label: "Verified Reviews", icon: Trophy, color: "text-[#D4AF37]" },
+  { val: "200+", label: "Verified Reviews", icon: Trophy, color: "text-[#B5952F]" },
 ];
 const GAME_CATEGORIES = [
   {
@@ -298,7 +298,7 @@ export default function MehendiAnchor() {
       {/* BREADCRUMB — sr-only for SEO */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
-        <Link href="/best-anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
+        <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
         <span>Mehendi Anchor Jaipur</span>
       </nav>
       {/* ══════════════════════════════════════
@@ -400,7 +400,7 @@ export default function MehendiAnchor() {
               <Image
                 src="/gallery-2.webp"
                 alt="Anchor Yash Soni hosting Mehendi ceremony in Jaipur"
-                fill quality={100}
+                fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
@@ -483,7 +483,7 @@ export default function MehendiAnchor() {
               <Image
                 src="/gallery-3.webp"
                 alt="Mehendi ceremony in Jaipur with interactive crowd games"
-                fill quality={100}
+                fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
@@ -544,7 +544,7 @@ export default function MehendiAnchor() {
                   className="flex flex-col h-full border border-white/10 rounded-2xl p-6 hover:border-emerald-500/30 transition-all bg-zinc-900/20 hover:bg-zinc-900/50 group cursor-pointer">
                   <div className="flex gap-0.5 mb-3">
                     {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]" />
+                      <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />
                     ))}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
@@ -630,7 +630,7 @@ export default function MehendiAnchor() {
             </Link>
             {/* Footer link strip */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/best-anchor-in-jaipur" className="hover:text-emerald-400 transition-colors">Best Anchor Jaipur</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-emerald-400 transition-colors">Best Anchor Jaipur</Link>
               <Link href="/sangeet-anchor-jaipur" className="hover:text-emerald-400 transition-colors">Sangeet Host</Link>
               <Link href="/haldi-anchor-jaipur" className="hover:text-emerald-400 transition-colors">Haldi Anchor</Link>
               <Link href="/wedding-anchor-jaipur" className="hover:text-emerald-400 transition-colors">Wedding Anchor</Link>

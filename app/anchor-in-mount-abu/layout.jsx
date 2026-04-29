@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-mount-abu/layout.jsx
 // Hill Station Wedding Anchor — Full Triple Schema + Rich SEO Layout
 

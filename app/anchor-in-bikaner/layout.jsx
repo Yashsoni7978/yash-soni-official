@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-bikaner/layout.jsx
 const CITY     = "Bikaner";
 const SLUG     = "anchor-in-bikaner";

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, CalendarCheck, Camera, CheckCircle2, ChevronDown, Heart, MapPin, Mic, Minus, Music, Plus, ShieldCheck, Sparkles, Star, Sun, Users, Wine } from "lucide-react";
+import { ArrowRight, CalendarCheck, Camera, Heart, MapPin, Minus, Music, Plus, ShieldCheck, Sparkles, Star, Sun, Users, Wine } from "lucide-react";
 
 
 
@@ -51,7 +51,7 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <span className={`text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4 flex items-center gap-3 font-bold ${align === "center" ? "justify-center" : "justify-start"}`}>
+      <span className={`text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-4 flex items-center gap-3 font-bold ${align === "center" ? "justify-center" : "justify-start"}`}>
         {align === "center" && <span className="w-8 h-px bg-[#D4AF37]" aria-hidden="true" />}
         {subtitle}
         <span className="w-12 h-px bg-[#D4AF37]" aria-hidden="true" />
@@ -169,12 +169,12 @@ const FAQItem = ({ question, answer, id }) => {
         className="w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none"
       >
         <span className={`font-bold text-base md:text-lg pr-6 transition-colors leading-snug ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#B5952F]" : "text-zinc-200 group-hover:text-white"
         }`}>
           {question}
         </span>
         <div className={`shrink-0 flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ${
-          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#B5952F]"
         }`}>
           {isOpen ? <Minus size={16} aria-hidden="true" /> : <Plus size={16} aria-hidden="true" />}
         </div>
@@ -227,9 +227,9 @@ export default function WeddingAnchor() {
       ══════════════════════════════════════ */}
       <nav className="pt-24 md:pt-28 pb-0 px-5 md:px-10 max-w-6xl mx-auto sr-only">
         <div className="flex items-center gap-2 text-xs text-zinc-600">
-          <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+          <Link href="/" className="hover:text-[#B5952F] transition-colors">Home</Link>
           <span>›</span>
-          <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>
+          <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Best Anchor Jaipur</Link>
           <span>›</span>
           <span className="text-zinc-400">Wedding Anchor</span>
         </div>
@@ -257,8 +257,8 @@ export default function WeddingAnchor() {
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             {/* Badge */}
             <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 backdrop-blur-md mb-8">
-              <Star className="w-3 h-3 text-[#D4AF37] fill-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold">4.9★ · Best Wedding Anchor in Jaipur</span>
+              <Star className="w-3 h-3 text-[#B5952F] fill-[#D4AF37]" />
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">4.9★ · Best Wedding Anchor in Jaipur</span>
             </div>
             {/* H1 — primary keyword */}
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
@@ -292,21 +292,21 @@ export default function WeddingAnchor() {
             </p>
             <div className="space-y-6">
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
-                <Heart className="w-10 h-10 text-[#D4AF37] shrink-0 mt-1" />
+                <Heart className="w-10 h-10 text-[#B5952F] shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Emotional Intelligence</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">Knowing exactly when to ignite the Sangeet and when to let the sacred Varmala ritual breathe in silence. Two completely different disciplines — mastered in one.</p>
                 </div>
               </div>
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
-                <Sparkles className="w-10 h-10 text-[#D4AF37] shrink-0 mt-1" />
+                <Sparkles className="w-10 h-10 text-[#B5952F] shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">100% Unscripted</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">Zero paper scripts in 1,100+ weddings. Every word is earned live. Spontaneous family banter and crowd psychology that feels personal, never rehearsed.</p>
                 </div>
               </div>
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
-                <ShieldCheck className="w-10 h-10 text-[#D4AF37] shrink-0 mt-1" />
+                <ShieldCheck className="w-10 h-10 text-[#B5952F] shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Crisis Invisible</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">PA failures, delayed brides, last-minute changes — all handled invisible to your guests. Your wedding runs flawlessly. Always.</p>
@@ -326,7 +326,7 @@ export default function WeddingAnchor() {
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-black/70 backdrop-blur-sm border border-white/10 rounded-xl p-4 flex items-center gap-4">
                   <div>
-                    <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold mb-0.5">4.9★ Wedding Anchor</p>
+                    <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-0.5">4.9★ Wedding Anchor</p>
                     <p className="text-white text-xs">1,100+ weddings · Jaipur & pan-India</p>
                   </div>
                 </div>
@@ -346,7 +346,7 @@ export default function WeddingAnchor() {
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-8 md:p-10 rounded-3xl hover:border-[#D4AF37]/60 transition-all duration-400 group hover:-translate-y-1">
                   <div className="text-4xl md:text-5xl mb-6 group-hover:scale-110 transition-transform duration-400 inline-block">{w.icon}</div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors uppercase tracking-tight">{w.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#B5952F] transition-colors uppercase tracking-tight">{w.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{w.desc}</p>
                 </div>
               </ScrollReveal>
@@ -364,7 +364,7 @@ export default function WeddingAnchor() {
             {EVENT_FLOW.map((e, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="bg-[#0a0a0a] border border-neutral-800 p-6 md:p-8 rounded-2xl text-center hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all group cursor-default">
-                  <e.icon className="w-7 h-7 mx-auto mb-3 text-[#D4AF37] group-hover:text-black transition-colors" />
+                  <e.icon className="w-7 h-7 mx-auto mb-3 text-[#B5952F] group-hover:text-black transition-colors" />
                   <p className="font-bold uppercase tracking-widest text-xs md:text-sm group-hover:text-black transition-colors">{e.title}</p>
                 </div>
               </ScrollReveal>
@@ -384,10 +384,10 @@ export default function WeddingAnchor() {
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div className="border border-white/10 rounded-2xl p-6 hover:border-[#D4AF37]/40 transition-all bg-[#0a0a0a] hover:bg-[#111] group">
                   <div className="flex items-start gap-3 mb-2">
-                    <MapPin size={16} className="text-[#D4AF37] mt-0.5 shrink-0" />
+                    <MapPin size={16} className="text-[#B5952F] mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-white font-bold text-base group-hover:text-[#D4AF37] transition-colors">{z.zone}</p>
-                      <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold mt-0.5">{z.type}</p>
+                      <p className="text-white font-bold text-base group-hover:text-[#B5952F] transition-colors">{z.zone}</p>
+                      <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mt-0.5">{z.type}</p>
                     </div>
                   </div>
                   <p className="text-zinc-500 text-xs ml-7 leading-relaxed">{z.note}</p>
@@ -397,7 +397,7 @@ export default function WeddingAnchor() {
           </div>
           <ScrollReveal delay={0.3}>
             <div className="text-center mt-8">
-              <Link href="/best-anchor-in-jaipur" className="inline-flex items-center gap-2 text-[#D4AF37] text-xs uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 hover:text-white transition-colors">
+              <Link href="/anchor-in-jaipur" className="inline-flex items-center gap-2 text-[#B5952F] text-xs uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 hover:text-white transition-colors">
                 See Complete Jaipur Coverage <ArrowRight size={12} />
               </Link>
             </div>
@@ -443,7 +443,7 @@ export default function WeddingAnchor() {
                       
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8 flex flex-col justify-end">
-                      <item.icon className="w-10 h-10 text-[#D4AF37] mb-4" />
+                      <item.icon className="w-10 h-10 text-[#B5952F] mb-4" />
                       <h3 className="text-3xl md:text-4xl font-black text-white mb-2 uppercase">{item.title}</h3>
                       <div className="h-0.5 w-8 bg-[#D4AF37] mb-3 rounded-full" />
                       <p className="text-zinc-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-400">{item.desc}</p>
@@ -479,12 +479,12 @@ export default function WeddingAnchor() {
         </div>
         <div className="container mx-auto px-5 md:px-10 text-center relative z-10 max-w-2xl">
           <ScrollReveal>
-            <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-6 font-bold">The Final Word</p>
+            <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-6 font-bold">The Final Word</p>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight leading-[0.95] uppercase">
               The Stage <G>Awaits.</G>
             </h2>
             <p className="text-zinc-400 text-base mb-3 leading-relaxed max-w-lg mx-auto">
-              Don&apos;t leave your wedding&apos;s most important voice to chance. Jaipur&apos;s most reviewed wedding anchor books <strong className="text-[#D4AF37]">6–8 months in advance.</strong>
+              Don&apos;t leave your wedding&apos;s most important voice to chance. Jaipur&apos;s most reviewed wedding anchor books <strong className="text-[#B5952F]">6–8 months in advance.</strong>
             </p>
             <p className="text-zinc-600 text-sm mb-10">No replacements sent. No waitlist kept. One wedding per date.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
@@ -493,16 +493,16 @@ export default function WeddingAnchor() {
               </button>
             </Link>
             <p className="text-zinc-700 text-[10px] uppercase tracking-widest mt-5">
-              Best Wedding Anchor in Jaipur · <strong className="text-[#D4AF37]">Limited Dates Remaining</strong>
+              Best Wedding Anchor in Jaipur · <strong className="text-[#B5952F]">Limited Dates Remaining</strong>
             </p>
             {/* Internal links */}
             <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Sangeet Host</Link>
-              <Link href="/haldi-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Haldi Anchor</Link>
-              <Link href="/mehendi-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Mehendi Host</Link>
-              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Corporate Events</Link>
-              <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>
-              <Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link>
+              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Sangeet Host</Link>
+              <Link href="/haldi-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Haldi Anchor</Link>
+              <Link href="/mehendi-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Mehendi Host</Link>
+              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Corporate Events</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Best Anchor Jaipur</Link>
+              <Link href="/contact" className="hover:text-[#B5952F] transition-colors">Contact</Link>
             </div>
           </ScrollReveal>
         </div>

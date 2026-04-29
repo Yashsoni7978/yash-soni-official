@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Camera, ChevronDown, Heart, Minus, Music, PartyPopper, Play, Plus, Smile, Sparkles, Star, Sun, Trophy, Users, Zap } from "lucide-react";
+import { Camera, Heart, Minus, Music, Play, Plus, Sparkles, Star, Sun, Trophy, Users, Zap } from "lucide-react";
 
 
 

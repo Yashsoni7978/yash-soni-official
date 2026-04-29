@@ -52,8 +52,8 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
     >
       <div className={`flex items-center gap-3 mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}>
         {align === "center" && <span className="w-8 h-px bg-[#D4AF37]" />}
-        <Plane className="w-3.5 h-3.5 text-[#D4AF37]" />
-        <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold">{subtitle}</span>
+        <Plane className="w-3.5 h-3.5 text-[#B5952F]" />
+        <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold">{subtitle}</span>
         <span className="w-8 h-px bg-[#D4AF37]" />
       </div>
       <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">{title}</h2>
@@ -253,10 +253,10 @@ const FAQItem = ({ question, answer, id }) => {
         className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#B5952F]" : "text-zinc-200 group-hover:text-white"
         }`}>{question}</span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 mt-0.5 ${
-          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#B5952F]"
         }`}>
           {isOpen ? <Minus size={14} aria-hidden="true" /> : <Plus size={14} aria-hidden="true" />}
         </div>
@@ -299,7 +299,7 @@ export default function DestinationAnchor() {
       {/* BREADCRUMB — sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
-        <Link href="/best-anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
+        <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
         <span>Destination Wedding Anchor India</span>
       </nav>
       {/* ══════════════════════════════════════
@@ -311,7 +311,7 @@ export default function DestinationAnchor() {
           <Image
             src="/gallery-4.webp"
             alt="Destination wedding anchor India — Anchor Yash Soni"
-            fill priority quality={100}
+            fill priority
             className="object-cover"
             sizes="100vw"
           />
@@ -319,7 +319,7 @@ export default function DestinationAnchor() {
         <div className="relative z-20 container mx-auto px-5 md:px-10 text-center">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <div className="inline-flex items-center gap-3 border border-white/20 px-5 py-2 rounded-full bg-black/40 backdrop-blur-xl mb-8">
-              <Globe className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <Globe className="w-3.5 h-3.5 text-[#B5952F]" />
               <span className="text-white text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Destination Wedding Anchor · India & Global
               </span>
@@ -341,7 +341,7 @@ export default function DestinationAnchor() {
                 </button>
               </Link>
               <Link href="/wedding-anchor-jaipur" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
+                <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all">
                   Wedding Anchor →
                 </button>
               </Link>
@@ -370,7 +370,7 @@ export default function DestinationAnchor() {
             {STATS.map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div className="text-center py-10 md:py-14 px-3">
-                  <s.icon size={20} className="mx-auto mb-3 text-[#D4AF37]" />
+                  <s.icon size={20} className="mx-auto mb-3 text-[#B5952F]" />
                   <div className="text-4xl md:text-5xl font-black mb-1"><G>{s.val}</G></div>
                   <div className="text-zinc-500 text-[10px] uppercase tracking-widest">{s.label}</div>
                 </div>
@@ -385,7 +385,7 @@ export default function DestinationAnchor() {
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-4 font-bold">Destination Wedding Specialist</p>
+            <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-4 font-bold">Destination Wedding Specialist</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
               I Don&apos;t Just Host<br />Your Wedding. <G>I Curate</G><br />the 3-Day Experience.
             </h2>
@@ -411,7 +411,7 @@ export default function DestinationAnchor() {
                 <Image
                   src="/gallery-5.webp"
                   alt="Destination wedding venue India"
-                  fill quality={100}
+                  fill
                   className="object-cover grayscale opacity-60"
                   sizes="(max-width:1024px) 75vw, 37vw"
                 />
@@ -420,7 +420,7 @@ export default function DestinationAnchor() {
                 <Image
                   src="/intro-portrait-top.webp"
                   alt="Anchor Yash Soni destination wedding anchor India"
-                  fill quality={100}
+                  fill
                   className="object-cover"
                   sizes="(max-width:1024px) 75vw, 37vw"
                 />
@@ -442,9 +442,9 @@ export default function DestinationAnchor() {
             <div className="space-y-6">
               {WHY_DIFFERENT.map((w, i) => (
                 <div key={i} className="flex gap-4 group">
-                  <CheckCircle2 size={16} className="text-[#D4AF37] mt-0.5 shrink-0" />
+                  <CheckCircle2 size={16} className="text-[#B5952F] mt-0.5 shrink-0" />
                   <div>
-                    <h3 className="text-white font-bold text-sm mb-1 group-hover:text-[#D4AF37] transition-colors">{w.title}</h3>
+                    <h3 className="text-white font-bold text-sm mb-1 group-hover:text-[#B5952F] transition-colors">{w.title}</h3>
                     <p className="text-zinc-500 text-xs leading-relaxed">{w.desc}</p>
                   </div>
                 </div>
@@ -457,13 +457,13 @@ export default function DestinationAnchor() {
               <Image
                 src="/gallery-2.webp"
                 alt="Destination wedding anchor hosting at a palace in India"
-                fill quality={100}
+                fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
-                <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold mb-1">4.9★ Destination Wedding Anchor</p>
+                <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-1">4.9★ Destination Wedding Anchor</p>
                 <p className="text-white text-xs">NRI specialist · Bilingual · Full 2–3 day coverage</p>
               </div>
             </div>
@@ -488,10 +488,10 @@ export default function DestinationAnchor() {
                   </div>
                   <div className={`w-full md:w-1/2 p-6 md:p-8 ml-0 md:ml-0 hover:bg-zinc-900/50 border border-white/8 hover:border-[#D4AF37]/30 rounded-2xl transition-all duration-400 group ${item.align === "right" ? "text-left" : "text-left md:text-right"}`}>
                     <div className={`flex items-center gap-3 mb-3 ${item.align === "right" ? "justify-start" : "justify-start md:justify-end"}`}>
-                      <span className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs">{item.day}</span>
-                      <item.icon size={16} className="text-[#D4AF37]" />
+                      <span className="text-[#B5952F] font-bold uppercase tracking-widest text-xs">{item.day}</span>
+                      <item.icon size={16} className="text-[#B5952F]" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#B5952F] transition-colors">{item.title}</h3>
                     <p className="text-zinc-400 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 hidden md:block" />
@@ -515,14 +515,14 @@ export default function DestinationAnchor() {
                   <Image
                     src={d.img}
                     alt={`Destination wedding anchor ${d.city} — Anchor Yash Soni`}
-                    fill quality={100}
+                    fill
                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                     sizes="(max-width:768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
                     <p className="text-white font-black text-2xl md:text-3xl uppercase">{d.city}</p>
-                    <div className="flex items-center gap-2 text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest mt-1">
+                    <div className="flex items-center gap-2 text-[#B5952F] text-[10px] font-bold uppercase tracking-widest mt-1">
                       <MapPin className="w-3 h-3" /> {d.tag}
                     </div>
                     <p className="text-zinc-400 text-xs mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">{d.venues}</p>
@@ -537,7 +537,7 @@ export default function DestinationAnchor() {
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest mb-4">Also Available For</p>
               <div className="flex flex-wrap justify-center gap-3">
                 {["Dubai", "Thailand", "Bali", "Mussoorie", "Pushkar", "Ranthambore", "Kerala", "Mumbai"].map(city => (
-                  <span key={city} className="border border-white/10 px-5 py-2 rounded-full text-zinc-400 hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all text-xs cursor-default">
+                  <span key={city} className="border border-white/10 px-5 py-2 rounded-full text-zinc-400 hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all text-xs cursor-default">
                     {city}
                   </span>
                 ))}
@@ -558,13 +558,13 @@ export default function DestinationAnchor() {
                 <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
                   className="flex flex-col h-full border border-white/10 rounded-2xl p-6 hover:border-[#D4AF37]/40 transition-all bg-zinc-900/20 hover:bg-zinc-900/50 group cursor-pointer">
                   <div className="flex gap-0.5 mb-3">
-                    {[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]" />)}
+                    {[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />)}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
-                    <p className="text-[#D4AF37] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
+                    <p className="text-[#B5952F] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>
                 </a>
               </Reveal>
@@ -594,7 +594,7 @@ export default function DestinationAnchor() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2 font-bold">All Wedding Services</p>
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-2 font-bold">All Wedding Services</p>
               <h2 className="text-2xl md:text-3xl font-bold">One Anchor. <G>Every Wedding Event.</G></h2>
             </div>
           </Reveal>
@@ -603,8 +603,8 @@ export default function DestinationAnchor() {
               <Reveal key={i} delay={i * 0.06}>
                 <Link href={r.href}>
                   <div className="border border-white/10 rounded-2xl p-5 text-center hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-zinc-900/20 hover:bg-zinc-900/50">
-                    <r.icon size={18} className="text-[#D4AF37] mx-auto mb-2" />
-                    <p className="text-white text-sm font-semibold group-hover:text-[#D4AF37] transition-colors">{r.label}</p>
+                    <r.icon size={18} className="text-[#B5952F] mx-auto mb-2" />
+                    <p className="text-white text-sm font-semibold group-hover:text-[#B5952F] transition-colors">{r.label}</p>
                     <p className="text-zinc-600 text-[10px] mt-1">{r.desc}</p>
                   </div>
                 </Link>
@@ -623,12 +623,12 @@ export default function DestinationAnchor() {
         </div>
         <div className="max-w-xl mx-auto text-center relative z-10">
           <Reveal>
-            <Plane className="w-8 h-8 text-[#D4AF37] mx-auto mb-6 opacity-60" />
+            <Plane className="w-8 h-8 text-[#B5952F] mx-auto mb-6 opacity-60" />
             <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight uppercase">
               Packing <G>My Bags?</G>
             </h2>
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
-              Destination wedding packages block <strong className="text-[#D4AF37]">3–4 full days</strong> of the calendar. They book <strong className="text-[#D4AF37]">6–9 months in advance</strong> — faster than any other format.
+              Destination wedding packages block <strong className="text-[#B5952F]">3–4 full days</strong> of the calendar. They book <strong className="text-[#B5952F]">6–9 months in advance</strong> — faster than any other format.
             </p>
             <p className="text-zinc-600 text-xs mb-8">The moment your venue and dates are confirmed — WhatsApp immediately.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
@@ -638,12 +638,12 @@ export default function DestinationAnchor() {
             </Link>
             {/* Footer links */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>
-              <Link href="/wedding-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Wedding Anchor</Link>
-              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Sangeet Host</Link>
-              <Link href="/haldi-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Haldi Anchor</Link>
-              <Link href="/anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Anchor Jaipur</Link>
-              <Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Best Anchor Jaipur</Link>
+              <Link href="/wedding-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Wedding Anchor</Link>
+              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Sangeet Host</Link>
+              <Link href="/haldi-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Haldi Anchor</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Anchor Jaipur</Link>
+              <Link href="/contact" className="hover:text-[#B5952F] transition-colors">Contact</Link>
             </div>
           </Reveal>
         </div>

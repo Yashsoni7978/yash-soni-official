@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-for-birthday-party-jaipur/layout.jsx
 // SERVER COMPONENT — metadata + all schemas
 const serviceSchema = {

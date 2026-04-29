@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-goa/layout.jsx
 // International Beach Destination & Luxury Sangeet Anchor Layout
 

@@ -92,7 +92,7 @@ A: Yes, but the leverage differs. Heritage havelis (Alsisar, Diggi Palace) have 
 A: Fairmont Jaipur and Shiv Vilas Resort (both being outskirt/highway properties) have significantly more flexibility on noise timings compared to heritage properties within the walled Pink City or near residential areas.
 
 **Q: Is an on-site venue coordinator the same as hiring a professional event anchor?**
-A: Absolutely not. A venue coordinator manages the property logistics from the hotel's operational side. A [professional wedding anchor](https://yashsoni.in/best-anchor-in-jaipur) manages the guest experience, the emotional energy, and the live event flow on your behalf — a completely different and equally critical function.
+A: Absolutely not. A venue coordinator manages the property logistics from the hotel's operational side. A [professional wedding anchor](https://yashsoni.in/anchor-in-jaipur) manages the guest experience, the emotional energy, and the live event flow on your behalf — a completely different and equally critical function.
 
 ---
 
@@ -121,7 +121,7 @@ If you are planning a [destination wedding in Rajasthan](https://yashsoni.in/des
 
 Brides fly into Jaipur from Mumbai, Delhi, London, Toronto, and New York purely for wedding shopping. And for excellent reason: Jaipur is the undisputed global capital of Kundan and Polki jewelry, Gotapatti embroidery, traditional Bandhani textiles, and authentic Rajasthani bridal craftsmanship that has been practiced for over 400 years.
 
-As a local [Jaipur wedding anchor](https://yashsoni.in/best-anchor-in-jaipur) who has worked alongside hundreds of bridal families over the years, I hear the shopping war stories — who found extraordinary hidden gems at wholesale prices, and who handed over ₹8 Lakhs to a tourist-trap showroom and got pieces worth a fraction of that. If you are flying into Pink City for a 3-day bridal shopping sprint, here is your insider survival and strategy guide.
+As a local [Jaipur wedding anchor](https://yashsoni.in/anchor-in-jaipur) who has worked alongside hundreds of bridal families over the years, I hear the shopping war stories — who found extraordinary hidden gems at wholesale prices, and who handed over ₹8 Lakhs to a tourist-trap showroom and got pieces worth a fraction of that. If you are flying into Pink City for a 3-day bridal shopping sprint, here is your insider survival and strategy guide.
 
 ### 1. Johari Bazaar: The Capital of Indian Bridal Jewelry
 

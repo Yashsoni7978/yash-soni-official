@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-ooty/layout.jsx
 // Ultra-Luxury Heritage Hill Destination Anchor Layout
 

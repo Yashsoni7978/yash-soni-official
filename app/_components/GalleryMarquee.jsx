@@ -11,7 +11,7 @@ export const GalleryMarquee = ({ images }) => {
           <h2 className="text-2xl md:text-4xl font-bold mb-1">Moments of <GoldText>Magic.</GoldText></h2>
           <p className="text-zinc-500 text-xs md:text-sm">Live on stage — weddings, Sangeets, and corporate events across India.</p>
         </div>
-        <Link href="/portfolio" className="text-[#D4AF37] text-xs uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 hover:text-white transition-colors shrink-0">
+        <Link href="/portfolio" className="text-[#B5952F] text-xs uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 hover:text-white transition-colors shrink-0">
           Full Portfolio →
         </Link>
       </div>

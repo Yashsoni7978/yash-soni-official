@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-bangalore/layout.jsx
 // South India Urban Luxury & Palace Grounds Wedding Anchor — Full Schema + Rich SEO Layout
 

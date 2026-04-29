@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-kolkata/layout.jsx
 // East India Heritage & Elite Marwari Wedding Anchor
 

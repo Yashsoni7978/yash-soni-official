@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-mandawa/layout.jsx
 // Shekhawati Haveli Wedding Anchor — Full Triple Schema + Rich SEO Layout
 

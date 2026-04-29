@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { FAQItem } from "../_components/InteractiveFAQ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -21,29 +22,7 @@ const staggerContainer = {
   },
 };
 
-const FAQItem = ({ faq, colorClass }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-[#1A1A1A]/10 py-6">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full text-left">
-        <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-[#1A1A1A] pr-4">{faq.q}</h3>
-        <span className={`text-2xl ${colorClass}`}>{isOpen ? '−' : '+'}</span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }} 
-            animate={{ height: 'auto', opacity: 1 }} 
-            exit={{ height: 0, opacity: 0 }} 
-            className="overflow-hidden"
-          >
-            <p className="font-sans text-gray-600 font-light leading-relaxed mt-4">{faq.a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+
 
 export default function HaldiDecorationJaipur() {
   const containerRef = useRef(null);
@@ -86,7 +65,7 @@ export default function HaldiDecorationJaipur() {
                 fill
                 className="object-cover object-top"
                 priority
-              />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -102,7 +81,7 @@ export default function HaldiDecorationJaipur() {
             The Golden Morning
           </span>
           <h1 className="font-['Runiga'] text-5xl md:text-7xl lg:text-[100px] leading-[0.85] text-[#1A1A1A] mb-8">Beautiful Haldi Decor</h1>
-          <p className="font-['Amandine'] text-3xl md:text-5xl text-[#D4AF37] mb-10">Yellow themes, marigolds, and sunny courtyards</p>
+          <p className="font-['Amandine'] text-3xl md:text-5xl text-[#B5952F] mb-10">Yellow themes, marigolds, and sunny courtyards</p>
           <a href="#contact" className="inline-block font-['Rekalgera'] uppercase tracking-[0.2em] text-xs md:text-sm bg-gradient-to-r from-[#B45309] to-[#78350F] text-[#FAF9F6] px-10 py-5 hover:opacity-90 transition-all duration-500 hover:shadow-[0_0_30px_rgba(180,83,9,0.4)]">
             Design Your Haldi
           </a>
@@ -117,11 +96,11 @@ export default function HaldiDecorationJaipur() {
             <span className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-sm lg:text-lg uppercase">
               Fresh Flowers
             </span>
-            <span className="hidden md:block text-[#D4AF37] opacity-60">|</span>
-            <span className="font-['Rekalgera'] text-[#D4AF37] tracking-[0.2em] text-sm lg:text-lg uppercase">
+            <span className="hidden md:block text-[#B5952F] opacity-60">|</span>
+            <span className="font-['Rekalgera'] text-[#B5952F] tracking-[0.2em] text-sm lg:text-lg uppercase">
               Bright Themes
             </span>
-            <span className="hidden md:block text-[#D4AF37] opacity-60">|</span>
+            <span className="hidden md:block text-[#B5952F] opacity-60">|</span>
             <span className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-sm lg:text-lg uppercase">
               Family Fun
             </span>
@@ -138,7 +117,7 @@ export default function HaldiDecorationJaipur() {
           variants={fadeInUp}
           className="max-w-4xl mx-auto text-center"
         >
-          <span className="font-['Orange_Avenue'] text-4xl text-[#D4AF37] mb-6 block">A Bright Beginning</span>
+          <span className="font-['Orange_Avenue'] text-4xl text-[#B5952F] mb-6 block">A Bright Beginning</span>
           <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-[#1A1A1A] leading-tight mb-10">Haldi is the happiest pre-wedding function. We make it colorful.</h2>
           <p className="font-sans text-lg md:text-xl text-gray-600 font-light leading-relaxed">From massive marigold installations to playful colour bombs and floral jewelry, we handle the entire Haldi decor so you can focus on making messy, beautiful memories.</p>
         </motion.div>
@@ -155,13 +134,13 @@ export default function HaldiDecorationJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/haldi_ceremony_decor.webp" alt="Haldi Decor" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/haldi_ceremony_decor.webp" alt="Haldi Decor" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/traditional_phoolon_ki_chaadar.webp" alt="Traditional Entry" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/traditional_phoolon_ki_chaadar.webp" alt="Traditional Entry" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/theme_wedding_setup.webp" alt="Haldi Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/theme_wedding_setup.webp" alt="Haldi Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </div>
         </motion.div>
@@ -185,7 +164,7 @@ export default function HaldiDecorationJaipur() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-10">
             <h2 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Haldi Styles</h2>
-            <Link href="/locations" className="font-sans text-[#B45309] font-medium hover:underline">View all Styles &gt;</Link>
+            <Link href="/anchor-in-rajasthan" className="font-sans text-[#B45309] font-medium hover:underline">View all Styles &gt;</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -195,7 +174,7 @@ export default function HaldiDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Genda Phool, Yellow Curtains</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/haldi_ceremony_decor.webp" alt="Marigold" fill className="object-cover" />
+                <Image src="/premium_events/haldi_ceremony_decor.webp" alt="Marigold" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -205,7 +184,7 @@ export default function HaldiDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Brass Tubs, Colour Bombs, Games</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Props" fill className="object-cover" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Props" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -215,7 +194,7 @@ export default function HaldiDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Custom fresh flower sets</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/traditional_phoolon_ki_chaadar.webp" alt="Jewelry" fill className="object-cover" />
+                <Image src="/premium_events/traditional_phoolon_ki_chaadar.webp" alt="Jewelry" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -225,7 +204,7 @@ export default function HaldiDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Dhol players, folk singers</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Music" fill className="object-cover" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Music" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -251,7 +230,7 @@ export default function HaldiDecorationJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-white rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.05)] flex flex-col group hover:-translate-y-2 transition-all duration-500">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/haldi_ceremony_decor.webp" alt="Floral Setup" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/haldi_ceremony_decor.webp" alt="Floral Setup" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#1A1A1A] mb-4">Floral Mandaps</h3>
@@ -265,7 +244,7 @@ export default function HaldiDecorationJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#B45309] to-[#78350F]">
               <div className="absolute inset-0 opacity-20 bg-[url('/jaisalmer.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Props" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Props" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#FAF9F6] mb-4 flex items-center gap-4">
@@ -308,7 +287,7 @@ export default function HaldiDecorationJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#B45309] to-[#78350F] p-8 text-[#FAF9F6] rounded-tl-3xl">
               <div className="absolute inset-0 opacity-20 bg-[url('/jaisalmer.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">900+</span>
@@ -359,12 +338,12 @@ export default function HaldiDecorationJaipur() {
                 
                 <div className="flex flex-col md:flex-row gap-12 items-start">
                   <div className="w-full md:w-1/2">
-                    <span className="font-['Orange_Avenue'] text-3xl text-[#D4AF37] block mb-2">Step 0{idx + 1}</span>
+                    <span className="font-['Orange_Avenue'] text-3xl text-[#B5952F] block mb-2">Step 0{idx + 1}</span>
                     <h3 className="font-['The_Seasons'] text-4xl md:text-5xl mb-4">{stage.title}</h3>
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   </div>
                 </div>
               </motion.div>
@@ -400,7 +379,7 @@ export default function HaldiDecorationJaipur() {
             "/premium_events/outdoor_garden_wedding.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden">
-              <Image src={img} alt="Gallery" fill className="object-cover" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
           ))}
         </div>
@@ -410,7 +389,7 @@ export default function HaldiDecorationJaipur() {
       <section className="py-40 px-6 bg-gradient-to-r from-[#B45309] to-[#78350F] text-[#FAF9F6] relative">
         <div className="absolute inset-0 opacity-20 bg-[url('/jaisalmer.webp')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="font-['Orange_Avenue'] text-4xl text-[#D4AF37] mb-8 block">What People Say</span>
+          <span className="font-['Orange_Avenue'] text-4xl text-[#B5952F] mb-8 block">What People Say</span>
           <p className="font-['The_Seasons'] text-4xl md:text-6xl leading-tight mb-12">
             "The Haldi decor was so bright and beautiful! Yash's anchoring kept everyone laughing and playing. The 'Phoolon ki Holi' was the highlight of our wedding."
           </p>
@@ -429,7 +408,7 @@ export default function HaldiDecorationJaipur() {
             { num: "100%", label: "Pure Fun" }
           ].map((stat, i) => (
             <div key={i}>
-              <h3 className="font-['Runiga'] text-5xl md:text-7xl text-[#D4AF37] mb-4">{stat.num}</h3>
+              <h3 className="font-['Runiga'] text-5xl md:text-7xl text-[#B5952F] mb-4">{stat.num}</h3>
               <p className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-xs uppercase">{stat.label}</p>
             </div>
           ))}
@@ -465,45 +444,45 @@ export default function HaldiDecorationJaipur() {
       <section className="py-24 bg-[#1A1A1A] text-[#FAF9F6] px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#D4AF37] mb-4">Haldi Packages</h2>
+            <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#B5952F] mb-4">Haldi Packages</h2>
             <p className="font-sans text-gray-400 font-light text-xl">Packages made just for your morning celebrations.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tier 1 */}
             <div className="border border-white/10 p-10 hover:border-[#D4AF37]/50 transition-colors duration-500 group rounded-lg">
-              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#D4AF37] transition-colors">The Classic Haldi</h3>
+              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#B5952F] transition-colors">The Classic Haldi</h3>
               <p className="font-['Rekalgera'] text-xs text-white/40 uppercase tracking-widest mb-8">Simple & Sweet</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Basic yellow and white draping</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Seating area for the couple</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Background music speaker</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Basic Haldi props</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Basic yellow and white draping</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Seating area for the couple</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Background music speaker</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Basic Haldi props</li>
               </ul>
             </div>
             {/* Tier 2 */}
             <div className="border border-[#D4AF37]/50 p-10 relative bg-gradient-to-b from-[#B45309]/20 to-transparent transform md:-translate-y-4 shadow-[0_0_30px_rgba(212,175,55,0.1)] rounded-lg">
               <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-sm">Most Popular</div>
-              <h3 className="font-['The_Seasons'] text-3xl mb-2 text-[#D4AF37]">The Grand Morning</h3>
+              <h3 className="font-['The_Seasons'] text-3xl mb-2 text-[#B5952F]">The Grand Morning</h3>
               <p className="font-['Rekalgera'] text-xs text-white/40 uppercase tracking-widest mb-8">Fun & Vibrant</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-300 mb-10">
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Massive Marigold flower setup</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Brass tub for the groom</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Professional Dhol players</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Phoolon ki Holi (Flower shower)</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Colour smoke bombs</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Massive Marigold flower setup</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Brass tub for the groom</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Professional Dhol players</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Phoolon ki Holi (Flower shower)</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Colour smoke bombs</li>
               </ul>
             </div>
             {/* Tier 3 */}
             <div className="border border-white/10 p-10 hover:border-[#D4AF37]/50 transition-colors duration-500 group rounded-lg">
-              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#D4AF37] transition-colors">The Palace Haldi</h3>
+              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#B5952F] transition-colors">The Palace Haldi</h3>
               <p className="font-['Rekalgera'] text-xs text-white/40 uppercase tracking-widest mb-8">Luxury Setup</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Full courtyard floral covering</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Live folk singers and dancers</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Custom floral jewelry for bride</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Massive photo booth setups</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Organic customized haldi mix</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Full courtyard floral covering</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Live folk singers and dancers</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Custom floral jewelry for bride</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Massive photo booth setups</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Organic customized haldi mix</li>
               </ul>
             </div>
           </div>
@@ -553,7 +532,7 @@ export default function HaldiDecorationJaipur() {
           variants={fadeInUp}
           className="relative z-20 flex flex-col items-center"
         >
-          <h2 className="font-['Runiga'] text-5xl md:text-8xl lg:text-[120px] text-[#D4AF37] leading-[0.8] mb-16 mix-blend-lighten">
+          <h2 className="font-['Runiga'] text-5xl md:text-8xl lg:text-[120px] text-[#B5952F] leading-[0.8] mb-16 mix-blend-lighten">
             Let's Get<br />Yellow.
           </h2>
           

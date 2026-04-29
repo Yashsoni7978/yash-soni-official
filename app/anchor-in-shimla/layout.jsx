@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-shimla/layout.jsx
 // Ultra-Luxury High-Altitude Heritage Destination Anchor Layout
 

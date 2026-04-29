@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { FAQItem } from "../_components/InteractiveFAQ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -21,29 +22,7 @@ const staggerContainer = {
   },
 };
 
-const FAQItem = ({ faq, colorClass }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-[#1A1A1A]/10 py-6">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full text-left">
-        <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-[#1A1A1A] pr-4">{faq.q}</h3>
-        <span className={`text-2xl ${colorClass}`}>{isOpen ? '−' : '+'}</span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }} 
-            animate={{ height: 'auto', opacity: 1 }} 
-            exit={{ height: 0, opacity: 0 }} 
-            className="overflow-hidden"
-          >
-            <p className="font-sans text-gray-600 font-light leading-relaxed mt-4">{faq.a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+
 
 export default function WeddingDecorationJaipur() {
   const containerRef = useRef(null);
@@ -86,7 +65,7 @@ export default function WeddingDecorationJaipur() {
                 fill
                 className="object-cover object-top"
                 priority
-              />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -155,13 +134,13 @@ export default function WeddingDecorationJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/floral_mandap_close.webp" alt="Floral Details" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/floral_mandap_close.webp" alt="Floral Details" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Mandap Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Mandap Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/theme_wedding_setup.webp" alt="Theme Decor" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/theme_wedding_setup.webp" alt="Theme Decor" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </div>
         </motion.div>
@@ -185,7 +164,7 @@ export default function WeddingDecorationJaipur() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-10">
             <h2 className="font-['Runiga'] text-4xl text-[#1A1A1A]">Design Themes</h2>
-            <Link href="/locations" className="font-sans text-[#9F1239] font-medium hover:underline">View all Designs &gt;</Link>
+            <Link href="/anchor-in-rajasthan" className="font-sans text-[#9F1239] font-medium hover:underline">View all Designs &gt;</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -195,7 +174,7 @@ export default function WeddingDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Fresh exotic blooms & lotuses</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/floral_mandap_close.webp" alt="Mandap" fill className="object-cover" />
+                <Image src="/premium_events/floral_mandap_close.webp" alt="Mandap" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -205,7 +184,7 @@ export default function WeddingDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Rajwada themes & pillars</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Structure" fill className="object-cover" />
+                <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Structure" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -215,7 +194,7 @@ export default function WeddingDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Chandeliers & sit-down dining</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Dining" fill className="object-cover" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Dining" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -225,7 +204,7 @@ export default function WeddingDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Walkways & grand entrances</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Entrance" fill className="object-cover" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Entrance" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -251,7 +230,7 @@ export default function WeddingDecorationJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-white rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.05)] flex flex-col group hover:-translate-y-2 transition-all duration-500">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/floral_mandap_close.webp" alt="Flowers" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/floral_mandap_close.webp" alt="Flowers" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#1A1A1A] mb-4">Exotic Flowers</h3>
@@ -265,7 +244,7 @@ export default function WeddingDecorationJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(159,18,57,0.15)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#9F1239] to-[#4C0519]">
               <div className="absolute inset-0 opacity-20 bg-[url('/alwar.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Lighting" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Lighting" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#FAF9F6] mb-4 flex items-center gap-4">
@@ -308,7 +287,7 @@ export default function WeddingDecorationJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#9F1239] to-[#4C0519] p-8 text-[#FAF9F6] rounded-tl-3xl">
               <div className="absolute inset-0 opacity-20 bg-[url('/alwar.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">400+</span>
@@ -364,7 +343,7 @@ export default function WeddingDecorationJaipur() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   </div>
                 </div>
               </motion.div>
@@ -401,7 +380,7 @@ export default function WeddingDecorationJaipur() {
             "/premium_events/theme_wedding_setup.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden">
-              <Image src={img} alt="Gallery" fill className="object-cover" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
           ))}
         </div>
@@ -581,10 +560,11 @@ export default function WeddingDecorationJaipur() {
           <h2 className="font-['The_Seasons'] text-4xl text-[#1A1A1A] mb-12">More Services</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[
+              { label: "Event Planning", url: "/event-planning-jaipur" },
+              { label: "Event Management", url: "/event-management-jaipur" },
               { label: "Wedding Planning", url: "/wedding-planning-jaipur" },
               { label: "Destination Planning", url: "/destination-wedding-planner-jaipur" },
               { label: "Sangeet Decor", url: "/sangeet-decoration-jaipur" },
-              { label: "Haldi Decor", url: "/haldi-decoration-jaipur" },
               { label: "Artist Management", url: "/artist-management-jaipur" }
             ].map((link, i) => (
               <Link key={i} href={link.url} className="font-['Rekalgera'] text-[#1A1A1A] hover:text-[#9F1239] uppercase tracking-widest text-[10px] md:text-xs border border-[#1A1A1A]/10 px-6 py-3 hover:border-[#9F1239] hover:shadow-[0_5px_15px_rgba(159,18,57,0.05)] transition-all duration-300">

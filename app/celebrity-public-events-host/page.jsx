@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Building2, CalendarCheck, Camera, CheckCircle2, Crown, Flower2, Globe, Heart, MapPin, Mic2, Minus, Music, Plus, ShieldCheck, Sparkles, Star, Users, Zap } from "lucide-react";
+import { ArrowRight, Building2, CalendarCheck, Camera, CheckCircle2, Crown, Heart, MapPin, Mic2, Minus, Music, Plus, ShieldCheck, Sparkles, Star, Users, Zap } from "lucide-react";
 
 
 
@@ -51,8 +51,8 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
       transition={{ duration: 0.6 }}
     >
       <div className={`flex items-center gap-2 mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}>
-        <Camera className="w-4 h-4 text-[#D4AF37]" />
-        <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold">{subtitle}</span>
+        <Camera className="w-4 h-4 text-[#B5952F]" />
+        <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold">{subtitle}</span>
       </div>
       <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">{title}</h2>
     </motion.div>
@@ -189,10 +189,10 @@ const FAQItem = ({ question, answer, id }) => {
         className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#B5952F]" : "text-zinc-200 group-hover:text-white"
         }`}>{question}</span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 mt-0.5 ${
-          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#B5952F]"
         }`}>
           {isOpen ? <Minus size={14} /> : <Plus size={14} />}
         </div>
@@ -235,7 +235,7 @@ export default function CelebrityAnchorPage() {
       {/* BREADCRUMB — sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
-        <Link href="/best-anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
+        <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
         <span>Celebrity Events Host Jaipur</span>
       </nav>
       {/* ══════════════════════════════════════
@@ -256,8 +256,8 @@ export default function CelebrityAnchorPage() {
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <div className="inline-flex items-center gap-2 border border-[#D4AF37]/40 px-5 py-2 rounded-full bg-black/50 backdrop-blur-xl mb-8">
-              <Star className="w-3 h-3 text-[#D4AF37] fill-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold">
+              <Star className="w-3 h-3 text-[#B5952F] fill-[#D4AF37]" />
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Celebrity & Public Events Host · Jaipur
               </span>
             </div>
@@ -266,7 +266,7 @@ export default function CelebrityAnchorPage() {
               Hosting<br /><G>The Icons.</G>
             </h1>
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-3">
-              From managing crowds of <strong className="text-[#D4AF37]">5,000+</strong> at concerts to Bollywood celebrity interviews on the red carpet — the full spectrum of public event hosting in Jaipur and across India.
+              From managing crowds of <strong className="text-[#B5952F]">5,000+</strong> at concerts to Bollywood celebrity interviews on the red carpet — the full spectrum of public event hosting in Jaipur and across India.
             </p>
             <p className="text-zinc-500 text-sm mb-8 tracking-wide">
               Concerts &nbsp;·&nbsp; Fashion Shows &nbsp;·&nbsp; Luxury Launches &nbsp;·&nbsp; Celebrity Events
@@ -278,7 +278,7 @@ export default function CelebrityAnchorPage() {
                 </button>
               </Link>
               <Link href="/portfolio" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm font-medium rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
+                <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm font-medium rounded-full hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all">
                   View Portfolio
                 </button>
               </Link>
@@ -308,7 +308,7 @@ export default function CelebrityAnchorPage() {
             {STATS.map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div className="text-center py-10 md:py-14 px-3">
-                  <s.icon size={20} className="mx-auto mb-3 text-[#D4AF37]" />
+                  <s.icon size={20} className="mx-auto mb-3 text-[#B5952F]" />
                   <div className="text-4xl md:text-5xl font-black mb-1"><G>{s.val}</G></div>
                   <div className="text-zinc-500 text-[10px] uppercase tracking-widest">{s.label}</div>
                 </div>
@@ -323,7 +323,7 @@ export default function CelebrityAnchorPage() {
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-4 font-bold">Beyond The Mic</p>
+            <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-4 font-bold">Beyond The Mic</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
               Not Just A Host.<br /><G>A Personality.</G>
             </h2>
@@ -341,7 +341,7 @@ export default function CelebrityAnchorPage() {
                 "Celebrity Q&A — researched, smooth, PR-safe every time",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle2 size={14} className="text-[#D4AF37] mt-0.5 shrink-0" />
+                  <CheckCircle2 size={14} className="text-[#B5952F] mt-0.5 shrink-0" />
                   <span className="text-zinc-300 text-sm">{item}</span>
                 </div>
               ))}
@@ -354,7 +354,7 @@ export default function CelebrityAnchorPage() {
                 <Image
                   src="/gallery-5.webp"
                   alt="Anchor Yash Soni at a public event in Jaipur"
-                  fill quality={100}
+                  fill
                   className="object-cover grayscale opacity-60"
                   sizes="(max-width:1024px) 75vw, 37vw"
                 />
@@ -363,7 +363,7 @@ export default function CelebrityAnchorPage() {
                 <Image
                   src="/intro-portrait-bottom.webp"
                   alt="Anchor Yash Soni celebrity event host Jaipur"
-                  fill quality={100}
+                  fill
                   className="object-cover"
                   sizes="(max-width:1024px) 75vw, 37vw"
                 />
@@ -386,12 +386,12 @@ export default function CelebrityAnchorPage() {
                     ? "bg-zinc-900 border-[#D4AF37]/50 shadow-[0_0_30px_rgba(212,175,55,0.08)]"
                     : "bg-[#0a0a0a] border-white/8 hover:border-[#D4AF37]/30"
                 }`}>
-                  <s.icon size={22} className="text-[#D4AF37] mb-4" />
-                  <h3 className="text-base font-black text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{s.title}</h3>
+                  <s.icon size={22} className="text-[#B5952F] mb-4" />
+                  <h3 className="text-base font-black text-white mb-3 group-hover:text-[#B5952F] transition-colors">{s.title}</h3>
                   <p className="text-zinc-400 text-xs leading-relaxed mb-4">{s.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {s.tags.map(tag => (
-                      <span key={tag} className="text-[9px] uppercase font-bold tracking-widest bg-[#D4AF37]/10 px-2.5 py-1 rounded-full text-[#D4AF37] border border-[#D4AF37]/15">
+                      <span key={tag} className="text-[9px] uppercase font-bold tracking-widest bg-[#D4AF37]/10 px-2.5 py-1 rounded-full text-[#B5952F] border border-[#D4AF37]/15">
                         {tag}
                       </span>
                     ))}
@@ -422,7 +422,7 @@ export default function CelebrityAnchorPage() {
                     <div className="w-2 h-2 bg-[#D4AF37] rounded-full" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-sm mb-1 group-hover:text-[#D4AF37] transition-colors">{c.title}</h3>
+                    <h3 className="text-white font-bold text-sm mb-1 group-hover:text-[#B5952F] transition-colors">{c.title}</h3>
                     <p className="text-zinc-500 text-xs leading-relaxed">{c.desc}</p>
                   </div>
                 </div>
@@ -433,17 +433,17 @@ export default function CelebrityAnchorPage() {
           <Reveal delay={0.12}>
             <div className="border border-white/10 rounded-2xl overflow-hidden">
               <div className="px-5 py-4 border-b border-white/10 bg-zinc-900/50">
-                <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold">Recent Public Events</p>
+                <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">Recent Public Events</p>
               </div>
               {EVENTS_HOSTED.map((e, i) => (
                 <div key={i} className="flex items-center justify-between px-5 py-4 border-b border-white/5 last:border-b-0 hover:bg-zinc-900/30 transition-colors">
                   <div>
                     <p className="text-white text-sm font-medium">{e.event}</p>
                     <p className="text-zinc-600 text-[11px] mt-0.5 flex items-center gap-1">
-                      <MapPin size={9} className="text-[#D4AF37]" /> {e.venue}
+                      <MapPin size={9} className="text-[#B5952F]" /> {e.venue}
                     </p>
                   </div>
-                  <span className="text-[9px] uppercase tracking-widest bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/20 px-2.5 py-1 rounded-full font-bold shrink-0">
+                  <span className="text-[9px] uppercase tracking-widest bg-[#D4AF37]/10 text-[#B5952F] border border-[#D4AF37]/20 px-2.5 py-1 rounded-full font-bold shrink-0">
                     {e.type}
                   </span>
                 </div>
@@ -477,7 +477,7 @@ export default function CelebrityAnchorPage() {
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  fill quality={100}
+                  fill
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                   sizes="(max-width:768px) 50vw, 33vw"
                 />
@@ -509,7 +509,7 @@ export default function CelebrityAnchorPage() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2 font-bold">All Services</p>
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-2 font-bold">All Services</p>
               <h2 className="text-2xl md:text-3xl font-bold">One Anchor. <G>Every Format.</G></h2>
             </div>
           </Reveal>
@@ -518,8 +518,8 @@ export default function CelebrityAnchorPage() {
               <Reveal key={i} delay={i * 0.06}>
                 <Link href={r.href}>
                   <div className="border border-white/10 rounded-2xl p-5 text-center hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-zinc-900/20 hover:bg-zinc-900/50">
-                    <r.icon size={18} className="text-[#D4AF37] mx-auto mb-2" />
-                    <p className="text-white text-sm font-semibold group-hover:text-[#D4AF37] transition-colors">{r.label}</p>
+                    <r.icon size={18} className="text-[#B5952F] mx-auto mb-2" />
+                    <p className="text-white text-sm font-semibold group-hover:text-[#B5952F] transition-colors">{r.label}</p>
                     <p className="text-zinc-600 text-[10px] mt-1">{r.desc}</p>
                   </div>
                 </Link>
@@ -538,12 +538,12 @@ export default function CelebrityAnchorPage() {
         </div>
         <div className="max-w-xl mx-auto text-center relative z-10">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-6 font-bold">Book the Event Host</p>
+            <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-6 font-bold">Book the Event Host</p>
             <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight uppercase">
               Need a <G>Headliner?</G>
             </h2>
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
-              For events that need more than a host — they need a <strong className="text-[#D4AF37]">personality</strong>. Dates book quickly for peak season events. No replacements sent.
+              For events that need more than a host — they need a <strong className="text-[#B5952F]">personality</strong>. Dates book quickly for peak season events. No replacements sent.
             </p>
             <p className="text-zinc-600 text-xs mb-8">WhatsApp the moment your event is confirmed.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
@@ -553,13 +553,13 @@ export default function CelebrityAnchorPage() {
             </Link>
             {/* Footer link strip */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>
-              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Corporate Events</Link>
-              <Link href="/wedding-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Wedding Anchor</Link>
-              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Sangeet Host</Link>
-              <Link href="/anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Anchor Jaipur</Link>
-              <Link href="/portfolio" className="hover:text-[#D4AF37] transition-colors">Portfolio</Link>
-              <Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Best Anchor Jaipur</Link>
+              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Corporate Events</Link>
+              <Link href="/wedding-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Wedding Anchor</Link>
+              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Sangeet Host</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Anchor Jaipur</Link>
+              <Link href="/portfolio" className="hover:text-[#B5952F] transition-colors">Portfolio</Link>
+              <Link href="/contact" className="hover:text-[#B5952F] transition-colors">Contact</Link>
             </div>
           </Reveal>
         </div>

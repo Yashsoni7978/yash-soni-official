@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { FAQItem } from "../_components/InteractiveFAQ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -21,29 +22,7 @@ const staggerContainer = {
   },
 };
 
-const FAQItem = ({ faq, colorClass }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-[#FAF9F6]/20 py-6">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full text-left">
-        <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-white pr-4">{faq.q}</h3>
-        <span className={`text-2xl ${colorClass}`}>{isOpen ? '−' : '+'}</span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }} 
-            animate={{ height: 'auto', opacity: 1 }} 
-            exit={{ height: 0, opacity: 0 }} 
-            className="overflow-hidden"
-          >
-            <p className="font-sans text-gray-400 font-light leading-relaxed mt-4">{faq.a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+
 
 export default function EventManagementJaipur() {
   const containerRef = useRef(null);
@@ -86,7 +65,7 @@ export default function EventManagementJaipur() {
                 fill
                 className="object-cover object-top opacity-70"
                 priority
-              />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -155,13 +134,13 @@ export default function EventManagementJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/grand_wedding_venue.webp" alt="Royal Wedding" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/grand_wedding_venue.webp" alt="Royal Wedding" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/corporate_gala_setup.webp" alt="Corporate Gala" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/corporate_gala_setup.webp" alt="Corporate Gala" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/theme_wedding_setup.webp" alt="Thematic Build" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/theme_wedding_setup.webp" alt="Thematic Build" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </div>
         </motion.div>
@@ -185,7 +164,7 @@ export default function EventManagementJaipur() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-10">
             <h2 className="font-['Runiga'] text-4xl text-white">Agency Verticals</h2>
-            <Link href="/locations" className="font-sans text-[#34D399] font-medium hover:underline">Explore Cities &gt;</Link>
+            <Link href="/anchor-in-rajasthan" className="font-sans text-[#34D399] font-medium hover:underline">Explore Cities &gt;</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -195,7 +174,7 @@ export default function EventManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Palace Buyouts & Destinations</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#065F46] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/grand_wedding_venue.webp" alt="Weddings" fill className="object-cover" />
+                <Image src="/premium_events/grand_wedding_venue.webp" alt="Weddings" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -205,7 +184,7 @@ export default function EventManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-300">Summits & Award Nights</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#047857] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/corporate_gala_setup.webp" alt="Corporate" fill className="object-cover" />
+                <Image src="/premium_events/corporate_gala_setup.webp" alt="Corporate" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -215,7 +194,7 @@ export default function EventManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-200">Artist tech & crowd control</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#059669] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Concerts" fill className="object-cover" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Concerts" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -225,7 +204,7 @@ export default function EventManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Anniversaries & Milestones</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#064E3B] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Social" fill className="object-cover" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Social" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -251,7 +230,7 @@ export default function EventManagementJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-[#064E3B] rounded-2xl overflow-hidden shadow-2xl flex flex-col group hover:-translate-y-2 transition-all duration-500 border border-white/5">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Production Division" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Production Division" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4">Production Division</h3>
@@ -265,7 +244,7 @@ export default function EventManagementJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(5,150,105,0.2)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#064E3B] to-[#022C22]">
               <div className="absolute inset-0 opacity-10 bg-[url('/udaipur.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Hospitality Grid" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Hospitality Grid" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4 flex items-center gap-4">
@@ -308,7 +287,7 @@ export default function EventManagementJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#064E3B] to-[#022C22] p-8 text-[#FAF9F6] rounded-tl-3xl border-t border-l border-white/10">
               <div className="absolute inset-0 opacity-10 bg-[url('/udaipur.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">Multi-City</span>
@@ -364,7 +343,7 @@ export default function EventManagementJaipur() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg border border-white/10">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   </div>
                 </div>
               </motion.div>
@@ -400,7 +379,7 @@ export default function EventManagementJaipur() {
             "/premium_events/celebrity_artist_stage.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden border border-white/10">
-              <Image src={img} alt="Gallery" fill className="object-cover" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
           ))}
         </div>
@@ -580,10 +559,11 @@ export default function EventManagementJaipur() {
           <h2 className="font-['The_Seasons'] text-4xl text-white mb-12">More Services</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { label: "Corporate Event Management", url: "/corporate-event-management-company" },
+              { label: "Event Planning", url: "/event-planning-jaipur" },
               { label: "Wedding Planning", url: "/wedding-planning-jaipur" },
-              { label: "Artist Management", url: "/artist-management-jaipur" },
-              { label: "Theme Wedding Organizer", url: "/theme-wedding-organizer-india" }
+              { label: "Wedding Decoration", url: "/wedding-decoration-jaipur" },
+              { label: "Corporate Management", url: "/corporate-event-management-company" },
+              { label: "Artist Management", url: "/artist-management-jaipur" }
             ].map((link, i) => (
               <Link key={i} href={link.url} className="font-['Rekalgera'] text-gray-400 hover:text-white uppercase tracking-widest text-[10px] md:text-xs border border-white/10 px-6 py-3 hover:border-gray-500 hover:shadow-[0_5px_15px_rgba(6,78,59,0.1)] transition-all duration-300">
                 {link.label}

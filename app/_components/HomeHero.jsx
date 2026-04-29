@@ -31,7 +31,7 @@ export const HomeHero = ({ waLink }) => {
         >
           {/* Badge */}
           <div className="mb-5">
-            <span className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-4 py-1.5 rounded-full bg-black/50 text-[#D4AF37] text-[11px] md:text-xs font-bold uppercase tracking-widest backdrop-blur-md">
+            <span className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-4 py-1.5 rounded-full bg-black/50 text-[#B5952F] text-[11px] md:text-xs font-bold uppercase tracking-widest backdrop-blur-md">
               <Star size={10} fill="#D4AF37" /> 4.9★ Rated · 200+ Reviews
             </span>
           </div>
@@ -70,7 +70,7 @@ export const HomeHero = ({ waLink }) => {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 right-10 hidden lg:block opacity-40">
         <div className="flex items-center gap-4 rotate-90 origin-right">
-          <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#D4AF37]">SCROLL TO EXPLORE</span>
+          <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#B5952F]">SCROLL TO EXPLORE</span>
           <div className="w-12 h-px bg-[#D4AF37]" />
         </div>
       </div>

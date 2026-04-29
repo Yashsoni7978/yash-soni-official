@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { FAQItem } from "../_components/InteractiveFAQ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -21,29 +22,7 @@ const staggerContainer = {
   },
 };
 
-const FAQItem = ({ faq, colorClass }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-[#FAF9F6]/20 py-6">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full text-left">
-        <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-white pr-4">{faq.q}</h3>
-        <span className={`text-2xl ${colorClass}`}>{isOpen ? '−' : '+'}</span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }} 
-            animate={{ height: 'auto', opacity: 1 }} 
-            exit={{ height: 0, opacity: 0 }} 
-            className="overflow-hidden"
-          >
-            <p className="font-sans text-gray-400 font-light leading-relaxed mt-4">{faq.a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+
 
 export default function ArtistManagementJaipur() {
   const containerRef = useRef(null);
@@ -86,7 +65,7 @@ export default function ArtistManagementJaipur() {
                 fill
                 className="object-cover object-top opacity-60"
                 priority
-              />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -102,7 +81,7 @@ export default function ArtistManagementJaipur() {
             The VIP Access
           </span>
           <h1 className="font-['Runiga'] text-5xl md:text-7xl lg:text-[100px] leading-[0.85] text-white mb-8">Artist Management</h1>
-          <p className="font-['Amandine'] text-3xl md:text-5xl text-[#D4AF37] mb-10">Booking celebrities, bands, and top performers</p>
+          <p className="font-['Amandine'] text-3xl md:text-5xl text-[#B5952F] mb-10">Booking celebrities, bands, and top performers</p>
           <a href="#contact" className="inline-block font-['Rekalgera'] uppercase tracking-[0.2em] text-xs md:text-sm bg-gradient-to-r from-[#1F2937] to-[#030712] border border-white/20 text-[#FAF9F6] px-10 py-5 hover:opacity-90 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
             Book Your Artist
           </a>
@@ -117,11 +96,11 @@ export default function ArtistManagementJaipur() {
             <span className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-sm lg:text-lg uppercase">
               Direct Industry Links
             </span>
-            <span className="hidden md:block text-[#D4AF37] opacity-60">|</span>
-            <span className="font-['Rekalgera'] text-[#D4AF37] tracking-[0.2em] text-sm lg:text-lg uppercase">
+            <span className="hidden md:block text-[#B5952F] opacity-60">|</span>
+            <span className="font-['Rekalgera'] text-[#B5952F] tracking-[0.2em] text-sm lg:text-lg uppercase">
               Live Symphony Bands
             </span>
-            <span className="hidden md:block text-[#D4AF37] opacity-60">|</span>
+            <span className="hidden md:block text-[#B5952F] opacity-60">|</span>
             <span className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-sm lg:text-lg uppercase">
               Celebrity DJs
             </span>
@@ -138,7 +117,7 @@ export default function ArtistManagementJaipur() {
           variants={fadeInUp}
           className="max-w-4xl mx-auto text-center"
         >
-          <span className="font-['Orange_Avenue'] text-4xl text-[#D4AF37] mb-6 block">Backstage Pass</span>
+          <span className="font-['Orange_Avenue'] text-4xl text-[#B5952F] mb-6 block">Backstage Pass</span>
           <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-white leading-tight mb-10">We connect you directly to the stars, cutting out the middlemen.</h2>
           <p className="font-sans text-lg md:text-xl text-gray-400 font-light leading-relaxed">Booking a celebrity or a live band can be extremely expensive if you go through multiple agencies. Because Yash is a top performer himself, we have direct access to artist managers, ensuring you get the best talent at the actual price.</p>
         </motion.div>
@@ -155,13 +134,13 @@ export default function ArtistManagementJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrity Stage" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrity Stage" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Live Band" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Live Band" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/corporate_gala_setup.webp" alt="Gala Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/corporate_gala_setup.webp" alt="Gala Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </div>
         </motion.div>
@@ -185,7 +164,7 @@ export default function ArtistManagementJaipur() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-10">
             <h2 className="font-['Runiga'] text-4xl text-white">Talent Roster</h2>
-            <Link href="/locations" className="font-sans text-gray-400 font-medium hover:underline">View all Artists &gt;</Link>
+            <Link href="/anchor-in-rajasthan" className="font-sans text-gray-400 font-medium hover:underline">View all Artists &gt;</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -195,7 +174,7 @@ export default function ArtistManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Sufi, Symphony, Unplugged</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#1F2937] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Bands" fill className="object-cover" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Bands" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -205,17 +184,17 @@ export default function ArtistManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-300">Bollywood Stars, Comedians</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#374151] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrities" fill className="object-cover" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrities" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
             <a href="#" className="flex items-center bg-[#111827] rounded-r-full hover:shadow-lg transition-shadow overflow-hidden group h-32 md:h-40 border border-[#D4AF37]/30">
               <div className="p-6 md:p-8 flex-1">
-                <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-[#D4AF37] mb-1">Star Anchors ⌵</h3>
+                <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-[#B5952F] mb-1">Star Anchors ⌵</h3>
                 <p className="font-sans text-xs md:text-sm text-gray-400">Yash Soni & TV Personalities</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#111827] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchors" fill className="object-cover" />
+                <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchors" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -225,7 +204,7 @@ export default function ArtistManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">EDM, Bollywood, Club DJs</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#030712] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/corporate_gala_setup.webp" alt="DJs" fill className="object-cover" />
+                <Image src="/premium_events/corporate_gala_setup.webp" alt="DJs" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -251,7 +230,7 @@ export default function ArtistManagementJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-[#111827] rounded-2xl overflow-hidden shadow-2xl flex flex-col group hover:-translate-y-2 transition-all duration-500 border border-white/10">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Booking" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Booking" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4">Direct Artist Booking</h3>
@@ -265,7 +244,7 @@ export default function ArtistManagementJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-2xl flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#1F2937] to-[#030712] border border-white/10">
               <div className="absolute inset-0 opacity-10 bg-[url('/chittorgarh.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Rider" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Rider" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4 flex items-center gap-4">
@@ -308,7 +287,7 @@ export default function ArtistManagementJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#1F2937] to-[#030712] border-t border-l border-white/20 p-8 text-[#FAF9F6] rounded-tl-3xl">
               <div className="absolute inset-0 opacity-10 bg-[url('/chittorgarh.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">100+</span>
@@ -359,12 +338,12 @@ export default function ArtistManagementJaipur() {
                 
                 <div className="flex flex-col md:flex-row gap-12 items-start">
                   <div className="w-full md:w-1/2">
-                    <span className="font-['Orange_Avenue'] text-3xl text-[#D4AF37] block mb-2">Step 0{idx + 1}</span>
+                    <span className="font-['Orange_Avenue'] text-3xl text-[#B5952F] block mb-2">Step 0{idx + 1}</span>
                     <h3 className="font-['The_Seasons'] text-4xl md:text-5xl mb-4">{stage.title}</h3>
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   </div>
                 </div>
               </motion.div>
@@ -400,7 +379,7 @@ export default function ArtistManagementJaipur() {
             "/premium_events/traditional_phoolon_ki_chaadar.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden border border-white/10">
-              <Image src={img} alt="Gallery" fill className="object-cover" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
           ))}
         </div>
@@ -410,7 +389,7 @@ export default function ArtistManagementJaipur() {
       <section className="py-40 px-6 bg-gradient-to-r from-[#1F2937] to-[#030712] text-[#FAF9F6] relative border-y border-white/10">
         <div className="absolute inset-0 opacity-10 bg-[url('/chittorgarh.webp')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="font-['Orange_Avenue'] text-4xl text-[#D4AF37] mb-8 block">What People Say</span>
+          <span className="font-['Orange_Avenue'] text-4xl text-[#B5952F] mb-8 block">What People Say</span>
           <p className="font-['The_Seasons'] text-4xl md:text-6xl leading-tight mb-12">
             "Yash got us our favorite Bollywood singer at a price no other agency could match. The concert was flawless, the sound was insane, and they managed the celebrity perfectly."
           </p>
@@ -429,7 +408,7 @@ export default function ArtistManagementJaipur() {
             { num: "Zero", label: "Middlemen" }
           ].map((stat, i) => (
             <div key={i}>
-              <h3 className="font-['Runiga'] text-5xl md:text-7xl text-[#D4AF37] mb-4">{stat.num}</h3>
+              <h3 className="font-['Runiga'] text-5xl md:text-7xl text-[#B5952F] mb-4">{stat.num}</h3>
               <p className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-xs uppercase">{stat.label}</p>
             </div>
           ))}
@@ -465,45 +444,45 @@ export default function ArtistManagementJaipur() {
       <section className="py-24 bg-[#111827] text-white px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#D4AF37] mb-4">Talent Packages</h2>
+            <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#B5952F] mb-4">Talent Packages</h2>
             <p className="font-sans text-gray-400 font-light text-xl">Packages made for incredible nights.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tier 1 */}
             <div className="border border-white/10 p-10 hover:border-[#D4AF37]/50 transition-colors duration-500 group rounded-lg bg-black/50">
-              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#D4AF37] transition-colors">The Sangeet Vibe</h3>
+              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#B5952F] transition-colors">The Sangeet Vibe</h3>
               <p className="font-['Rekalgera'] text-xs text-gray-500 uppercase tracking-widest mb-8">High Energy</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Professional Anchor (Yash Soni)</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Famous Club DJ</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Basic Sound System Setup</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> LED Screen Graphics</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Professional Anchor (Yash Soni)</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Famous Club DJ</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Basic Sound System Setup</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> LED Screen Graphics</li>
               </ul>
             </div>
             {/* Tier 2 */}
             <div className="border border-[#D4AF37]/50 p-10 relative bg-gradient-to-b from-[#1F2937] to-black transform md:-translate-y-4 shadow-[0_0_30px_rgba(212,175,55,0.1)] rounded-lg">
               <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-sm">Most Popular</div>
-              <h3 className="font-['The_Seasons'] text-3xl mb-2 text-[#D4AF37]">The Live Concert</h3>
+              <h3 className="font-['The_Seasons'] text-3xl mb-2 text-[#B5952F]">The Live Concert</h3>
               <p className="font-['Rekalgera'] text-xs text-gray-400 uppercase tracking-widest mb-8">Symphony & Sufi</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-300 mb-10">
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> 10+ Piece Live Symphony Band</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Full Concert Sound Line-Array</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Professional Sound Engineer</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Stage Lighting Programmer</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Band Travel & Stay Managed</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> 10+ Piece Live Symphony Band</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Full Concert Sound Line-Array</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Professional Sound Engineer</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Stage Lighting Programmer</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Band Travel & Stay Managed</li>
               </ul>
             </div>
             {/* Tier 3 */}
             <div className="border border-white/10 p-10 hover:border-[#D4AF37]/50 transition-colors duration-500 group rounded-lg bg-black/50">
-              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#D4AF37] transition-colors">The Bollywood Star</h3>
+              <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#B5952F] transition-colors">The Bollywood Star</h3>
               <p className="font-['Rekalgera'] text-xs text-gray-500 uppercase tracking-widest mb-8">VIP Experience</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> A-List Bollywood Singer Booking</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Complete Tech Rider Fulfilled</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> VIP Green Room Hospitality</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Bouncers & Close Protection</li>
-                <li className="flex gap-3"><span className="text-[#D4AF37]">✦</span> Artist Travel & Logistics</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> A-List Bollywood Singer Booking</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Complete Tech Rider Fulfilled</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> VIP Green Room Hospitality</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Bouncers & Close Protection</li>
+                <li className="flex gap-3"><span className="text-[#B5952F]">✦</span> Artist Travel & Logistics</li>
               </ul>
             </div>
           </div>
@@ -553,7 +532,7 @@ export default function ArtistManagementJaipur() {
           variants={fadeInUp}
           className="relative z-20 flex flex-col items-center"
         >
-          <h2 className="font-['Runiga'] text-5xl md:text-8xl lg:text-[120px] text-[#D4AF37] leading-[0.8] mb-16 mix-blend-lighten">
+          <h2 className="font-['Runiga'] text-5xl md:text-8xl lg:text-[120px] text-[#B5952F] leading-[0.8] mb-16 mix-blend-lighten">
             Book The<br />Stars.
           </h2>
           

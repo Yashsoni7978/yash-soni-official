@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { FAQItem } from "../_components/InteractiveFAQ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -21,29 +22,7 @@ const staggerContainer = {
   },
 };
 
-const FAQItem = ({ faq, colorClass }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-[#1A1A1A]/10 py-6">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full text-left">
-        <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-[#1A1A1A] pr-4">{faq.q}</h3>
-        <span className={`text-2xl ${colorClass}`}>{isOpen ? '−' : '+'}</span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }} 
-            animate={{ height: 'auto', opacity: 1 }} 
-            exit={{ height: 0, opacity: 0 }} 
-            className="overflow-hidden"
-          >
-            <p className="font-sans text-gray-600 font-light leading-relaxed mt-4">{faq.a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+
 
 export default function EventDesigning() {
   const containerRef = useRef(null);
@@ -86,7 +65,7 @@ export default function EventDesigning() {
                 fill
                 className="object-cover object-top"
                 priority
-              />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -155,13 +134,13 @@ export default function EventDesigning() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/theme_wedding_setup.webp" alt="Theme Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/theme_wedding_setup.webp" alt="Theme Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Mandap Design" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Mandap Design" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/outdoor_garden_wedding.webp" alt="Floral Architecture" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/outdoor_garden_wedding.webp" alt="Floral Architecture" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </div>
         </motion.div>
@@ -195,7 +174,7 @@ export default function EventDesigning() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Clean lines, acrylics & white florals</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/outdoor_garden_wedding.webp" alt="Minimalist" fill className="object-cover" />
+                <Image src="/premium_events/outdoor_garden_wedding.webp" alt="Minimalist" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -205,7 +184,7 @@ export default function EventDesigning() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Deep maroons, brass & velvets</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Royal" fill className="object-cover" />
+                <Image src="/premium_events/luxury_wedding_mandap.webp" alt="Royal" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -215,7 +194,7 @@ export default function EventDesigning() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Pampas grass, macrame & warm lights</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Boho" fill className="object-cover" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Boho" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -225,7 +204,7 @@ export default function EventDesigning() {
                 <p className="font-sans text-xs md:text-sm text-gray-700">Massive sets, props & SFX</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/corporate_gala_setup.webp" alt="Theatrical" fill className="object-cover" />
+                <Image src="/premium_events/corporate_gala_setup.webp" alt="Theatrical" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -251,7 +230,7 @@ export default function EventDesigning() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-white rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.05)] flex flex-col group hover:-translate-y-2 transition-all duration-500 border border-gray-100">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/luxury_wedding_mandap.webp" alt="3D Rendering" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/luxury_wedding_mandap.webp" alt="3D Rendering" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#1A1A1A] mb-4">3D Rendering</h3>
@@ -265,7 +244,7 @@ export default function EventDesigning() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(190,24,93,0.15)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#BE185D] to-[#831843]">
               <div className="absolute inset-0 opacity-20 bg-[url('/alwar.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Fabrication" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Fabrication" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#FAF9F6] mb-4 flex items-center gap-4">
@@ -308,7 +287,7 @@ export default function EventDesigning() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#BE185D] to-[#831843] p-8 text-[#FAF9F6] rounded-tl-3xl">
               <div className="absolute inset-0 opacity-20 bg-[url('/alwar.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">Scale</span>
@@ -364,7 +343,7 @@ export default function EventDesigning() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   </div>
                 </div>
               </motion.div>
@@ -400,7 +379,7 @@ export default function EventDesigning() {
             "/premium_events/luxury_dining_setup.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden">
-              <Image src={img} alt="Gallery" fill className="object-cover" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
           ))}
         </div>

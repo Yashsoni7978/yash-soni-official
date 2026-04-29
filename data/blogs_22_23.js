@@ -166,7 +166,7 @@ No guest wants to hold a cold glass of fruit-infused water and a plate of tikki 
 
 When your guests are cold, the fundamental human response is to fold inward — sit down, cross their arms, and survive the temperature rather than experience the event. This is the single biggest silent killer of a winter Sangeet's energy.
 
-As a [professional outdoor event anchor](https://yashsoni.in/best-anchor-in-jaipur), my job at a winter wedding becomes intensely physical and psychological:
+As a [professional outdoor event anchor](https://yashsoni.in/anchor-in-jaipur), my job at a winter wedding becomes intensely physical and psychological:
 
 *   I open the [Sangeet](https://yashsoni.in/sangeet-anchor-jaipur) with an explicitly physical crowd engagement — a standing cheer competition between both sides of the family that requires everyone to be physically on their feet within the first three minutes.
 *   I launch rapid-fire interactive games every 20 minutes specifically designed to require physical movement — standing up, competing, gesturing — to keep blood physically circulating.
@@ -187,7 +187,7 @@ A: This is a decision worth discussing carefully with your [event planner in Jai
 A: This varies significantly by venue. Most luxury hotels (Fairmont, Rambagh, Leela) include basic heater provisioning in their packages or have in-house suppliers. Heritage properties (Alsisar Haveli, Diggi Palace) typically require you to source and arrange heating independently through your [event management team](https://yashsoni.in/event-management-jaipur).
 
 **Q: Can we keep a Jaipur outdoor winter sangeet running until 2:00 AM?**
-A: With adequate heating infrastructure, a well-designed pashmina station, and a high-energy [anchor](https://yashsoni.in/best-anchor-in-jaipur) who knows how to keep the crowd physically active, yes — absolutely. Many of the most memorable Jaipur Sangeet nights I have anchored have run outdoors past 1:30 AM in December.
+A: With adequate heating infrastructure, a well-designed pashmina station, and a high-energy [anchor](https://yashsoni.in/anchor-in-jaipur) who knows how to keep the crowd physically active, yes — absolutely. Many of the most memorable Jaipur Sangeet nights I have anchored have run outdoors past 1:30 AM in December.
 
 ---
 

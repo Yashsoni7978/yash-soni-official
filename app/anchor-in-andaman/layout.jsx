@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-andaman/layout.jsx
 // Ultra-Luxury Remote Island Destination Anchor Layout
 

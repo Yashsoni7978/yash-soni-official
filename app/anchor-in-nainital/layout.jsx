@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-nainital/layout.jsx
 // Ultra-Luxury Lakeside Heritage Destination Anchor Layout
 

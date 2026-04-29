@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
@@ -56,7 +57,7 @@ export default async function BlogPost({ params }) {
             fill
             priority 
             unoptimized={true} // Keeps your luxury images crystal clear
-            quality={100}
+           
             className="object-cover opacity-50 grayscale-[20%]"
             sizes="100vw"
           />
@@ -64,7 +65,7 @@ export default async function BlogPost({ params }) {
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent flex items-end p-6 md:p-20 z-10">
           <div className="max-w-5xl">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-bold uppercase text-zinc-400 mb-8 hover:text-[#D4AF37] transition-colors tracking-widest">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-bold uppercase text-zinc-400 mb-8 hover:text-[#B5952F] transition-colors tracking-widest">
               <ArrowLeft size={16} /> Back to Journal
             </Link>
             <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white uppercase leading-[0.95] tracking-tighter drop-shadow-2xl">
@@ -75,13 +76,13 @@ export default async function BlogPost({ params }) {
       </div>
 
       {/* Blog Content (Dark Mode Prose) */}
-      <article className="max-w-3xl mx-auto py-24 px-6 prose prose-lg md:prose-xl prose-invert prose-headings:font-black prose-headings:uppercase prose-p:font-light prose-a:text-[#D4AF37]">
+      <article className="max-w-3xl mx-auto py-24 px-6 prose prose-lg md:prose-xl prose-invert prose-headings:font-black prose-headings:uppercase prose-p:font-light prose-a:text-[#B5952F]">
 
         {/* Meta Data Strip */}
         <div className="flex flex-wrap gap-4 md:gap-6 mb-12 text-zinc-400 font-bold uppercase text-[10px] tracking-widest border-b border-white/10 pb-8">
           <span className="bg-[#D4AF37] text-black px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(212,175,55,0.3)]">{post.category}</span>
-          <span className="flex items-center gap-2 mt-1"><Calendar size={14} className="text-[#D4AF37]" /> {post.fullDate}</span>
-          <span className="flex items-center gap-2 mt-1"><Clock size={14} className="text-[#D4AF37]" /> {post.readTime} Read</span>
+          <span className="flex items-center gap-2 mt-1"><Calendar size={14} className="text-[#B5952F]" /> {post.fullDate}</span>
+          <span className="flex items-center gap-2 mt-1"><Clock size={14} className="text-[#B5952F]" /> {post.readTime} Read</span>
         </div>
 
         {/* --- UPGRADED REACT MARKDOWN --- */}
@@ -96,7 +97,7 @@ export default async function BlogPost({ params }) {
                     alt={props.alt || "Anchor Yash Soni Luxury Event"}
                     fill
                     unoptimized={true}
-                    quality={100}
+                   
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 800px"
                   />

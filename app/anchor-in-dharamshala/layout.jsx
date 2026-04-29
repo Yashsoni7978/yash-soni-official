@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-dharamshala/layout.jsx
 // Ultra-Luxury Mountain Retreat Destination Anchor Layout
 

@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+/* eslint-disable @next/next/no-sync-scripts */
+
 
 export const metadata = {
   title: "Destination Wedding Planner Jaipur | Rajasthan | Anchor Yash Soni",
@@ -63,7 +64,7 @@ const jsonLd = {
   },
 };
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({ children }) {
   return (
     <>
       <script

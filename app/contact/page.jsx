@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Calendar, CheckCircle2, ChevronDown, Crown, Diamond, Instagram, Mail, MapPin, MessageCircle, Phone, Send, ArrowUpRight } from "lucide-react";
+import { Calendar, CheckCircle2, ChevronDown, Crown, Diamond, Mail, MessageCircle, Phone, Send } from "lucide-react";
 import Link from "next/link";
 
 // --- 1. LUXURY TEXTURE ASSETS ---
@@ -21,8 +21,8 @@ const FAQItem = ({ q, a }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center py-5 text-left group"
       >
-        <span className="text-gray-300 group-hover:text-[#D4AF37] transition-colors font-medium text-[15px]">{q}</span>
-        <ChevronDown className={`w-4 h-4 text-[#D4AF37] transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <span className="text-gray-300 group-hover:text-[#B5952F] transition-colors font-medium text-[15px]">{q}</span>
+        <ChevronDown className={`w-4 h-4 text-[#B5952F] transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
         {isOpen && (
@@ -81,8 +81,8 @@ export default function Contact() {
         <div className="text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
              <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2 rounded-full bg-black/50 backdrop-blur-xl mb-8 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
-               <Crown className="w-4 h-4 text-[#D4AF37]" />
-               <span className="text-[#D4AF37] text-xs uppercase tracking-[0.2em] font-bold">
+               <Crown className="w-4 h-4 text-[#B5952F]" />
+               <span className="text-[#B5952F] text-xs uppercase tracking-[0.2em] font-bold">
                  Initiate The Dialogue
                </span>
              </div>
@@ -102,12 +102,12 @@ export default function Contact() {
                <h3 className="text-2xl font-display font-bold text-white mb-2">Direct Access.</h3>
                <p className="text-gray-400 font-light text-sm mb-6">Skip the wait. Reach out directly for immediate assistance regarding dates and premium consulting.</p>
                <a href="tel:+917737877978" className="flex items-center gap-5 group">
-                 <div className="w-14 h-14 bg-[#111] rounded-2xl flex items-center justify-center border border-white/10 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-colors duration-500 shadow-md">
+                 <div className="w-14 h-14 bg-[#111] rounded-2xl flex items-center justify-center border border-white/10 text-[#B5952F] group-hover:bg-[#D4AF37] group-hover:text-black transition-colors duration-500 shadow-md">
                    <Phone className="w-5 h-5" />
                  </div>
                  <div>
                    <p className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">VIP Line</p>
-                   <p className="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">+91 77378 77978</p>
+                   <p className="text-lg font-bold text-white group-hover:text-[#B5952F] transition-colors">+91 77378 77978</p>
                  </div>
                </a>
                <a href="#" className="flex items-center gap-5 group">
@@ -130,7 +130,7 @@ export default function Contact() {
                    "Zero hidden markups. Absolute transparent pricing."
                  ].map((item, i) => (
                    <li key={i} className="flex gap-4 items-start text-gray-300 text-sm font-light">
-                     <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
+                     <CheckCircle2 className="w-5 h-5 text-[#B5952F] shrink-0 mt-0.5" />
                      {item}
                    </li>
                  ))}
@@ -181,7 +181,7 @@ export default function Contact() {
                           className="w-full bg-[#111] border border-white/5 rounded-2xl p-4 text-white focus:border-[#D4AF37] focus:outline-none transition-colors appearance-none"
                           onChange={handleInputChange}
                         />
-                        <Calendar className="absolute right-4 top-4 text-[#D4AF37] w-5 h-5 pointer-events-none" />
+                        <Calendar className="absolute right-4 top-4 text-[#B5952F] w-5 h-5 pointer-events-none" />
                       </div>
                     </div>
                   </div>
@@ -255,7 +255,7 @@ export default function Contact() {
                 { name: "Justdial", href: "https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET" },
               ].map((brand, i) => (
                 <Link key={i} href={brand.href} target="_blank" rel="noopener noreferrer"
-                  className="text-xl md:text-2xl font-black text-white hover:text-[#D4AF37] transition-colors">
+                  className="text-xl md:text-2xl font-black text-white hover:text-[#B5952F] transition-colors">
                   {brand.name}
                 </Link>
               ))}

@@ -37,7 +37,7 @@ export default function HeroSlider({ images, children, gradientClass, borderClas
               className="object-cover object-top"
               priority
               fetchPriority="high"
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </motion.div>
         </AnimatePresence>
       </motion.div>

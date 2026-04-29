@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-delhi/layout.jsx
 // SERVER COMPONENT — SEO metadata only. All JSON-LD schemas inside.
 

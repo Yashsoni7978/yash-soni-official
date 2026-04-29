@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-agra/layout.jsx
 // Ultra-Luxury Heritage & Taj Mahal Destination Anchor Layout
 

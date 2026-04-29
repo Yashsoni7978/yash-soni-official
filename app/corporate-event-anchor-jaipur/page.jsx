@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Award, Briefcase, Building2, CalendarCheck, CheckCircle2, Globe, Heart, Instagram, MapPin, Mic2, Minus, MonitorPlay, Music2, Plus, ShieldCheck, Star, TrendingUp, Users, Youtube, Zap } from "lucide-react";
+import { ArrowRight, Award, Building2, CalendarCheck, CheckCircle2, Globe, Heart, Instagram, MapPin, Mic2, Minus, MonitorPlay, Plus, Star, TrendingUp, Users, Youtube } from "lucide-react";
 
 
 
@@ -308,7 +308,7 @@ export default function CorporateAnchor() {
       {/* BREADCRUMB — sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
-        <Link href="/best-anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
+        <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
         <span>Corporate Event Anchor Jaipur</span>
       </nav>
       {/* ══════════════════════════════════════
@@ -321,7 +321,7 @@ export default function CorporateAnchor() {
           <Image
             src="/service-corporate.webp"
             alt="Best corporate event anchor in Jaipur — Anchor Yash Soni on stage"
-            fill priority quality={100}
+            fill priority
             className="object-cover opacity-50 grayscale"
             sizes="100vw"
           />
@@ -424,7 +424,7 @@ export default function CorporateAnchor() {
             <Image
               src="/gallery-5.webp"
               alt="Anchor Yash Soni corporate event showreel Jaipur"
-              fill quality={100}
+              fill
               className="object-cover opacity-60 group-hover:opacity-80 transition-all duration-500"
               sizes="(max-width:1024px) 100vw, 896px"
             />
@@ -548,7 +548,7 @@ export default function CorporateAnchor() {
                   className="flex flex-col h-full border border-white/10 rounded-2xl p-6 hover:border-blue-500/30 transition-all bg-zinc-900/20 hover:bg-zinc-900/50 group cursor-pointer">
                   <div className="flex gap-0.5 mb-3">
                     {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]" />
+                      <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />
                     ))}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
@@ -631,7 +631,7 @@ export default function CorporateAnchor() {
             </Link>
             {/* Footer links */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/best-anchor-in-jaipur" className="hover:text-blue-400 transition-colors">Best Anchor Jaipur</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-blue-400 transition-colors">Best Anchor Jaipur</Link>
               <Link href="/celebrity-public-events-host" className="hover:text-blue-400 transition-colors">Celebrity Events</Link>
               <Link href="/team-building-host" className="hover:text-blue-400 transition-colors">Team Building</Link>
               <Link href="/wedding-anchor-jaipur" className="hover:text-blue-400 transition-colors">Wedding Anchor</Link>

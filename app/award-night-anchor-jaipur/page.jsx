@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { Award, Briefcase, Building2, CalendarCheck, CheckCircle2, Crown, Globe, Heart, MapPin, Mic2, Minus, Plus, Sparkles, Star, Trophy, Users, Zap } from "lucide-react";
+import { Award, Briefcase, Building2, CalendarCheck, CheckCircle2, Crown, Heart, MapPin, Mic2, Minus, Plus, Sparkles, Star, Trophy, Users, Zap } from "lucide-react";
 
 
 
@@ -59,7 +59,7 @@ const FAQItem = ({ q, a, id }) => {
       className={`rounded-2xl border transition-all duration-300 ${open ? "border-[#D4AF37]/60 bg-[#D4AF37]/5" : "border-white/10 hover:border-white/20"}`}>
       <button onClick={() => setOpen(o=>!o)} aria-expanded={open} aria-controls={id}
         className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none">
-        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${open ? "text-[#D4AF37]" : "text-zinc-200"}`}>{q}</span>
+        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${open ? "text-[#B5952F]" : "text-zinc-200"}`}>{q}</span>
         <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all mt-0.5 ${open ? "bg-[#D4AF37] text-black" : "border border-white/30"}`}>
           {open ? <Minus size={13}/> : <Plus size={13}/>}
         </div>
@@ -215,15 +215,15 @@ export default function AwardNightAnchorJaipur() {
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24">
         <div className="absolute inset-0">
           <Image src="/gallery-3.webp" alt="Award night anchor Jaipur corporate gala JECC Sitapura"
-            fill priority quality={100} className="object-cover" sizes="100vw"
+            fill priority className="object-cover" sizes="100vw"
             style={{ filter:"grayscale(15%)", opacity:.38 }}/>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"/>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
           <motion.div initial={{ opacity:0, y:32 }} animate={{ opacity:1, y:0 }} transition={{ duration:1 }}>
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/40 px-5 py-2 rounded-full bg-black/40 backdrop-blur-sm mb-7">
-              <Trophy size={12} className="text-[#D4AF37]"/>
-              <span className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-[.3em]">Award Night Anchor · Jaipur · JECC Sitapura</span>
+              <Trophy size={12} className="text-[#B5952F]"/>
+              <span className="text-[#B5952F] text-[9px] font-bold uppercase tracking-[.3em]">Award Night Anchor · Jaipur · JECC Sitapura</span>
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-black leading-[.88] tracking-tighter uppercase mb-7">
               Corporate Galas<br/>Deserve <G>This</G><br/>Standard.
@@ -242,7 +242,7 @@ export default function AwardNightAnchorJaipur() {
                   </button>
                 </Link>
                 <Link href="/corporate-event-anchor-jaipur">
-                  <button className="px-7 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
+                  <button className="px-7 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all">
                     Corporate Events →
                   </button>
                 </Link>
@@ -258,7 +258,7 @@ export default function AwardNightAnchorJaipur() {
             {STATS.map((s,i) => (
               <Reveal key={i} delay={i*.07}>
                 <div className="text-center py-10 md:py-14 border-r border-white/5 last:border-r-0">
-                  <s.icon size={16} className="text-[#D4AF37] mx-auto mb-3 opacity-60"/>
+                  <s.icon size={16} className="text-[#B5952F] mx-auto mb-3 opacity-60"/>
                   <div className="text-4xl md:text-5xl font-black mb-1 gs">
                     <Counter target={s.val} suffix={s.suffix}/>
                   </div>
@@ -274,7 +274,7 @@ export default function AwardNightAnchorJaipur() {
       <section className="py-16 md:py-24 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Script-Reading Problem</p>
+            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Script-Reading Problem</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">
               Your Brand Is on Stage.<br/>So Is <G>the Anchor.</G>
             </h2>
@@ -285,17 +285,17 @@ export default function AwardNightAnchorJaipur() {
               A corporate award night runs 3–4 hours. Twenty-plus award categories. Keynote speakers. Entertainment transitions. Sponsor acknowledgements. CEO felicitation. Every element has a specific tone requirement. The anchor who can navigate all of it — adapting live, brand-aligned, teleprompter-free — is genuinely rare.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              70+ national brands chose this anchor because <em className="text-[#D4AF37]">the risk of getting it wrong was too high</em> to settle for generic.
+              70+ national brands chose this anchor because <em className="text-[#B5952F]">the risk of getting it wrong was too high</em> to settle for generic.
             </p>
           </Reveal>
           <Reveal delay={.1}>
             <div className="img-h relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#D4AF37]/20">
               <Image src="/gallery-1.webp" alt="Award night anchor Jaipur corporate gala stage presence"
-                fill quality={100} className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
+                fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
                 style={{ filter:"grayscale(10%)" }}/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
-                <p className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest mb-1">Teleprompter-Free · Brand-Aligned · Bilingual</p>
+                <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Teleprompter-Free · Brand-Aligned · Bilingual</p>
                 <p className="text-white text-xs">70+ national brands. Zero teleprompters. Zero dead moments.</p>
               </div>
             </div>
@@ -307,7 +307,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-4">Corporate Formats</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-4">Corporate Formats</p>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
                 Award Nights to <G>Product Launches.</G>
               </h2>
@@ -320,12 +320,12 @@ export default function AwardNightAnchorJaipur() {
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"/>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center group-hover:bg-[#D4AF37] transition-all">
-                      <f.icon size={16} className="text-[#D4AF37] group-hover:text-black transition-colors"/>
+                      <f.icon size={16} className="text-[#B5952F] group-hover:text-black transition-colors"/>
                     </div>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-[#D4AF37]/70 border border-[#D4AF37]/20 px-2.5 py-1 rounded-full">{f.tag}</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-[#B5952F]/70 border border-[#D4AF37]/20 px-2.5 py-1 rounded-full">{f.tag}</span>
                   </div>
-                  <h3 className="text-base font-black text-white uppercase tracking-tight mb-1 group-hover:text-[#D4AF37] transition-colors">{f.title}</h3>
-                  <p className="text-[#D4AF37]/50 text-[9px] font-bold uppercase tracking-widest mb-3">{f.sub}</p>
+                  <h3 className="text-base font-black text-white uppercase tracking-tight mb-1 group-hover:text-[#B5952F] transition-colors">{f.title}</h3>
+                  <p className="text-[#B5952F]/50 text-[9px] font-bold uppercase tracking-widest mb-3">{f.sub}</p>
                   <p className="text-zinc-400 text-xs leading-relaxed">{f.desc}</p>
                 </div>
               </Reveal>
@@ -339,10 +339,10 @@ export default function AwardNightAnchorJaipur() {
           <Reveal>
             <div className="flex justify-between items-end flex-wrap gap-4 mb-10">
               <div>
-                <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Visual Proof</p>
+                <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Visual Proof</p>
                 <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">Corporate <G>Events.</G></h2>
               </div>
-              <Link href="/portfolio"><span className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 cursor-pointer">Portfolio →</span></Link>
+              <Link href="/portfolio"><span className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 cursor-pointer">Portfolio →</span></Link>
             </div>
           </Reveal>
           <div className="grid grid-cols-3 gap-3 auto-rows-[160px] md:auto-rows-[200px]">
@@ -355,7 +355,7 @@ export default function AwardNightAnchorJaipur() {
             ].map((img,i) => (
               <Reveal key={i} delay={i*.05}>
                 <div className={`img-h relative overflow-hidden rounded-xl border border-white/8 hover:border-[#D4AF37]/40 transition-all ${img.span||""}`}>
-                  <Image src={img.src} alt={img.alt} fill quality={100} className="object-cover"
+                  <Image src={img.src} alt={img.alt} fill className="object-cover"
                     style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
                 </div>
@@ -369,7 +369,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Standard</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Standard</p>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
                 Why 70+ Brands <G>Choose This Anchor.</G>
               </h2>
@@ -379,7 +379,7 @@ export default function AwardNightAnchorJaipur() {
             {STANDARD.map((s,i) => (
               <Reveal key={i} delay={i*.08}>
                 <div className="bg-zinc-900/40 border border-white/8 hover:border-[#D4AF37]/30 rounded-2xl p-7 transition-all h-full">
-                  <p className="text-4xl font-black text-[#D4AF37]/15 mb-4 leading-none">{s.num}</p>
+                  <p className="text-4xl font-black text-[#B5952F]/15 mb-4 leading-none">{s.num}</p>
                   <h3 className="text-sm font-black text-white mb-3 uppercase tracking-tight">{s.title}</h3>
                   <p className="text-zinc-500 text-xs leading-relaxed">{s.desc}</p>
                 </div>
@@ -393,7 +393,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Comparison</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Comparison</p>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
                 Generic Anchor vs <G>This One.</G>
               </h2>
@@ -404,7 +404,7 @@ export default function AwardNightAnchorJaipur() {
               <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">What you usually get</p>
             </div>
             <div className="bg-zinc-900/50 px-6 py-4 border-b border-white/5">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">What you get here</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">What you get here</p>
             </div>
             {VS.map((row, i) => (
               <>
@@ -413,7 +413,7 @@ export default function AwardNightAnchorJaipur() {
                   <p className="text-zinc-500 text-sm">{row.problem}</p>
                 </div>
                 <div key={`f${i}`} className="bg-zinc-900/30 px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3">
-                  <CheckCircle2 size={14} className="text-[#D4AF37] shrink-0"/>
+                  <CheckCircle2 size={14} className="text-[#B5952F] shrink-0"/>
                   <p className="text-zinc-200 text-sm font-medium">{row.fix}</p>
                 </div>
               </>
@@ -426,7 +426,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Venue Expertise</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Venue Expertise</p>
               <h2 className="text-2xl md:text-3xl font-black uppercase">Corporate Venues Across <G>Jaipur.</G></h2>
             </div>
           </Reveal>
@@ -434,10 +434,10 @@ export default function AwardNightAnchorJaipur() {
             {VENUES.map((v,i) => (
               <Reveal key={i} delay={i*.05}>
                 <div className="border border-white/10 hover:border-[#D4AF37]/40 rounded-xl p-4 text-center group transition-all">
-                  <Building2 size={12} className="text-[#D4AF37] mx-auto mb-2"/>
-                  <p className="text-white text-xs font-semibold group-hover:text-[#D4AF37] transition-colors">{v.name}</p>
+                  <Building2 size={12} className="text-[#B5952F] mx-auto mb-2"/>
+                  <p className="text-white text-xs font-semibold group-hover:text-[#B5952F] transition-colors">{v.name}</p>
                   <p className="text-zinc-600 text-[9px] mt-0.5">{v.note}</p>
-                  <span className="text-[8px] bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/15 px-2 py-0.5 rounded-full mt-1.5 inline-block uppercase tracking-wide">{v.tag}</span>
+                  <span className="text-[8px] bg-[#D4AF37]/10 text-[#B5952F] border border-[#D4AF37]/15 px-2 py-0.5 rounded-full mt-1.5 inline-block uppercase tracking-wide">{v.tag}</span>
                 </div>
               </Reveal>
             ))}
@@ -449,7 +449,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">4.9★ Verified</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">4.9★ Verified</p>
               <h2 className="text-3xl md:text-4xl font-black uppercase">What <G>Brands Say.</G></h2>
             </div>
           </Reveal>
@@ -459,11 +459,11 @@ export default function AwardNightAnchorJaipur() {
                 <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
                   className="flex flex-col h-full border border-white/10 hover:border-[#D4AF37]/40 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
                   <div className="flex gap-0.5 mb-4">
-                    {[...Array(5)].map((_,j) => <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]"/>)}
+                    {[...Array(5)].map((_,j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]"/>)}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -492,7 +492,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Planning FAQs</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Planning FAQs</p>
               <h2 className="text-3xl md:text-4xl font-black uppercase">Award Night <G>Jaipur FAQ.</G></h2>
             </div>
           </Reveal>
@@ -510,7 +510,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-2">All Services</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-2">All Services</p>
               <h2 className="text-2xl md:text-3xl font-bold">Awards Are One Format. <G>We Cover Everything.</G></h2>
             </div>
           </Reveal>
@@ -524,8 +524,8 @@ export default function AwardNightAnchorJaipur() {
               <Reveal key={i} delay={i*.04}>
                 <Link href={r.href}>
                   <div className="border border-white/10 hover:border-[#D4AF37]/50 rounded-2xl p-4 text-center transition-all group cursor-pointer hover:bg-zinc-900/50">
-                    <r.icon size={16} className="text-[#D4AF37] mx-auto mb-2"/>
-                    <p className="text-white text-xs font-semibold group-hover:text-[#D4AF37] transition-colors">{r.label}</p>
+                    <r.icon size={16} className="text-[#B5952F] mx-auto mb-2"/>
+                    <p className="text-white text-xs font-semibold group-hover:text-[#B5952F] transition-colors">{r.label}</p>
                     <p className="text-zinc-600 text-[9px] mt-0.5">{r.desc}</p>
                   </div>
                 </Link>
@@ -535,7 +535,7 @@ export default function AwardNightAnchorJaipur() {
           <div className="text-center relative overflow-hidden rounded-2xl border border-[#D4AF37]/20 p-12 md:p-16">
             <div className="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/6 to-transparent pointer-events-none"/>
             <Reveal>
-              <Trophy size={24} className="text-[#D4AF37] mx-auto mb-5 opacity-60"/>
+              <Trophy size={24} className="text-[#B5952F] mx-auto mb-5 opacity-60"/>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-5 leading-[.9]">
                 Your Brand Deserves<br/><G>This Standard.</G>
               </h2>

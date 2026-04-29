@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-rajasthan/layout.jsx
 // SERVER COMPONENT — metadata + schema only
 const serviceSchema = {
@@ -51,7 +52,7 @@ const breadcrumb = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
-    { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/best-anchor-in-jaipur" },
+    { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/anchor-in-jaipur" },
     { "@type": "ListItem", position: 3, name: "Anchor in Rajasthan", item: "https://yashsoni.in/anchor-in-rajasthan" },
   ],
 };

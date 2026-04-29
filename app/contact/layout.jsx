@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/contact/layout.jsx
 // SERVER COMPONENT — metadata only
 const localBusinessSchema = {

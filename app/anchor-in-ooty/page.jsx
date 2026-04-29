@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { ArrowRight, Award, Briefcase, Building2, CalendarCheck, CheckCircle2, Coffee, Crown, Flower2, Gem, Globe, Heart, Landmark, MapPin, Mic2, Minus, Music2, Plus, ShieldCheck, Sparkles, Star, Users } from "lucide-react";
+import { ArrowRight, Award, Briefcase, Building2, CalendarCheck, CheckCircle2, Coffee, Crown, Gem, Heart, Landmark, MapPin, Mic2, Minus, Music2, Plus, ShieldCheck, Sparkles, Star, Users } from "lucide-react";
 
 const GOLD = "#D4AF37";
 const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20planning%20a%20destination%20wedding%20in%20Ooty.%20Can%20you%20check%20availability%3F";
@@ -68,7 +68,7 @@ const FAQItem = ({ q, a, id }) => {
         aria-controls={id}
         className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none"
       >
-        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${open ? "text-[#D4AF37]" : "text-zinc-200"}`}>{q}</span>
+        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${open ? "text-[#B5952F]" : "text-zinc-200"}`}>{q}</span>
         <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all mt-0.5 ${open ? "bg-[#D4AF37] text-black" : "border border-white/30"}`}>
           {open ? <Minus size={13} /> : <Plus size={13} />}
         </div>
@@ -274,8 +274,8 @@ export default function OotyPage() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="mb-8 inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full bg-black/60 backdrop-blur-xl shadow-[0_0_24px_rgba(212,175,55,0.2)]">
-              <Landmark size={13} className="text-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em]">Best Event Anchor · Ooty · The Heritage Apex</span>
+              <Landmark size={13} className="text-[#B5952F]" />
+              <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em]">Best Event Anchor · Ooty · The Heritage Apex</span>
             </div>
             <h1 className="font-black uppercase tracking-tighter leading-[0.82] mb-8">
               <span className="block text-white text-[15vw] md:text-[11vw] lg:text-[8.5rem] opacity-90 drop-shadow-2xl">ANCHOR</span>
@@ -296,7 +296,7 @@ export default function OotyPage() {
                 </button>
               </Link>
               <Link href="/portfolio">
-                <button className="px-10 py-5 border border-[#D4AF37]/50 text-[#D4AF37] font-black uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
+                <button className="px-10 py-5 border border-[#D4AF37]/50 text-[#B5952F] font-black uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
                   VIEW PORTFOLIO
                 </button>
               </Link>
@@ -315,7 +315,7 @@ export default function OotyPage() {
             {STATS.map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div className="text-center py-8 border-r border-white/5 last:border-r-0">
-                  <s.icon size={16} className="text-[#D4AF37] mx-auto mb-3 opacity-60" />
+                  <s.icon size={16} className="text-[#B5952F] mx-auto mb-3 opacity-60" />
                   <div className="text-4xl md:text-5xl font-black mb-1 gs">
                     <Counter target={s.val} suffix={s.suffix} />
                   </div>
@@ -333,7 +333,7 @@ export default function OotyPage() {
         <div className="container mx-auto px-5 md:px-10 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <Reveal>
-              <span className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
+              <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">
                 Heritage Scale.<br /><G>Silicon Valley Elite.</G>
               </h2>
@@ -341,12 +341,12 @@ export default function OotyPage() {
                 With 8+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury heritage destination hosting across the Nilgiri mountains.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
-                Ooty operates as a definitive sanctuary away from standard chaotic wedding hubs. You are dealing with literal historical monuments like Savoy (IHCL) where <strong className="text-[#D4AF37]">colonial architecture and Bangalore’s highest tech-elite demographics</strong> requires flawless execution. Yash steps into these sprawling, heritage mountain architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.
+                Ooty operates as a definitive sanctuary away from standard chaotic wedding hubs. You are dealing with literal historical monuments like Savoy (IHCL) where <strong className="text-[#B5952F]">colonial architecture and Bangalore’s highest tech-elite demographics</strong> requires flawless execution. Yash steps into these sprawling, heritage mountain architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
                 He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the corporate network, suddenly flipping into high-voltage momentum when the Sangeet demands unhinged energy.
               </p>
-              <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#D4AF37] text-xs tracking-widest uppercase hover:text-white transition-colors">
+              <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
               </Link>
             </Reveal>
@@ -368,7 +368,7 @@ export default function OotyPage() {
       <section className="py-20 md:py-28 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Why Ooty is Different</p>
+            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Why Ooty is Different</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-4">
               The Nilgiri Estates Demand<br />an <G>Elite Frequency.</G>
             </h2>
@@ -382,9 +382,9 @@ export default function OotyPage() {
                 <div className="border border-white/8 hover:border-[#D4AF37]/40 rounded-2xl p-7 transition-all h-full group hover:bg-zinc-900/50 relative overflow-hidden">
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-5 group-hover:bg-[#D4AF37] transition-all">
-                    <item.icon size={18} className="text-[#D4AF37] group-hover:text-black transition-colors" />
+                    <item.icon size={18} className="text-[#B5952F] group-hover:text-black transition-colors" />
                   </div>
-                  <h3 className="text-base font-black text-white uppercase tracking-tight mb-3 group-hover:text-[#D4AF37] transition-colors">{item.title}</h3>
+                  <h3 className="text-base font-black text-white uppercase tracking-tight mb-3 group-hover:text-[#B5952F] transition-colors">{item.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed font-light">{item.desc}</p>
                 </div>
               </Reveal>
@@ -398,7 +398,7 @@ export default function OotyPage() {
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="text-center mb-12">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">The Difference Is Real</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">The Difference Is Real</p>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">Generic Anchor <G>vs This One.</G></h2>
             </div>
           </Reveal>
@@ -407,7 +407,7 @@ export default function OotyPage() {
               <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">What you usually get</p>
             </div>
             <div className="bg-zinc-900/50 px-6 py-4 border-b border-white/5">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">What you get here</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">What you get here</p>
             </div>
             {VS.map((row, i) => (
               <>
@@ -416,7 +416,7 @@ export default function OotyPage() {
                   <p className="text-zinc-500 text-sm">{row.problem}</p>
                 </div>
                 <div key={`f${i}`} className="bg-zinc-900/30 px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3">
-                  <CheckCircle2 size={14} className="text-[#D4AF37] shrink-0" />
+                  <CheckCircle2 size={14} className="text-[#B5952F] shrink-0" />
                   <p className="text-zinc-200 text-sm font-medium">{row.fix}</p>
                 </div>
               </>
@@ -430,7 +430,7 @@ export default function OotyPage() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-12">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">What I Anchor</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">What I Anchor</p>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
                 Heritage Retreats to<br /><G>Massive Ferrnhills Sangeets.</G>
               </h2>
@@ -441,12 +441,12 @@ export default function OotyPage() {
               <Reveal key={i} delay={i * 0.08}>
                 <div className="border border-white/8 hover:border-[#D4AF37]/40 rounded-2xl p-6 transition-all group h-full hover:bg-zinc-900/50 relative overflow-hidden">
                   <div className="absolute top-3 right-3">
-                    <span className="text-[8px] font-bold uppercase tracking-widest text-[#D4AF37]/60 border border-[#D4AF37]/20 px-2 py-0.5 rounded-full">{s.tag}</span>
+                    <span className="text-[8px] font-bold uppercase tracking-widest text-[#B5952F]/60 border border-[#D4AF37]/20 px-2 py-0.5 rounded-full">{s.tag}</span>
                   </div>
                   <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-5 mt-1 group-hover:bg-[#D4AF37] transition-all">
-                    <s.icon size={18} className="text-[#D4AF37] group-hover:text-black transition-colors" />
+                    <s.icon size={18} className="text-[#B5952F] group-hover:text-black transition-colors" />
                   </div>
-                  <h3 className="text-sm font-black text-white uppercase tracking-tight mb-3 group-hover:text-[#D4AF37] transition-colors">{s.title}</h3>
+                  <h3 className="text-sm font-black text-white uppercase tracking-tight mb-3 group-hover:text-[#B5952F] transition-colors">{s.title}</h3>
                   <p className="text-zinc-400 text-xs leading-relaxed font-light">{s.desc}</p>
                 </div>
               </Reveal>
@@ -460,7 +460,7 @@ export default function OotyPage() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">Venue Expertise</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">Venue Expertise</p>
               <h2 className="text-2xl md:text-3xl font-black uppercase">Ooty's Best. <G>Known From Inside.</G></h2>
             </div>
           </Reveal>
@@ -468,8 +468,8 @@ export default function OotyPage() {
             {VENUES.map((v, i) => (
               <Reveal key={i} delay={i * 0.05}>
                 <div className="border border-white/10 hover:border-[#D4AF37]/40 rounded-xl p-4 text-center group transition-all">
-                  <v.icon size={14} className="text-[#D4AF37] mx-auto mb-2" />
-                  <p className="text-white text-xs font-semibold group-hover:text-[#D4AF37] transition-colors">{v.name}</p>
+                  <v.icon size={14} className="text-[#B5952F] mx-auto mb-2" />
+                  <p className="text-white text-xs font-semibold group-hover:text-[#B5952F] transition-colors">{v.name}</p>
                   <p className="text-zinc-600 text-[9px] mt-0.5">{v.tag}</p>
                 </div>
               </Reveal>
@@ -482,7 +482,7 @@ export default function OotyPage() {
       <section className="py-20 md:py-28 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">The Heritage Challenge</p>
+            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">The Heritage Challenge</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">
               VIP Reality.<br /><G>Nilgiri Scale.</G>
             </h2>
@@ -506,7 +506,7 @@ export default function OotyPage() {
               ].map((item, i) => (
                 <div key={i} className="border border-white/10 hover:border-[#D4AF37]/30 rounded-2xl p-5 transition-all group">
                   <div className="w-2 h-2 rounded-full bg-[#D4AF37] mb-3" />
-                  <p className="text-white text-sm font-bold group-hover:text-[#D4AF37] transition-colors">{item.label}</p>
+                  <p className="text-white text-sm font-bold group-hover:text-[#B5952F] transition-colors">{item.label}</p>
                   <p className="text-zinc-500 text-[10px] mt-1">{item.sub}</p>
                 </div>
               ))}
@@ -538,13 +538,13 @@ export default function OotyPage() {
               <Image src="/rose-petal-tree-background.webp" alt="Ooty Event Command" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
-                <p className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest mb-1">Ooty · The Heritage Retreat</p>
+                <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Ooty · The Heritage Retreat</p>
                 <p className="text-white text-xs">Commanding extreme VIP intimacy at properties like Savoy IHCL and driving unstoppable energy across massive palace ballrooms.</p>
               </div>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Scale</p>
+            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Scale</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">
               Victorian Scale.<br /><G>Bangalore Focus.</G><br />Zero Scripts.
             </h2>
@@ -553,7 +553,7 @@ export default function OotyPage() {
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
-                <ShieldCheck size={16} className="text-[#D4AF37]" /> The "VVIP Heritage" Guarantee
+                <ShieldCheck size={16} className="text-[#B5952F]" /> The "VVIP Heritage" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
                 High-net-worth Bangalore families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling Victorian constraints.
@@ -568,7 +568,7 @@ export default function OotyPage() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-12">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">4.9★ Verified</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">4.9★ Verified</p>
               <h2 className="text-3xl md:text-4xl font-black uppercase">Real Words. <G>Ooty Events.</G></h2>
             </div>
           </Reveal>
@@ -582,11 +582,11 @@ export default function OotyPage() {
                   className="flex flex-col h-full border border-white/10 hover:border-[#D4AF37]/40 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer"
                 >
                   <div className="flex gap-0.5 mb-4">
-                    {[...Array(5)].map((_, j) => <Star key={j} fill={GOLD} className="text-[#D4AF37] w-3 h-3" />)}
+                    {[...Array(5)].map((_, j) => <Star key={j} fill={GOLD} className="text-[#B5952F] w-3 h-3" />)}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -616,7 +616,7 @@ export default function OotyPage() {
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <div className="text-center mb-12">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">Planning FAQs</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">Planning FAQs</p>
               <h2 className="text-3xl md:text-4xl font-black uppercase">Ooty <G>Anchor FAQ.</G></h2>
             </div>
           </Reveal>
@@ -635,7 +635,7 @@ export default function OotyPage() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Adjacent Hill Hubs</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Adjacent Hill Hubs</p>
               <h2 className="text-2xl md:text-3xl font-black uppercase">India's <G>Elite Hill Routes.</G></h2>
             </div>
           </Reveal>
@@ -649,8 +649,8 @@ export default function OotyPage() {
               <Reveal key={i} delay={i * 0.05}>
                 <Link href={r.href}>
                   <div className="border border-white/10 hover:border-[#D4AF37]/50 rounded-2xl p-4 text-center transition-all group cursor-pointer hover:bg-zinc-900/50">
-                    <r.icon size={14} className="text-[#D4AF37] mx-auto mb-2" />
-                    <p className="text-white text-xs font-semibold group-hover:text-[#D4AF37] transition-colors">{r.label}</p>
+                    <r.icon size={14} className="text-[#B5952F] mx-auto mb-2" />
+                    <p className="text-white text-xs font-semibold group-hover:text-[#B5952F] transition-colors">{r.label}</p>
                     <p className="text-zinc-600 text-[9px] mt-0.5">{r.desc}</p>
                   </div>
                 </Link>
@@ -666,8 +666,8 @@ export default function OotyPage() {
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-5 py-2 mb-8">
-              <ShieldCheck size={13} className="text-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">Limited 2025–26 Season Dates</span>
+              <ShieldCheck size={13} className="text-[#B5952F]" />
+              <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">Limited 2025–26 Season Dates</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-[0.9]">
               Your Event Date<br /><G>Won't Wait.</G>
@@ -697,7 +697,7 @@ export default function OotyPage() {
               { label: "Anchor in Chennai", href: "/anchor-in-chennai" },
               { label: "Rajasthan Hub", href: "/anchor-in-rajasthan" },
             ].map((l, i) => (
-              <Link key={i} href={l.href} className="hover:text-[#D4AF37] transition-colors">{l.label}</Link>
+              <Link key={i} href={l.href} className="hover:text-[#B5952F] transition-colors">{l.label}</Link>
             ))}
           </div>
           <p className="text-[11px] opacity-40 uppercase tracking-widest">

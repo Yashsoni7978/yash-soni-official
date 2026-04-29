@@ -9,7 +9,7 @@ const FAQItem = ({ q, a }) => {
   return (
     <div className={`rounded-2xl border transition-all duration-300 ${open ? "border-[#D4AF37] bg-[#D4AF37]/5" : "border-white/10 hover:border-white/20"}`}>
       <button onClick={() => setOpen(!open)} className="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none" aria-expanded={open}>
-        <span className={`font-semibold text-base md:text-lg pr-4 transition-colors leading-snug ${open ? "text-[#D4AF37]" : "text-zinc-200"}`}>{q}</span>
+        <span className={`font-semibold text-base md:text-lg pr-4 transition-colors leading-snug ${open ? "text-[#B5952F]" : "text-zinc-200"}`}>{q}</span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full border transition-colors ${open ? "bg-[#D4AF37] border-[#D4AF37] text-black" : "border-white/30 text-white"}`}>
           {open ? <Minus size={14} /> : <Plus size={14} />}
         </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/award-night-anchor-jaipur/layout.jsx
 const serviceSchema = {
   "@context": "https://schema.org",

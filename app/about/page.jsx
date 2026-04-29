@@ -97,7 +97,7 @@ export default function AboutPage() {
           className="absolute bottom-0 left-0 pb-10 md:pb-16 px-5 md:px-10 max-w-4xl"
         >
           {/* Issue line */}
-          <p className="fade-up text-[#D4AF37]/70 text-[10px] tracking-[0.4em] uppercase mb-4 flex items-center gap-3">
+          <p className="fade-up text-[#B5952F]/70 text-[10px] tracking-[0.4em] uppercase mb-4 flex items-center gap-3">
             <span className="inline-block w-8 h-px bg-[#D4AF37]/50" />
             The Anchor · Jaipur
           </p>
@@ -194,7 +194,7 @@ export default function AboutPage() {
               <Image
                 src="/intro-portrait-bottom.webp"
                 alt="Anchor Yash Soni on stage at a Jaipur event"
-                fill quality={100}
+                fill
                 className="object-cover"
                 sizes="(max-width:768px) 100vw, 50vw"
               />
@@ -230,7 +230,7 @@ export default function AboutPage() {
               <Image
                 src="/service-wedding.webp"
                 alt="Anchor Yash Soni commanding a wedding crowd in Jaipur"
-                fill quality={100}
+                fill
                 className="object-cover"
                 sizes="(max-width:768px) 100vw, 50vw"
               />
@@ -238,7 +238,7 @@ export default function AboutPage() {
               {/* Stat overlay */}
               <div className="absolute bottom-5 left-5 right-5">
                 <div className="bg-black/60 backdrop-blur-sm border border-white/10 rounded-xl p-4">
-                  <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-1 font-bold">Zero paper scripts</p>
+                  <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-1 font-bold">Zero paper scripts</p>
                   <p className="text-white text-xs leading-relaxed">
                     Not a single event in 1,100+ has been hosted from a written script. Every word is earned live, in the room.
                   </p>
@@ -339,7 +339,7 @@ export default function AboutPage() {
           ].map((v, i) => (
             <Reveal key={i} delay={i * 0.06}>
               <div className="py-5 flex flex-col md:flex-row md:items-center gap-2 md:gap-8 group hover:bg-zinc-900/30 -mx-5 md:-mx-10 px-5 md:px-10 transition-colors">
-                <p className="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] font-bold w-36 shrink-0">{v.cat}</p>
+                <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.2em] font-bold w-36 shrink-0">{v.cat}</p>
                 <p className="text-zinc-300 text-sm font-medium flex-1">{v.venues}</p>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider shrink-0">{v.note}</p>
               </div>
@@ -347,7 +347,7 @@ export default function AboutPage() {
           ))}
         </div>
         <Reveal delay={0.3}>
-          <p className="text-[#D4AF37] text-xs font-bold uppercase tracking-widest mt-8">
+          <p className="text-[#B5952F] text-xs font-bold uppercase tracking-widest mt-8">
             Know your venue is on this list? Then I already know the drill.
           </p>
         </Reveal>
@@ -369,7 +369,7 @@ export default function AboutPage() {
               { name: "Google Reviews", href: "https://share.google/pMZGzEGOhXnJpLq5g" },
             ].map((p) => (
               <Link key={p.name} href={p.href} target="_blank" rel="noopener noreferrer"
-                className="text-zinc-500 text-xs font-medium hover:text-[#D4AF37] transition-colors uppercase tracking-wider">
+                className="text-zinc-500 text-xs font-medium hover:text-[#B5952F] transition-colors uppercase tracking-wider">
                 {p.name}
               </Link>
             ))}
@@ -387,7 +387,7 @@ export default function AboutPage() {
           <Image
             src="/service-corporate.webp"
             alt=""
-            fill quality={100}
+            fill
             className="object-cover opacity-10 grayscale"
             sizes="100vw"
             aria-hidden="true"
@@ -405,7 +405,7 @@ export default function AboutPage() {
               When you hand me the mic, you aren&apos;t just hiring a vendor. You are handing over the responsibility of your guests&apos; experience — the night they will talk about for years. I take that seriously. You enjoy the moment. I handle everything else.
             </p>
             {/* Handwritten-style signature */}
-            <p className="serif text-4xl md:text-6xl font-black italic text-[#D4AF37]/75 mb-12 tracking-tight">
+            <p className="serif text-4xl md:text-6xl font-black italic text-[#B5952F]/75 mb-12 tracking-tight">
               Yash Soni
             </p>
             {/* Single, final CTA */}
@@ -425,7 +425,7 @@ export default function AboutPage() {
       ══════════════════════════════════════ */}
       <div className="border-t border-white/5 px-5 md:px-10 py-8">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
-          <Link href="/" className="text-zinc-600 text-[10px] uppercase tracking-widest hover:text-[#D4AF37] transition-colors">
+          <Link href="/" className="text-zinc-600 text-[10px] uppercase tracking-widest hover:text-[#B5952F] transition-colors">
             ← Back to Home
           </Link>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
@@ -436,7 +436,7 @@ export default function AboutPage() {
               ["Corporate Events", "/corporate-event-anchor-jaipur"],
               ["Contact", "/contact"],
             ].map(([label, href]) => (
-              <Link key={href} href={href} className="text-zinc-600 text-[10px] uppercase tracking-widest hover:text-[#D4AF37] transition-colors">
+              <Link key={href} href={href} className="text-zinc-600 text-[10px] uppercase tracking-widest hover:text-[#B5952F] transition-colors">
                 {label}
               </Link>
             ))}

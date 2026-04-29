@@ -185,10 +185,10 @@ const FAQItem = ({ question, answer, id }) => {
         className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#B5952F]" : "text-zinc-200 group-hover:text-white"
         }`}>{question}</span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 mt-0.5 ${
-          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#B5952F]"
         }`}>
           {isOpen ? <Minus size={14} aria-hidden="true" /> : <Plus size={14} aria-hidden="true" />}
         </div>
@@ -231,7 +231,7 @@ export default function TeamBuildingHost() {
       {/* BREADCRUMB — sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
-        <Link href="/best-anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
+        <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
         <span>Team Building Host Jaipur</span>
       </nav>
       {/* ══════════════════════════════════════
@@ -244,7 +244,7 @@ export default function TeamBuildingHost() {
           <Image
             src="/service-corporate.webp"
             alt="Corporate team building host Jaipur — Anchor Yash Soni"
-            fill priority quality={100}
+            fill priority
             className="object-cover opacity-40 grayscale"
             sizes="100vw"
           />
@@ -252,8 +252,8 @@ export default function TeamBuildingHost() {
         <div className="relative z-20 container mx-auto px-5 md:px-10 text-center">
           <Reveal>
             <div className="inline-flex items-center gap-2 border border-[#D4AF37]/30 px-5 py-2 rounded-full bg-[#D4AF37]/10 backdrop-blur-md mb-8">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold">
+              <Sparkles className="w-3.5 h-3.5 text-[#B5952F]" />
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Team Building Host · Jaipur
               </span>
             </div>
@@ -274,7 +274,7 @@ export default function TeamBuildingHost() {
                 </button>
               </Link>
               <Link href="/corporate-event-anchor-jaipur" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
+                <button className="w-full sm:w-auto px-10 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all">
                   Corporate Events →
                 </button>
               </Link>
@@ -291,7 +291,7 @@ export default function TeamBuildingHost() {
             {STATS.map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div className="text-center py-10 md:py-14 px-3">
-                  <s.icon size={20} className="mx-auto mb-3 text-[#D4AF37]" />
+                  <s.icon size={20} className="mx-auto mb-3 text-[#B5952F]" />
                   <div className="text-4xl md:text-5xl font-black mb-1"><G>{s.val}</G></div>
                   <div className="text-zinc-500 text-[10px] uppercase tracking-widest">{s.label}</div>
                 </div>
@@ -306,7 +306,7 @@ export default function TeamBuildingHost() {
       <section className="py-16 md:py-24 bg-zinc-950 border-b border-white/5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-4 font-bold">More Than Just Games</p>
+            <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-4 font-bold">More Than Just Games</p>
             <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">
               Bonding Happens Best When People<br /><G>Forget They&apos;re at Work.</G>
             </h2>
@@ -314,7 +314,7 @@ export default function TeamBuildingHost() {
               In corporate Jaipur, &ldquo;team building&rdquo; has a reputation for being awkward — forced trust falls, painfully slow ice-breakers, and an HR manager who also looks like they&apos;d rather be somewhere else.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light max-w-2xl mx-auto">
-              With <strong className="text-white">70+ national brands</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni creates the atmosphere of <strong className="text-[#D4AF37]">psychological safety</strong> where the intern feels comfortable high-fiving the CEO — not because they were told to, but because the energy of the room made it natural.
+              With <strong className="text-white">70+ national brands</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni creates the atmosphere of <strong className="text-[#B5952F]">psychological safety</strong> where the intern feels comfortable high-fiving the CEO — not because they were told to, but because the energy of the room made it natural.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed font-light max-w-2xl mx-auto">
               From 60-minute Fun Friday sessions at Jaipur&apos;s IT parks in Malviya Nagar and Sitapura, to full-day residential offsites at Aravalli resort properties near Ajmer Road, to Annual Day productions for 600+ employees at JECC Sitapura — every format is a different discipline, and every one has been mastered.
@@ -329,7 +329,7 @@ export default function TeamBuildingHost() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <Reveal>
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold block mb-4">The Strategy</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold block mb-4">The Strategy</span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black">
                 Engagement <G>Modules.</G>
               </h2>
@@ -339,10 +339,10 @@ export default function TeamBuildingHost() {
             {MODULES.map((m, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <div className="h-full flex flex-col p-7 bg-zinc-900/50 border border-white/8 rounded-3xl hover:border-[#D4AF37]/50 transition-all duration-400 group">
-                  <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-2xl flex items-center justify-center mb-6 text-[#D4AF37] group-hover:scale-110 transition-transform shrink-0">
+                  <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-2xl flex items-center justify-center mb-6 text-[#B5952F] group-hover:scale-110 transition-transform shrink-0">
                     <m.icon className="w-7 h-7" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-white group-hover:text-[#D4AF37] transition-colors">{m.title}</h3>
+                  <h3 className="text-lg font-bold mb-3 text-white group-hover:text-[#B5952F] transition-colors">{m.title}</h3>
                   <p className="text-zinc-400 text-xs leading-relaxed font-light">{m.desc}</p>
                 </div>
               </Reveal>
@@ -357,7 +357,7 @@ export default function TeamBuildingHost() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <Reveal>
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold block mb-4">The Fun Menu</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold block mb-4">The Fun Menu</span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black">
                 Popular <G>Activities.</G>
               </h2>
@@ -367,8 +367,8 @@ export default function TeamBuildingHost() {
             {ACTIVITIES.map((a, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div className="h-full flex flex-col p-7 bg-black border border-white/8 rounded-2xl hover:border-[#D4AF37]/30 transition-all duration-400 hover:-translate-y-1 group">
-                  <h3 className="text-lg font-bold mb-3 flex items-center gap-3 group-hover:text-[#D4AF37] transition-colors">
-                    <Zap className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                  <h3 className="text-lg font-bold mb-3 flex items-center gap-3 group-hover:text-[#B5952F] transition-colors">
+                    <Zap className="w-4 h-4 text-[#B5952F] shrink-0" />
                     {a.title}
                   </h3>
                   <p className="text-zinc-400 text-xs leading-relaxed font-light">{a.desc}</p>
@@ -385,7 +385,7 @@ export default function TeamBuildingHost() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold block mb-4">Jaipur Coverage</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold block mb-4">Jaipur Coverage</span>
               <h2 className="text-3xl md:text-4xl font-black">
                 Team Building Across <G>All Jaipur Zones.</G>
               </h2>
@@ -421,10 +421,10 @@ export default function TeamBuildingHost() {
               <Reveal key={i} delay={i * 0.07}>
                 <div className="border border-white/10 rounded-2xl p-6 hover:border-[#D4AF37]/40 transition-all group bg-zinc-900/20 hover:bg-zinc-900/50">
                   <div className="flex items-start gap-3 mb-3">
-                    <MapPin size={15} className="text-[#D4AF37] mt-0.5 shrink-0" />
+                    <MapPin size={15} className="text-[#B5952F] mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold mb-0.5">{loc.type}</p>
-                      <p className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors">{loc.zone}</p>
+                      <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-0.5">{loc.type}</p>
+                      <p className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">{loc.zone}</p>
                     </div>
                   </div>
                   <p className="text-zinc-500 text-xs leading-relaxed ml-6 mb-3">{loc.desc}</p>
@@ -446,7 +446,7 @@ export default function TeamBuildingHost() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10">
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-widest font-bold block mb-2">4.9★ Verified Reviews</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold block mb-2">4.9★ Verified Reviews</span>
               <h2 className="text-2xl md:text-3xl font-bold">What Corporate Teams Say.</h2>
             </div>
           </Reveal>
@@ -456,13 +456,13 @@ export default function TeamBuildingHost() {
                 <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
                   className="flex flex-col h-full border border-white/10 rounded-2xl p-6 hover:border-[#D4AF37]/40 transition-all bg-zinc-900/20 hover:bg-zinc-900/50 group cursor-pointer">
                   <div className="flex gap-0.5 mb-3">
-                    {[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]" />)}
+                    {[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />)}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
-                    <p className="text-[#D4AF37] text-[10px] uppercase tracking-wider mt-0.5">{t.size}</p>
+                    <p className="text-[#B5952F] text-[10px] uppercase tracking-wider mt-0.5">{t.size}</p>
                   </div>
                 </a>
               </Reveal>
@@ -498,7 +498,7 @@ export default function TeamBuildingHost() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2 font-bold">All Services</p>
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-2 font-bold">All Services</p>
               <h2 className="text-2xl md:text-3xl font-bold">One Anchor. <G>Every Format.</G></h2>
             </div>
           </Reveal>
@@ -507,8 +507,8 @@ export default function TeamBuildingHost() {
               <Reveal key={i} delay={i * 0.06}>
                 <Link href={r.href}>
                   <div className="border border-white/10 rounded-2xl p-5 text-center hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-zinc-900/20 hover:bg-zinc-900/50">
-                    <r.icon size={18} className="text-[#D4AF37] mx-auto mb-2" />
-                    <p className="text-white text-sm font-semibold group-hover:text-[#D4AF37] transition-colors">{r.label}</p>
+                    <r.icon size={18} className="text-[#B5952F] mx-auto mb-2" />
+                    <p className="text-white text-sm font-semibold group-hover:text-[#B5952F] transition-colors">{r.label}</p>
                     <p className="text-zinc-600 text-[10px] mt-1">{r.desc}</p>
                   </div>
                 </Link>
@@ -541,11 +541,11 @@ export default function TeamBuildingHost() {
             </Link>
             {/* Footer links */}
             <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Corporate Events</Link>
-              <Link href="/celebrity-public-events-host" className="hover:text-[#D4AF37] transition-colors">Celebrity Events</Link>
-              <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>
-              <Link href="/anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Anchor Jaipur</Link>
-              <Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link>
+              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Corporate Events</Link>
+              <Link href="/celebrity-public-events-host" className="hover:text-[#B5952F] transition-colors">Celebrity Events</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Best Anchor Jaipur</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Anchor Jaipur</Link>
+              <Link href="/contact" className="hover:text-[#B5952F] transition-colors">Contact</Link>
             </div>
           </Reveal>
         </div>

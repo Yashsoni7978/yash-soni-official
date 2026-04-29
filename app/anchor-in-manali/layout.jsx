@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-manali/layout.jsx
 // Ultra-Luxury Alpine Resort & Punjabi Heritage Destination Anchor Layout
 

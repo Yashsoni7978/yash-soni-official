@@ -134,7 +134,7 @@ export default function Portfolio() {
       {/* --- HEADER --- */}
       <div className="container mx-auto px-4 mb-20 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <p className="text-[#D4AF37] text-xs uppercase tracking-[0.4em] mb-4 font-bold">Selected Works</p>
+          <p className="text-[#B5952F] text-xs uppercase tracking-[0.4em] mb-4 font-bold">Selected Works</p>
           <h1 className="text-6xl md:text-8xl font-display font-black mb-8 leading-tight">
             The <GoldTextureText>Showreel</GoldTextureText>
           </h1>
@@ -189,7 +189,7 @@ export default function Portfolio() {
                       {/* Badges */}
                       <div className="absolute top-4 left-4 z-20">
                          {item.type === "video" ? (
-                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-colors">
+                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-[#D4AF37] group-hover:text-[#B5952F] transition-colors">
                              <Play className="w-4 h-4 fill-current" />
                            </div>
                          ) : (
@@ -202,19 +202,19 @@ export default function Portfolio() {
                     {/* Dark Overlay with Content */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                       <div className="transform md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300">
-                        <p className="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] mb-2 font-bold drop-shadow-md">
+                        <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.2em] mb-2 font-bold drop-shadow-md">
                           {item.category}
                         </p>
                         <h3 className="text-2xl font-display font-bold text-white mb-2 leading-tight">{item.title}</h3>
                         <div className="flex items-center gap-2 text-gray-300 text-xs mb-3 font-medium">
-                          <MapPin className="w-3 h-3 text-[#D4AF37]" /> {item.venue}
+                          <MapPin className="w-3 h-3 text-[#B5952F]" /> {item.venue}
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed border-l-2 border-[#D4AF37] pl-3 mb-5 font-light">
                           {item.desc}
                         </p>
                         <div className="flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-widest group/link">
                           {item.type === "video" ? "Watch on YouTube" : "View on Instagram"} 
-                          <ArrowUpRight className="w-3 h-3 text-[#D4AF37] group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                          <ArrowUpRight className="w-3 h-3 text-[#B5952F] group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
                         </div>
                       </div>
                     </div>

@@ -108,7 +108,7 @@ A: No. Hotel venue teams manage the property's operational logistics (setup, cat
 A: In total, yes — typically 20-35% cheaper when you account for the outsider's travel costs and the vendor premium markup on every line item. However, the fee structure of the planner themselves may be similar. The savings come from the vendor cost differentials, not necessarily from the planner's professional fee.
 
 **Q: What should we look for when evaluating a Jaipur event management company?**
-A: Portfolio of events at the specific venues you are considering, demonstrable vendor relationships, transparency about their fee structure versus vendor costs, clear references from previous NRI or metro clients, and a clear [event anchor](https://yashsoni.in/best-anchor-in-jaipur) recommendation they have worked with before.
+A: Portfolio of events at the specific venues you are considering, demonstrable vendor relationships, transparency about their fee structure versus vendor costs, clear references from previous NRI or metro clients, and a clear [event anchor](https://yashsoni.in/anchor-in-jaipur) recommendation they have worked with before.
 
 ---
 

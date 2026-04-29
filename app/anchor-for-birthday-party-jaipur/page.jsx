@@ -65,7 +65,7 @@ const FAQItem = ({ q, a, id }) => {
       className={`rounded-2xl border transition-all duration-300 ${open ? "border-[#D4AF37]/60 bg-[#D4AF37]/5" : "border-white/10 hover:border-white/20"}`}>
       <button onClick={() => setOpen(o=>!o)} aria-expanded={open} aria-controls={id}
         className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none">
-        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${open ? "text-[#D4AF37]" : "text-zinc-200 hover:text-white"}`}>{q}</span>
+        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${open ? "text-[#B5952F]" : "text-zinc-200 hover:text-white"}`}>{q}</span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all mt-0.5 ${open ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white"}`}>
           {open ? <Minus size={13}/> : <Plus size={13}/>}
         </div>
@@ -241,15 +241,15 @@ export default function BirthdayAnchorJaipur() {
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24">
         <div className="absolute inset-0">
           <Image src="/gallery-1.webp" alt="Birthday party anchor Jaipur — Yash Soni high energy crowd"
-            fill priority quality={100} className="object-cover" sizes="100vw"
+            fill priority className="object-cover" sizes="100vw"
             style={{ filter:"grayscale(15%)", opacity:.4 }}/>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"/>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
           <motion.div initial={{ opacity:0, y:32 }} animate={{ opacity:1, y:0 }} transition={{ duration:1 }}>
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/40 px-5 py-2 rounded-full bg-black/40 backdrop-blur-sm mb-7">
-              <Cake size={12} className="text-[#D4AF37]"/>
-              <span className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-[.3em]">Birthday Party Anchor · Jaipur</span>
+              <Cake size={12} className="text-[#B5952F]"/>
+              <span className="text-[#B5952F] text-[9px] font-bold uppercase tracking-[.3em]">Birthday Party Anchor · Jaipur</span>
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-black leading-[.88] tracking-tighter uppercase mb-7">
               The Anchor Who<br/>Makes <G>Birthdays</G><br/>Legendary.
@@ -268,7 +268,7 @@ export default function BirthdayAnchorJaipur() {
                   </button>
                 </Link>
                 <Link href="/anchor-in-jaipur">
-                  <button className="px-7 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition-all">
+                  <button className="px-7 py-4 border border-white/20 text-zinc-300 text-sm rounded-full hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all">
                     All Events →
                   </button>
                 </Link>
@@ -286,7 +286,7 @@ export default function BirthdayAnchorJaipur() {
             {STATS.map((s,i) => (
               <Reveal key={i} delay={i*.07}>
                 <div className="text-center py-10 md:py-14 border-r border-white/5 last:border-r-0">
-                  <s.icon size={16} className="text-[#D4AF37] mx-auto mb-3 opacity-60"/>
+                  <s.icon size={16} className="text-[#B5952F] mx-auto mb-3 opacity-60"/>
                   <div className="text-4xl md:text-5xl font-black mb-1 gs">
                     <Counter target={s.val} suffix={s.suffix}/>
                   </div>
@@ -304,7 +304,7 @@ export default function BirthdayAnchorJaipur() {
       <section className="py-16 md:py-24 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Problem</p>
+            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Problem</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">
               Most Birthday<br/>Parties Are <G>Boring.</G>
             </h2>
@@ -315,17 +315,17 @@ export default function BirthdayAnchorJaipur() {
               A birthday happens once a year. A milestone birthday — a 25th, a 50th — happens once in a lifetime. The anchor is the single person who controls whether the evening feels like a curated, emotional, energetic celebration or a forgettable function with music.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              The right anchor doesn't just fill time between cake and dancing. The right anchor <em className="text-[#D4AF37]">makes the birthday</em>.
+              The right anchor doesn't just fill time between cake and dancing. The right anchor <em className="text-[#B5952F]">makes the birthday</em>.
             </p>
           </Reveal>
           <Reveal delay={.1}>
             <div className="img-h relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#D4AF37]/20">
               <Image src="/gallery-2.webp" alt="Birthday party anchor Jaipur energetic crowd engagement"
-                fill quality={100} className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
+                fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
                 style={{ filter:"grayscale(10%)" }}/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
-                <p className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest mb-1">Live · Unscripted · Personalised</p>
+                <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Live · Unscripted · Personalised</p>
                 <p className="text-white text-xs">Custom built for every birthday. Never the same show twice.</p>
               </div>
             </div>
@@ -339,7 +339,7 @@ export default function BirthdayAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-4">Every Format</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-4">Every Format</p>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
                 Whichever Birthday It Is, <G>There's a Format.</G>
               </h2>
@@ -352,12 +352,12 @@ export default function BirthdayAnchorJaipur() {
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"/>
                   <div className="flex items-center gap-3 mb-5">
                     <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center group-hover:bg-[#D4AF37] transition-all">
-                      <p.icon size={16} className="text-[#D4AF37] group-hover:text-black transition-colors"/>
+                      <p.icon size={16} className="text-[#B5952F] group-hover:text-black transition-colors"/>
                     </div>
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-[#D4AF37]/70 border border-[#D4AF37]/20 px-2.5 py-1 rounded-full">{p.tag}</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-[#B5952F]/70 border border-[#D4AF37]/20 px-2.5 py-1 rounded-full">{p.tag}</span>
                   </div>
-                  <h3 className="text-lg font-black text-white uppercase tracking-tight mb-1 group-hover:text-[#D4AF37] transition-colors">{p.title}</h3>
-                  <p className="text-[#D4AF37]/50 text-[9px] font-bold uppercase tracking-widest mb-4">{p.sub}</p>
+                  <h3 className="text-lg font-black text-white uppercase tracking-tight mb-1 group-hover:text-[#B5952F] transition-colors">{p.title}</h3>
+                  <p className="text-[#B5952F]/50 text-[9px] font-bold uppercase tracking-widest mb-4">{p.sub}</p>
                   <p className="text-zinc-400 text-xs leading-relaxed">{p.desc}</p>
                 </div>
               </Reveal>
@@ -373,10 +373,10 @@ export default function BirthdayAnchorJaipur() {
           <Reveal>
             <div className="flex justify-between items-end flex-wrap gap-4 mb-10">
               <div>
-                <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Visual Proof</p>
+                <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Visual Proof</p>
                 <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">Real <G>Birthday Events.</G></h2>
               </div>
-              <Link href="/portfolio"><span className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 cursor-pointer">View Portfolio →</span></Link>
+              <Link href="/portfolio"><span className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 cursor-pointer">View Portfolio →</span></Link>
             </div>
           </Reveal>
           <div className="grid grid-cols-3 gap-3 auto-rows-[160px] md:auto-rows-[200px]">
@@ -389,7 +389,7 @@ export default function BirthdayAnchorJaipur() {
             ].map((img, i) => (
               <Reveal key={i} delay={i*.05}>
                 <div className={`img-h relative overflow-hidden rounded-xl border border-white/8 hover:border-[#D4AF37]/40 transition-all ${img.span||""}`}>
-                  <Image src={img.src} alt={img.alt} fill quality={100} className="object-cover"
+                  <Image src={img.src} alt={img.alt} fill className="object-cover"
                     style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
                 </div>
@@ -405,7 +405,7 @@ export default function BirthdayAnchorJaipur() {
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Standard</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-4">The Standard</p>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
                 Standard Anchor vs <G>This One.</G>
               </h2>
@@ -416,7 +416,7 @@ export default function BirthdayAnchorJaipur() {
               <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">What you usually get</p>
             </div>
             <div className="bg-zinc-900/50 px-6 py-4 border-b border-white/5">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">What you get here</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">What you get here</p>
             </div>
             {VS.map((row, i) => (
               <>
@@ -425,7 +425,7 @@ export default function BirthdayAnchorJaipur() {
                   <p className="text-zinc-500 text-sm">{row.problem}</p>
                 </div>
                 <div key={`f${i}`} className="bg-zinc-900/30 px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3">
-                  <CheckCircle2 size={14} className="text-[#D4AF37] shrink-0"/>
+                  <CheckCircle2 size={14} className="text-[#B5952F] shrink-0"/>
                   <p className="text-zinc-200 text-sm font-medium">{row.fix}</p>
                 </div>
               </>
@@ -440,14 +440,14 @@ export default function BirthdayAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Venue Expertise</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Venue Expertise</p>
               <h2 className="text-2xl md:text-3xl font-black uppercase">Birthday Venues Across <G>Jaipur.</G></h2>
             </div>
           </Reveal>
           <div className="flex flex-wrap justify-center gap-2">
             {VENUES.map((v, i) => (
               <Reveal key={i} delay={i*.03}>
-                <span className="text-[10px] font-medium uppercase tracking-widest border border-white/10 hover:border-[#D4AF37]/40 px-4 py-2 rounded-full text-zinc-400 hover:text-[#D4AF37] transition-all cursor-default">
+                <span className="text-[10px] font-medium uppercase tracking-widest border border-white/10 hover:border-[#D4AF37]/40 px-4 py-2 rounded-full text-zinc-400 hover:text-[#B5952F] transition-all cursor-default">
                   {v}
                 </span>
               </Reveal>
@@ -462,7 +462,7 @@ export default function BirthdayAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">4.9★ Verified</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">4.9★ Verified</p>
               <h2 className="text-3xl md:text-4xl font-black uppercase">What Families <G>Remember.</G></h2>
             </div>
           </Reveal>
@@ -472,11 +472,11 @@ export default function BirthdayAnchorJaipur() {
                 <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
                   className="flex flex-col h-full border border-white/10 hover:border-[#D4AF37]/40 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
                   <div className="flex gap-0.5 mb-4">
-                    {[...Array(t.rating)].map((_,j) => <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]"/>)}
+                    {[...Array(t.rating)].map((_,j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]"/>)}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -509,7 +509,7 @@ export default function BirthdayAnchorJaipur() {
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Planning FAQs</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-3">Planning FAQs</p>
               <h2 className="text-3xl md:text-4xl font-black uppercase">Birthday Anchor <G>Jaipur FAQ.</G></h2>
             </div>
           </Reveal>
@@ -529,7 +529,7 @@ export default function BirthdayAnchorJaipur() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[.3em] mb-2">All Services</p>
+              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[.3em] mb-2">All Services</p>
               <h2 className="text-2xl md:text-3xl font-bold">Birthdays Are One Format. <G>We Do Them All.</G></h2>
             </div>
           </Reveal>
@@ -538,8 +538,8 @@ export default function BirthdayAnchorJaipur() {
               <Reveal key={i} delay={i*.04}>
                 <Link href={r.href}>
                   <div className="border border-white/10 hover:border-[#D4AF37]/50 rounded-2xl p-4 text-center transition-all group cursor-pointer hover:bg-zinc-900/50">
-                    <r.icon size={16} className="text-[#D4AF37] mx-auto mb-2"/>
-                    <p className="text-white text-xs font-semibold group-hover:text-[#D4AF37] transition-colors">{r.label}</p>
+                    <r.icon size={16} className="text-[#B5952F] mx-auto mb-2"/>
+                    <p className="text-white text-xs font-semibold group-hover:text-[#B5952F] transition-colors">{r.label}</p>
                     <p className="text-zinc-600 text-[9px] mt-0.5">{r.desc}</p>
                   </div>
                 </Link>
@@ -558,7 +558,7 @@ export default function BirthdayAnchorJaipur() {
         </div>
         <div className="relative z-10 max-w-lg mx-auto">
           <Reveal>
-            <Cake size={24} className="text-[#D4AF37] mx-auto mb-6 opacity-60"/>
+            <Cake size={24} className="text-[#B5952F] mx-auto mb-6 opacity-60"/>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-5 leading-[.9]">
               Let&apos;s Make This<br/><G>Birthday Legendary.</G>
             </h2>
@@ -578,7 +578,7 @@ export default function BirthdayAnchorJaipur() {
                 ["/anchor-in-jaipur","Anchor in Jaipur"],
                 ["/contact","Contact"],
               ].map(([h,l]) => (
-                <Link key={h} href={h}><span className="hover:text-[#D4AF37] transition-colors">{l}</span></Link>
+                <Link key={h} href={h}><span className="hover:text-[#B5952F] transition-colors">{l}</span></Link>
               ))}
             </div>
           </Reveal>

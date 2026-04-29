@@ -54,7 +54,7 @@ If you hire a standard local announcer, they will speak entirely in Hindi, leavi
 
 This is exactly why a **Professional Bilingual Wedding Anchor from Jaipur** becomes your most critical investment.
 
-As a [professional anchor in Jaipur](https://yashsoni.in/best-anchor-in-jaipur), my primary job at an NRI wedding is cultural translation and emotional bridging:
+As a [professional anchor in Jaipur](https://yashsoni.in/anchor-in-jaipur), my primary job at an NRI wedding is cultural translation and emotional bridging:
 *   When the bride's American friends perform a Bollywood dance, I hype them up in sharp English, then translate their effort and dedication to the Hindi-speaking elders in the audience.
 *   During the deeply emotional [Bidaai and Varmala ceremonies](https://yashsoni.in/wedding-anchor-jaipur), I explain the ancient spiritual significance of each Hindu ritual in modern, accessible English so that your international guests understand the gravity of the moment — rather than passively observing a ritual that means nothing to them.
 *   I act as the Master of Ceremonies, guiding a diverse crowd seamlessly between the traditions of the homeland and the modern, cosmopolitan vibe the couple represents.
@@ -91,7 +91,7 @@ Here is the non-negotiable vendor checklist for a flawless NRI destination weddi
 
 *   ✅ **Venue:** Confirm noise restriction timings before depositing.
 *   ✅ **[Wedding Planner](https://yashsoni.in/event-planning-jaipur):** Must have NRI wedding experience specifically.
-*   ✅ **[Bilingual Wedding Anchor](https://yashsoni.in/best-anchor-in-jaipur):** Not negotiable. The most important hire after the venue.
+*   ✅ **[Bilingual Wedding Anchor](https://yashsoni.in/anchor-in-jaipur):** Not negotiable. The most important hire after the venue.
 *   ✅ **Hospitality Manager:** Dedicated person for international guest liaison.
 *   ✅ **Photographer + Videographer:** Must be able to shoot in low lighting (evening events).
 *   ✅ **Local DJ:** Already knows the venue acoustics.
@@ -139,7 +139,7 @@ Ready to start planning your Rajasthan destination wedding? I specialize in brid
     content: `
 I receive this exact phone call at least three times a week from couples planning their [weddings and Sangeet nights in Jaipur](https://yashsoni.in/sangeet-anchor-jaipur):
 
-*"Hi Yash, we are finalizing our wedding budget. We already have a great DJ in Jaipur who said he can use the microphone to make announcements. Do we really need to hire you as a separate [professional wedding anchor](https://yashsoni.in/best-anchor-in-jaipur)?"*
+*"Hi Yash, we are finalizing our wedding budget. We already have a great DJ in Jaipur who said he can use the microphone to make announcements. Do we really need to hire you as a separate [professional wedding anchor](https://yashsoni.in/anchor-in-jaipur)?"*
 
 It is a completely valid question. Weddings in [Jaipur, Udaipur](https://yashsoni.in/anchor-in-udaipur), and Rajasthan are expensive. Finding ways to cut costs is essential. Planners and couples look at the DJ holding a microphone and think, "They both talk to the crowd, right? It is basically the same job."
 
@@ -181,7 +181,7 @@ The bride's makeup artist takes 20 minutes longer than planned. The father-of-th
 
 What does a DJ do during a massive dead gap in the schedule? Nothing. They wait in the booth. The crowd feels the heavy, awkward silence. People start checking their phones. The magic of the night immediately evaporates.
 
-What does a [professional event anchor](https://yashsoni.in/best-anchor-in-jaipur) do? **We thrive specifically in the gaps.**
+What does a [professional event anchor](https://yashsoni.in/anchor-in-jaipur) do? **We thrive specifically in the gaps.**
 
 If I receive a quiet cue from your [event planner](https://yashsoni.in/event-management-jaipur) that the couple's entry is delayed by 15 minutes, your audience will never know there is a delay. I will instantly pivot into an impromptu couple-trivia game, pulling family members on stage. By the time the couple finally arrives, the crowd is not tired from waiting — they are electric with anticipation.
 
@@ -201,7 +201,7 @@ A professional [Sangeet anchor](https://yashsoni.in/sangeet-anchor-jaipur) manag
 
 ### 6. The Full Day Package vs. The Part-Time DJ
 
-Here is the financial logic that most couples miss: A DJ typically works from 8 PM to 1 AM — five hours. A [professional Jaipur wedding anchor](https://yashsoni.in/best-anchor-in-jaipur) is present from the moment guests begin arriving at 6:30 PM, through the couple's entry, through all 12 family performances, through the dinner service, and through the dance floor opening. That is seven-plus hours of continuous event management.
+Here is the financial logic that most couples miss: A DJ typically works from 8 PM to 1 AM — five hours. A [professional Jaipur wedding anchor](https://yashsoni.in/anchor-in-jaipur) is present from the moment guests begin arriving at 6:30 PM, through the couple's entry, through all 12 family performances, through the dinner service, and through the dance floor opening. That is seven-plus hours of continuous event management.
 
 Per rupee spent, an anchor delivers far more total event value than most couples realize until the event is over.
 

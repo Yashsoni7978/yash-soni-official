@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { FAQItem } from "../_components/InteractiveFAQ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -21,29 +22,7 @@ const staggerContainer = {
   },
 };
 
-const FAQItem = ({ faq, colorClass }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-[#1A1A1A]/10 py-6">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full text-left">
-        <h3 className="font-['The_Seasons'] text-2xl md:text-3xl text-[#1A1A1A] pr-4">{faq.q}</h3>
-        <span className={`text-2xl ${colorClass}`}>{isOpen ? '−' : '+'}</span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }} 
-            animate={{ height: 'auto', opacity: 1 }} 
-            exit={{ height: 0, opacity: 0 }} 
-            className="overflow-hidden"
-          >
-            <p className="font-sans text-gray-600 font-light leading-relaxed mt-4">{faq.a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+
 
 export default function WeddingPlanningJaipur() {
   const containerRef = useRef(null);
@@ -86,7 +65,7 @@ export default function WeddingPlanningJaipur() {
                 fill
                 className="object-cover object-top"
                 priority
-              />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -155,13 +134,13 @@ export default function WeddingPlanningJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/palace_wedding_decor.webp" alt="Wedding Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/palace_wedding_decor.webp" alt="Wedding Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/ivory_hero_wedding_1776853928413.webp" alt="Couple Entry" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/ivory_hero_wedding_1776853928413.webp" alt="Couple Entry" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/traditional_phoolon_ki_chaadar.webp" alt="Traditional Ceremonies" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" />
+              <Image src="/premium_events/traditional_phoolon_ki_chaadar.webp" alt="Traditional Ceremonies" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </motion.div>
           </div>
         </motion.div>
@@ -195,7 +174,7 @@ export default function WeddingPlanningJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Photographers, MUAs, DJs</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Vendors" fill className="object-cover" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Vendors" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -205,7 +184,7 @@ export default function WeddingPlanningJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">RSVPs, Flights & Room Allocation</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Guests" fill className="object-cover" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Guests" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -215,7 +194,7 @@ export default function WeddingPlanningJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">On-ground event running</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Show" fill className="object-cover" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Show" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -225,7 +204,7 @@ export default function WeddingPlanningJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-700">Menu tasting & bar management</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="F&B" fill className="object-cover" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="F&B" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </a>
 
@@ -251,7 +230,7 @@ export default function WeddingPlanningJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-white rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.05)] flex flex-col group hover:-translate-y-2 transition-all duration-500 border border-gray-100">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Logistics" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Logistics" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#1A1A1A] mb-4">Transport & Logistics</h3>
@@ -265,7 +244,7 @@ export default function WeddingPlanningJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(153,27,27,0.15)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#991B1B] to-[#450A0A]">
               <div className="absolute inset-0 opacity-20 bg-[url('/pushkar.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/ivory_hero_wedding_1776853928413.webp" alt="Shadow Service" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/ivory_hero_wedding_1776853928413.webp" alt="Shadow Service" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#FAF9F6] mb-4 flex items-center gap-4">
@@ -308,7 +287,7 @@ export default function WeddingPlanningJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#991B1B] to-[#450A0A] p-8 text-[#FAF9F6] rounded-tl-3xl">
               <div className="absolute inset-0 opacity-20 bg-[url('/pushkar.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">15+</span>
@@ -364,7 +343,7 @@ export default function WeddingPlanningJaipur() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   </div>
                 </div>
               </motion.div>
@@ -400,7 +379,7 @@ export default function WeddingPlanningJaipur() {
             "/premium_events/traditional_phoolon_ki_chaadar.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden">
-              <Image src={img} alt="Gallery" fill className="object-cover" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
           ))}
         </div>
@@ -580,9 +559,12 @@ export default function WeddingPlanningJaipur() {
           <h2 className="font-['The_Seasons'] text-4xl text-[#1A1A1A] mb-12">More Services</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { label: "Destination Planning", url: "/destination-wedding-planner-jaipur" },
+              { label: "Event Planning", url: "/event-planning-jaipur" },
+              { label: "Event Management", url: "/event-management-jaipur" },
               { label: "Wedding Decoration", url: "/wedding-decoration-jaipur" },
+              { label: "Destination Planning", url: "/destination-wedding-planner-jaipur" },
               { label: "Luxury Sourcing", url: "/luxury-wedding-planner-rajasthan" },
+              { label: "Wedding Catering", url: "/wedding-catering-jaipur" },
               { label: "Artist Management", url: "/artist-management-jaipur" }
             ].map((link, i) => (
               <Link key={i} href={link.url} className="font-['Rekalgera'] text-[#1A1A1A] hover:text-[#991B1B] uppercase tracking-widest text-[10px] md:text-xs border border-[#1A1A1A]/10 px-6 py-3 hover:border-[#991B1B] hover:shadow-[0_5px_15px_rgba(153,27,27,0.05)] transition-all duration-300">

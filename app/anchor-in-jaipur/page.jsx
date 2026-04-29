@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Award, Building2, CalendarCheck, Camera, CheckCircle2, Crown, Flower2, Heart, Home, MapPin, Mic, Minus, Music2, Plus, ShieldCheck, Sparkles, Star, UserCheck, Users } from "lucide-react";
+import { ArrowRight, Award, Building2, CalendarCheck, Camera, CheckCircle2, Crown, Flower2, Heart, Home, MapPin, Mic, Minus, Music2, Plus, ShieldCheck, Sparkles, Star, Users } from "lucide-react";
 
 
 
@@ -51,8 +51,8 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
       transition={{ duration: 0.6 }}
     >
       <div className={`flex items-center gap-3 mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}>
-        <Crown className="w-4 h-4 text-[#D4AF37]" />
-        <span className="text-[#D4AF37] text-[10px] uppercase tracking-[0.3em] font-bold">{subtitle}</span>
+        <Crown className="w-4 h-4 text-[#B5952F]" />
+        <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold">{subtitle}</span>
       </div>
       <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">{title}</h2>
     </motion.div>
@@ -106,7 +106,6 @@ const JAIPUR_ZONES = [
     type: "Premium Urban Banquets",
     venues: "Clarks Amer · Trident · Premium banquet halls",
     desc: "Jaipur's premium urban banquet corridor. Milestone birthdays, anniversary galas, corporate cocktail evenings, and VIP private events for the city's top families.",
-    href: "/anchor-in-jaipur",
     keywords: ["anchor mansarovar jaipur", "event host civil lines jaipur"],
   },
   {
@@ -114,7 +113,6 @@ const JAIPUR_ZONES = [
     type: "VIP Social & Birthday Events",
     venues: "5-star hotels, premium private venues",
     desc: "Jaipur's urban elite circuit. High-net-worth milestone celebrations, luxury brand events, and intimate VIP socials where understated authority is the standard.",
-    href: "/anchor-in-jaipur",
     keywords: ["anchor vaishali nagar jaipur", "anchor c-scheme jaipur"],
   },
   {
@@ -140,7 +138,7 @@ const SERVICES = [
   { icon: Flower2, title: "Haldi Anchor Jaipur", desc: "100% family-friendly games, viral moments, zero boring gaps.", img: "/gallery-2.webp", href: "/haldi-anchor-jaipur" },
   { icon: Sparkles, title: "Mehendi Host Jaipur", desc: "Musical games, couple trivia, crowd engagement throughout.", img: "/gallery-3.webp", href: "/mehendi-anchor-jaipur" },
   { icon: Building2, title: "Corporate Anchor Jaipur", desc: "Award nights, product launches, JECC Sitapura galas.", img: "/service-corporate.webp", href: "/corporate-event-anchor-jaipur" },
-  { icon: Star, title: "Birthday Anchor Jaipur", desc: "Milestone birthdays, VIP galas in Mansarovar & Vaishali Nagar.", img: "/gallery-4.webp", href: "/anchor-in-jaipur" },
+  { icon: Star, title: "Birthday Anchor Jaipur", desc: "Milestone birthdays, VIP galas in Mansarovar & Vaishali Nagar.", img: "/gallery-4.webp" },
 ];
 const TESTIMONIALS = [
   {
@@ -181,6 +179,9 @@ const NEARBY_CITIES = [
   { city: "Ooty", note: "Nilgiri heights", href: "/anchor-in-ooty" },
   { city: "Jodhpur", note: "Blue city hub", href: "/anchor-in-jodhpur" },
   { city: "Jaisalmer", note: "Desert specialist", href: "/anchor-in-jaisalmer" },
+  { city: "Dharamshala", note: "Hill retreats", href: "/anchor-in-dharamshala" },
+  { city: "Haridwar", note: "Spiritual events", href: "/anchor-in-haridwar" },
+  { city: "Nainital", note: "Lakeside luxury", href: "/anchor-in-nainital" },
 ];
 const FAQS = [
   {
@@ -242,7 +243,7 @@ const RoyalBenefitCard = ({ icon, title, desc }) => (
       <div className="mb-6 bg-gradient-to-br from-[#D4AF37] to-[#b48f25] w-16 h-16 rounded-2xl flex items-center justify-center text-black shadow-lg group-hover:scale-110 transition-transform">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{title}</h3>
+      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#B5952F] transition-colors">{title}</h3>
       <p className="text-zinc-400 text-sm leading-relaxed">{desc}</p>
     </div>
   </div>
@@ -270,10 +271,10 @@ const FAQItem = ({ question, answer }) => {
         className="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none"
       >
         <span className={`font-semibold text-sm md:text-base pr-4 leading-snug transition-colors ${
-          isOpen ? "text-[#D4AF37]" : "text-zinc-200 group-hover:text-white"
+          isOpen ? "text-[#B5952F]" : "text-zinc-200 group-hover:text-white"
         }`}>{question}</span>
         <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
-          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37]"
+          isOpen ? "bg-[#D4AF37] text-black" : "border border-white/30 text-white group-hover:border-[#D4AF37] group-hover:text-[#B5952F]"
         }`}>
           {isOpen ? <Minus size={14} /> : <Plus size={14} />}
         </div>
@@ -358,7 +359,7 @@ const faqSchema = {
       ══════════════════════════════════════ */}
       <nav className="pt-24 md:pt-28 pb-0 px-5 md:px-10 max-w-7xl mx-auto relative z-10 sr-only">
         <div className="flex items-center gap-2 text-xs text-zinc-600">
-          <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+          <Link href="/" className="hover:text-[#B5952F] transition-colors">Home</Link>
           <span>›</span>
           <span className="text-zinc-400">Anchor in Jaipur</span>
         </div>
@@ -375,8 +376,8 @@ const faqSchema = {
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             {/* Badge — review-based, not "Rated #1" */}
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full bg-black/60 backdrop-blur-xl mb-8 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
-              <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-bold">
+              <Star className="w-4 h-4 text-[#B5952F] fill-[#D4AF37]" />
+              <span className="text-[#B5952F] text-xs uppercase tracking-widest font-bold">
                 4.9★ · 200+ Reviews · Local Jaipur Anchor
               </span>
             </div>
@@ -396,8 +397,8 @@ const faqSchema = {
                   Secure Your Date
                 </button>
               </Link>
-              <Link href="/best-anchor-in-jaipur">
-                <button className="w-full sm:w-auto px-10 py-5 border border-[#D4AF37]/40 text-[#D4AF37] text-sm font-medium uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
+              <Link href="/anchor-in-jaipur">
+                <button className="w-full sm:w-auto px-10 py-5 border border-[#D4AF37]/40 text-[#B5952F] text-sm font-medium uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
                   Why I&apos;m Jaipur&apos;s Most Reviewed
                 </button>
               </Link>
@@ -414,7 +415,7 @@ const faqSchema = {
             {STATS.map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div className="text-center py-10 md:py-14 px-4">
-                  <s.icon size={22} className="mx-auto mb-3 text-[#D4AF37]" />
+                  <s.icon size={22} className="mx-auto mb-3 text-[#B5952F]" />
                   <div className="text-4xl md:text-5xl font-black mb-1"><G>{s.val}</G></div>
                   <div className="text-zinc-400 text-[10px] md:text-xs uppercase tracking-widest font-medium">{s.label}</div>
                 </div>
@@ -428,7 +429,7 @@ const faqSchema = {
           Fixed: no pink border on hover
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 bg-[#0a0a0a] border-b border-[#D4AF37]/15 relative z-10">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#D4AF37]/15">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#B5952F]/15">
           <Crown className="w-20 h-20" />
         </div>
         <div className="container mx-auto px-5 md:px-10 relative z-10">
@@ -494,20 +495,35 @@ const faqSchema = {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {SERVICES.map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
-                <Link href={s.href}>
-                  <div className="relative h-[280px] md:h-[320px] rounded-2xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all cursor-pointer">
-                    <Image src={s.img} alt={`${s.title} — anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+                {s.href ? (
+                  <Link href={s.href}>
+                    <div className="relative h-[280px] md:h-[320px] rounded-2xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all cursor-pointer">
+                      <Image src={s.img} alt={`${s.title} — anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="text-[9px] uppercase tracking-widest bg-[#D4AF37] text-black px-2.5 py-1 rounded-full font-bold">Jaipur</span>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                        <s.icon size={18} className="text-[#B5952F] mb-2" />
+                        <h3 className="text-base md:text-lg font-bold text-white mb-1">{s.title}</h3>
+                        <p className="text-zinc-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">{s.desc}</p>
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="relative h-[280px] md:h-[320px] rounded-2xl overflow-hidden group border border-white/10 transition-all">
+                    <Image src={s.img} alt={`${s.title} — anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover grayscale" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                     <div className="absolute top-4 left-4">
                       <span className="text-[9px] uppercase tracking-widest bg-[#D4AF37] text-black px-2.5 py-1 rounded-full font-bold">Jaipur</span>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <s.icon size={18} className="text-[#D4AF37] mb-2" />
+                      <s.icon size={18} className="text-[#B5952F] mb-2" />
                       <h3 className="text-base md:text-lg font-bold text-white mb-1">{s.title}</h3>
-                      <p className="text-zinc-400 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">{s.desc}</p>
+                      <p className="text-zinc-400 text-xs leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
-                </Link>
+                )}
               </Reveal>
             ))}
           </div>
@@ -526,13 +542,32 @@ const faqSchema = {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {JAIPUR_ZONES.map((z, i) => (
               <Reveal key={i} delay={i * 0.06}>
-                <Link href={z.href}>
-                  <div className="border border-[#D4AF37]/20 rounded-2xl p-6 hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-[#0a0a0a] hover:bg-[#111]">
+                {z.href ? (
+                  <Link href={z.href}>
+                    <div className="border border-[#D4AF37]/20 rounded-2xl p-6 hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-[#0a0a0a] hover:bg-[#111]">
+                      <div className="flex items-start gap-3 mb-3">
+                        <MapPin size={15} className="text-[#B5952F] mt-0.5 shrink-0" />
+                        <div>
+                          <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.2em] font-bold mb-0.5">{z.type}</p>
+                          <p className="text-white font-bold text-base group-hover:text-[#B5952F] transition-colors leading-snug">{z.zone}</p>
+                        </div>
+                      </div>
+                      <p className="text-zinc-400 text-xs leading-relaxed mb-3 ml-6">{z.venues}</p>
+                      <p className="text-zinc-600 text-xs leading-relaxed ml-6">{z.desc}</p>
+                      <div className="flex flex-wrap gap-1.5 mt-3 ml-6">
+                        {z.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-700 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
                     <div className="flex items-start gap-3 mb-3">
-                      <MapPin size={15} className="text-[#D4AF37] mt-0.5 shrink-0" />
+                      <MapPin size={15} className="text-[#B5952F] mt-0.5 shrink-0" />
                       <div>
-                        <p className="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] font-bold mb-0.5">{z.type}</p>
-                        <p className="text-white font-bold text-base group-hover:text-[#D4AF37] transition-colors leading-snug">{z.zone}</p>
+                        <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.2em] font-bold mb-0.5">{z.type}</p>
+                        <p className="text-white font-bold text-base leading-snug">{z.zone}</p>
                       </div>
                     </div>
                     <p className="text-zinc-400 text-xs leading-relaxed mb-3 ml-6">{z.venues}</p>
@@ -543,7 +578,7 @@ const faqSchema = {
                       ))}
                     </div>
                   </div>
-                </Link>
+                )}
               </Reveal>
             ))}
           </div>
@@ -576,13 +611,13 @@ const faqSchema = {
                 <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
                   className="flex flex-col h-full border border-[#D4AF37]/20 rounded-2xl p-6 hover:border-[#D4AF37]/50 transition-all bg-[#0a0a0a] hover:bg-[#0f0f0f] group cursor-pointer">
                   <div className="flex gap-0.5 mb-3">
-                    {[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#D4AF37]" />)}
+                    {[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />)}
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
-                    <p className="text-[#D4AF37] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
+                    <p className="text-[#B5952F] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>
                 </a>
               </Reveal>
@@ -611,7 +646,7 @@ const faqSchema = {
         <div className="container mx-auto px-5 md:px-10">
           <Reveal>
             <div className="text-center mb-8">
-              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2 font-bold">Beyond Jaipur</p>
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-2 font-bold">Beyond Jaipur</p>
               <h2 className="text-2xl md:text-3xl font-black">Anchor Across <G>Rajasthan.</G></h2>
             </div>
           </Reveal>
@@ -620,8 +655,8 @@ const faqSchema = {
               <Reveal key={i} delay={i * 0.06}>
                 <Link href={c.href}>
                   <div className="border border-[#D4AF37]/15 rounded-xl p-4 text-center hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-[#0a0a0a] hover:bg-[#0f0f0f]">
-                    <MapPin size={14} className="text-[#D4AF37] mx-auto mb-2" />
-                    <p className="text-white font-bold text-sm group-hover:text-[#D4AF37] transition-colors">{c.city}</p>
+                    <MapPin size={14} className="text-[#B5952F] mx-auto mb-2" />
+                    <p className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">{c.city}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5 leading-snug">{c.note}</p>
                   </div>
                 </Link>
@@ -642,12 +677,12 @@ const faqSchema = {
         </div>
         <div className="container mx-auto px-5 md:px-10 relative z-10 text-center max-w-2xl">
           <Reveal>
-            <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-6 font-bold">Book the Best Anchor in Jaipur</p>
+            <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-6 font-bold">Book the Best Anchor in Jaipur</p>
             <h2 className="text-4xl md:text-6xl font-black mb-5 tracking-tight leading-[0.95]">
               Hosting an Event <G>in Jaipur?</G>
             </h2>
             <p className="text-zinc-400 text-base mb-3 leading-relaxed">
-              Don&apos;t fly in an outsider. The best anchor in Jaipur is <strong className="text-[#D4AF37]">already here</strong> — locally based, zero travel fees, and booked <strong className="text-[#D4AF37]">6–8 months in advance</strong> for peak season.
+              Don&apos;t fly in an outsider. The best anchor in Jaipur is <strong className="text-[#B5952F]">already here</strong> — locally based, zero travel fees, and booked <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season.
             </p>
             <p className="text-zinc-600 text-sm mb-10">No waitlists. No replacements. One anchor, one event, per date.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
@@ -656,16 +691,16 @@ const faqSchema = {
               </button>
             </Link>
             <p className="text-zinc-700 text-[10px] uppercase tracking-widest mt-5">
-              Best Anchor in Jaipur · <strong className="text-[#D4AF37]">Limited Slots Remaining</strong>
+              Best Anchor in Jaipur · <strong className="text-[#B5952F]">Limited Slots Remaining</strong>
             </p>
             {/* Internal links */}
             <div className="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">
-              <Link href="/best-anchor-in-jaipur" className="hover:text-[#D4AF37] transition-colors">Best Anchor Jaipur</Link>
-              <Link href="/wedding-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Wedding Anchor</Link>
-              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Sangeet Host</Link>
-              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Corporate Events</Link>
-              <Link href="/haldi-anchor-jaipur" className="hover:text-[#D4AF37] transition-colors">Haldi Anchor</Link>
-              <Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link>
+              <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Best Anchor Jaipur</Link>
+              <Link href="/wedding-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Wedding Anchor</Link>
+              <Link href="/sangeet-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Sangeet Host</Link>
+              <Link href="/corporate-event-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Corporate Events</Link>
+              <Link href="/haldi-anchor-jaipur" className="hover:text-[#B5952F] transition-colors">Haldi Anchor</Link>
+              <Link href="/contact" className="hover:text-[#B5952F] transition-colors">Contact</Link>
             </div>
           </Reveal>
         </div>
