@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Theme Wedding Organizer India | Custom Sets & Decor | Anchor Yash Soni",
-  description:
-    "Top theme wedding organizer in India. We design and fabricate immersive 3D sets, royal rajwada themes, and enchanted forest setups for luxury destination weddings.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "theme wedding organizer india",
     "theme wedding planner jaipur",

@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Event Planners in Jaipur | Social & Corporate Events | Anchor Yash Soni",
-  description:
-    "Top event planners in Jaipur. We curate flawless social gatherings, corporate summits, and brand activations with full turnkey management and venue sourcing.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "event planners in jaipur",
     "social event planner rajasthan",

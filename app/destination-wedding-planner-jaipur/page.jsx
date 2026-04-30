@@ -5,6 +5,7 @@ import MotionWrapper from "../_components/MotionWrapper";
 import HeroSlider from "../_components/HeroSlider";
 import { FAQItem } from "../_components/InteractiveFAQ";
 
+
 export default function DestinationWeddingPlannerJaipur() {
   const heroImages = [
     "/premium_events/grand_wedding_venue.webp",

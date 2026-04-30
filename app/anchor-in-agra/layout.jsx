@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Corporate Retreat Anchor Agra",
     "ITC Mughal Wedding Anchor",
   ],
-  description: `Anchor Yash Soni is Agra's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly prestigious, high-net-worth destination weddings across iconic properties like The Oberoi Amarvilas and ITC Mughal. Flawless unscripted bilingual execution honoring deep Mughal heritage and modern VIP standards.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

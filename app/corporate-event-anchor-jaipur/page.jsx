@@ -8,6 +8,7 @@ import { ArrowRight, Award, Building2, CalendarCheck, CheckCircle2, Globe, Heart
 
 
 
+
 // ─────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────
@@ -340,7 +341,7 @@ export default function CorporateAnchor() {
                 Command<br /><B>The Room.</B>
               </h1>
               <p className="text-zinc-400 text-base md:text-xl font-light leading-relaxed max-w-2xl mb-3 border-l-4 border-blue-600 pl-6">
-                When the CEO speaks, the audience should listen. Jaipur&apos;s most reviewed corporate anchor — award nights at JECC Sitapura, summits at Birla Auditorium, product launches at Marriott and Fairmont.
+                When the CEO speaks, the audience should listen. Jaipur's most reviewed corporate anchor — award nights at JECC Sitapura, summits at Birla Auditorium, product launches at Marriott and Fairmont.
               </p>
               <p className="text-zinc-600 text-sm mb-8 pl-6">
                 70+ national brands &nbsp;·&nbsp; 4.9★ across 200+ reviews &nbsp;·&nbsp; Broadcast-ready
@@ -386,7 +387,7 @@ export default function CorporateAnchor() {
           <Reveal>
             <SectionHeading subtitle="The ROI" title="Precision. Authority. Engagement." />
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8 font-light">
-              Corporate events are not about &ldquo;shouting into a mic.&rdquo; They are about <strong className="text-white">brand representation</strong>. Every word, every pause, every transition on that stage either strengthens or weakens your brand&apos;s perception with the room. That responsibility has been handled for <strong className="text-white">70+ national brands</strong> across India.
+              Corporate events are not about &ldquo;shouting into a mic.&rdquo; They are about <strong className="text-white">brand representation</strong>. Every word, every pause, every transition on that stage either strengthens or weakens your brand's perception with the room. That responsibility has been handled for <strong className="text-white">70+ national brands</strong> across India.
             </p>
             <div className="space-y-6">
               {CAPABILITIES.map((c, i) => (
@@ -621,7 +622,7 @@ export default function CorporateAnchor() {
               Ready to <B>Elevate</B><br />Your Event?
             </h2>
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
-              Don&apos;t risk your brand reputation with an amateur. Jaipur&apos;s most reviewed corporate anchor — <strong className="text-blue-400">70+ national brands</strong> have made that call.
+              Don't risk your brand reputation with an amateur. Jaipur's most reviewed corporate anchor — <strong className="text-blue-400">70+ national brands</strong> have made that call.
             </p>
             <p className="text-zinc-600 text-xs mb-8">No waitlist. No replacements. WhatsApp to confirm availability.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">

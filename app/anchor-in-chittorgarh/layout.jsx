@@ -12,7 +12,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
   name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: ["Anchor in Chittorgarh","Wedding Anchor Chittorgarh","Heritage Wedding Host Chittorgarh","Chittorgarh Fort Wedding Anchor","Padmini Palace Event Emcee","Mewar Wedding Anchor","Rajput Honour Wedding Host"],
-  description: `Anchor Yash Soni is Chittorgarh's premier heritage destination wedding anchor — 4.9★ rated, 1,100+ events, 8+ years. Specialist in Rajput honour weddings at Chittorgarh Fort and Padmini Palace. Bilingual Hindi/English, fully unscripted, deeply fluent in Mewar Rajput cultural protocol and heritage ceremony staging.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
   sameAs: ["https://www.instagram.com/yashsoni_official","https://www.youtube.com/@anchorYashSoni"],
   address: { "@type": "PostalAddress", addressLocality: CITY, addressRegion: "Rajasthan", addressCountry: "IN", postalCode: "312001" },

@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Heritage Wedding Emcee NCR",
     "15th Century Fort Event Host",
   ],
-  description: `Anchor Yash Soni is Neemrana's premier luxury wedding and corporate retreat anchor — 4.9★ rated, 1,100+ events. Specialist in navigating the complex acoustics of the 15th-century Neemrana Fort Palace, and executing high-intellect bilingual moderation for Delhi NCR corporate getaways and elite weekend destination weddings.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

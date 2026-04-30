@@ -8,6 +8,7 @@ import { ArrowRight, Award, Building2, Cake, CalendarCheck, CheckCircle2, Chevro
 
 
 
+
 // ─────────────────────────────────────────────
 // CONSTANTS
 // ─────────────────────────────────────────────
@@ -371,7 +372,7 @@ const faqSchema = {
               With <strong className="text-white">1,100+ events hosted across India</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni has earned a reputation that no award can manufacture — only 1,100+ events can build.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              Whether it is a royal Varmala ceremony at a Kukas palace property, a 1,500-guest farmhouse Sangeet on Ajmer Road that needs to stay electric until 4 AM, a national brand&apos;s annual award night at JECC Sitapura, or a milestone birthday gala in Mansarovar — Yash Soni is the anchor Jaipur&apos;s elite families, NRI clients, and national corporations choose when the event cannot afford to be ordinary.
+              Whether it is a royal Varmala ceremony at a Kukas palace property, a 1,500-guest farmhouse Sangeet on Ajmer Road that needs to stay electric until 4 AM, a national brand's annual award night at JECC Sitapura, or a milestone birthday gala in Mansarovar — Yash Soni is the anchor Jaipur's elite families, NRI clients, and national corporations choose when the event cannot afford to be ordinary.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Bilingual Hindi/English. Fluent in Rajasthani culture. Zero paper scripts. <strong className="text-white">The most reviewed anchor in Jaipur.</strong>
@@ -476,7 +477,7 @@ const faqSchema = {
               Experience is good.<br /><G>Relevance is better.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              Jaipur&apos;s event market is saturated with anchors who boast &quot;20 years of experience.&quot; What that means in practice: 20 years of reading from the same paper script while your million-rupee venue decor rots in awkward silence.
+              Jaipur's event market is saturated with anchors who boast "20 years of experience." What that means in practice: 20 years of reading from the same paper script while your million-rupee venue decor rots in awkward silence.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               With a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni has built his reputation the only way that matters — through 1,100+ events where clients kept coming back and guests kept asking for his number.
@@ -610,7 +611,7 @@ const faqSchema = {
             <div className="text-center mb-10 md:mb-14">
               <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2">The Yash Soni Difference</p>
               <h2 className="text-3xl md:text-4xl font-bold">
-                What Makes Him <G>Jaipur&apos;s Most Chosen Anchor.</G>
+                What Makes Him <G>Jaipur's Most Chosen Anchor.</G>
               </h2>
             </div>
           </Reveal>
@@ -760,7 +761,7 @@ const faqSchema = {
               <span className="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">The Final Word</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black mb-5 leading-[0.95]">
-              Your Date<br /><G animate>Won&apos;t Wait.</G>
+              Your Date<br /><G animate>Won't Wait.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               The best anchor in Jaipur books <strong className="text-[#D4AF37]">6–8 months in advance.</strong> No waitlists. No replacements. Every event on the calendar gets complete, undivided presence.

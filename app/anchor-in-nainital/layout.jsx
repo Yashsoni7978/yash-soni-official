@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Corporate Retreat Anchor Nainital",
     "Delhi Elite Wedding Host Nainital",
   ],
-  description: `Anchor Yash Soni is Nainital's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly prestigious, high-net-worth lakeside destination weddings across iconic properties like The Naini Retreat and luxury Bhimtal resorts. Flawless unscripted bilingual moderation executing elite Delhi NCR VIP protocols.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

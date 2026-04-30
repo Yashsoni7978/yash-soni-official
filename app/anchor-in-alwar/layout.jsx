@@ -12,7 +12,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
   name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: ["Anchor in Alwar","Wedding Anchor Alwar","Heritage Wedding Host Alwar","Sariska Anchor","Neemrana Anchor","Siliserh Lake Palace Wedding","Bala Quila Event Host","NCR Wedding Anchor Alwar"],
-  description: `Anchor Yash Soni is Alwar's premier destination wedding anchor — 4.9★ rated, 1,100+ events, 8+ years. Specialist in heritage weddings at Neemrana Fort, Siliserh Lake Palace, and Sariska Palace. Bilingual Hindi/English, fully unscripted, strategically placed between Jaipur and Delhi NCR.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
   sameAs: ["https://www.instagram.com/yashsoni_official","https://www.youtube.com/@anchorYashSoni"],
   address: { "@type": "PostalAddress", addressLocality: CITY, addressRegion: "Rajasthan", addressCountry: "IN", postalCode: "301001" },

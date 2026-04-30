@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Corporate Retreat Anchor Dharamshala",
     "Chandigarh Elite Wedding Host Dharamshala",
   ],
-  description: `Anchor Yash Soni is Dharamshala's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly prestigious, high-net-worth mountain destination weddings across iconic properties like Taj Dharamshala and Hyatt Regency Resort. Flawless unscripted bilingual moderation executing elite Chandigarh and Punjab VIP protocols.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

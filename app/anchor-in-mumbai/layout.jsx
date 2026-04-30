@@ -28,7 +28,7 @@ const localBusinessSchema = {
     "St Regis Mumbai Wedding Host",
     "Bandra Kurla Complex Event Anchor",
   ],
-  description: `Anchor Yash Soni is Mumbai's premier event anchor for corporate galas in BKC and luxury sea-facing weddings at Taj Mahal Palace and The St. Regis. With 8+ years of unscripted hosting, 1,100+ events, and a 4.9★ rating, he provides bilingual Hindi/English mastery for VIP, NRI, and corporate elite crowds.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",

@@ -6,8 +6,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/corporate-event-anchor-jaipur",
   name: "Corporate Event Anchor Jaipur — Anchor Yash Soni",
-  description:
-    "Anchor Yash Soni is Jaipur's top corporate event anchor. 4.9★ rated. Award nights, product launches, conferences, summits, and gala dinners at JECC Sitapura, JLN Marg, Birla Auditorium, and Tonk Road. Sharp, unscripted, brand-aligned hosting for national brands.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

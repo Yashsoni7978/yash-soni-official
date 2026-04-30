@@ -12,7 +12,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
   name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: ["Anchor in Bikaner","Wedding Anchor Bikaner","Heritage Wedding Host Bikaner","Junagarh Fort Wedding Anchor","Lallgarh Palace Emcee","Karni Bhawan Event Host","Desert Heritage Anchor Bikaner","Camel Festival Anchor Bikaner"],
-  description: `Anchor Yash Soni is Bikaner's premier destination wedding and heritage event anchor — 4.9★ rated, 1,100+ events, 8+ years. Specialist in royal fort-city weddings at Junagarh Fort, Lallgarh Palace, and Karni Bhawan. Bilingual Hindi/English, fully unscripted, experienced with Marwari and Rajputana elite families.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
   sameAs: ["https://www.instagram.com/yashsoni_official","https://www.youtube.com/@anchorYashSoni"],
   address: { "@type": "PostalAddress", addressLocality: CITY, addressRegion: "Rajasthan", addressCountry: "IN", postalCode: "334001" },

@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Wedding Decoration Jaipur | Top Floral Mandap Decorators | Anchor Yash Soni",
-  description:
-    "Premium wedding decoration in Jaipur. Specializing in luxury floral mandaps, palatial themes, and lighting. Expert decorators led by Anchor Yash Soni.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "wedding decoration jaipur",
     "wedding decorators jaipur",

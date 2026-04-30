@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { ArrowRight, Award, Briefcase, Building2, CalendarCheck, CheckCircle2, ChevronRight, Crown, Gem, Heart, Landmark, MapPin, Mic2, Minus, Music2, Plus, ShieldCheck, Sparkles, Star, Sun, Users } from "lucide-react";
 
+
 const GOLD = "#D4AF37";
 const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20planning%20an%20event%20in%20Kolkata.%20Can%20you%20check%20availability%3F";
 

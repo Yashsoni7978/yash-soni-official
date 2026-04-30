@@ -8,6 +8,7 @@ import { ArrowRight, CalendarCheck, CheckCircle2, Globe, Heart, MapPin, Mic2, Mi
 
 
 
+
 // ─────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────
@@ -387,7 +388,7 @@ export default function DestinationAnchor() {
           <Reveal>
             <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-4 font-bold">Destination Wedding Specialist</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              I Don&apos;t Just Host<br />Your Wedding. <G>I Curate</G><br />the 3-Day Experience.
+              I Don't Just Host<br />Your Wedding. <G>I Curate</G><br />the 3-Day Experience.
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               Destination weddings are a completely different discipline from single-day events. Guests are tired from travel, two families are meeting for the first time, the itinerary runs 72 hours, and the venues are unfamiliar to everyone — including most vendors.
@@ -437,7 +438,7 @@ export default function DestinationAnchor() {
           <Reveal>
             <SectionHeading subtitle="The Role" title="The Social Glue." />
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8 font-light">
-              Destination weddings demand a completely different approach. The anchor isn&apos;t just a stage host — they&apos;re the connective tissue across 3 days, multiple venues, 400+ guests, and families who barely know each other.
+              Destination weddings demand a completely different approach. The anchor isn't just a stage host — they're the connective tissue across 3 days, multiple venues, 400+ guests, and families who barely know each other.
             </p>
             <div className="space-y-6">
               {WHY_DIFFERENT.map((w, i) => (

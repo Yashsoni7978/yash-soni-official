@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Wedding Planners in Jaipur | Turnkey Logistics | Anchor Yash Soni",
-  description:
-    "Top wedding planners in Jaipur. We manage turnkey event logistics, venue negotiations, RSVPs, and end-to-end execution for luxury destination weddings.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "wedding planners in jaipur",
     "turnkey wedding management",

@@ -8,6 +8,7 @@ import Link from "next/link";
 
 
 
+
 // ─────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────
@@ -180,7 +181,7 @@ export default function AboutPage() {
               It Started With<br /><G serif>a Spark.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
-              Five years ago, I picked up a microphone with one goal: kill the awkward silence. Not as a career move. Not following a plan. Just a genuine inability to watch a room full of people feel uncomfortable when it didn&apos;t have to be that way.
+              Five years ago, I picked up a microphone with one goal: kill the awkward silence. Not as a career move. Not following a plan. Just a genuine inability to watch a room full of people feel uncomfortable when it didn't have to be that way.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               While others memorised scripts, I studied the room. I observed what made crowds laugh, what made them lean in, and what made them check their phones. I learned from the hard moments — bad sound systems, tough crowds, power cuts mid-Sangeet, delayed brides that would make any announcer freeze.
@@ -212,8 +213,8 @@ export default function AboutPage() {
       <Reveal>
         <div className="px-5 md:px-10 py-14 md:py-20 max-w-4xl mx-auto text-center">
           <p className="serif text-2xl md:text-4xl lg:text-5xl font-bold italic text-zinc-200 leading-tight">
-            &ldquo;My secret sauce isn&apos;t a fancy suit.<br className="hidden md:block" />
-            It&apos;s <G serif>adaptability.</G>&rdquo;
+            &ldquo;My secret sauce isn't a fancy suit.<br className="hidden md:block" />
+            It's <G serif>adaptability.</G>&rdquo;
           </p>
         </div>
       </Reveal>
@@ -250,13 +251,13 @@ export default function AboutPage() {
           <Reveal delay={0.12} className="md:order-2">
             <span className="serif text-[7rem] md:text-[10rem] font-black text-white/[0.04] leading-none select-none block -mb-8">02</span>
             <h2 className="serif text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
-              I Don&apos;t Manage<br />Crowds. <G serif>I Move Them.</G>
+              I Don't Manage<br />Crowds. <G serif>I Move Them.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               There are two types of anchors in Jaipur. The ones who announce — names, schedules, instructions. And the ones who connect — with the specific crowd in front of them, in the specific moment they are in.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
-              The difference is not talent. It is intent. The moment I step on stage, every decision I make — every pause, every pivot, every joke I choose not to make — is made in service of your crowd&apos;s experience, not my performance.
+              The difference is not talent. It is intent. The moment I step on stage, every decision I make — every pause, every pivot, every joke I choose not to make — is made in service of your crowd's experience, not my performance.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
               Whether it is a chaotic Sangeet with 800 dancing relatives on Ajmer Road, or a strictly formatted corporate award night at JECC Sitapura with a CEO in the front row — I switch gears instantly, without the audience ever seeing the gear shift. That is the craft.
@@ -294,7 +295,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 mt-2">
           <Reveal>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
-              My games are not generic. For a Sangeet, I do not run &quot;Pass the Parcel.&quot; I run a Couple Trivia Roast that has the elders laughing and the younger crowd screaming. For a corporate awards night, I do not do ice-breakers that make people uncomfortable — I do rapid-fire industry formats that make people competitive and engaged.
+              My games are not generic. For a Sangeet, I do not run "Pass the Parcel." I run a Couple Trivia Roast that has the elders laughing and the younger crowd screaming. For a corporate awards night, I do not do ice-breakers that make people uncomfortable — I do rapid-fire industry formats that make people competitive and engaged.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               Every format — Sangeet, Haldi, Varmala, Bidaai, corporate gala, birthday milestone — is a different discipline. What works on a 1,500-person Ajmer Road lawn at midnight will destroy the energy of an intimate 80-person anniversary dinner in C-Scheme. Reading that difference instantly, without a briefing, is the skill.
@@ -305,7 +306,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
-              And then there is crisis. A script cannot help when the electricity goes out mid-Sangeet. A script cannot help when the DJ&apos;s laptop crashes on the dance floor. A script cannot help when the bride needs 20 more minutes and 900 people are watching the stage, wondering what is happening.
+              And then there is crisis. A script cannot help when the electricity goes out mid-Sangeet. A script cannot help when the DJ's laptop crashes on the dance floor. A script cannot help when the bride needs 20 more minutes and 900 people are watching the stage, wondering what is happening.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               Over 1,100+ events, I have built a library of 50+ crowd interactions specifically designed for these gaps. When the unexpected happens — and it always does at least once — the audience does not see a problem. They see a planned moment.
@@ -323,10 +324,10 @@ export default function AboutPage() {
       <section className="px-5 md:px-10 py-14 md:py-20 max-w-6xl mx-auto">
         <Reveal>
           <h2 className="serif text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">
-            Stages I&apos;ve <G serif>Conquered.</G>
+            Stages I've <G serif>Conquered.</G>
           </h2>
           <p className="text-zinc-500 text-sm mb-10 max-w-lg leading-relaxed">
-            You don&apos;t trust a pilot who hasn&apos;t flown. Over the last 8 years, I have held the mic at some of India&apos;s most iconic venues. I know their acoustics, their layouts, and their teams.
+            You don't trust a pilot who hasn't flown. Over the last 8 years, I have held the mic at some of India's most iconic venues. I know their acoustics, their layouts, and their teams.
           </p>
         </Reveal>
         {/* Editorial venue list — horizontal lines, not cards */}
@@ -385,8 +386,7 @@ export default function AboutPage() {
         {/* Subtle BG */}
         <div className="absolute inset-0">
           <Image
-            src="/service-corporate.webp"
-            alt=""
+            src="/service-corporate.webp" alt="Yash Soni - Professional Anchor and Emcee in Jaipur"
             fill
             className="object-cover opacity-10 grayscale"
             sizes="100vw"
@@ -402,7 +402,7 @@ export default function AboutPage() {
               <G serif shimmer>My Responsibility.&rdquo;</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base max-w-xl mx-auto mb-10 leading-relaxed font-light">
-              When you hand me the mic, you aren&apos;t just hiring a vendor. You are handing over the responsibility of your guests&apos; experience — the night they will talk about for years. I take that seriously. You enjoy the moment. I handle everything else.
+              When you hand me the mic, you aren't just hiring a vendor. You are handing over the responsibility of your guests' experience — the night they will talk about for years. I take that seriously. You enjoy the moment. I handle everything else.
             </p>
             {/* Handwritten-style signature */}
             <p className="serif text-4xl md:text-6xl font-black italic text-[#B5952F]/75 mb-12 tracking-tight">

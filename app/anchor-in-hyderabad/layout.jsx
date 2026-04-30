@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Luxury Event Host Telangana",
     "Nizam Heritage Wedding Anchor",
   ],
-  description: `Anchor Yash Soni is Hyderabad's premier luxury wedding and corporate event anchor — 4.9★ rated, 1,100+ events. Specialist in elite events at the grand Taj Falaknuma Palace, Ramoji Film City mega-weddings, and corporate summits in HITEC City. Impeccable English and Hindi bilingual hosting for high-net-worth business families across Telangana.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

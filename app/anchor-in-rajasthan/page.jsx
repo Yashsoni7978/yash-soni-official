@@ -8,6 +8,7 @@ import { ArrowRight, Award, Building2, CalendarCheck, Camera, CheckCircle2, Chev
 
 
 
+
 // ─────────────────────────────────────────────
 // THEME — Black Gold (Anchoring pages)
 // ─────────────────────────────────────────────
@@ -341,7 +342,7 @@ export default function AnchorInRajasthan() {
               <span className="text-[#B5952F] text-[9px] font-bold uppercase tracking-[.3em]">Anchor in Rajasthan · 7+ Cities</span>
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-black leading-[.88] tracking-tighter uppercase mb-7">
-              Rajasthan&apos;s<br/><G>Premier Anchor.</G>
+              Rajasthan's<br/><G>Premier Anchor.</G>
             </h1>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-t border-white/10 pt-8">
               <div>

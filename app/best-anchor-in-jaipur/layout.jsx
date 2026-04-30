@@ -6,8 +6,7 @@
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
   title: "Best Anchor in Jaipur | Anchor Yash Soni — 4.9★ Rated Wedding & Event Host",
-  description:
-    "Searching for the best anchor in Jaipur? Anchor Yash Soni — 4.9★, 1100+ events, 10,000+ crowd. Wedding, Sangeet, Haldi, Corporate & NRI events across Kukas, Ajmer Road, Sitapura JECC & all Jaipur zones.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "best anchor in jaipur",
     "anchor in jaipur",

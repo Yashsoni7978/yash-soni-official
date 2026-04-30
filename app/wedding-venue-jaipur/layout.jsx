@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Wedding Venues Jaipur | Top Palaces & Resorts | Anchor Yash Soni",
-  description:
-    "Book the best wedding venues in Jaipur. From 5-star heritage palaces like Rambagh to luxury resorts like Fairmont. Expert venue sourcing by Anchor Yash Soni.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "wedding venues jaipur",
     "palace wedding jaipur",

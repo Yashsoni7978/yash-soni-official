@@ -28,7 +28,7 @@ const localBusinessSchema = {
     "Aerocity Corporate Host",
     "ITC Maurya Event Anchor",
   ],
-  description: `Anchor Yash Soni is Delhi NCR's premier event anchor for massive Chhatarpur farm weddings, high-energy Punjabi Sangeets, and VIP corporate summits in Aerocity. With 8+ years of unscripted hosting, 1,100+ events, and a 4.9★ rating, he brings absolute command to massive VIP and corporate crowds.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",

@@ -8,6 +8,7 @@ import { Award, Building2, CalendarCheck, CheckCircle2, Crown, Globe, Heart, Lau
 
 
 
+
 const GOLD = "#D4AF37";
 const GOLD_D = "#a8891a";
 const GOLD_L = "#f0d878";

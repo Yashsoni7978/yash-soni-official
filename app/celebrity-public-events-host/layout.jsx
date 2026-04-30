@@ -6,8 +6,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/celebrity-public-events-host",
   name: "Celebrity & Public Events Host Jaipur — Anchor Yash Soni",
-  description:
-    "Anchor Yash Soni hosts celebrity meet-and-greets, music concerts, fashion shows, luxury brand launches, and large public events across Jaipur and India. 5,000+ crowd management. Bollywood star interviews. 4.9★ rated.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

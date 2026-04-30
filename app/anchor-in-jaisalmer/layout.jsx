@@ -30,7 +30,7 @@ const localBusinessSchema = {
     "Jaisalmer Fort Royal Wedding Anchor",
     "Luxury Desert Camp Event Emcee",
   ],
-  description: `Anchor Yash Soni is Jaisalmer's premier desert destination wedding anchor — 4.9★ rated, 1,100+ events, 8+ years experience. Specialist in luxury heritage weddings at Suryagarh, Jaisalmer Marriott, and exclusive desert camps. Bilingual Hindi/English, fully unscripted, uniquely experienced with the Golden City's acoustic challenges and premium NRI/HNI destination logistics.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

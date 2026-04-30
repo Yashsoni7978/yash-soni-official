@@ -25,7 +25,7 @@ const localBusinessSchema = {
     "Mehrangarh Fort Wedding Host",
     "RAAS Jodhpur Event Host",
   ],
-  description: `Anchor Yash Soni is Jodhpur's most trusted destination wedding anchor — 8+ years on stage, 1,100+ events hosted, 4.9★ rated. Specialist for royal palace weddings at Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, and Ajit Bhawan. Bilingual Hindi/English, fully unscripted, experienced with royal Rajputana family protocols and NRI guests.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",

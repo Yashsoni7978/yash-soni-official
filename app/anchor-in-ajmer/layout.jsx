@@ -30,7 +30,7 @@ const localBusinessSchema = {
     "Sufi Culture Destination Anchor",
     "Ajmer NRI Destination Host",
   ],
-  description: `Anchor Yash Soni is Ajmer's premier heritage wedding and event anchor — 4.9★ rated, 1,100+ events, 8+ years experience. Specialist in luxury weddings at Pratap Palace (Taj), Mansingh Palace, and the Ajmer-Pushkar golden corridor. Bilingual Hindi/English, fully unscripted, highly attuned to the deeply secular, syncretic cultural traditions of central Rajasthan.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

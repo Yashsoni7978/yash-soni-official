@@ -6,8 +6,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/mehendi-anchor-jaipur",
   name: "Mehendi Anchor Jaipur — Anchor Yash Soni",
-  description:
-    "Anchor Yash Soni is the best Mehendi anchor in Jaipur. Ladies Sangeet specialist. Hands-free interactive games, musical trivia, couple roasts, and zero boring waiting times for Mehendi ceremonies across Jaipur and Rajasthan. 4.9★ rated.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

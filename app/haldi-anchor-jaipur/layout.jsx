@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Haldi & Mehndi Games Anchor in Jaipur | Yash Soni",
-  description: "Hire the ultimate Haldi Games Anchor in Jaipur. Yash Soni specializes in high-voltage crowd engagement, Phoolon Ki Holi, and interactive wedding games.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: ["Haldi Anchor Jaipur", "Wedding Games Host", "Mehndi Anchor Rajasthan", "Phoolon Ki Holi Anchor", "Interactive Wedding Emcee"],
   openGraph: {
     title: "Haldi & Mehndi Games Anchor | Yash Soni",

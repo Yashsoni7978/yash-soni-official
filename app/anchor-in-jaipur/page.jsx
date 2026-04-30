@@ -8,6 +8,7 @@ import { ArrowRight, Award, Building2, CalendarCheck, Camera, CheckCircle2, Crow
 
 
 
+
 // ─────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────
@@ -383,10 +384,10 @@ const faqSchema = {
             </div>
             {/* H1 — primary keyword */}
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
-              Jaipur&apos;s <G>Premier</G><br />Wedding &amp; Event<br /><G>Anchor.</G>
+              Jaipur's <G>Premier</G><br />Wedding &amp; Event<br /><G>Anchor.</G>
             </h1>
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-4">
-              From palace weddings at Rambagh and Fairmont to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura — the definitive anchor for Jaipur&apos;s most prestigious events.
+              From palace weddings at Rambagh and Fairmont to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura — the definitive anchor for Jaipur's most prestigious events.
             </p>
             <p className="text-zinc-500 text-sm mb-10 tracking-wide">
               Locally based &nbsp;·&nbsp; 1,100+ Jaipur events &nbsp;·&nbsp; Zero travel fees within Jaipur
@@ -399,7 +400,7 @@ const faqSchema = {
               </Link>
               <Link href="/anchor-in-jaipur">
                 <button className="w-full sm:w-auto px-10 py-5 border border-[#D4AF37]/40 text-[#B5952F] text-sm font-medium uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
-                  Why I&apos;m Jaipur&apos;s Most Reviewed
+                  Why I'm Jaipur's Most Reviewed
                 </button>
               </Link>
             </div>
@@ -682,7 +683,7 @@ const faqSchema = {
               Hosting an Event <G>in Jaipur?</G>
             </h2>
             <p className="text-zinc-400 text-base mb-3 leading-relaxed">
-              Don&apos;t fly in an outsider. The best anchor in Jaipur is <strong className="text-[#B5952F]">already here</strong> — locally based, zero travel fees, and booked <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season.
+              Don't fly in an outsider. The best anchor in Jaipur is <strong className="text-[#B5952F]">already here</strong> — locally based, zero travel fees, and booked <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season.
             </p>
             <p className="text-zinc-600 text-sm mb-10">No waitlists. No replacements. One anchor, one event, per date.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">

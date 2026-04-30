@@ -6,8 +6,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://yashsoni.in/#business",
   name: "Anchor Yash Soni",
-  description:
-    "Premium event anchor and emcee in Jaipur. Wedding anchoring, Sangeet hosting, Haldi hosting, corporate events, destination weddings, and team building. 4.9★ rated across 200+ verified reviews.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   url: "https://yashsoni.in",
   telephone: "+917737877978",
   email: "info [at] yashsoni [dot] in",

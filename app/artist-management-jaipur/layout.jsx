@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Celebrity & Artist Management Agency Jaipur | Anchor Yash Soni",
-  description:
-    "Book Bollywood celebrities, live bands, DJs and anchors for your wedding or corporate event in Jaipur. India's top artist management by Anchor Yash Soni.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "artist management jaipur",
     "celebrity booking jaipur",

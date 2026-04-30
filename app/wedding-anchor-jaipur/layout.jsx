@@ -5,8 +5,7 @@ const localBusinessSchema = {
   "@type": "ProfessionalService",
   "@id": "https://yashsoni.in/#business",
   name: "Anchor Yash Soni",
-  description:
-    "Anchor Yash Soni is the best wedding anchor in Jaipur with 1100+ events hosted. 4.9★ rated across 200+ reviews. Specialist in luxury weddings, Sangeet, Haldi, Mehendi, Varmala, and NRI destination weddings across Kukas, Amer Road, Ajmer Road, and all Jaipur venues.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   url: "https://yashsoni.in/wedding-anchor-jaipur",
   telephone: "+917737877978",
   priceRange: "₹₹₹₹",

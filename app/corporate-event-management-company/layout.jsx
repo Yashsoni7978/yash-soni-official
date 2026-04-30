@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Corporate Event Management Company | MICE & Galas | Anchor Yash Soni",
-  description:
-    "Top corporate event management company in Jaipur. We execute flawless MICE travel, annual galas, dealer meets, and product launches with high-end tech production.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "corporate event management company",
     "corporate event planner jaipur",

@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Corporate Retreat Anchor Coorg",
     "Bangalore Elite Wedding Host Coorg",
   ],
-  description: `Anchor Yash Soni is Coorg's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly prestigious, high-net-worth eco-estate weddings across iconic properties like Taj Madikeri and Tamara Coorg. Flawless unscripted bilingual moderation executing elite international and Bangalore tech VIP protocols.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

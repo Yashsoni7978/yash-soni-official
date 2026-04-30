@@ -28,7 +28,7 @@ const localBusinessSchema = {
     "Luxury Private Villa Event Host",
     "Coastal Wedding Anchor Maharashtra",
   ],
-  description: `Anchor Yash Soni is Alibaug's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly intimate, high-net-worth weekend destination weddings for Mumbai's billionaires and corporate elite across properties like The Mansion House and Radisson Blu. Flawless unscripted bilingual execution.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

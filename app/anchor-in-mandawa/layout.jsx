@@ -30,7 +30,7 @@ const localBusinessSchema = {
     "Dundlod Fort Wedding Host",
     "Nawalgarh Heritage Anchor",
   ],
-  description: `Anchor Yash Soni is Mandawa's premier Shekhawati destination wedding anchor — 4.9★ rated, 1,100+ events, 8+ years experience. Specialist in open-air fresco haveli weddings at Castle Mandawa, Murmuria Haveli, and the wider Shekhawati belt. Bilingual Hindi/English, fully unscripted, deeply experienced with Marwari mercantile family culture and heritage haveli ceremony staging.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

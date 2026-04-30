@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Corporate Retreat Anchor Shimla",
     "Chandigarh Elite Wedding Host",
   ],
-  description: `Anchor Yash Soni is Shimla's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly prestigious, high-net-worth Himalayan destination weddings across iconic properties like Taj Theog and Wildflower Hall. Flawless unscripted bilingual moderation handling Delhi/Chandigarh VIPs.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

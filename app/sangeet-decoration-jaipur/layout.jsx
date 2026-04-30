@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Sangeet Decoration Jaipur | LED Stages & Lighting | Anchor Yash Soni",
-  description:
-    "Premium sangeet decoration in Jaipur. Massive P3 LED stages, intelligent lighting, custom neon branding, and luxury cocktail lounge setups for destination weddings.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "sangeet decoration jaipur",
     "sangeet stage decorators jaipur",

@@ -8,6 +8,7 @@ import { ArrowRight, Building2, CalendarCheck, Camera, CheckCircle2, Crown, Hear
 
 
 
+
 // ─────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────
@@ -328,7 +329,7 @@ export default function CelebrityAnchorPage() {
               Not Just A Host.<br /><G>A Personality.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              When a Bollywood star walks into a Jaipur venue, when a luxury brand opens on JLN Marg, when a music festival fills JECC Sitapura with 5,000 people — you don&apos;t need an announcer. You need someone who can hold the entire room, manage the unexpected, and make it look effortless on camera.
+              When a Bollywood star walks into a Jaipur venue, when a luxury brand opens on JLN Marg, when a music festival fills JECC Sitapura with 5,000 people — you don't need an announcer. You need someone who can hold the entire room, manage the unexpected, and make it look effortless on camera.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-6 leading-relaxed font-light">
               Anchor Yash Soni has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, music events, and award galas for <strong className="text-white">70+ national brands</strong> across India. A <strong className="text-white">4.9★ rating across 200+ verified reviews</strong> is the evidence.

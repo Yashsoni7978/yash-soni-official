@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Calendar, CheckCircle2, ChevronDown, Crown, Diamond, Mail, MessageCircle, Phone, Send } from "lucide-react";
 import Link from "next/link";
 
+
 // --- 1. LUXURY TEXTURE ASSETS ---
 const GoldTextureText = ({ children, className }) => (
   <span 
@@ -161,7 +162,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold ml-2">Your Name</label>
+                      <label className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold ml-2">Yash Soni</label>
                       <input 
                         type="text" 
                         name="name"

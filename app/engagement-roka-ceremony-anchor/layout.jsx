@@ -5,8 +5,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/engagement-roka-ceremony-anchor",
   name: "Engagement & Roka Ceremony Anchor Jaipur — Yash Soni",
-  description:
-    "Professional engagement, roka, and ring ceremony anchor in Jaipur. Custom interactive games, bilingual Hindi/English hosting, and personalised scripts for families meeting for the first time. Expert at breaking ice and building energy across both sides.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

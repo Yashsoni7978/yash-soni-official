@@ -8,6 +8,7 @@ import { ArrowRight, Award, Cake, CalendarCheck, CheckCircle2, Crown, Globe, Hea
 
 
 
+
 // ─────────────────────────────────────────────
 // THEME — Black Gold (Anchoring pages)
 // ─────────────────────────────────────────────
@@ -560,7 +561,7 @@ export default function BirthdayAnchorJaipur() {
           <Reveal>
             <Cake size={24} className="text-[#B5952F] mx-auto mb-6 opacity-60"/>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-5 leading-[.9]">
-              Let&apos;s Make This<br/><G>Birthday Legendary.</G>
+              Let's Make This<br/><G>Birthday Legendary.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-2">Peak season weekends fill 6–8 weeks in advance.</p>
             <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the date and guest count — quote within the hour.</p>

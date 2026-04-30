@@ -8,6 +8,7 @@ import { ArrowRight, Building2, CalendarCheck, CheckCircle2, Flame, Flower2, Hea
 
 
 
+
 // ─────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────
@@ -288,7 +289,7 @@ export default function SangeetAnchor() {
             </h1>
             {/* Subhead with location keywords */}
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-3">
-              Jaipur&apos;s most reviewed Sangeet anchor. Farmhouse Sangeets on Ajmer Road, palace events in Kukas, and destination Sangeets across India.
+              Jaipur's most reviewed Sangeet anchor. Farmhouse Sangeets on Ajmer Road, palace events in Kukas, and destination Sangeets across India.
             </p>
             <p className="text-zinc-500 text-sm mb-8 tracking-wide">
               1,100+ events &nbsp;·&nbsp; Dance floors until 4 AM &nbsp;·&nbsp; 100% Unscripted
@@ -338,7 +339,7 @@ export default function SangeetAnchor() {
               Forget &ldquo;And Next on Stage...&rdquo;<br /><G>This is a Concert.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni is the Sangeet host Jaipur&apos;s elite families trust when a Sangeet needs to be more than background noise.
+              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni is the Sangeet host Jaipur's elite families trust when a Sangeet needs to be more than background noise.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               Farmhouse Sangeets on Ajmer Road with 1,500 guests packed until 4 AM. Palace Sangeet events at heritage venues in Kukas and Amer Road with NRI families from the UK, USA, and Gulf. Intimate family Sangeets in Mansarovar and Vaishali Nagar. Every format is a different discipline — and every one has been mastered.
@@ -430,10 +431,10 @@ export default function SangeetAnchor() {
           <Reveal delay={0.12}>
             <SectionHeading subtitle="The Method" title="Directing the Chaos." />
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light">
-              I don&apos;t announce names. I direct energy. Whether it&apos;s hyping up a nervous solo performer, managing a technical glitch invisibly, or getting the shyest elders to do a hookstep — the spotlight never fades.
+              I don't announce names. I direct energy. Whether it's hyping up a nervous solo performer, managing a technical glitch invisibly, or getting the shyest elders to do a hookstep — the spotlight never fades.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8 font-light">
-              And when the stage show ends, the job doesn&apos;t. I transition into MC mode, kick open the dance floor, and keep the energy at concert levels until the very last song.
+              And when the stage show ends, the job doesn't. I transition into MC mode, kick open the dance floor, and keep the energy at concert levels until the very last song.
             </p>
             <div className="space-y-5">
               {[
@@ -569,10 +570,10 @@ export default function SangeetAnchor() {
           <Reveal>
             <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-6 font-bold">The Spotlight is Yours</p>
             <h2 className="text-4xl md:text-6xl font-black mb-5 tracking-tight leading-[0.95] uppercase">
-              Don&apos;t Let Your<br /><G>Sangeet Be Ordinary.</G>
+              Don't Let Your<br /><G>Sangeet Be Ordinary.</G>
             </h2>
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
-              Jaipur&apos;s most reviewed Sangeet anchor books <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season. No replacements sent. No waitlist kept.
+              Jaipur's most reviewed Sangeet anchor books <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season. No replacements sent. No waitlist kept.
             </p>
             <p className="text-zinc-600 text-xs mb-8">When the calendar is full — it is simply full.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">

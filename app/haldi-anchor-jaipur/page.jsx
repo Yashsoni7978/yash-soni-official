@@ -7,6 +7,7 @@ import { Camera, Heart, Minus, Music, Play, Plus, Sparkles, Star, Sun, Trophy, U
 
 
 
+
 // --- 1. CUSTOM TEXTURE FOR HALDI VIBE (Ultra-Vibrant Gradient) ---
 const FestivalText = ({ children, className }) => (
   <span 

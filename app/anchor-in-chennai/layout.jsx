@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Corporate Summit Anchor Chennai",
     "South India Elite Wedding Host",
   ],
-  description: `Anchor Yash Soni is Chennai's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly prestigious, high-net-worth coastal and heritage weddings across iconic properties like Taj Fisherman's Cove and ITC Grand Chola. Flawless unscripted bilingual moderation executing elite international and pan-India VIP protocols.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

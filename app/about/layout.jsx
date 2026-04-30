@@ -8,8 +8,7 @@ const personSchema = {
   givenName: "Yash",
   familyName: "Soni",
   jobTitle: "Premium Event Anchor & Emcee",
-  description:
-    "Anchor Yash Soni is one of Jaipur's most reviewed event anchors with 4.9★ across 200+ verified reviews and 1100+ events hosted across India. Specialist in luxury weddings, Sangeet, Haldi, Mehendi, corporate award nights, and NRI destination weddings across Rajasthan and India.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   url: "https://yashsoni.in",
   image: "https://yashsoni.in/intro-portrait-top.webp",
   telephone: "+917737877978",

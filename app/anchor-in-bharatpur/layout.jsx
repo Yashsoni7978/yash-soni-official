@@ -31,7 +31,7 @@ const localBusinessSchema = {
     "Bharatpur Jat Heritage Event Host",
     "Agra Jaipur Corridor Anchor",
   ],
-  description: `Anchor Yash Soni is Bharatpur's premier destination wedding and heritage event anchor — 4.9★ rated, 1,100+ events, 8+ years experience. Specialist in fort heritage weddings at Lohagarh Fort (India's only unconquered fort) and royal ceremonies at Laxmi Vilas Palace. Bilingual Hindi/English, fully unscripted, strategically positioned at the Agra-Jaipur-Delhi Golden Triangle heritage corridor with deep Braj cultural fluency.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

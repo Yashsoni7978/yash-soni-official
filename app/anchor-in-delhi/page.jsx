@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { ArrowRight, Award, Building2, CalendarCheck, CheckCircle2, Crown, Diamond, Gem, Heart, MapPin, Mic2, Minus, Music2, Plus, Power, ShieldCheck, Sparkles, Star, UserCheck, Users, Zap } from "lucide-react";
 
+
 // ─────────────────────────────────────────────
 // CONSTANTS
 // ─────────────────────────────────────────────

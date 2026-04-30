@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Haldi Decoration Jaipur | Haldi Ceremony Planner | Anchor Yash Soni",
-  description:
-    "Best Haldi ceremony decoration in Jaipur. Marigold setups, floral tunnels, colour props, and fun anchoring by Anchor Yash Soni.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "haldi decoration jaipur",
     "haldi ceremony planner jaipur",

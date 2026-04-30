@@ -28,7 +28,7 @@ const localBusinessSchema = {
     "Ultra-Luxury Beach Event Host",
     "NRI Wedding Anchor Andaman",
   ],
-  description: `Anchor Yash Soni is the Andaman Islands' premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly exclusive, high-net-worth private island destination weddings out of Taj Exotica Havelock. Flawless unscripted bilingual executive execution.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

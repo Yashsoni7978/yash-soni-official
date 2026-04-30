@@ -26,7 +26,7 @@ const localBusinessSchema = {
     "Oberoi Udaivilas Anchor",
     "Jagmandir Island Wedding Host",
   ],
-  description: `Anchor Yash Soni is Udaipur's most trusted destination wedding anchor — 8+ years on stage, 1,100+ events hosted, 4.9★ rated. Specialist for luxury lake palace weddings at Taj Lake Palace, Oberoi Udaivilas, and Jagmandir Island. Bilingual Hindi/English, fully unscripted, and experienced with NRI families from the UK, USA, and Canada.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",

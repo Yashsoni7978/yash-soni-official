@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Corporate Anchor Varanasi",
     "NRI Destination Wedding Varanasi",
   ],
-  description: `Anchor Yash Soni is Varanasi's premier ultra-luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in executing highly prestigious, spiritually profound destination weddings across iconic properties like Taj Nadesar Palace and BrijRama Palace. Flawless unscripted bilingual execution honoring deep Kashi heritage.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

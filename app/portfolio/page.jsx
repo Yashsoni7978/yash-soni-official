@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Camera, Instagram, MapPin, Play, Youtube } from "lucide-react";
 
 
+
 // --- 1. LUXURY TEXTURE ASSETS ---
 const GoldTextureText = ({ children, className }) => (
   <span 

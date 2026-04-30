@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Event Management Company Jaipur | Turnkey Execution | Anchor Yash Soni",
-  description:
-    "Top event management company in Jaipur. We execute grand scale weddings, corporate galas, and live concerts with massive in-house production and precision logistics.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "event management company jaipur",
     "top event planners rajasthan",

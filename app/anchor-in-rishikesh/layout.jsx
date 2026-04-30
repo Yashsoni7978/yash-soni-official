@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Aloha on the Ganges Wedding Host",
     "Spiritual Destination Wedding Emcee",
   ],
-  description: `Anchor Yash Soni is Rishikesh's premier luxury wedding anchor — 4.9★ rated, 1,100+ events. Specialist in navigating strict Satvik (no-alcohol) timelines and extreme mountain acoustics at properties like Taj Rishikesh and Roseate Ganges. Flawless unscripted bilingual moderation merging elite Delhi NCR VIPs with deep spiritual heritage.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

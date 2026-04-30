@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Luxury Wedding Planner Rajasthan | VVIP Palace Weddings | Anchor Yash Soni",
-  description:
-    "Exclusive luxury wedding planner in Rajasthan. We specialize in full palace buyouts, private charters, celebrity bookings, and high-security VVIP weddings.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "luxury wedding planner rajasthan",
     "vvip wedding planner india",

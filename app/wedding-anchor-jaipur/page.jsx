@@ -7,6 +7,7 @@ import { ArrowRight, CalendarCheck, Camera, Heart, MapPin, Minus, Music, Plus, S
 
 
 
+
 // ─────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────
@@ -266,7 +267,7 @@ export default function WeddingAnchor() {
             </h1>
             {/* Subhead with location keywords */}
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-4">
-              Jaipur&apos;s most trusted wedding anchor — palace weddings in Kukas, Sangeets on Ajmer Road, and destination weddings across Rajasthan.
+              Jaipur's most trusted wedding anchor — palace weddings in Kukas, Sangeets on Ajmer Road, and destination weddings across Rajasthan.
             </p>
             <p className="text-zinc-500 text-sm mb-10 tracking-wide">
               1,100+ weddings &nbsp;·&nbsp; Bilingual Hindi/English &nbsp;·&nbsp; 100% Unscripted &nbsp;·&nbsp; NRI specialist
@@ -288,7 +289,7 @@ export default function WeddingAnchor() {
           <div className="lg:col-span-5">
             <SectionHeading subtitle="The Professional Approach" title="Beyond The Microphone." />
             <p className="text-zinc-300 text-lg leading-relaxed mb-10 border-l-4 border-[#D4AF37] pl-6 font-medium">
-              The best wedding anchor in Jaipur isn&apos;t the one with the most years — it&apos;s the one who becomes part of your family for the night. I bridge the gap between families, transforming a room of strangers into one unforgettable celebration.
+              The best wedding anchor in Jaipur isn't the one with the most years — it's the one who becomes part of your family for the night. I bridge the gap between families, transforming a room of strangers into one unforgettable celebration.
             </p>
             <div className="space-y-6">
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
@@ -484,7 +485,7 @@ export default function WeddingAnchor() {
               The Stage <G>Awaits.</G>
             </h2>
             <p className="text-zinc-400 text-base mb-3 leading-relaxed max-w-lg mx-auto">
-              Don&apos;t leave your wedding&apos;s most important voice to chance. Jaipur&apos;s most reviewed wedding anchor books <strong className="text-[#B5952F]">6–8 months in advance.</strong>
+              Don't leave your wedding's most important voice to chance. Jaipur's most reviewed wedding anchor books <strong className="text-[#B5952F]">6–8 months in advance.</strong>
             </p>
             <p className="text-zinc-600 text-sm mb-10">No replacements sent. No waitlist kept. One wedding per date.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">

@@ -6,8 +6,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/anchor-for-birthday-party-jaipur",
   name: "Anchor for Birthday Party Jaipur — Yash Soni",
-  description:
-    "Professional birthday party anchor in Jaipur. Milestone birthdays, kids parties, surprise events, and celebrity galas. Bilingual Hindi/English host with custom scripts, crowd games, and zero filler.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

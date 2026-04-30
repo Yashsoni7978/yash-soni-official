@@ -31,7 +31,7 @@ const localBusinessSchema = {
     "Gujarat Rajasthan Wedding Bridge Anchor",
     "Dilwara Temple Circuit Event Host",
   ],
-  description: `Anchor Yash Soni is Mount Abu's premier hill station destination wedding anchor — 4.9★ rated, 1,100+ events, 8+ years experience. Specialist in Aravalli hilltop weddings at The Cama Rajputana Club, Hotel Hillock, and Nakki Lake properties. Bilingual Hindi/English, fully unscripted, uniquely experienced with Jain ceremony protocol, Gujarat-Rajasthan cultural bridging, and the cool mountain venue acoustic dynamics of Rajasthan's only hill station.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

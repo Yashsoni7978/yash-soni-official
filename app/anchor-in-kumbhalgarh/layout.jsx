@@ -12,7 +12,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
   name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: ["Anchor in Kumbhalgarh","Wedding Anchor Kumbhalgarh","Heritage Wedding Host Kumbhalgarh","Fort Wedding Anchor Kumbhalgarh","Kumbha Bagh Wedding Anchor","Aodhi Hotel Event Host","Safari Camp Wedding Emcee"],
-  description: `Anchor Yash Soni is Kumbhalgarh's premier heritage wedding anchor — 4.9★ rated, 1,100+ events, 8+ years. Specialist in fort-wall weddings at The Kumbha Bagh, The Aodhi, and Fateh Safari Lodge. Bilingual Hindi/English, fully unscripted, experienced with massive heritage courtyard logistics.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
   sameAs: ["https://www.instagram.com/yashsoni_official","https://www.youtube.com/@anchorYashSoni"],
   address: { "@type": "PostalAddress", addressLocality: CITY, addressRegion: "Rajasthan", addressCountry: "IN", postalCode: "313325" },

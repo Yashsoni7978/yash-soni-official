@@ -8,6 +8,7 @@ import { ArrowRight, Building2, CalendarCheck, CheckCircle2, Flower2, Heart, Lea
 
 
 
+
 // ─────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────
@@ -380,7 +381,7 @@ export default function MehendiAnchor() {
               Bridging Tradition <br />and <E>Pure Celebration.</E>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              The Mehendi is the most colourful, relaxed event of the entire wedding week. It&apos;s where families truly bond before the heavy ceremonies begin. But 3–4 hours of henna application with no hosting structure turns into 3–4 hours of guests on their phones.
+              The Mehendi is the most colourful, relaxed event of the entire wedding week. It's where families truly bond before the heavy ceremonies begin. But 3–4 hours of henna application with no hosting structure turns into 3–4 hours of guests on their phones.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni has mastered the Mehendi format across every Jaipur zone — farmhouse weddings on Ajmer Road with 500+ guests, palace Mehendi events in Kukas and Amer Road for NRI families, and intimate family ceremonies in Mansarovar and Vaishali Nagar.
@@ -457,7 +458,7 @@ export default function MehendiAnchor() {
           <Reveal>
             <SectionHeading subtitle="The Vibe Check" title="Elegant. Musical. Fun." />
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light">
-              The Mehendi is the most relaxed, colourful event of the entire wedding. It&apos;s where families truly bond before the heavy ceremonies begin. My job as host is to amplify that warmth — bridging the elders singing traditional folk songs and the youth ready for a Bollywood party.
+              The Mehendi is the most relaxed, colourful event of the entire wedding. It's where families truly bond before the heavy ceremonies begin. My job as host is to amplify that warmth — bridging the elders singing traditional folk songs and the youth ready for a Bollywood party.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-8 font-light">
               Every game, every transition, every moment of crowd interaction is calibrated to feel spontaneous and joyful — never scripted or forced.

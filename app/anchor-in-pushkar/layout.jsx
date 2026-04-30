@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Satvik Protocol Wedding Anchor",
     "Brahma Temple Heritage Host",
   ],
-  description: `Anchor Yash Soni is Pushkar's premier destination wedding anchor — 4.9★ rated, 1,100+ events. Specialist in managing international and NRI elite guest lists across Westin Pushkar, Ananta Spa & Resorts, and heritage camps. Expert in driving high-voltage unscripted energy even within the strict Satvik (no-alcohol/no-meat) protocols of the holy city.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

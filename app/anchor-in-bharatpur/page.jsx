@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import { ArrowRight, Award, Bird, Building2, CalendarCheck, CheckCircle2, Crown, Flower2, Gem, Globe, Heart, Landmark, MapPin, Mic2, Minus, Music2, Plus, ShieldCheck, Sparkles, Star, Users } from "lucide-react";
 import { FAQItem } from "../_components/InteractiveFAQ";
 
+
 const GOLD = "#D4AF37";
 const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20planning%20a%20destination%20wedding%20in%20Bharatpur.%20Can%20you%20check%20availability%3F";
 

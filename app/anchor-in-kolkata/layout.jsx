@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Luxury Sangeet Anchor East India",
     "Elite Wedding Host Bengal",
   ],
-  description: `Anchor Yash Soni is Kolkata's premier luxury wedding and corporate anchor — 4.9★ rated, 1,100+ events. Specialist in elite Marwari and cross-cultural weddings at ITC Royal Bengal, Taj Bengal, and JW Marriott. Flawless bilingual Hindi/English hosting tailored for Kolkata's deeply traditional yet globally connected business families.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

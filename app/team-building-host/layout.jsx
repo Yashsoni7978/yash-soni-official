@@ -6,8 +6,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/team-building-host",
   name: "Corporate Team Building Host Jaipur — Anchor Yash Soni",
-  description:
-    "Anchor Yash Soni is Jaipur's 4.9★ rated corporate team building host. Employee engagement, drum circles, scavenger hunts, blindfold challenges, corporate tournaments, and Fun Friday sessions for 50–1,000+ employees. Serving companies across Jaipur and Rajasthan.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

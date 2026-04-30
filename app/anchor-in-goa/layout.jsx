@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "NRI Wedding Anchor Goa",
     "Corporate Retreat Host Goa",
   ],
-  description: `Anchor Yash Soni is Goa's premier luxury destination wedding anchor — 4.9★ rated, 1,100+ events. Specialist in navigating massive beach-front acoustics, international NRI guest lists, and high-voltage Sangeets across properties like Taj Exotica, W Goa, and ITC Grand Goa.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

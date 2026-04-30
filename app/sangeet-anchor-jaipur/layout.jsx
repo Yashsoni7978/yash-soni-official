@@ -6,8 +6,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/sangeet-anchor-jaipur",
   name: "Sangeet Anchor Jaipur — Anchor Yash Soni",
-  description:
-    "Anchor Yash Soni is the best Sangeet anchor in Jaipur. 4.9★ rated. Farmhouse Sangeets on Ajmer Road, palace Sangeet events in Kukas & Amer Road, high-energy crowd activation for 500–1,500 guests. Dance floors packed until 4 AM.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

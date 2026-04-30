@@ -6,8 +6,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/destination-wedding-anchor",
   name: "Destination Wedding Anchor India — Anchor Yash Soni",
-  description:
-    "Anchor Yash Soni is a 4.9★ rated destination wedding anchor specialist across India. 4.9★ rated. Jaipur, Udaipur, Jodhpur, Jaisalmer, Goa, Pushkar, Dubai, and international. Full 2–3 day wedding package — Welcome Lunch, Haldi, Sangeet, Varmala. NRI bilingual specialist.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",

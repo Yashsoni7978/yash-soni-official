@@ -6,8 +6,7 @@ const localBusinessSchema = {
   "@id": "https://yashsoni.in/#business",
   name: "Anchor Yash Soni",
   alternateName: ["Best Anchor in Jaipur", "Anchor Yash", "Anchor in Jaipur"],
-  description:
-    "Anchor Yash Soni is the best anchor in Jaipur with 1100+ events hosted. 4.9★ rated across 200+ verified reviews. Specialist in luxury weddings, Sangeet, Haldi, Mehendi, corporate events, NRI destination weddings, and VIP birthday galas. Serving Kukas, Amer Road, Ajmer Road, Bhankrota, Jhotwara, Mansarovar, Vaishali Nagar, Sitapura JECC, Tonk Road, and JLN Marg.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   url: "https://yashsoni.in",
   telephone: "+917737877978",
   priceRange: "₹₹₹₹",

@@ -327,10 +327,10 @@ export default function HomePage() {
                 <GoldText>Relevance is better.</GoldText>
               </h2>
               <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-                The event market is full of anchors who boast &quot;20 years of experience.&quot; What that actually means: 20 years of reading from the same paper script while your carefully planned event rots in awkward silence.
+                The event market is full of anchors who boast "20 years of experience." What that actually means: 20 years of reading from the same paper script while your carefully planned event rots in awkward silence.
               </p>
               <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
-                The right anchor isn&apos;t the one with the most years — it&apos;s the one who commands your specific crowd, reads your room, and makes your family feel like the only event that has ever mattered. <strong className="text-white">That&apos;s why 200+ clients have rated Yash 4.9★.</strong>
+                The right anchor isn't the one with the most years — it's the one who commands your specific crowd, reads your room, and makes your family feel like the only event that has ever mattered. <strong className="text-white">That's why 200+ clients have rated Yash 4.9★.</strong>
               </p>
               <div className="space-y-3 mb-8">
                 {[
@@ -465,13 +465,13 @@ export default function HomePage() {
               <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">Limited Availability</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black mb-5 tracking-tight leading-[0.95]">
-              Your Date <br /><GoldText>Won&apos;t Wait.</GoldText>
+              Your Date <br /><GoldText>Won't Wait.</GoldText>
             </h2>
             <p className="text-zinc-400 mb-3 text-sm md:text-base leading-relaxed">
               I do not maintain a waitlist. I do not send replacements. Every event gets my complete, undivided presence.
             </p>
             <p className="text-zinc-500 mb-10 text-sm">
-              Calendar fills <strong className="text-[#B5952F]">6–8 months in advance.</strong> When it&apos;s full — it&apos;s full.
+              Calendar fills <strong className="text-[#B5952F]">6–8 months in advance.</strong> When it's full — it's full.
             </p>
             <Link href={WA_LINK} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center justify-center gap-3 px-8 md:px-12 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-base md:text-lg uppercase tracking-widest rounded-full hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(212,175,55,0.3)] w-full sm:w-auto">

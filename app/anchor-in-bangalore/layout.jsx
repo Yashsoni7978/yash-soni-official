@@ -29,7 +29,7 @@ const localBusinessSchema = {
     "Luxury Event Host Bengaluru",
     "South Indian Hindi English Anchor",
   ],
-  description: `Anchor Yash Soni is Bangalore's premier luxury wedding and high-profile corporate event anchor — 4.9★ rated, 1,100+ events. Specialist in elite events at Taj West End, Bangalore Palace Grounds, and Leela Palace. Impeccable English and Hindi bilingual hosting bridging North Indian heritage families with metropolitan South Indian professional expectations seamlessly.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

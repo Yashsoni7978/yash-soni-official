@@ -31,7 +31,7 @@ const localBusinessSchema = {
     "Bundi Wedding Anchor",
     "Kota Sangeet Emcee",
   ],
-  description: `Anchor Yash Soni is Kota's premier heritage wedding and corporate event anchor — 4.9★ rated, 1,100+ events, 8+ years experience. Specialist in luxury events at Umed Bhawan Palace, Brijraj Bhawan, and Chambal riverside properties. Bilingual Hindi/English, fully unscripted, uniquely experienced with the Hadoti cultural footprint and the sophisticated local industrialist community.`,
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",

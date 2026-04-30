@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Script from "next/script";
-
 export const metadata = {
   title: "Gala Dinner Event Planner Jaipur | Corporate Awards | Anchor Yash Soni",
-  description:
-    "Premium gala dinner event planners in Jaipur. We manage high-end corporate sit-downs, award nights, and executive hospitality with flawless precision.",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   keywords: [
     "gala dinner event planner jaipur",
     "corporate awards night organizer",
