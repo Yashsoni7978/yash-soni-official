@@ -1,27 +1,25 @@
-# Anchor Yash Soni - India's Premier Event Host
+# Anchor Yash Soni
 
-> Luxury Wedding Anchor, Corporate Emcee, and High-Energy Celebrity Host based in Jaipur, Rajasthan.
+> Rajasthan's premier event anchor and luxury event 
+> management studio based in Jaipur, India.
 
 ## About
-Yash Soni is a visionary in the realm of luxury celebrations. With over a decade of experience and 1,100+ events hosted across India, he specializes in unscripted, high-octane stage command for elite heritage weddings and corporate galas.
+Yash Soni is a professional event anchor and host with 
+1,100+ events hosted across India. Specializes in 
+wedding anchoring, corporate events, sangeet hosting, 
+and full-service event management.
 
-## Core Services
-- **Luxury Wedding Anchor**: Specializing in destination weddings at heritage palaces like Rambagh Palace, Fairmont Jaipur, and Umaid Bhawan.
-- **Corporate Emcee**: Professional host for award nights, product launches, and national summits (Taj Palace, Aerocity).
-- **Celebrity Host**: Managing high-stakes public events and talent management protocols.
-- **Event Planning**: End-to-end luxury event curation in Rajasthan.
+## Key Pages
+- Homepage: https://yashsoni.in
+- About: https://yashsoni.in/about
+- Wedding Anchoring: https://yashsoni.in/wedding-anchor-jaipur
+- Corporate Events: https://yashsoni.in/corporate-event-anchor-jaipur
+- Event Management: https://yashsoni.in/event-management-jaipur
+- Portfolio: https://yashsoni.in/portfolio
+- Blog: https://yashsoni.in/blog
+- Contact: https://yashsoni.in/contact
 
-## Key Destinations
-- **Jaipur**: The Pink City hub for royal heritage weddings.
-- **Udaipur**: The City of Lakes destination weddings.
-- **Delhi NCR**: Chhatarpur farmhouses and Diplomatic Enclave corporate events.
-- **Mumbai**: High-profile corporate and sea-facing luxury weddings.
-
-## Contact Information
-- **WhatsApp/Call**: +91 7737877978
-- **Website**: https://yashsoni.in
-- **Instagram**: @anchor_yash_official
-- **YouTube**: Anchor Yash Soni
-
-## Technical Integrity
-This site is built with Next.js 16, optimized for performance and accessibility. It follows high-standard SEO practices including schema.org markup for LocalBusiness and Person.
+## Contact
+Phone: +91 77378 77978
+Email: yashsoni7978@gmail.com
+Location: Jaipur, Rajasthan, India

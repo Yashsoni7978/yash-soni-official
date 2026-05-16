@@ -143,6 +143,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <h1 className="sr-only">Best Event Anchor in Jaipur — Anchor Yash Soni</h1>
       
       {/* HERO — Now a Client Component for animations */}
       <HomeHero waLink={WA_LINK} />

@@ -142,9 +142,60 @@ export default function Contact() {
                <h3 className="text-xl font-display font-bold text-white mb-6">Common Inquiries</h3>
                <div className="border-t border-white/10">
                  <FAQItem q="Do you execute destination weddings outside Jaipur?" a="Yes. While our headquarters are in Jaipur, our logistical frameworks allow us to execute flawless destination weddings globally, including Goa and Dubai." />
+                 <FAQItem q="What information should I have ready before calling?" a="To get an accurate quote, please have your event dates, exact venue or city, estimated guest count, and the specific events you want hosted (e.g., Sangeet + Varmala vs Full Wedding)." />
+                 <FAQItem q="How far in advance should I book?" a="Peak season dates (October to February) book out 6-8 months in advance. We highly recommend blocking your date the moment your venue is finalized, as we strictly execute only one premier event per day." />
                  <FAQItem q="Can we schedule an in-person meeting?" a="Absolutely. For high-tier planning, we can schedule a consultation at our Jaipur office or via Zoom." />
                  <FAQItem q="What is the process to lock a date?" a="A 50% retainer is required to officially block the calendar date for our planning or anchoring services." />
                </div>
+            </div>
+            {/* What Happens After? */}
+            <div className="pt-4 border-t border-white/5">
+               <h3 className="text-xl font-display font-bold text-white mb-6">What Happens Next?</h3>
+               <p className="text-gray-400 font-light text-sm mb-6">We guarantee a response time within 2 hours during business hours. Our booking protocol is designed to be frictionless and entirely transparent.</p>
+               <div className="space-y-6">
+                 <div className="flex gap-4">
+                   <div className="w-8 h-8 rounded-full bg-[#111] border border-[#D4AF37]/30 flex items-center justify-center shrink-0">
+                     <span className="text-[#D4AF37] text-xs font-bold">1</span>
+                   </div>
+                   <div>
+                     <h4 className="text-white font-bold text-sm mb-1">The Discovery Call</h4>
+                     <p className="text-gray-400 text-sm font-light leading-relaxed">We hop on a quick 15-minute call to understand your vision, guest demographics, and venue logistics to determine if we are the perfect fit for your event.</p>
+                   </div>
+                 </div>
+                 <div className="flex gap-4">
+                   <div className="w-8 h-8 rounded-full bg-[#111] border border-[#D4AF37]/30 flex items-center justify-center shrink-0">
+                     <span className="text-[#D4AF37] text-xs font-bold">2</span>
+                   </div>
+                   <div>
+                     <h4 className="text-white font-bold text-sm mb-1">The Proposal & Retainer</h4>
+                     <p className="text-gray-400 text-sm font-light leading-relaxed">You receive a flat, transparent quote. Once approved, a 50% retainer locks Yash Soni exclusively for your date.</p>
+                   </div>
+                 </div>
+                 <div className="flex gap-4">
+                   <div className="w-8 h-8 rounded-full bg-[#111] border border-[#D4AF37]/30 flex items-center justify-center shrink-0">
+                     <span className="text-[#D4AF37] text-xs font-bold">3</span>
+                   </div>
+                   <div>
+                     <h4 className="text-white font-bold text-sm mb-1">The Blueprint Session</h4>
+                     <p className="text-gray-400 text-sm font-light leading-relaxed">30 days out, we finalize the entire run-of-show. We script the intros, design the crowd games, and coordinate directly with your DJ and technical teams.</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+            {/* Google Maps / Office */}
+            <div className="pt-4 border-t border-white/5">
+              <h3 className="text-xl font-display font-bold text-white mb-6">Our Headquarters</h3>
+              <div className="w-full h-64 rounded-2xl overflow-hidden border border-white/10 opacity-80 hover:opacity-100 transition-opacity">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d113941.05445214041!2d75.72624835492167!3d26.820251700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6d4f6a978f1%3A0xc3f170f381c8b3f!2sAnchor%20Yash%20Soni%20%7C%20Best%20Anchor%20in%20Jaipur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
           </div>
           {/* --- RIGHT SIDE: THE HUMANIZED WHATSAPP FORM --- */}

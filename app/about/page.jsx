@@ -61,8 +61,27 @@ export default function AboutPage() {
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yash Soni",
+    "jobTitle": "Event Anchor & Host",
+    "url": "https://yashsoni.in/about",
+    "sameAs": [
+      "https://instagram.com/anchor_yash_official",
+      "https://youtube.com/@anchor_yash",
+      "https://linkedin.com/in/anchoryashsoni"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Anchor Yash Soni Studio",
+      "url": "https://yashsoni.in"
+    }
+  };
+
   return (
     <main className="bg-[#050505] text-white overflow-x-hidden font-sans selection:bg-[#D4AF37] selection:text-black">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <style>{css}</style>
       {/* ══════════════════════════════════════
           1. MAGAZINE COVER HERO

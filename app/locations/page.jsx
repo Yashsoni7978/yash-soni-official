@@ -96,8 +96,21 @@ export default function LocationsPage() {
     });
   }, [search, selectedRegion]);
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Event Anchoring and Event Management",
+    "provider": {
+      "@type": "Person",
+      "name": "Anchor Yash Soni"
+    },
+    "areaServed": ALL_LOCATIONS.map(l => l.city),
+    "url": "https://yashsoni.in/locations"
+  };
+
   return (
     <main className="min-h-screen bg-[#050505] text-white pt-32 pb-24 font-sans selection:bg-[#D4AF37] selection:text-black">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       
       {/* 1. HERO SECTION */}
       <section className="relative px-6 max-w-7xl mx-auto mb-20 text-center">
@@ -196,24 +209,65 @@ export default function LocationsPage() {
         )}
       </section>
 
-      {/* 4. FOOTER NOTE */}
-      <section className="px-6 max-w-4xl mx-auto mt-20 pt-20 border-t border-white/5 text-center">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <Award className="w-6 h-6 text-[#D4AF37] mx-auto mb-3" />
-            <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-1">Standard Pricing</h4>
-            <p className="text-zinc-500 text-[10px] leading-relaxed">Tiered local pricing for Rajasthan, NCR, and Goa hubs.</p>
+      {/* --- NEW 600+ WORD SEO SECTION --- */}
+      <section className="px-6 max-w-4xl mx-auto mt-20 pt-20 border-t border-white/5 space-y-16 pb-20">
+        
+        {/* Introduction */}
+        <div className="space-y-6">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-white">
+            Pan-India Presence. <GoldTextureText>Global Standards.</GoldTextureText>
+          </h2>
+          <p className="text-gray-300 leading-relaxed font-light text-lg">
+            While Jaipur serves as the strategic headquarters for Anchor Yash Soni Studio, our execution capabilities span across 35+ major metropolitan and heritage cities across India. Destination events require more than just a loud voice on a microphone; they demand extreme logistical precision, cultural adaptability, and the ability to command crowds in entirely new environments. From the high-altitude acoustic challenges of Himalayan resorts in Shimla to the sprawling, open-air beach fronts of Goa, we bring the exact same flawless standard of event execution to every location.
+          </p>
+        </div>
+
+        {/* Why Location Matters */}
+        <div className="space-y-6 bg-[#0a0a0a] p-8 rounded-3xl border border-white/5">
+          <h3 className="text-2xl font-display font-bold text-white">Why Location Matters in Event Anchoring</h3>
+          <div className="space-y-4 text-gray-400 font-light leading-relaxed">
+            <p>
+              Every city has its own pulse, its own cultural nuances, and its own logistical hurdles. A Marwari wedding in Kolkata requires a completely different comedic register and traditional understanding than an NRI destination wedding in Pushkar or a high-octane corporate award night in Bangalore. 
+            </p>
+            <p>
+              Understanding regional dialects, knowing exactly how to bridge the gap between local traditions and modern entertainment, and having the network to handle technical emergencies in unfamiliar cities is what separates a local announcer from a national-level premium host. When you book Anchor Yash Soni for a destination event, you are not just flying in an emcee; you are importing an insurance policy against the unpredictability of remote event planning.
+            </p>
           </div>
-          <div>
-            <Compass className="w-6 h-6 text-[#D4AF37] mx-auto mb-3" />
-            <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-1">Global Travel</h4>
-            <p className="text-zinc-500 text-[10px] leading-relaxed">Available worldwide. Travel/stay logistics provided upon booking.</p>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="space-y-8">
+          <h3 className="text-3xl font-display font-bold text-white">Frequently Asked Questions</h3>
+          <div className="grid gap-4">
+            <div className="bg-[#0a0a0a] border border-white/5 p-6 rounded-2xl">
+              <h4 className="text-[#D4AF37] font-bold mb-2">Do you travel outside Jaipur?</h4>
+              <p className="text-gray-400 text-sm font-light leading-relaxed">Yes, extensively. Over 60% of our premium calendar involves outstation travel. We regularly execute weddings and corporate summits in Delhi NCR, Mumbai, Goa, Udaipur, and international destinations.</p>
+            </div>
+            <div className="bg-[#0a0a0a] border border-white/5 p-6 rounded-2xl">
+              <h4 className="text-[#D4AF37] font-bold mb-2">What cities have you anchored in?</h4>
+              <p className="text-gray-400 text-sm font-light leading-relaxed">We have successfully hosted over 1,100 events across 35+ cities including Agra, Alibaug, Bangalore, Chennai, Coorg, Hyderabad, Jodhpur, Kolkata, Mussoorie, and Varanasi. Check the grid above for our primary service areas.</p>
+            </div>
+            <div className="bg-[#0a0a0a] border border-white/5 p-6 rounded-2xl">
+              <h4 className="text-[#D4AF37] font-bold mb-2">Is there a travel fee for outstation events?</h4>
+              <p className="text-gray-400 text-sm font-light leading-relaxed">Yes. For all destination events outside of Jaipur city limits, travel (flights/premium ground transport), standard accommodation, and logistics are added to the retainer. This is transparently calculated and agreed upon during the initial contract phase.</p>
+            </div>
           </div>
-          <div>
-            <TrendingUp className="w-6 h-6 text-[#D4AF37] mx-auto mb-3" />
-            <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-1">One Lead Anchor</h4>
-            <p className="text-zinc-500 text-[10px] leading-relaxed">Yash personally hosts every event. No replacements ever.</p>
-          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center bg-gradient-to-br from-[#111] to-[#050505] p-12 rounded-[2.5rem] border border-[#D4AF37]/20 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37] opacity-[0.05] blur-[100px] rounded-full pointer-events-none"></div>
+          <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 relative z-10">
+            Planning a Destination Event?
+          </h3>
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto relative z-10">
+            Let's discuss the logistics. Secure your date early, as our calendar for destination weddings fills up 6-8 months in advance.
+          </p>
+          <Link href="/contact" className="inline-block relative z-10">
+            <div className="bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-black font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+              Check Availability
+            </div>
+          </Link>
         </div>
       </section>
 

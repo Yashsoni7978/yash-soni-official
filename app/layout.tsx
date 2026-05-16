@@ -1,4 +1,5 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 // @ts-nocheck
 import "./globals.css";
@@ -244,9 +245,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
         {/* ======================================================
-            FACEBOOK PIXEL — Replace YOUR_PIXEL_ID with actual ID
+            FACEBOOK PIXEL — Replace YOUR_ACTUAL_PIXEL_ID with actual ID
             ====================================================== */}
-        <script
+        <Script
+          id="fb-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -257,7 +260,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', 'YOUR_PIXEL_ID');
+              fbq('init', 'YOUR_ACTUAL_PIXEL_ID');
               fbq('track', 'PageView');
             `,
           }}

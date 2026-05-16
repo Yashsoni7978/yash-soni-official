@@ -28,8 +28,17 @@ export default function BlogPage() {
     p => p.id !== featured.id && p.id !== accent.id && p.id !== vertical.id
   );
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Anchor Yash Soni Blog",
+    "url": "https://yashsoni.in/blog",
+    "description": "Insights on event anchoring, wedding hosting and corporate events in Jaipur"
+  };
+
   return (
     <main className="min-h-screen bg-[#050505] pt-32 pb-20 font-sans selection:bg-[#D4AF37] selection:text-black">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       <div className="container mx-auto px-6 max-w-7xl text-white">
         <h1 className="text-7xl md:text-9xl font-black uppercase tracking-tighter mb-12 border-b border-white/10 pb-8 drop-shadow-2xl">
           <GoldTextureText>Blog</GoldTextureText>
