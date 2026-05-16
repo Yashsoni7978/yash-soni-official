@@ -1,3 +1,4 @@
+import Script from 'next/script';
 /* eslint-disable @next/next/no-sync-scripts */
 export const metadata = {
   title: "Event Designing Jaipur | 3D Renders & Floral Sets | Anchor Yash Soni",

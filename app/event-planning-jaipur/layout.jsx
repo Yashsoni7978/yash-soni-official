@@ -1,3 +1,4 @@
+import Script from 'next/script';
 /* eslint-disable @next/next/no-sync-scripts */
 export const metadata = {
   title: "Event Planners in Jaipur | Social & Corporate Events | Anchor Yash Soni",

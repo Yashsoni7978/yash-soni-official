@@ -1,3 +1,4 @@
+import Script from 'next/script';
 /* eslint-disable @next/next/no-sync-scripts */
 export const metadata = {
   title: "Wedding Planners in Jaipur | Turnkey Logistics | Anchor Yash Soni",

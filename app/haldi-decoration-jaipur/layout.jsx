@@ -1,3 +1,4 @@
+import Script from 'next/script';
 /* eslint-disable @next/next/no-sync-scripts */
 export const metadata = {
   title: "Haldi Decoration Jaipur | Haldi Ceremony Planner | Anchor Yash Soni",
