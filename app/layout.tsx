@@ -2,10 +2,10 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 // @ts-nocheck
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Script from "next/script";
+import HeaderController from "../components/HeaderController";
+import FooterController from "../components/FooterController";
 import FloatingContact from "../components/FloatingContact";
+
 
 import { Playfair_Display, Cormorant_Garamond, Cinzel, Great_Vibes, Montserrat, Spectral } from "next/font/google";
 
@@ -13,44 +13,38 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  weight: ["400", "700", "900"],
-});
+  weight: ["400", "700", "900"] });
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
   display: "swap",
   weight: ["300", "400", "600"],
-  style: ["normal", "italic"],
-});
+  style: ["normal", "italic"] });
 
 const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-cinzel",
   display: "swap",
-  weight: ["400", "700", "900"],
-});
+  weight: ["400", "700", "900"] });
 
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
   variable: "--font-great-vibes",
   display: "swap",
-  weight: ["400"],
-});
+  weight: ["400"] });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
   display: "swap",
-  weight: ["300", "400", "700"],
-});
+  weight: ["300", "400", "700"] });
 
 const spectral = Spectral({
   subsets: ["latin"],
   variable: "--font-spectral",
   display: "swap",
-  weight: ["300", "400", "700"],
-});
+  weight: ["300", "400", "700"] });
 
 
 // ═══════════════════════════════════════════════════════════
@@ -95,9 +89,7 @@ export const metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+      'max-snippet': -1 } },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -109,23 +101,18 @@ export const metadata = {
       url: "/og-image.webp",
       width: 1200,
       height: 630,
-      alt: "Anchor Yash Soni — Best Anchor in Jaipur on stage",
-    }],
-  },
+      alt: "Anchor Yash Soni — Best Anchor in Jaipur on stage" }] },
   twitter: {
     card: "summary_large_image",
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description: "1100+ events. Jaipur's most commanding anchor for weddings, corporate events & Sangeets.",
-    images: ["/og-image.webp"],
-  },
+    images: ["/og-image.webp"] },
   icons: {
     icon: "/favicon.webp",
     shortcut: "/favicon.webp",
-    apple: "/favicon.webp",
-  },
+    apple: "/favicon.webp" },
   verification: {
-    google: "yashsoniaudit",
-  }
+    google: "yashsoniaudit" }
 };
 
 // ═══════════════════════════════════════════════════════════
@@ -256,15 +243,44 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        {/* ======================================================
+            FACEBOOK PIXEL — Replace YOUR_PIXEL_ID with actual ID
+            ====================================================== */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', 'YOUR_PIXEL_ID');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </head>
       <body className="bg-black text-white antialiased relative">
         <header className="fixed top-0 left-0 w-full z-[10000]">
-          <Navbar />
+          <HeaderController />
         </header>
         <main id="main-content" className="min-h-screen relative z-0 pt-20 md:pt-24 lg:pt-28">
           {children}
         </main>
-        <Footer />
+        <FooterController />
         <FloatingContact />
         <GoogleAnalytics gaId="G-JYPPJ3TDHB" />
       </body>

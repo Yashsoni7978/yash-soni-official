@@ -60,13 +60,12 @@ export default function WeddingCateringJaipur() {
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <Image
-                src={heroImages[currentImageIndex]}
+              <Image src={heroImages[currentImageIndex]}
                 alt="Wedding Catering Jaipur"
                 fill
                 className="object-cover object-top"
                 priority
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -135,13 +134,13 @@ export default function WeddingCateringJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/luxury_dining_setup.webp" alt="Luxury Dining" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/luxury_dining_setup.webp" alt="Luxury Dining" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/ivory_vintage_car_1776854011319.webp" alt="High Tea" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/ivory_vintage_car_1776854011319.webp" alt="High Tea" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/theme_wedding_setup.webp" alt="Cocktail Bar" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/theme_wedding_setup.webp" alt="Cocktail Bar" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </div>
         </motion.div>
@@ -175,7 +174,7 @@ export default function WeddingCateringJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Silver service, multi-course meals</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Dining" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Dining" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -185,7 +184,7 @@ export default function WeddingCateringJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Sushi, Tapas, Wood-fired Pizzas</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Stations" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Stations" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -195,7 +194,7 @@ export default function WeddingCateringJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Laal Maas, Dal Baati, Ghevar</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/palace_wedding_decor.webp" alt="Rajasthani" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/palace_wedding_decor.webp" alt="Rajasthani" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -205,7 +204,7 @@ export default function WeddingCateringJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-600">Craft cocktails & molecular bars</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-white mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/ivory_vintage_car_1776854011319.webp" alt="Bar" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/ivory_vintage_car_1776854011319.webp" alt="Bar" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -231,7 +230,7 @@ export default function WeddingCateringJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-white rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.05)] flex flex-col group hover:-translate-y-2 transition-all duration-500">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Food Presentation" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Food Presentation" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#1A1A1A] mb-4">Exquisite Presentation</h3>
@@ -245,7 +244,7 @@ export default function WeddingCateringJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(180,83,9,0.15)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#B45309] to-[#78350F]">
               <div className="absolute inset-0 opacity-20 bg-[url('/jodhpur.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Service" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Service" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-[#FAF9F6] mb-4 flex items-center gap-4">
@@ -288,7 +287,7 @@ export default function WeddingCateringJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#B45309] to-[#78350F] p-8 text-[#FAF9F6] rounded-tl-3xl">
               <div className="absolute inset-0 opacity-20 bg-[url('/jodhpur.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">50K+</span>
@@ -310,7 +309,7 @@ export default function WeddingCateringJaipur() {
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
               He works strictly with India's top F&B vendors, ensuring that the butter chicken served at 2 AM is just as hot and perfect as the first plate at 8 PM.
             </p>
-            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
+            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" quality={75} />
           </motion.div>
         </div>
       </section>
@@ -344,7 +343,7 @@ export default function WeddingCateringJaipur() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
                   </div>
                 </div>
               </motion.div>
@@ -361,7 +360,7 @@ export default function WeddingCateringJaipur() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover" />
+          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover" quality={75} />
           <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#1A1A1A] mb-8">Zero Bottlenecks</h2>
           <p className="font-sans text-2xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
             There is nothing worse than guests waiting in long lines for food. We mathematically calculate the exact number of live counters and buffet lines needed so nobody ever waits.
@@ -380,7 +379,7 @@ export default function WeddingCateringJaipur() {
             "/premium_events/palace_wedding_decor.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden">
-              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </div>
           ))}
         </div>

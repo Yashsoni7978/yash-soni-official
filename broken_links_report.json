@@ -1,0 +1,92 @@
+[
+  {
+    "file": "audit_links.js",
+    "url": "...",
+    "originalUrl": "..."
+  },
+  {
+    "file": "audit_links.js",
+    "url": "[^\"']+",
+    "originalUrl": "[^\"']+"
+  },
+  {
+    "file": "data\\blogs.js",
+    "url": "/bride-groom-haldi-celebration.webp",
+    "originalUrl": "/bride-groom-haldi-celebration.webp"
+  },
+  {
+    "file": "data\\blogs.js",
+    "url": "/bride-groom-flower-petals.webp",
+    "originalUrl": "/bride-groom-flower-petals.webp"
+  },
+  {
+    "file": "data\\blogs.js",
+    "url": "/vintage-car-couple-shoot.webp",
+    "originalUrl": "/vintage-car-couple-shoot.webp"
+  },
+  {
+    "file": "data\\blogs.js",
+    "url": "/rajasthani-artist-fort-entry.webp",
+    "originalUrl": "/rajasthani-artist-fort-entry.webp"
+  },
+  {
+    "file": "data\\blogs.js",
+    "url": "/varmala-fireworks-color-shots.webp",
+    "originalUrl": "/varmala-fireworks-color-shots.webp"
+  },
+  {
+    "file": "data\\blogs_14_15.js",
+    "url": "2026-2027",
+    "originalUrl": "2026-2027"
+  },
+  {
+    "file": "data\\blogs_20_21.js",
+    "url": "2026-2027 Complete Guide",
+    "originalUrl": "2026-2027 Complete Guide"
+  },
+  {
+    "file": "data\\blogs_22_23.js",
+    "url": "Free & Paid",
+    "originalUrl": "Free & Paid"
+  },
+  {
+    "file": "fix_broken_links.js",
+    "url": "[^\"']+",
+    "originalUrl": "[^\"']+"
+  },
+  {
+    "file": "fix_broken_links.js",
+    "url": "link",
+    "originalUrl": "link"
+  },
+  {
+    "file": "fix_links_batch.js",
+    "url": "\\/locations",
+    "originalUrl": "\\/locations"
+  },
+  {
+    "file": "live_audit.js",
+    "url": "[^\"']+",
+    "originalUrl": "[^\"']+"
+  },
+  {
+    "file": "live_audit.js",
+    "url": "[^\"']+",
+    "originalUrl": "[^\"']+"
+  },
+  {
+    "file": "live_audit.js",
+    "url": "[^\"']+",
+    "originalUrl": "[^\"']+"
+  },
+  {
+    "file": "scratch\\canonicalize_links.js",
+    "url": "\\/locations",
+    "originalUrl": "\\/locations"
+  },
+  {
+    "file": "scratch\\canonicalize_links.js",
+    "url": "\\/best-anchor-in-jaipur",
+    "originalUrl": "\\/best-anchor-in-jaipur"
+  }
+]

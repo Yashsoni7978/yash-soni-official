@@ -60,13 +60,12 @@ export default function CorporateEventManagement() {
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <Image
-                src={heroImages[currentImageIndex]}
+              <Image src={heroImages[currentImageIndex]}
                 alt="Corporate Event Management Company"
                 fill
                 className="object-cover object-top opacity-70"
                 priority
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -135,13 +134,13 @@ export default function CorporateEventManagement() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/corporate_gala_setup.webp" alt="Corporate Gala" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/corporate_gala_setup.webp" alt="Corporate Gala" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Award Shows" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Award Shows" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </div>
         </motion.div>
@@ -175,7 +174,7 @@ export default function CorporateEventManagement() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Award Nights & Recognitions</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#1E293B] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/corporate_gala_setup.webp" alt="Galas" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/corporate_gala_setup.webp" alt="Galas" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -185,7 +184,7 @@ export default function CorporateEventManagement() {
                 <p className="font-sans text-xs md:text-sm text-gray-300">Summits & Dealer Meets</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#334155] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Conferences" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Conferences" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -195,7 +194,7 @@ export default function CorporateEventManagement() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Theatrical reveal setups</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#0F172A] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Launches" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Launches" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -205,7 +204,7 @@ export default function CorporateEventManagement() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Corporate Offsites & Retreats</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#020617] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="MICE" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="MICE" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -231,7 +230,7 @@ export default function CorporateEventManagement() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-[#0F172A] rounded-2xl overflow-hidden shadow-2xl flex flex-col group hover:-translate-y-2 transition-all duration-500 border border-white/5">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Production" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Production" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4">A/V & Tech Production</h3>
@@ -245,7 +244,7 @@ export default function CorporateEventManagement() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(30,58,138,0.2)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#1E3A8A] to-[#0F172A]">
               <div className="absolute inset-0 opacity-10 bg-[url('/kota.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Booking" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Booking" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4 flex items-center gap-4">
@@ -288,7 +287,7 @@ export default function CorporateEventManagement() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#1E3A8A] to-[#0F172A] p-8 text-[#FAF9F6] rounded-tl-3xl border-t border-l border-white/10">
               <div className="absolute inset-0 opacity-10 bg-[url('/kota.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">500+</span>
@@ -310,7 +309,7 @@ export default function CorporateEventManagement() {
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
               He knows that a CEO's microphone cannot drop out, the awards graphics must match the winners perfectly, and the branding must be absolutely pristine. He brings this stage-level perfection to the entire event planning process.
             </p>
-            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
+            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" quality={75} />
           </motion.div>
         </div>
       </section>
@@ -344,7 +343,7 @@ export default function CorporateEventManagement() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg border border-white/10">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
                   </div>
                 </div>
               </motion.div>
@@ -361,7 +360,7 @@ export default function CorporateEventManagement() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover opacity-50 grayscale" />
+          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover opacity-50 grayscale" quality={75} />
           <h2 className="font-['Runiga'] text-5xl md:text-7xl text-white mb-8">Crisis Management</h2>
           <p className="font-sans text-2xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
             Corporate events operate on tight schedules. We deploy shadow teams with backup microphones, backup generators, and secondary plans. We do not hope for the best; we engineer it.
@@ -380,7 +379,7 @@ export default function CorporateEventManagement() {
             "/premium_events/grand_wedding_venue.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden border border-white/10">
-              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </div>
           ))}
         </div>

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/destination-wedding-anchor/layout.jsx
 // SERVER COMPONENT — national-rank SEO metadata
 const serviceSchema = {

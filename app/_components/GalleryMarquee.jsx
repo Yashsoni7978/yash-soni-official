@@ -19,14 +19,12 @@ export const GalleryMarquee = ({ images }) => {
         <div className="flex gap-4 md:gap-6 animate-marquee-slow hover:[animation-play-state:paused] w-max pl-5">
           {[...images, ...images, ...images].map((img, i) => (
             <div key={i} className="relative w-[220px] md:w-[320px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shrink-0 group">
-              <Image
-                src={img}
+              <Image src={img}
                 alt={`Anchor Yash Soni live moment ${(i % 6) + 1}`}
                 fill 
                 sizes="(max-width: 768px) 50vw, 33vw"
                 quality={65}
-                className="object-cover transition-transform duration-700 group-hover:scale-108 grayscale group-hover:grayscale-0"
-              />
+                className="object-cover transition-transform duration-700 group-hover:scale-108 grayscale group-hover:grayscale-0" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
           ))}

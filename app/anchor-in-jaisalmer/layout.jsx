@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-jaisalmer/layout.jsx
 // Golden Fort & Desert Wedding Anchor — Full Triple Schema + Rich SEO Layout
 

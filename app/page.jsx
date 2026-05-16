@@ -193,26 +193,22 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3 md:gap-4">
               <ScrollReveal delay={0.15}>
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 group transition-all duration-500">
-                  <Image 
-                    src="/intro-portrait-top.webp" 
+                  <Image src="/intro-portrait-top.webp" 
                     alt="Anchor Yash Soni professional portrait" 
                     fill 
                     sizes="(max-width: 768px) 50vw, 33vw"
                     quality={70} 
-                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
-                  />
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={0.25} className="mt-8 md:mt-12">
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 group transition-all duration-500">
-                  <Image 
-                    src="/intro-portrait-bottom.webp" 
+                  <Image src="/intro-portrait-bottom.webp" 
                     alt="Anchor Yash Soni engaging with a wedding crowd" 
                     fill 
                     sizes="(max-width: 768px) 50vw, 33vw"
                     quality={70} 
-                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
-                  />
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
               </ScrollReveal>
             </div>
@@ -239,14 +235,12 @@ export default function HomePage() {
               <ScrollReveal key={i} delay={i * 0.12}>
                 <Link href={s.href}>
                   <div className="relative h-[440px] md:h-[520px] rounded-2xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.25)] cursor-pointer">
-                    <Image 
-                      src={s.img} 
+                    <Image src={s.img} 
                       alt={`${s.title} — Anchor Yash Soni`} 
                       fill 
                       sizes="(max-width: 768px) 100vw, 33vw"
                       quality={70} 
-                      className="object-cover transition-transform duration-700 group-hover:scale-110" 
-                    />
+                      className="object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent opacity-90 group-hover:opacity-75 transition-opacity" />
                     <div className="absolute top-4 left-4">
                       <span className="text-[10px] uppercase tracking-widest bg-[#D4AF37] text-black px-3 py-1 rounded-full font-bold">{s.tag}</span>

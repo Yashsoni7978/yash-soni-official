@@ -14,23 +14,13 @@ import { ArrowRight, Award, Building2, CalendarCheck, CheckCircle2, Globe, Heart
 // ─────────────────────────────────────────────
 const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20looking%20for%20a%20corporate%20event%20anchor%20in%20Jaipur.%20I%27d%20like%20to%20check%20availability.";
 const GOLD = "#D4AF37";
-// Blue is the corporate identity accent — kept throughout
-const BLUE = "#3b82f6";
-const css = `
+// Blue is the corporate identity accent — kept throughoutconst css = `
   @keyframes shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
   .gold-shimmer { background-size:200% auto; animation:shimmer 4s linear infinite; }
 `;
 // ─────────────────────────────────────────────
 // HELPERS
 // ─────────────────────────────────────────────
-const G = ({ children, className = "" }) => (
-  <span
-    className={`bg-clip-text text-transparent bg-cover bg-center gold-shimmer ${className}`}
-    style={{ backgroundImage: "linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)", backgroundColor: GOLD }}
-  >
-    {children}
-  </span>
-);
 // Corporate blue accent — the page's personality color
 const B = ({ children, className = "" }) => (
   <span className={`text-blue-400 ${className}`}>{children}</span>
@@ -80,161 +70,130 @@ const FORMATS = [
   {
     icon: Award,
     title: "Award Nights",
-    desc: "High-energy hosting through 50+ award categories without the audience ever losing interest. Every announcement is a moment, not a formality.",
-  },
+    desc: "High-energy hosting through 50+ award categories without the audience ever losing interest. Every announcement is a moment, not a formality." },
   {
     icon: TrendingUp,
     title: "Conferences & Summits",
-    desc: "Formal, articulate, brand-aligned. Panel moderation, keynote introductions, Q&A management — all handled with the gravitas the room demands.",
-  },
+    desc: "Formal, articulate, brand-aligned. Panel moderation, keynote introductions, Q&A management — all handled with the gravitas the room demands." },
   {
     icon: Users,
     title: "Product Launches",
-    desc: "Building the hype before the reveal. Working with light and sound teams to create a cinematic product moment that makes headlines.",
-  },
+    desc: "Building the hype before the reveal. Working with light and sound teams to create a cinematic product moment that makes headlines." },
   {
     icon: Mic2,
     title: "Gala Dinners",
-    desc: "The perfect blend of formal authority and sharp wit. VIPs feel honoured, the table stays engaged, and the brand leaves an impression.",
-  },
+    desc: "The perfect blend of formal authority and sharp wit. VIPs feel honoured, the table stays engaged, and the brand leaves an impression." },
   {
     icon: Building2,
     title: "Dealer & Distributor Meets",
-    desc: "Motivating your sales network. High-octane anchoring that leaves your partners feeling energised, valued, and loyal to the brand.",
-  },
+    desc: "Motivating your sales network. High-octane anchoring that leaves your partners feeling energised, valued, and loyal to the brand." },
   {
     icon: Globe,
     title: "Team Building Events",
-    desc: "Interactive activities that break silos. A group of colleagues becomes a cohesive team through intelligent, energetic engagement.",
-  },
+    desc: "Interactive activities that break silos. A group of colleagues becomes a cohesive team through intelligent, energetic engagement." },
 ];
 const VENUES = [
   {
     venue: "JECC Sitapura",
     type: "Large-Format Corporate Events",
     desc: "Jaipur's largest convention centre. National brand summits, government events, and industry galas. Yash has hosted events here for 1,000+ delegates.",
-    keywords: ["Corporate anchor JECC Sitapura", "Anchor JECC Jaipur"],
-  },
+    keywords: ["Corporate anchor JECC Sitapura", "Anchor JECC Jaipur"] },
   {
     venue: "JLN Marg — Marriott & Fairmont",
     type: "5-Star Hotel Corporate Events",
     desc: "CEO dinners, brand launches, and international delegation events at Jaipur's luxury hotel corridor. Broadcast-ready precision.",
-    keywords: ["Corporate anchor JLN Marg", "Anchor Marriott Jaipur"],
-  },
+    keywords: ["Corporate anchor JLN Marg", "Anchor Marriott Jaipur"] },
   {
     venue: "Birla Auditorium",
     type: "Conferences & Cultural Events",
     desc: "Jaipur's premier auditorium. Academic conferences, national brand presentations, and large-scale award ceremonies.",
-    keywords: ["Anchor Birla Auditorium Jaipur", "Conference host Jaipur"],
-  },
+    keywords: ["Anchor Birla Auditorium Jaipur", "Conference host Jaipur"] },
   {
     venue: "Tonk Road & Malviya Nagar",
     type: "Corporate Campuses & Hubs",
     desc: "IT parks, corporate campuses, and business parks. Annual Day celebrations, townhalls, and employee engagement events.",
-    keywords: ["Corporate anchor Tonk Road", "Anchor Malviya Nagar Jaipur"],
-  },
+    keywords: ["Corporate anchor Tonk Road", "Anchor Malviya Nagar Jaipur"] },
 ];
 const CAPABILITIES = [
   {
     title: "Brand Guardian",
-    desc: "I represent your brand on stage. I dress the part, speak the language, and adhere strictly to your company tone and guidelines. The CEO never winces.",
-  },
+    desc: "I represent your brand on stage. I dress the part, speak the language, and adhere strictly to your company tone and guidelines. The CEO never winces." },
   {
     title: "Crisis Management",
-    desc: "Mic failure? Keynote speaker late? I fill dead air seamlessly with intelligent engagement so the audience never notices a glitch. In 1,100+ events, not once.",
-  },
+    desc: "Mic failure? Keynote speaker late? I fill dead air seamlessly with intelligent engagement so the audience never notices a glitch. In 1,100+ events, not once." },
   {
     title: "Audience Retention",
-    desc: "Sharp wit and interactive segments keep energy high during long conferences. Your message doesn't just get delivered — it actually lands.",
-  },
+    desc: "Sharp wit and interactive segments keep energy high during long conferences. Your message doesn't just get delivered — it actually lands." },
   {
     title: "Broadcast Ready",
-    desc: "Televised events, livestreams, and recorded productions. Teleprompter-trained. Clean transitions. Zero on-air errors. The media team relaxes.",
-  },
+    desc: "Televised events, livestreams, and recorded productions. Teleprompter-trained. Clean transitions. Zero on-air errors. The media team relaxes." },
 ];
 const PROCESS = [
   {
     step: "01",
     title: "The Briefing",
-    desc: "We hop on a call. I understand your brand tone, audience profile, key messages, and the one thing you need the event to achieve.",
-  },
+    desc: "We hop on a call. I understand your brand tone, audience profile, key messages, and the one thing you need the event to achieve." },
   {
     step: "02",
     title: "Scripting & Flow",
-    desc: "I help refine the run-of-show and prepare a script that balances information with engagement. No generic templates — custom every time.",
-  },
+    desc: "I help refine the run-of-show and prepare a script that balances information with engagement. No generic templates — custom every time." },
   {
     step: "03",
     title: "The Sound Check",
-    desc: "I arrive 2 hours early. Mic, lighting, stage entry, console team sync. Zero technical surprises on the day.",
-  },
+    desc: "I arrive 2 hours early. Mic, lighting, stage entry, console team sync. Zero technical surprises on the day." },
   {
     step: "04",
     title: "The Execution",
-    desc: "I take the stage. Time managed, energy controlled, audience engaged. The result: you look exceptional and the brand wins.",
-  },
+    desc: "I take the stage. Time managed, energy controlled, audience engaged. The result: you look exceptional and the brand wins." },
 ];
 const TESTIMONIALS = [
   {
     name: "Events Head, National Brand",
     quote: "Yash anchored our annual awards at JECC Sitapura for 1,200 delegates. He made 58 award categories feel like 58 distinct moments. Zero dead air, perfect timing, and the CEO specifically asked for his name for next year.",
     event: "Annual Awards Night · JECC Sitapura, Jaipur",
-    guests: "1,200 delegates",
-  },
+    guests: "1,200 delegates" },
   {
     name: "Marketing Director",
     quote: "Our product launch at the Marriott needed a presenter who could match the brand's premium positioning. Yash arrived with research, delivered clean transitions on a broadcast feed, and the product moment landed exactly as designed.",
     event: "Product Launch · JLN Marg, Jaipur",
-    guests: "Live broadcast event",
-  },
+    guests: "Live broadcast event" },
   {
     name: "HR Director, Corporate Group",
     quote: "Annual Day for 800 employees. Yash handled the awards, the performances, the CEO speech transitions, and the after-party MC role — all in one evening. Seamless.",
     event: "Annual Day · Corporate Campus, Jaipur",
-    guests: "800 employees",
-  },
+    guests: "800 employees" },
 ];
 const FAQS = [
   {
     q: "Who is the best corporate event anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated corporate event anchor with 1,100+ events hosted and 70+ national brands served. He specialises in award nights, conferences, product launches, gala dinners, dealer meets, and annual day celebrations at venues including JECC Sitapura, Birla Auditorium, Marriott Jaipur, Fairmont, and corporate campuses across Jaipur.",
-  },
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated corporate event anchor with 1,100+ events hosted and 70+ national brands served. He specialises in award nights, conferences, product launches, gala dinners, dealer meets, and annual day celebrations at venues including JECC Sitapura, Birla Auditorium, Marriott Jaipur, Fairmont, and corporate campuses across Jaipur." },
   {
     q: "Do you provide a GST invoice for corporate bookings?",
-    a: "Yes. A fully compliant GST invoice is issued for every corporate booking. The booking process includes a formal agreement, advance confirmation, and complete documentation for your accounts team.",
-  },
+    a: "Yes. A fully compliant GST invoice is issued for every corporate booking. The booking process includes a formal agreement, advance confirmation, and complete documentation for your accounts team." },
   {
     q: "Are you comfortable with teleprompters for televised events?",
-    a: "Yes. For high-stakes summits, product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining full eye contact with a live audience — so it never looks scripted on camera — is a trained skill that comes from experience.",
-  },
+    a: "Yes. For high-stakes summits, product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining full eye contact with a live audience — so it never looks scripted on camera — is a trained skill that comes from experience." },
   {
     q: "Can you moderate panel discussions and Q&A sessions?",
-    a: "Yes. Panel moderation includes pre-event research into each speaker's recent work and positions, preparation of insightful questions, and real-time management of audience Q&A. The discussion flows, stays on time, and the panellists feel respected.",
-  },
+    a: "Yes. Panel moderation includes pre-event research into each speaker's recent work and positions, preparation of insightful questions, and real-time management of audience Q&A. The discussion flows, stays on time, and the panellists feel respected." },
   {
     q: "Do you travel for corporate events outside Jaipur?",
-    a: "Yes. While Jaipur is the base, corporate events in Delhi, Mumbai, Bangalore, and other cities are a regular part of the calendar. A significant portion of corporate work happens outside Rajasthan. Travel and accommodation are typically arranged by the client as part of the engagement terms.",
-  },
+    a: "Yes. While Jaipur is the base, corporate events in Delhi, Mumbai, Bangalore, and other cities are a regular part of the calendar. A significant portion of corporate work happens outside Rajasthan. Travel and accommodation are typically arranged by the client as part of the engagement terms." },
   {
     q: "How do you handle audience engagement in long conferences?",
-    a: "Long conferences lose audiences in the gaps between sessions. The craft is in managing those transitions — using sharp wit, brief interactive moments, and energy pivots at exactly the right points. The audience stays present and your message gets through. This is what 70+ corporate brands have paid for.",
-  },
+    a: "Long conferences lose audiences in the gaps between sessions. The craft is in managing those transitions — using sharp wit, brief interactive moments, and energy pivots at exactly the right points. The audience stays present and your message gets through. This is what 70+ corporate brands have paid for." },
   {
     q: "Can you anchor both the formal ceremony and the gala dinner afterparty?",
-    a: "Yes. Shifting from formal award ceremony to high-energy gala entertainment in the same evening — without the room noticing the gear change — is a core corporate skill. Both registers are mastered.",
-  },
+    a: "Yes. Shifting from formal award ceremony to high-energy gala entertainment in the same evening — without the room noticing the gear change — is a core corporate skill. Both registers are mastered." },
   {
     q: "What is your approach to brand alignment on stage?",
-    a: "I read the brand brief before every event. Tone of voice, prohibited language, key messages to reinforce, and the exact persona the brand wants on stage. I dress the part, speak the part, and never deviate from the brand's positioning. No freelancing.",
-  },
+    a: "I read the brand brief before every event. Tone of voice, prohibited language, key messages to reinforce, and the exact persona the brand wants on stage. I dress the part, speak the part, and never deviate from the brand's positioning. No freelancing." },
   {
     q: "How far in advance should corporate events be booked?",
-    a: "For large-format corporate events at JECC Sitapura and five-star venues, 3–4 months in advance is recommended during peak season. Annual Day events and Q4 award nights book even faster. Reach out via WhatsApp as soon as the venue is confirmed.",
-  },
+    a: "For large-format corporate events at JECC Sitapura and five-star venues, 3–4 months in advance is recommended during peak season. Annual Day events and Q4 award nights book even faster. Reach out via WhatsApp as soon as the venue is confirmed." },
   {
     q: "What sets Anchor Yash apart from other corporate anchors in Jaipur?",
-    a: "Three things: First, 70+ national brands served — the experience shows. Second, completely unscripted crisis management — PA failures, delayed speakers, schedule overruns all handled invisible to the audience. Third, broadcast-ready precision — for events that are recorded or livestreamed, there are zero on-air errors.",
-  },
+    a: "Three things: First, 70+ national brands served — the experience shows. Second, completely unscripted crisis management — PA failures, delayed speakers, schedule overruns all handled invisible to the audience. Third, broadcast-ready precision — for events that are recorded or livestreamed, there are zero on-air errors." },
 ];
 const RELATED = [
   { icon: Award, label: "Celebrity Events", href: "/celebrity-public-events-host", desc: "Launches & public events" },
@@ -298,9 +257,7 @@ export default function CorporateAnchor() {
     mainEntity: FAQS.map(faq => ({
       "@type": "Question",
       name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a },
-    })),
-  };
+      acceptedAnswer: { "@type": "Answer", text: faq.a } })) };
   return (
     // selection: gold brand color, not blue
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
@@ -319,13 +276,12 @@ export default function CorporateAnchor() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-blue-900/10 z-10" />
           {/* FIX: next/image replaces <img> */}
-          <Image
-            src="/service-corporate.webp"
+          <Image src="/service-corporate.webp"
             alt="Best corporate event anchor in Jaipur — Anchor Yash Soni on stage"
             fill priority
             className="object-cover opacity-50 grayscale"
             sizes="100vw"
-          />
+          quality={75} />
         </div>
         <div className="relative z-20 container mx-auto px-5 md:px-10">
           <div className="max-w-5xl">
@@ -422,13 +378,12 @@ export default function CorporateAnchor() {
           <SectionHeading subtitle="Watch The Reel" title="In Action." align="center" />
           <div className="relative aspect-video w-full max-w-4xl mx-auto bg-black rounded-2xl overflow-hidden border border-white/8 shadow-2xl group cursor-pointer hover:border-blue-500/40 transition-colors duration-400">
             {/* FIX: next/image replaces <img> */}
-            <Image
-              src="/gallery-5.webp"
+            <Image src="/gallery-5.webp"
               alt="Anchor Yash Soni corporate event showreel Jaipur"
               fill
               className="object-cover opacity-60 group-hover:opacity-80 transition-all duration-500"
               sizes="(max-width:1024px) 100vw, 896px"
-            />
+            quality={75} />
             <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer"
               className="absolute inset-0 flex items-center justify-center">
               <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">

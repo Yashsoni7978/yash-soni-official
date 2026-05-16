@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-ranthambore/layout.jsx
 const CITY     = "Ranthambore";
 const SLUG     = "anchor-in-ranthambore";

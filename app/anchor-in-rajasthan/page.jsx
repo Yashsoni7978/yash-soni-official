@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { ArrowRight, Award, Building2, CalendarCheck, Camera, CheckCircle2, ChevronRight, Crown, Globe, Heart, Landmark, MapPin, Mic2, Minus, Music2, Plus, Sparkles, Star, Users, Zap } from "lucide-react";
+import { Building2, CalendarCheck, ChevronRight, Crown, Globe, Heart, MapPin, Mic2, Minus, Music2, Plus, Sparkles, Star, Users } from "lucide-react";
 
 
 
@@ -100,99 +100,85 @@ const CITIES = [
     href: "/anchor-in-jaipur",
     venues: "Rambagh Palace · Fairmont · Leela · JECC · Amer Road",
     desc: "The Pink City headquarters. Palace buyouts, corporate summits at JECC, and every format of wedding. Deep venue relationships at every major property.",
-    highlight: true,
-  },
+    highlight: true },
   {
     city: "Udaipur",
     tag: "Lake City",
     href: "/anchor-in-udaipur",
     venues: "Taj Lake Palace · Udaivilas · Leela Udaipur · RAAS",
-    desc: "Rajasthan's most romantic destination. NRI families choose Udaipur first—requires international protocols and deep venue knowledge.",
-  },
+    desc: "Rajasthan's most romantic destination. NRI families choose Udaipur first—requires international protocols and deep venue knowledge." },
   {
     city: "Jodhpur",
     tag: "Blue City",
     href: "/anchor-in-jodhpur",
     venues: "Umaid Bhawan · Mehrangarh Fort · RAAS · Ajit Bhawan",
-    desc: "Umaid Bhawan Palace and Mehrangarh Fort. These venues demand a hosting register that matches the grandeur of royal architecture.",
-  },
+    desc: "Umaid Bhawan Palace and Mehrangarh Fort. These venues demand a hosting register that matches the grandeur of royal architecture." },
   {
     city: "Jaisalmer",
     tag: "Desert City",
     href: "/anchor-in-jaisalmer",
     venues: "Suryagarh · Serai · Marriott · Desert Camps",
-    desc: "Open-air desert weddings with acoustic challenges. Sufi night Sangeets and dune ceremonies require specialized energy management.",
-  },
+    desc: "Open-air desert weddings with acoustic challenges. Sufi night Sangeets and dune ceremonies require specialized energy management." },
   {
     city: "Pushkar",
     tag: "Spiritual City",
     href: "/anchor-in-pushkar",
     venues: "Westin Pushkar · Ananta Spa · Tivoli",
-    desc: "Bohemian destination weddings and pool party Haldis. The Pushkar crowd is typically younger and expects high-energy modern anchoring.",
-  },
+    desc: "Bohemian destination weddings and pool party Haldis. The Pushkar crowd is typically younger and expects high-energy modern anchoring." },
   {
     city: "Alwar & Sariska",
     tag: "Heritage Gateway",
     href: "/anchor-in-alwar",
     venues: <span className="pointer-events-auto"><Link href="/anchor-in-neemrana" className="hover:text-white underline decoration-[#D4AF37]">Neemrana Fort</Link> · Tijara Fort · Sariska Palace</span>,
-    desc: "Close to Delhi NCR, perfect for weekend destination weddings. High-end heritage properties requiring royal yet accessible hosting.",
-  },
+    desc: "Close to Delhi NCR, perfect for weekend destination weddings. High-end heritage properties requiring royal yet accessible hosting." },
   {
     city: "Ranthambore",
     tag: "Wilderness Luxe",
     href: "/anchor-in-ranthambore",
     venues: "Six Senses Fort Barwara · Aman-i-Khas · Oberoi Vanyavilas",
-    desc: "Luxury wildlife weddings. The anchor must balance the raw wilderness vibe with ultra-sophisticated hosting for elite global guests.",
-  },
+    desc: "Luxury wildlife weddings. The anchor must balance the raw wilderness vibe with ultra-sophisticated hosting for elite global guests." },
   {
     city: "Mount Abu",
     tag: "Hill Station",
     href: "/anchor-in-mount-abu",
     venues: "Cama Rajputana · Bikaner House · Hilltone",
-    desc: "Rajasthan's only hill station. Lush greenery and cooler climates. Perfect for summer destination weddings with a boutique heritage feel.",
-  },
+    desc: "Rajasthan's only hill station. Lush greenery and cooler climates. Perfect for summer destination weddings with a boutique heritage feel." },
   {
     city: "Kumbhalgarh",
     tag: "Fortress Heights",
     href: "/anchor-in-kumbhalgarh",
     venues: "The Aodhi · Kumbhalgarh Safari Camp · Renaissance",
-    desc: "Events in the shadow of the Great Wall of India. Dramatic slopes and fortress views requiring strong vocal command and logistics.",
-  },
+    desc: "Events in the shadow of the Great Wall of India. Dramatic slopes and fortress views requiring strong vocal command and logistics." },
   {
     city: "Mandawa",
     tag: "Open Art Gallery",
     href: "/anchor-in-mandawa",
     venues: "Castle Mandawa · Desert Resort · Vivaana",
-    desc: "Shekhawati's painted havelis. Artistic, intimate destination weddings that require a host who understands heritage and art culture.",
-  },
+    desc: "Shekhawati's painted havelis. Artistic, intimate destination weddings that require a host who understands heritage and art culture." },
   {
     city: "Bikaner",
     tag: "Camel Country",
     href: "/anchor-in-bikaner",
     venues: "Narendra Bhawan · Laxmi Niwas · Gajner Palace",
-    desc: "Intimate luxury and grand palace courtyards. Royal Mewar traditions meet sophisticated modern anchoring expectations.",
-  },
+    desc: "Intimate luxury and grand palace courtyards. Royal Mewar traditions meet sophisticated modern anchoring expectations." },
   {
     city: "Kota",
     tag: "Chambal Hub",
     href: "/anchor-in-kota",
     venues: "Umed Bhawan Palace · Brijraj Bhawan · Country Inn",
-    desc: "Industrial hub with royal roots. Corporate galas and heritage weddings along the Chambal riverfront.",
-  },
+    desc: "Industrial hub with royal roots. Corporate galas and heritage weddings along the Chambal riverfront." },
   {
     city: "Bharatpur",
     tag: "Nature & Heritage",
     href: "/anchor-in-bharatpur",
     venues: "Laxmi Vilas Palace · The Bagh · Chandra Mahal",
-    desc: "Where nature meets history. Garden weddings and palace galas in the bird-watching capital of Rajasthan.",
-  },
+    desc: "Where nature meets history. Garden weddings and palace galas in the bird-watching capital of Rajasthan." },
   {
     city: "Chittorgarh",
     tag: "Valor City",
     href: "/anchor-in-chittorgarh",
     venues: "Bassi Fort · Castle Bijaipur · Padmini Haveli",
-    desc: "Hosting in the city of forts. Epic scales and historic venues that demand a powerful, commanding stage presence.",
-  },
+    desc: "Hosting in the city of forts. Epic scales and historic venues that demand a powerful, commanding stage presence." },
 ];
 const EVENT_TYPES = [
   { icon:Heart,    title:"Palace Weddings",        desc:"Varmala, Baraat, Pheras, Bidaai across every palace property in Rajasthan. Heritage venues with centuries-old protocol — navigated.", href:"/wedding-anchor-jaipur" },
@@ -206,74 +192,59 @@ const WHY_RAJASTHAN = [
   {
     num:"01",
     title:"Every Venue Protocol Known",
-    desc:"Rambagh Palace, Fairmont, Umaid Bhawan, Taj Lake Palace, Suryagarh — each has its own vendor protocols, sound restrictions, timing constraints, and operational requirements. Years of work at these properties means zero surprises on the event day.",
-  },
+    desc:"Rambagh Palace, Fairmont, Umaid Bhawan, Taj Lake Palace, Suryagarh — each has its own vendor protocols, sound restrictions, timing constraints, and operational requirements. Years of work at these properties means zero surprises on the event day." },
   {
     num:"02",
     title:"Acoustic Expertise for Heritage Spaces",
-    desc:"Fort courtyards, haveli interiors, desert open-air, lake palace ballrooms — each is an acoustic problem that kills unprepared anchors. Voice projection, mic positioning, and crowd management adapt completely to each space.",
-  },
+    desc:"Fort courtyards, haveli interiors, desert open-air, lake palace ballrooms — each is an acoustic problem that kills unprepared anchors. Voice projection, mic positioning, and crowd management adapt completely to each space." },
   {
     num:"03",
     title:"Cultural Fluency — Rajasthani, Hindi, English",
-    desc:"Rajasthan's royal wedding culture has specific rituals, specific register, and specific expectations. Bilingual Hindi/English switching with genuine Rajasthani cultural knowledge — not a Google-translated script.",
-  },
+    desc:"Rajasthan's royal wedding culture has specific rituals, specific register, and specific expectations. Bilingual Hindi/English switching with genuine Rajasthani cultural knowledge — not a Google-translated script." },
   {
     num:"04",
     title:"Pan-Rajasthan Logistics",
-    desc:"Jaipur to Jaisalmer is 575 kilometres. Jodhpur to Udaipur is 250. Events happen at all hours across all distances. Travel logistics are fully managed — the anchor arrives fresh, on time, and fully briefed.",
-  },
+    desc:"Jaipur to Jaisalmer is 575 kilometres. Jodhpur to Udaipur is 250. Events happen at all hours across all distances. Travel logistics are fully managed — the anchor arrives fresh, on time, and fully briefed." },
 ];
 const TESTIMONIALS = [
   {
     name:"Sharma Family — Jodhpur",
     quote:"Umaid Bhawan Palace has seen a thousand anchors. Yash was the first one who matched the venue without trying to overshadow it. The grandeur of the space and the warmth of the family — both preserved simultaneously.",
-    event:"Palace Wedding · Umaid Bhawan Palace, Jodhpur",
-  },
+    event:"Palace Wedding · Umaid Bhawan Palace, Jodhpur" },
   {
     name:"Kapoor Family — Udaipur",
     quote:"Taj Lake Palace at sunset with 200 international guests and two families from different states. The bilingual hosting, the NRI protocols, the emotional moments — every single element landed exactly right.",
-    event:"Destination Wedding · Taj Lake Palace, Udaipur",
-  },
+    event:"Destination Wedding · Taj Lake Palace, Udaipur" },
   {
     name:"Events Head — National Brand",
     quote:"We've run corporate summits across five Rajasthan cities. The anchor is the highest-risk element of any live event. Yash is the only anchor we've worked with who has never, not once, required a rescue.",
-    event:"Corporate Summit Series · Jaipur · Udaipur · Jodhpur",
-  },
+    event:"Corporate Summit Series · Jaipur · Udaipur · Jodhpur" },
 ];
 const FAQS = [
   {
     q:"Who is the best anchor in Rajasthan?",
-    a:"Anchor Yash Soni is Rajasthan's 4.9★ rated event host with 1,100+ events across the state — Jaipur palace buyouts, Udaipur lake palace destination weddings, Jodhpur fort Sangeets, Jaisalmer desert camps, and corporate galas at JECC Sitapura. Bilingual Hindi/English, zero paper scripts, and full pan-Rajasthan availability.",
-  },
+    a:"Anchor Yash Soni is Rajasthan's 4.9★ rated event host with 1,100+ events across the state — Jaipur palace buyouts, Udaipur lake palace destination weddings, Jodhpur fort Sangeets, Jaisalmer desert camps, and corporate galas at JECC Sitapura. Bilingual Hindi/English, zero paper scripts, and full pan-Rajasthan availability." },
   {
     q:"Which cities in Rajasthan do you anchor events in?",
-    a:"Full coverage across Rajasthan — Jaipur (home base), Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and Bikaner. Smaller heritage cities and resort properties are also covered depending on availability. WhatsApp the city and date for immediate availability confirmation.",
-  },
+    a:"Full coverage across Rajasthan — Jaipur (home base), Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and Bikaner. Smaller heritage cities and resort properties are also covered depending on availability. WhatsApp the city and date for immediate availability confirmation." },
   {
     q:"Do you anchor destination weddings in Rajasthan?",
-    a:"Yes. Destination weddings in Rajasthan are a core specialisation — particularly Udaipur (Taj Lake Palace, Oberoi Udaivilas, Leela), Jodhpur (Umaid Bhawan Palace, Mehrangarh Fort), and Jaisalmer (Suryagarh, Serai). NRI families and international guests are handled with full bilingual hosting and international protocol management.",
-  },
+    a:"Yes. Destination weddings in Rajasthan are a core specialisation — particularly Udaipur (Taj Lake Palace, Oberoi Udaivilas, Leela), Jodhpur (Umaid Bhawan Palace, Mehrangarh Fort), and Jaisalmer (Suryagarh, Serai). NRI families and international guests are handled with full bilingual hosting and international protocol management." },
   {
     q:"Can you anchor events at palace venues in Rajasthan?",
-    a:"Yes. Palace venue anchoring is the primary specialisation across Rajasthan. Rambagh Palace, Fairmont Jaipur, Leela Palace, Taj Lake Palace, Oberoi Udaivilas, Umaid Bhawan Palace, Mehrangarh Fort, Suryagarh, and Narendra Bhawan have all been worked with. Each property has its own protocols — all navigated from experience.",
-  },
+    a:"Yes. Palace venue anchoring is the primary specialisation across Rajasthan. Rambagh Palace, Fairmont Jaipur, Leela Palace, Taj Lake Palace, Oberoi Udaivilas, Umaid Bhawan Palace, Mehrangarh Fort, Suryagarh, and Narendra Bhawan have all been worked with. Each property has its own protocols — all navigated from experience." },
   {
     q:"Do you handle NRI and international guests at Rajasthan events?",
-    a:"Yes. Bilingual Hindi/English hosting with international protocol management is standard for destination weddings across Rajasthan. Families from the UK, USA, Canada, and Gulf regularly choose Rajasthan for weddings — the anchor needs to ensure every guest, regardless of background, feels fully included.",
-  },
+    a:"Yes. Bilingual Hindi/English hosting with international protocol management is standard for destination weddings across Rajasthan. Families from the UK, USA, Canada, and Gulf regularly choose Rajasthan for weddings — the anchor needs to ensure every guest, regardless of background, feels fully included." },
   {
     q:"What is the process for booking an anchor in Rajasthan?",
-    a:"WhatsApp the event city, date, venue, expected guest count, and event type. Availability is confirmed within the hour. A quote follows. Token payment confirms the booking. Pre-event coordination, script development, and briefing happen over the following weeks.",
-  },
+    a:"WhatsApp the event city, date, venue, expected guest count, and event type. Availability is confirmed within the hour. A quote follows. Token payment confirms the booking. Pre-event coordination, script development, and briefing happen over the following weeks." },
   {
     q:"How do you manage acoustic challenges in Rajasthan's heritage venues?",
-    a:"Fort courtyards, haveli interiors, and desert open-air venues each present specific acoustic problems that standard anchors can't handle. Voice projection technique, mic positioning, crowd placement, and energy management all adapt completely to the venue. This comes from years of work at these specific properties.",
-  },
+    a:"Fort courtyards, haveli interiors, and desert open-air venues each present specific acoustic problems that standard anchors can't handle. Voice projection technique, mic positioning, crowd placement, and energy management all adapt completely to the venue. This comes from years of work at these specific properties." },
   {
     q:"Do you anchor corporate events and conferences in Rajasthan?",
-    a:"Yes. Corporate events at JECC Sitapura in Jaipur, conference hotels across Udaipur and Jodhpur, and national brand summits across the state. The corporate register is completely different from wedding hosting — sharp, concise, brand-aligned, and unscripted.",
-  },
+    a:"Yes. Corporate events at JECC Sitapura in Jaipur, conference hotels across Udaipur and Jodhpur, and national brand summits across the state. The corporate register is completely different from wedding hosting — sharp, concise, brand-aligned, and unscripted." },
 ];
 
 const localBusinessSchema = {
@@ -310,8 +281,7 @@ const localBusinessSchema = {
 };
 const faqSchema = {
   "@context":"https://schema.org","@type":"FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })),
-};
+  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })) };
 // ─────────────────────────────────────────────
 // PAGE
 // ─────────────────────────────────────────────
@@ -332,7 +302,7 @@ export default function AnchorInRajasthan() {
         <div className="absolute inset-0">
           <Image src="/gallery-5.webp" alt="Anchor in Rajasthan — palace wedding event host across Rajasthan"
             fill priority className="object-cover" sizes="100vw"
-            style={{ filter:"grayscale(15%)", opacity:.4 }}/>
+            style={{ filter:"grayscale(15%)", opacity:.4 }}quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-transparent"/>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
@@ -414,7 +384,7 @@ export default function AnchorInRajasthan() {
             <div className="img-h relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#D4AF37]/20">
               <Image src="/gallery-3.webp" alt="Anchor in Rajasthan palace wedding heritage venue"
                 fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
-                style={{ filter:"grayscale(10%)" }}/>
+                style={{ filter:"grayscale(10%)" }}quality={75} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Pan-Rajasthan · All Venues</p>
@@ -522,7 +492,7 @@ export default function AnchorInRajasthan() {
               <Reveal key={i} delay={i*.05}>
                 <div className={`img-h relative overflow-hidden rounded-xl border border-white/8 hover:border-[#D4AF37]/40 transition-all ${img.span||""}`}>
                   <Image src={img.src} alt={img.alt} fill className="object-cover"
-                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"/>
+                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"quality={75} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
                 </div>
               </Reveal>

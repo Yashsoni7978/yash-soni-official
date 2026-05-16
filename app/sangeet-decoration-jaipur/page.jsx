@@ -60,13 +60,12 @@ export default function SangeetDecorationJaipur() {
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <Image
-                src={heroImages[currentImageIndex]}
+              <Image src={heroImages[currentImageIndex]}
                 alt="Sangeet Decoration Jaipur"
                 fill
                 className="object-cover object-top opacity-70"
                 priority
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -135,13 +134,13 @@ export default function SangeetDecorationJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Sangeet Stage" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Sangeet Stage" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/luxury_dining_setup.webp" alt="Cocktail Lounge" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/luxury_dining_setup.webp" alt="Cocktail Lounge" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </div>
         </motion.div>
@@ -175,7 +174,7 @@ export default function SangeetDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">LED arrays, smoke & lasers</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#2E1065] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Club" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Club" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -185,7 +184,7 @@ export default function SangeetDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-300">Mirror balls, vinyls & neons</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#3B0764] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Retro" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Retro" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -195,7 +194,7 @@ export default function SangeetDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Diyas, Moroccan lamps & drapes</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#4C1D95] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/theme_wedding_setup.webp" alt="Sufi" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/theme_wedding_setup.webp" alt="Sufi" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -205,7 +204,7 @@ export default function SangeetDecorationJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Red carpet, media walls & podiums</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#0F172A] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/corporate_gala_setup.webp" alt="Awards" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/corporate_gala_setup.webp" alt="Awards" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -231,7 +230,7 @@ export default function SangeetDecorationJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-[#1E1B4B] rounded-2xl overflow-hidden shadow-2xl flex flex-col group hover:-translate-y-2 transition-all duration-500 border border-white/5">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Stage Production" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Stage Production" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4">A/V & Pixel Mapping</h3>
@@ -245,7 +244,7 @@ export default function SangeetDecorationJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(139,92,246,0.2)] flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#4C1D95] to-[#2E1065]">
               <div className="absolute inset-0 opacity-10 bg-[url('/bikaner.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/luxury_dining_setup.webp" alt="Bar Setup" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/luxury_dining_setup.webp" alt="Bar Setup" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4 flex items-center gap-4">
@@ -288,7 +287,7 @@ export default function SangeetDecorationJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#4C1D95] to-[#2E1065] p-8 text-[#FAF9F6] rounded-tl-3xl border-t border-l border-white/10">
               <div className="absolute inset-0 opacity-10 bg-[url('/bikaner.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">200+</span>
@@ -310,7 +309,7 @@ export default function SangeetDecorationJaipur() {
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
               His decor designs are engineered specifically to enhance the performances and the photography.
             </p>
-            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
+            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" quality={75} />
           </motion.div>
         </div>
       </section>
@@ -344,7 +343,7 @@ export default function SangeetDecorationJaipur() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg border border-white/10">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
                   </div>
                 </div>
               </motion.div>
@@ -361,7 +360,7 @@ export default function SangeetDecorationJaipur() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover opacity-50 grayscale" />
+          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover opacity-50 grayscale" quality={75} />
           <h2 className="font-['Runiga'] text-5xl md:text-7xl text-white mb-8">The Light Jockey</h2>
           <p className="font-sans text-2xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
             A DJ mixes the sound, but an LJ (Light Jockey) mixes the visuals. We provide dedicated LJs who pulse the strobes and blinders precisely to the beat of the music, creating that authentic concert feel.
@@ -380,7 +379,7 @@ export default function SangeetDecorationJaipur() {
             "/premium_events/theme_wedding_setup.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden border border-white/10">
-              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </div>
           ))}
         </div>

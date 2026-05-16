@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-chennai/layout.jsx
 // Ultra-Luxury Coastal Heritage Destination Anchor Layout
 

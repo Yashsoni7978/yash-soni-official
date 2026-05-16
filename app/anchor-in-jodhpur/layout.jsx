@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-jodhpur/layout.jsx
 // SERVER COMPONENT — SEO metadata only. All JSON-LD schemas in page.jsx.
 const CITY       = "Jodhpur";

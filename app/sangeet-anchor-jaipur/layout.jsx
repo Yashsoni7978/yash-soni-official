@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/sangeet-anchor-jaipur/layout.jsx
 // SERVER COMPONENT — no head tags, no scripts, metadata only
 const serviceSchema = {

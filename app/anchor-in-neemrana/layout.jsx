@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-neemrana/layout.jsx
 // Delhi NCR Weekend Heritage & Corporate Retreat Anchor Layout
 

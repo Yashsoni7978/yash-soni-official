@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-coorg/layout.jsx
 // Ultra-Luxury Eco-Estate Destination Anchor Layout
 

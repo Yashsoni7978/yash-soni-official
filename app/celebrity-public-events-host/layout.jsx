@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/celebrity-public-events-host/layout.jsx
 // SERVER COMPONENT — metadata only, no head/script tags
 const serviceSchema = {

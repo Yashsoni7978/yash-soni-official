@@ -2,7 +2,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 
 export default function HeroSlider({ images, children, gradientClass, borderClass }) {
   const containerRef = useRef(null);
@@ -30,14 +29,13 @@ export default function HeroSlider({ images, children, gradientClass, borderClas
             transition={{ duration: 1.5, ease: "easeInOut" }}
             className="absolute inset-0"
           >
-            <Image
-              src={images[currentImageIndex]}
+            <Image src={images[currentImageIndex]}
               alt="Hero Event"
               fill
               className="object-cover object-top"
               priority
               fetchPriority="high"
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
           </motion.div>
         </AnimatePresence>
       </motion.div>

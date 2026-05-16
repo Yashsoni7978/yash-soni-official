@@ -1,68 +1,5 @@
 // app/wedding-anchor-jaipur/layout.jsx
 // SERVER COMPONENT — complete SEO metadata
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://yashsoni.in/#business",
-  name: "Anchor Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
-  url: "https://yashsoni.in/wedding-anchor-jaipur",
-  telephone: "+917737877978",
-  priceRange: "₹₹₹₹",
-  image: "https://yashsoni.in/service-wedding.webp",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Jaipur",
-    addressRegion: "Rajasthan",
-    postalCode: "302012",
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 26.9124,
-    longitude: 75.7873,
-  },
-  areaServed: [
-    { "@type": "City", name: "Jaipur" },
-    { "@type": "AdministrativeArea", name: "Rajasthan" },
-    { "@type": "Country", name: "India" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Wedding Anchoring Services Jaipur",
-    itemListElement: [
-      { "@type": "Offer", name: "Wedding Ceremony Anchor Jaipur" },
-      { "@type": "Offer", name: "Sangeet Host Jaipur" },
-      { "@type": "Offer", name: "Varmala Ceremony Anchor" },
-      { "@type": "Offer", name: "Baraat Entry Host Jaipur" },
-      { "@type": "Offer", name: "Wedding Reception Emcee Jaipur" },
-      { "@type": "Offer", name: "NRI Destination Wedding Anchor Jaipur" },
-      { "@type": "Offer", name: "Hindu Wedding Anchor Jaipur" },
-      { "@type": "Offer", name: "Bilingual Wedding Emcee Jaipur" },
-    ],
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
-  sameAs: [
-    "https://www.instagram.com/anchor_yash_official",
-    "https://www.youtube.com/@anchor_yash",
-    "https://www.wedmegood.com/profile/anchor-yash-25628297",
-    "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
-  ],
-};
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
-    { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/anchor-in-jaipur" },
-    { "@type": "ListItem", position: 3, name: "Wedding Anchor Jaipur", item: "https://yashsoni.in/wedding-anchor-jaipur" },
-  ],
-};
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
   title: "Best Wedding Anchor in Jaipur | Anchor Yash Soni — 4.9★ Premium Wedding Emcee",
@@ -95,8 +32,7 @@ export const metadata = {
     "wedding emcee india",
   ],
   alternates: {
-    canonical: "https://yashsoni.in/wedding-anchor-jaipur",
-  },
+    canonical: "https://yashsoni.in/wedding-anchor-jaipur" },
   robots: {
     index: true,
     follow: true,
@@ -105,9 +41,7 @@ export const metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+      "max-snippet": -1 } },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -121,23 +55,18 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Best Wedding Anchor in Jaipur",
-      },
-    ],
-  },
+        alt: "Anchor Yash Soni — Best Wedding Anchor in Jaipur" },
+    ] },
   twitter: {
     card: "summary_large_image",
     title: "Best Wedding Anchor in Jaipur | Anchor Yash Soni",
     description: "4.9★ rated. 1100+ weddings. The anchor Jaipur's elite families choose.",
-    images: ["/og-image.webp"],
-  },
+    images: ["/og-image.webp"] },
   other: {
     "geo.region": "IN-RJ",
     "geo.placename": "Jaipur, Rajasthan, India",
     "geo.position": "26.9124;75.7873",
-    ICBM: "26.9124, 75.7873",
-  },
-};
+    ICBM: "26.9124, 75.7873" } };
 export default function WeddingAnchorLayout({ children }) {
   return <>{children}</>;
 }

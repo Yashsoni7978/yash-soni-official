@@ -60,13 +60,12 @@ export default function ArtistManagementJaipur() {
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <Image
-                src={heroImages[currentImageIndex]}
+              <Image src={heroImages[currentImageIndex]}
                 alt="Celebrity Artist Management"
                 fill
                 className="object-cover object-top opacity-60"
                 priority
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -135,13 +134,13 @@ export default function ArtistManagementJaipur() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrity Stage" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrity Stage" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden rounded-lg">
-              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Live Band" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/modern_sangeet_stage.webp" alt="Live Band" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
             <motion.div variants={fadeInUp} className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden rounded-lg">
-              <Image src="/premium_events/corporate_gala_setup.webp" alt="Gala Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src="/premium_events/corporate_gala_setup.webp" alt="Gala Setup" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </motion.div>
           </div>
         </motion.div>
@@ -175,7 +174,7 @@ export default function ArtistManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Sufi, Symphony, Unplugged</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#1F2937] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Bands" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Bands" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -185,7 +184,7 @@ export default function ArtistManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-300">Bollywood Stars, Comedians</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#374151] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrities" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Celebrities" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -195,7 +194,7 @@ export default function ArtistManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">Yash Soni & TV Personalities</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#111827] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchors" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchors" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -205,7 +204,7 @@ export default function ArtistManagementJaipur() {
                 <p className="font-sans text-xs md:text-sm text-gray-400">EDM, Bollywood, Club DJs</p>
               </div>
               <div className="h-full aspect-square relative rounded-full overflow-hidden border-4 border-[#030712] mr-2 group-hover:scale-105 transition-transform">
-                <Image src="/premium_events/corporate_gala_setup.webp" alt="DJs" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/corporate_gala_setup.webp" alt="DJs" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
             </a>
 
@@ -231,7 +230,7 @@ export default function ArtistManagementJaipur() {
             {/* Card 1 */}
             <motion.div variants={fadeInUp} className="bg-[#111827] rounded-2xl overflow-hidden shadow-2xl flex flex-col group hover:-translate-y-2 transition-all duration-500 border border-white/10">
               <div className="w-full h-64 relative overflow-hidden">
-                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Booking" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/celebrity_artist_stage.webp" alt="Artist Booking" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4">Direct Artist Booking</h3>
@@ -245,7 +244,7 @@ export default function ArtistManagementJaipur() {
             <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-2xl flex flex-col group hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-[#1F2937] to-[#030712] border border-white/10">
               <div className="absolute inset-0 opacity-10 bg-[url('/chittorgarh.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="w-full h-64 relative overflow-hidden z-10">
-                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Rider" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image src="/premium_events/modern_sangeet_stage.webp" alt="Tech Rider" fill className="object-cover group-hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
               </div>
               <div className="p-10 flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="font-['The_Seasons'] text-3xl text-white mb-4 flex items-center gap-4">
@@ -288,7 +287,7 @@ export default function ArtistManagementJaipur() {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 relative aspect-[4/5] rounded-lg overflow-hidden"
           >
-            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#1F2937] to-[#030712] border-t border-l border-white/20 p-8 text-[#FAF9F6] rounded-tl-3xl">
               <div className="absolute inset-0 opacity-10 bg-[url('/chittorgarh.webp')] bg-cover bg-center mix-blend-overlay"></div>
               <span className="font-['Rekalgera'] text-4xl relative z-10">100+</span>
@@ -310,7 +309,7 @@ export default function ArtistManagementJaipur() {
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
               He knows how to handle VIP hospitality, flight logistics, and exactly what an artist needs in their green room to deliver a blockbuster performance.
             </p>
-            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" />
+            <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" quality={75} />
           </motion.div>
         </div>
       </section>
@@ -344,7 +343,7 @@ export default function ArtistManagementJaipur() {
                     <p className="font-sans text-gray-400 font-light text-lg leading-relaxed">{stage.desc}</p>
                   </div>
                   <div className="w-full md:w-1/2 aspect-video relative overflow-hidden rounded-lg">
-                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    <Image src={stage.img} alt={stage.title} fill className="object-cover hover:scale-105 transition-transform duration-700"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
                   </div>
                 </div>
               </motion.div>
@@ -361,7 +360,7 @@ export default function ArtistManagementJaipur() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover opacity-50" />
+          <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover opacity-50" quality={75} />
           <h2 className="font-['Runiga'] text-5xl md:text-7xl text-white mb-8">Flawless Execution</h2>
           <p className="font-sans text-2xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
             A celebrity performance is only as good as the sound system they sing on. We provide world-class tech, lighting, and security.
@@ -380,7 +379,7 @@ export default function ArtistManagementJaipur() {
             "/premium_events/traditional_phoolon_ki_chaadar.webp"
           ].map((img, i) => (
             <div key={i} className="relative min-w-[300px] md:min-w-[500px] aspect-[4/5] snap-center shrink-0 rounded-lg overflow-hidden border border-white/10">
-              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              <Image src={img} alt="Gallery" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </div>
           ))}
         </div>

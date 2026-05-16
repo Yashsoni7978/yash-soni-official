@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {
   Instagram, Youtube, Facebook, Mail, Phone,
-  MessageCircle, ExternalLink, Mic2
+  MessageCircle, ExternalLink, Mic2, Twitter
 } from "lucide-react";
 
 // --- 1. LUXURY TEXTURE ASSETS ---
@@ -49,6 +49,7 @@ export default function Footer() {
               <SocialIcon href="https://instagram.com/anchor_yash_official" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
               <SocialIcon href="https://www.youtube.com/@anchor_yash" icon={<Youtube className="w-5 h-5" />} label="YouTube" />
               <SocialIcon href="https://facebook.com" icon={<Facebook className="w-5 h-5" />} label="Facebook" />
+              <SocialIcon href="https://x.com/anchoryashsoni" icon={<Twitter className="w-5 h-5" />} label="X (Twitter)" />
             </div>
           </div>
 
@@ -71,10 +72,11 @@ export default function Footer() {
                 color="hover:border-[#D4AF37] hover:text-[#D4AF37]"
               />
               <ContactButton
-                href="mailto:yashsoni7978@gmail.com"
+                href="javascript:void(0)"
+                onClick={() => { window.location='mai'+'lto:'+'yashsoni7978'+'@'+'gmail.com'; }}
                 icon={<Mail className="w-5 h-5" />}
                 label="Email Inquiry"
-                subLabel="yashsoni7978@gmail.com"
+                subLabel="contact us"
                 color="hover:border-white hover:text-white"
               />
             </div>
@@ -114,25 +116,16 @@ export default function Footer() {
 
         </div>
 
-        {/* --- BOTTOM: MASSIVE WATERMARK & COPYRIGHT --- */}
-        <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-end gap-8">
-
-          <div className="text-gray-500 text-xs space-y-2 uppercase tracking-widest font-bold">
-            <p>© {currentYear} Anchor Yash Soni.</p>
-            <p>Jaipur, Rajasthan • Available Globally</p>
-            <div className="flex gap-4 mt-4 pt-2 border-t border-white/5">
-              <Link href="/privacy" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>
-            </div>
+        {/* BOTTOM BAR: SINGLE LINE */}
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-gray-500 uppercase tracking-widest">
+          <p>© {currentYear} Anchor Yash Soni · Jaipur, Rajasthan · Available Globally</p>
+          <div className="flex items-center gap-3">
+            <Link href="/privacy" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</Link>
+            <span>·</span>
+            <Link href="/terms" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>
+            <span>·</span>
+            <Link href="/press" className="hover:text-[#D4AF37] transition-colors">Press Kit</Link>
           </div>
-
-          {/* MASSIVE TEXT */}
-          <div className="hidden md:block">
-            <span className="text-[4.5rem] lg:text-[7rem] font-display font-black leading-none text-white/5 select-none tracking-tighter hover:text-white/10 transition-colors cursor-default">
-              ANCHOR YASH
-            </span>
-          </div>
-
         </div>
       </div>
     </footer>

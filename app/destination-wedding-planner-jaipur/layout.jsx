@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-sync-scripts */
 
 export const metadata = {
   title: "Destination Wedding Planner Jaipur | Rajasthan | Anchor Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  description: "Planning a destination wedding in Jaipur? Yash Soni delivers full-service destination wedding planning across Rajasthan's palace and heritage venues.",
   keywords: [
     "destination wedding planner jaipur",
     "destination wedding rajasthan",

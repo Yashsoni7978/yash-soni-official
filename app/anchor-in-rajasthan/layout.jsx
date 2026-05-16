@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-rajasthan/layout.jsx
 // SERVER COMPONENT — metadata + schema only
 const serviceSchema = {

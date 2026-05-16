@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-varanasi/layout.jsx
 // Ultra-Luxury Heritage & Spiritual Destination Anchor Layout
 

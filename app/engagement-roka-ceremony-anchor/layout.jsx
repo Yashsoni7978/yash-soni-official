@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/engagement-roka-ceremony-anchor/layout.jsx
 const serviceSchema = {
   "@context": "https://schema.org",

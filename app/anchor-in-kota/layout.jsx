@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-kota/layout.jsx
 // Chambal River & Heritage Palace Wedding Anchor — Full Schema + Rich SEO Layout
 

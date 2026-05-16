@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-alwar/layout.jsx
 const CITY     = "Alwar";
 const SLUG     = "anchor-in-alwar";

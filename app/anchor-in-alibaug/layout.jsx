@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-alibaug/layout.jsx
 // Mumbai Elite Weekend Destination & Ultra-Luxury Coastal Anchor Layout
 

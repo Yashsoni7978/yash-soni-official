@@ -1,8 +1,7 @@
 import Script from 'next/script';
-/* eslint-disable @next/next/no-sync-scripts */
 export const metadata = {
   title: "Event Designing Jaipur | 3D Renders & Floral Sets | Anchor Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  description: "Luxury 3D event designing and decor planning in Jaipur by Yash Soni Studio. Conceptual design to on-ground execution for weddings and corporate events.",
   keywords: [
     "event designing jaipur",
     "3d event designers rajasthan",

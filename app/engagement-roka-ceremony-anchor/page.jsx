@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { Award, Building2, CalendarCheck, CheckCircle2, Crown, Globe, Heart, Laugh, MapPin, Mic2, Minus, Music2, Plus, Rings, Sparkles, Star, Users, Users2, Zap } from "lucide-react";
+import { Building2, CalendarCheck, CheckCircle2, Crown, Globe, Heart, Laugh, MapPin, Mic2, Minus, Music2, Plus, Sparkles, Star, Users, Users2 } from "lucide-react";
 
 
 
@@ -87,43 +87,37 @@ const CEREMONY_TYPES = [
     title:"Roka Ceremony",
     sub:"The official family agreement",
     desc:"The roka is the moment two families formally agree to the union — often the first time both sides are in the same room. The anchor's job is to dissolve the formal stiffness and replace it with warmth. Custom games that get both families laughing together within the first twenty minutes.",
-    tag:"Roka",
-  },
+    tag:"Roka" },
   {
     icon:Sparkles,
     title:"Ring Exchange Ceremony",
     sub:"The public commitment moment",
     desc:"The ring exchange is the centrepiece. The build-up, the presentation, the emotional pause, the crowd's reaction — all of this is choreographed and narrated. The anchor creates a frame for the moment that makes it feel significant, not rushed.",
-    tag:"Ring Ceremony",
-  },
+    tag:"Ring Ceremony" },
   {
     icon:Users2,
     title:"Sagai Ceremony",
     sub:"Traditional engagement with rituals",
     desc:"The sagai involves specific ritual sequences that vary by family and region. The anchor navigates these with cultural fluency — knowing the sequence, guiding guests through it, and maintaining the right tone across the formal ritual and the celebration that follows.",
-    tag:"Sagai",
-  },
+    tag:"Sagai" },
   {
     icon:Globe,
     title:"NRI & Cross-Cultural Engagement",
     sub:"Bilingual · International protocols",
     desc:"Engagements where one or both families are NRI or international bring unique challenges — cultural assumptions don't align, language shifts mid-ceremony, and the audience demographic requires real bilingual fluency rather than token English phrases.",
-    tag:"NRI",
-  },
+    tag:"NRI" },
   {
     icon:Laugh,
     title:"Large Engagement Parties",
     sub:"100 to 400+ guests",
     desc:"Engagement celebrations that scale to wedding-format crowd sizes. Games, DJ handoffs, couple introductions, family segment management, and timeline control for events that run 4–6 hours. The energy must be built deliberately, not left to chance.",
-    tag:"Large Format",
-  },
+    tag:"Large Format" },
   {
     icon:Crown,
     title:"Intimate Luxury Engagements",
     sub:"50 guests · Palace & heritage venues",
     desc:"High-net-worth intimate engagements at Jaipur's premium hotels and heritage properties. The register is completely different — understated elegance over broadcast energy. Personalisation and emotional precision over crowd games.",
-    tag:"Luxury",
-  },
+    tag:"Luxury" },
 ];
 const ICE_BREAKERS = [
   { title:"Two Families, One Quiz",    desc:"Custom trivia built around both families' shared history, the couple's story, and light cultural differences. Gets both sides competing and laughing simultaneously." },
@@ -143,61 +137,48 @@ const TESTIMONIALS = [
   {
     name:"Sharma Family — Delhi & Jaipur",
     quote:"Our families had never met. Sixty people from two completely different cities, sitting in careful formation on opposite sides of the room. Within thirty minutes of the anchor starting the games, they were mixed together and nobody remembered which side they'd started on.",
-    event:"Roka Ceremony · ITC Rajputana Jaipur · 60 guests",
-  },
+    event:"Roka Ceremony · ITC Rajputana Jaipur · 60 guests" },
   {
     name:"Kapoor Family",
     quote:"The ring exchange was the best five minutes of the entire event. The build-up the anchor created, the pause before the exchange, the narration — it made something that could have felt like a formality feel genuinely significant. My daughter cried. So did I.",
-    event:"Ring Ceremony · Jai Mahal Palace Jaipur · 120 guests",
-  },
+    event:"Ring Ceremony · Jai Mahal Palace Jaipur · 120 guests" },
   {
     name:"Mehta-Singh Family",
     quote:"Our engagement had guests from the UK, US, and three Indian states. The bilingual hosting — genuinely bilingual, not just code-switching every few sentences — meant every single guest felt the event was made for them. That's rare.",
-    event:"Sagai Ceremony · Fairmont Jaipur · NRI families · 200 guests",
-  },
+    event:"Sagai Ceremony · Fairmont Jaipur · NRI families · 200 guests" },
 ];
 const FAQS = [
   {
     q:"How much does an engagement or roka ceremony anchor in Jaipur cost?",
-    a:"Engagement and roka ceremony anchoring in Jaipur starts from ₹12,000 for a standard 2–3 hour event. Ring ceremony galas with custom scripting, family games, and ring exchange narration are priced based on event duration and complexity. WhatsApp the event details for a quote within the hour.",
-  },
+    a:"Engagement and roka ceremony anchoring in Jaipur starts from ₹12,000 for a standard 2–3 hour event. Ring ceremony galas with custom scripting, family games, and ring exchange narration are priced based on event duration and complexity. WhatsApp the event details for a quote within the hour." },
   {
     q:"What does an engagement ceremony anchor actually do?",
-    a:"An engagement anchor scripts and manages the entire ceremony flow — the ring exchange build-up, family introductions, both-family games, ritual narration, and the transition from formal ceremony to celebration. The anchor is the reason the two families stop being strangers and start feeling like one extended family.",
-  },
+    a:"An engagement anchor scripts and manages the entire ceremony flow — the ring exchange build-up, family introductions, both-family games, ritual narration, and the transition from formal ceremony to celebration. The anchor is the reason the two families stop being strangers and start feeling like one extended family." },
   {
     q:"Do you anchor roka ceremonies in Jaipur?",
-    a:"Yes. Roka ceremonies are a specific specialisation — the first formal family meeting is the highest-pressure icebreaker situation in the wedding calendar. Custom games, bilingual hosting, and genuine warmth that turns a formal agreement into a real celebration.",
-  },
+    a:"Yes. Roka ceremonies are a specific specialisation — the first formal family meeting is the highest-pressure icebreaker situation in the wedding calendar. Custom games, bilingual hosting, and genuine warmth that turns a formal agreement into a real celebration." },
   {
     q:"Can you host a ring ceremony or sagai in Jaipur?",
-    a:"Yes. Ring ceremony and sagai anchoring includes custom scripted ring exchange narration, both-family games, cultural ritual guidance for guests unfamiliar with traditions, and bilingual Hindi/English hosting throughout.",
-  },
+    a:"Yes. Ring ceremony and sagai anchoring includes custom scripted ring exchange narration, both-family games, cultural ritual guidance for guests unfamiliar with traditions, and bilingual Hindi/English hosting throughout." },
   {
     q:"What makes a roka ceremony anchor different from a wedding anchor?",
-    a:"A roka is about two families meeting for the first time and leaving as one. A wedding is about celebrating a union already established. The roka anchor's job is fundamentally about icebreaking — building warmth and laughter between strangers. This is a different skill set from wedding ceremony anchoring.",
-  },
+    a:"A roka is about two families meeting for the first time and leaving as one. A wedding is about celebrating a union already established. The roka anchor's job is fundamentally about icebreaking — building warmth and laughter between strangers. This is a different skill set from wedding ceremony anchoring." },
   {
     q:"Do you handle bilingual and NRI families at engagements?",
-    a:"Yes. NRI and cross-cultural engagements are common — families where one side is from the UK or US and the other from Rajasthan or Delhi. Genuine bilingual Hindi/English hosting that adapts in real time to the demographic in front of you, not a scripted code-switch every paragraph.",
-  },
+    a:"Yes. NRI and cross-cultural engagements are common — families where one side is from the UK or US and the other from Rajasthan or Delhi. Genuine bilingual Hindi/English hosting that adapts in real time to the demographic in front of you, not a scripted code-switch every paragraph." },
   {
     q:"How far in advance should we book an engagement anchor in Jaipur?",
-    a:"For engagement ceremonies at premium venues, 3–4 weeks minimum. For large-format engagement galas with extensive game design and custom scripting, 4–6 weeks. Weekend dates in peak season fill quickly. WhatsApp as soon as the date and venue are confirmed.",
-  },
+    a:"For engagement ceremonies at premium venues, 3–4 weeks minimum. For large-format engagement galas with extensive game design and custom scripting, 4–6 weeks. Weekend dates in peak season fill quickly. WhatsApp as soon as the date and venue are confirmed." },
   {
     q:"Which venues in Jaipur do you anchor engagement events at?",
-    a:"All major Jaipur engagement venues — hotel ballrooms and banquet halls at Fairmont, ITC Rajputana, Marriott, Leela, Jai Mahal Palace, standalone event venues in Mansarovar and Vaishali Nagar, and farmhouses on Ajmer Road. The anchor adapts the format to the venue's size, acoustic properties, and audience.",
-  },
+    a:"All major Jaipur engagement venues — hotel ballrooms and banquet halls at Fairmont, ITC Rajputana, Marriott, Leela, Jai Mahal Palace, standalone event venues in Mansarovar and Vaishali Nagar, and farmhouses on Ajmer Road. The anchor adapts the format to the venue's size, acoustic properties, and audience." },
   {
     q:"Do you design the family games for the engagement ceremony?",
-    a:"Yes. Games are custom-designed for each engagement based on the specific families — their backgrounds, the couple's story, and what will work for the exact guest mix present. Never recycled templates. The 'who knows them better' game uses real information gathered from both families in the pre-event briefing.",
-  },
+    a:"Yes. Games are custom-designed for each engagement based on the specific families — their backgrounds, the couple's story, and what will work for the exact guest mix present. Never recycled templates. The 'who knows them better' game uses real information gathered from both families in the pre-event briefing." },
 ];
 const faqSchema = {
   "@context":"https://schema.org","@type":"FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })),
-};
+  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })) };
 export default function EngagementRokaAnchor() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
@@ -215,7 +196,7 @@ export default function EngagementRokaAnchor() {
         <div className="absolute inset-0">
           <Image src="/gallery-2.webp" alt="Engagement roka ring ceremony anchor Jaipur two families"
             fill priority className="object-cover" sizes="100vw"
-            style={{ filter:"grayscale(10%)", opacity:.38 }}/>
+            style={{ filter:"grayscale(10%)", opacity:.38 }}quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"/>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
@@ -295,7 +276,7 @@ export default function EngagementRokaAnchor() {
             <div className="img-h relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#D4AF37]/20">
               <Image src="/gallery-4.webp" alt="Engagement ceremony anchor Jaipur families icebreaker games"
                 fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
-                style={{ filter:"grayscale(10%)" }}/>
+                style={{ filter:"grayscale(10%)" }}quality={75} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Custom Games · Ring Narration · Bilingual Host</p>
@@ -394,7 +375,7 @@ export default function EngagementRokaAnchor() {
               <Reveal key={i} delay={i*.05}>
                 <div className={`img-h relative overflow-hidden rounded-xl border border-white/8 hover:border-[#D4AF37]/40 transition-all ${img.span||""}`}>
                   <Image src={img.src} alt={img.alt} fill className="object-cover"
-                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"/>
+                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"quality={75} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
                 </div>
               </Reveal>

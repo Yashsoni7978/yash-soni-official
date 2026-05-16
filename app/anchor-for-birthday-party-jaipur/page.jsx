@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { ArrowRight, Award, Cake, CalendarCheck, CheckCircle2, Crown, Globe, Heart, MapPin, Mic2, Minus, Music2, PartyPopper, Plus, ShieldCheck, Sparkles, Star, Users, Zap } from "lucide-react";
+import { Award, Cake, CalendarCheck, CheckCircle2, Crown, Globe, Heart, Mic2, Minus, Music2, Plus, Sparkles, Star, Users } from "lucide-react";
 
 
 
@@ -96,43 +96,37 @@ const PARTY_TYPES = [
     title:"Milestone Birthday Galas",
     sub:"18th · 25th · 30th · 50th · 60th",
     desc:"The guest of honour doesn't get a template — they get a story. Every milestone birthday script is built around their specific journey: moments the crowd recognises, surprises they don't see coming, and tributes that land emotionally. The 50th birthday script has made entire rooms of 300 people cry and laugh inside the same five minutes.",
-    tag:"Milestone",
-  },
+    tag:"Milestone" },
   {
     icon:Users,
     title:"Kids Birthday Parties",
     sub:"Ages 5 to 14 · 30 to 200 guests",
     desc:"Kids are the most unforgiving audience in the world. They don't pretend to have fun — they either have it or they don't. High-energy games, interactive character hosting, structured crowd management, and energy pacing that keeps 80 children genuinely engaged from start to finish. Parents get to actually enjoy the party.",
-    tag:"Kids Party",
-  },
+    tag:"Kids Party" },
   {
     icon:Sparkles,
     title:"Surprise Birthday Reveals",
     sub:"Coordinated live reveals",
     desc:"A surprise party lives or dies in the thirty seconds after the reveal. The emotional transition from shock to celebration, the crowd's energy management, the pivot from secret-keeping to open celebration — all of it is scripted and coordinated with the organising family days in advance. Nothing is improvised at the reveal.",
-    tag:"Surprise",
-  },
+    tag:"Surprise" },
   {
     icon:Crown,
     title:"Celebrity-Style Birthday Galas",
     sub:"100 to 500+ guests · VIP events",
     desc:"Red carpet entries, live crowd interaction, award-style tribute segments, Bollywood-energy entertainment hosting. For high-profile birthdays where the standard isn't just 'good' — it's the kind of event that gets talked about for years. Every element is choreographed from the first guest entry to the final send-off.",
-    tag:"Celebrity Gala",
-  },
+    tag:"Celebrity Gala" },
   {
     icon:Heart,
     title:"Anniversary Celebrations",
     sub:"25th Silver · 50th Golden · Milestone vows",
     desc:"A couple's anniversary deserves an anchor who can hold space for genuine emotion. The script walks through their journey — with contributions gathered from children, grandchildren, old friends — and builds a narrative arc that publicly honours the relationship. The evening moves between laughter and tears exactly when it's supposed to.",
-    tag:"Anniversary",
-  },
+    tag:"Anniversary" },
   {
     icon:Globe,
     title:"NRI & Destination Birthday Events",
     sub:"International guests · Bilingual hosting",
     desc:"Birthday celebrations where family flies in from the UK, USA, Canada, and Gulf. Bilingual Hindi/English hosting that ensures every guest in the room — from the grandparents who speak only Hindi to the cousins who've grown up abroad — feels included and part of the celebration.",
-    tag:"NRI",
-  },
+    tag:"NRI" },
 ];
 const VS = [
   { problem:"Recycled party games nobody wants to play",   fix:"Custom crowd games designed for the exact guest mix" },
@@ -154,62 +148,49 @@ const TESTIMONIALS = [
     name:"Priya Sharma",
     rating:5,
     quote:"The 50th birthday script had my father's entire 50-year journey compressed into 20 minutes. He cried, we cried, the guests laughed — all in exactly the right sequence. When we say the anchor made the evening, we mean it literally.",
-    event:"50th Birthday Gala · Fairmont Jaipur · 280 guests",
-  },
+    event:"50th Birthday Gala · Fairmont Jaipur · 280 guests" },
   {
     name:"Ritu Agarwal",
     rating:5,
     quote:"Our daughter's surprise 25th was pulled off perfectly. Yash knew the reveal timing, coordinated with us for weeks, managed 80 guests while they were waiting, and then turned the energy from 'shh it's a surprise' to full celebration in seconds. Flawless.",
-    event:"Surprise 25th Birthday · Jai Mahal Palace · 80 guests",
-  },
+    event:"Surprise 25th Birthday · Jai Mahal Palace · 80 guests" },
   {
     name:"Vikram Singhania",
     rating:5,
     quote:"Kids party for 60 children aged 6–12. I was genuinely worried. Two hours of structured games, energy management, and genuine fun. Every child was engaged the entire time. Parents were impressed. This is a completely different skill set — and he has it.",
-    event:"Kids Birthday Party · Samode Haveli · 60 children",
-  },
+    event:"Kids Birthday Party · Samode Haveli · 60 children" },
 ];
 const FAQS = [
   {
     q:"How much does a birthday party anchor in Jaipur cost?",
-    a:"Birthday party anchoring in Jaipur starts from ₹15,000 for a standard 2–3 hour event. Milestone birthday galas with custom scripting, multiple game segments, and surprise coordination are quoted based on event complexity and duration. WhatsApp the date, venue, and guest count for a quote within the hour.",
-  },
+    a:"Birthday party anchoring in Jaipur starts from ₹15,000 for a standard 2–3 hour event. Milestone birthday galas with custom scripting, multiple game segments, and surprise coordination are quoted based on event complexity and duration. WhatsApp the date, venue, and guest count for a quote within the hour." },
   {
     q:"Do you anchor kids' birthday parties in Jaipur?",
-    a:"Yes. Kids' birthday parties for ages 5–14 are a specific specialisation. The hosting approach is completely different from adult events — structured games, high interactivity, character-themed segments, and crowd energy management that keeps children genuinely engaged. Available across all Jaipur venues and farmhouses.",
-  },
+    a:"Yes. Kids' birthday parties for ages 5–14 are a specific specialisation. The hosting approach is completely different from adult events — structured games, high interactivity, character-themed segments, and crowd energy management that keeps children genuinely engaged. Available across all Jaipur venues and farmhouses." },
   {
     q:"Can you host a surprise birthday party reveal in Jaipur?",
-    a:"Yes. Surprise party hosting requires pre-event planning with the organising family. The reveal timing, the emotional transition from surprise to celebration, the crowd's energy management during the reveal — all scripted and coordinated before the event. Nothing about a surprise reveal should be improvised.",
-  },
+    a:"Yes. Surprise party hosting requires pre-event planning with the organising family. The reveal timing, the emotional transition from surprise to celebration, the crowd's energy management during the reveal — all scripted and coordinated before the event. Nothing about a surprise reveal should be improvised." },
   {
     q:"What is the difference between a birthday anchor and a regular DJ?",
-    a:"A DJ controls the music. A birthday anchor controls the entire experience — the narrative arc of the evening, the crowd energy between segments, the personalised script, the games, the tributes, the emotional moments, and the physical energy in the room. The anchor is why the evening feels curated rather than accidental.",
-  },
+    a:"A DJ controls the music. A birthday anchor controls the entire experience — the narrative arc of the evening, the crowd energy between segments, the personalised script, the games, the tributes, the emotional moments, and the physical energy in the room. The anchor is why the evening feels curated rather than accidental." },
   {
     q:"Do you anchor birthday parties outside Jaipur?",
-    a:"Yes. Birthday event anchoring is available pan-Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and nationally for high-profile or destination birthday events. Travel and accommodation are billed separately and discussed at booking.",
-  },
+    a:"Yes. Birthday event anchoring is available pan-Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and nationally for high-profile or destination birthday events. Travel and accommodation are billed separately and discussed at booking." },
   {
     q:"How far in advance should we book a birthday party anchor in Jaipur?",
-    a:"For milestone birthdays with custom scripting, 2–4 weeks minimum. For celebrity-style galas requiring extensive script research and family coordination, 4–6 weeks. Weekend bookings for the October–February peak season fill 6–8 weeks in advance. WhatsApp to check availability immediately.",
-  },
+    a:"For milestone birthdays with custom scripting, 2–4 weeks minimum. For celebrity-style galas requiring extensive script research and family coordination, 4–6 weeks. Weekend bookings for the October–February peak season fill 6–8 weeks in advance. WhatsApp to check availability immediately." },
   {
     q:"Can you anchor a 50th or 25th milestone birthday in Jaipur?",
-    a:"Milestone birthdays are the most emotionally significant events to host well. A 50th birthday script involves research into the guest of honour's life, gathering contributions from family and friends, and building a narrative that genuinely moves the room. These take 2–3 weeks of pre-event preparation and are booked well in advance.",
-  },
+    a:"Milestone birthdays are the most emotionally significant events to host well. A 50th birthday script involves research into the guest of honour's life, gathering contributions from family and friends, and building a narrative that genuinely moves the room. These take 2–3 weeks of pre-event preparation and are booked well in advance." },
   {
     q:"Which birthday venues in Jaipur do you work with?",
-    a:"All major Jaipur venues have been worked with — Fairmont, ITC Rajputana, Marriott, Leela Palace, Rambagh Palace, Jai Mahal Palace, Samode Haveli, Trident Jaipur, and all standalone banquet venues in Mansarovar, Vaishali Nagar, C-Scheme, and the major farmhouse properties on Ajmer Road.",
-  },
+    a:"All major Jaipur venues have been worked with — Fairmont, ITC Rajputana, Marriott, Leela Palace, Rambagh Palace, Jai Mahal Palace, Samode Haveli, Trident Jaipur, and all standalone banquet venues in Mansarovar, Vaishali Nagar, C-Scheme, and the major farmhouse properties on Ajmer Road." },
   {
     q:"Do you also host anniversary celebrations in Jaipur?",
-    a:"Yes. Silver jubilee (25th) and golden jubilee (50th) anniversary celebrations are a natural extension of birthday hosting. The scripting focuses on the couple's journey, with contributions from children, grandchildren, and old friends — building a public tribute that honours the relationship in front of everyone who matters.",
-  },
+    a:"Yes. Silver jubilee (25th) and golden jubilee (50th) anniversary celebrations are a natural extension of birthday hosting. The scripting focuses on the couple's journey, with contributions from children, grandchildren, and old friends — building a public tribute that honours the relationship in front of everyone who matters." },
   {
     q:"What games do you use at birthday parties?",
-    a:"Never the same games twice. Games are designed based on the specific guest mix — age range, energy level, family dynamics, and what the guest of honour would enjoy. Milestone birthdays get memory-based games, couples get anniversary trivia, kids parties get structured interactive games. Nothing from a recycled template.",
-  },
+    a:"Never the same games twice. Games are designed based on the specific guest mix — age range, energy level, family dynamics, and what the guest of honour would enjoy. Milestone birthdays get memory-based games, couples get anniversary trivia, kids parties get structured interactive games. Nothing from a recycled template." },
 ];
 const RELATED = [
   { icon:Heart,    label:"Wedding Anchor Jaipur",  href:"/wedding-anchor-jaipur",         desc:"Varmala, Baraat, Bidaai" },
@@ -221,8 +202,7 @@ const RELATED = [
 ];
 const faqSchema = {
   "@context":"https://schema.org","@type":"FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })),
-};
+  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })) };
 // ─────────────────────────────────────────────
 // PAGE
 // ─────────────────────────────────────────────
@@ -243,7 +223,7 @@ export default function BirthdayAnchorJaipur() {
         <div className="absolute inset-0">
           <Image src="/gallery-1.webp" alt="Birthday party anchor Jaipur — Yash Soni high energy crowd"
             fill priority className="object-cover" sizes="100vw"
-            style={{ filter:"grayscale(15%)", opacity:.4 }}/>
+            style={{ filter:"grayscale(15%)", opacity:.4 }}quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"/>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
@@ -323,7 +303,7 @@ export default function BirthdayAnchorJaipur() {
             <div className="img-h relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#D4AF37]/20">
               <Image src="/gallery-2.webp" alt="Birthday party anchor Jaipur energetic crowd engagement"
                 fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
-                style={{ filter:"grayscale(10%)" }}/>
+                style={{ filter:"grayscale(10%)" }}quality={75} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Live · Unscripted · Personalised</p>
@@ -391,7 +371,7 @@ export default function BirthdayAnchorJaipur() {
               <Reveal key={i} delay={i*.05}>
                 <div className={`img-h relative overflow-hidden rounded-xl border border-white/8 hover:border-[#D4AF37]/40 transition-all ${img.span||""}`}>
                   <Image src={img.src} alt={img.alt} fill className="object-cover"
-                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"/>
+                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"quality={75} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
                 </div>
               </Reveal>

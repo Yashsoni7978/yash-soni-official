@@ -264,7 +264,7 @@ export default function Navbar() {
                
                <div className="mt-8 flex flex-col items-center justify-center gap-2 text-gray-500 text-[10px] uppercase tracking-[0.2em] font-bold">
                  <a href="tel:+917737877978" className="hover:text-white transition-colors">Direct: +91 77378 77978</a>
-                 <a href="mailto:yashsoni7978@gmail.com" className="hover:text-white transition-colors">yashsoni7978@gmail.com</a>
+                 <a href="javascript:void(0)" onClick={() => { window.location='mai'+'lto:'+'yashsoni7978'+'@'+'gmail.com'; }} className="hover:text-white transition-colors cursor-pointer">yashsoni7978@gmail.com</a>
                </div>
 
              </div>

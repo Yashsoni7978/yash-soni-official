@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Star, ArrowRight, Play } from "lucide-react";
+import { Star, Play } from "lucide-react";
 import { GoldText } from "./GoldText";
 
 export const HomeHero = ({ waLink }) => {
@@ -10,14 +10,12 @@ export const HomeHero = ({ waLink }) => {
     <section className="relative min-h-screen w-full flex items-end pb-16 md:pb-24 overflow-hidden">
       {/* BG */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-slide-1.webp"
+        <Image src="/hero-slide-1.webp"
           alt="Anchor Yash Soni hosting a premium live event on stage"
           fill priority
           sizes="100vw"
           quality={75}
-          className="object-cover object-top"
-        />
+          className="object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
       </div>

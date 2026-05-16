@@ -16,26 +16,14 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} | Anchor Yash Soni`,
     description: `Read the latest insights on ${post.title} and luxury event management in Rajasthan.`,
-    keywords: [post.category, "Event Anchoring", "Anchor Yash Soni Blog"],
-  };
+    keywords: [post.category, "Event Anchoring", "Anchor Yash Soni Blog"] };
 }
 
 // --- 2. PRE-BUILD STATIC GENERATOR ---
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
-    slug: post.slug,
-  }));
+    slug: post.slug }));
 }
-
-// --- 3. LUXURY TEXTURE ASSET ---
-const GoldTextureText = ({ children, className = "" }) => (
-  <span 
-    className={`bg-clip-text text-transparent bg-cover bg-center ${className}`}
-    style={{ backgroundImage: "linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)", backgroundColor: "#D4AF37" }}
-  >
-    {children}
-  </span>
-);
 
 // --- 4. SERVER COMPONENT ---
 export default async function BlogPost({ params }) {
@@ -51,8 +39,7 @@ export default async function BlogPost({ params }) {
       <div className="h-[75vh] w-full relative overflow-hidden bg-[#0a0a0a]">
 
         {post.image && (
-          <Image 
-            src={post.image} 
+          <Image src={post.image} 
             alt={post.title}
             fill
             priority 
@@ -60,7 +47,7 @@ export default async function BlogPost({ params }) {
            
             className="object-cover opacity-50 grayscale-[20%]"
             sizes="100vw"
-          />
+          quality={75} />
         )}
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent flex items-end p-6 md:p-20 z-10">
@@ -90,20 +77,18 @@ export default async function BlogPost({ params }) {
           <ReactMarkdown
             components={{
               // This tells ReactMarkdown to convert any Markdown image into a high-speed Next.js Image
-              img: ({ node, ...props }) => (
+              img: ({ ...props }) => (
                 <span className="block relative w-full aspect-[16/9] my-12 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-white/10">
-                  <Image
-                    src={props.src}
+                  <Image src={props.src}
                     alt={props.alt || "Anchor Yash Soni Luxury Event"}
                     fill
                     unoptimized={true}
                    
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 800px"
-                  />
+                  quality={75} />
                 </span>
-              ),
-            }}
+              ) }}
           >
             {post.content}
           </ReactMarkdown>

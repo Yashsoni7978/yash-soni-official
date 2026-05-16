@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-hyderabad/layout.jsx
 // Royal Nizam Heritage & Ramoji Mega Scale Wedding Anchor
 

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-bharatpur/layout.jsx
 // Fort Heritage & Golden Triangle Wedding Anchor — Full Schema + Rich SEO Layout
 

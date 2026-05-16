@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { Award, Briefcase, Building2, CalendarCheck, CheckCircle2, Crown, Heart, MapPin, Mic2, Minus, Plus, Sparkles, Star, Trophy, Users, Zap } from "lucide-react";
+import { Briefcase, Building2, CalendarCheck, CheckCircle2, Crown, Heart, MapPin, Mic2, Minus, Plus, Sparkles, Star, Trophy, Users, Zap } from "lucide-react";
 
 
 
@@ -87,43 +87,37 @@ const FORMATS = [
     title:"Annual Award Night",
     sub:"Performers · Managers · Teams of the Year",
     desc:"The annual award night is the highest-stakes internal event a company runs. The anchor sets the tone for the entire year's performance culture. Script precision, winner transition management, and the ability to hold an audience through a 3-hour programme without losing energy.",
-    tag:"Annual Awards",
-  },
+    tag:"Annual Awards" },
   {
     icon:Crown,
     title:"CEO & Leadership Galas",
     sub:"500+ delegates · Black-tie format",
     desc:"Senior leadership events demand a completely different register — authoritative, concise, and aware of the room's hierarchy. Keynote introductions, CEO felicitations, and VIP protocol at luxury venues handled with the gravitas these events require.",
-    tag:"Leadership Gala",
-  },
+    tag:"Leadership Gala" },
   {
     icon:Sparkles,
     title:"Dealer & Channel Partner Meets",
     sub:"300–2000 delegates",
     desc:"Dealer meets are hybrid events — part corporate summit, part celebration. The anchor manages the programme content during the day and drives energy during the evening gala. Bilingual Hindi/English mandatory for dealer meets across Rajasthan.",
-    tag:"Dealer Meet",
-  },
+    tag:"Dealer Meet" },
   {
     icon:Briefcase,
     title:"Product Launch Events",
     sub:"Press · Trade · Consumer launches",
     desc:"A product launch has one job: make the product feel significant. Brand articulation, media engagement, CEO-to-camera moments, and the reveal build-up are all managed from the anchor's position. One wrong tone and the brand equity evaporates.",
-    tag:"Product Launch",
-  },
+    tag:"Product Launch" },
   {
     icon:Building2,
     title:"JECC Sitapura Events",
     sub:"Jaipur's largest conference centre",
     desc:"JECC Sitapura is Jaipur's premier convention centre — 5,000 person capacity, national brand events, government summits, and trade exhibitions. The operational protocols, AV infrastructure, and crowd management requirements at JECC are known from multiple events at the property.",
-    tag:"JECC Sitapura",
-  },
+    tag:"JECC Sitapura" },
   {
     icon:Zap,
     title:"Annual Day Celebrations",
     sub:"Employee recognition · Entertainment",
     desc:"Annual day is where the entire company is in one room — from senior management to frontline staff. The anchor builds a bridge between the formal recognition programme and the entertainment that follows, without the transition killing the energy of either.",
-    tag:"Annual Day",
-  },
+    tag:"Annual Day" },
 ];
 const STANDARD = [
   { num:"01", title:"Zero Teleprompter Dependency",     desc:"Script-reading anchors are the single biggest risk at corporate award nights. Every winner transition, every CEO introduction, every sponsor mention delivered from memory and real-time adaptation — never from a screen. The audience feels the difference immediately." },
@@ -151,57 +145,45 @@ const TESTIMONIALS = [
   {
     name:"Head of Marketing — FMCG Giant",
     quote:"Annual award night for 600 employees across three states. The anchor managed a 4-hour programme — 22 award categories, three keynote speakers, and a live entertainment segment — without a single dead moment. The CEO specifically commented on the host. That never happens.",
-    event:"Annual Award Night · JECC Sitapura, Jaipur · 600 employees",
-  },
+    event:"Annual Award Night · JECC Sitapura, Jaipur · 600 employees" },
   {
     name:"Events Head — Auto Brand",
     quote:"Dealer meet for 800 channel partners from across Rajasthan and MP. Day programme in Hindi, evening gala in bilingual. The anchoring bridged a very diverse audience — senior dealers who've been with us 25 years and new partners joining for the first time. Seamless.",
-    event:"Dealer Meet & Gala · Fairmont Jaipur · 800 delegates",
-  },
+    event:"Dealer Meet & Gala · Fairmont Jaipur · 800 delegates" },
   {
     name:"VP Operations — National Conglomerate",
     quote:"Product launch for a brand entering a new category. Press, trade buyers, and a live audience. The anchor built the reveal moment correctly — genuine tension before the unveiling, the right energy at the moment of reveal. The coverage was exactly what we needed.",
-    event:"Product Launch · ITC Rajputana, Jaipur · Press & Trade",
-  },
+    event:"Product Launch · ITC Rajputana, Jaipur · Press & Trade" },
 ];
 const FAQS = [
   {
     q:"Who is the best award night anchor in Jaipur?",
-    a:"Anchor Yash Soni is Jaipur's 4.9★ rated corporate anchor with 70+ national brands served. Specialist in award ceremonies, annual day hosting, CEO galas, and dealer meets at JECC Sitapura, Fairmont, ITC Rajputana, and all major Jaipur corporate venues. Teleprompter-free, brand-aligned, bilingual Hindi/English.",
-  },
+    a:"Anchor Yash Soni is Jaipur's 4.9★ rated corporate anchor with 70+ national brands served. Specialist in award ceremonies, annual day hosting, CEO galas, and dealer meets at JECC Sitapura, Fairmont, ITC Rajputana, and all major Jaipur corporate venues. Teleprompter-free, brand-aligned, bilingual Hindi/English." },
   {
     q:"Do you anchor corporate award nights at JECC Sitapura in Jaipur?",
-    a:"Yes. JECC Sitapura is a core venue specialisation — Jaipur's largest convention centre at 5,000 person capacity. National brand summits, government award nights, and corporate galas at JECC have been anchored multiple times. The venue's AV infrastructure, staging protocols, and operational requirements are known from direct experience.",
-  },
+    a:"Yes. JECC Sitapura is a core venue specialisation — Jaipur's largest convention centre at 5,000 person capacity. National brand summits, government award nights, and corporate galas at JECC have been anchored multiple times. The venue's AV infrastructure, staging protocols, and operational requirements are known from direct experience." },
   {
     q:"What makes a corporate award night anchor different from a wedding anchor?",
-    a:"Register, precision, and brand alignment. A wedding anchor builds emotion and energy. A corporate award night anchor must hold a professional audience's attention across a 3–4 hour programme with multiple award categories, keynote speakers, and sponsor moments — while maintaining brand tone throughout. These are completely different skill sets.",
-  },
+    a:"Register, precision, and brand alignment. A wedding anchor builds emotion and energy. A corporate award night anchor must hold a professional audience's attention across a 3–4 hour programme with multiple award categories, keynote speakers, and sponsor moments — while maintaining brand tone throughout. These are completely different skill sets." },
   {
     q:"Do you anchor dealer meets and channel partner events in Jaipur?",
-    a:"Yes. Dealer meets are a regular format — typically 300–2,000 delegates, bilingual Hindi/English mandatory, day programme combined with evening gala. The anchor manages both the structured business programme and the evening celebration. National brands including FMCG, automotive, and BFSI sectors have been served.",
-  },
+    a:"Yes. Dealer meets are a regular format — typically 300–2,000 delegates, bilingual Hindi/English mandatory, day programme combined with evening gala. The anchor manages both the structured business programme and the evening celebration. National brands including FMCG, automotive, and BFSI sectors have been served." },
   {
     q:"Can you anchor a product launch event in Jaipur?",
-    a:"Yes. Product launches require the anchor to build genuine pre-reveal tension, manage media and trade interactions, facilitate CEO-to-camera moments, and sustain audience engagement across what is often a technically complex programme. Brand briefing happens in advance to ensure the hosting is an extension of the product's communication strategy.",
-  },
+    a:"Yes. Product launches require the anchor to build genuine pre-reveal tension, manage media and trade interactions, facilitate CEO-to-camera moments, and sustain audience engagement across what is often a technically complex programme. Brand briefing happens in advance to ensure the hosting is an extension of the product's communication strategy." },
   {
     q:"What is the cost of hiring an award night anchor in Jaipur?",
-    a:"Corporate award night anchoring fees depend on event duration, programme complexity, and whether bilingual scripting and pre-event research are required. WhatsApp the event details for a quote within the hour.",
-  },
+    a:"Corporate award night anchoring fees depend on event duration, programme complexity, and whether bilingual scripting and pre-event research are required. WhatsApp the event details for a quote within the hour." },
   {
     q:"Which corporate venues in Jaipur do you anchor events at?",
-    a:"JECC Sitapura, Fairmont Jaipur, ITC Rajputana, Marriott Jaipur, Birla Auditorium, Novotel Jaipur, and all major corporate event hotels on JLN Marg and Tonk Road. Each venue has its own technical setup, staging protocols, and AV capabilities — all known from prior events.",
-  },
+    a:"JECC Sitapura, Fairmont Jaipur, ITC Rajputana, Marriott Jaipur, Birla Auditorium, Novotel Jaipur, and all major corporate event hotels on JLN Marg and Tonk Road. Each venue has its own technical setup, staging protocols, and AV capabilities — all known from prior events." },
   {
     q:"How far in advance should we book a corporate anchor in Jaipur?",
-    a:"For large-format award nights at JECC and major hotels, 4–6 weeks minimum to allow for brand briefing, script research, and winner list preparation. For complex multi-brand events with teleprompter rejection, book 6–8 weeks out. WhatsApp immediately once the date and venue are confirmed.",
-  },
+    a:"For large-format award nights at JECC and major hotels, 4–6 weeks minimum to allow for brand briefing, script research, and winner list preparation. For complex multi-brand events with teleprompter rejection, book 6–8 weeks out. WhatsApp immediately once the date and venue are confirmed." },
 ];
 const faqSchema = {
   "@context":"https://schema.org","@type":"FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })),
-};
+  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })) };
 export default function AwardNightAnchorJaipur() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
@@ -217,7 +199,7 @@ export default function AwardNightAnchorJaipur() {
         <div className="absolute inset-0">
           <Image src="/gallery-3.webp" alt="Award night anchor Jaipur corporate gala JECC Sitapura"
             fill priority className="object-cover" sizes="100vw"
-            style={{ filter:"grayscale(15%)", opacity:.38 }}/>
+            style={{ filter:"grayscale(15%)", opacity:.38 }}quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"/>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
@@ -293,7 +275,7 @@ export default function AwardNightAnchorJaipur() {
             <div className="img-h relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#D4AF37]/20">
               <Image src="/gallery-1.webp" alt="Award night anchor Jaipur corporate gala stage presence"
                 fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
-                style={{ filter:"grayscale(10%)" }}/>
+                style={{ filter:"grayscale(10%)" }}quality={75} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
               <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Teleprompter-Free · Brand-Aligned · Bilingual</p>
@@ -357,7 +339,7 @@ export default function AwardNightAnchorJaipur() {
               <Reveal key={i} delay={i*.05}>
                 <div className={`img-h relative overflow-hidden rounded-xl border border-white/8 hover:border-[#D4AF37]/40 transition-all ${img.span||""}`}>
                   <Image src={img.src} alt={img.alt} fill className="object-cover"
-                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"/>
+                    style={{ filter:"grayscale(15%)" }} sizes="(max-width:768px) 50vw, 33vw"quality={75} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
                 </div>
               </Reveal>

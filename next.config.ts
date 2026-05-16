@@ -33,6 +33,26 @@ const nextConfig: NextConfig = {
         destination: '/wedding-anchor-jaipur',
         permanent: true,
       },
+      {
+        source: '/anchor-in-chandigarh',
+        destination: '/anchor-in-rajasthan',
+        permanent: true,
+      },
+      {
+        source: '/anchor-in-kishangarh',
+        destination: '/anchor-in-rajasthan',
+        permanent: true,
+      },
+      {
+        source: '/anchor-in-pune',
+        destination: '/anchor-in-jaipur',
+        permanent: true,
+      },
+      {
+        source: '/blog/anchor-charges-jaipur-2026',
+        destination: '/blog',
+        permanent: true,
+      },
     ];
   },
 };

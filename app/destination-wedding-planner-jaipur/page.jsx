@@ -14,39 +14,25 @@ export default function DestinationWeddingPlannerJaipur() {
     "/premium_events/palace_wedding_decor.webp",
   ];
 
-  const services = [
-    { label: "Wedding Planning", url: "/wedding-planning-jaipur" },
-    { label: "Haldi Decor", url: "/haldi-decoration-jaipur" },
-    { label: "Artist Management", url: "/artist-management-jaipur" },
-    { label: "Wedding Decor", url: "/wedding-decoration-jaipur" },
-    { label: "Sangeet Decor", url: "/sangeet-decoration-jaipur" },
-  ];
-
   const faqs = [
     {
       q: "What is the starting budget for a destination wedding in Jaipur?",
-      a: "Luxury is bespoke, but an elite heritage wedding in Jaipur typically begins at ₹1.5 Cr, scaling with guest count, venue prestige, and decor opulence.",
-    },
+      a: "Luxury is bespoke, but an elite heritage wedding in Jaipur typically begins at ₹1.5 Cr, scaling with guest count, venue prestige, and decor opulence." },
     {
       q: "Do you handle international guest logistics?",
-      a: "Absolutely. Our concierge team manages private charter clearances, visa assistance, and dedicated airport lounges.",
-    },
+      a: "Absolutely. Our concierge team manages private charter clearances, visa assistance, and dedicated airport lounges." },
     {
       q: "How far in advance should we secure your services?",
-      a: "Engage us 8‑12 months ahead to lock premier dates at venues like Rambagh Palace and Fairmont.",
-    },
+      a: "Engage us 8‑12 months ahead to lock premier dates at venues like Rambagh Palace and Fairmont." },
     {
       q: "Can you secure celebrity artists for the Sangeet?",
-      a: "Yes – we coordinate A‑list Bollywood stars, global bands, and elite performers directly with agencies.",
-    },
+      a: "Yes – we coordinate A‑list Bollywood stars, global bands, and elite performers directly with agencies." },
     {
       q: "Do you offer partial wedding planning?",
-      a: "We focus exclusively on end‑to‑end luxury production to guarantee flawless execution and cohesive design.",
-    },
+      a: "We focus exclusively on end‑to‑end luxury production to guarantee flawless execution and cohesive design." },
     {
       q: "Are you available for weddings outside Rajasthan?",
-      a: "Our logistics framework supports destination weddings worldwide, from Dubai and Goa to Europe.",
-    },
+      a: "Our logistics framework supports destination weddings worldwide, from Dubai and Goa to Europe." },
   ];
 
   return (
@@ -115,28 +101,25 @@ export default function DestinationWeddingPlannerJaipur() {
         <section className="py-20 w-full bg-[#FAF9F6] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
             <div className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
-              <Image
-                src="/premium_events/palace_wedding_decor.webp"
+              <Image src="/premium_events/palace_wedding_decor.webp"
                 alt="Palace Wedding Decor"
                 fill
                 className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </div>
             <div className="group relative aspect-[3/4] md:h-[90vh] md:mt-32 overflow-hidden">
-              <Image
-                src="/premium_events/reception_stage_design.webp"
+              <Image src="/premium_events/reception_stage_design.webp"
                 alt="Reception Stage Design"
                 fill
                 className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </div>
             <div className="group relative aspect-[3/4] md:h-[90vh] overflow-hidden">
-              <Image
-                src="/premium_events/traditional_phoolon_ki_chaadar.webp"
+              <Image src="/premium_events/traditional_phoolon_ki_chaadar.webp"
                 alt="Bride Entry Phoolon ki Chaadar"
                 fill
                 className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             </div>
           </div>
         </section>

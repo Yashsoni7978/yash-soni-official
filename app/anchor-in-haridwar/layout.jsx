@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-haridwar/layout.jsx
 // Ultra-Luxury Spiritual Heritage Destination Anchor Layout
 

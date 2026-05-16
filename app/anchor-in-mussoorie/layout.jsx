@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 // app/anchor-in-mussoorie/layout.jsx
 // Ultra-Luxury Heritage Doon Valley Destination Anchor Layout
 

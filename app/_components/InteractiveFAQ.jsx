@@ -1,12 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useId } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function FAQItem({ faq, question, q, answer, a, id, colorClass = "text-[#B5952F]" }) {
   const [isOpen, setIsOpen] = useState(false);
+  const reactId = useId();
   const displayQ = question || q || (faq && faq.q);
   const displayA = answer || a || (faq && faq.a);
-  const faqId = id || Math.random().toString(36).substr(2, 9);
+  const faqId = id || reactId;
   
   return (
     <div className="border-b border-[#1A1A1A]/10 py-6">
