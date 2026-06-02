@@ -115,7 +115,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Ooty Destination Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 8+ years and 1,100+ events. Specialist in Ooty's heritage luxury sector, executing flawless ceremonies at Savoy and Ferrnhills Royale Palace.",
+  description: "Professional event anchor with 4+ years and 1,100+ events. Specialist in Ooty's heritage luxury sector, executing flawless ceremonies at Savoy and Ferrnhills Royale Palace.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

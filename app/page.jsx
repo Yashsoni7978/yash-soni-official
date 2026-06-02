@@ -20,7 +20,7 @@ export const metadata = {
 const WA_LINK = "https://wa.me/917737877978?text=Hi%20Yash!%20I%20found%20your%20website%20and%20I%27d%20like%20to%20check%20availability%20for%20my%20event.";
 
 const STATS = [
-  { value: "1100+", label: "Events Anchored", sub: "Across India", icon: Mic },
+  { value: "1100+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic },
   { value: "10,000+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { value: "8+", label: "Years on Stage", sub: "Zero scripts", icon: Award },
   { value: "4.9★", label: "Rated by Clients", sub: "200+ reviews", icon: UserCheck },
@@ -86,7 +86,7 @@ const VS_DATA = [
 ];
 
 const LOCATIONS = [
-  { area: "Pan-India Presence", zones: "Goa · Mumbai · Delhi NCR · Bangalore", desc: "Premium hosting for luxury weddings and corporate galas in India's top 21+ hubs." },
+  { area: "Jaipur & Rajasthan Presence", zones: "Goa · Mumbai · Delhi NCR · Bangalore", desc: "Premium hosting for luxury weddings and corporate galas in India's top 21+ hubs." },
   { area: "Rajasthan Roots", zones: "Jaipur · Udaipur · Jodhpur · Jaisalmer", desc: "13+ cities across the royal state covered with full heritage logistics." },
   { area: "Hill & Beach Circuit", zones: "Shimla · Mussoorie · Andaman · Alibaug", desc: "Specialist in high-altitude and coastal destination events." },
   { area: "Corporate Tech Hubs", zones: "Hyderabad · Chennai · Kolkata · Pune", desc: "Award nights and summits for national brands and tech giants." },
@@ -113,8 +113,8 @@ const REVIEWS = [
 ];
 
 const FAQS = [
-  { q: "Who is Anchor Yash Soni?", a: "Anchor Yash Soni is a premium event host and emcee with 1,100+ events hosted across India. With a 4.9★ rating across 200+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in Rajasthani cultural traditions." },
-  { q: "Do you travel for Destination Weddings?", a: "Absolutely. While Jaipur is home, I host events across Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and travel pan-India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
+  { q: "Who is Anchor Yash Soni?", a: "Anchor Yash Soni is a premium event host and emcee with 1,100+ events hosted across Jaipur & Rajasthan. With a 4.9★ rating across 200+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in Rajasthani cultural traditions." },
+  { q: "Do you travel for Destination Weddings?", a: "Absolutely. While Jaipur is home, I host events across Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and travel Jaipur & Rajasthan for the right events. Travel logistics and accommodation are discussed during the first booking call." },
   { q: "Which languages are you fluent in?", a: "I switch effortlessly between Hindi for the emotions, English for the class, and a bit of Rajasthani/Marwari to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
   { q: "Can you handle a crowd of 1,000+ guests?", a: "Large-format crowds are a specialty. I have commanded open events of 10,000+ people unscripted. Crowd psychology — reading energy patterns, controlling chaos, redirecting attention — is the core skill that separates a real anchor from an announcer." },
   { q: "Why should we hire Anchor Yash over others?", a: "Because I have never used a paper script in 1,100+ events. If the PA fails, I turn it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. I am your insurance policy against awkward silences — the difference between an event people attend and one they remember. My 4.9★ rating across 200+ reviews says the rest." },
@@ -179,13 +179,13 @@ export default function HomePage() {
                 <GoldText>Beyond Scripts.</GoldText>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mb-4 leading-relaxed font-light">
-                With 1,100+ events hosted across India, Anchor Yash Soni is not just a host — he is a crowd psychologist, a cultural navigator, and a pressure-tested professional who has never reached for a paper script.
+                With 1,100+ events hosted across Jaipur & Rajasthan, Anchor Yash Soni is not just a host — he is a crowd psychologist, a cultural navigator, and a pressure-tested professional who has never reached for a paper script.
               </p>
               <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
                 Palace weddings, open-air Sangeets, national corporate galas, destination events — every format is a different craft. Yash has mastered all of them.
               </p>
               <p className="text-zinc-400 text-sm md:text-8 mb-4 leading-relaxed font-light">
-                Bilingual in Hindi and English. Fluent in Rajasthani culture. <strong className="text-white">Rated 4.9★ by 200+ clients across India.</strong>
+                Bilingual in Hindi and English. Fluent in Rajasthani culture. <strong className="text-white">Rated 4.9★ by 200+ clients across Jaipur & Rajasthan.</strong>
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 border-b border-[#D4AF37]/50 pb-1 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 Read My Story <ArrowRight size={12} />
@@ -377,7 +377,7 @@ export default function HomePage() {
             <div className="text-center mb-10 md:mb-14">
               <span className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em]">Coverage</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">
-                Pan-India <GoldText>Authority.</GoldText>
+                Jaipur & Rajasthan <GoldText>Authority.</GoldText>
               </h2>
             </div>
           </ScrollReveal>
@@ -492,7 +492,7 @@ export default function HomePage() {
                   Mastering the <br /><GoldText>Unscripted Moment.</GoldText>
                 </h2>
                 <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-6 font-light">
-                  True event anchoring is not about reading from a paper script or shouting over the music. It is about <strong className="text-white">vulnerability, presence, and unyielding energy</strong>. As a premier wedding anchor in Jaipur and corporate emcee across India, my approach is built on the foundation of 1,100+ live stage hours where every word is calculated for impact but delivered with raw authenticity.
+                  True event anchoring is not about reading from a paper script or shouting over the music. It is about <strong className="text-white">vulnerability, presence, and unyielding energy</strong>. As a premier wedding anchor in Jaipur and corporate emcee across Jaipur & Rajasthan, my approach is built on the foundation of 1,100+ live stage hours where every word is calculated for impact but delivered with raw authenticity.
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
                   Whether it is a royal destination wedding at Rambagh Palace or a high-stakes corporate summit at the Taj Palace Aerocity, the anchor acts as the heartbeat of the room. My mastery lies in <strong className="text-[#B5952F]">Reading the Energy</strong>—knowing exactly when to elevate the room for a high-octane Sangeet performance and when to hold a space of quiet dignity for a Varmala ceremony.

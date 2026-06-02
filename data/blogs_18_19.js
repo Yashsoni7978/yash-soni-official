@@ -10,7 +10,7 @@ export const NEW_BLOGS_BATCH_3 = [
     fullDate: "March 19, 2026",
     readTime: "9 min",
     title: "Planning a Royal Destination Wedding in Pushkar & Ajmer: The Complete Guide",
-    desc: "Why couples are choosing Pushkar and Ajmer over Udaipur for intimate, spiritual, and aesthetic destination weddings in Rajasthan. Venue recommendations, budgets & anchor tips.",
+    desc: "Royal pre-wedding shoot locations in Pushkar & Ajmer. Best setups, backdrops, timing & tips for a stunning pre-wedding shoot in Rajasthan.",
     image: "/white-flower-mandap-jaipur.webp",
     content: `
 When people think of a "Rajasthan Destination Wedding," two cities immediately dominate the conversation: [Jaipur](https://yashsoni.in/anchor-in-jaipur) for its grand royal heritage, and [Udaipur](https://yashsoni.in/anchor-in-udaipur) for its breathtaking lakeside romance.
@@ -21,7 +21,7 @@ If you are planning an intimate destination wedding anywhere in the range of 80 
 
 ### 1. The Spiritual Aesthetic That Money Cannot Replicate
 
-Pushkar is fiercely unique in a way that Jaipur and Udaipur simply cannot compete with. It is not just a beautiful city; it is one of the most ancient and spiritually charged cities in all of India — home to the world's only temple dedicated to Lord Brahma, surrounded by the Aravalli hills, and centered around its sacred lake.
+Pushkar is fiercely unique in a way that Jaipur and Udaipur simply cannot compete with. It is not just a beautiful city; it is one of the most ancient and spiritually charged cities in Jaipur & Rajasthan — home to the world's only temple dedicated to Lord Brahma, surrounded by the Aravalli hills, and centered around its sacred lake.
 
 **What This Means for Your Wedding:**
 Rather than standard hotel ballrooms, a Pushkar wedding is typically hosted in sprawling resort properties nested against the Aravallis, or in boutique heritage havelis overlooking the famous Pushkar Lake itself.

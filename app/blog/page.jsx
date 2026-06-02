@@ -61,7 +61,7 @@ export default function BlogPage() {
                     sizes="(max-width: 1024px) 100vw, 60vw"
                     className="object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 grayscale-[20%]" 
                     unoptimized={true}
-                  />
+                  quality={90} />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent z-10"></div>
                 <div className="absolute bottom-0 p-8 md:p-12 w-full z-20">
@@ -105,7 +105,7 @@ export default function BlogPage() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover mix-blend-multiply opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-40 transition-all duration-700 z-10" 
                     unoptimized={true}
-                  />
+                  quality={90} />
                 )}
               </div>
             </Link>
@@ -130,7 +130,7 @@ export default function BlogPage() {
                         sizes="(max-width: 768px) 100vw, 20vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-700 grayscale-[30%] group-hover:grayscale-0" 
                         unoptimized={true}
-                      />
+                      quality={90} />
                     )}
                   </div>
 

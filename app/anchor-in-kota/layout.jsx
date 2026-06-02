@@ -119,7 +119,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Kota Heritage Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 8+ years and 1,100+ events across Rajasthan, India. Specialist in Hadoti heritage weddings, Chambal Valley outdoor acoustics, and corporate event hosting for Kota's premium education and industrial sectors.",
+  description: "Professional event anchor and emcee with 4+ years and 1,100+ events across Rajasthan, India. Specialist in Hadoti heritage weddings, Chambal Valley outdoor acoustics, and corporate event hosting for Kota's premium education and industrial sectors.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

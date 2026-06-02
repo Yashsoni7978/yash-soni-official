@@ -114,7 +114,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Alibaug Wedding Emcee"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 8+ years and 1,100+ events. Specialist in Alibaug's highly exclusive, VIP-dense luxury weddings, managing complex coastal logistics and Mumbai's high-net-worth business crowds.",
+  description: "Professional event anchor with 4+ years and 1,100+ events. Specialist in Alibaug's highly exclusive, VIP-dense luxury weddings, managing complex coastal logistics and Mumbai's high-net-worth business crowds.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

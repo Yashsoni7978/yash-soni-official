@@ -9,7 +9,7 @@ export const GalleryMarquee = ({ images }) => {
       <div className="container mx-auto px-5 md:px-10 mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-3">
         <div>
           <h2 className="text-2xl md:text-4xl font-bold mb-1">Moments of <GoldText>Magic.</GoldText></h2>
-          <p className="text-zinc-500 text-xs md:text-sm">Live on stage — weddings, Sangeets, and corporate events across India.</p>
+          <p className="text-zinc-500 text-xs md:text-sm">Live on stage — weddings, Sangeets, and corporate events across Jaipur & Rajasthan.</p>
         </div>
         <Link href="/portfolio" className="text-[#B5952F] text-xs uppercase tracking-widest border-b border-[#D4AF37]/40 pb-0.5 hover:text-white transition-colors shrink-0">
           Full Portfolio →

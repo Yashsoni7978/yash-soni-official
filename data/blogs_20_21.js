@@ -10,7 +10,7 @@ export const NEW_BLOGS_BATCH_4 = [
     fullDate: "March 21, 2026",
     readTime: "11 min",
     title: "Top 10 Royal Palace Wedding Venues in Jaipur (2026-2027 Complete Guide)",
-    desc: "Honest insider reviews of Rambagh, Fairmont, Jai Mahal, Samode & 6 more. Real budgets, anchor perspectives, acoustic issues & noise restrictions nobody tells you about.",
+    desc: "Top 10 royal palace wedding venues in Jaipur for 2026. Capacity, pricing & what makes each venue unique for a grand Rajasthan palace wedding.",
     image: "/palace-wedding-venue-blog.webp",
     content: `
 When you close your eyes and imagine a "Rajasthan Destination Wedding," every visual element that appears is the same: grand stone archways flooding with golden light, horses and elephants in the Baraat procession, a bride walking down marble staircases into a courtyard that looks 400 years old. You see royalty.

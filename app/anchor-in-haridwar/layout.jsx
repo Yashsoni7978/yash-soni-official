@@ -114,7 +114,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Haridwar Destination Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 8+ years and 1,100+ events. Specialist in Haridwar's high-altitude spiritual luxury sector, executing flawless bilingual ceremonies at Pilibhit House and the Ganges ghats.",
+  description: "Professional event anchor with 4+ years and 1,100+ events. Specialist in Haridwar's high-altitude spiritual luxury sector, executing flawless bilingual ceremonies at Pilibhit House and the Ganges ghats.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

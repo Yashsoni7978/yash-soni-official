@@ -114,7 +114,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Manali Destination Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 8+ years and 1,100+ events. Specialist in Manali's alpine luxury sector, executing explosive bilingual Sangeets and corporate offsites at Span Resort and Baragarh Resort.",
+  description: "Professional event anchor with 4+ years and 1,100+ events. Specialist in Manali's alpine luxury sector, executing explosive bilingual Sangeets and corporate offsites at Span Resort and Baragarh Resort.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

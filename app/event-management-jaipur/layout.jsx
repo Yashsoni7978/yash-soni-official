@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: "Event Management Company Jaipur | Master Execution Agency",
     description:
-      "Scale changes everything. We provide full agency capabilities, from massive stage fabrication to hospitality logistics for the biggest events across India.",
+      "Scale changes everything. We provide full agency capabilities, from massive stage fabrication to hospitality logistics for the biggest events across Jaipur & Rajasthan.",
     url: "https://yashsoni.in/event-management-jaipur",
     siteName: "Anchor Yash Soni",
     type: "website",

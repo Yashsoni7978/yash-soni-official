@@ -81,7 +81,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Alwar-specific
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "Across India", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -146,7 +146,7 @@ const VENUES = [
 const VS = [
   { problem: "NCR city anchor brings metro energy — completely wrong for Sariska jungle", fix: "Wildlife-adjacent crowd management through voice and interaction, not volume" },
   { problem: "Unfamiliar with Neemrana's specific acoustic zones and terrace layout", fix: "Venue-specific knowledge from repeated events at Neemrana Fort Palace" },
-  { problem: "Cannot bridge Delhi NCR corporate guests and Rajasthani heritage families", fix: "Fluent cultural code-switching built over 8+ years of cross-demographic events" },
+  { problem: "Cannot bridge Delhi NCR corporate guests and Rajasthani heritage families", fix: "Fluent cultural code-switching built over 4+ years of cross-demographic events" },
   { problem: "Generic anchor who treats Alwar like a hotel ballroom event", fix: "Heritage venue specialist — every property's character informs every hosting choice" },
   { problem: "Low energy during the Mehndi morning that ruins the pre-wedding vibe", fix: "Warm, interactive, unscripted crowd warmth specifically calibrated for intimate events" },
   { problem: "Cannot handle remote destination logistics or venue-side coordination", fix: "Pro-active venue liaison and pre-event walkthrough — zero on-stage surprises" },
@@ -189,7 +189,7 @@ const FAQS = [
   },
   {
     q: "How does the Alwar-Neemrana circuit benefit from Yash's Rajasthan experience?",
-    a: "The Alwar region sits at the intersection of Rajasthan's heritage culture and Delhi NCR's metropolitan expectations. An anchor who only knows city events cannot read the cultural cues that heritage families bring to a Neemrana wedding. An anchor who only does Jaipur or Jodhpur circuits may not have the professional polish demanded by corporate-heavy Delhi NCR guest lists. The combination — built across 8+ years of cross-demographic event experience — is the specific asset for this region."
+    a: "The Alwar region sits at the intersection of Rajasthan's heritage culture and Delhi NCR's metropolitan expectations. An anchor who only knows city events cannot read the cultural cues that heritage families bring to a Neemrana wedding. An anchor who only does Jaipur or Jodhpur circuits may not have the professional polish demanded by corporate-heavy Delhi NCR guest lists. The combination — built across 4+ years of cross-demographic event experience — is the specific asset for this region."
   },
   {
     q: "Can you anchor a Mehndi or Haldi event at Neemrana in addition to the main wedding?",
@@ -331,7 +331,7 @@ export default function AlwarPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
+                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the dramatic stepped terraces of <strong className="text-[#B5952F]">Neemrana Fort Palace</strong> to the serene lakeside gardens of Siliserh, and from the tiger-territory tented lounges of Sariska to the hilltop heritage havelis of Alwar — every corner of this circuit has been hosted with the same absolute command.
@@ -631,7 +631,7 @@ export default function AlwarPage() {
           <Reveal>
             <div className="text-center mb-8">
               <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Also Anchoring In</p>
-              <h2 className="text-2xl md:text-3xl font-black uppercase">Rajasthan & <G>Pan-India.</G></h2>
+              <h2 className="text-2xl md:text-3xl font-black uppercase">Rajasthan & <G>Jaipur & Rajasthan.</G></h2>
             </div>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

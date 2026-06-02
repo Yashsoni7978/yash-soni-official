@@ -48,6 +48,20 @@ export default function sitemap() {
 
         const urlPath = cleanedPath === '' ? '' : `/${cleanedPath}`;
         
+        // Explicitly exclude prohibited static routes
+        const EXCLUDED_ROUTES = [
+          '/privacy', 
+          '/terms', 
+          '/anchor-in-chandigarh', 
+          '/anchor-in-pune',
+          '/anchor-in-kishangarh', 
+          '/corporate-emcee-jaipur', 
+          '/wedding-emcee-jaipur',
+          '/blog/[slug]', 
+          '/locations/jaipur'
+        ];
+        if (EXCLUDED_ROUTES.includes(urlPath)) continue;
+        
         routes.push({
           url: `${baseUrl}${urlPath}`,
           lastModified: stat.mtime,
@@ -61,13 +75,33 @@ export default function sitemap() {
   const allRoutes = getRoutes(appDir);
 
   // 1.5 Inject Dynamic Blog Routes
+  const EXPECTED_BLOGS = [
+    'sangeet-ceremony-planning-guide-jaipur',
+    'mehendi-ceremony-planning-jaipur',
+    'haldi-ceremony-planning-jaipur',
+    'about-yash-soni-anchor-jaipur',
+    'jaipur-wedding-costs-budget-2026',
+    'udaipur-vs-jaipur-destination-wedding',
+    'anchor-charges-jaipur-2026-pricing',
+    'jodhpur-destination-wedding-guide',
+    'farmhouse-wedding-venues-jaipur',
+    'complete-wedding-planning-guide-jaipur',
+    'destination-wedding-rajasthan-complete-guide',
+    'corporate-annual-day-planning-jaipur',
+    'royal-pre-wedding-setup-pushkar-ajmer',
+    'top-10-royal-palace-wedding-venues-jaipur',
+    'nri-destination-wedding-guide-rajasthan-2026'
+  ];
+
   BLOG_POSTS.forEach(post => {
-    allRoutes.push({
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: new Date(),
-      path: `/blog/${post.slug}`,
-      isBlog: true
-    });
+    if (EXPECTED_BLOGS.includes(post.slug)) {
+      allRoutes.push({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(),
+        path: `/blog/${post.slug}`,
+        isBlog: true
+      });
+    }
   });
 
   return allRoutes.map((route) => {
@@ -76,7 +110,7 @@ export default function sitemap() {
     let changeFrequency = 'monthly';
 
     // 1.0 - Homepage and Master Hubs
-    if (route.path === '' || route.path === '/') {
+    if (route.path === '' || route.path === '/' || route.path === '/anchor-in-jaipur' || route.path === '/best-anchor-in-jaipur' || route.path === '/wedding-anchor-jaipur') {
       priority = 1.0;
       changeFrequency = 'daily';
     } 

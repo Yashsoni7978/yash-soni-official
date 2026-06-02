@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  trailingSlash: false,
   images: {
     remotePatterns: [],
     formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
   },
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
@@ -51,6 +55,11 @@ const nextConfig: NextConfig = {
       {
         source: '/blog/anchor-charges-jaipur-2026',
         destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/locations/jaipur',
+        destination: '/anchor-in-jaipur',
         permanent: true,
       },
     ];

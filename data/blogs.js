@@ -23,7 +23,7 @@ const OLD_BLOGS = [
     fullDate: "March 01, 2026",
     readTime: "6 min",
     title: "Sangeet Ceremony Planning in Jaipur: Your Complete 2026 Guide",
-    desc: "Planning a sangeet in Jaipur? Get expert tips on venues, music, games, and professional anchoring. Make your sangeet night unforgettable!",
+    desc: "Plan the perfect sangeet ceremony in Jaipur. Tips on timeline, family performances, music, decor & hiring the right anchor for your sangeet night.",
     image: "/sangeet-red-glitter-stage.webp",
     content: `
 I still remember the first [sangeet ceremony in Jaipur](https://yashsoni.in/sangeet-anchor-jaipur) I anchored at Rambagh Palace. The bride's grandmother, nearly 80 years old, surprised everyone by leading a traditional Ghoomar dance. That single moment—three generations dancing together under fairy lights—is what makes sangeet nights in the Pink City so magical.
@@ -115,7 +115,7 @@ Want to discuss your sangeet vision? I'm here to help make it unforgettable—fr
     fullDate: "March 02, 2026",
     readTime: "5 min",
     title: "Mehendi Ceremony Planning in Jaipur: Ideas, Games & Expert Tips",
-    desc: "Complete guide to planning your mehendi ceremony in Jaipur. Get decoration ideas, game suggestions, and professional anchoring tips for a memorable celebration.",
+    desc: "Complete mehendi ceremony planning guide for Jaipur weddings. Decor ideas, artist tips, schedule & how to keep guests engaged throughout.",
     image: "/indian-bride-solo-decor.webp",
     content: `
 Last month, I anchored a [mehendi ceremony in Jaipur](https://yashsoni.in/mehendi-anchor-jaipur) where the bride hid her fiancé's name in such an intricate design that guests spent an hour searching! The winner? His 6-year-old niece. That's the beauty of mehendi functions—they're intimate, playful, and create the sweetest memories.
@@ -201,7 +201,7 @@ Every bride deserves a mehendi ceremony that's relaxed, beautiful, and memorable
     fullDate: "March 03, 2026",
     readTime: "5 min",
     title: "Haldi Ceremony in Jaipur: Traditions, Ideas & Planning Guide 2026",
-    desc: "Plan the perfect haldi ceremony in Jaipur. Get traditional insights, modern ideas, game suggestions, and professional anchoring tips for your yellow celebration!",
+    desc: "Plan a fun haldi ceremony in Jaipur with the right decor, music & anchor. Step-by-step guide for a vibrant, memorable haldi celebration.",
     image: "/haldi-bride-groom-family.webp",
     content: `
 There's something magical about haldi ceremonies—maybe it's the yellow everywhere, maybe it's the playful chaos, or maybe it's watching dignified uncles throwing turmeric paste at each other like five-year-olds. Last week, I anchored a [haldi ceremony in Jaipur](https://yashsoni.in/haldi-anchor-jaipur) where the groom ended up in the pool, fully dressed, covered in haldi. Best photos of the entire wedding week!
@@ -315,14 +315,14 @@ Ready to plan a haldi ceremony that balances tradition with fun? I'm here to hel
     fullDate: "March 04, 2026",
     readTime: "6 min",
     title: "Meet Yash Soni: Jaipur's Most Trusted Wedding & Event Anchor",
-    desc: "Get to know Yash Soni, Jaipur's premier professional anchor. Specializing in weddings, corporate events, and celebrations across Rajasthan with authentic Rajasthani charm.",
+    desc: "Meet Yash Soni — Jaipur's top anchor & emcee with 4+ years experience and 1100+ events hosted across Rajasthan. His story & journey.",
     image: "/hawa-mahal-portrait.webp",
     content: `
 I never planned to become an [anchor in Jaipur](https://yashsoni.in/anchor-in-jaipur). It started with hosting my cousin's [sangeet ceremony](https://yashsoni.in/sangeet-anchor-jaipur) at a farmhouse outside the city. Halfway through, the professional anchor didn't show up. Panic mode. Someone handed me a microphone and said, "You're funny, just keep people entertained until he arrives."
 
 He never came. I hosted the entire night. And honestly? I loved every minute of it.
 
-That was eight years ago. Since then, I've anchored 500+ weddings, 200+ corporate events, and celebrations in every corner of Rajasthan—from the City Palace in [Jaipur](/anchor-in-jaipur) to lakeside venues in [Udaipur](/anchor-in-udaipur), from desert celebrations in [Jaisalmer](/anchor-in-jaisalmer) to blue city weddings in [Jodhpur](/anchor-in-jodhpur).
+That was 4+ years ago. Since then, I've anchored 500+ weddings, 200+ corporate events, and celebrations in every corner of Rajasthan—from the City Palace in [Jaipur](/anchor-in-jaipur) to lakeside venues in [Udaipur](/anchor-in-udaipur), from desert celebrations in [Jaisalmer](/anchor-in-jaisalmer) to blue city weddings in [Jodhpur](/anchor-in-jodhpur).
 
 ### What Makes Me Different?
 
@@ -399,7 +399,7 @@ Let's talk about your vision. I promise to listen more than I talk (rare for an 
     fullDate: "March 05, 2026",
     readTime: "7 min",
     title: "Jaipur Wedding Costs 2026: Complete Budget Breakdown & Pricing Guide",
-    desc: "Planning a wedding in Jaipur? Get transparent pricing for venues, catering, anchors, and all services. Complete budget guide with real costs for 2026.",
+    desc: "Complete Jaipur wedding cost breakdown for 2026. Venue, catering, decor, anchor & photography budgets explained. Plan your dream wedding smartly.",
     image: "/white-flower-mandap-jaipur.webp",
     content: `
 "How much does a wedding actually cost in Jaipur?" This is THE question I hear constantly as a [professional anchor](https://yashsoni.in/anchor-in-jaipur) coordinating with couples and their [event planners](https://yashsoni.in/wedding-planning-jaipur).
@@ -536,7 +536,7 @@ I offer complimentary consultation where I:
     fullDate: "March 06, 2026",
     readTime: "6 min",
     title: "Udaipur vs Jaipur for Weddings: Which City Should You Choose in 2026?",
-    desc: "Comparing Udaipur and Jaipur for destination weddings. Honest pros, cons, costs, and recommendations from an anchor who works both cities.",
+    desc: "Udaipur vs Jaipur for your destination wedding — venues, costs, weather & vibe compared. Which Rajasthan city is right for your big day?",
     image: "/jal-mahal-jaipur-artist.webp",
     content: `
 Last month, I anchored a [destination wedding in Udaipur](/anchor-in-udaipur) at Taj Lake Palace. Stunning venue, romantic lakeside setting, bride floating across Pichola Lake in a decorated boat. Instagram paradise.
@@ -679,7 +679,7 @@ Whether you choose [Udaipur](/anchor-in-udaipur), [Jaipur](/anchor-in-jaipur), o
     fullDate: "March 07, 2026",
     readTime: "6 min",
     title: "Anchor Charges in Jaipur 2026: Complete Transparent Pricing Guide",
-    desc: "Wondering how much professional anchors charge in Jaipur? Get honest pricing breakdown for wedding, corporate, and social events with no hidden costs.",
+    desc: "How much does a wedding anchor cost in Jaipur in 2026? Complete pricing guide for anchor & emcee charges across different event types.",
     image: "/bride-groom-white-decor.webp",
     content: `
 Let me tell you about the most awkward conversation I have regularly: discussing money.
@@ -840,7 +840,7 @@ Free 30-minute consultation where we discuss:
     fullDate: "March 08, 2026",
     readTime: "7 min",
     title: "Jodhpur Destination Wedding Guide 2026: Blue City Celebrations",
-    desc: "Planning a destination wedding in Jodhpur? Complete guide to venues, costs, logistics, and tips from a professional anchor. Make your blue city wedding magical!",
+    desc: "Planning a destination wedding in Jodhpur? Best palace venues, costs, weather, anchor tips & everything you need for a royal Blue City wedding.",
     image: "/bride-groom-fort-shoot.webp",
     content: `
 I'll never forget anchoring my first [wedding in Jodhpur](/anchor-in-jodhpur). The venue? A haveli with direct Mehrangarh Fort views. As the sun set, the massive fort lit up orange and golden behind us. The bride made her entry with the fort glowing in the background, and 200 guests gasped simultaneously.
@@ -993,7 +993,7 @@ As [professional anchor](https://yashsoni.in/destination-wedding-anchor) who's c
     fullDate: "March 09, 2026",
     readTime: "7 min",
     title: "Best Farmhouse Wedding Venues in Jaipur 2026: Complete Guide",
-    desc: "Discover Jaipur's best farmhouse wedding venues. Get pricing, capacity, pros/cons, and expert tips from a professional anchor who's worked them all!",
+    desc: "Best farmhouse wedding venues in Jaipur for 2026. Capacity, pricing, locations & tips for choosing the perfect outdoor farmhouse for your wedding.",
     image: "/rose-petal-tree-background.webp",
     content: `
 There's something magical about farmhouse weddings in [Jaipur](/anchor-in-jaipur). Last month, I anchored a [sangeet ceremony](https://yashsoni.in/sangeet-anchor-jaipur) at a farmhouse on Ajmer Road where they'd set up a traditional Rajasthani village theme—complete with rope swings, charpais, and fairy lights everywhere. As the sun set over open fields, the entire space transformed into a glowing wonderland.
@@ -1172,7 +1172,7 @@ As [professional anchor](https://yashsoni.in/anchor-in-jaipur) who's navigated e
     fullDate: "March 15, 2026",
     readTime: "12 min",
     title: "Complete Wedding Planning Guide for Jaipur 2026: Start to Finish",
-    desc: "Ultimate step-by-step wedding planning guide for Jaipur. From venue booking to day-of coordination. Everything you need for a perfect Pink City celebration.",
+    desc: "The complete wedding planning guide for Jaipur. Venues, vendors, timelines, budgets & pro tips from anchor Yash Soni for a stress-free wedding.",
     image: "/bride-entry-white-chunni.webp",
     content: `The couple walked into their Rambagh Palace reception looking shell-shocked. Not from joy, from exhaustion. They had planned everything themselves. Every vendor call. Every decision. Every coordination headache. By the time their wedding day arrived, they were too tired to enjoy it.
 
@@ -1288,7 +1288,7 @@ Call or WhatsApp: 7737877978 | Website: www.yashsoni.in`
     fullDate: "March 16, 2026",
     readTime: "13 min",
     title: "Destination Wedding in Rajasthan: Ultimate Planning Guide 2026",
-    desc: "Complete guide to planning destination weddings across Rajasthan. Venues, costs, logistics, guest management, and insider tips from a professional anchor.",
+    desc: "Plan your destination wedding in Rajasthan with this complete guide. Top venues, cities, costs, weather & expert tips for a royal Rajasthan wedding.",
     image: "/white-flower-mandap-jaipur.webp",
     content: `Last year, I anchored a destination wedding where the couple planned everything from Singapore. They had never visited their chosen Jaipur venue in person. Relied entirely on videos and coordinator promises. When they arrived 2 days before wedding, the venue looked nothing like photos. Panic mode. Frantic changes. Stress that could have been avoided.
 
@@ -1394,7 +1394,7 @@ Call or WhatsApp: 7737877978 | Website: www.yashsoni.in`
     fullDate: "March 17, 2026",
     readTime: "12 min",
     title: "Corporate Annual Day Planning in Jaipur: Complete 2026 Guide",
-    desc: "Plan spectacular corporate annual day in Jaipur. Complete guide covering venues, themes, entertainment, awards, budgets, and professional anchoring.",
+    desc: "How to plan a corporate annual day in Jaipur. Venue tips, event flow, anchor selection & activities that make your annual day truly memorable.",
     image: "/corporate-gala-dinner-green.webp",
     content: `The CEO stood on stage looking uncomfortable. Three hundred employees sat below looking bored. The annual day "celebration" felt more like mandatory meeting than celebration. PowerPoint presentations about quarterly results. Long-winded speeches. Generic awards. Zero entertainment. Everyone checked watches counting minutes until they could leave.
 
@@ -1440,7 +1440,7 @@ Bollywood extravaganza theme works universally in India. Employees dress as favo
 
 Decades throwback theme travels through time. Different areas represent different decades. Music from 70s, 80s, 90s, 2000s. Dress code era-appropriate. Nostalgic and engaging across age groups.
 
-Regional culture theme celebrates India's diversity. Different zones representing states. Rajasthani, Punjabi, Bengali, South Indian, Gujarati décor and food. Particularly relevant for pan-India companies. Promotes unity in diversity.
+Regional culture theme celebrates India's diversity. Different zones representing states. Rajasthani, Punjabi, Bengali, South Indian, Gujarati décor and food. Particularly relevant for Jaipur & Rajasthan companies. Promotes unity in diversity.
 
 Futuristic theme looks ahead. Modern décor, tech-forward presentations, innovation focused. Works for tech companies or during major transformation initiatives.
 

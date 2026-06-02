@@ -114,7 +114,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Kolkata Marwari Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 8+ years and 1,100+ events. Specialist in Kolkata's high-net-worth Marwari weddings at ITC Royal Bengal and corporate summits in Rajarhat. Impeccable bilingual English/Hindi execution.",
+  description: "Professional event anchor and emcee with 4+ years and 1,100+ events. Specialist in Kolkata's high-net-worth Marwari weddings at ITC Royal Bengal and corporate summits in Rajarhat. Impeccable bilingual English/Hindi execution.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

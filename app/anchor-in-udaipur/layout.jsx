@@ -82,7 +82,7 @@ const personSchema = {
   name:              "Yash Soni",
   alternateName:     ["Anchor Yash Soni", "Anchor Yash"],
   jobTitle:          "Professional Event Anchor & Emcee",
-  description:       `Yash Soni is a professional event anchor with 8+ years of experience in wedding and corporate events. He has hosted 1,100+ events across Rajasthan and India, including luxury destination weddings at Taj Lake Palace and Oberoi Udaivilas in Udaipur.`,
+  description:       `Yash Soni is a professional event anchor with 4+ years of experience in wedding and corporate events. He has hosted 1,100+ events across Rajasthan and India, including luxury destination weddings at Taj Lake Palace and Oberoi Udaivilas in Udaipur.`,
   url:               `https://${DOMAIN}`,
   image:             `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone:         "+917737877978",
@@ -115,7 +115,7 @@ export const metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Udaipur | Wedding & Destination Event Host — Anchor Yash Soni`,
   description:
-    `Looking for the best anchor in Udaipur? Anchor Yash Soni — 4.9★ rated, 1,100+ events, 8+ years. Expert for destination weddings at Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island. Bilingual Hindi/English, unscripted, NRI-experienced.`,
+    `Looking for the best anchor in Udaipur? Anchor Yash Soni — 4.9★ rated, 1,100+ events, 4+ years. Expert for destination weddings at Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island. Bilingual Hindi/English, unscripted, NRI-experienced.`,
   keywords: [
     // Core identity — highest volume
     "anchor in udaipur",

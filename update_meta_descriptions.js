@@ -5,7 +5,7 @@ const BOILERPLATE = `1,100+ Premium Events Hosted \u2022 Elite Heritage Venues \
 
 const UPDATES = {
   'app/artist-management-jaipur/layout.jsx': 'End-to-end artist booking and management in Jaipur. Yash Soni Studio handles talent sourcing, coordination and performance delivery for premium events.',
-  'app/corporate-event-management-company/layout.jsx': "Yash Soni Studio — Jaipur's premium corporate event management company. Award nights, product launches and summits executed flawlessly across India.",
+  'app/corporate-event-management-company/layout.jsx': "Yash Soni Studio — Jaipur's premium corporate event management company. Award nights, product launches and summits executed flawlessly across Jaipur & Rajasthan.",
   'app/destination-wedding-planner-jaipur/layout.jsx': "Planning a destination wedding in Jaipur? Yash Soni delivers full-service destination wedding planning across Rajasthan's palace and heritage venues.",
   'app/event-designing/layout.jsx': 'Luxury 3D event designing and decor planning in Jaipur by Yash Soni Studio. Conceptual design to on-ground execution for weddings and corporate events.',
   'app/event-management-jaipur/layout.jsx': 'Premium event management in Jaipur by Yash Soni Studio. End-to-end planning, coordination and execution for weddings, corporate events and galas across Rajasthan.',

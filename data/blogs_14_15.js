@@ -10,7 +10,7 @@ export const NEW_BLOGS_BATCH_1 = [
     fullDate: "March 15, 2026",
     readTime: "9 min",
     title: "The Ultimate NRI Destination Wedding Guide for Rajasthan (2026-2027)",
-    desc: "Planning a destination wedding in Jaipur or Udaipur from the US, UK, or Canada? Here is the complete guide to logistics, venues, and hiring a bilingual anchor.",
+    desc: "Complete NRI destination wedding guide for Rajasthan 2026. Visa, budget, vendors, legal requirements & tips for planning from abroad.",
     image: "/jal-mahal-jaipur-artist.webp",
     content: `
 Planning a wedding is stressful. Planning a destination wedding in India while living in the United States, the UK, or Canada? That is an entirely different level of logistical challenge — and one that thousands of NRI couples navigate every single year.

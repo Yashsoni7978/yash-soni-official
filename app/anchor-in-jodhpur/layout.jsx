@@ -80,7 +80,7 @@ const personSchema = {
   name:          "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash"],
   jobTitle:      "Professional Event Anchor & Emcee",
-  description:   `Yash Soni is a professional event anchor with 8+ years of experience in royal palace weddings and corporate events. He has hosted 1,100+ events including luxury destination weddings at Umaid Bhawan Palace and Mehrangarh Fort in Jodhpur.`,
+  description:   `Yash Soni is a professional event anchor with 4+ years of experience in royal palace weddings and corporate events. He has hosted 1,100+ events including luxury destination weddings at Umaid Bhawan Palace and Mehrangarh Fort in Jodhpur.`,
   url:           `https://${DOMAIN}`,
   image:         `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone:     "+917737877978",
@@ -112,7 +112,7 @@ export const metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host — Anchor Yash Soni`,
   description:
-    `Looking for the best anchor in Jodhpur? Anchor Yash Soni — 4.9★ rated, 1,100+ events, 8+ years. Expert for royal weddings at Umaid Bhawan Palace, Mehrangarh Fort & RAAS Jodhpur. Bilingual, unscripted, NRI & Rajputana protocol experienced.`,
+    `Looking for the best anchor in Jodhpur? Anchor Yash Soni — 4.9★ rated, 1,100+ events, 4+ years. Expert for royal weddings at Umaid Bhawan Palace, Mehrangarh Fort & RAAS Jodhpur. Bilingual, unscripted, NRI & Rajputana protocol experienced.`,
   keywords: [
     // Core identity
     "anchor in jodhpur",

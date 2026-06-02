@@ -115,7 +115,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Coorg Destination Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 8+ years and 1,100+ events. Specialist in Coorg's eco-luxury sector, executing flawless ceremonies at Taj Madikeri and Tamara Coorg.",
+  description: "Professional event anchor with 4+ years and 1,100+ events. Specialist in Coorg's eco-luxury sector, executing flawless ceremonies at Taj Madikeri and Tamara Coorg.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

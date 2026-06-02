@@ -1,7 +1,7 @@
 import Script from 'next/script';
 export const metadata = {
   title: "Corporate Event Management Company | MICE & Galas | Anchor Yash Soni",
-  description: "Yash Soni Studio — Jaipur's premium corporate event management company. Award nights, product launches and summits executed flawlessly across India.",
+  description: "Yash Soni Studio — Jaipur's premium corporate event management company. Award nights, product launches and summits executed flawlessly across Jaipur & Rajasthan.",
   keywords: [
     "corporate event management company",
     "corporate event planner jaipur",
