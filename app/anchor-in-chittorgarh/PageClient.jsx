@@ -67,7 +67,7 @@ const FAQItem = ({ q, a, id }) => {
       <AnimatePresence>
         {open && (
           <motion.div id={id} initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4">{a}</p>
+            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4 yash-faq-answer yash-citable">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -76,7 +76,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -166,77 +166,18 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  {
-    q: "Who is the best anchor for Rajput heritage weddings at Chittorgarh?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and has specific experience with Chittorgarh's deep Rajput heritage ceremony format. He brings Mewar cultural fluency — correct ceremonial vocabulary, Rana and Maharana lineage references, and appropriate emotional register — alongside the practical skills required to manage events in India's largest fort complex."
-  },
-  {
-    q: "Do you understand Mewar Rajput ceremonial protocol and the specific cultural identity of Chittorgarh?",
-    a: "Yes. Chittorgarh carries the heaviest cultural identity of any event destination in Rajasthan — possibly in India. The lineage of Rana Kumbha, the sacrifice of Padmini, the battles of Rana Sanga, and the legacy of Maharana Pratap are not background colour — they are the identity of the families who choose to celebrate here. The anchor who does not understand these references deeply cannot serve this room. The anchor who name-drops them incorrectly causes active offence. This fluency is developed through genuine immersion, not quick research."
-  },
-  {
-    q: "How do you manage the acoustic and spatial challenges of Chittorgarh Fort at 700 acres?",
-    a: "The sheer scale of Chittorgarh Fort creates event management challenges that most anchors are entirely unprepared for. At this scale, the acoustic behaviour of open stone spaces, the natural crowd dispersal driven by the geography, and the visual attention management across multiple heritage sight lines all need pre-event planning rather than on-stage improvisation. I work with the venue logistics team before every Chittorgarh event to establish crowd gathering strategy, acoustic positioning, and sight-line management."
-  },
-  {
-    q: "Have you hosted events at Padmini Palace and Rana Kumbha Palace within the fort?",
-    a: "Yes. Both of these sites have very different acoustic and atmospheric characteristics within the broader fort complex. Padmini Palace's lakeside setting offers natural crowd intimacy but wind-driven acoustic challenges. Rana Kumbha's courtyard offers dramatic scale but requires careful energy management to fill the space without the event feeling empty. Having worked both means these factors are pre-managed rather than discovered on the day."
-  },
-  {
-    q: "Can you host events at boutique heritage properties near Chittorgarh like Bassi Fort or Castle Bijaipur?",
-    a: "Yes. The Chittorgarh circuit includes several outstanding boutique heritage properties within 20–40km of the fort that are increasingly popular for destination wedding events. These properties offer heritage character within a more manageable scale for 100–300 guest events. The cultural identity of the region still governs the hosting register even at these smaller properties."
-  },
-  {
-    q: "Is Chittorgarh a good destination for NRI family weddings?",
-    a: "Yes. Chittorgarh has a very specific and powerful appeal for non-resident Rajput families — particularly those from the UK, USA, and UAE — who want to ground their child's wedding in the deepest possible expression of their ancestral identity. For a Mewar-lineage NRI family, there is no more meaningful wedding backdrop in the world than Chittorgarh Fort. The hosting must bridge the international entertainment expectations of the diaspora guests with the ceremonial gravity that the Indian family elders require."
-  },
-  {
-    q: "How far in advance should we book for a Chittorgarh destination wedding?",
-    a: "Chittorgarh operates as a destination wedding circuit primarily in the winter months — October through February. Fort permissions for private events have a separate approval pathway that requires significant advance planning. I recommend confirming the anchor booking simultaneously with the initial venue application — 6 to 9 months in advance for premium dates."
-  },
-  {
-    q: "Do you host corporate and institutional events in Chittorgarh beyond weddings?",
-    a: "Yes. Chittorgarh increasingly draws cultural organisations, heritage foundations, and government departments for conferences, summits, and commemorative events. These require a very different hosting register — intellectual gravitas, historical accuracy, and a deep respect for the site's significance — combined with the practical skills of keeping an audience engaged over a multi-session event day."
-  },
+  { q: "Who is the best anchor for destination weddings in Chittorgarh?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Chittorgarh's fort-view and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues set against the backdrop of India's largest fort." },
+  { q: "How do you handle the logistics of heritage weddings in Chittorgarh?", a: "Chittorgarh offers majestic heritage properties with unique acoustic challenges and sprawling outdoor layouts. Managing event energy in these vast settings requires an experienced host who uses precise pacing and crowd psychology to create an intimate, high-energy atmosphere despite the massive surroundings." },
+  { q: "Can you host bilingual events for NRI families in Chittorgarh?", a: "Yes. Destination weddings in Chittorgarh attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
+  { q: "Do you anchor corporate events in Chittorgarh?", a: "Chittorgarh is a majestic destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
+  { q: "How far in advance should I book for a Chittorgarh wedding?", a: "Chittorgarh is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Chittorgarh for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Chittorgarh destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Chittorgarh?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-};
+
+
 
 export default function ChittorgarhPage() {
   return (
@@ -304,7 +245,7 @@ export default function ChittorgarhPage() {
               <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">Beyond <G>Announcements.</G><br />Beyond Scripts.</h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built an unmatched reputation for commanding the most complex and culturally significant events in Rajasthan — with complete zero paper scripts.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built an unmatched reputation for commanding the most complex and culturally significant events in Rajasthan — with complete zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Chittorgarh is the most culturally demanding destination in the entire Rajasthan circuit. Its identity is not constructed around tourism or luxury aesthetics — it is built on 700 years of Rajput sacrifice, sovereign honour, and cultural pride. An anchor working in <strong className="text-[#B5952F]">Chittorgarh Fort</strong> is not decorating an event. They are participating in a living cultural statement.
@@ -533,7 +474,124 @@ export default function ChittorgarhPage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+                  {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Chittorgarh's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Chittorgarh —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Chittorgarh",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Chittorgarh.",
+                keywords: ["best wedding anchor chittorgarh", "wedding emcee chittorgarh", "wedding host chittorgarh", "wedding mc chittorgarh"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Chittorgarh",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Chittorgarh's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee chittorgarh", "sangeet anchor chittorgarh", "sangeet host chittorgarh"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Chittorgarh",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee chittorgarh", "corporate anchor chittorgarh", "corporate mc chittorgarh", "corporate host chittorgarh"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Chittorgarh",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Chittorgarh — by any name.",
+                keywords: ["best emcee in chittorgarh", "best anchor in chittorgarh", "best host in chittorgarh", "best mc chittorgarh"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Chittorgarh",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host chittorgarh", "english speaking anchor chittorgarh", "bilingual emcee chittorgarh"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in Chittorgarh", "Best Emcee in Chittorgarh", "Best Host in Chittorgarh",
+                  "Wedding Anchor Chittorgarh", "Wedding Emcee Chittorgarh", "Wedding Host Chittorgarh",
+                  "Corporate Anchor Chittorgarh", "Corporate Emcee Chittorgarh", "Corporate MC Chittorgarh",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor Chittorgarh", "Sangeet Emcee Chittorgarh", "Sangeet Host Chittorgarh",
+                  "Haldi Anchor Chittorgarh", "Mehendi Host Chittorgarh",
+                  "Birthday Anchor Chittorgarh", "Birthday Emcee Chittorgarh",
+                  "Master of Ceremonies Chittorgarh", "MC for Wedding Chittorgarh",
+                  "NRI Wedding Emcee Chittorgarh", "Bilingual Host Chittorgarh",
+                  "Top Anchor Chittorgarh", "Top Emcee Chittorgarh", "Event Host Chittorgarh",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (

@@ -72,8 +72,7 @@ export default function Footer() {
                 color="hover:border-[#D4AF37] hover:text-[#D4AF37]"
               />
               <ContactButton
-                href="javascript:void(0)"
-                onClick={() => { window.location='mai'+'lto:'+'yashsoni7978'+'@'+'gmail.com'; }}
+                href="mailto:info@yashsoni.in"
                 icon={<Mail className="w-5 h-5" />}
                 label="Email Inquiry"
                 subLabel="contact us"
@@ -86,12 +85,11 @@ export default function Footer() {
           <div>
             <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-8">Verified On</h4>
             <ul className="space-y-4">
-              <ProfileLink href="https://www.wedmegood.com/profile/Anchor-Yash-Soni-2555694" text="WedMeGood" />
-              <ProfileLink href="#" text="WeddingWire" />
-              <ProfileLink href="#" text="StarClinch" />
-              <ProfileLink href="#" text="ShaadiDukaan" />
-              <ProfileLink href="#" text="Justdial" />
-              {/* FIXED: The highlighted profile link is now sleek and elegant */}
+              <ProfileLink href="https://www.wedmegood.com/profile/anchor-yash-25628297" text="WedMeGood" />
+              <ProfileLink href="https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166" text="WeddingWire" />
+              <ProfileLink href="https://starclinch.com" text="StarClinch" />
+              <ProfileLink href="https://www.shaadidukaan.com/profile/yash-2" text="ShaadiDukaan" />
+              <ProfileLink href="https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET" text="Justdial" />
               <ProfileLink href="https://share.google/pMZGzEGOhXnJpLq5g" text="Google Reviews" highlight />
             </ul>
           </div>
@@ -124,7 +122,7 @@ export default function Footer() {
             <span>·</span>
             <Link href="/terms" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>
             <span>·</span>
-            <Link href="/press" className="hover:text-[#D4AF37] transition-colors">Press Kit</Link>
+            <Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Press &amp; Booking</Link>
           </div>
         </div>
       </div>

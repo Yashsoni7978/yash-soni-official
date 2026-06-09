@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -155,79 +155,47 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best anchor for luxury weddings in Jaisalmer?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specifically caters to the ultra-luxury and NRI demographic in Jaisalmer. With deep experience at high-stakes venues like Suryagarh, the Marriott, and premium desert camps, he delivers the flawless, bilingual, and highly sophisticated hosting required for Jaisalmer's premium clientele."
+    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in the ultra-luxury and NRI destination wedding demographic in Jaisalmer — with deep experience at Suryagarh, Marriott Jaisalmer, The Serai, and premium desert camp venues. He delivers the flawless, bilingual, and sophisticated hosting required for Jaisalmer's discerning clientele.",
   },
   {
-    q: "How do you handle the acoustics of open desert events at the Sam Sand Dunes?",
-    a: "Open deserts are the hardest acoustic environments in the world. Sound dissipates instantly, and the wind interferes with standard microphone usage. The solution isn't just turning up the volume—it's crowd psychology. I use precise pacing to draw the audience physically closer to the stage, creating an intimate 'bubble' of energy that defies the infinite space around it."
+    q: "How do you handle the acoustics of open desert events at Sam Sand Dunes?",
+    a: "Open desert is one of the hardest acoustic environments in the world — sound dissipates instantly and wind interferes with microphone usage. The solution is crowd psychology: using precise pacing to draw the audience physically closer to the stage, creating an intimate bubble of energy that defies the infinite space around it. This is a technique that comes from experience, not theory.",
   },
   {
-    q: "We are an NRI family. Can you host a bilingual event that bridges our modern lives with Rajasthani tradition?",
-    a: "Yes. This is the cornerstone of my work at venues like Suryagarh. I frequently host for NRI families from the US, UK, and UAE. The hosting must be perfectly bilingual (formal English and polished Hindi), ensuring international guests are completely engrossed while Indian relatives feel the full cultural depth and respect of the Rajputana setting."
+    q: "Can you host a bilingual event that bridges NRI modern life with Rajasthani tradition?",
+    a: "Bilingual cultural bridging is the cornerstone of Jaisalmer destination wedding hosting. NRI families from the US, UK, and UAE bring their extended diaspora — the hosting must be perfectly bilingual, ensuring international guests are completely engrossed while Indian relatives feel the full cultural depth and pride of the Rajputana Thar setting.",
   },
   {
     q: "Do you integrate local Rajasthani folk musicians (like Manganiyars) into your events?",
-    a: "Absolutely. In Jaisalmer, the Manganiyar folk tradition is a profound part of the atmosphere. I work directly with the musicians and DJs to ensure their performances are woven seamlessly into the evening—respectfully introduced and strategically placed—so the transition from heritage folk to modern Sangeet beats feels like a natural evolution, not a jarring interruption."
+    a: "Manganiyar folk musicians are woven seamlessly into Jaisalmer events — respectfully introduced and strategically placed so the transition from heritage folk to modern Sangeet beats feels like a natural cultural evolution, not a jarring interruption. Yash coordinates directly with musicians and DJs to manage this flow.",
   },
   {
     q: "Have you hosted corporate elite events and offsites in Jaisalmer?",
-    a: "Yes. Jaisalmer is a highly sought-after destination for CEO-level retreats and top-tier reward trips. I provide brand-aligned, executive-level anchoring for daytime leadership summits and premium gala hosting for the evening desert safaris, maintaining a professional yet highly engaging tone throughout."
+    a: "Jaisalmer is a highly sought-after destination for CEO-level retreats and top-tier reward trips. Brand-aligned, executive-level hosting for daytime leadership summits and premium gala hosting for evening desert safaris maintain a professional yet highly engaging tone throughout.",
   },
   {
     q: "What makes Jaisalmer different from Jaipur or Udaipur for a wedding host?",
-    a: "Jaisalmer is remote and extreme. Families who choose the Golden City are deliberately isolating themselves in luxury at the edge of the Thar Desert. The anchor cannot rely on generic big-city gimmicks; the hosting must match the vastness of the setting. It requires an unmatched level of elegance, profound environmental awareness, and a stage presence that can match the weight of a living 12th-century fort."
+    a: "Jaisalmer is remote and extreme — families who choose the Golden City are deliberately isolating themselves in luxury at the edge of the Thar Desert. The hosting must match the vastness of the setting: unmatched elegance, profound environmental awareness, and a stage presence that can command an audience under the weight of a living 12th-century fort.",
   },
   {
     q: "What happens if it gets very cold during our desert Sangeet?",
-    a: "Desert temperatures plummet rapidly after sunset from November to February. This is a critical event management issue. As the host, I aggressively adjust the timeline—cutting down long gaps, driving interactive segments rapidly, and immediately moving the crowd to the dance floor to keep their core temperature and energy high."
+    a: "Desert temperatures plummet rapidly after sunset from November to February. As the host, the timeline is aggressively adjusted — cutting long gaps, driving interactive segments rapidly, and immediately moving the crowd to the dance floor to maintain energy and core temperature. This real-time adaptation is what separates experienced Jaisalmer anchors from untested ones.",
   },
   {
-    q: "How far in advance should we book you for a Jaisalmer event?",
-    a: "Because Jaisalmer events often require multi-day blockouts due to travel distance from central Rajasthan, my availability disappears quickly during the peak winter months. Families booking Suryagarh or the Marriott typically lock their host simultaneously with the venue. I recommend WhatsApping me immediately upon confirming your dates."
+    q: "How far in advance should we book for a Jaisalmer event?",
+    a: "Jaisalmer events often require multi-day blockouts due to travel distance from central Rajasthan — availability disappears quickly during peak winter months. Families booking Suryagarh or the Marriott typically lock their anchor simultaneously with the venue. WhatsApp immediately upon confirming your dates.",
+  },
+  {
+    q: "Who is the best emcee in Jaisalmer for desert weddings?",
+    a: "Anchor Yash Soni is the top-rated wedding emcee and host for Jaisalmer destination events — with a 4.9★ verified rating and experience at Suryagarh, The Serai, Gorbandh Palace, and Sam Sand Dunes venues. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Jaisalmer settings.",
+  },
+  {
+    q: "What is the difference between a wedding anchor, emcee, and host in Jaisalmer?",
+    a: "Anchor, emcee, host, and MC are four terms for the same role. International destination wedding planners typically prefer 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates across all formats flawlessly — the Jaisalmer fort and desert circuit demands the same skill regardless of what the role is called.",
   },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a }
-  })) };
 
 export default function JaisalmerPage() {
   return (
@@ -312,7 +280,7 @@ export default function JaisalmerPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the definitive voice for luxury destination weddings that refuse to compromise.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the definitive voice for luxury destination weddings that refuse to compromise.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 In Jaisalmer, where the margin for error is zero due to the extreme logistics and HNI expectations, Yash brings absolute control. Whether anchoring a flawless bilingual reception at <strong className="text-[#B5952F]">Suryagarh</strong> or mastering the wind-swept acoustics of a private desert dune, his execution is entirely unscripted.
@@ -570,7 +538,124 @@ export default function JaisalmerPage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+                  {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Jaisalmer's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Jaisalmer —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Jaisalmer",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Jaisalmer.",
+                keywords: ["best wedding anchor jaisalmer", "wedding emcee jaisalmer", "wedding host jaisalmer", "wedding mc jaisalmer"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Jaisalmer",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Jaisalmer's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee jaisalmer", "sangeet anchor jaisalmer", "sangeet host jaisalmer"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Jaisalmer",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee jaisalmer", "corporate anchor jaisalmer", "corporate mc jaisalmer", "corporate host jaisalmer"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Jaisalmer",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Jaisalmer — by any name.",
+                keywords: ["best emcee in jaisalmer", "best anchor in jaisalmer", "best host in jaisalmer", "best mc jaisalmer"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Jaisalmer",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host jaisalmer", "english speaking anchor jaisalmer", "bilingual emcee jaisalmer"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in Jaisalmer", "Best Emcee in Jaisalmer", "Best Host in Jaisalmer",
+                  "Wedding Anchor Jaisalmer", "Wedding Emcee Jaisalmer", "Wedding Host Jaisalmer",
+                  "Corporate Anchor Jaisalmer", "Corporate Emcee Jaisalmer", "Corporate MC Jaisalmer",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor Jaisalmer", "Sangeet Emcee Jaisalmer", "Sangeet Host Jaisalmer",
+                  "Haldi Anchor Jaisalmer", "Mehendi Host Jaisalmer",
+                  "Birthday Anchor Jaisalmer", "Birthday Emcee Jaisalmer",
+                  "Master of Ceremonies Jaisalmer", "MC for Wedding Jaisalmer",
+                  "NRI Wedding Emcee Jaisalmer", "Bilingual Host Jaisalmer",
+                  "Top Anchor Jaisalmer", "Top Emcee Jaisalmer", "Event Host Jaisalmer",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (

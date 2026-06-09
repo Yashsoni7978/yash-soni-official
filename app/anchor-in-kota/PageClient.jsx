@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -153,87 +153,22 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  {
-    q: "Who is the best anchor for luxury events and weddings in Kota?",
-    a: "Anchor Yash Soni is widely regarded as the premier host for Kota's elite circuit. With 1,100+ events and a 4.9★ rating, he specializes in high-stakes environments like Umed Bhawan Palace and major corporate summits for the city's vast educational and industrial networks."
-  },
-  {
-    q: "Can you host corporate summits for educational institutes in Kota?",
-    a: "Absolutely. Kota's corporate landscape is heavily driven by education and industry. Hosting for directors, medical professionals, and top faculty requires a sharp, intellectual, and completely bilingual (English/Hindi) approach. I frequently command audiences of 500-1,000 corporate delegates with zero paper scripts, ensuring total engagement."
-  },
-  {
-    q: "How do you manage events at legacy properties like Umed Bhawan Palace?",
-    a: "Taj properties and historic palaces like Umed Bhawan have a specific architectural and cultural weight. An anchor cannot use cheap club-style energy here. The hosting must be regal, authoritative, and deeply respectful of the Hadoti heritage, ensuring the family's prestige is amplified by the way the event is conducted."
-  },
-  {
-    q: "Are you familiar with the cultural nuances of the Hadoti region?",
-    a: "Yes. Kota, Bundi, and the surrounding Hadoti belt possess a distinct culture, dialect influence, and Marwari/Rajput integration. Coming in with generic Rajasthani tropes feels inauthentic to local families. I integrate authentic Hadoti respect and ceremonial flow into the wedding narrative, building deep trust with the elders."
-  },
-  {
-    q: "Can you manage open-air acoustics near the Chambal River venues?",
-    a: "Riverside properties present acoustic challenges because sound vanishes over the water. I work dynamically to bring the crowd physically closer together, creating an acoustic 'sweet spot' for the Sangeet or reception so the energy remains trapped within the audience rather than bleeding out."
-  },
-  {
-    q: "Do you host events in nearby cities like Bundi or Jhalawar?",
-    a: "Yes. The entire Hadoti region is interconnected. I often anchor destination weddings at the heritage properties in Bundi or bespoke events in Jhalawar, applying the same standard of luxury execution established in Kota."
-  },
-  {
-    q: "How do you handle a mixed guest list of highly traditional elders and modern youth?",
-    a: "This is the most common scenario for Kota's business families. The secret lies in bilingual code-switching. I will address the elders with absolute formal Hindi respect during the Varmala, but seamlessly pivot to engaging, sharp English communication to pull the younger, metropolitan crowd onto the dance floor during the Sangeet."
-  },
-  {
-    q: "When should we secure our dates for a Kota event?",
-    a: "Because Kota blends both intense corporate season scheduling and peak winter wedding dates (October to February), elite anchors are booked well in advance. Once your venue (like Umed Bhawan) is locked, please WhatsApp me immediately to block the dates."
-  },
+  { q: "Who is the best anchor for destination weddings in Kota?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Kota's riverside and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues along the Chambal river." },
+  { q: "How do you handle the unique logistics of weddings in Kota?", a: "Kota offers a mix of heritage properties and scenic riverside resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
+  { q: "Can you host bilingual events for NRI families in Kota?", a: "Yes. Destination weddings in Kota attract families seeking deep Rajasthani heritage. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
+  { q: "Do you anchor corporate events in Kota?", a: "Kota is an excellent destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
+  { q: "How far in advance should I book for a Kota wedding?", a: "Kota is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Kota for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Kota destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Kota?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a }
-  })) };
 
-export default function KotaPage() {
+export default function PageClient() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
       <style>{css}</style>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
+      
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -313,7 +248,7 @@ export default function KotaPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the undisputed authority for high-stakes anchoring in Kota's complex event ecosystem.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the undisputed authority for high-stakes anchoring in Kota's complex event ecosystem.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Kota operates on two distinct but equally demanding peaks: the supreme royal heritage of <strong className="text-[#B5952F]">Umed Bhawan Palace</strong> and the hyper-intellectual environment of the city’s massive education and corporate sector. Yash commands both effortlessly.
@@ -571,7 +506,123 @@ export default function KotaPage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+            {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Kota's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Kota —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Kota",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Kota.",
+                keywords: ["best wedding anchor kota", "wedding emcee kota", "wedding host kota", "wedding mc kota"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Kota",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Kota's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee kota", "sangeet anchor kota", "sangeet host kota"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Kota",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee kota", "corporate anchor kota", "corporate mc kota", "corporate host kota"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Kota",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Kota — by any name.",
+                keywords: ["best emcee in kota", "best anchor in kota", "best host in kota", "best mc kota"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Kota",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host kota", "english speaking anchor kota", "bilingual emcee kota"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in " + "Kota", "Best Emcee in " + "Kota", "Best Host in " + "Kota",
+                  "Wedding Anchor " + "Kota", "Wedding Emcee " + "Kota", "Wedding Host " + "Kota",
+                  "Corporate Anchor " + "Kota", "Corporate Emcee " + "Kota", "Corporate MC " + "Kota",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor " + "Kota", "Sangeet Emcee " + "Kota", "Sangeet Host " + "Kota",
+                  "Haldi Anchor " + "Kota", "Mehendi Host " + "Kota",
+                  "Birthday Anchor " + "Kota", "Birthday Emcee " + "Kota",
+                  "Master of Ceremonies " + "Kota", "MC for Wedding " + "Kota",
+                  "NRI Wedding Emcee " + "Kota", "Bilingual Host " + "Kota",
+                  "Top Anchor " + "Kota", "Top Emcee " + "Kota", "Event Host " + "Kota",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (

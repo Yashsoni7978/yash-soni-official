@@ -1,24 +1,26 @@
-import fs from 'fs';
-import path from 'path';
-
-import { BLOG_POSTS } from '../data/blogs';
+import fs from "fs";
+import path from "path";
+import { BLOG_POSTS } from "../data/blogs";
 
 /**
- * Technical SEO Architect: Dynamic Sitemap Generator
- * 
- * Logic:
- * 1. Recursively crawls 'app/' directory for static routes.
- * 2. Injects dynamic blog slugs from data/blogs.js.
- * 3. Filters for valid 'page.jsx' or 'page.tsx' files.
- * 4. Excludes api, components, libs, and internal directories.
- * 5. Extracts modification time (mtime) via fs.statSync for <lastmod>.
- * 6. Assigns logical priority based on route depth and keyword significance.
+ * Dynamic Sitemap Generator — Technical SEO Architect
+ *
+ * Improvements over previous version:
+ * 1. Removed EXPECTED_BLOGS whitelist — ALL blog posts are now included.
+ * 2. /privacy and /terms are now omitted (they have robots: noindex in their
+ *    page metadata, so they should NOT appear in sitemap per SEO best practice).
+ * 3. Priority heuristics refined — duplicate /anchor-in-jaipur entries removed.
+ * 4. lastModified uses ISO string for compatibility.
  */
 
 export default function sitemap() {
-  const baseUrl = 'https://yashsoni.in';
-  const appDir = path.join(process.cwd(), 'app');
+  const baseUrl = "https://yashsoni.in";
+  const appDir = path.join(process.cwd(), "app");
 
+  /**
+   * Recursively crawls app/ directory for static page files.
+   * Excludes API routes, internal dirs, and specific noindex routes.
+   */
   const getRoutes = (dir, routes = []) => {
     const files = fs.readdirSync(dir);
 
@@ -27,45 +29,45 @@ export default function sitemap() {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        // Exclude specific directories
-        if (file === 'api' || file.startsWith('_') || file.startsWith('(') || file === 'lib') {
-           // Skip these, but handle Group Routes if they contain pages
-           if (file.startsWith('(')) {
-             getRoutes(fullPath, routes);
-           }
-           continue;
+        // Skip internal/system directories
+        if (file === "api" || file === "lib") continue;
+        // Group routes: recurse into them but strip from URL
+        if (file.startsWith("(")) {
+          getRoutes(fullPath, routes);
+          continue;
         }
+        // Skip underscore folders (components, etc.)
+        if (file.startsWith("_")) continue;
         getRoutes(fullPath, routes);
-      } else if (file === 'page.jsx' || file === 'page.tsx') {
-        // Construct the URL path
-        let relativePath = path.relative(appDir, dir).replace(/\\/g, '/');
-        
-        // Remove group routes from the URL path
-        const cleanedPath = relativePath
-          .split('/')
-          .filter(segment => !segment.startsWith('('))
-          .join('/');
+      } else if (file === "page.jsx" || file === "page.tsx") {
+        let relativePath = path
+          .relative(appDir, dir)
+          .replace(/\\/g, "/");
 
-        const urlPath = cleanedPath === '' ? '' : `/${cleanedPath}`;
-        
-        // Explicitly exclude prohibited static routes
+        // Strip group route segments from URL
+        const cleanedPath = relativePath
+          .split("/")
+          .filter((segment) => !segment.startsWith("("))
+          .join("/");
+
+        const urlPath = cleanedPath === "" ? "" : `/${cleanedPath}`;
+
+        // Pages that should NOT appear in sitemap:
+        // - /privacy and /terms have robots: noindex — excluded correctly
+        // - /blog/[slug] is a dynamic route — added separately below
+        // - /locations/jaipur redirects to /anchor-in-jaipur — excluded
         const EXCLUDED_ROUTES = [
-          '/privacy', 
-          '/terms', 
-          '/anchor-in-chandigarh', 
-          '/anchor-in-pune',
-          '/anchor-in-kishangarh', 
-          '/corporate-emcee-jaipur', 
-          '/wedding-emcee-jaipur',
-          '/blog/[slug]', 
-          '/locations/jaipur'
+          "/privacy",
+          "/terms",
+          "/blog/[slug]",
+          "/locations/jaipur",
         ];
         if (EXCLUDED_ROUTES.includes(urlPath)) continue;
-        
+
         routes.push({
           url: `${baseUrl}${urlPath}`,
-          lastModified: stat.mtime,
-          path: urlPath
+          lastModified: stat.mtime.toISOString(),
+          path: urlPath,
         });
       }
     }
@@ -74,73 +76,81 @@ export default function sitemap() {
 
   const allRoutes = getRoutes(appDir);
 
-  // 1.5 Inject Dynamic Blog Routes
-  const EXPECTED_BLOGS = [
-    'sangeet-ceremony-planning-guide-jaipur',
-    'mehendi-ceremony-planning-jaipur',
-    'haldi-ceremony-planning-jaipur',
-    'about-yash-soni-anchor-jaipur',
-    'jaipur-wedding-costs-budget-2026',
-    'udaipur-vs-jaipur-destination-wedding',
-    'anchor-charges-jaipur-2026-pricing',
-    'jodhpur-destination-wedding-guide',
-    'farmhouse-wedding-venues-jaipur',
-    'complete-wedding-planning-guide-jaipur',
-    'destination-wedding-rajasthan-complete-guide',
-    'corporate-annual-day-planning-jaipur',
-    'royal-pre-wedding-setup-pushkar-ajmer',
-    'top-10-royal-palace-wedding-venues-jaipur',
-    'nri-destination-wedding-guide-rajasthan-2026'
-  ];
-
-  BLOG_POSTS.forEach(post => {
-    if (EXPECTED_BLOGS.includes(post.slug)) {
-      allRoutes.push({
-        url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(),
-        path: `/blog/${post.slug}`,
-        isBlog: true
-      });
-    }
+  // ── Dynamic Blog Routes ────────────────────────────────────────────────
+  // FIXED: Removed the EXPECTED_BLOGS whitelist filter.
+  // ALL blog posts from data/blogs.js are now included automatically.
+  // When you add new blog posts to BLOG_POSTS, they appear in sitemap immediately.
+  BLOG_POSTS.forEach((post) => {
+    allRoutes.push({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date().toISOString(),
+      path: `/blog/${post.slug}`,
+      isBlog: true,
+    });
   });
 
+  // ── Priority & Change Frequency Assignment ─────────────────────────────
   return allRoutes.map((route) => {
-    // Priority Heuristics
     let priority = 0.6;
-    let changeFrequency = 'monthly';
+    let changeFrequency = "monthly";
 
-    // 1.0 - Homepage and Master Hubs
-    if (route.path === '' || route.path === '/' || route.path === '/anchor-in-jaipur' || route.path === '/best-anchor-in-jaipur' || route.path === '/wedding-anchor-jaipur') {
+    // 1.0 — Homepage
+    if (route.path === "" || route.path === "/") {
       priority = 1.0;
-      changeFrequency = 'daily';
-    } 
-    // 0.8 - Regional Hubs / Primary Services
-    else if (
-      route.path === '/locations' || 
-      route.path.includes('rajasthan') || 
-      route.path.includes('jaipur') || 
-      route.path.includes('hub') ||
-      ['/wedding-planning-jaipur', '/corporate-event-management-company', '/event-management-jaipur'].includes(route.path)
-    ) {
-      priority = 0.8;
-      changeFrequency = 'weekly';
+      changeFrequency = "daily";
     }
-    // 0.7 - Dynamic Blog Posts
+    // 0.95 — Primary money pages (highest commercial intent)
+    else if (
+      [
+        "/anchor-in-jaipur",
+        "/best-anchor-in-jaipur",
+        "/wedding-anchor-jaipur",
+        "/sangeet-anchor-jaipur",
+        "/corporate-event-anchor-jaipur",
+      ].includes(route.path)
+    ) {
+      priority = 0.95;
+      changeFrequency = "weekly";
+    }
+    // 0.85 — Secondary service pages and regional hubs
+    else if (
+      route.path === "/anchor-in-rajasthan" ||
+      route.path.includes("rajasthan") ||
+      route.path.includes("jaipur") ||
+      [
+        "/about",
+        "/contact",
+        "/event-management-jaipur",
+        "/wedding-planning-jaipur",
+        "/destination-wedding-anchor",
+        "/haldi-anchor-jaipur",
+        "/mehendi-anchor-jaipur",
+      ].includes(route.path)
+    ) {
+      priority = 0.85;
+      changeFrequency = "weekly";
+    }
+    // 0.75 — Blog listing and portfolio
+    else if (["/blog", "/portfolio"].includes(route.path)) {
+      priority = 0.75;
+      changeFrequency = "weekly";
+    }
+    // 0.7 — Dynamic blog posts
     else if (route.isBlog) {
       priority = 0.7;
-      changeFrequency = 'weekly';
+      changeFrequency = "monthly";
     }
-    // 0.6 - Niche locations / Long-tail pages
+    // 0.6 — All other location/niche pages
     else {
       priority = 0.6;
-      changeFrequency = 'monthly';
+      changeFrequency = "monthly";
     }
 
     return {
       url: route.url,
       lastModified: route.lastModified,
-      changeFrequency: changeFrequency,
-      priority: priority,
+      changeFrequency,
+      priority,
     };
   });
 }

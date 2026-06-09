@@ -69,7 +69,7 @@ const FAQItem = ({ q, a, id }) => {
       <AnimatePresence>
         {open && (
           <motion.div id={id} initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4">{a}</p>
+            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4 yash-faq-answer yash-citable">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -81,7 +81,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Alwar-specific
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -171,85 +171,25 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  {
-    q: "Who is the best anchor for Neemrana Fort Palace destination weddings?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and has specific experience with Neemrana Fort's heritage terrace weddings. He understands the stepped stone architecture, the acoustic behaviour of the fort's corridors and courtyards, and how to manage a large guest mix of Delhi NCR professionals and Rajasthan heritage families without losing the premium tone of one of India's most iconic wedding destinations."
-  },
-  {
-    q: "Do you anchor events at Siliserh Lake Palace in Alwar?",
-    a: "Yes. Siliserh Lake Palace is one of the most romantically scenic venues in the entire NCR-Rajasthan circuit. The lakeside setting creates a unique atmospheric stage — but it also comes with specific sound dynamics, guest gathering challenges, and a heritage property protocol. Working here repeatedly means these factors are pre-managed, not discovered on the day of your event."
-  },
-  {
-    q: "How do you manage events at wildlife-adjacent venues like Sariska?",
-    a: "Sariska creates a very different anchor brief. The wilderness setting means the venue's atmosphere is already doing significant work — the challenge is amplifying the human experience without fighting the environment. I use voice-led storytelling, interactive crowd work, and intimate energy techniques rather than relying on DJ-level amplification that would be acoustically inappropriate and disruptive to the wildlife-adjacent setting."
-  },
-  {
-    q: "Are you experienced with NRI families at Alwar and Neemrana destination events?",
-    a: "Yes. The Alwar-Neemrana circuit draws a significant number of NRI families specifically because the destination is significantly closer to Delhi IGI than Rajasthan's traditional circuits. Families from the UK, Canada, USA, and UAE who want a heritage experience without a 6-hour drive choose this belt. The bilingual hosting — polished international-quality English and warm, culturally grounded Hindi — is specifically calibrated for this audience."
-  },
-  {
-    q: "How does the Alwar-Neemrana circuit benefit from Yash's Rajasthan experience?",
-    a: "The Alwar region sits at the intersection of Rajasthan's heritage culture and Delhi NCR's metropolitan expectations. An anchor who only knows city events cannot read the cultural cues that heritage families bring to a Neemrana wedding. An anchor who only does Jaipur or Jodhpur circuits may not have the professional polish demanded by corporate-heavy Delhi NCR guest lists. The combination — built across 4+ years of cross-demographic event experience — is the specific asset for this region."
-  },
-  {
-    q: "Can you anchor a Mehndi or Haldi event at Neemrana in addition to the main wedding?",
-    a: "Yes. Pre-wedding events at Neemrana or Sariska are a specific challenge. Guests have arrived from multiple cities and geographies and are not yet socially warm with each other. The pre-wedding anchor's job is fundamentally different from the wedding or Sangeet anchor — it is about building genuine warmth and breaking social ice across a mixed international-domestic group in a heritage setting. This requires a very different toolkit from the main wedding hosting."
-  },
-  {
-    q: "Do you offer packages for full destination multi-day events in Alwar?",
-    a: "Yes. Most Alwar, Neemrana, and Sariska destination bookings are multi-day events covering Mehndi, Haldi, Sangeet, and Wedding ceremonies at minimum. I offer full-event anchoring across all formats, managed with a single pre-event philosophy session that covers tone calibration, guest mixing strategy, and venue-specific adaptation across the entire event arc."
-  },
-  {
-    q: "How early should we book for a Neemrana or Siliserh peak season date?",
-    a: "The winter destination wedding season in the Alwar belt — October through February — is heavily demanded, particularly for Neemrana Fort Palace which has limited total capacity. Premium dates at marquee venues book 5–7 months in advance. The anchor calendar mirrors venue demand closely. WhatsApp the moment your venue is confirmed to avoid losing the date."
-  },
+  { q: "Who is the best anchor for destination weddings in Alwar?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Alwar's palace and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the Delhi-NCR region." },
+  { q: "How do you handle the unique logistics of weddings in Alwar?", a: "Alwar offers a mix of grand palaces like Tijara Fort-Palace and nature-adjacent resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
+  { q: "Can you host bilingual events for NRI families in Alwar?", a: "Yes. Given its proximity to Delhi, Alwar is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
+  { q: "Do you anchor corporate events in Alwar?", a: "Alwar is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR region. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
+  { q: "How far in advance should I book for an Alwar wedding?", a: "Alwar is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Alwar for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Alwar destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Alwar?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
 
 // ─────────────────────────────────────────────
 // PAGE
 // ─────────────────────────────────────────────
-export default function AlwarPage() {
+export default function PageClient() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
       <style>{css}</style>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
+      
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -331,7 +271,7 @@ export default function AlwarPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the dramatic stepped terraces of <strong className="text-[#B5952F]">Neemrana Fort Palace</strong> to the serene lakeside gardens of Siliserh, and from the tiger-territory tented lounges of Sariska to the hilltop heritage havelis of Alwar — every corner of this circuit has been hosted with the same absolute command.
@@ -590,7 +530,123 @@ export default function AlwarPage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+            {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Alwar's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Alwar —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Alwar",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Alwar.",
+                keywords: ["best wedding anchor alwar", "wedding emcee alwar", "wedding host alwar", "wedding mc alwar"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Alwar",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Alwar's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee alwar", "sangeet anchor alwar", "sangeet host alwar"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Alwar",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee alwar", "corporate anchor alwar", "corporate mc alwar", "corporate host alwar"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Alwar",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Alwar — by any name.",
+                keywords: ["best emcee in alwar", "best anchor in alwar", "best host in alwar", "best mc alwar"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Alwar",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host alwar", "english speaking anchor alwar", "bilingual emcee alwar"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in " + "Alwar", "Best Emcee in " + "Alwar", "Best Host in " + "Alwar",
+                  "Wedding Anchor " + "Alwar", "Wedding Emcee " + "Alwar", "Wedding Host " + "Alwar",
+                  "Corporate Anchor " + "Alwar", "Corporate Emcee " + "Alwar", "Corporate MC " + "Alwar",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor " + "Alwar", "Sangeet Emcee " + "Alwar", "Sangeet Host " + "Alwar",
+                  "Haldi Anchor " + "Alwar", "Mehendi Host " + "Alwar",
+                  "Birthday Anchor " + "Alwar", "Birthday Emcee " + "Alwar",
+                  "Master of Ceremonies " + "Alwar", "MC for Wedding " + "Alwar",
+                  "NRI Wedding Emcee " + "Alwar", "Bilingual Host " + "Alwar",
+                  "Top Anchor " + "Alwar", "Top Emcee " + "Alwar", "Event Host " + "Alwar",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (

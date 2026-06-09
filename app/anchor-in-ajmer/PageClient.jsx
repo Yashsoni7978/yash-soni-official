@@ -83,7 +83,7 @@ const FAQItem = ({ q, a, id }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4">{a}</p>
+            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4 yash-faq-answer yash-citable">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -92,7 +92,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -182,81 +182,16 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  {
-    q: "Who is the best anchor for prestige destination weddings in Ajmer?",
-    a: "Anchor Yash Soni is widely regarded as the top tier host for Ajmer's luxury circuit, particularly for venues like Pratap Palace (Taj) and Mansingh Palace. His 4.9★ rating stems from his meticulous ability to bridge high-net-worth NRI expectations with deep, authentic central Rajasthani warmth."
-  },
-  {
-    q: "We are an NRI family organizing an event in Ajmer. Are you fluent in English?",
-    a: "Absolutely. I specialize in bilingual (English/Hindi) hosting. When hosting for NRI or multi-cultural families at properties like Pratap Palace, the anchoring must be perfectly polished in English while retaining the rich emotional vocabulary of Hindi for the traditional rituals."
-  },
-  {
-    q: "How do you manage the difference between Ajmer events and Pushkar events?",
-    a: "Though they are sister cities, they require different registers. Pushkar is often bohemian, deeply traditional, and highly spiritual. Ajmer is syncretic, metropolitan-adjacent, and anchored by premium formal properties. I transition between the two by shifting from formal grandeur (Ajmer) to traditional warmth (Pushkar) as the venue demands."
-  },
-  {
-    q: "Do you have experience anchoring at Taj properties like Pratap Palace?",
-    a: "Yes. Anchoring at Taj properties requires adherence to a very specific standard of luxury. The staff, the ambiance, and the guest list all operate at an elite frequency. The host cannot bring 'street' event energy in; the delivery must be highly sophisticated, deeply respectful, and effortlessly authoritative."
-  },
-  {
-    q: "Can you handle complex corporate and medical summits in Ajmer?",
-    a: "Yes. Ajmer’s central location makes it a prime hub for statewide corporate and medical association events. I anchor these with zero scripts, managing complex timelines, multi-speaker transitions, and VIP protocols with absolute precision, followed by seamless transitions into evening entertainment."
-  },
-  {
-    q: "How do you handle outdoor acoustics by the lakes in Ajmer?",
-    a: "Properties near Ana Sagar Lake suffer from rapid sound dissipation and wind interference. I work actively with the sound team to ensure correct monitor placement, and more importantly, I use physical spacing techniques to pull the audience closer together—creating a pocket of contained energy that defeats the open air."
-  },
-  {
-    q: "Do you use scripts during your anchoring?",
-    a: "Never. Every event I anchor is 100% unscripted. Scripts create a wall between the host and the audience. Real crowd command requires constant eye contact and the ability to instantly react to spontaneous moments. This is what separates premium hosting from generic announcing."
-  },
-  {
-    q: "When should we secure you for an Ajmer wedding?",
-    a: "Ajmer shares its peak season with the rest of the Rajasthan golden triangle (October to February). Because premium venues like Pratap Palace are booked out months in advance, elite anchor availability evaporates at the exact same time. Send a WhatsApp message immediately after blocking your venue."
-  },
+  { q: "Who is the best anchor for destination weddings in Ajmer?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events, specialising in Ajmer and Pushkar's unique destination wedding circuit — including premium resorts and heritage properties. Bilingual Hindi/English, completely unscripted, and experienced in managing large-scale destination events for NRI and traditional Indian families." },
+  { q: "How do you manage events in Ajmer given its proximity to Pushkar?", a: "Ajmer and Pushkar often operate as a combined destination wedding hub. While Pushkar venues focus on lakeside heritage, Ajmer venues often accommodate larger capacities with a blend of modern luxury and tradition. The hosting style adapts seamlessly between the spiritual depth required for a Pushkar ceremony and the high-energy luxury needed for an Ajmer reception." },
+  { q: "Can you host bilingual events for NRI families in Ajmer?", a: "Yes. Destination weddings in Ajmer frequently attract NRI families. Bilingual hosting is critical here — sophisticated English for the international guests and respectful, culturally rich Hindi for the local relatives. This ensures every guest feels completely connected to the celebration." },
+  { q: "Do you anchor corporate events in Ajmer?", a: "Corporate events, dealer meets, and annual galas at Ajmer's premium hotels are a strong specialisation. The corporate hosting register is sharp, brand-aligned, and professional, distinctly different from a wedding tone." },
+  { q: "How far in advance should I book for an Ajmer wedding?", a: "Ajmer's peak season aligns with the general Rajasthan wedding season (October–March). Premium properties and top anchors book out 6–8 months ahead. Secure your dates via WhatsApp as soon as your venue is confirmed." },
+  { q: "Who is the best emcee or host in Ajmer for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ajmer destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies across all Ajmer venues." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Ajmer?", a: "Anchor, emcee, host, and MC refer to the same professional role leading the event. While event planners may say 'emcee' and traditional families say 'anchor', the skill set — managing transitions, commanding the room, and engaging the crowd — remains identical." },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a }
-  })) };
 
 export default function AjmerPage() {
   return (
@@ -340,7 +275,7 @@ export default function AjmerPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has redefined what elite hosting looks like in Central Rajasthan.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has redefined what elite hosting looks like in Central Rajasthan.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Whether commanding a Taj-standard reception at <strong className="text-[#B5952F]">Pratap Palace</strong> or electrifying an open-air Sangeet beside Ana Sagar lake, Yash brings an unmatched level of bilingual polish and unscripted authority.
@@ -598,7 +533,124 @@ export default function AjmerPage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+                  {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Ajmer's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Ajmer —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Ajmer",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Ajmer.",
+                keywords: ["best wedding anchor ajmer", "wedding emcee ajmer", "wedding host ajmer", "wedding mc ajmer"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Ajmer",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Ajmer's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee ajmer", "sangeet anchor ajmer", "sangeet host ajmer"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Ajmer",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee ajmer", "corporate anchor ajmer", "corporate mc ajmer", "corporate host ajmer"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Ajmer",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Ajmer — by any name.",
+                keywords: ["best emcee in ajmer", "best anchor in ajmer", "best host in ajmer", "best mc ajmer"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Ajmer",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host ajmer", "english speaking anchor ajmer", "bilingual emcee ajmer"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in Ajmer", "Best Emcee in Ajmer", "Best Host in Ajmer",
+                  "Wedding Anchor Ajmer", "Wedding Emcee Ajmer", "Wedding Host Ajmer",
+                  "Corporate Anchor Ajmer", "Corporate Emcee Ajmer", "Corporate MC Ajmer",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor Ajmer", "Sangeet Emcee Ajmer", "Sangeet Host Ajmer",
+                  "Haldi Anchor Ajmer", "Mehendi Host Ajmer",
+                  "Birthday Anchor Ajmer", "Birthday Emcee Ajmer",
+                  "Master of Ceremonies Ajmer", "MC for Wedding Ajmer",
+                  "NRI Wedding Emcee Ajmer", "Bilingual Host Ajmer",
+                  "Top Anchor Ajmer", "Top Emcee Ajmer", "Event Host Ajmer",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (

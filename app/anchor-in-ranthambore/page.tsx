@@ -1,105 +1,72 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
-
-// Schema data — moved here from PageClient.jsx for server-side rendering
-const FAQS = [
-  {
-    q: "Who is the best anchor for wildlife destination weddings in Ranthambore?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and has specific experience with Ranthambore's jungle luxury wedding circuit — Sher Bagh, Khem Villas, The Oberoi Vanyavilas, Nahargarh Fort, and the Sawai Madhopur Lodge. He brings wildlife-adjacent acoustic discipline, the specific hosting register of conservation-luxury destinations, and bilingual English/Hindi fluency for international guest mixes."
-  },
-  {
-    q: "How do you manage sound and amplification within Ranthambore Tiger Reserve's buffer zone?",
-    a: "Tiger reserve buffer zones have strict sound ordinances managed by forest department authorities. High-amplification DJs and PA systems that would be standard at a city hotel are simply not permissible — or appropriate — in this environment. The technique required is fundamentally different: voice-led crowd command, storytelling-driven engagement, and spatial crowd-work that creates energy without acoustic disruption to the wildlife habitat."
-  },
-  {
-    q: "Have you hosted events at Sher Bagh and Khem Villas in Ranthambore?",
-    a: "Yes. Sher Bagh and Khem Villas are the two most frequently booked luxury tented properties in Ranthambore's destination wedding circuit. Both have specific acoustic characteristics driven by their canvas construction, their open-air dinner integration, and their position within the reserve buffer. Having worked both repeatedly means the venue-specific hosting approach is pre-calibrated before the event begins."
-  },
-  {
-    q: "How do you anchor an event at The Oberoi Vanyavilas?",
-    a: "The Oberoi Vanyavilas is the ultra-luxury reference point for Ranthambore's destination circuit — and its guests are among the most discerning in India's hospitality segment. The hosting register at Vanyavilas must be warm, sophisticated, and genuinely attuned to both the conservation ethos of the property and the extraordinary luxury standards of the guests. It is a very specific tone — one that comes from working luxury destinations repeatedly, not from working luxury hotels generically."
-  },
-  {
-    q: "Can you manage international guests at Ranthambore destination weddings?",
-    a: "Yes. Ranthambore draws significant international guest mix for destination weddings — wildlife enthusiasts from Europe, corporate families from the UK and USA, and diaspora relatives from multiple countries who have chosen Ranthambore specifically for its unique character. The bilingual hosting here must bridge conservation-aware international guests, Indian urban families, and rural Rajasthan relatives within the same evening — all of whom have completely different entertainment expectations and cultural frameworks."
-  },
-  {
-    q: "What is the best time of year for destination weddings in Ranthambore?",
-    a: "Ranthambore Tiger Reserve is open to the public — and therefore available for tented camp events — between October and June. The peak wildlife season (October to April) is also the peak destination wedding season, when tiger sighting probability is highest and the temperature is manageable. The luxury tented properties book 5–7 months in advance for the November to February wedding season. Anchor availability mirrors venue availability — confirm simultaneously."
-  },
-  {
-    q: "Do you anchor corporate retreats and conservation summits in Ranthambore?",
-    a: "Yes. Ranthambore is increasingly popular for corporate leadership retreats specifically because of the environmental symbolism it carries — companies use the tiger reserve as a statement about their conservation values. The hosting for these events must reflect that environmental intelligence. A conservation corporation does not want an anchor whose environmental awareness is purely performative. The subject knowledge, the appropriate references, and the tone of engagement all matter."
-  },
-  {
-    q: "How do you handle the multi-day energy arc of a Ranthambore destination wedding?",
-    a: "Ranthambore destination weddings are typically 2–3 day affairs with early morning safari departures integrated into the event schedule. The energy arc is completely different from a city hotel event — mornings are shared wildlife experiences that naturally bond the crowd, afternoons are quieter recovery periods, and evenings are the premium event windows. The anchor must understand this rhythm and calibrate the hosting energy accordingly, rather than treating every segment with the same flat-line Sangeet energy."
-  },
-];
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
+  name: "Anchor Yash Soni",
+  image: "https://yashsoni.in/og-image.webp",
   "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
+  url: "https://yashsoni.in",
+  telephone: "+917737877978",
+  address: { "@type": "PostalAddress", streetAddress: "Vaishali Nagar", addressLocality: "Jaipur", postalCode: "302021", addressRegion: "RJ", addressCountry: "IN" },
+  geo: { "@type": "GeoCoordinates", latitude: 26.0173, longitude: 76.3505 },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" },
+  openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" },
+  sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+const FAQS = [
+  { q: "Who is the best anchor for destination weddings in Ranthambore?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and is a specialist in Ranthambore's luxury jungle resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium wildlife-adjacent venues." },
+  { q: "How do you handle the unique acoustic and timeline constraints of Ranthambore jungle resorts?", a: "Ranthambore's proximity to the national park means strict noise regulations after certain hours and open-air acoustic challenges. Managing the timeline to ensure high-energy segments peak before restrictions, and shifting the crowd's energy seamlessly into intimate, late-night acoustic or DJ sessions, requires a highly experienced host." },
+  { q: "Can you host bilingual events for NRI families in Ranthambore?", a: "Yes. Destination weddings in Ranthambore attract a mix of domestic luxury clients and NRI families. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional Indian relatives connect deeply through culturally resonant Hindi." },
+  { q: "What makes Ranthambore different from other destination wedding locations?", a: "Ranthambore offers an exotic, wildlife-adjacent backdrop that feels both luxurious and wild. The hosting must mirror this — elegant and sophisticated, yet dynamic enough to match the adventurous spirit of a jungle destination." },
+  { q: "How far in advance should I book for a Ranthambore wedding?", a: "Ranthambore is highly sought after during the winter wedding season (October–March). Premium jungle resorts book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Ranthambore for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ranthambore destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Ranthambore?", a: "Anchor, emcee, host, and MC are terms for the same professional role. International event planners often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the term used." },
+];
+
+const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },{ "@type": "ListItem", position: 2, name: "Locations", item: "https://yashsoni.in/locations" },{ "@type": "ListItem", position: 3, name: "Anchor in Ranthambore", item: "https://yashsoni.in/anchor-in-ranthambore" }] };
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Best Anchor in Ranthambore | Yash Soni — Jungle Resort Wedding Specialist",
+  url: "https://yashsoni.in/anchor-in-ranthambore",
+  description: "Anchor Yash Soni is Ranthambore's top-rated wedding anchor and emcee — 4.9★ across 200+ reviews. Specialist in luxury jungle resort weddings and destination events in Ranthambore, Rajasthan.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Anchor or Emcee for a Ranthambore Destination Wedding",
+  description: "Step-by-step process to book Anchor Yash Soni for luxury jungle resort weddings and destination events in Ranthambore, Rajasthan.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your Ranthambore event date and venue. Peak season dates fill 6+ months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering travel, stay, and event hosting logistics for Ranthambore is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. No tentative holds are maintained." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show, bilingual scripting requirements, and specific venue noise regulations." },
+  ],
 };
 
 export const metadata: Metadata = {
-  title: 'Anchor in Ranthambore | Resort Wedding Host | Yash Soni',
-  description: 'Destination wedding anchor in Ranthambore. Yash Soni hosts jungle resort weddings and events in Ranthambore with expert hosting.',
-  alternates: {
-    canonical: 'https://yashsoni.in/anchor-in-ranthambore',
-  },
-  openGraph: {
-    title: 'Anchor in Ranthambore | Resort Wedding Host | Yash Soni',
-    description: 'Destination wedding anchor in Ranthambore. Yash Soni hosts jungle resort weddings and events in Ranthambore with expert hosting.',
-    url: 'https://yashsoni.in/anchor-in-ranthambore',
-    siteName: 'Yash Soni - Anchor & Emcee',
-    locale: 'en_IN',
-    type: 'website',
-  },
+  title: "Best Anchor in Ranthambore | Yash Soni — Jungle Resort Wedding Specialist",
+  description: "Anchor Yash Soni is Ranthambore's 4.9★ rated wedding anchor and emcee — specialist in luxury jungle resort weddings, grand Sangeets, and NRI destination events.",
+  alternates: { canonical: "https://yashsoni.in/anchor-in-ranthambore" },
+  openGraph: { title: "Best Anchor in Ranthambore | Yash Soni", description: "4.9★ rated wedding anchor and emcee in Ranthambore. Luxury jungle resort weddings and grand destination events.", url: "https://yashsoni.in/anchor-in-ranthambore", siteName: "Anchor Yash Soni", locale: "en_IN", type: "website", images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Ranthambore — Yash Soni" }] },
+  twitter: { card: "summary_large_image", title: "Best Anchor in Ranthambore | Yash Soni", description: "4.9★ · 200+ reviews. Ranthambore's top anchor, emcee, and wedding host.", images: [{ url: "/og-image.webp", width: 1200, height: 630 }] },
 };
 
 export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([faqSchema, localBusinessSchema])
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

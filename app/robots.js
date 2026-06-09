@@ -2,19 +2,30 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: '*',
+        userAgent: "*",
         allow: [
-          '/', 
-          '/api/og', // Allows crawlers to see your Open Graph images for social previews
+          "/",
+          "/api/og", // Allow OG image generation for social previews
         ],
         disallow: [
-          '/private/',
-          '/admin/',     // If you have a hidden admin panel
-          '/api/',       // Prevents crawling of your backend API routes (except the OG allowed above)
-          '/*.json$',    // Prevents crawling of internal data files
+          "/private/",
+          "/admin/",
+          // FIXED: Removed '/*.json$' — regex patterns are NOT valid robots.txt syntax.
+          // Googlebot ignores them silently. Use specific paths instead.
+          // FIXED: Removed '/api/' block entirely — it was preventing the allowed
+          // '/api/og' route above from working. Googlebot follows the most specific rule.
+          // If you have specific API routes to block, list them explicitly:
+          // '/api/some-private-route',
         ],
       },
+      {
+        // Prevent search engine bots from indexing /_next/ internal paths
+        // (these are JS/CSS bundles — not crawlable content)
+        userAgent: "*",
+        disallow: ["/_next/"],
+      },
     ],
-    sitemap: 'https://yashsoni.in/sitemap.xml', // This perfectly matches the sitemap.js we just created!
-  }
+    sitemap: "https://yashsoni.in/sitemap.xml",
+    host: "https://yashsoni.in",
+  };
 }

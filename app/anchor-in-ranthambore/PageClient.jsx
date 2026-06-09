@@ -67,7 +67,7 @@ const FAQItem = ({ q, a, id }) => {
       <AnimatePresence>
         {open && (
           <motion.div id={id} initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4">{a}</p>
+            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4 yash-faq-answer yash-citable">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -76,7 +76,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -166,77 +166,18 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  {
-    q: "Who is the best anchor for wildlife destination weddings in Ranthambore?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and has specific experience with Ranthambore's jungle luxury wedding circuit — Sher Bagh, Khem Villas, The Oberoi Vanyavilas, Nahargarh Fort, and the Sawai Madhopur Lodge. He brings wildlife-adjacent acoustic discipline, the specific hosting register of conservation-luxury destinations, and bilingual English/Hindi fluency for international guest mixes."
-  },
-  {
-    q: "How do you manage sound and amplification within Ranthambore Tiger Reserve's buffer zone?",
-    a: "Tiger reserve buffer zones have strict sound ordinances managed by forest department authorities. High-amplification DJs and PA systems that would be standard at a city hotel are simply not permissible — or appropriate — in this environment. The technique required is fundamentally different: voice-led crowd command, storytelling-driven engagement, and spatial crowd-work that creates energy without acoustic disruption to the wildlife habitat."
-  },
-  {
-    q: "Have you hosted events at Sher Bagh and Khem Villas in Ranthambore?",
-    a: "Yes. Sher Bagh and Khem Villas are the two most frequently booked luxury tented properties in Ranthambore's destination wedding circuit. Both have specific acoustic characteristics driven by their canvas construction, their open-air dinner integration, and their position within the reserve buffer. Having worked both repeatedly means the venue-specific hosting approach is pre-calibrated before the event begins."
-  },
-  {
-    q: "How do you anchor an event at The Oberoi Vanyavilas?",
-    a: "The Oberoi Vanyavilas is the ultra-luxury reference point for Ranthambore's destination circuit — and its guests are among the most discerning in India's hospitality segment. The hosting register at Vanyavilas must be warm, sophisticated, and genuinely attuned to both the conservation ethos of the property and the extraordinary luxury standards of the guests. It is a very specific tone — one that comes from working luxury destinations repeatedly, not from working luxury hotels generically."
-  },
-  {
-    q: "Can you manage international guests at Ranthambore destination weddings?",
-    a: "Yes. Ranthambore draws significant international guest mix for destination weddings — wildlife enthusiasts from Europe, corporate families from the UK and USA, and diaspora relatives from multiple countries who have chosen Ranthambore specifically for its unique character. The bilingual hosting here must bridge conservation-aware international guests, Indian urban families, and rural Rajasthan relatives within the same evening — all of whom have completely different entertainment expectations and cultural frameworks."
-  },
-  {
-    q: "What is the best time of year for destination weddings in Ranthambore?",
-    a: "Ranthambore Tiger Reserve is open to the public — and therefore available for tented camp events — between October and June. The peak wildlife season (October to April) is also the peak destination wedding season, when tiger sighting probability is highest and the temperature is manageable. The luxury tented properties book 5–7 months in advance for the November to February wedding season. Anchor availability mirrors venue availability — confirm simultaneously."
-  },
-  {
-    q: "Do you anchor corporate retreats and conservation summits in Ranthambore?",
-    a: "Yes. Ranthambore is increasingly popular for corporate leadership retreats specifically because of the environmental symbolism it carries — companies use the tiger reserve as a statement about their conservation values. The hosting for these events must reflect that environmental intelligence. A conservation corporation does not want an anchor whose environmental awareness is purely performative. The subject knowledge, the appropriate references, and the tone of engagement all matter."
-  },
-  {
-    q: "How do you handle the multi-day energy arc of a Ranthambore destination wedding?",
-    a: "Ranthambore destination weddings are typically 2–3 day affairs with early morning safari departures integrated into the event schedule. The energy arc is completely different from a city hotel event — mornings are shared wildlife experiences that naturally bond the crowd, afternoons are quieter recovery periods, and evenings are the premium event windows. The anchor must understand this rhythm and calibrate the hosting energy accordingly, rather than treating every segment with the same flat-line Sangeet energy."
-  },
+  { q: "Who is the best anchor for destination weddings in Ranthambore?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and is a specialist in Ranthambore's luxury jungle resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium wildlife-adjacent venues." },
+  { q: "How do you handle the unique acoustic and timeline constraints of Ranthambore jungle resorts?", a: "Ranthambore's proximity to the national park means strict noise regulations after certain hours and open-air acoustic challenges. Managing the timeline to ensure high-energy segments peak before restrictions, and shifting the crowd's energy seamlessly into intimate, late-night acoustic or DJ sessions, requires a highly experienced host." },
+  { q: "Can you host bilingual events for NRI families in Ranthambore?", a: "Yes. Destination weddings in Ranthambore attract a mix of domestic luxury clients and NRI families. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional Indian relatives connect deeply through culturally resonant Hindi." },
+  { q: "What makes Ranthambore different from other destination wedding locations?", a: "Ranthambore offers an exotic, wildlife-adjacent backdrop that feels both luxurious and wild. The hosting must mirror this — elegant and sophisticated, yet dynamic enough to match the adventurous spirit of a jungle destination." },
+  { q: "How far in advance should I book for a Ranthambore wedding?", a: "Ranthambore is highly sought after during the winter wedding season (October–March). Premium jungle resorts book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Ranthambore for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ranthambore destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Ranthambore?", a: "Anchor, emcee, host, and MC are terms for the same professional role. International event planners often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the term used." },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-};
+
+
 
 export default function RanthamborePage() {
   return (
@@ -304,7 +245,7 @@ export default function RanthamborePage() {
               <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">Beyond <G>Announcements.</G><br />Beyond Scripts.</h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding the most challenging and distinctive event environments in India — including the completely unique jungle luxury circuit of Ranthambore.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding the most challenging and distinctive event environments in India — including the completely unique jungle luxury circuit of Ranthambore.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the candlelit tent lawns of <strong className="text-[#B5952F]">Sher Bagh</strong> to the ultra-luxury tented villas of The Oberoi Vanyavilas, and from intimate 80-person Mehndi mornings to 250-person Sangeet nights under the Aravalli tree canopy — every Ranthambore event requires a fundamentally different hosting approach from the city or palace circuits.
@@ -533,7 +474,124 @@ export default function RanthamborePage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+                  {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Ranthambore's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Ranthambore —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Ranthambore",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Ranthambore.",
+                keywords: ["best wedding anchor ranthambore", "wedding emcee ranthambore", "wedding host ranthambore", "wedding mc ranthambore"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Ranthambore",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Ranthambore's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee ranthambore", "sangeet anchor ranthambore", "sangeet host ranthambore"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Ranthambore",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee ranthambore", "corporate anchor ranthambore", "corporate mc ranthambore", "corporate host ranthambore"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Ranthambore",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Ranthambore — by any name.",
+                keywords: ["best emcee in ranthambore", "best anchor in ranthambore", "best host in ranthambore", "best mc ranthambore"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Ranthambore",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host ranthambore", "english speaking anchor ranthambore", "bilingual emcee ranthambore"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in Ranthambore", "Best Emcee in Ranthambore", "Best Host in Ranthambore",
+                  "Wedding Anchor Ranthambore", "Wedding Emcee Ranthambore", "Wedding Host Ranthambore",
+                  "Corporate Anchor Ranthambore", "Corporate Emcee Ranthambore", "Corporate MC Ranthambore",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor Ranthambore", "Sangeet Emcee Ranthambore", "Sangeet Host Ranthambore",
+                  "Haldi Anchor Ranthambore", "Mehendi Host Ranthambore",
+                  "Birthday Anchor Ranthambore", "Birthday Emcee Ranthambore",
+                  "Master of Ceremonies Ranthambore", "MC for Wedding Ranthambore",
+                  "NRI Wedding Emcee Ranthambore", "Bilingual Host Ranthambore",
+                  "Top Anchor Ranthambore", "Top Emcee Ranthambore", "Event Host Ranthambore",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (

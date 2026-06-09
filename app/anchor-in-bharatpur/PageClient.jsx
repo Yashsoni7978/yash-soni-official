@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -153,81 +153,16 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  {
-    q: "Who is the best anchor for heritage weddings in Bharatpur?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and has specific experience with Bharatpur's heritage event circuit — Lohagarh Fort, Laxmi Vilas Palace, The Bagh, and Deeg Palace. He brings Bharatpur Jat community cultural fluency, Golden Triangle guest mix management experience, and bilingual hosting that bridges Delhi NCR metropolitan sophistication with the region's genuine Braj heritage identity."
-  },
-  {
-    q: "Do you understand Lohagarh Fort's specific heritage identity and the Bharatpur Jat community?",
-    a: "Yes. Lohagarh Fort — the only fort in India that was never captured by the British — carries a very specific identity within the Bharatpur Jat community. The families who host events within the fort are drawing on that identity deliberately. The anchor who understands this — who knows why Lohagarh matters beyond its generic heritage value — creates a connection with the family that generic hosting simply cannot achieve."
-  },
-  {
-    q: "How do you manage the Golden Triangle guest mix at Bharatpur events?",
-    a: "Bharatpur's strategic position at the intersection of Agra, Jaipur, and Delhi means that events here routinely assemble guest lists from three very different urban cultures simultaneously. Delhi NCR guests bring metropolitan professional expectations. Jaipur guests may bring heritage community expectations. Agra guests bring a different regional identity. The anchor must hold all three within a cohesive event experience — and do so while the heritage venue asserts its own strong identity."
-  },
-  {
-    q: "Have you hosted events at Laxmi Vilas Palace in Bharatpur?",
-    a: "Yes. Laxmi Vilas Palace is Bharatpur's flagship heritage hotel — a colonial-era property with formal garden ballrooms and open terrace event spaces. The property carries a very specific formal register that shapes what hosting is appropriate. Understanding the balance between the palace's heritage gravity and the warmth of an Indian family celebration is a skill developed through repeated work at heritage hotel properties across Rajasthan."
-  },
-  {
-    q: "Can you manage events near or alongside the Keoladeo National Park?",
-    a: "Yes. The Keoladeo UNESCO World Heritage bird sanctuary creates a unique atmosphere for adjacent events — particularly evening Sangeet events where the ambient sounds of the sanctuary form part of the natural acoustic. The hosting at sanctuary-edge venues must be environmentally aware: sound management discipline, respect for the sanctuary's protected status, and the ability to incorporate the extraordinary natural environment as a positive element of the event experience."
-  },
-  {
-    q: "Is Bharatpur accessible for Delhi-based destination wedding families?",
-    a: "Yes. Bharatpur is one of the closest true heritage destination options to Delhi — approximately 180km on the Yamuna Expressway and Jaipur highway, making it a 2.5 to 3-hour comfortable drive. For Delhi families whose guest mix is split between Delhi and Agra — 55km from Bharatpur — it is the most strategically accessible heritage destination in the entire corridor."
-  },
-  {
-    q: "Do you have experience with Braj cultural references at Bharatpur heritage events?",
-    a: "Yes. Bharatpur sits at the edge of the Braj region — the cultural and devotional heartland of Krishna worship in India. Events in this region carry a warm Vaishnava cultural undertone — specific musical traditions, devotional aesthetic references, and a spiritual warmth that permeates the community culture. Incorporating these references correctly and warmly — not academically — creates genuine emotional resonance with heritage Bharatpur families at a depth that generic hosting cannot touch."
-  },
-  {
-    q: "How far in advance should we book for a Bharatpur destination wedding?",
-    a: "Bharatpur's heritage properties — particularly Lohagarh Fort and Laxmi Vilas Palace — have limited event space capacity and book 4–6 months in advance for the October-February heritage wedding season. The anchor calendar mirrors venue availability. WhatsApp the moment your venue and date are confirmed — I operate strictly first-to-confirm."
-  },
+  { q: "Who is the best anchor for destination weddings in Bharatpur?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Bharatpur's heritage and wildlife resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the bird sanctuary." },
+  { q: "How do you handle the unique logistics of weddings in Bharatpur?", a: "Bharatpur offers a mix of heritage properties and nature-adjacent resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
+  { q: "Can you host bilingual events for NRI families in Bharatpur?", a: "Yes. Given its proximity to Delhi and Agra, Bharatpur is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
+  { q: "Do you anchor corporate events in Bharatpur?", a: "Bharatpur is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR and Agra regions. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
+  { q: "How far in advance should I book for a Bharatpur wedding?", a: "Bharatpur is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Bharatpur for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Bharatpur destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Bharatpur?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a }
-  })) };
 
 export default function BharatpurPage() {
   return (
@@ -312,7 +247,7 @@ export default function BharatpurPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor — simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor — simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Bharatpur occupies a unique strategic position — the <strong className="text-[#B5952F]">Lohagarh Fort</strong>, the only unconquered fort in India, anchors a heritage circuit that connects seamlessly to Agra, Jaipur, and Delhi NCR. The guest lists at Bharatpur events are among the most diverse in Rajasthan's destination circuit.
@@ -570,7 +505,124 @@ export default function BharatpurPage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+                  {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Bharatpur's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Bharatpur —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Bharatpur",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Bharatpur.",
+                keywords: ["best wedding anchor bharatpur", "wedding emcee bharatpur", "wedding host bharatpur", "wedding mc bharatpur"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Bharatpur",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Bharatpur's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee bharatpur", "sangeet anchor bharatpur", "sangeet host bharatpur"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Bharatpur",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee bharatpur", "corporate anchor bharatpur", "corporate mc bharatpur", "corporate host bharatpur"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Bharatpur",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Bharatpur — by any name.",
+                keywords: ["best emcee in bharatpur", "best anchor in bharatpur", "best host in bharatpur", "best mc bharatpur"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Bharatpur",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host bharatpur", "english speaking anchor bharatpur", "bilingual emcee bharatpur"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in Bharatpur", "Best Emcee in Bharatpur", "Best Host in Bharatpur",
+                  "Wedding Anchor Bharatpur", "Wedding Emcee Bharatpur", "Wedding Host Bharatpur",
+                  "Corporate Anchor Bharatpur", "Corporate Emcee Bharatpur", "Corporate MC Bharatpur",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor Bharatpur", "Sangeet Emcee Bharatpur", "Sangeet Host Bharatpur",
+                  "Haldi Anchor Bharatpur", "Mehendi Host Bharatpur",
+                  "Birthday Anchor Bharatpur", "Birthday Emcee Bharatpur",
+                  "Master of Ceremonies Bharatpur", "MC for Wedding Bharatpur",
+                  "NRI Wedding Emcee Bharatpur", "Bilingual Host Bharatpur",
+                  "Top Anchor Bharatpur", "Top Emcee Bharatpur", "Event Host Bharatpur",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (

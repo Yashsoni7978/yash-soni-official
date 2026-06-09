@@ -1,109 +1,72 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
-const FAQS = [
-  {
-    q: "Who is the best anchor for prestige destination weddings in Ajmer?",
-    a: "Anchor Yash Soni is widely regarded as the top tier host for Ajmer's luxury circuit, particularly for venues like Pratap Palace (Taj) and Mansingh Palace. His 4.9★ rating stems from his meticulous ability to bridge high-net-worth NRI expectations with deep, authentic central Rajasthani warmth."
-  },
-  {
-    q: "We are an NRI family organizing an event in Ajmer. Are you fluent in English?",
-    a: "Absolutely. I specialize in bilingual (English/Hindi) hosting. When hosting for NRI or multi-cultural families at properties like Pratap Palace, the anchoring must be perfectly polished in English while retaining the rich emotional vocabulary of Hindi for the traditional rituals."
-  },
-  {
-    q: "How do you manage the difference between Ajmer events and Pushkar events?",
-    a: "Though they are sister cities, they require different registers. Pushkar is often bohemian, deeply traditional, and highly spiritual. Ajmer is syncretic, metropolitan-adjacent, and anchored by premium formal properties. I transition between the two by shifting from formal grandeur (Ajmer) to traditional warmth (Pushkar) as the venue demands."
-  },
-  {
-    q: "Do you have experience anchoring at Taj properties like Pratap Palace?",
-    a: "Yes. Anchoring at Taj properties requires adherence to a very specific standard of luxury. The staff, the ambiance, and the guest list all operate at an elite frequency. The host cannot bring 'street' event energy in; the delivery must be highly sophisticated, deeply respectful, and effortlessly authoritative."
-  },
-  {
-    q: "Can you handle complex corporate and medical summits in Ajmer?",
-    a: "Yes. Ajmer’s central location makes it a prime hub for statewide corporate and medical association events. I anchor these with zero scripts, managing complex timelines, multi-speaker transitions, and VIP protocols with absolute precision, followed by seamless transitions into evening entertainment."
-  },
-  {
-    q: "How do you handle outdoor acoustics by the lakes in Ajmer?",
-    a: "Properties near Ana Sagar Lake suffer from rapid sound dissipation and wind interference. I work actively with the sound team to ensure correct monitor placement, and more importantly, I use physical spacing techniques to pull the audience closer together—creating a pocket of contained energy that defeats the open air."
-  },
-  {
-    q: "Do you use scripts during your anchoring?",
-    a: "Never. Every event I anchor is 100% unscripted. Scripts create a wall between the host and the audience. Real crowd command requires constant eye contact and the ability to instantly react to spontaneous moments. This is what separates premium hosting from generic announcing."
-  },
-  {
-    q: "When should we secure you for an Ajmer wedding?",
-    a: "Ajmer shares its peak season with the rest of the Rajasthan golden triangle (October to February). Because premium venues like Pratap Palace are booked out months in advance, elite anchor availability evaporates at the exact same time. Send a WhatsApp message immediately after blocking your venue."
-  },
-];
-
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
+  name: "Anchor Yash Soni",
+  image: "https://yashsoni.in/og-image.webp",
   "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
+  url: "https://yashsoni.in",
+  telephone: "+917737877978",
+  address: { "@type": "PostalAddress", streetAddress: "Vaishali Nagar", addressLocality: "Jaipur", postalCode: "302021", addressRegion: "RJ", addressCountry: "IN" },
+  geo: { "@type": "GeoCoordinates", latitude: 26.4499, longitude: 74.6399 },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" },
+  openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" },
+  sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a }
-  })) };
+const FAQS = [
+  { q: "Who is the best anchor for destination weddings in Ajmer?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events, specialising in Ajmer and Pushkar's unique destination wedding circuit — including premium resorts and heritage properties. Bilingual Hindi/English, completely unscripted, and experienced in managing large-scale destination events for NRI and traditional Indian families." },
+  { q: "How do you manage events in Ajmer given its proximity to Pushkar?", a: "Ajmer and Pushkar often operate as a combined destination wedding hub. While Pushkar venues focus on lakeside heritage, Ajmer venues often accommodate larger capacities with a blend of modern luxury and tradition. The hosting style adapts seamlessly between the spiritual depth required for a Pushkar ceremony and the high-energy luxury needed for an Ajmer reception." },
+  { q: "Can you host bilingual events for NRI families in Ajmer?", a: "Yes. Destination weddings in Ajmer frequently attract NRI families. Bilingual hosting is critical here — sophisticated English for the international guests and respectful, culturally rich Hindi for the local relatives. This ensures every guest feels completely connected to the celebration." },
+  { q: "Do you anchor corporate events in Ajmer?", a: "Corporate events, dealer meets, and annual galas at Ajmer's premium hotels are a strong specialisation. The corporate hosting register is sharp, brand-aligned, and professional, distinctly different from a wedding tone." },
+  { q: "How far in advance should I book for an Ajmer wedding?", a: "Ajmer's peak season aligns with the general Rajasthan wedding season (October–March). Premium properties and top anchors book out 6–8 months ahead. Secure your dates via WhatsApp as soon as your venue is confirmed." },
+  { q: "Who is the best emcee or host in Ajmer for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ajmer destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies across all Ajmer venues." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Ajmer?", a: "Anchor, emcee, host, and MC refer to the same professional role leading the event. While event planners may say 'emcee' and traditional families say 'anchor', the skill set — managing transitions, commanding the room, and engaging the crowd — remains identical." },
+];
+
+const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },{ "@type": "ListItem", position: 2, name: "Locations", item: "https://yashsoni.in/locations" },{ "@type": "ListItem", position: 3, name: "Anchor in Ajmer", item: "https://yashsoni.in/anchor-in-ajmer" }] };
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Best Anchor in Ajmer | Yash Soni — Heritage & Wedding Specialist",
+  url: "https://yashsoni.in/anchor-in-ajmer",
+  description: "Anchor Yash Soni is Ajmer's top-rated wedding anchor and emcee — 4.9★ across 200+ reviews. Specialist in heritage weddings, corporate events, and NRI destination weddings in Ajmer, Rajasthan.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Anchor or Emcee for an Ajmer Destination Wedding",
+  description: "Step-by-step process to book Anchor Yash Soni for weddings and corporate events in Ajmer, Rajasthan.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your Ajmer event date and venue. Peak season dates fill 6+ months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering travel, stay, and event hosting logistics in Ajmer is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. No tentative holds are maintained." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show, bilingual scripting requirements, and specific venue logistics." },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: 'Anchor in Ajmer | Wedding Emcee & Event Host | Yash Soni',
-  description: "Professional anchor in Ajmer for weddings, corporate events and functions. Yash Soni - Rajasthan's top event anchor.",
-  alternates: {
-    canonical: 'https://yashsoni.in/anchor-in-ajmer',
-  },
-  openGraph: {
-    title: 'Anchor in Ajmer | Wedding Emcee & Event Host | Yash Soni',
-    description: "Professional anchor in Ajmer for weddings, corporate events and functions. Yash Soni - Rajasthan's top event anchor.",
-    url: 'https://yashsoni.in/anchor-in-ajmer',
-    siteName: 'Yash Soni - Anchor & Emcee',
-    locale: 'en_IN',
-    type: 'website',
-  },
+  title: "Best Anchor in Ajmer | Yash Soni — Wedding & Event Specialist",
+  description: "Anchor Yash Soni is Ajmer's 4.9★ rated wedding anchor and emcee — specialist in heritage weddings, resort Sangeets, and NRI destination events in Ajmer.",
+  alternates: { canonical: "https://yashsoni.in/anchor-in-ajmer" },
+  openGraph: { title: "Best Anchor in Ajmer | Yash Soni", description: "4.9★ rated wedding anchor and emcee in Ajmer. Heritage weddings, resort Sangeets, and destination events.", url: "https://yashsoni.in/anchor-in-ajmer", siteName: "Anchor Yash Soni", locale: "en_IN", type: "website", images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Ajmer — Yash Soni" }] },
+  twitter: { card: "summary_large_image", title: "Best Anchor in Ajmer | Yash Soni", description: "4.9★ · 200+ reviews. Ajmer's top anchor, emcee, and wedding host.", images: [{ url: "/og-image.webp", width: 1200, height: 630 }] },
 };
 
 export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([faqSchema, localBusinessSchema])
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

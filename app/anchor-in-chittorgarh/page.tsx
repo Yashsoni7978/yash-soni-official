@@ -1,105 +1,72 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
-const FAQS = [
-  {
-    q: "Who is the best anchor for Rajput heritage weddings at Chittorgarh?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and has specific experience with Chittorgarh's deep Rajput heritage ceremony format. He brings Mewar cultural fluency — correct ceremonial vocabulary, Rana and Maharana lineage references, and appropriate emotional register — alongside the practical skills required to manage events in India's largest fort complex."
-  },
-  {
-    q: "Do you understand Mewar Rajput ceremonial protocol and the specific cultural identity of Chittorgarh?",
-    a: "Yes. Chittorgarh carries the heaviest cultural identity of any event destination in Rajasthan — possibly in India. The lineage of Rana Kumbha, the sacrifice of Padmini, the battles of Rana Sanga, and the legacy of Maharana Pratap are not background colour — they are the identity of the families who choose to celebrate here. The anchor who does not understand these references deeply cannot serve this room. The anchor who name-drops them incorrectly causes active offence. This fluency is developed through genuine immersion, not quick research."
-  },
-  {
-    q: "How do you manage the acoustic and spatial challenges of Chittorgarh Fort at 700 acres?",
-    a: "The sheer scale of Chittorgarh Fort creates event management challenges that most anchors are entirely unprepared for. At this scale, the acoustic behaviour of open stone spaces, the natural crowd dispersal driven by the geography, and the visual attention management across multiple heritage sight lines all need pre-event planning rather than on-stage improvisation. I work with the venue logistics team before every Chittorgarh event to establish crowd gathering strategy, acoustic positioning, and sight-line management."
-  },
-  {
-    q: "Have you hosted events at Padmini Palace and Rana Kumbha Palace within the fort?",
-    a: "Yes. Both of these sites have very different acoustic and atmospheric characteristics within the broader fort complex. Padmini Palace's lakeside setting offers natural crowd intimacy but wind-driven acoustic challenges. Rana Kumbha's courtyard offers dramatic scale but requires careful energy management to fill the space without the event feeling empty. Having worked both means these factors are pre-managed rather than discovered on the day."
-  },
-  {
-    q: "Can you host events at boutique heritage properties near Chittorgarh like Bassi Fort or Castle Bijaipur?",
-    a: "Yes. The Chittorgarh circuit includes several outstanding boutique heritage properties within 20–40km of the fort that are increasingly popular for destination wedding events. These properties offer heritage character within a more manageable scale for 100–300 guest events. The cultural identity of the region still governs the hosting register even at these smaller properties."
-  },
-  {
-    q: "Is Chittorgarh a good destination for NRI family weddings?",
-    a: "Yes. Chittorgarh has a very specific and powerful appeal for non-resident Rajput families — particularly those from the UK, USA, and UAE — who want to ground their child's wedding in the deepest possible expression of their ancestral identity. For a Mewar-lineage NRI family, there is no more meaningful wedding backdrop in the world than Chittorgarh Fort. The hosting must bridge the international entertainment expectations of the diaspora guests with the ceremonial gravity that the Indian family elders require."
-  },
-  {
-    q: "How far in advance should we book for a Chittorgarh destination wedding?",
-    a: "Chittorgarh operates as a destination wedding circuit primarily in the winter months — October through February. Fort permissions for private events have a separate approval pathway that requires significant advance planning. I recommend confirming the anchor booking simultaneously with the initial venue application — 6 to 9 months in advance for premium dates."
-  },
-  {
-    q: "Do you host corporate and institutional events in Chittorgarh beyond weddings?",
-    a: "Yes. Chittorgarh increasingly draws cultural organisations, heritage foundations, and government departments for conferences, summits, and commemorative events. These require a very different hosting register — intellectual gravitas, historical accuracy, and a deep respect for the site's significance — combined with the practical skills of keeping an audience engaged over a multi-session event day."
-  },
-];
-
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
+  name: "Anchor Yash Soni",
+  image: "https://yashsoni.in/og-image.webp",
   "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
+  url: "https://yashsoni.in",
+  telephone: "+917737877978",
+  address: { "@type": "PostalAddress", streetAddress: "Vaishali Nagar", addressLocality: "Jaipur", postalCode: "302021", addressRegion: "RJ", addressCountry: "IN" },
+  geo: { "@type": "GeoCoordinates", latitude: 24.8887, longitude: 74.6269 },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" },
+  openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" },
+  sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+const FAQS = [
+  { q: "Who is the best anchor for destination weddings in Chittorgarh?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Chittorgarh's fort-view and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues set against the backdrop of India's largest fort." },
+  { q: "How do you handle the logistics of heritage weddings in Chittorgarh?", a: "Chittorgarh offers majestic heritage properties with unique acoustic challenges and sprawling outdoor layouts. Managing event energy in these vast settings requires an experienced host who uses precise pacing and crowd psychology to create an intimate, high-energy atmosphere despite the massive surroundings." },
+  { q: "Can you host bilingual events for NRI families in Chittorgarh?", a: "Yes. Destination weddings in Chittorgarh attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
+  { q: "Do you anchor corporate events in Chittorgarh?", a: "Chittorgarh is a majestic destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
+  { q: "How far in advance should I book for a Chittorgarh wedding?", a: "Chittorgarh is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Chittorgarh for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Chittorgarh destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Chittorgarh?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
+];
+
+const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },{ "@type": "ListItem", position: 2, name: "Locations", item: "https://yashsoni.in/locations" },{ "@type": "ListItem", position: 3, name: "Anchor in Chittorgarh", item: "https://yashsoni.in/anchor-in-chittorgarh" }] };
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Best Anchor in Chittorgarh | Yash Soni — Heritage Wedding Specialist",
+  url: "https://yashsoni.in/anchor-in-chittorgarh",
+  description: "Anchor Yash Soni is Chittorgarh's top-rated wedding anchor and emcee — 4.9★ across 200+ reviews. Specialist in heritage weddings, corporate offsites, and destination events in Chittorgarh, Rajasthan.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Anchor or Emcee for a Chittorgarh Destination Wedding",
+  description: "Step-by-step process to book Anchor Yash Soni for heritage weddings and corporate events in Chittorgarh, Rajasthan.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your Chittorgarh event date and venue. Peak season dates fill 6+ months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering travel, stay, and event hosting logistics for Chittorgarh is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. No tentative holds are maintained." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show, bilingual scripting requirements, and specific venue logistics." },
+  ],
 };
 
 export const metadata: Metadata = {
-  title: 'Anchor in Chittorgarh | Wedding Host | Yash Soni',
-  description: "Hire a professional anchor in Chittorgarh for royal weddings and heritage events. Yash Soni - Rajasthan's top event anchor.",
-  alternates: {
-    canonical: 'https://yashsoni.in/anchor-in-chittorgarh',
-  },
-  openGraph: {
-    title: 'Anchor in Chittorgarh | Wedding Host | Yash Soni',
-    description: "Hire a professional anchor in Chittorgarh for royal weddings and heritage events. Yash Soni - Rajasthan's top event anchor.",
-    url: 'https://yashsoni.in/anchor-in-chittorgarh',
-    siteName: 'Yash Soni - Anchor & Emcee',
-    locale: 'en_IN',
-    type: 'website',
-  },
+  title: "Best Anchor in Chittorgarh | Yash Soni — Heritage Wedding Specialist",
+  description: "Anchor Yash Soni is Chittorgarh's 4.9★ rated wedding anchor and emcee — specialist in heritage weddings, grand Sangeets, and corporate destination events.",
+  alternates: { canonical: "https://yashsoni.in/anchor-in-chittorgarh" },
+  openGraph: { title: "Best Anchor in Chittorgarh | Yash Soni", description: "4.9★ rated wedding anchor and emcee in Chittorgarh. Heritage weddings and grand destination events.", url: "https://yashsoni.in/anchor-in-chittorgarh", siteName: "Anchor Yash Soni", locale: "en_IN", type: "website", images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Chittorgarh — Yash Soni" }] },
+  twitter: { card: "summary_large_image", title: "Best Anchor in Chittorgarh | Yash Soni", description: "4.9★ · 200+ reviews. Chittorgarh's top anchor, emcee, and wedding host.", images: [{ url: "/og-image.webp", width: 1200, height: 630 }] },
 };
 
 export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([faqSchema, localBusinessSchema])
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

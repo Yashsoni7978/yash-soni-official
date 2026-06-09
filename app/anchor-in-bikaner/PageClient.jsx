@@ -67,7 +67,7 @@ const FAQItem = ({ q, a, id }) => {
       <AnimatePresence>
         {open && (
           <motion.div id={id} initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4">{a}</p>
+            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4 yash-faq-answer yash-citable">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -76,7 +76,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -166,83 +166,24 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  {
-    q: "Who is the best anchor for heritage weddings in Bikaner?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and has specific experience with Bikaner's Marwari heritage wedding circuit — Junagarh Fort, Lallgarh Palace, Karni Bhawan, and Narendra Bhawan. He brings Rathore clan fluency, fort acoustic expertise, and authentic bilingual hosting that respects the understated grandeur of Bikaner's business community weddings."
-  },
-  {
-    q: "Do you understand Marwari wedding ceremonial structure and relevant cultural references?",
-    a: "Yes. Marwari weddings have a specific ceremonial vocabulary and community expectations around the sequence and energy of each ritual. The business families of Bikaner are discerning — they notice when references are wrong, when the sequence is mishandled, or when an anchor treats their ceremony as generic content. This level of cultural preparation is non-negotiable for every Bikaner event."
-  },
-  {
-    q: "How do you manage the acoustics of Junagarh Fort's open courtyards?",
-    a: "Junagarh's red sandstone creates a very specific acoustic environment. The long reverb decay of stone walls means speech must be delivered with deliberate pacing and clear enunciation — faster delivery becomes unintelligible in these spaces. Projecting energy without projecting noise is a specific skill developed through repeated performance in heritage fort settings."
-  },
-  {
-    q: "Have you hosted events at Lallgarh Palace in Bikaner?",
-    a: "Yes. Lallgarh's combination of Indo-Saracenic arched halls and open garden spaces creates a fascinating acoustic range within the same event. The transition from the high-reverb interior hall Sangeet performances to the open garden after-party requires on-the-fly crowd management technique adjustments — something that only works seamlessly when you have navigated this specific transition here before."
-  },
-  {
-    q: "Can you host bilingual English and Hindi events for NRI guests at Bikaner weddings?",
-    a: "Yes. Bikaner attracts destination wedding families whose networks include NRI relatives from the UK, USA, Singapore, and the UAE. The hosting must satisfy both the formal ceremonial expectations of the elder Marwari community and the international entertainment standards of the younger diaspora. Seamless bilingual switching — without either register feeling forced — is the core competency here."
-  },
-  {
-    q: "How far in advance should we book for Bikaner's wedding season?",
-    a: "Bikaner's winter destination circuit — October through February — is far less crowded than Jaipur or Udaipur, but premium dates at Junagarh and Lallgarh fill quickly for the same reason: limited venue capacity. The anchor calendar mirrors this. WhatsApp as soon as your venue is confirmed — I operate strictly first-to-confirm."
-  },
-  {
-    q: "Do you anchor corporate events and leadership retreats in Bikaner?",
-    a: "Yes. Heritage properties like Narendra Bhawan and Karni Bhawan are increasingly hosting corporate leadership retreats for companies that want a premium Rajasthan heritage setting away from the tourist circuits of Jaipur. The corporate event tone — brand-aligned, bilingual, sophisticated — is as important to get right as the wedding register."
-  },
-  {
-    q: "What makes the Bikaner wedding circuit distinctive from other Rajasthan destinations?",
-    a: "Bikaner occupies a unique niche in the Rajasthan destination circuit — it has the full heritage architecture of Jodhpur or Jaipur, but without the tourist commercialisation. Families who choose Bikaner are making a statement about their cultural identity and heritage pride. The events here consistently feel more genuinely rooted in Rajasthani culture and less like luxury theme parks. That difference requires a host who actually understands the culture — not one who uses Rajasthan as an exotic backdrop."
-  },
+  { q: "Who is the best anchor for destination weddings in Bikaner?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Bikaner's heritage and palace wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues set against the backdrop of the royal desert city." },
+  { q: "How do you handle the logistics of heritage weddings in Bikaner?", a: "Bikaner offers majestic heritage properties like Narendra Bhawan and Laxmi Niwas Palace with unique acoustic challenges and sprawling outdoor layouts. Managing event energy in these settings requires an experienced host who uses precise pacing to create an intimate, high-energy atmosphere despite the massive surroundings." },
+  { q: "Can you host bilingual events for NRI families in Bikaner?", a: "Yes. Destination weddings in Bikaner attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
+  { q: "Do you anchor corporate events in Bikaner?", a: "Bikaner is a majestic destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
+  { q: "How far in advance should I book for a Bikaner wedding?", a: "Bikaner is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
+  { q: "Who is the best emcee or host in Bikaner for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Bikaner destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Bikaner?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-};
 
-export default function BikanerPage() {
+
+
+export default function PageClient() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
       <style>{css}</style>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
+      
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -304,7 +245,7 @@ export default function BikanerPage() {
               <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">Beyond <G>Announcements.</G><br />Beyond Scripts.</h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is Rajasthan's most trusted heritage destination wedding anchor — commanding crowds with zero paper scripts.
+                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is Rajasthan's most trusted heritage destination wedding anchor — commanding crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the iconic red sandstone courtyards of <strong className="text-[#B5952F]">Junagarh Fort</strong> to the royal banquet halls of Lallgarh Palace, Yash commands Bikaner's unique fusion of Rathore Rajput heritage and Marwari business community elegance.
@@ -533,7 +474,123 @@ export default function BikanerPage() {
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
+            {/* ══════════════════════════════════════
+          KEYWORD CLUSTER SECTION
+          Anchor · Emcee · Host · MC — All Variants
+      ══════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <Reveal>
+            <div className="text-center mb-14">
+              <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                Whatever You Call It —{" "}<G>Bikaner's Best.</G>
+              </h2>
+              <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Bikaner —
+                it is the same role, the same skill set, and the same name: Anchor Yash Soni.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Keyword service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              {
+                label: "Wedding Emcee · Wedding Host",
+                title: "Best Wedding Anchor in Bikaner",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Bikaner.",
+                keywords: ["best wedding anchor bikaner", "wedding emcee bikaner", "wedding host bikaner", "wedding mc bikaner"],
+              },
+              {
+                label: "Sangeet Host · Sangeet MC",
+                title: "Best Sangeet Emcee in Bikaner",
+                desc: "High-energy Sangeet nights, unscripted crowd games, 500–1,500 guests. Dance floors packed until 4 AM. Bikaner's top-rated Sangeet emcee.",
+                keywords: ["best sangeet emcee bikaner", "sangeet anchor bikaner", "sangeet host bikaner"],
+              },
+              {
+                label: "Corporate Host · Corporate MC",
+                title: "Best Corporate Emcee in Bikaner",
+                desc: "Award nights, product launches, annual galas at premium properties. Sharp, bilingual, brand-aligned corporate MC hosting.",
+                keywords: ["best corporate emcee bikaner", "corporate anchor bikaner", "corporate mc bikaner", "corporate host bikaner"],
+              },
+              {
+                label: "Best MC · Best Host · Best Emcee",
+                title: "Best Emcee in Bikaner",
+                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Bikaner — by any name.",
+                keywords: ["best emcee in bikaner", "best anchor in bikaner", "best host in bikaner", "best mc bikaner"],
+              },
+              {
+                label: "Bilingual Emcee · International Host",
+                title: "NRI Wedding Host in Bikaner",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                keywords: ["nri wedding host bikaner", "english speaking anchor bikaner", "bilingual emcee bikaner"],
+              },
+              {
+                label: "Best Emcee Rajasthan · Best Host Rajasthan",
+                title: "Best Anchor in Rajasthan",
+                desc: "Available across all of Rajasthan. The top anchor and emcee in Rajasthan.",
+                keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
+                href: "/anchor-in-rajasthan",
+              },
+            ].map((card, i) => (
+              <Reveal key={i} delay={i * 0.07}>
+                {card.href ? (
+                  <Link href={card.href} className="block h-full">
+                    <div className="h-full border border-white/8 hover:border-[#D4AF37]/50 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
+                      <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                      <h3 className="text-white font-bold text-lg mb-3 group-hover:text-[#B5952F] transition-colors leading-snug">{card.title}</h3>
+                      <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {card.keywords.map((kw, j) => (
+                          <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="h-full border border-[#D4AF37]/20 rounded-2xl p-6 bg-[#0a0a0a]">
+                    <p className="text-[#B5952F] text-[9px] uppercase tracking-widest mb-2 font-bold">{card.label}</p>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{card.title}</h3>
+                    <p className="text-zinc-400 text-sm leading-relaxed font-light mb-4">{card.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {card.keywords.map((kw, j) => (
+                        <span key={j} className="text-[9px] text-zinc-600 border border-zinc-800 px-2 py-0.5 rounded-full">{kw}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Search term cloud — entity density for GEO */}
+          <Reveal>
+            <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
+              <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Best Anchor in " + "Bikaner", "Best Emcee in " + "Bikaner", "Best Host in " + "Bikaner",
+                  "Wedding Anchor " + "Bikaner", "Wedding Emcee " + "Bikaner", "Wedding Host " + "Bikaner",
+                  "Corporate Anchor " + "Bikaner", "Corporate Emcee " + "Bikaner", "Corporate MC " + "Bikaner",
+                  "Best Anchor in Rajasthan", "Best Emcee in Rajasthan",
+                  "Sangeet Anchor " + "Bikaner", "Sangeet Emcee " + "Bikaner", "Sangeet Host " + "Bikaner",
+                  "Haldi Anchor " + "Bikaner", "Mehendi Host " + "Bikaner",
+                  "Birthday Anchor " + "Bikaner", "Birthday Emcee " + "Bikaner",
+                  "Master of Ceremonies " + "Bikaner", "MC for Wedding " + "Bikaner",
+                  "NRI Wedding Emcee " + "Bikaner", "Bilingual Host " + "Bikaner",
+                  "Top Anchor " + "Bikaner", "Top Emcee " + "Bikaner", "Event Host " + "Bikaner",
+                ].map((term, i) => (
+                  <span key={i} className="text-xs text-zinc-500 border border-zinc-800/80 px-3 py-1 rounded-full hover:text-zinc-300 hover:border-zinc-600 transition-colors cursor-default">
+                    {term}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+{/* ══ 11. TICKER ══ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (
