@@ -1,13 +1,13 @@
-// app/corporate-event-anchor-jaipur/layout.jsx
+// app/sports-commentator-jaipur/layout.jsx
 import { buildServiceSchema } from "../../lib/schema/serviceSchema";
 
 // SERVER COMPONENT — metadata only
 const serviceSchema = buildServiceSchema({
-  pageUrl: "https://yashsoni.in/corporate-event-anchor-jaipur",
-  name: "Corporate Event Anchor Jaipur — Anchor Yash Soni",
-  description: "700+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
-  serviceType: "Corporate Event Hosting",
-  providerJobTitle: "Corporate Event Anchor & Emcee",
+  pageUrl: "https://yashsoni.in/sports-commentator-jaipur",
+  name: "Sports Commentator & Anchor Jaipur — Yash Soni",
+  description: "High-octane sports commentator and anchor in Jaipur. Live play-by-play commentary, marathon hosting, cricket leagues, and corporate sports events.",
+  serviceType: "Sports Commentary and Event Hosting",
+  providerJobTitle: "Sports Commentator, Host & Anchor",
   areaServed: [
     { "@type": "City", name: "Jaipur" },
     { "@type": "AdministrativeArea", name: "Rajasthan" },
@@ -15,14 +15,13 @@ const serviceSchema = buildServiceSchema({
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Corporate Event Services Jaipur",
+    name: "Sports Anchor Services Jaipur",
     itemListElement: [
-      { "@type": "Offer", name: "Award Night Anchor Jaipur" },
-      { "@type": "Offer", name: "Conference & Summit Host Jaipur" },
-      { "@type": "Offer", name: "Product Launch Anchor Jaipur" },
-      { "@type": "Offer", name: "Gala Dinner Host Jaipur" },
-      { "@type": "Offer", name: "Corporate Anchor JECC Sitapura" },
-      { "@type": "Offer", name: "Dealer Meet Host Jaipur" },
+      { "@type": "Offer", name: "Cricket League Commentator Jaipur" },
+      { "@type": "Offer", name: "Marathon Host Jaipur" },
+      { "@type": "Offer", name: "Corporate Sports Day Anchor" },
+      { "@type": "Offer", name: "Fitness Festival Host" },
+      { "@type": "Offer", name: "Esports Tournament Shoutcaster" },
     ],
   },
 });
@@ -32,38 +31,32 @@ const breadcrumb = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
     { "@type": "ListItem", position: 2, name: "Best Anchor in Jaipur", item: "https://yashsoni.in/anchor-in-jaipur" },
-    { "@type": "ListItem", position: 3, name: "Corporate Anchor Jaipur", item: "https://yashsoni.in/corporate-event-anchor-jaipur" },
+    { "@type": "ListItem", position: 3, name: "Sports Commentator Jaipur", item: "https://yashsoni.in/sports-commentator-jaipur" },
   ],
 };
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni — Award Nights & Summits",
+  title: "Sports Commentator, Host & Anchor in Jaipur | Yash Soni",
   description:
-    "Top corporate event anchor in Jaipur — Anchor Yash Soni. 4.9★ rated. Award nights, conferences, product launches & gala dinners at JECC Sitapura, JLN Marg & Birla Auditorium. Book now.",
+    "Top sports commentator and anchor in Jaipur. Live play-by-play commentary, marathon hosting, cricket leagues, and corporate sports events. 4.9★ rated.",
   keywords: [
-    "corporate event anchor jaipur",
-    "best corporate anchor jaipur",
-    "corporate anchor jaipur",
-    "award night anchor jaipur",
-    "corporate emcee jaipur",
-    "anchor jecc sitapura",
-    "corporate anchor jecc jaipur",
-    "award show anchor jaipur",
-    "product launch anchor jaipur",
-    "business summit anchor jaipur",
-    "conference host jaipur",
-    "corporate anchor rajasthan",
-    "anchor jln marg jaipur",
-    "gala dinner host jaipur",
-    "anchor tonk road jaipur",
-    "corporate event host jaipur",
-    "anchor yash corporate jaipur",
-    "corporate anchor birla auditorium",
-    "business event emcee jaipur",
-    "anchor in jaipur corporate",
+    "sports commentator jaipur",
+    "sports anchor jaipur",
+    "cricket commentator jaipur",
+    "marathon host jaipur",
+    "corporate sports anchor jaipur",
+    "sports event host jaipur",
+    "fitness event anchor jaipur",
+    "esports shoutcaster jaipur",
+    "anchor for cricket league jaipur",
+    "best sports anchor in jaipur",
+    "live commentator jaipur",
+    "bilingual sports commentator",
+    "jaipur marathon anchor",
+    "anchor sms stadium jaipur",
   ],
   alternates: {
-    canonical: "https://yashsoni.in/corporate-event-anchor-jaipur",
+    canonical: "https://yashsoni.in/sports-commentator-jaipur",
   },
   robots: {
     index: true,
@@ -79,24 +72,24 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://yashsoni.in/corporate-event-anchor-jaipur",
+    url: "https://yashsoni.in/sports-commentator-jaipur",
     siteName: "Anchor Yash Soni",
-    title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni — 4.9★",
+    title: "Sports Commentator, Host & Anchor in Jaipur | Yash Soni",
     description:
-      "Award nights, conferences & galas at JECC Sitapura, JLN Marg & Birla Auditorium. 4.9★ rated corporate anchor in Jaipur.",
+      "High-octane sports commentator and anchor in Jaipur. Live play-by-play commentary, marathon hosting, and cricket leagues.",
     images: [
       {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Corporate Event Anchor Jaipur",
+        alt: "Anchor Yash Soni — Sports Commentator Jaipur",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni",
-    description: "4.9★. Award nights, summits & gala dinners at JECC Sitapura, Jaipur.",
+    title: "Sports Commentator & Anchor in Jaipur | Yash Soni",
+    description: "Jaipur's top sports commentator. Live play-by-play, marathons, and cricket leagues.",
     images: ["/og-image.webp"],
   },
   other: {
@@ -106,7 +99,7 @@ export const metadata = {
     ICBM: "26.9124, 75.7873",
   },
 };
-export default function CorporateAnchorLayout({ children }) {
+export default function SportsCommentatorLayout({ children }) {
   return (
     <>
       <script
