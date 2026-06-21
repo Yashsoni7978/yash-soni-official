@@ -16,7 +16,7 @@ export const ReviewsMarquee = ({ reviews }) => {
         <div className="flex whitespace-nowrap gap-4 animate-marquee w-max hover:[animation-play-state:paused]">
           {[...reviews.slice(0, 5), ...reviews.slice(0, 5), ...reviews.slice(0, 5)].map((r, i) => (
             <a key={i} href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
-              className="shrink-0 w-[280px] md:w-[360px] p-5 md:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#D4AF37]/50 transition-all group cursor-pointer flex flex-col whitespace-normal">
+              className="shrink-0 w-[280px] md:w-[360px] p-5 md:p-6 rounded-2xl bg-white/5 border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all group cursor-pointer flex flex-col whitespace-normal">
               <div className="flex gap-0.5 mb-3">
                 {[...Array(5)].map((_, j) => <Star key={j} size={11} fill="#D4AF37" className="text-[#B5952F]" />)}
               </div>
@@ -33,7 +33,7 @@ export const ReviewsMarquee = ({ reviews }) => {
         <div className="flex whitespace-nowrap gap-4 animate-marquee-reverse w-max hover:[animation-play-state:paused]">
           {[...reviews.slice(5), ...reviews.slice(5), ...reviews.slice(5)].map((r, i) => (
             <a key={i} href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
-              className="shrink-0 w-[280px] md:w-[360px] p-5 md:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#D4AF37]/50 transition-all group cursor-pointer flex flex-col whitespace-normal">
+              className="shrink-0 w-[280px] md:w-[360px] p-5 md:p-6 rounded-2xl bg-white/5 border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all group cursor-pointer flex flex-col whitespace-normal">
               <div className="flex gap-0.5 mb-3">
                 {[...Array(5)].map((_, j) => <Star key={j} size={11} fill="#D4AF37" className="text-[#B5952F]" />)}
               </div>

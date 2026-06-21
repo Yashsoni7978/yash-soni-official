@@ -594,7 +594,7 @@ export default function HomePage() {
             {LOCATIONS.map((loc, i) => (
               <ScrollReveal key={i} delay={i * 0.08}>
                 <Link href={loc.href}>
-                  <div className="border border-white/10 rounded-xl p-5 hover:border-[#D4AF37]/50 transition-all group cursor-pointer bg-zinc-900/20 hover:bg-zinc-900/50 h-full">
+                  <div className="border border-[#D4AF37]/40 rounded-xl p-5 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all group cursor-pointer bg-zinc-900/20 hover:bg-zinc-900/50 h-full">
                     <MapPin
                       size={16}
                       className="text-[#B5952F] mb-2.5"
