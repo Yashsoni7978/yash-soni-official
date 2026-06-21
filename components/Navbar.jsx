@@ -31,6 +31,7 @@ const navLinks = [
       { name: "Destination Wedding", href: "/destination-wedding-anchor" },
       { name: "Team Building Host", href: "/team-building-host" },
       { name: "Celebrity & Public Events", href: "/celebrity-public-events-host" },
+      { name: "Sports Commentator", href: "/sports-commentator-jaipur" },
       { name: "Birthday Party Anchor", href: "/anchor-for-birthday-party-jaipur" },
       { name: "Engagement & Roka Anchor", href: "/engagement-roka-ceremony-anchor" },
       { name: "Award Night Anchor", href: "/award-night-anchor-jaipur" },
