@@ -20,6 +20,7 @@ import { PlatformsMarquee } from "./_components/PlatformsMarquee";
 import { ReviewsMarquee } from "./_components/ReviewsMarquee";
 import { FAQSection } from "./_components/FAQSection";
 import { GalleryMarquee } from "./_components/GalleryMarquee";
+import { AnimatedStatsCard } from "../components/AnimatedStatsCard";
 
 // ── HOMEPAGE METADATA ──────────────────────────────────────────────────────
 // Title intentionally differentiated from layout default via a distinct
@@ -253,23 +254,8 @@ export default function HomePage() {
         <div className="container mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {STATS.map((s, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="text-center group">
-                  <s.icon
-                    size={22}
-                    className="text-[#B5952F] mx-auto mb-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all"
-                    aria-hidden="true"
-                  />
-                  <div className="text-3xl md:text-5xl font-black mb-1 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
-                    {s.value}
-                  </div>
-                  <p className="text-zinc-200 text-[11px] font-bold uppercase tracking-widest mb-0.5">
-                    {s.label}
-                  </p>
-                  <p className="text-zinc-600 text-[10px] uppercase tracking-wider">
-                    {s.sub}
-                  </p>
-                </div>
+              <ScrollReveal key={i} delay={i * 0.1} className="w-full h-full flex">
+                <AnimatedStatsCard value={s.value} label={s.label} sub={s.sub} icon={s.icon} />
               </ScrollReveal>
             ))}
           </div>
