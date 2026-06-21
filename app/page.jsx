@@ -427,7 +427,7 @@ export default function HomePage() {
               "Sports Events",
             ].map((tag, i) => (
               <ScrollReveal key={i} delay={i * 0.04}>
-                <span className="px-5 py-2.5 rounded-full border border-white/8 bg-white/4 text-zinc-300 text-sm hover:border-[#D4AF37]/50 hover:text-[#B5952F] transition-all">
+                <span className="px-5 py-2.5 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/5 text-zinc-300 text-sm hover:border-[#D4AF37] hover:text-[#B5952F] transition-all">
                   {tag}
                 </span>
               </ScrollReveal>
