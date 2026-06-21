@@ -308,27 +308,31 @@ export default function HomePage() {
             </ScrollReveal>
             <div className="grid grid-cols-2 gap-3 md:gap-4">
               <ScrollReveal delay={0.15}>
-                <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 group transition-all duration-500">
-                  <Image
-                    src="/intro-portrait-top.webp"
-                    alt="Anchor Yash Soni in a professional portrait, suited up for a premium event"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    quality={70}
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                <div className="relative aspect-[3/4] rounded-[20px] transition-all duration-300 bg-[linear-gradient(163deg,#FFFFF0_0%,#D4AF37_100%)] hover:shadow-[0_0_30px_1px_rgba(212,175,55,0.30)] group/card">
+                  <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] transition-all duration-200 group-hover/card:scale-[0.98] overflow-hidden z-10">
+                    <Image
+                      src="/intro-portrait-top.webp"
+                      alt="Anchor Yash Soni in a professional portrait, suited up for a premium event"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      quality={70}
+                      className="object-cover transition-transform duration-700 group-hover/card:scale-105"
+                    />
+                  </div>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={0.25} className="mt-8 md:mt-12">
-                <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 group transition-all duration-500">
-                  <Image
-                    src="/intro-portrait-bottom.webp"
-                    alt="Anchor Yash Soni engaging and energising a wedding crowd on stage"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    quality={70}
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                <div className="relative aspect-[3/4] rounded-[20px] transition-all duration-300 bg-[linear-gradient(163deg,#FFFFF0_0%,#D4AF37_100%)] hover:shadow-[0_0_30px_1px_rgba(212,175,55,0.30)] group/card">
+                  <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] transition-all duration-200 group-hover/card:scale-[0.98] overflow-hidden z-10">
+                    <Image
+                      src="/intro-portrait-bottom.webp"
+                      alt="Anchor Yash Soni engaging and energising a wedding crowd on stage"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      quality={70}
+                      className="object-cover transition-transform duration-700 group-hover/card:scale-105"
+                    />
+                  </div>
                 </div>
               </ScrollReveal>
             </div>
