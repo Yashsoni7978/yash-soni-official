@@ -139,7 +139,7 @@ export default function Navbar() {
                     role="menuitem"
                     aria-haspopup="true"
                     aria-expanded={activeDropdown === link.name}
-                    className={`text-[12px] font-bold uppercase tracking-widest flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
+                    className={`whitespace-nowrap text-[12px] font-bold uppercase tracking-widest flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
                       activeDropdown === link.name
                         ? "bg-[#161616] text-white border border-white/10 shadow-inner"
                         : "text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
@@ -160,7 +160,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     role="menuitem"
-                    className="text-[12px] font-bold uppercase tracking-widest flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
+                    className="whitespace-nowrap text-[12px] font-bold uppercase tracking-widest flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
                   >
                     {link.name}
                   </Link>
