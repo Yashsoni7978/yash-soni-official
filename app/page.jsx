@@ -458,7 +458,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
             {WHY_ME.map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="bg-zinc-900/30 p-8 md:p-10 rounded-2xl border border-white/5 hover:border-[#D4AF37]/40 transition-all duration-500 group h-full hover:-translate-y-1.5">
+                <div className="bg-zinc-900/30 p-8 md:p-10 rounded-2xl border border-white/5 hover:border-[#D4AF37]/40 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all duration-500 group h-full hover:-translate-y-1.5">
                   <item.icon
                     className="w-10 h-10 text-[#B5952F] mb-6 group-hover:scale-110 transition-transform"
                     aria-hidden="true"
