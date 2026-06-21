@@ -81,7 +81,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Kumbhalgarh-specific
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -171,7 +171,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Kumbhalgarh?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and is a specialist in Kumbhalgarh's majestic fort and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for both NRI and traditional Indian families seeking a royal backdrop." },
+  { q: "Who is the best anchor for destination weddings in Kumbhalgarh?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and is a specialist in Kumbhalgarh's majestic fort and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for both NRI and traditional Indian families seeking a royal backdrop." },
   { q: "How do you handle the logistics and acoustics of fort weddings in Kumbhalgarh?", a: "Kumbhalgarh's heritage venues often involve open-air settings with unique acoustic challenges and sprawling layouts. Navigating event energy in these vast, majestic spaces requires an experienced host who uses precise pacing and crowd psychology to draw guests together, creating an intimate, high-energy atmosphere despite the massive surroundings." },
   { q: "Can you host bilingual events for NRI families in Kumbhalgarh?", a: "Yes, bilingual cultural bridging is essential for Kumbhalgarh destination weddings. NRI families from the US, UK, and UAE require hosting that is perfectly bilingual — sophisticated English for international guests and culturally rich Hindi for local relatives, ensuring everyone connects with the royal Rajasthani setting." },
   { q: "What makes Kumbhalgarh different from other destination wedding locations?", a: "Kumbhalgarh offers a dramatic, remote, and monumental setting. The hosting must match this grandeur — it requires unmatched elegance, environmental awareness, and a stage presence capable of commanding an audience under the shadow of the second longest wall in the world." },
@@ -269,7 +269,7 @@ export default function KumbhalgarhPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination wedding anchor — commanding crowds with absolute zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination wedding anchor — commanding crowds with absolute zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the massive courtyard of <strong className="text-[#B5952F]">The Kumbha Bagh</strong> to the wilderness hilltop of The Aodhi, Yash commands the grandeur of Kumbhalgarh's unique heritage stage with a presence that matches the scale of the Great Wall itself.
@@ -568,7 +568,7 @@ export default function KumbhalgarhPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Kumbhalgarh",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Kumbhalgarh — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Kumbhalgarh — by any name.",
                 keywords: ["best emcee in kumbhalgarh", "best anchor in kumbhalgarh", "best host in kumbhalgarh", "best mc kumbhalgarh"],
               },
               {

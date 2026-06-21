@@ -77,7 +77,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Jodhpur-specific
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -163,7 +163,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best anchor for destination weddings in Jodhpur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 1,100+ events anchored across Rajasthan, specialising in Jodhpur's fort and palace wedding circuit — Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, Ajit Bhawan, Bal Samand Lake Palace, and Vivanta. Bilingual Hindi/English, unscripted, experienced in royal family protocols and NRI destination weddings.",
+    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Jodhpur's fort and palace wedding circuit — Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, Ajit Bhawan, Bal Samand Lake Palace, and Vivanta. Bilingual Hindi/English, unscripted, experienced in royal family protocols and NRI destination weddings.",
   },
   {
     q: "Have you hosted weddings at Umaid Bhawan Palace?",
@@ -191,7 +191,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash different from local Jodhpur anchors?",
-    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 1,100+ events, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
+    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 700+ shows, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
   },
   {
     q: "Who is the best emcee in Jodhpur for destination weddings?",
@@ -283,7 +283,7 @@ export default function JodhpurPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the grand heights of <strong className="text-[#B5952F]">Umaid Bhawan Palace</strong> to the historic Mehrangarh Fort, Yash brings a level of sophistication and energy that reflects the royal heritage of Jodhpur.
@@ -569,7 +569,7 @@ export default function JodhpurPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Jodhpur",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Jodhpur — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Jodhpur — by any name.",
                 keywords: ["best emcee in jodhpur", "best anchor in jodhpur", "best host in jodhpur", "best mc jodhpur"],
               },
               {

@@ -5,7 +5,7 @@ import PageClient from './PageClient';
 const FAQS = [
   {
     q: "Who is the best Sangeet anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 1,100+ events hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM — consistently.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 700+ shows hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM — consistently.",
   },
   {
     q: "Why hire a professional Sangeet anchor instead of a family member?",
@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: "How do you handle technical glitches or delays?",
-    a: "A library of 50+ crowd interactions exists specifically for this. If a track doesn't play or a performer is running late, the audience sees a planned crowd moment, not a problem. In 1,100+ events, no guest has ever known when something went wrong.",
+    a: "A library of 50+ crowd interactions exists specifically for this. If a track doesn't play or a performer is running late, the audience sees a planned crowd moment, not a problem. In 700+ shows, no guest has ever known when something went wrong.",
   },
   {
     q: "Can you host a Bollywood-style Awards Night Sangeet?",

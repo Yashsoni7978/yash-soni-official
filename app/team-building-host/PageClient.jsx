@@ -47,7 +47,7 @@ const Reveal = ({ children, delay = 0, className = "" }) => (
 const STATS = [
   { val: "70+", label: "Corporate Brands", icon: Building2 },
   { val: "4.9★", label: "Client Rating", icon: Star },
-  { val: "1100+", label: "Total Events", icon: Mic2 },
+  { val: "700+", label: "Total Events", icon: Mic2 },
   { val: "1000+", label: "Max Group Size", icon: Users },
 ];
 const MODULES = [
@@ -121,7 +121,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best corporate team building host in Jaipur?",
-    a: "Anchor Yash Soni is a 4.9★ rated corporate team building host with 70+ national brands served and 1,100+ events hosted. He specialises in employee engagement, drum circles, scavenger hunts, corporate tournaments, and annual day hosting for groups of 50–1,000+ employees across Jaipur, Rajasthan, and Jaipur & Rajasthan offsites.",
+    a: "Anchor Yash Soni is a 4.9★ rated corporate team building host with 70+ national brands served and 700+ shows hosted. He specialises in employee engagement, drum circles, scavenger hunts, corporate tournaments, and annual day hosting for groups of 50–1,000+ employees across Jaipur, Rajasthan, and Jaipur & Rajasthan offsites.",
   },
   {
     q: "Why do we need a professional host for team building instead of HR?",

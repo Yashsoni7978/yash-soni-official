@@ -30,7 +30,7 @@ const localBusinessSchema = {
     "Aerocity Corporate Host",
     "ITC Maurya Event Anchor",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",
@@ -44,7 +44,7 @@ const localBusinessSchema = {
     addressLocality:   CITY,
     addressRegion:     "Delhi",
     addressCountry:    "IN",
-    postalCode:        "110001",
+    postalCode:        "70001",
   },
   geo: {
     "@type":    "GeoCoordinates",
@@ -125,7 +125,7 @@ export const metadata: Metadata = {
   title: `Best Anchor in Delhi NCR | Wedding Host & Corporate Emcee — Yash Soni`,
 
   description:
-    `Looking for the best anchor in Delhi NCR? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Elite corporate emcee & massive Chhatarpur farm wedding host. Bilingual, zero paper scripts, and VIP-trusted.`,
+    `Looking for the best anchor in Delhi NCR? Anchor Yash Soni — 4.9★ rated, 700+ shows. Elite corporate emcee & massive Chhatarpur farm wedding host. Bilingual, zero paper scripts, and VIP-trusted.`,
 
   keywords: [
     // Core identity
@@ -188,7 +188,7 @@ export const metadata: Metadata = {
     url:          FULL_URL,
     siteName:    "Anchor Yash Soni",
     title:       `Best Anchor in Delhi NCR | Wedding Host & Corporate Emcee`,
-    description: `4.9★ rated. 1,100+ events. Delhi NCR's premier unscripted anchor for massive Chhatarpur farm weddings, high-energy Punjabi Sangeets, and Aerocity VIP corporate summits.`,
+    description: `4.9★ rated. 700+ shows. Delhi NCR's premier unscripted anchor for massive Chhatarpur farm weddings, high-energy Punjabi Sangeets, and Aerocity VIP corporate summits.`,
     images: [
       {
         url:    OG_IMAGE,
@@ -204,7 +204,7 @@ export const metadata: Metadata = {
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
     title:       `Best Anchor in Delhi NCR | Corporate & Wedding Emcee`,
-    description: `Massive Farm Weddings. Aerocity Summits. Delhi NCR's most trusted elite anchor — 1,100+ events, 4.9★ rated.`,
+    description: `Massive Farm Weddings. Aerocity Summits. Delhi NCR's most trusted elite anchor — 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
 
@@ -225,7 +225,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Who is the best anchor for massive weddings in Delhi NCR?",
-    a: "Anchor Yash Soni is highly sought after for large-scale Delhi NCR events. With a 4.9★ rating across 1,100+ events, he brings the high-energy command required for massive Chhatarpur farm weddings and the sophisticated protocol needed for properties like Taj Palace and ITC Maurya."
+    a: "Anchor Yash Soni is highly sought after for large-scale Delhi NCR events. With a 4.9★ rating across 700+ shows, he brings the high-energy command required for massive Chhatarpur farm weddings and the sophisticated protocol needed for properties like Taj Palace and ITC Maurya."
   },
   {
     q: "Do you host high-energy Punjabi Sangeets in Delhi?",

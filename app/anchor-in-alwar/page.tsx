@@ -6,7 +6,7 @@ import PageClient from './PageClient';
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Alwar?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Alwar's palace and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the Delhi-NCR region." },
+  { q: "Who is the best anchor for destination weddings in Alwar?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Alwar's palace and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the Delhi-NCR region." },
   { q: "How do you handle the unique logistics of weddings in Alwar?", a: "Alwar offers a mix of grand palaces like Tijara Fort-Palace and nature-adjacent resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
   { q: "Can you host bilingual events for NRI families in Alwar?", a: "Yes. Given its proximity to Delhi, Alwar is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Alwar?", a: "Alwar is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR region. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },

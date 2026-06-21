@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -153,7 +153,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Mandawa?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Mandawa's haveli and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues in the heart of the Shekhawati region." },
+  { q: "Who is the best anchor for destination weddings in Mandawa?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Mandawa's haveli and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues in the heart of the Shekhawati region." },
   { q: "How do you handle the logistics of heritage weddings in Mandawa?", a: "Mandawa offers majestic havelis and heritage properties with unique acoustic challenges and intimate courtyard layouts. Managing event energy in these settings requires an experienced host who uses precise pacing to create a vibrant, high-energy atmosphere that complements the historic surroundings." },
   { q: "Can you host bilingual events for NRI families in Mandawa?", a: "Yes. Destination weddings in Mandawa attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Mandawa?", a: "Mandawa is a unique destination for corporate offsites and leadership retreats. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for intimate summits and galas." },
@@ -248,7 +248,7 @@ export default function PageClient() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most culturally fluent destination wedding anchor — commanding crowds with zero paper scripts across every format and venue type in the state.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most culturally fluent destination wedding anchor — commanding crowds with zero paper scripts across every format and venue type in the state.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the painted courtyards of <strong className="text-[#B5952F]">Castle Mandawa</strong> to the rooftop stages overlooking the Shekhawati desert, Yash brings a level of cultural awareness and event command that transforms extraordinary venues into extraordinary experiences.
@@ -549,7 +549,7 @@ export default function PageClient() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Mandawa",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Mandawa — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Mandawa — by any name.",
                 keywords: ["best emcee in mandawa", "best anchor in mandawa", "best host in mandawa", "best mc mandawa"],
               },
               {

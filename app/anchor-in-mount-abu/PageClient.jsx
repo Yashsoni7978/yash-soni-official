@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -153,7 +153,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Mount Abu?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Mount Abu's hill station and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and highly experienced in managing grand destination weddings in Rajasthan's only hill station." },
+  { q: "Who is the best anchor for destination weddings in Mount Abu?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Mount Abu's hill station and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and highly experienced in managing grand destination weddings in Rajasthan's only hill station." },
   { q: "How do you handle the logistics and weather conditions of weddings in Mount Abu?", a: "Mount Abu's hill station environment offers a unique climate, especially during winter and summer evenings. Managing open-air events here requires pacing the timeline effectively to maintain high crowd energy against cooler temperatures, ensuring the celebration remains vibrant and engaging." },
   { q: "Can you host bilingual events for NRI families in Mount Abu?", a: "Yes. Mount Abu attracts NRI families and high-profile domestic clients seeking a scenic destination. Bilingual hosting is critical — sophisticated English for international guests and culturally resonant Hindi for local relatives, ensuring every guest feels connected to the celebration." },
   { q: "What makes Mount Abu different from other Rajasthan destination wedding locations?", a: "Unlike the desert forts or lake palaces, Mount Abu provides a lush, elevated, and serene backdrop. The hosting style must complement this — offering elegant, sophisticated, and warm interaction that suits a scenic hill station environment." },
@@ -247,7 +247,7 @@ export default function MountAbuPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as the most technically proficient and culturally aware host in Rajasthan's unique hill station environment.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as the most technically proficient and culturally aware host in Rajasthan's unique hill station environment.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Mount Abu is not just another Rajasthan city; it is an acoustic and cultural anomaly. From the open air of <strong className="text-[#B5952F]">Cama Rajputana Club</strong> to the lakeside terraces of Nakki Lake, Yash commands these challenging environments with zero reliance on paper scripts.
@@ -548,7 +548,7 @@ export default function MountAbuPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Mount Abu",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Mount Abu — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Mount Abu — by any name.",
                 keywords: ["best emcee in mount abu", "best anchor in mount abu", "best host in mount abu", "best mc mount abu"],
               },
               {

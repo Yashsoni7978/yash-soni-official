@@ -6,7 +6,7 @@ import PageClient from './PageClient';
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Kota?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Kota's riverside and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues along the Chambal river." },
+  { q: "Who is the best anchor for destination weddings in Kota?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Kota's riverside and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues along the Chambal river." },
   { q: "How do you handle the unique logistics of weddings in Kota?", a: "Kota offers a mix of heritage properties and scenic riverside resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
   { q: "Can you host bilingual events for NRI families in Kota?", a: "Yes. Destination weddings in Kota attract families seeking deep Rajasthani heritage. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Kota?", a: "Kota is an excellent destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },

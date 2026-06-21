@@ -5,7 +5,7 @@ import PageClient from './PageClient';
 const FAQS = [
   {
     q: "Who is the best celebrity event host in Jaipur?",
-    a: "Anchor Yash Soni is one of Jaipur's most reviewed public event hosts with a 4.9★ rating across 50+ verified reviews. He has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, corporate award galas at JECC Sitapura, and music events across Rajasthan. His experience spans 1,100+ events including 70+ national brand formats.",
+    a: "Anchor Yash Soni is one of Jaipur's most reviewed public event hosts with a 4.9★ rating across 50+ verified reviews. He has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, corporate award galas at JECC Sitapura, and music events across Rajasthan. His experience spans 700+ shows including 70+ national brand formats.",
   },
   {
     q: "Can you manage a crowd of 5,000+ at a public event?",

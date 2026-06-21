@@ -81,7 +81,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Alwar-specific
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -171,7 +171,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Alwar?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Alwar's palace and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the Delhi-NCR region." },
+  { q: "Who is the best anchor for destination weddings in Alwar?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Alwar's palace and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the Delhi-NCR region." },
   { q: "How do you handle the unique logistics of weddings in Alwar?", a: "Alwar offers a mix of grand palaces like Tijara Fort-Palace and nature-adjacent resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
   { q: "Can you host bilingual events for NRI families in Alwar?", a: "Yes. Given its proximity to Delhi, Alwar is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Alwar?", a: "Alwar is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR region. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
@@ -271,7 +271,7 @@ export default function PageClient() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the dramatic stepped terraces of <strong className="text-[#B5952F]">Neemrana Fort Palace</strong> to the serene lakeside gardens of Siliserh, and from the tiger-territory tented lounges of Sariska to the hilltop heritage havelis of Alwar — every corner of this circuit has been hosted with the same absolute command.
@@ -573,7 +573,7 @@ export default function PageClient() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Alwar",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Alwar — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Alwar — by any name.",
                 keywords: ["best emcee in alwar", "best anchor in alwar", "best host in alwar", "best mc alwar"],
               },
               {

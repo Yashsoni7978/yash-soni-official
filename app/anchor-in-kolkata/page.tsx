@@ -31,7 +31,7 @@ const localBusinessSchema = {
     "Luxury Sangeet Anchor East India",
     "Elite Wedding Host Bengal",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -117,7 +117,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Kolkata Marwari Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 4+ years and 1,100+ events. Specialist in Kolkata's high-net-worth Marwari weddings at ITC Royal Bengal and corporate summits in Rajarhat. Impeccable bilingual English/Hindi execution.",
+  description: "Professional event anchor and emcee with 4+ years and 700+ shows. Specialist in Kolkata's high-net-worth Marwari weddings at ITC Royal Bengal and corporate summits in Rajarhat. Impeccable bilingual English/Hindi execution.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -157,7 +157,7 @@ const webPageSchema = {
   url: FULL_URL,
   name: `Best Anchor in Kolkata | Luxury Wedding & ITC Royal Bengal Host — Yash Soni`,
   headline: `Kolkata's Most Trusted Event Anchor for ITC Royal Bengal, Elite Marwari Weddings & Corporate Summits`,
-  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier anchor for Kolkata luxury weddings. Specialist in Marwari heritage events and Rajarhat corporate summits. Bilingual English/Hindi. Zero scripts.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Kolkata luxury weddings. Specialist in Marwari heritage events and Rajarhat corporate summits. Bilingual English/Hindi. Zero scripts.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, West Bengal` },
@@ -169,7 +169,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Kolkata | Premium Elite Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Kolkata? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for ITC Royal Bengal, Taj Bengal, and Rajarhat tech/corporate summits. Elite bilingual English/Hindi unscripted hosting.`,
+  description: `Looking for the best anchor in Kolkata? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for ITC Royal Bengal, Taj Bengal, and Rajarhat tech/corporate summits. Elite bilingual English/Hindi unscripted hosting.`,
   keywords: [
     "anchor in kolkata",
     "best anchor in kolkata",
@@ -198,7 +198,7 @@ export const metadata: Metadata = {
     url: FULL_URL,
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Kolkata | Elite Marwari Wedding & Corporate Host`,
-    description: `4.9★ rated. 1,100+ events. Kolkata's most trusted anchor for ITC Royal Bengal luxury weddings and Rajarhat corporate summits. Flawless bilingual English/Hindi execution.`,
+    description: `4.9★ rated. 700+ shows. Kolkata's most trusted anchor for ITC Royal Bengal luxury weddings and Rajarhat corporate summits. Flawless bilingual English/Hindi execution.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Kolkata — Anchor Yash Soni at ITC Royal Bengal` }],
   },
   twitter: {
@@ -206,7 +206,7 @@ export const metadata: Metadata = {
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
     title: `Best Anchor in Kolkata | Anchor Yash Soni — 4.9★`,
-    description: `ITC Royal Bengal. Taj Bengal. Rajarhat Summits. Kolkata's premier bilingual event anchor. 1,100+ events. Zero scripts.`,
+    description: `ITC Royal Bengal. Taj Bengal. Rajarhat Summits. Kolkata's premier bilingual event anchor. 700+ shows. Zero scripts.`,
     images: [OG_IMAGE],
   },
   other: {

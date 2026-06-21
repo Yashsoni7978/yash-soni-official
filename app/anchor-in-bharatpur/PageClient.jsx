@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -153,7 +153,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Bharatpur?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Bharatpur's heritage and wildlife resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the bird sanctuary." },
+  { q: "Who is the best anchor for destination weddings in Bharatpur?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Bharatpur's heritage and wildlife resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the bird sanctuary." },
   { q: "How do you handle the unique logistics of weddings in Bharatpur?", a: "Bharatpur offers a mix of heritage properties and nature-adjacent resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
   { q: "Can you host bilingual events for NRI families in Bharatpur?", a: "Yes. Given its proximity to Delhi and Agra, Bharatpur is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Bharatpur?", a: "Bharatpur is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR and Agra regions. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
@@ -247,7 +247,7 @@ export default function BharatpurPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor — simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor — simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Bharatpur occupies a unique strategic position — the <strong className="text-[#B5952F]">Lohagarh Fort</strong>, the only unconquered fort in India, anchors a heritage circuit that connects seamlessly to Agra, Jaipur, and Delhi NCR. The guest lists at Bharatpur events are among the most diverse in Rajasthan's destination circuit.
@@ -548,7 +548,7 @@ export default function BharatpurPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Bharatpur",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Bharatpur — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Bharatpur — by any name.",
                 keywords: ["best emcee in bharatpur", "best anchor in bharatpur", "best host in bharatpur", "best mc bharatpur"],
               },
               {

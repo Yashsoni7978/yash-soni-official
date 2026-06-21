@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -153,7 +153,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Kota?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Kota's riverside and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues along the Chambal river." },
+  { q: "Who is the best anchor for destination weddings in Kota?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Kota's riverside and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues along the Chambal river." },
   { q: "How do you handle the unique logistics of weddings in Kota?", a: "Kota offers a mix of heritage properties and scenic riverside resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
   { q: "Can you host bilingual events for NRI families in Kota?", a: "Yes. Destination weddings in Kota attract families seeking deep Rajasthani heritage. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Kota?", a: "Kota is an excellent destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
@@ -248,7 +248,7 @@ export default function PageClient() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the undisputed authority for high-stakes anchoring in Kota's complex event ecosystem.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> is the undisputed authority for high-stakes anchoring in Kota's complex event ecosystem.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Kota operates on two distinct but equally demanding peaks: the supreme royal heritage of <strong className="text-[#B5952F]">Umed Bhawan Palace</strong> and the hyper-intellectual environment of the city’s massive education and corporate sector. Yash commands both effortlessly.
@@ -549,7 +549,7 @@ export default function PageClient() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Kota",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Kota — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Kota — by any name.",
                 keywords: ["best emcee in kota", "best anchor in kota", "best host in kota", "best mc kota"],
               },
               {

@@ -32,7 +32,7 @@ const localBusinessSchema = {
     "Jaisalmer Fort Royal Wedding Anchor",
     "Luxury Desert Camp Event Emcee",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -120,7 +120,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Jaisalmer NRI Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 4+ years and 1,100+ events across Rajasthan. Specialist in luxury Jaisalmer destination weddings, open-desert acoustic command, and bilingual English/Hindi premium family hosting.",
+  description: "Professional event anchor and emcee with 4+ years and 700+ shows across Rajasthan. Specialist in luxury Jaisalmer destination weddings, open-desert acoustic command, and bilingual English/Hindi premium family hosting.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -163,7 +163,7 @@ const webPageSchema = {
   url: FULL_URL,
   name: `Best Anchor in Jaisalmer | Suryagarh & Desert Wedding Host — Yash Soni`,
   headline: `India's Most Trusted Event Anchor for Jaisalmer, Suryagarh & Golden City Sand Dune Celebrations`,
-  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier anchor for Jaisalmer destination weddings at Suryagarh, Marriott & Sam dunes. NRI/HNI bilingual expert. Open-desert acoustic mastery. Zero scripts.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Jaisalmer destination weddings at Suryagarh, Marriott & Sam dunes. NRI/HNI bilingual expert. Open-desert acoustic mastery. Zero scripts.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Thar Desert, Rajasthan` },
@@ -175,7 +175,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Jaisalmer | Desert & Heritage Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Jaisalmer? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for Suryagarh, Marriott & Sam dunes luxury destination weddings. HNI/NRI bilingual specialist, open-air desert acoustic command.`,
+  description: `Looking for the best anchor in Jaisalmer? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for Suryagarh, Marriott & Sam dunes luxury destination weddings. HNI/NRI bilingual specialist, open-air desert acoustic command.`,
   keywords: [
     "anchor in jaisalmer",
     "best anchor in jaisalmer",
@@ -206,7 +206,7 @@ export const metadata: Metadata = {
     url: FULL_URL,
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Jaisalmer | Luxury Desert Wedding Host`,
-    description: `4.9★ rated. 1,100+ events. Jaisalmer's most trusted anchor for Suryagarh, Marriott & luxury desert camps. NRI/HNI bilingual expert. Open-air desert acoustic command.`,
+    description: `4.9★ rated. 700+ shows. Jaisalmer's most trusted anchor for Suryagarh, Marriott & luxury desert camps. NRI/HNI bilingual expert. Open-air desert acoustic command.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Jaisalmer — Anchor Yash Soni at the Golden Fort and Thar Desert` }],
   },
   twitter: {
@@ -214,7 +214,7 @@ export const metadata: Metadata = {
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
     title: `Best Anchor in Jaisalmer | Anchor Yash Soni — 4.9★`,
-    description: `Suryagarh. Marriott. Sam Dunes. Western Rajasthan's most trusted luxury desert weapon. 1,100+ events. Zero scripts.`,
+    description: `Suryagarh. Marriott. Sam Dunes. Western Rajasthan's most trusted luxury desert weapon. 700+ shows. Zero scripts.`,
     images: [OG_IMAGE],
   },
   other: {
@@ -239,7 +239,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Who is the best anchor for luxury weddings in Jaisalmer?",
-    a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in the ultra-luxury and NRI destination wedding demographic in Jaisalmer — with deep experience at Suryagarh, Marriott Jaisalmer, The Serai, and premium desert camp venues. He delivers the flawless, bilingual, and sophisticated hosting required for Jaisalmer's discerning clientele.",
+    a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in the ultra-luxury and NRI destination wedding demographic in Jaisalmer — with deep experience at Suryagarh, Marriott Jaisalmer, The Serai, and premium desert camp venues. He delivers the flawless, bilingual, and sophisticated hosting required for Jaisalmer's discerning clientele.",
   },
   {
     q: "How do you handle the acoustics of open desert events at Sam Sand Dunes?",

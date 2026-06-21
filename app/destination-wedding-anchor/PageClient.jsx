@@ -65,7 +65,7 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
 // DATA
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100+", label: "Events Hosted", icon: Mic2 },
+  { val: "700+", label: "Shows Hosted", icon: Mic2 },
   { val: "4.9★", label: "Client Rating", icon: Star },
   { val: "3 Days", label: "Full Coverage", icon: CalendarCheck },
   { val: "Pan-India", label: "& International", icon: Globe },
@@ -155,7 +155,7 @@ const WHY_DIFFERENT = [
   },
   {
     title: "Crisis at Scale",
-    desc: "A 3-day destination wedding is three separate shows. Power cuts, weather changes, delayed arrivals — all handled invisible to 400+ guests across multiple venues. In 1,100+ events, not once has a guest seen a problem.",
+    desc: "A 3-day destination wedding is three separate shows. Power cuts, weather changes, delayed arrivals — all handled invisible to 400+ guests across multiple venues. In 700+ shows, not once has a guest seen a problem.",
   },
 ];
 const TESTIMONIALS = [
@@ -181,7 +181,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the most reviewed destination wedding anchor in India?",
-    a: "Anchor Yash Soni is a 4.9★ rated destination wedding specialist with 1,100+ events hosted across India and international locations. He has hosted destination weddings at Taj Lake Palace and Leela Palace in Udaipur, Umaid Bhawan in Jodhpur, Suryagarh in Jaisalmer, and beach properties in Goa. His bilingual Hindi/English fluency and NRI protocol expertise make him the top choice for families flying in from the UK, USA, Canada, and Gulf.",
+    a: "Anchor Yash Soni is a 4.9★ rated destination wedding specialist with 700+ shows hosted across India and international locations. He has hosted destination weddings at Taj Lake Palace and Leela Palace in Udaipur, Umaid Bhawan in Jodhpur, Suryagarh in Jaisalmer, and beach properties in Goa. His bilingual Hindi/English fluency and NRI protocol expertise make him the top choice for families flying in from the UK, USA, Canada, and Gulf.",
   },
   {
     q: "What does the destination wedding package cover?",
@@ -393,7 +393,7 @@ export default function DestinationAnchor() {
               Destination weddings are a completely different discipline from single-day events. Guests are tired from travel, two families are meeting for the first time, the itinerary runs 72 hours, and the venues are unfamiliar to everyone — including most vendors.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has hosted destination weddings at Taj Lake Palace and Leela Palace in Udaipur, Umaid Bhawan and Mehrangarh Fort in Jodhpur, Suryagarh in Jaisalmer, beach properties in Goa, and international venues across Dubai and Southeast Asia.
+              With <strong className="text-white">700+ shows hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has hosted destination weddings at Taj Lake Palace and Leela Palace in Udaipur, Umaid Bhawan and Mehrangarh Fort in Jodhpur, Suryagarh in Jaisalmer, beach properties in Goa, and international venues across Dubai and Southeast Asia.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Bilingual Hindi/English. NRI protocol fluent. Every Rajasthani tradition respected and every international guest included. This is the complete destination wedding experience.

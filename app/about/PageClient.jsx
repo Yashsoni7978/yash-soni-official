@@ -28,7 +28,7 @@ const WA =
 
 // Stats: values from homepage STATS + lib/schema/serviceSchema.js
 const STATS = [
-  { value: "700+", label: "Events Anchored", sub: "Across Jaipur & Rajasthan", variant: "gold" },
+  { value: "700+", label: "Shows Hosted", sub: "Across Jaipur & Rajasthan", variant: "gold" },
   { value: "10,000+", label: "Largest Crowd", sub: "Commanded live, unscripted", variant: "green" },
   { value: "4.9★", label: "Client Rating", sub: "Across 40+ verified reviews", variant: "hunter" },
   { value: "4+", label: "Years on Stage", sub: "Zero paper scripts", variant: "sage" },

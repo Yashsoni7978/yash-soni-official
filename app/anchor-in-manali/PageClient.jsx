@@ -92,7 +92,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Jaipur & Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -335,7 +335,7 @@ export default function ManaliPage() {
                 Alpine Scale.<br /><G>Punjabi Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury destination hosting in the Himalayas.
+                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury destination hosting in the Himalayas.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Manali operates at the zenith of high-altitude exclusivity. You are dealing with highly scrutinized venues like Span Resort where <strong className="text-[#B5952F]">the roar of the Beas River, freezing weather limits, and top-tier Chandigarh crowds</strong> require aggressive execution. Yash steps into these sprawling mountain environments and manufactures raw, explosive dancing energy entirely organically, without letting the cold dictate the timeline.

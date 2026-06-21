@@ -27,7 +27,7 @@ const localBusinessSchema = {
     "Mehrangarh Fort Wedding Host",
     "RAAS Jodhpur Event Host",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",
@@ -83,7 +83,7 @@ const personSchema = {
   name:          "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash"],
   jobTitle:      "Professional Event Anchor & Emcee",
-  description:   `Yash Soni is a professional event anchor with 4+ years of experience in royal palace weddings and corporate events. He has hosted 1,100+ events including luxury destination weddings at Umaid Bhawan Palace and Mehrangarh Fort in Jodhpur.`,
+  description:   `Yash Soni is a professional event anchor with 4+ years of experience in royal palace weddings and corporate events. He has hosted 700+ shows including luxury destination weddings at Umaid Bhawan Palace and Mehrangarh Fort in Jodhpur.`,
   url:           `https://${DOMAIN}`,
   image:         `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone:     "+917737877978",
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host — Anchor Yash Soni`,
   description:
-    `Looking for the best anchor in Jodhpur? Anchor Yash Soni — 4.9★ rated, 1,100+ events, 4+ years. Expert for royal weddings at Umaid Bhawan Palace, Mehrangarh Fort & RAAS Jodhpur. Bilingual, unscripted, NRI & Rajputana protocol experienced.`,
+    `Looking for the best anchor in Jodhpur? Anchor Yash Soni — 4.9★ rated, 700+ shows, 4+ years. Expert for royal weddings at Umaid Bhawan Palace, Mehrangarh Fort & RAAS Jodhpur. Bilingual, unscripted, NRI & Rajputana protocol experienced.`,
   keywords: [
     // Core identity
     "anchor in jodhpur",
@@ -175,7 +175,7 @@ export const metadata: Metadata = {
     url:          FULL_URL,
     siteName:    "Anchor Yash Soni",
     title:       `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host — Anchor Yash Soni`,
-    description: `4.9★ rated. 1,100+ events. Jodhpur's most trusted anchor for Umaid Bhawan Palace weddings, Mehrangarh Fort Sangeets & NRI destination events. Bilingual, unscripted, royal protocol aware.`,
+    description: `4.9★ rated. 700+ shows. Jodhpur's most trusted anchor for Umaid Bhawan Palace weddings, Mehrangarh Fort Sangeets & NRI destination events. Bilingual, unscripted, royal protocol aware.`,
     images: [
       {
         url:    OG_IMAGE,
@@ -190,7 +190,7 @@ export const metadata: Metadata = {
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
     title:       `Best Anchor in Jodhpur | Anchor Yash Soni — 4.9★`,
-    description: `Umaid Bhawan Palace. Mehrangarh Fort. RAAS Jodhpur. The Blue City's most trusted destination wedding anchor — 1,100+ events, 4.9★ rated.`,
+    description: `Umaid Bhawan Palace. Mehrangarh Fort. RAAS Jodhpur. The Blue City's most trusted destination wedding anchor — 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
   other: {
@@ -209,7 +209,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Who is the best anchor for destination weddings in Jodhpur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 1,100+ events anchored across Rajasthan, specialising in Jodhpur's fort and palace wedding circuit — Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, Ajit Bhawan, Bal Samand Lake Palace, and Vivanta. Bilingual Hindi/English, unscripted, experienced in royal family protocols and NRI destination weddings.",
+    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Jodhpur's fort and palace wedding circuit — Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, Ajit Bhawan, Bal Samand Lake Palace, and Vivanta. Bilingual Hindi/English, unscripted, experienced in royal family protocols and NRI destination weddings.",
   },
   {
     q: "Have you hosted weddings at Umaid Bhawan Palace?",
@@ -237,7 +237,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash different from local Jodhpur anchors?",
-    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 1,100+ events, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
+    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 700+ shows, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
   },
   {
     q: "Who is the best emcee in Jodhpur for destination weddings?",

@@ -6,7 +6,7 @@ import PageClient from './PageClient';
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Bikaner?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Bikaner's heritage and palace wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues set against the backdrop of the royal desert city." },
+  { q: "Who is the best anchor for destination weddings in Bikaner?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Bikaner's heritage and palace wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues set against the backdrop of the royal desert city." },
   { q: "How do you handle the logistics of heritage weddings in Bikaner?", a: "Bikaner offers majestic heritage properties like Narendra Bhawan and Laxmi Niwas Palace with unique acoustic challenges and sprawling outdoor layouts. Managing event energy in these settings requires an experienced host who uses precise pacing to create an intimate, high-energy atmosphere despite the massive surroundings." },
   { q: "Can you host bilingual events for NRI families in Bikaner?", a: "Yes. Destination weddings in Bikaner attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Bikaner?", a: "Bikaner is a majestic destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },

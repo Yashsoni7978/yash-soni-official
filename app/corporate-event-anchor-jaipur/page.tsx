@@ -5,7 +5,7 @@ import PageClient from "./PageClient";
 const FAQS = [
   {
     q: "Who is the best corporate event anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated corporate event anchor with 1,100+ events hosted and 70+ national brands served. He specialises in award nights, conferences, product launches, gala dinners, dealer meets, and annual day celebrations at venues including JECC Sitapura, Birla Auditorium, Marriott Jaipur, Fairmont, and corporate campuses across Jaipur.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated corporate event anchor with 700+ shows hosted and 70+ national brands served. He specialises in award nights, conferences, product launches, gala dinners, dealer meets, and annual day celebrations at venues including JECC Sitapura, Birla Auditorium, Marriott Jaipur, Fairmont, and corporate campuses across Jaipur.",
   },
   {
     q: "Do you provide a GST invoice for corporate bookings?",

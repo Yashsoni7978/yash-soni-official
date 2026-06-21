@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "Across India", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -155,7 +155,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best anchor for luxury and high-profile events in Hyderabad?",
-    a: "Anchor Yash Soni is highly sought after across Hyderabad's elite tier. With 1,100+ events and a perfectly calibrated bilingual execution, he provides the deep cultural respect required for Taj Falaknuma weddings and the intellectual sharpness necessary for HITEC City summits."
+    a: "Anchor Yash Soni is highly sought after across Hyderabad's elite tier. With 700+ shows and a perfectly calibrated bilingual execution, he provides the deep cultural respect required for Taj Falaknuma weddings and the intellectual sharpness necessary for HITEC City summits."
   },
   {
     q: "Are you familiar with the protocol required for properties like Taj Falaknuma Palace?",
@@ -308,7 +308,7 @@ export default function HyderabadPage() {
                 Nizam Protocol.<br /><G>Megascale Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of elite hosting in Hyderabad.
+                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of elite hosting in Hyderabad.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Hyderabad presents the most polarizing venue challenges in India. You can be hosting 150 global VIPs in the hyper-controlled royal environment of <strong className="text-[#B5952F]">Taj Falaknuma Palace</strong> one night, and commanding 2,000 uncontrolled guests across the sprawling cinematic sets of Ramoji Film City the next. Yash dominates both extremes.

@@ -30,7 +30,7 @@ const localBusinessSchema = {
     "St Regis Mumbai Wedding Host",
     "Bandra Kurla Complex Event Anchor",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",
@@ -124,7 +124,7 @@ export const metadata: Metadata = {
   title: `Best Anchor in Mumbai | Corporate Emcee & Wedding Host — Yash Soni`,
 
   description:
-    `Looking for the best anchor in Mumbai? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Elite corporate emcee for BKC & luxury wedding host for Taj Mahal Palace & St Regis. Bilingual, zero scripts, and VIP-trusted.`,
+    `Looking for the best anchor in Mumbai? Anchor Yash Soni — 4.9★ rated, 700+ shows. Elite corporate emcee for BKC & luxury wedding host for Taj Mahal Palace & St Regis. Bilingual, zero scripts, and VIP-trusted.`,
 
   keywords: [
     // Core identity
@@ -187,7 +187,7 @@ export const metadata: Metadata = {
     url:          FULL_URL,
     siteName:    "Anchor Yash Soni",
     title:       `Best Anchor in Mumbai | Corporate Emcee & Wedding Host`,
-    description: `4.9★ rated. 1,100+ events. Mumbai's premier unscripted anchor for VIP corporate summits in BKC and luxury sea-facing weddings at Taj Mahal Palace and The St. Regis.`,
+    description: `4.9★ rated. 700+ shows. Mumbai's premier unscripted anchor for VIP corporate summits in BKC and luxury sea-facing weddings at Taj Mahal Palace and The St. Regis.`,
     images: [
       {
         url:    OG_IMAGE,
@@ -203,7 +203,7 @@ export const metadata: Metadata = {
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
     title:       `Best Anchor in Mumbai | Corporate & Wedding Emcee`,
-    description: `Taj Mahal Palace. BKC Summits. The St. Regis. Mumbai's most trusted elite anchor — 1,100+ events, 4.9★ rated.`,
+    description: `Taj Mahal Palace. BKC Summits. The St. Regis. Mumbai's most trusted elite anchor — 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
 

@@ -33,7 +33,7 @@ const localBusinessSchema = {
     "Bharatpur Jat Heritage Event Host",
     "Agra Jaipur Corridor Anchor",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -123,7 +123,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Yash Soni Bharatpur Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 4+ years and 1,100+ events across Rajasthan, India. Specialist in fort heritage weddings, Braj cultural events, Golden Triangle multi-city guest management, and bilingual English/Hindi destination wedding hosting.",
+  description: "Professional event anchor and emcee with 4+ years and 700+ shows across Rajasthan, India. Specialist in fort heritage weddings, Braj cultural events, Golden Triangle multi-city guest management, and bilingual English/Hindi destination wedding hosting.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -166,7 +166,7 @@ const webPageSchema = {
   url: FULL_URL,
   name: `Best Anchor in Bharatpur | Lohagarh Fort & Golden Triangle Wedding Host — Yash Soni`,
   headline: `India's Most Trusted Event Anchor for Bharatpur — Lohagarh Fort, Laxmi Vilas Palace & the Golden Triangle Heritage Circuit`,
-  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier anchor for Bharatpur's Lohagarh Fort weddings & Laxmi Vilas Palace Sangeets. Braj cultural fluency. Delhi-Agra-Jaipur guest management. Bilingual, unscripted.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Bharatpur's Lohagarh Fort weddings & Laxmi Vilas Palace Sangeets. Braj cultural fluency. Delhi-Agra-Jaipur guest management. Bilingual, unscripted.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Eastern Rajasthan` },
@@ -178,7 +178,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Bharatpur | Lohagarh Fort Heritage Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Bharatpur? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for Lohagarh Fort weddings & Laxmi Vilas Palace Sangeets. Braj cultural fluency, Delhi-Agra-Jaipur guest management, bilingual, unscripted.`,
+  description: `Looking for the best anchor in Bharatpur? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for Lohagarh Fort weddings & Laxmi Vilas Palace Sangeets. Braj cultural fluency, Delhi-Agra-Jaipur guest management, bilingual, unscripted.`,
   keywords: [
     "anchor in bharatpur",
     "best anchor in bharatpur",
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     url: FULL_URL,
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Bharatpur | Lohagarh Fort Heritage Wedding Host`,
-    description: `4.9★ rated. 1,100+ events. Bharatpur's most trusted anchor — Lohagarh Fort (India's only unconquered fort), Laxmi Vilas Palace & Keoladeo. Braj cultural fluency. Bilingual, unscripted.`,
+    description: `4.9★ rated. 700+ shows. Bharatpur's most trusted anchor — Lohagarh Fort (India's only unconquered fort), Laxmi Vilas Palace & Keoladeo. Braj cultural fluency. Bilingual, unscripted.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Bharatpur — Anchor Yash Soni at Lohagarh Fort, Golden Triangle` }],
   },
   twitter: {
@@ -243,7 +243,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Bharatpur?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Bharatpur's heritage and wildlife resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the bird sanctuary." },
+  { q: "Who is the best anchor for destination weddings in Bharatpur?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Bharatpur's heritage and wildlife resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium venues near the bird sanctuary." },
   { q: "How do you handle the unique logistics of weddings in Bharatpur?", a: "Bharatpur offers a mix of heritage properties and nature-adjacent resorts. Managing events here requires a host who can seamlessly transition between the regal, traditional tone of a palace setting and the vibrant, high-energy atmosphere of an open-air resort Sangeet." },
   { q: "Can you host bilingual events for NRI families in Bharatpur?", a: "Yes. Given its proximity to Delhi and Agra, Bharatpur is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Bharatpur?", a: "Bharatpur is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR and Agra regions. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },

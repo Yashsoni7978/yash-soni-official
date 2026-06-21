@@ -76,7 +76,7 @@ const FAQItem = ({ q, a, id }) => {
   );
 };
 const STATS = [
-  { val:"1100", suffix:"+", label:"Events Anchored",    sub:"Anchoring & production",  icon:Mic2     },
+  { val:"700", suffix:"+", label:"Shows Hosted",    sub:"Anchoring & production",  icon:Mic2     },
   { val:"70",   suffix:"+", label:"Corporate Brands",   sub:"National & international",icon:Briefcase},
   { val:"4.9",  suffix:"★", label:"Client Rating",      sub:"50+ verified reviews",   icon:Star     },
   { val:"10",   suffix:"K+",label:"Largest Crowd",      sub:"Commanded live",          icon:Users    },

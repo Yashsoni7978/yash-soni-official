@@ -69,7 +69,7 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
 // ─────────────────────────────────────────────
 // Fixed: real credibility numbers, not vague qualifiers
 const STATS = [
-  { val: "1100+", label: "Events Hosted", icon: Mic2, color: "text-emerald-400" },
+  { val: "700+", label: "Shows Hosted", icon: Mic2, color: "text-emerald-400" },
   { val: "4.9★", label: "Client Rating", icon: Star, color: "text-[#B5952F]" },
   { val: "3-4 hrs", label: "Zero Boring Moments", icon: Music, color: "text-emerald-400" },
   { val: "50+", label: "Verified Reviews", icon: Trophy, color: "text-[#B5952F]" },
@@ -159,7 +159,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best Mehendi anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Mehendi host with 1,100+ events hosted. He specialises in hands-free interactive Mehendi games, Ladies Sangeet hosting, musical trivia, and combined Mehendi-Sangeet events. His bilingual Hindi/English fluency makes him the top choice for both local Jaipur families and NRI weddings.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Mehendi host with 700+ shows hosted. He specialises in hands-free interactive Mehendi games, Ladies Sangeet hosting, musical trivia, and combined Mehendi-Sangeet events. His bilingual Hindi/English fluency makes him the top choice for both local Jaipur families and NRI weddings.",
   },
   {
     q: "Why hire a specialised Mehendi anchor in Jaipur?",
@@ -171,7 +171,7 @@ const FAQS = [
   },
   {
     q: "Do you host Ladies Sangeet alongside the Mehendi ceremony?",
-    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth — doing both in the same evening without losing either group. That transition is a skill that takes 1,100+ events to perfect.",
+    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth — doing both in the same evening without losing either group. That transition is a skill that takes 700+ shows to perfect.",
   },
   {
     q: "Can you handle the groom's entry at a combined Mehendi event?",
@@ -334,7 +334,7 @@ export default function MehendiAnchor() {
               No dull waiting times. No awkward silences. Hands-free musical games, traditional warmth, and zero boring moments — across all Jaipur zones and beyond.
             </p>
             <p className="text-zinc-500 text-sm mb-8">
-              1,100+ events &nbsp;·&nbsp; Ladies Sangeet specialist &nbsp;·&nbsp; Bilingual Hindi/English
+              700+ shows &nbsp;·&nbsp; Ladies Sangeet specialist &nbsp;·&nbsp; Bilingual Hindi/English
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
@@ -383,7 +383,7 @@ export default function MehendiAnchor() {
               The Mehendi is the most colourful, relaxed event of the entire wedding week. It's where families truly bond before the heavy ceremonies begin. But 3–4 hours of henna application with no hosting structure turns into 3–4 hours of guests on their phones.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has mastered the Mehendi format across every Jaipur zone — farmhouse weddings on Ajmer Road with 500+ guests, palace Mehendi events in Kukas and Amer Road for NRI families, and intimate family ceremonies in Mansarovar and Vaishali Nagar.
+              With <strong className="text-white">700+ shows hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has mastered the Mehendi format across every Jaipur zone — farmhouse weddings on Ajmer Road with 500+ guests, palace Mehendi events in Kukas and Amer Road for NRI families, and intimate family ceremonies in Mansarovar and Vaishali Nagar.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Hands-free musical games. Couple trivia roasts. Dholak sessions that bridge elders and youth. And a dance floor that opens before the henna even dries.
@@ -491,7 +491,7 @@ export default function MehendiAnchor() {
               {/* Overlay card */}
               <div className="absolute bottom-5 left-5 right-5 /70 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-4">
                 <p className="text-emerald-400 text-[10px] uppercase tracking-widest font-bold mb-1">4.9★ Mehendi Anchor</p>
-                <p className="text-white text-xs">Hands-free games · Zero boring moments · 1,100+ events</p>
+                <p className="text-white text-xs">Hands-free games · Zero boring moments · 700+ shows</p>
               </div>
             </div>
           </Reveal>

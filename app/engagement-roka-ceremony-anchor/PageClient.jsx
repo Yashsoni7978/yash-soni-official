@@ -76,7 +76,7 @@ const FAQItem = ({ q, a, id }) => {
   );
 };
 const STATS = [
-  { val:"1100", suffix:"+", label:"Events Anchored",      sub:"across Jaipur & Rajasthan",           icon:Mic2   },
+  { val:"700", suffix:"+", label:"Shows Hosted",      sub:"across Jaipur & Rajasthan",           icon:Mic2   },
   { val:"300",  suffix:"+", label:"Pre-Wedding Events",   sub:"Roka · Ring · Sagai",    icon:Heart  },
   { val:"4.9",  suffix:"★", label:"Client Rating",        sub:"50+ verified reviews",  icon:Star   },
   { val:"2",    suffix:"+", label:"Families United",      sub:"Every engagement",       icon:Users  },
@@ -212,7 +212,7 @@ export default function EngagementRokaAnchor() {
                 <p className="text-zinc-300 text-base md:text-lg font-light leading-relaxed max-w-lg mb-2">
                   Roka · Ring Ceremony · Sagai · Engagement — custom scripted, custom games, bilingual Hindi/English. Both families leave feeling like one.
                 </p>
-                <p className="text-zinc-500 text-sm">Jaipur · Rajasthan · 4.9★ · 1100+ events</p>
+                <p className="text-zinc-500 text-sm">Jaipur · Rajasthan · 4.9★ · 700+ shows</p>
               </div>
               <div className="flex gap-3 flex-wrap shrink-0">
                 <Link href={WA} target="_blank" rel="noopener noreferrer">
@@ -454,7 +454,7 @@ export default function EngagementRokaAnchor() {
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_,r) => (
             <div key={r} className="flex gap-12 shrink-0">
-              {["Roka Ceremony","Ring Exchange","Sagai","Engagement Games","NRI Families","Bilingual Host","Custom Scripts","4.9★ Rating","Jaipur","Rajasthan","1100+ Events"].map((t,i) => (
+              {["Roka Ceremony","Ring Exchange","Sagai","Engagement Games","NRI Families","Bilingual Host","Custom Scripts","4.9★ Rating","Jaipur","Rajasthan","700+ Shows"].map((t,i) => (
                 <span key={i} className="flex items-center gap-3 text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
                   <span className="w-1 h-1 rounded-full bg-[#D4AF37] inline-block"/>
                   {t}

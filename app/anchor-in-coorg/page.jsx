@@ -92,7 +92,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Jaipur & Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -337,7 +337,7 @@ export default function CoorgPage() {
                 Rainforest Scale.<br /><G>Bangalore Elite.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury eco-estate destination hosting across the Western Ghats.
+                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury eco-estate destination hosting across the Western Ghats.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Coorg operates as an exclusive sanctuary away from standard chaotic wedding hubs. You are dealing with vast rainforest properties like Taj Madikeri where <strong className="text-[#B5952F]">sweeping architectural scale and Bangalore’s highest tech-elite demographics</strong> requires flawless execution. Yash steps into these sprawling, estate architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.

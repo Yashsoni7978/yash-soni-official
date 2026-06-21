@@ -63,7 +63,7 @@ function Counter({ target, suffix = "" }) {
 
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "Across India", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -155,7 +155,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best anchor for luxury and corporate events in Bangalore?",
-    a: "Anchor Yash Soni is highly sought after in Bangalore's elite circuit. With 1,100+ events and a flawless bilingual (English/Hindi) capability, he provides the intellectual polish required for Whitefield corporate summits and the deep cultural respect needed for Taj West End or Palace Grounds luxury weddings."
+    a: "Anchor Yash Soni is highly sought after in Bangalore's elite circuit. With 700+ shows and a flawless bilingual (English/Hindi) capability, he provides the intellectual polish required for Whitefield corporate summits and the deep cultural respect needed for Taj West End or Palace Grounds luxury weddings."
   },
   {
     q: "We are an IT firm hosting a major summit in Bangalore. Do you use scripts?",
@@ -312,7 +312,7 @@ export default function BangalorePage() {
                 Urban Polish.<br /><G>Megascale Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled natively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of corporate and luxury hosting in Bengaluru.
+                With 4+ years on stage and 700+ shows handled natively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of corporate and luxury hosting in Bengaluru.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Bengaluru is a city of distinct power centers: from the hyper-intellectual tech parks in Whitefield to the deeply heritage-driven ballrooms of <strong className="text-[#B5952F]">The Leela Palace</strong>. Yash operates seamlessly across these lines. His English articulation is precision-engineered for global CEOs, while his Hindi grounds traditional Marwari events with authentic emotional weight.

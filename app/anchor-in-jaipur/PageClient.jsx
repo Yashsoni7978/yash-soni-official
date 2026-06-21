@@ -63,7 +63,7 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
 // DATA
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100+", label: "Events in Jaipur", icon: Mic },
+  { val: "700+", label: "Events in Jaipur", icon: Mic },
   { val: "10,000+", label: "Largest Crowd", icon: Users },
   { val: "4.9★", label: "Client Rating", icon: Star },
   { val: "5+", label: "Years Local", icon: Award },
@@ -187,11 +187,11 @@ const NEARBY_CITIES = [
 const FAQS = [
   {
     q: "Who is the best anchor in Jaipur for weddings and corporate events?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated event anchor with 1,100+ events hosted. He is locally based in Vaishali Nagar, Jaipur, knows every premium venue in the city, and specialises in luxury weddings, Sangeet nights, corporate award shows, NRI destination weddings, and VIP birthday galas. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top-rated anchor in Jaipur across WedMeGood, WeddingWire, Justdial, and Google.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated event anchor with 700+ shows hosted. He is locally based in Vaishali Nagar, Jaipur, knows every premium venue in the city, and specialises in luxury weddings, Sangeet nights, corporate award shows, NRI destination weddings, and VIP birthday galas. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top-rated anchor in Jaipur across WedMeGood, WeddingWire, Justdial, and Google.",
   },
   {
     q: "Have you hosted events at our Jaipur wedding venue before?",
-    a: "Anchor Yash Soni has anchored events at virtually every premium venue in Jaipur — from the grand ballrooms of Fairmont and Marriott to the heritage courtyards of Rambagh Palace, Jai Mahal Palace, and Samode Haveli — and from JECC Sitapura to farmhouse venues on Ajmer Road and Bhankrota. Every major event zone in Jaipur has been covered repeatedly across 1,100+ events.",
+    a: "Anchor Yash Soni has anchored events at virtually every premium venue in Jaipur — from the grand ballrooms of Fairmont and Marriott to the heritage courtyards of Rambagh Palace, Jai Mahal Palace, and Samode Haveli — and from JECC Sitapura to farmhouse venues on Ajmer Road and Bhankrota. Every major event zone in Jaipur has been covered repeatedly across 700+ shows.",
   },
   {
     q: "Can we meet in Jaipur to discuss our event?",
@@ -231,7 +231,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash the best anchor in Jaipur over other options?",
-    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 1,100+ events, not one viral moment. Second, completely unscripted — zero paper scripts across an 5+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
+    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 700+ shows, not one viral moment. Second, completely unscripted — zero paper scripts across an 5+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
   },
   {
     q: "What is the difference between an anchor, emcee, and host in Jaipur events?",
@@ -239,7 +239,7 @@ const FAQS = [
   },
   {
     q: "Who is the best emcee in Jaipur for weddings?",
-    a: "Anchor Yash Soni is Jaipur's top-rated wedding emcee with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, and WeddingWire. As a wedding emcee in Jaipur, he has hosted 1,100+ events — Sangeet nights, Haldi functions, Mehndi ceremonies, and grand reception events — across Rambagh Palace, Fairmont Jaipur, Jai Mahal Palace, and farmhouse venues on Ajmer Road.",
+    a: "Anchor Yash Soni is Jaipur's top-rated wedding emcee with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, and WeddingWire. As a wedding emcee in Jaipur, he has hosted 700+ shows — Sangeet nights, Haldi functions, Mehndi ceremonies, and grand reception events — across Rambagh Palace, Fairmont Jaipur, Jai Mahal Palace, and farmhouse venues on Ajmer Road.",
   },
   {
     q: "Who is the best corporate emcee in Jaipur?",
@@ -362,7 +362,7 @@ const faqSchema = {
     "@type": "ProfessionalService",
     "@id": "https://yashsoni.in/#business",
     name: "Anchor Yash Soni",
-    description: "Best anchor in Jaipur. 4.9★, 1100+ events. Weddings, Sangeet, corporate events across all Jaipur zones.",
+    description: "Best anchor in Jaipur. 4.9★, 700+ shows. Weddings, Sangeet, corporate events across all Jaipur zones.",
     url: "https://yashsoni.in",
     telephone: "+917737877978",
     address: { "@type": "PostalAddress", addressLocality: "Jaipur", addressRegion: "Rajasthan", addressCountry: "IN" },
@@ -409,7 +409,7 @@ const faqSchema = {
               From palace weddings at Rambagh and Fairmont to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura — the definitive anchor for Jaipur's most prestigious events.
             </p>
             <p className="text-zinc-500 text-sm mb-10 tracking-wide">
-              Locally based &nbsp;·&nbsp; 1,100+ Jaipur events &nbsp;·&nbsp; Zero travel fees within Jaipur
+              Locally based &nbsp;·&nbsp; 700+ Jaipur events &nbsp;·&nbsp; Zero travel fees within Jaipur
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={WA} target="_blank" rel="noopener noreferrer">
@@ -464,7 +464,7 @@ const faqSchema = {
               Anchor Yash Soni is Jaipur's highest-reviewed professional event anchor — rated{" "}
               <strong className="text-white">4.9★ across 50+ verified reviews</strong> on Google,
               WedMeGood, and WeddingWire India — with{" "}
-              <strong className="text-white">1,100+ events hosted</strong> spanning palace weddings
+              <strong className="text-white">700+ shows hosted</strong> spanning palace weddings
               at Rambagh Palace and Fairmont Jaipur, Sangeet nights at Ajmer Road farmhouses with
               1,000–1,500 guests, corporate award galas at JECC Sitapura and Birla Auditorium, and
               VIP private events across all major Jaipur zones. His entire career has been conducted{" "}
@@ -475,7 +475,7 @@ const faqSchema = {
           {/* By-the-numbers grid — specific entities AI can extract */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-              { stat: "1,100+", label: "Events in Jaipur", detail: "Career verified total" },
+              { stat: "700+", label: "Events in Jaipur", detail: "Career verified total" },
               { stat: "4.9★", label: "Average Client Rating", detail: "Google · WedMeGood · WeddingWire" },
               { stat: "50+", label: "Verified Reviews", detail: "Across all platforms" },
               { stat: "0", label: "Paper Scripts Used", detail: "Across 5+ year career" },
@@ -701,7 +701,7 @@ const faqSchema = {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Jaipur",
-                desc: "4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire. 1,100+ events. The most reviewed event professional in Jaipur — by any name.",
+                desc: "4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire. 700+ shows. The most reviewed event professional in Jaipur — by any name.",
                 keywords: ["best emcee in jaipur", "best anchor in jaipur", "best host in jaipur", "best mc jaipur"],
               },
               {

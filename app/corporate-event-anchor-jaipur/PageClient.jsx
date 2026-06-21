@@ -59,9 +59,9 @@ const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
 // ─────────────────────────────────────────────
 // DATA
 // ─────────────────────────────────────────────
-// Fixed: updated to match 1100+ sitewide numbers
+// Fixed: updated to match 700+ sitewide numbers
 const STATS = [
-  { num: "1100+", label: "Total Events Hosted" },
+  { num: "700+", label: "Total Shows Hosted" },
   { num: "70+", label: "Corporate Brands" },
   { num: "4.9★", label: "Client Rating" },
   { num: "5+", label: "Years Experience" },
@@ -120,7 +120,7 @@ const CAPABILITIES = [
     desc: "I represent your brand on stage. I dress the part, speak the language, and adhere strictly to your company tone and guidelines. The CEO never winces." },
   {
     title: "Crisis Management",
-    desc: "Mic failure? Keynote speaker late? I fill dead air seamlessly with intelligent engagement so the audience never notices a glitch. In 1,100+ events, not once." },
+    desc: "Mic failure? Keynote speaker late? I fill dead air seamlessly with intelligent engagement so the audience never notices a glitch. In 700+ shows, not once." },
   {
     title: "Audience Retention",
     desc: "Sharp wit and interactive segments keep energy high during long conferences. Your message doesn't just get delivered — it actually lands." },
@@ -166,7 +166,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best corporate event anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated corporate event anchor with 1,100+ events hosted and 70+ national brands served. He specialises in award nights, conferences, product launches, gala dinners, dealer meets, and annual day celebrations at venues including JECC Sitapura, Birla Auditorium, Marriott Jaipur, Fairmont, and corporate campuses across Jaipur." },
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated corporate event anchor with 700+ shows hosted and 70+ national brands served. He specialises in award nights, conferences, product launches, gala dinners, dealer meets, and annual day celebrations at venues including JECC Sitapura, Birla Auditorium, Marriott Jaipur, Fairmont, and corporate campuses across Jaipur." },
   {
     q: "Do you provide a GST invoice for corporate bookings?",
     a: "Yes. A fully compliant GST invoice is issued for every corporate booking. The booking process includes a formal agreement, advance confirmation, and complete documentation for your accounts team." },

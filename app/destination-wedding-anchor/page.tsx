@@ -5,7 +5,7 @@ import PageClient from './PageClient';
 const FAQS = [
   {
     q: "Who is the most reviewed destination wedding anchor in India?",
-    a: "Anchor Yash Soni is a 4.9★ rated destination wedding specialist with 1,100+ events hosted across India and international locations. He has hosted destination weddings at Taj Lake Palace and Leela Palace in Udaipur, Umaid Bhawan in Jodhpur, Suryagarh in Jaisalmer, and beach properties in Goa. His bilingual Hindi/English fluency and NRI protocol expertise make him the top choice for families flying in from the UK, USA, Canada, and Gulf.",
+    a: "Anchor Yash Soni is a 4.9★ rated destination wedding specialist with 700+ shows hosted across India and international locations. He has hosted destination weddings at Taj Lake Palace and Leela Palace in Udaipur, Umaid Bhawan in Jodhpur, Suryagarh in Jaisalmer, and beach properties in Goa. His bilingual Hindi/English fluency and NRI protocol expertise make him the top choice for families flying in from the UK, USA, Canada, and Gulf.",
   },
   {
     q: "What does the destination wedding package cover?",

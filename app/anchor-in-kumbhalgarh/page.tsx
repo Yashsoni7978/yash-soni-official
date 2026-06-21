@@ -14,7 +14,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
   name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: ["Anchor in Kumbhalgarh","Wedding Anchor Kumbhalgarh","Heritage Wedding Host Kumbhalgarh","Fort Wedding Anchor Kumbhalgarh","Kumbha Bagh Wedding Anchor","Aodhi Hotel Event Host","Safari Camp Wedding Emcee"],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
   sameAs: ["https://www.instagram.com/yashsoni_official","https://www.youtube.com/@anchorYashSoni"],
   address: { "@type": "PostalAddress", addressLocality: CITY, addressRegion: "Rajasthan", addressCountry: "IN", postalCode: "313325" },
@@ -44,11 +44,11 @@ const breadcrumbSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Kumbhalgarh | Heritage Fort Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Kumbhalgarh? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for heritage fort weddings at The Kumbha Bagh & Aodhi. Bilingual, unscripted, NRI-experienced.`,
+  description: `Looking for the best anchor in Kumbhalgarh? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for heritage fort weddings at The Kumbha Bagh & Aodhi. Bilingual, unscripted, NRI-experienced.`,
   keywords: ["anchor in kumbhalgarh","best anchor in kumbhalgarh","wedding anchor kumbhalgarh","fort wedding anchor kumbhalgarh","kumbha bagh wedding anchor","aodhi hotel event host","heritage wedding host rajasthan","destination wedding anchor kumbhalgarh","nri wedding anchor kumbhalgarh","sangeet host kumbhalgarh","bilingual anchor kumbhalgarh","anchor yash","anchor yash soni"],
   alternates: { canonical: FULL_URL },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-  openGraph: { type: "website", locale: "en_IN", url: FULL_URL, siteName: "Anchor Yash Soni", title: `Best Anchor in Kumbhalgarh | Heritage Fort Wedding Host`, description: `4.9★ rated. 1,100+ events. Kumbhalgarh's most trusted anchor for heritage fort weddings at Kumbha Bagh & Aodhi. Bilingual, unscripted, NRI-experienced.`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Kumbhalgarh — Anchor Yash Soni at the Great Wall` }] },
+  openGraph: { type: "website", locale: "en_IN", url: FULL_URL, siteName: "Anchor Yash Soni", title: `Best Anchor in Kumbhalgarh | Heritage Fort Wedding Host`, description: `4.9★ rated. 700+ shows. Kumbhalgarh's most trusted anchor for heritage fort weddings at Kumbha Bagh & Aodhi. Bilingual, unscripted, NRI-experienced.`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Kumbhalgarh — Anchor Yash Soni at the Great Wall` }] },
   twitter: { card: "summary_large_image", site: "@yashsonianchor", creator: "@yashsonianchor", title: `Best Anchor in Kumbhalgarh | Anchor Yash Soni — 4.9★`, description: `The Kumbha Bagh. The Aodhi. Kumbhalgarh Fort. The Great Wall City's most trusted heritage wedding anchor.`, images: [OG_IMAGE] },
   other: { "geo.region": "IN-RJ", "geo.placename": `${CITY}, Rajasthan, India`, "geo.position": `${LAT};${LNG}`, ICBM: `${LAT}, ${LNG}`, "DC.subject": `Event Anchor, Heritage Wedding, Fort Wedding, Emcee, ${CITY}, Rajasthan, India` },
 };
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Kumbhalgarh?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and is a specialist in Kumbhalgarh's majestic fort and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for both NRI and traditional Indian families seeking a royal backdrop." },
+  { q: "Who is the best anchor for destination weddings in Kumbhalgarh?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and is a specialist in Kumbhalgarh's majestic fort and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for both NRI and traditional Indian families seeking a royal backdrop." },
   { q: "How do you handle the logistics and acoustics of fort weddings in Kumbhalgarh?", a: "Kumbhalgarh's heritage venues often involve open-air settings with unique acoustic challenges and sprawling layouts. Navigating event energy in these vast, majestic spaces requires an experienced host who uses precise pacing and crowd psychology to draw guests together, creating an intimate, high-energy atmosphere despite the massive surroundings." },
   { q: "Can you host bilingual events for NRI families in Kumbhalgarh?", a: "Yes, bilingual cultural bridging is essential for Kumbhalgarh destination weddings. NRI families from the US, UK, and UAE require hosting that is perfectly bilingual — sophisticated English for international guests and culturally rich Hindi for local relatives, ensuring everyone connects with the royal Rajasthani setting." },
   { q: "What makes Kumbhalgarh different from other destination wedding locations?", a: "Kumbhalgarh offers a dramatic, remote, and monumental setting. The hosting must match this grandeur — it requires unmatched elegance, environmental awareness, and a stage presence capable of commanding an audience under the shadow of the second longest wall in the world." },

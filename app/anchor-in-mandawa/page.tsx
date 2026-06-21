@@ -6,7 +6,7 @@ import PageClient from './PageClient';
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Mandawa?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Mandawa's haveli and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues in the heart of the Shekhawati region." },
+  { q: "Who is the best anchor for destination weddings in Mandawa?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Mandawa's haveli and heritage resort wedding circuit. Completely unscripted and bilingual, he delivers the regal, high-energy hosting required for premium venues in the heart of the Shekhawati region." },
   { q: "How do you handle the logistics of heritage weddings in Mandawa?", a: "Mandawa offers majestic havelis and heritage properties with unique acoustic challenges and intimate courtyard layouts. Managing event energy in these settings requires an experienced host who uses precise pacing to create a vibrant, high-energy atmosphere that complements the historic surroundings." },
   { q: "Can you host bilingual events for NRI families in Mandawa?", a: "Yes. Destination weddings in Mandawa attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Mandawa?", a: "Mandawa is a unique destination for corporate offsites and leadership retreats. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for intimate summits and galas." },

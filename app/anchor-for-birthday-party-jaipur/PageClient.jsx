@@ -85,7 +85,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA
 // ─────────────────────────────────────────────
 const STATS = [
-  { val:"1100", suffix:"+", label:"Events Anchored",   sub:"across Jaipur & Rajasthan",          icon:Mic2   },
+  { val:"700", suffix:"+", label:"Shows Hosted",   sub:"across Jaipur & Rajasthan",          icon:Mic2   },
   { val:"200",  suffix:"+", label:"Verified Reviews",  sub:"4.9★ average",          icon:Star   },
   { val:"500",  suffix:"+", label:"Birthday Events",   sub:"Kids to celebrity galas",icon:Cake  },
   { val:"8",    suffix:"+", label:"Years on Stage",    sub:"Zero paper scripts",    icon:Award  },
@@ -472,7 +472,7 @@ export default function BirthdayAnchorJaipur() {
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (
             <div key={r} className="flex gap-12 shrink-0">
-              {["1100+ Events", "4.9★ Rating", "Kids Parties", "50th Birthdays", "Surprise Reveals", "Anniversary Galas", "Celebrity Events", "Bilingual Host", "Zero Templates", "Jaipur & Rajasthan"].map((t,i) => (
+              {["700+ Shows", "4.9★ Rating", "Kids Parties", "50th Birthdays", "Surprise Reveals", "Anniversary Galas", "Celebrity Events", "Bilingual Host", "Zero Templates", "Jaipur & Rajasthan"].map((t,i) => (
                 <span key={i} className="flex items-center gap-3 text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
                   <span className="w-1 h-1 rounded-full bg-[#D4AF37] inline-block"/>
                   {t}

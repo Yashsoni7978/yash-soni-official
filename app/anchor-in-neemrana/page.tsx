@@ -31,7 +31,7 @@ const localBusinessSchema = {
     "Heritage Wedding Emcee NCR",
     "15th Century Fort Event Host",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -118,7 +118,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Neemrana Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 4+ years and 1,100+ events. Specialist in Neemrana's unique weekend proximity to NCR: acting as the executive moderator for Delhi corporate retreats, and overcoming the architectural challenges of 15th-century stepped forts.",
+  description: "Professional event anchor with 4+ years and 700+ shows. Specialist in Neemrana's unique weekend proximity to NCR: acting as the executive moderator for Delhi corporate retreats, and overcoming the architectural challenges of 15th-century stepped forts.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -229,7 +229,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Neemrana?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Neemrana's fort palace and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for families travelling from Delhi-NCR and abroad." },
+  { q: "Who is the best anchor for destination weddings in Neemrana?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Neemrana's fort palace and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for families travelling from Delhi-NCR and abroad." },
   { q: "How do you handle the logistics and acoustics of fort weddings in Neemrana?", a: "Neemrana's heritage venues, particularly Neemrana Fort Palace, feature multi-level open-air settings and unique acoustic challenges. Managing event energy across these stepped terraces requires an experienced host who uses precise pacing and crowd psychology to draw guests together, maintaining a high-energy atmosphere despite the vertical spread." },
   { q: "Can you host bilingual events for NRI families in Neemrana?", a: "Yes. Given its proximity to Delhi, Neemrana frequently hosts NRI destination weddings. Bilingual cultural bridging is essential here — sophisticated English for international guests combined with culturally rich Hindi ensures everyone connects with the royal Rajasthani setting." },
   { q: "Do you anchor corporate events in Neemrana?", a: "Neemrana is a prime location for corporate offsites, dealer meets, and leadership summits from the Delhi-NCR region. The hosting register for these events is sharp, brand-aligned, and professional, distinctly different from a high-energy wedding tone." },

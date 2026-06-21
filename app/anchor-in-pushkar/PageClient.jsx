@@ -92,7 +92,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -182,7 +182,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Pushkar?", a: "Anchor Yash Soni is rated 4.9★ with 1,100+ events across Rajasthan, specialising in Pushkar's unique sacred-city destination wedding circuit — Ananta Spa & Resorts, Westin Pushkar, The Bhanwar Singh Palace, and lakeside heritage properties. Bilingual Hindi/English, unscripted, experienced with NRI families who choose Pushkar for its spiritual and visual significance." },
+  { q: "Who is the best anchor for destination weddings in Pushkar?", a: "Anchor Yash Soni is rated 4.9★ with 700+ shows across Rajasthan, specialising in Pushkar's unique sacred-city destination wedding circuit — Ananta Spa & Resorts, Westin Pushkar, The Bhanwar Singh Palace, and lakeside heritage properties. Bilingual Hindi/English, unscripted, experienced with NRI families who choose Pushkar for its spiritual and visual significance." },
   { q: "What makes hosting a wedding in Pushkar uniquely challenging?", a: "Pushkar is a sacred city with specific cultural sensitivities around noise levels, timing, and ceremonial respect for the ghats and temple vicinity. Navigating event energy and crowd enthusiasm within those constraints requires a host who understands the city deeply — keeping celebrations joyful while honouring the sanctity of the location." },
   { q: "Can you handle NRI families who choose Pushkar for a destination Mehendi or Sangeet?", a: "Pushkar increasingly attracts NRI families seeking a spiritual, intimate backdrop away from the grand palace circuit. The hosting challenge is intimacy at scale — keeping the energy personal and culturally resonant while ensuring international guests understand and feel part of the Rajasthani heritage. This is a core specialisation." },
   { q: "Do you anchor events near Pushkar Lake and the camel fair grounds?", a: "Lakeside and heritage property events around Pushkar Lake are a distinct circuit. The open-air acoustic environment, crowd proximity to the ghats, and the spiritual atmosphere all require a host who reads the room and calibrates energy accordingly — celebratory without being irreverent." },
@@ -274,7 +274,7 @@ export default function PushkarPage() {
                 NRI Polish.<br /><G>Raw Desert Energy.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of destination wedding hosting in Pushkar.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of destination wedding hosting in Pushkar.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Pushkar functions entirely differently from the rest of Rajasthan. You aren't just dealing with massive fortresses; you are dealing with the <strong className="text-[#B5952F]">Satvik Protocol</strong>—where the finest 5-star properties often lack alcohol. Yash steps into these highly restricted 500-guest environments and manufactures intense, raw dancing energy entirely organically.
@@ -575,7 +575,7 @@ export default function PushkarPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Pushkar",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Pushkar — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Pushkar — by any name.",
                 keywords: ["best emcee in pushkar", "best anchor in pushkar", "best host in pushkar", "best mc pushkar"],
               },
               {

@@ -5,7 +5,7 @@ import PageClient from "./PageClient";
 const FAQS = [
   {
     q: "Who is the best wedding anchor in Jaipur for premium weddings?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated wedding anchor with 1,100+ weddings hosted across Rajasthan and India. He specialises in luxury weddings at palace venues in Kukas and Amer Road, farmhouse Sangeets on Ajmer Road, and NRI destination weddings. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top choice for elite families.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated wedding anchor with 700+ weddings hosted across Rajasthan and India. He specialises in luxury weddings at palace venues in Kukas and Amer Road, farmhouse Sangeets on Ajmer Road, and NRI destination weddings. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top choice for elite families.",
   },
   {
     q: "Do you prepare scripts for family members hosting performances?",
@@ -66,7 +66,7 @@ const webPageSchema = {
   "@context": "https://schema.org", "@type": "WebPage",
   name: "Wedding Anchor in Jaipur | Best Wedding Emcee | Yash Soni",
   url: "https://yashsoni.in/wedding-anchor-jaipur",
-  description: "Best wedding anchor in Jaipur. Yash Soni has hosted 1,100+ events across Rajasthan — bilingual, energetic and deeply experienced wedding emcee.",
+  description: "Best wedding anchor in Jaipur. Yash Soni has hosted 700+ shows across Rajasthan — bilingual, energetic and deeply experienced wedding emcee.",
   inLanguage: "en-IN",
   about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
@@ -93,14 +93,14 @@ const howToSchema = {
 export const metadata: Metadata = {
   title: "Wedding Anchor in Jaipur | Best Wedding Emcee | Yash Soni",
   description:
-    "Best wedding anchor in Jaipur. Yash Soni has hosted 1,100+ events across Rajasthan — bilingual, energetic and deeply experienced wedding emcee. Book now.",
+    "Best wedding anchor in Jaipur. Yash Soni has hosted 700+ shows across Rajasthan — bilingual, energetic and deeply experienced wedding emcee. Book now.",
   alternates: {
     canonical: "https://yashsoni.in/wedding-anchor-jaipur",
   },
   openGraph: {
     title: "Wedding Anchor in Jaipur | Best Wedding Emcee | Yash Soni",
     description:
-      "Best wedding anchor in Jaipur. Yash Soni has hosted 1,100+ events across Rajasthan — bilingual, energetic and deeply experienced wedding emcee.",
+      "Best wedding anchor in Jaipur. Yash Soni has hosted 700+ shows across Rajasthan — bilingual, energetic and deeply experienced wedding emcee.",
     url: "https://yashsoni.in/wedding-anchor-jaipur",
     siteName: "Anchor Yash Soni",
     locale: "en_IN",
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wedding Anchor in Jaipur | Yash Soni",
     description:
-      "1,100+ weddings. Bilingual. Unscripted. Jaipur's most trusted wedding emcee.",
+      "700+ weddings. Bilingual. Unscripted. Jaipur's most trusted wedding emcee.",
     images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
   },
 };

@@ -40,7 +40,7 @@ export const HomeHero = ({ waLink }) => {
           </h1>
           {/* Subheading — keyword-rich, not Jaipur-locked */}
           <p className="text-zinc-300 text-base md:text-xl font-light leading-relaxed mb-3 max-w-lg">
-            The most commanding event host in India. 1,100+ events — palace weddings, high-energy Sangeets, corporate summits, and VIP galas across Rajasthan and beyond.
+            The most commanding event host in India. 700+ shows — palace weddings, high-energy Sangeets, corporate summits, and VIP galas across Rajasthan and beyond.
           </p>
           <p className="text-zinc-500 text-sm mb-8 tracking-wide">
             Bilingual Hindi/English &nbsp;·&nbsp; Unscripted &nbsp;·&nbsp; 10,000+ crowd commanded &nbsp;·&nbsp; Zero paper scripts

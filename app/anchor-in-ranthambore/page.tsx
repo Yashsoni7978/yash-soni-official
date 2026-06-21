@@ -14,7 +14,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
   name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: ["Anchor in Ranthambore","Wedding Anchor Ranthambore","Wildlife Destination Wedding Anchor","Ranthambore Safari Wedding Host","Sher Bagh Anchor","Khem Villas Event Emcee","Nahargarh Fort Ranthambore Anchor","Jungle Luxury Wedding Anchor"],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
   sameAs: ["https://www.instagram.com/yashsoni_official","https://www.youtube.com/@anchorYashSoni"],
   address: { "@type": "PostalAddress", addressLocality: "Sawai Madhopur", addressRegion: "Rajasthan", addressCountry: "IN", postalCode: "322001" },
@@ -51,7 +51,7 @@ const breadcrumbSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Ranthambore | Jungle Luxury Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Ranthambore? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for wildlife tented destination weddings at Sher Bagh & Khem Villas. Bilingual, unscripted, NRI-experienced.`,
+  description: `Looking for the best anchor in Ranthambore? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for wildlife tented destination weddings at Sher Bagh & Khem Villas. Bilingual, unscripted, NRI-experienced.`,
   keywords: [
     "anchor in ranthambore","best anchor in ranthambore","wedding anchor ranthambore",
     "wildlife wedding anchor ranthambore","jungle luxury wedding host",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: FULL_URL },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-  openGraph: { type: "website", locale: "en_IN", url: FULL_URL, siteName: "Anchor Yash Soni", title: `Best Anchor in Ranthambore | Jungle Luxury Wedding Host`, description: `4.9★ rated. 1,100+ events. Ranthambore's most trusted anchor for wildlife tented weddings at Sher Bagh & Khem Villas. Bilingual, unscripted, NRI-experienced.`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ranthambore — Anchor Yash Soni jungle luxury wedding` }] },
+  openGraph: { type: "website", locale: "en_IN", url: FULL_URL, siteName: "Anchor Yash Soni", title: `Best Anchor in Ranthambore | Jungle Luxury Wedding Host`, description: `4.9★ rated. 700+ shows. Ranthambore's most trusted anchor for wildlife tented weddings at Sher Bagh & Khem Villas. Bilingual, unscripted, NRI-experienced.`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ranthambore — Anchor Yash Soni jungle luxury wedding` }] },
   twitter: { card: "summary_large_image", site: "@yashsonianchor", creator: "@yashsonianchor", title: `Best Anchor in Ranthambore | Anchor Yash Soni — 4.9★`, description: `Sher Bagh. Khem Villas. Nahargarh Fort. Ranthambore's most trusted jungle luxury wedding anchor.`, images: [OG_IMAGE] },
   other: { "geo.region": "IN-RJ", "geo.placename": `${CITY}, Sawai Madhopur, Rajasthan, India`, "geo.position": `${LAT};${LNG}`, ICBM: `${LAT}, ${LNG}`, "DC.subject": `Event Anchor, Wildlife Wedding, Jungle Luxury, ${CITY}, Rajasthan, India` },
 };
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Ranthambore?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and is a specialist in Ranthambore's luxury jungle resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium wildlife-adjacent venues." },
+  { q: "Who is the best anchor for destination weddings in Ranthambore?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and is a specialist in Ranthambore's luxury jungle resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium wildlife-adjacent venues." },
   { q: "How do you handle the unique acoustic and timeline constraints of Ranthambore jungle resorts?", a: "Ranthambore's proximity to the national park means strict noise regulations after certain hours and open-air acoustic challenges. Managing the timeline to ensure high-energy segments peak before restrictions, and shifting the crowd's energy seamlessly into intimate, late-night acoustic or DJ sessions, requires a highly experienced host." },
   { q: "Can you host bilingual events for NRI families in Ranthambore?", a: "Yes. Destination weddings in Ranthambore attract a mix of domestic luxury clients and NRI families. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional Indian relatives connect deeply through culturally resonant Hindi." },
   { q: "What makes Ranthambore different from other destination wedding locations?", a: "Ranthambore offers an exotic, wildlife-adjacent backdrop that feels both luxurious and wild. The hosting must mirror this — elegant and sophisticated, yet dynamic enough to match the adventurous spirit of a jungle destination." },

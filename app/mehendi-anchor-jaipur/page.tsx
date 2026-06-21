@@ -5,7 +5,7 @@ import PageClient from './PageClient';
 const FAQS = [
   {
     q: "Who is the best Mehendi anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Mehendi host with 1,100+ events hosted. He specialises in hands-free interactive Mehendi games, Ladies Sangeet hosting, musical trivia, and combined Mehendi-Sangeet events. His bilingual Hindi/English fluency makes him the top choice for both local Jaipur families and NRI weddings.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Mehendi host with 700+ shows hosted. He specialises in hands-free interactive Mehendi games, Ladies Sangeet hosting, musical trivia, and combined Mehendi-Sangeet events. His bilingual Hindi/English fluency makes him the top choice for both local Jaipur families and NRI weddings.",
   },
   {
     q: "Why hire a specialised Mehendi anchor in Jaipur?",
@@ -17,7 +17,7 @@ const FAQS = [
   },
   {
     q: "Do you host Ladies Sangeet alongside the Mehendi ceremony?",
-    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth — doing both in the same evening without losing either group. That transition is a skill that takes 1,100+ events to perfect.",
+    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth — doing both in the same evening without losing either group. That transition is a skill that takes 700+ shows to perfect.",
   },
   {
     q: "Can you handle the groom's entry at a combined Mehendi event?",

@@ -31,7 +31,7 @@ const localBusinessSchema = {
     "Luxury Event Host Bengaluru",
     "South Indian Hindi English Anchor",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -117,7 +117,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Bengaluru Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 4+ years and 1,100+ events across India. Specialist in Bangalore's premium event circuit—from Taj West End high-net-worth weddings to Whitefield tech summits. Impeccable bilingual English/Hindi execution.",
+  description: "Professional event anchor and emcee with 4+ years and 700+ shows across India. Specialist in Bangalore's premium event circuit—from Taj West End high-net-worth weddings to Whitefield tech summits. Impeccable bilingual English/Hindi execution.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -157,7 +157,7 @@ const webPageSchema = {
   url: FULL_URL,
   name: `Best Anchor in Bangalore | Luxury Wedding & Corporate Host — Yash Soni`,
   headline: `Bangalore's Most Trusted Event Anchor for Taj West End, Palace Grounds & Elite Corporate Summits`,
-  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier anchor for Bangalore luxury weddings and IT mega-summits. Bilingual English/Hindi expert. Zero scripts. Absolute authority.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Bangalore luxury weddings and IT mega-summits. Bilingual English/Hindi expert. Zero scripts. Absolute authority.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Karnataka` },
@@ -169,7 +169,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Bangalore | Premium Wedding & Corporate Host — Yash Soni`,
-  description: `Looking for the best anchor in Bangalore? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for Taj West End weddings, Palace Grounds events, and major corporate tech summits. Elite bilingual English/Hindi unscripted hosting.`,
+  description: `Looking for the best anchor in Bangalore? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for Taj West End weddings, Palace Grounds events, and major corporate tech summits. Elite bilingual English/Hindi unscripted hosting.`,
   keywords: [
     "anchor in bangalore",
     "best anchor in bangalore",
@@ -198,7 +198,7 @@ export const metadata: Metadata = {
     url: FULL_URL,
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Bangalore | Elite Wedding & Corporate Host`,
-    description: `4.9★ rated. 1,100+ events. Bangalore's most trusted anchor for Taj West End luxury weddings and high-stakes tech summits. Perfect bilingual English/Hindi execution.`,
+    description: `4.9★ rated. 700+ shows. Bangalore's most trusted anchor for Taj West End luxury weddings and high-stakes tech summits. Perfect bilingual English/Hindi execution.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Bangalore — Anchor Yash Soni at Bangalore Luxury Venues` }],
   },
   twitter: {
@@ -206,7 +206,7 @@ export const metadata: Metadata = {
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
     title: `Best Anchor in Bangalore | Anchor Yash Soni — 4.9★`,
-    description: `Palace Grounds. Taj West End. Whitefield Tech Summits. Bengaluru's premier bilingual event anchor. 1,100+ events. Zero scripts.`,
+    description: `Palace Grounds. Taj West End. Whitefield Tech Summits. Bengaluru's premier bilingual event anchor. 700+ shows. Zero scripts.`,
     images: [OG_IMAGE],
   },
   other: {
@@ -231,7 +231,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Who is the best anchor for luxury and corporate events in Bangalore?",
-    a: "Anchor Yash Soni is highly sought after in Bangalore's elite circuit. With 1,100+ events and a flawless bilingual (English/Hindi) capability, he provides the intellectual polish required for Whitefield corporate summits and the deep cultural respect needed for Taj West End or Palace Grounds luxury weddings."
+    a: "Anchor Yash Soni is highly sought after in Bangalore's elite circuit. With 700+ shows and a flawless bilingual (English/Hindi) capability, he provides the intellectual polish required for Whitefield corporate summits and the deep cultural respect needed for Taj West End or Palace Grounds luxury weddings."
   },
   {
     q: "We are an IT firm hosting a major summit in Bangalore. Do you use scripts?",

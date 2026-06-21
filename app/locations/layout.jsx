@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "https://yashsoni.in/locations" },
   openGraph: {
     title: "Event Anchoring Locations across Jaipur & Rajasthan | Anchor Yash Soni",
-    description: "35+ cities. 1,100+ events. From Rajasthan palaces to Goa beaches — Yash Soni anchors premium events across Jaipur & Rajasthan.",
+    description: "35+ cities. 700+ shows. From Rajasthan palaces to Goa beaches — Yash Soni anchors premium events across Jaipur & Rajasthan.",
     url: "https://yashsoni.in/locations",
     siteName: "Anchor Yash Soni",
     images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Anchor Yash Soni — Event Locations across Jaipur & Rajasthan" }],

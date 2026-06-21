@@ -33,7 +33,7 @@ const localBusinessSchema = {
     "Gujarat Rajasthan Wedding Bridge Anchor",
     "Dilwara Temple Circuit Event Host",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -122,7 +122,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Yash Soni Mount Abu Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 4+ years and 1,100+ events across Rajasthan, India. Specialist in Jain ceremony hosting, Gujarat-Rajasthan bilingual events, hill station venue acoustics, and NRI destination wedding management.",
+  description: "Professional event anchor and emcee with 4+ years and 700+ shows across Rajasthan, India. Specialist in Jain ceremony hosting, Gujarat-Rajasthan bilingual events, hill station venue acoustics, and NRI destination wedding management.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -166,7 +166,7 @@ const webPageSchema = {
   url: FULL_URL,
   name: `Best Anchor in Mount Abu | Jain Heritage & Hill Station Wedding Host — Yash Soni`,
   headline: `India's Most Trusted Event Anchor for Mount Abu — Aravalli Hill Station Weddings, Jain Heritage Ceremonies & Nakki Lake Sangeets`,
-  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier hill station wedding anchor for Mount Abu — Cama Rajputana Club, Nakki Lake & Hotel Hillock. Jain ceremony protocol. Gujarat-Rajasthan bilingual. Unscripted.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier hill station wedding anchor for Mount Abu — Cama Rajputana Club, Nakki Lake & Hotel Hillock. Jain ceremony protocol. Gujarat-Rajasthan bilingual. Unscripted.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Sirohi, Rajasthan` },
@@ -178,7 +178,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Mount Abu | Jain Heritage Hill Station Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Mount Abu? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for Aravalli hilltop Jain destination weddings at Cama Rajputana Club & Nakki Lake. Bilingual, unscripted, Gujarat-Rajasthan fluent.`,
+  description: `Looking for the best anchor in Mount Abu? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for Aravalli hilltop Jain destination weddings at Cama Rajputana Club & Nakki Lake. Bilingual, unscripted, Gujarat-Rajasthan fluent.`,
   keywords: [
     "anchor in mount abu",
     "best anchor in mount abu",
@@ -211,7 +211,7 @@ export const metadata: Metadata = {
     url: FULL_URL,
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Mount Abu | Jain Heritage Hill Station Wedding Host`,
-    description: `4.9★ rated. 1,100+ events. Mount Abu's most trusted anchor — Cama Rajputana Club, Nakki Lake & Hotel Hillock. Jain ceremony protocol. Gujarat-Rajasthan bilingual. Unscripted.`,
+    description: `4.9★ rated. 700+ shows. Mount Abu's most trusted anchor — Cama Rajputana Club, Nakki Lake & Hotel Hillock. Jain ceremony protocol. Gujarat-Rajasthan bilingual. Unscripted.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Mount Abu — Anchor Yash Soni at Nakki Lake, Aravalli Hills` }],
   },
   twitter: {
@@ -242,7 +242,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Mount Abu?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Mount Abu's hill station and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and highly experienced in managing grand destination weddings in Rajasthan's only hill station." },
+  { q: "Who is the best anchor for destination weddings in Mount Abu?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Mount Abu's hill station and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and highly experienced in managing grand destination weddings in Rajasthan's only hill station." },
   { q: "How do you handle the logistics and weather conditions of weddings in Mount Abu?", a: "Mount Abu's hill station environment offers a unique climate, especially during winter and summer evenings. Managing open-air events here requires pacing the timeline effectively to maintain high crowd energy against cooler temperatures, ensuring the celebration remains vibrant and engaging." },
   { q: "Can you host bilingual events for NRI families in Mount Abu?", a: "Yes. Mount Abu attracts NRI families and high-profile domestic clients seeking a scenic destination. Bilingual hosting is critical — sophisticated English for international guests and culturally resonant Hindi for local relatives, ensuring every guest feels connected to the celebration." },
   { q: "What makes Mount Abu different from other Rajasthan destination wedding locations?", a: "Unlike the desert forts or lake palaces, Mount Abu provides a lush, elevated, and serene backdrop. The hosting style must complement this — offering elegant, sophisticated, and warm interaction that suits a scenic hill station environment." },

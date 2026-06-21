@@ -92,7 +92,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "Across India", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -336,7 +336,7 @@ export default function KolkataPage() {
                 Marwari Heritage.<br /><G>Megascale Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of elite hosting for Kolkata’s business families.
+                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of elite hosting for Kolkata’s business families.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Kolkata operates on a unique axis. It demands intense respect for traditional Marwari and Rajasthani roots, yet the execution happens inside massive, modern venues like the <strong className="text-[#B5952F]">ITC Royal Bengal</strong>. Yash bridges this gap effortlessly. His Hindi carries profound cultural weight, while his flawless English engages the metropolitan corporate circles natively.

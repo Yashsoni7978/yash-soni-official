@@ -81,7 +81,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Delhi-specific
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "Across India", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -174,7 +174,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best anchor for massive weddings in Delhi NCR?",
-    a: "Anchor Yash Soni is highly sought after for large-scale Delhi NCR events. With a 4.9★ rating across 1,100+ events, he brings the high-energy command required for massive Chhatarpur farm weddings and the sophisticated protocol needed for properties like Taj Palace and ITC Maurya."
+    a: "Anchor Yash Soni is highly sought after for large-scale Delhi NCR events. With a 4.9★ rating across 700+ shows, he brings the high-energy command required for massive Chhatarpur farm weddings and the sophisticated protocol needed for properties like Taj Palace and ITC Maurya."
   },
   {
     q: "Do you host high-energy Punjabi Sangeets in Delhi?",
@@ -322,7 +322,7 @@ export default function DelhiPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding massive crowds with zero paper scripts.
+                With 4+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding massive crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the protocol-heavy ballrooms of <strong className="text-[#B5952F]">Taj Palace</strong> to the high-energy chaos of a massive Chhatarpur farm wedding, Yash brings a level of sophistication and electric command that matches Delhi's unmatched scale.

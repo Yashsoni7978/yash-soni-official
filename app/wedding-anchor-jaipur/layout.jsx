@@ -4,7 +4,7 @@ export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
   title: "Best Wedding Anchor in Jaipur | Anchor Yash Soni — 4.9★ Premium Wedding Emcee",
   description:
-    "Looking for the best wedding anchor in Jaipur? Anchor Yash Soni — 4.9★, 1100+ weddings. Sangeet, Varmala, Baraat, Haldi & NRI destination weddings across Kukas, Amer Road & Ajmer Road. Book now.",
+    "Looking for the best wedding anchor in Jaipur? Anchor Yash Soni — 4.9★, 700+ weddings. Sangeet, Varmala, Baraat, Haldi & NRI destination weddings across Kukas, Amer Road & Ajmer Road. Book now.",
   keywords: [
     "best wedding anchor in jaipur",
     "wedding anchor jaipur",
@@ -49,7 +49,7 @@ export const metadata = {
     siteName: "Anchor Yash Soni",
     title: "Best Wedding Anchor in Jaipur | Anchor Yash Soni — 4.9★",
     description:
-      "4.9★. 1100+ weddings. Jaipur's most trusted wedding anchor for Sangeet, Varmala, Baraat & NRI destination weddings.",
+      "4.9★. 700+ weddings. Jaipur's most trusted wedding anchor for Sangeet, Varmala, Baraat & NRI destination weddings.",
     images: [
       {
         url: "/og-image.webp",
@@ -60,7 +60,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Best Wedding Anchor in Jaipur | Anchor Yash Soni",
-    description: "4.9★ rated. 1100+ weddings. The anchor Jaipur's elite families choose.",
+    description: "4.9★ rated. 700+ weddings. The anchor Jaipur's elite families choose.",
     images: ["/og-image.webp"] },
   other: {
     "geo.region": "IN-RJ",

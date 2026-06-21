@@ -5,7 +5,7 @@ import { buildServiceSchema } from "../../lib/schema/serviceSchema";
 const serviceSchema = buildServiceSchema({
   pageUrl: "https://yashsoni.in/sangeet-anchor-jaipur",
   name: "Sangeet Anchor Jaipur — Anchor Yash Soni",
-  description: "700+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   serviceType: "Sangeet Ceremony Hosting",
   providerJobTitle: "Premium Sangeet Anchor & Emcee",
 });

@@ -82,7 +82,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Mumbai-specific
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "Across India", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -322,7 +322,7 @@ export default function MumbaiPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
+                With 4+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the heritage ballrooms of the <strong className="text-[#B5952F]">Taj Mahal Palace</strong> to the high-stakes corporate stages of BKC, Yash brings a level of sophistication and electric energy that reflects the unstoppable pace of Mumbai.

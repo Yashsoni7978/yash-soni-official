@@ -61,7 +61,7 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
 // DATA
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100+", label: "Events Hosted", icon: Mic2 },
+  { val: "700+", label: "Shows Hosted", icon: Mic2 },
   { val: "4.9★", label: "Client Rating", icon: Star },
   { val: "4 AM", label: "Dance Floor Until", icon: Music },
   { val: "500+", label: "Sangeet Guests Max", icon: Users },
@@ -139,7 +139,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best Sangeet anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 1,100+ events hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM — consistently.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 700+ shows hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM — consistently.",
   },
   {
     q: "Why hire a professional Sangeet anchor instead of a family member?",
@@ -155,7 +155,7 @@ const FAQS = [
   },
   {
     q: "How do you handle technical glitches or delays?",
-    a: "A library of 50+ crowd interactions exists specifically for this. If a track doesn't play or a performer is running late, the audience sees a planned crowd moment, not a problem. In 1,100+ events, no guest has ever known when something went wrong.",
+    a: "A library of 50+ crowd interactions exists specifically for this. If a track doesn't play or a performer is running late, the audience sees a planned crowd moment, not a problem. In 700+ shows, no guest has ever known when something went wrong.",
   },
   {
     q: "Can you host a Bollywood-style Awards Night Sangeet?",
@@ -291,7 +291,7 @@ export default function SangeetAnchor() {
               Jaipur's most reviewed Sangeet anchor. Farmhouse Sangeets on Ajmer Road, palace events in Kukas, and destination Sangeets across Jaipur & Rajasthan.
             </p>
             <p className="text-zinc-500 text-sm mb-8 tracking-wide">
-              1,100+ events &nbsp;·&nbsp; Dance floors until 4 AM &nbsp;·&nbsp; 100% Unscripted
+              700+ shows &nbsp;·&nbsp; Dance floors until 4 AM &nbsp;·&nbsp; 100% Unscripted
             </p>
             {/* CTAs — WhatsApp primary, not /contact */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -338,7 +338,7 @@ export default function SangeetAnchor() {
               Forget &ldquo;And Next on Stage...&rdquo;<br /><G>This is a Concert.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni is the Sangeet host Jaipur's elite families trust when a Sangeet needs to be more than background noise.
+              With <strong className="text-white">700+ shows hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni is the Sangeet host Jaipur's elite families trust when a Sangeet needs to be more than background noise.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               Farmhouse Sangeets on Ajmer Road with 1,500 guests packed until 4 AM. Palace Sangeet events at heritage venues in Kukas and Amer Road with NRI families from the UK, USA, and Gulf. Intimate family Sangeets in Mansarovar and Vaishali Nagar. Every format is a different discipline — and every one has been mastered.
@@ -366,7 +366,7 @@ export default function SangeetAnchor() {
               {/* Overlay card */}
               <div className="absolute bottom-5 left-5 right-5 /70 backdrop-blur-sm border border-[#D4AF37]/30 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-1">4.9★ Sangeet Anchor</p>
-                <p className="text-white text-xs">Dance floors packed until 4 AM · 1,100+ events</p>
+                <p className="text-white text-xs">Dance floors packed until 4 AM · 700+ shows</p>
               </div>
             </div>
           </Reveal>

@@ -80,7 +80,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA — All Udaipur-specific, zero generic copy
 // ─────────────────────────────────────────────
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -166,7 +166,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best anchor for destination weddings in Udaipur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 1,100+ events anchored across Rajasthan, specialising in Udaipur's lake palace destination wedding circuit — Taj Lake Palace, Oberoi Udaivilas, Jagmandir Island, Leela Udaipur, Raffles, and Fateh Garh. Bilingual Hindi/English, unscripted, NRI-experienced, with zero paper scripts across his entire career.",
+    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Udaipur's lake palace destination wedding circuit — Taj Lake Palace, Oberoi Udaivilas, Jagmandir Island, Leela Udaipur, Raffles, and Fateh Garh. Bilingual Hindi/English, unscripted, NRI-experienced, with zero paper scripts across his entire career.",
   },
   {
     q: "Have you hosted events at Taj Lake Palace and Jagmandir Island?",
@@ -194,7 +194,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash different from local Udaipur anchors?",
-    a: "Local anchors know the city. Anchor Yash Soni knows the city and the crowd psychology to command every segment of it — 1,100+ events, 10,000+ crowds commanded, 4.9★ rating, and a specific track record at Udaipur's top-tier palace properties. The difference shows when the NRI grandfather from London feels as included as the local Rajasthani family cousin dancing in the front row.",
+    a: "Local anchors know the city. Anchor Yash Soni knows the city and the crowd psychology to command every segment of it — 700+ shows, 10,000+ crowds commanded, 4.9★ rating, and a specific track record at Udaipur's top-tier palace properties. The difference shows when the NRI grandfather from London feels as included as the local Rajasthani family cousin dancing in the front row.",
   },
   {
     q: "Who is the best emcee in Udaipur for lake palace weddings?",
@@ -288,7 +288,7 @@ export default function UdaipurPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the floating elegance of <strong className="text-[#B5952F]">Taj Lake Palace</strong> to the royal heritage of Udaivilas, Yash brings a level of sophistication and energy that matches Udaipur's premier standard.
@@ -574,7 +574,7 @@ export default function UdaipurPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Udaipur",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Udaipur — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Udaipur — by any name.",
                 keywords: ["best emcee in udaipur", "best anchor in udaipur", "best host in udaipur", "best mc udaipur"],
               },
               {
@@ -653,7 +653,7 @@ export default function UdaipurPage() {
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (
             <div key={r} className="flex gap-12 shrink-0">
-              {["Taj Lake Palace", "Oberoi Udaivilas", "Jagmandir Island", "The Leela Udaipur", "NRI Destination Weddings", "Bilingual Hindi/English", "Unscripted Mastery", "4.9★ Rated", "1100+ Events"].map((t, i) => (
+              {["Taj Lake Palace", "Oberoi Udaivilas", "Jagmandir Island", "The Leela Udaipur", "NRI Destination Weddings", "Bilingual Hindi/English", "Unscripted Mastery", "4.9★ Rated", "700+ Shows"].map((t, i) => (
                 <span key={i} className="flex items-center gap-3 text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
                   <span className="w-1 h-1 rounded-full bg-[#D4AF37] inline-block" />
                   {t}

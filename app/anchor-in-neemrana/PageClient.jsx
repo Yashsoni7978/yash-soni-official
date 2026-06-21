@@ -92,7 +92,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 const STATS = [
-  { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
+  { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -182,7 +182,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Neemrana?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and specialises in Neemrana's fort palace and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for families travelling from Delhi-NCR and abroad." },
+  { q: "Who is the best anchor for destination weddings in Neemrana?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Neemrana's fort palace and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for families travelling from Delhi-NCR and abroad." },
   { q: "How do you handle the logistics and acoustics of fort weddings in Neemrana?", a: "Neemrana's heritage venues, particularly Neemrana Fort Palace, feature multi-level open-air settings and unique acoustic challenges. Managing event energy across these stepped terraces requires an experienced host who uses precise pacing and crowd psychology to draw guests together, maintaining a high-energy atmosphere despite the vertical spread." },
   { q: "Can you host bilingual events for NRI families in Neemrana?", a: "Yes. Given its proximity to Delhi, Neemrana frequently hosts NRI destination weddings. Bilingual cultural bridging is essential here — sophisticated English for international guests combined with culturally rich Hindi ensures everyone connects with the royal Rajasthani setting." },
   { q: "Do you anchor corporate events in Neemrana?", a: "Neemrana is a prime location for corporate offsites, dealer meets, and leadership summits from the Delhi-NCR region. The hosting register for these events is sharp, brand-aligned, and professional, distinctly different from a high-energy wedding tone." },
@@ -274,7 +274,7 @@ export default function NeemranaPage() {
                 Corporate Polish.<br /><G>Fortress Authority.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute apex of weekend destination hosting in Neemrana.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute apex of weekend destination hosting in Neemrana.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Neemrana is an architectural anomaly. A 15th-century, 14-tier vertical <strong className="text-[#B5952F]">Fort Palace</strong> means the anchor is actively battling extreme acoustic dead zones and stringent decibel limits that kill standard DJs. Furthermore, the crowd is almost exclusively composed of elite Delhi NCR business families and corporate executives requiring razor-sharp, unscripted English articulation.
@@ -575,7 +575,7 @@ export default function NeemranaPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Neemrana",
-                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Neemrana — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Neemrana — by any name.",
                 keywords: ["best emcee in neemrana", "best anchor in neemrana", "best host in neemrana", "best mc neemrana"],
               },
               {

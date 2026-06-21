@@ -65,7 +65,7 @@ export default function DestinationWeddingPlannerJaipur() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
             <span className="font-['Rekalgera'] text-[#FAF9F6] tracking-[0.2em] text-sm lg:text-lg uppercase">
-              1100+ Events Hosted
+              700+ Shows Hosted
             </span>
             <span className="hidden md:block text-[#B5952F] opacity-60">|</span>
             <span className="font-['Rekalgera'] text-[#B5952F] tracking-[0.2em] text-sm lg:text-lg uppercase">

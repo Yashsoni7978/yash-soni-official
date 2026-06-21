@@ -119,7 +119,7 @@ const WEDDING_ZONES = [
 const FAQS = [
   {
     q: "Who is the best wedding anchor in Jaipur for premium weddings?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated wedding anchor with 1,100+ weddings hosted across Rajasthan and India. He specialises in luxury weddings at palace venues in Kukas and Amer Road, farmhouse Sangeets on Ajmer Road, and NRI destination weddings. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top choice for elite families."
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated wedding anchor with 700+ weddings hosted across Rajasthan and India. He specialises in luxury weddings at palace venues in Kukas and Amer Road, farmhouse Sangeets on Ajmer Road, and NRI destination weddings. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top choice for elite families."
   },
   {
     q: "Do you prepare scripts for family members hosting performances?",
@@ -269,7 +269,7 @@ export default function WeddingAnchor() {
               Jaipur's most trusted wedding anchor — palace weddings in Kukas, Sangeets on Ajmer Road, and destination weddings across Rajasthan.
             </p>
             <p className="text-zinc-500 text-sm mb-10 tracking-wide">
-              1,100+ weddings &nbsp;·&nbsp; Bilingual Hindi/English &nbsp;·&nbsp; 100% Unscripted &nbsp;·&nbsp; NRI specialist
+              700+ weddings &nbsp;·&nbsp; Bilingual Hindi/English &nbsp;·&nbsp; 100% Unscripted &nbsp;·&nbsp; NRI specialist
             </p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" aria-label="Book best wedding anchor in Jaipur">
               <button className="px-10 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:scale-105 hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)] active:scale-95">
@@ -302,7 +302,7 @@ export default function WeddingAnchor() {
                 <Sparkles className="w-10 h-10 text-[#B5952F] shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">100% Unscripted</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">Zero paper scripts in 1,100+ weddings. Every word is earned live. Spontaneous family banter and crowd psychology that feels personal, never rehearsed.</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">Zero paper scripts in 700+ weddings. Every word is earned live. Spontaneous family banter and crowd psychology that feels personal, never rehearsed.</p>
                 </div>
               </div>
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
@@ -327,7 +327,7 @@ export default function WeddingAnchor() {
                 <div className="/70 backdrop-blur-sm border border-white/10 rounded-xl p-4 flex items-center gap-4">
                   <div>
                     <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-0.5">4.9★ Wedding Anchor</p>
-                    <p className="text-white text-xs">1,100+ weddings · Jaipur & Jaipur & Rajasthan</p>
+                    <p className="text-white text-xs">700+ weddings · Jaipur & Jaipur & Rajasthan</p>
                   </div>
                 </div>
               </div>

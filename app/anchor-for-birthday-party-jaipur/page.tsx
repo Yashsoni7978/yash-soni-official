@@ -8,7 +8,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/anchor-for-birthday-party-jaipur",
   name: "Anchor for Birthday Party Jaipur — Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Birthday Party Anchor Jaipur | Yash Soni",
-    description: "Custom scripted. Bilingual. 1100+ events. Professional birthday party anchor in Jaipur.",
+    description: "Custom scripted. Bilingual. 700+ shows. Professional birthday party anchor in Jaipur.",
     images: ["/og-image.webp"],
   },
   other: {

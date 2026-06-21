@@ -88,7 +88,7 @@ const FAQItem = ({ q, a, id }) => {
 // DATA
 // ─────────────────────────────────────────────
 const STATS = [
-  { val:"1100", suffix:"+", label:"Events Anchored",     sub:"Across Rajasthan & India", icon:Mic2     },
+  { val:"700", suffix:"+", label:"Shows Hosted",     sub:"Across Rajasthan & India", icon:Mic2     },
   { val:"13",   suffix:"+", label:"Rajasthan Cities",    sub:"Complete coverage",        icon:MapPin   },
   { val:"4.9",  suffix:"★", label:"Client Rating",       sub:"50+ verified reviews",    icon:Star     },
   { val:"10",   suffix:"K+",label:"Largest Crowd",       sub:"Commanded live",           icon:Users    },
@@ -223,7 +223,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q:"Who is the best anchor in Rajasthan?",
-    a:"Anchor Yash Soni is Rajasthan's 4.9★ rated event host with 1,100+ events across the state — Jaipur palace buyouts, Udaipur lake palace destination weddings, Jodhpur fort Sangeets, Jaisalmer desert camps, and corporate galas at JECC Sitapura. Bilingual Hindi/English, zero paper scripts, and full pan-Rajasthan availability." },
+    a:"Anchor Yash Soni is Rajasthan's 4.9★ rated event host with 700+ shows across the state — Jaipur palace buyouts, Udaipur lake palace destination weddings, Jodhpur fort Sangeets, Jaisalmer desert camps, and corporate galas at JECC Sitapura. Bilingual Hindi/English, zero paper scripts, and full pan-Rajasthan availability." },
   {
     q:"Which cities in Rajasthan do you anchor events in?",
     a:"Full coverage across Rajasthan — Jaipur (home base), Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and Bikaner. Smaller heritage cities and resort properties are also covered depending on availability. WhatsApp the city and date for immediate availability confirmation." },
@@ -319,7 +319,7 @@ export default function AnchorInRajasthan() {
                 <p className="text-zinc-300 text-base md:text-lg font-light leading-relaxed max-w-lg mb-2">
                   Jaipur · Udaipur · Jodhpur · Jaisalmer · Pushkar · Alwar · Ranthambore · Mount Abu · Kumbhalgarh · Mandawa · Bikaner · Kota · Bharatpur · Chittorgarh. One anchor. 4+ years experience. Unscripted.
                 </p>
-                <p className="text-zinc-500 text-sm">1100+ events · 4.9★ · Available pan-Rajasthan</p>
+                <p className="text-zinc-500 text-sm">700+ shows · 4.9★ · Available pan-Rajasthan</p>
               </div>
               <div className="flex gap-3 flex-wrap shrink-0">
                 <Link href={WA} target="_blank" rel="noopener noreferrer">
@@ -563,7 +563,7 @@ export default function AnchorInRajasthan() {
         <div className="flex marquee whitespace-nowrap gap-12">
           {[...Array(2)].map((_, r) => (
             <div key={r} className="flex gap-12 shrink-0">
-              {["Jaipur","Udaipur","Jodhpur","Jaisalmer","Pushkar","Bikaner","Ajmer","Palace Weddings","Desert Sangeets","Fort Ceremonies","NRI Families","1100+ Events","4.9★ Rating"].map((t,i) => (
+              {["Jaipur","Udaipur","Jodhpur","Jaisalmer","Pushkar","Bikaner","Ajmer","Palace Weddings","Desert Sangeets","Fort Ceremonies","NRI Families","700+ Shows","4.9★ Rating"].map((t,i) => (
                 <span key={i} className="flex items-center gap-3 text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
                   <span className="w-1 h-1 rounded-full bg-[#D4AF37] inline-block"/>
                   {t}

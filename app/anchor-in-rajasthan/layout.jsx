@@ -5,7 +5,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://yashsoni.in/anchor-in-rajasthan",
   name: "Anchor in Rajasthan — Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",
@@ -97,7 +97,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Anchor in Rajasthan | Yash Soni",
-    description: "Jaipur · Udaipur · Jodhpur · Jaisalmer · Pushkar. 1100+ events. Palace weddings & destination events across Rajasthan.",
+    description: "Jaipur · Udaipur · Jodhpur · Jaisalmer · Pushkar. 700+ shows. Palace weddings & destination events across Rajasthan.",
     images: ["/og-image.webp"],
   },
   other: {

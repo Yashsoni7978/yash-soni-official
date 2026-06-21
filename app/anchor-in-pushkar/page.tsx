@@ -31,7 +31,7 @@ const localBusinessSchema = {
     "Satvik Protocol Wedding Anchor",
     "Brahma Temple Heritage Host",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -118,7 +118,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Pushkar Destination Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 4+ years and 1,100+ events. Specialist in Pushkar's unique event dichotomy: driving massive Sangeet energy under strict traditional venue protocols, and hosting ultra-premium NRI weddings across the Westin-Ananta corridor.",
+  description: "Professional event anchor with 4+ years and 700+ shows. Specialist in Pushkar's unique event dichotomy: driving massive Sangeet energy under strict traditional venue protocols, and hosting ultra-premium NRI weddings across the Westin-Ananta corridor.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -158,7 +158,7 @@ const webPageSchema = {
   url: FULL_URL,
   name: `Best Anchor in Pushkar | Elite NRI Destination Wedding Host — Yash Soni`,
   headline: `Pushkar's Most Trusted Event Anchor for Westin, Ananta & Luxury Desert Inter-Cultural Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier anchor for Pushkar luxury destination weddings. Specialist in handling global VIPs, massive open-air acoustics, and driving organic energy under strict traditional protocols.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Pushkar luxury destination weddings. Specialist in handling global VIPs, massive open-air acoustics, and driving organic energy under strict traditional protocols.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Rajasthan` },
@@ -198,7 +198,7 @@ export const metadata: Metadata = {
     url: FULL_URL,
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Pushkar | Elite Desert & NRI Wedding Host`,
-    description: `4.9★ rated. 1,100+ events. Pushkar's premium anchor for Westin and Ananta resort luxury weddings. Flawless bilingual English/Hindi execution.`,
+    description: `4.9★ rated. 700+ shows. Pushkar's premium anchor for Westin and Ananta resort luxury weddings. Flawless bilingual English/Hindi execution.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Pushkar — Anchor Yash Soni at Desert Luxury Properties` }],
   },
   twitter: {
@@ -229,7 +229,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Pushkar?", a: "Anchor Yash Soni is rated 4.9★ with 1,100+ events across Rajasthan, specialising in Pushkar's unique sacred-city destination wedding circuit — Ananta Spa & Resorts, Westin Pushkar, The Bhanwar Singh Palace, and lakeside heritage properties. Bilingual Hindi/English, unscripted, experienced with NRI families who choose Pushkar for its spiritual and visual significance." },
+  { q: "Who is the best anchor for destination weddings in Pushkar?", a: "Anchor Yash Soni is rated 4.9★ with 700+ shows across Rajasthan, specialising in Pushkar's unique sacred-city destination wedding circuit — Ananta Spa & Resorts, Westin Pushkar, The Bhanwar Singh Palace, and lakeside heritage properties. Bilingual Hindi/English, unscripted, experienced with NRI families who choose Pushkar for its spiritual and visual significance." },
   { q: "What makes hosting a wedding in Pushkar uniquely challenging?", a: "Pushkar is a sacred city with specific cultural sensitivities around noise levels, timing, and ceremonial respect for the ghats and temple vicinity. Navigating event energy and crowd enthusiasm within those constraints requires a host who understands the city deeply — keeping celebrations joyful while honouring the sanctity of the location." },
   { q: "Can you handle NRI families who choose Pushkar for a destination Mehendi or Sangeet?", a: "Pushkar increasingly attracts NRI families seeking a spiritual, intimate backdrop away from the grand palace circuit. The hosting challenge is intimacy at scale — keeping the energy personal and culturally resonant while ensuring international guests understand and feel part of the Rajasthani heritage. This is a core specialisation." },
   { q: "Do you anchor events near Pushkar Lake and the camel fair grounds?", a: "Lakeside and heritage property events around Pushkar Lake are a distinct circuit. The open-air acoustic environment, crowd proximity to the ghats, and the spiritual atmosphere all require a host who reads the room and calibrates energy accordingly — celebratory without being irreverent." },

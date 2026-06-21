@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     template: "%s | Anchor Yash Soni",
   },
   description:
-    "Looking for the best anchor in Jaipur? Anchor Yash Soni has hosted 1100+ events — from palace weddings in Kukas & Amer Road to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura. Jaipur's most trusted event host.",
+    "Looking for the best anchor in Jaipur? Anchor Yash Soni has hosted 700+ shows — from palace weddings in Kukas & Amer Road to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura. Jaipur's most trusted event host.",
   keywords: [
     "best anchor in jaipur",
     "best wedding anchor in jaipur",
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description:
-      "1100+ events. 10,000+ crowd commanded. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
+      "700+ shows. 10,000+ crowd commanded. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
     images: [
       {
         url: "/og-image.webp",
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Best Anchor in Jaipur | Anchor Yash Soni",
     description:
-      "1100+ events. Jaipur's most commanding anchor for weddings, corporate events & Sangeets.",
+      "700+ shows. Jaipur's most commanding anchor for weddings, corporate events & Sangeets.",
     images: [
       {
         url: "/og-image.webp",
@@ -152,7 +152,7 @@ const localBusinessSchema = {
   name: "Anchor Yash Soni",
   alternateName: ["Best Anchor in Jaipur", "Anchor Yash", "Yash Soni Anchor"],
   description:
-    "Anchor Yash Soni is the best anchor in Jaipur with 1100+ events hosted across Rajasthan and India. Specialist in luxury weddings, Sangeet ceremonies, corporate award nights, Haldi, Mehendi, and VIP events. Bilingual Hindi/English host serving Kukas, Amer Road, Ajmer Road, Sitapura JECC, Mansarovar and all major event venues in Jaipur.",
+    "Anchor Yash Soni is the best anchor in Jaipur with 700+ shows hosted across Rajasthan and India. Specialist in luxury weddings, Sangeet ceremonies, corporate award nights, Haldi, Mehendi, and VIP events. Bilingual Hindi/English host serving Kukas, Amer Road, Ajmer Road, Sitapura JECC, Mansarovar and all major event venues in Jaipur.",
   url: "https://yashsoni.in",
   telephone: "+917737877978",
   // FIXED: Real email — obfuscated form does not parse in schema.org
@@ -172,7 +172,7 @@ const localBusinessSchema = {
       "Cultural Traditions of Rajasthan",
       "Bilingual Hosting",
     ],
-    award: "1100+ Events Hosted Milestone",
+    award: "700+ Shows Hosted Milestone",
     memberOf: {
       "@type": "Organization",
       name: "Wedding Planners Association of Rajasthan",
@@ -230,7 +230,7 @@ const personSchema = {
   name: "Yash Soni",
   jobTitle: "Premium Event Anchor & Emcee",
   description:
-    "Best anchor in Jaipur with 1100+ events hosted. Expert in luxury weddings, Sangeet ceremonies, corporate events, and destination weddings across Rajasthan.",
+    "Best anchor in Jaipur with 700+ shows hosted. Expert in luxury weddings, Sangeet ceremonies, corporate events, and destination weddings across Rajasthan.",
   url: "https://yashsoni.in",
   image: "https://yashsoni.in/og-image.webp",
   telephone: "+917737877978",

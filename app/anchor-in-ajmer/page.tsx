@@ -32,7 +32,7 @@ const localBusinessSchema = {
     "Sufi Culture Destination Anchor",
     "Ajmer NRI Destination Host",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL,
   telephone: "+917737877978",
   email: "bookings@yashsoni.in",
@@ -120,7 +120,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Ajmer Heritage Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 4+ years and 1,100+ events across Rajasthan, India. Specialist in Ajmer's premium heritage properties, lake-side acoustics, and syncretic cultural hosting.",
+  description: "Professional event anchor and emcee with 4+ years and 700+ shows across Rajasthan, India. Specialist in Ajmer's premium heritage properties, lake-side acoustics, and syncretic cultural hosting.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",
@@ -162,7 +162,7 @@ const webPageSchema = {
   url: FULL_URL,
   name: `Best Anchor in Ajmer | Pratap Palace & Heritage Wedding Host — Yash Soni`,
   headline: `India's Most Trusted Event Anchor for Ajmer — Pratap Palace, Mansingh & the Central Rajasthan Circuit`,
-  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier anchor for Ajmer destination weddings at Pratap Palace (Taj) & Ana Sagar properties. Regional cultural fluency. Bilingual, unscripted.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Ajmer destination weddings at Pratap Palace (Taj) & Ana Sagar properties. Regional cultural fluency. Bilingual, unscripted.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Central Rajasthan` },
@@ -174,7 +174,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Ajmer | Premium Heritage Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Ajmer? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for luxury weddings at Pratap Palace & Ana Sagar lake outposts. Syncretic cultural fluency, bilingual English/Hindi, completely unscripted.`,
+  description: `Looking for the best anchor in Ajmer? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for luxury weddings at Pratap Palace & Ana Sagar lake outposts. Syncretic cultural fluency, bilingual English/Hindi, completely unscripted.`,
   keywords: [
     "anchor in ajmer",
     "best anchor in ajmer",
@@ -204,7 +204,7 @@ export const metadata: Metadata = {
     url: FULL_URL,
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Ajmer | Premium Heritage Wedding Host`,
-    description: `4.9★ rated. 1,100+ events. Ajmer's most trusted anchor for Pratap Palace and premium heritage properties. Seamless bilingual hosting for central Rajasthan's elite families.`,
+    description: `4.9★ rated. 700+ shows. Ajmer's most trusted anchor for Pratap Palace and premium heritage properties. Seamless bilingual hosting for central Rajasthan's elite families.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ajmer — Anchor Yash Soni at Pratap Palace` }],
   },
   twitter: {
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
     title: `Best Anchor in Ajmer | Anchor Yash Soni — 4.9★`,
-    description: `Pratap Palace. Ana Sagar. Central Rajasthan's premium bilingual heritage wedding anchor. 1,100+ events. Zero paper scripts.`,
+    description: `Pratap Palace. Ana Sagar. Central Rajasthan's premium bilingual heritage wedding anchor. 700+ shows. Zero paper scripts.`,
     images: [OG_IMAGE],
   },
   other: {
@@ -235,7 +235,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for destination weddings in Ajmer?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events, specialising in Ajmer and Pushkar's unique destination wedding circuit — including premium resorts and heritage properties. Bilingual Hindi/English, completely unscripted, and experienced in managing large-scale destination events for NRI and traditional Indian families." },
+  { q: "Who is the best anchor for destination weddings in Ajmer?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows, specialising in Ajmer and Pushkar's unique destination wedding circuit — including premium resorts and heritage properties. Bilingual Hindi/English, completely unscripted, and experienced in managing large-scale destination events for NRI and traditional Indian families." },
   { q: "How do you manage events in Ajmer given its proximity to Pushkar?", a: "Ajmer and Pushkar often operate as a combined destination wedding hub. While Pushkar venues focus on lakeside heritage, Ajmer venues often accommodate larger capacities with a blend of modern luxury and tradition. The hosting style adapts seamlessly between the spiritual depth required for a Pushkar ceremony and the high-energy luxury needed for an Ajmer reception." },
   { q: "Can you host bilingual events for NRI families in Ajmer?", a: "Yes. Destination weddings in Ajmer frequently attract NRI families. Bilingual hosting is critical here — sophisticated English for the international guests and respectful, culturally rich Hindi for the local relatives. This ensures every guest feels completely connected to the celebration." },
   { q: "Do you anchor corporate events in Ajmer?", a: "Corporate events, dealer meets, and annual galas at Ajmer's premium hotels are a strong specialisation. The corporate hosting register is sharp, brand-aligned, and professional, distinctly different from a wedding tone." },

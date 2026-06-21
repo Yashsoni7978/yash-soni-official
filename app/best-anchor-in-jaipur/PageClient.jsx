@@ -39,7 +39,7 @@ const SLIDER_IMAGES = [
   { src: "/service-corporate.webp", caption: "VIP Birthday Gala — Vaishali Nagar" },
 ];
 const STATS = [
-  { val: "1100+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic },
+  { val: "700+", label: "Shows Hosted", sub: "across Jaipur & Rajasthan", icon: Mic },
   { val: "10,000+", label: "Largest Crowd", sub: "Commanded. Unscripted.", icon: Users },
   { val: "4.9★", label: "Client Rating", sub: "50+ verified reviews", icon: Star },
   { val: "5+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
@@ -79,7 +79,7 @@ const REVIEWS = [
   { name: "Singhania Family", text: "1,400 Baraat guests waiting in summer heat for two hours. Yash had them fully energized in under 90 seconds — completely unscripted. I will never use any other anchor.", event: "Grand Wedding", location: "Bhankrota, Jaipur", guests: "1,400 guests" },
 ];
 const PILLARS = [
-  { icon: Mic, title: "Never Scripted", desc: "Zero paper scripts in 1,100+ events. Every moment is live, responsive, and engineered for your specific crowd. The room never knows what hit it." },
+  { icon: Mic, title: "Never Scripted", desc: "Zero paper scripts in 700+ shows. Every moment is live, responsive, and engineered for your specific crowd. The room never knows what hit it." },
   { icon: ShieldCheck, title: "Crisis Proof", desc: "Power cuts, audio failures, delayed brides, last-minute changes — all handled invisible to your guests. Every single time. No exceptions." },
   { icon: GraduationCap, title: "Culturally Fluent", desc: "Deep Rajasthani wedding traditions, NRI international protocols, corporate decorum, and Bollywood crowd energy — all in one anchor." },
 ];
@@ -103,7 +103,7 @@ const BLOGS = [
   { title: "Anchor Charges in Jaipur 2026: Complete Transparent Pricing", href: "/blog/anchor-charges-jaipur-2026", category: "Pricing Guide", date: "07 Mar 2026" },
 ];
 const FAQS = [
-  { q: "Who is the best anchor in Jaipur for weddings and events?", a: "Anchor Yash Soni is one of Jaipur's most reviewed event anchors with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, WeddingWire, and Justdial. He has hosted 1,100+ events across Rajasthan and India, specialising in luxury weddings, Sangeet nights, corporate award shows, Haldi and Mehendi ceremonies, NRI destination weddings, and VIP birthday galas." },
+  { q: "Who is the best anchor in Jaipur for weddings and events?", a: "Anchor Yash Soni is one of Jaipur's most reviewed event anchors with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, WeddingWire, and Justdial. He has hosted 700+ shows across Rajasthan and India, specialising in luxury weddings, Sangeet nights, corporate award shows, Haldi and Mehendi ceremonies, NRI destination weddings, and VIP birthday galas." },
   { q: "What areas of Jaipur does the anchor cover?", a: "Yash Soni covers all major event zones across Jaipur — palace and heritage venues in Kukas, Amer Road, and Delhi Road; farmhouse wedding venues on Ajmer Road, Bhankrota, and Jhotwara; premium banquets in Mansarovar, Vaishali Nagar, and C-Scheme; and corporate hubs including JECC Sitapura, Tonk Road, and JLN Marg. He also travels Jaipur & Rajasthan and across Rajasthan for destination events." },
   { q: "Is Anchor Yash Soni available for Sangeet and Haldi in Jaipur?", a: "Yes. Sangeet and Haldi ceremonies are core specialisations. For Sangeet events on Ajmer Road and Bhankrota farmhouses, he routinely manages 500–1,500 guests with dance floors packed until 4 AM. For Haldi, he curates interactive games, viral moments, and crowd energy that makes the ceremony genuinely memorable." },
   { q: "Can this anchor handle a large farmhouse crowd of 1000+ guests on Ajmer Road?", a: "This is a signature strength. Yash Soni has commanded open events of 10,000+ people unscripted. A farmhouse crowd of 1,000–1,500 guests on Ajmer Road is a standard evening. The ability to read a large crowd's energy, control chaos, and redirect attention is the core skill that separates a real anchor from an announcer." },
@@ -112,7 +112,7 @@ const FAQS = [
   { q: "Is Anchor Yash Soni available for corporate events at JECC Sitapura?", a: "Yes. Corporate events — award nights, product launches, annual galas, and business summits — are a core specialisation. Events at JECC Sitapura, Tonk Road, JLN Marg, and Malviya Nagar for national corporations are a regular part of the calendar. The corporate register is completely different from wedding hosting — sharp, concise, brand-aligned, and capable of matching the gravitas of keynote speakers." },
   { q: "What languages does Anchor Yash Soni host in?", a: "Hindi and English fluently, often simultaneously. For NRI families and international guests, transitions between Hindi and English are completely seamless — sometimes mid-sentence. There is also working knowledge of Rajasthani and Marwari for traditional ceremonies and rituals." },
   { q: "Is Anchor Yash available for birthday parties in Jaipur?", a: "Yes. Milestone birthdays, anniversary galas, and VIP private events in Mansarovar, Vaishali Nagar, and C-Scheme are a significant part of the calendar. Every event is fully customised — the energy and tone matched precisely to the family's personality and vision." },
-  { q: "What makes this anchor different from other anchors in Jaipur?", a: "Three things: First, not a single paper script has been used in 1,100+ events. Second, crisis management — power cuts, audio failures, delayed schedules — are all handled invisible to guests. Third, cultural fluency across Rajasthani traditions, NRI international protocols, and corporate decorum that most anchors simply don't have." },
+  { q: "What makes this anchor different from other anchors in Jaipur?", a: "Three things: First, not a single paper script has been used in 700+ shows. Second, crisis management — power cuts, audio failures, delayed schedules — are all handled invisible to guests. Third, cultural fluency across Rajasthani traditions, NRI international protocols, and corporate decorum that most anchors simply don't have." },
   { q: "Does Yash Soni travel outside Jaipur for events?", a: "Yes. Events across Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer — are a regular part of the calendar. Jaipur & Rajasthan destination events are also available for the right engagements. Travel logistics and accommodation are structured into the booking terms." },
   { q: "How much does the best anchor in Jaipur charge?", a: "Pricing varies based on event type, duration, date, and location. For a transparent pricing breakdown, see the Anchor Charges in Jaipur 2026 guide on the blog. To get an exact quote for your event, reach out via WhatsApp with your event date, type, and guest count." },
   { q: "What is the booking process?", a: "Step 1: Send a WhatsApp message with your event date, type, and guest count. Step 2: Availability check and introductory call. Step 3: Simple written agreement and 50% advance to confirm the date. The remaining balance is due on the event day before the show begins." },
@@ -315,7 +315,7 @@ const faqSchema = {
               </h1>
               {/* Subhead — India-wide scope, key locations */}
               <p className="text-sm md:text-lg text-zinc-300 mb-3 max-w-xl font-light leading-relaxed">
-                Anchor Yash Soni — 1,100+ events across Jaipur & Rajasthan. Palace weddings in Kukas, Sangeets on Ajmer Road, corporate galas at JECC Sitapura, and destination events across Rajasthan.
+                Anchor Yash Soni — 700+ shows across Jaipur & Rajasthan. Palace weddings in Kukas, Sangeets on Ajmer Road, corporate galas at JECC Sitapura, and destination events across Rajasthan.
               </p>
               <p className="text-xs md:text-sm text-zinc-500 mb-8 font-light tracking-wide">
                 Bilingual Hindi/English &nbsp;·&nbsp; Unscripted &nbsp;·&nbsp; 10,000+ crowd commanded &nbsp;·&nbsp; Zero paper scripts
@@ -368,7 +368,7 @@ const faqSchema = {
               <G>One Name Appears.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted across Jaipur & Rajasthan</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has earned a reputation that no award can manufacture — only 1,100+ events can build.
+              With <strong className="text-white">700+ shows hosted across Jaipur & Rajasthan</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has earned a reputation that no award can manufacture — only 700+ shows can build.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               Whether it is a royal Varmala ceremony at a Kukas palace property, a 1,500-guest farmhouse Sangeet on Ajmer Road that needs to stay electric until 4 AM, a national brand's annual award night at JECC Sitapura, or a milestone birthday gala in Mansarovar — Yash Soni is the anchor Jaipur's elite families, NRI clients, and national corporations choose when the event cannot afford to be ordinary.
@@ -479,11 +479,11 @@ const faqSchema = {
               Jaipur's event market is saturated with anchors who boast "20 years of experience." What that means in practice: 20 years of reading from the same paper script while your million-rupee venue decor rots in awkward silence.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
-              With a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has built his reputation the only way that matters — through 1,100+ events where clients kept coming back and guests kept asking for his number.
+              With a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has built his reputation the only way that matters — through 700+ shows where clients kept coming back and guests kept asking for his number.
             </p>
             <div className="space-y-3 mb-8">
               {[
-                "Never used a paper script in 1,100+ events. Zero.",
+                "Never used a paper script in 700+ shows. Zero.",
                 "Commands crowds of 10,000+ unscripted — farmhouse to stadium",
                 "Bilingual Hindi/English in real time, mid-sentence if needed",
                 "Crisis-tested: power cuts, audio fails, delayed schedules — all invisible to guests",

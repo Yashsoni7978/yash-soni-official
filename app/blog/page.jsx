@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "Wedding Anchor Blog | Tips & Guides | Anchor Yash Soni",
     description:
-      "Real stories, expert hosting tips, and event insights from 1,100+ events across Rajasthan and India.",
+      "Real stories, expert hosting tips, and event insights from 700+ shows across Rajasthan and India.",
     url: "https://yashsoni.in/blog",
     siteName: "Anchor Yash Soni",
     locale: "en_IN",

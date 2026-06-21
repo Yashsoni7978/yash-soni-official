@@ -5,7 +5,7 @@ import { buildServiceSchema } from "../../lib/schema/serviceSchema";
 const serviceSchema = buildServiceSchema({
   pageUrl: "https://yashsoni.in/destination-wedding-anchor",
   name: "Destination Wedding Anchor India — Anchor Yash Soni",
-  description: "700+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   serviceType: "Destination Wedding Hosting",
   providerJobTitle: "Destination Wedding Anchor & Emcee",
   knowsLanguage: ["Hindi", "English", "Rajasthani", "Marwari"],

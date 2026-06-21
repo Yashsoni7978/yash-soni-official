@@ -26,16 +26,16 @@ import { AnimatedStatsCard } from "../components/AnimatedStatsCard";
 // Title intentionally differentiated from layout default via a distinct
 // primary keyword to avoid duplicate title tag in Google's index.
 export const metadata = {
-  title: "Anchor Yash Soni | #1 Event Host in Jaipur — 1100+ Events",
+  title: "Anchor Yash Soni | #1 Event Host in Jaipur — 700+ Shows",
   description:
-    "Anchor Yash Soni is India's premier event host for luxury weddings, corporate galas, and celebrity events. 1,100+ events hosted unscripted with a 4.9★ rating.",
+    "Anchor Yash Soni is India's premier event host for luxury weddings, corporate galas, and celebrity events. 700+ shows hosted unscripted with a 4.9★ rating.",
   alternates: {
     canonical: "https://yashsoni.in",
   },
   openGraph: {
-    title: "Best Anchor in Jaipur | Anchor Yash Soni — 1100+ Events",
+    title: "Best Anchor in Jaipur | Anchor Yash Soni — 700+ Shows",
     description:
-      "1,100+ events. 10,000+ crowd commanded. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
+      "700+ shows. 10,000+ crowd commanded. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
     // FIXED: og-home.webp confirmed missing in /public — using existing og-image.webp
     images: [
       {
@@ -53,7 +53,7 @@ const WA_LINK =
   "https://wa.me/917737877978?text=Hi%20Yash!%20I%20found%20your%20website%20and%20I%27d%20like%20to%20check%20availability%20for%20my%20event.";
 
 const STATS = [
-  { value: "1100+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic },
+  { value: "700+", label: "Shows Hosted", sub: "across Jaipur & Rajasthan", icon: Mic },
   { value: "10,000+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { value: "4+", label: "Years on Stage", sub: "Zero scripts", icon: Award },
   { value: "4.9★", label: "Rated by Clients", sub: "50+ reviews", icon: UserCheck },
@@ -104,7 +104,7 @@ const PLATFORMS = [
 ];
 
 const WHY_ME = [
-  { icon: Sparkles, title: "100% Unscripted", text: "Zero paper scripts in 1,100+ events. Every moment is responsive, real, and built for your specific crowd — not a template." },
+  { icon: Sparkles, title: "100% Unscripted", text: "Zero paper scripts in 700+ shows. Every moment is responsive, real, and built for your specific crowd — not a template." },
   { icon: Users, title: "Crowd Psychology", text: "I don't manage crowds — I move them. Whether 50 guests or 1,500 at an open venue, the energy stays locked until I decide it peaks." },
   { icon: Quote, title: "Crisis-Proof", text: "Power cuts, delayed brides, audio failures — handled invisible to guests every time. Your insurance policy against awkward silences." },
 ];
@@ -146,11 +146,11 @@ const REVIEWS = [
 ];
 
 const FAQS = [
-  { q: "Who is Anchor Yash Soni?", a: "Anchor Yash Soni is a premium event host and emcee with 1,100+ events hosted across Jaipur & Rajasthan. With a 4.9★ rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in Rajasthani cultural traditions." },
+  { q: "Who is Anchor Yash Soni?", a: "Anchor Yash Soni is a premium event host and emcee with 700+ shows hosted across Jaipur & Rajasthan. With a 4.9★ rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in Rajasthani cultural traditions." },
   { q: "Do you travel for Destination Weddings?", a: "Absolutely. While Jaipur is home, I host events across Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and travel across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
   { q: "Which languages are you fluent in?", a: "I switch effortlessly between Hindi for the emotions, English for the class, and a bit of Rajasthani/Marwari to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
   { q: "Can you handle a crowd of 1,000+ guests?", a: "Large-format crowds are a specialty. I have commanded open events of 10,000+ people unscripted. Crowd psychology — reading energy patterns, controlling chaos, redirecting attention — is the core skill that separates a real anchor from an announcer." },
-  { q: "Why should we hire Anchor Yash over others?", a: "Because I have never used a paper script in 1,100+ events. If the PA fails, I turn it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. I am your insurance policy against awkward silences — the difference between an event people attend and one they remember. My 4.9★ rating across 50+ reviews says the rest." },
+  { q: "Why should we hire Anchor Yash over others?", a: "Because I have never used a paper script in 700+ shows. If the PA fails, I turn it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. I am your insurance policy against awkward silences — the difference between an event people attend and one they remember. My 4.9★ rating across 50+ reviews says the rest." },
   { q: "How far in advance should I book?", a: "My calendar fills 6–8 months ahead for peak wedding season (October–February). I do not maintain a waitlist and do not send replacements. Once your date is confirmed, it is exclusively reserved. Reach out via WhatsApp the moment your date is finalised." },
   { q: "Do you prepare scripts for our family members?", a: "Yes. I know Chachas and Masis get nervous. I provide simple, funny script templates and do a quick 10-minute rehearsal with them before the show so they look like pros on stage." },
   { q: "What happens if something goes wrong on the day?", a: "Technical failures, power cuts, last-minute schedule changes, delayed brides — all handled without the guests noticing. Crisis management under pressure is a core competency, not an afterthought." },
@@ -282,7 +282,7 @@ export default function HomePage() {
                 <GoldText>Beyond Scripts.</GoldText>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mb-4 leading-relaxed font-light">
-                With 1,100+ events hosted across Jaipur & Rajasthan, Anchor
+                With 700+ shows hosted across Jaipur & Rajasthan, Anchor
                 Yash Soni is not just a host — he is a crowd psychologist, a
                 cultural navigator, and a pressure-tested professional who has
                 never reached for a paper script.
@@ -512,7 +512,7 @@ export default function HomePage() {
               </p>
               <div className="space-y-3 mb-8">
                 {[
-                  "Never used a paper script in 1,100+ events",
+                  "Never used a paper script in 700+ shows",
                   "Commands crowds of 10,000+ unscripted",
                   "Bilingual Hindi/English in real time",
                   "Crisis-tested: power cuts, audio failures, delays — all handled",
@@ -779,7 +779,7 @@ export default function HomePage() {
                   </strong>
                   . As a premier wedding anchor in Jaipur and corporate emcee
                   across Jaipur & Rajasthan, my approach is built on the
-                  foundation of 1,100+ live stage hours where every word is
+                  foundation of 700+ live stage hours where every word is
                   calculated for impact but delivered with raw authenticity.
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">

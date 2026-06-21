@@ -28,7 +28,7 @@ const localBusinessSchema = {
     "Oberoi Udaivilas Anchor",
     "Jagmandir Island Wedding Host",
   ],
-  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",
@@ -85,7 +85,7 @@ const personSchema = {
   name:              "Yash Soni",
   alternateName:     ["Anchor Yash Soni", "Anchor Yash"],
   jobTitle:          "Professional Event Anchor & Emcee",
-  description:       `Yash Soni is a professional event anchor with 4+ years of experience in wedding and corporate events. He has hosted 1,100+ events across Rajasthan and India, including luxury destination weddings at Taj Lake Palace and Oberoi Udaivilas in Udaipur.`,
+  description:       `Yash Soni is a professional event anchor with 4+ years of experience in wedding and corporate events. He has hosted 700+ shows across Rajasthan and India, including luxury destination weddings at Taj Lake Palace and Oberoi Udaivilas in Udaipur.`,
   url:               `https://${DOMAIN}`,
   image:             `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone:         "+917737877978",
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Udaipur | Wedding & Destination Event Host — Anchor Yash Soni`,
   description:
-    `Looking for the best anchor in Udaipur? Anchor Yash Soni — 4.9★ rated, 1,100+ events, 4+ years. Expert for destination weddings at Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island. Bilingual Hindi/English, unscripted, NRI-experienced.`,
+    `Looking for the best anchor in Udaipur? Anchor Yash Soni — 4.9★ rated, 700+ shows, 4+ years. Expert for destination weddings at Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island. Bilingual Hindi/English, unscripted, NRI-experienced.`,
   keywords: [
     // Core identity — highest volume
     "anchor in udaipur",
@@ -173,7 +173,7 @@ export const metadata: Metadata = {
     url:          FULL_URL,
     siteName:    "Anchor Yash Soni",
     title:       `Best Anchor in Udaipur | Destination Wedding & Event Host — Anchor Yash Soni`,
-    description: `4.9★ rated. 1,100+ events. Udaipur's most trusted anchor for lake palace weddings, Sangeets at Jagmandir Island & NRI destination events. Unscripted, bilingual, premium.`,
+    description: `4.9★ rated. 700+ shows. Udaipur's most trusted anchor for lake palace weddings, Sangeets at Jagmandir Island & NRI destination events. Unscripted, bilingual, premium.`,
     images: [
       {
         url:    OG_IMAGE,
@@ -188,7 +188,7 @@ export const metadata: Metadata = {
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
     title:       `Best Anchor in Udaipur | Anchor Yash Soni — 4.9★`,
-    description: `Taj Lake Palace. Oberoi Udaivilas. Jagmandir Island. Udaipur's most trusted destination wedding anchor — 1,100+ events, 4.9★ rated.`,
+    description: `Taj Lake Palace. Oberoi Udaivilas. Jagmandir Island. Udaipur's most trusted destination wedding anchor — 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
   // Geo signals — Google uses these for local SEO
@@ -210,7 +210,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Who is the best anchor for destination weddings in Udaipur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 1,100+ events anchored across Rajasthan, specialising in Udaipur's lake palace destination wedding circuit — Taj Lake Palace, Oberoi Udaivilas, Jagmandir Island, Leela Udaipur, Raffles, and Fateh Garh. Bilingual Hindi/English, unscripted, NRI-experienced, with zero paper scripts across his entire career.",
+    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Udaipur's lake palace destination wedding circuit — Taj Lake Palace, Oberoi Udaivilas, Jagmandir Island, Leela Udaipur, Raffles, and Fateh Garh. Bilingual Hindi/English, unscripted, NRI-experienced, with zero paper scripts across his entire career.",
   },
   {
     q: "Have you hosted events at Taj Lake Palace and Jagmandir Island?",
@@ -238,7 +238,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash different from local Udaipur anchors?",
-    a: "Local anchors know the city. Anchor Yash Soni knows the city and the crowd psychology to command every segment of it — 1,100+ events, 10,000+ crowds commanded, 4.9★ rating, and a specific track record at Udaipur's top-tier palace properties. The difference shows when the NRI grandfather from London feels as included as the local Rajasthani family cousin dancing in the front row.",
+    a: "Local anchors know the city. Anchor Yash Soni knows the city and the crowd psychology to command every segment of it — 700+ shows, 10,000+ crowds commanded, 4.9★ rating, and a specific track record at Udaipur's top-tier palace properties. The difference shows when the NRI grandfather from London feels as included as the local Rajasthani family cousin dancing in the front row.",
   },
   {
     q: "Who is the best emcee in Udaipur for lake palace weddings?",
