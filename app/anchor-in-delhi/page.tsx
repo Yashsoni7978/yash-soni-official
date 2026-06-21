@@ -106,7 +106,7 @@ const personSchema = {
     "Punjabi Sangeet Hosting",
     "Aerocity Corporate Summits",
   ],
-  award: "4.9★ Rated — 200+ Five-Star Reviews",
+  award: "4.9★ Rated — 50+ Five-Star Reviews",
 };
 
 const breadcrumbSchema = {

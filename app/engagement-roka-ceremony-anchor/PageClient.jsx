@@ -78,7 +78,7 @@ const FAQItem = ({ q, a, id }) => {
 const STATS = [
   { val:"1100", suffix:"+", label:"Events Anchored",      sub:"across Jaipur & Rajasthan",           icon:Mic2   },
   { val:"300",  suffix:"+", label:"Pre-Wedding Events",   sub:"Roka · Ring · Sagai",    icon:Heart  },
-  { val:"4.9",  suffix:"★", label:"Client Rating",        sub:"200+ verified reviews",  icon:Star   },
+  { val:"4.9",  suffix:"★", label:"Client Rating",        sub:"50+ verified reviews",  icon:Star   },
   { val:"2",    suffix:"+", label:"Families United",      sub:"Every engagement",       icon:Users  },
 ];
 const CEREMONY_TYPES = [

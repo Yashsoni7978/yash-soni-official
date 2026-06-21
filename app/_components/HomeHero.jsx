@@ -30,7 +30,7 @@ export const HomeHero = ({ waLink }) => {
           {/* Badge */}
           <div className="mb-5">
             <span className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-4 py-1.5 rounded-full /50 text-[#B5952F] text-[11px] md:text-xs font-bold uppercase tracking-widest backdrop-blur-md">
-              <Star size={10} fill="#D4AF37" /> 4.9★ Rated · 200+ Reviews
+              <Star size={10} fill="#D4AF37" /> 4.9★ Rated · 50+ Reviews
             </span>
           </div>
           {/* H1 — name first, keyword in subhead */}

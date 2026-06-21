@@ -72,7 +72,7 @@ const STATS = [
   { val: "1100+", label: "Events Hosted", icon: Mic2, color: "text-emerald-400" },
   { val: "4.9★", label: "Client Rating", icon: Star, color: "text-[#B5952F]" },
   { val: "3-4 hrs", label: "Zero Boring Moments", icon: Music, color: "text-emerald-400" },
-  { val: "200+", label: "Verified Reviews", icon: Trophy, color: "text-[#B5952F]" },
+  { val: "50+", label: "Verified Reviews", icon: Trophy, color: "text-[#B5952F]" },
 ];
 const GAME_CATEGORIES = [
   {
@@ -383,7 +383,7 @@ export default function MehendiAnchor() {
               The Mehendi is the most colourful, relaxed event of the entire wedding week. It's where families truly bond before the heavy ceremonies begin. But 3–4 hours of henna application with no hosting structure turns into 3–4 hours of guests on their phones.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni has mastered the Mehendi format across every Jaipur zone — farmhouse weddings on Ajmer Road with 500+ guests, palace Mehendi events in Kukas and Amer Road for NRI families, and intimate family ceremonies in Mansarovar and Vaishali Nagar.
+              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has mastered the Mehendi format across every Jaipur zone — farmhouse weddings on Ajmer Road with 500+ guests, palace Mehendi events in Kukas and Amer Road for NRI families, and intimate family ceremonies in Mansarovar and Vaishali Nagar.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Hands-free musical games. Couple trivia roasts. Dholak sessions that bridge elders and youth. And a dance floor that opens before the henna even dries.

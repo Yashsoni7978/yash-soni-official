@@ -9,7 +9,7 @@ export const ReviewsMarquee = ({ reviews }) => {
           Real Words. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">Real Impact.</span>
         </h2>
         <p className="text-zinc-500 text-xs md:text-sm mt-2">
-          4.9★ across 200+ client reviews — weddings, Sangeets, and corporate events
+          4.9★ across 50+ client reviews — weddings, Sangeets, and corporate events
         </p>
       </div>
       <div className="flex overflow-hidden mask-fade mb-5">

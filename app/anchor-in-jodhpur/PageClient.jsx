@@ -79,7 +79,7 @@ const FAQItem = ({ q, a, id }) => {
 const STATS = [
   { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
-  { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
+  { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
 ];
 const JODHPUR_IDENTITY = [
@@ -191,7 +191,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash different from local Jodhpur anchors?",
-    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 1,100+ events, a 4.9★ rating from 200+ verified clients, and a zero-paper-script career.",
+    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 1,100+ events, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
   },
   {
     q: "Who is the best emcee in Jodhpur for destination weddings?",
@@ -569,7 +569,7 @@ export default function JodhpurPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Jodhpur",
-                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Jodhpur — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Jodhpur — by any name.",
                 keywords: ["best emcee in jodhpur", "best anchor in jodhpur", "best host in jodhpur", "best mc jodhpur"],
               },
               {

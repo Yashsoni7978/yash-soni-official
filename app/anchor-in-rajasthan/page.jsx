@@ -90,7 +90,7 @@ const FAQItem = ({ q, a, id }) => {
 const STATS = [
   { val:"1100", suffix:"+", label:"Events Anchored",     sub:"Across Rajasthan & India", icon:Mic2     },
   { val:"13",   suffix:"+", label:"Rajasthan Cities",    sub:"Complete coverage",        icon:MapPin   },
-  { val:"4.9",  suffix:"★", label:"Client Rating",       sub:"200+ verified reviews",    icon:Star     },
+  { val:"4.9",  suffix:"★", label:"Client Rating",       sub:"50+ verified reviews",    icon:Star     },
   { val:"10",   suffix:"K+",label:"Largest Crowd",       sub:"Commanded live",           icon:Users    },
 ];
 const CITIES = [

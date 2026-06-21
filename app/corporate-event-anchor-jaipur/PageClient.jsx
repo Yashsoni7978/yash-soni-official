@@ -299,7 +299,7 @@ export default function CorporateAnchor() {
                 When the CEO speaks, the audience should listen. Jaipur's most reviewed corporate anchor — award nights at JECC Sitapura, summits at Birla Auditorium, product launches at Marriott and Fairmont.
               </p>
               <p className="text-zinc-600 text-sm mb-8 pl-6">
-                70+ national brands &nbsp;·&nbsp; 4.9★ across 200+ reviews &nbsp;·&nbsp; Broadcast-ready
+                70+ national brands &nbsp;·&nbsp; 4.9★ across 50+ reviews &nbsp;·&nbsp; Broadcast-ready
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">

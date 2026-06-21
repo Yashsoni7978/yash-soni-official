@@ -9,7 +9,7 @@ import PageClient from './PageClient';
 export const metadata: Metadata = {
   metadataBase: new URL("https://yashsoni.in"),
   title: "Best Anchor in Jaipur | Anchor Yash Soni — 4.9★ Rated Wedding & Event Host",
-  description: "Jaipur's highest-rated anchor with 200+ reviews. Yash Soni — unscripted, bilingual, trusted for weddings and corporate events across Rajasthan.",
+  description: "Jaipur's highest-rated anchor with 50+ reviews. Yash Soni — unscripted, bilingual, trusted for weddings and corporate events across Rajasthan.",
   keywords: [
     "best anchor in jaipur",
     "anchor in jaipur",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: "Best Anchor in Jaipur | Anchor Yash Soni — 4.9★ Rated",
     description:
-      "1100+ events. 4.9★ across 200+ reviews. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
+      "1100+ events. 4.9★ across 50+ reviews. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
     images: [
       {
         url: "/og-image.webp",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor in Jaipur for weddings and events?", a: "Anchor Yash Soni is one of Jaipur's most reviewed event anchors with a 4.9★ rating across 200+ verified reviews on Google, WedMeGood, WeddingWire, and Justdial. He has hosted 1,100+ events across Rajasthan and India, specialising in luxury weddings, Sangeet nights, corporate award shows, Haldi and Mehendi ceremonies, NRI destination weddings, and VIP birthday galas." },
+  { q: "Who is the best anchor in Jaipur for weddings and events?", a: "Anchor Yash Soni is one of Jaipur's most reviewed event anchors with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, WeddingWire, and Justdial. He has hosted 1,100+ events across Rajasthan and India, specialising in luxury weddings, Sangeet nights, corporate award shows, Haldi and Mehendi ceremonies, NRI destination weddings, and VIP birthday galas." },
   { q: "What areas of Jaipur does the anchor cover?", a: "Yash Soni covers all major event zones across Jaipur — palace and heritage venues in Kukas, Amer Road, and Delhi Road; farmhouse wedding venues on Ajmer Road, Bhankrota, and Jhotwara; premium banquets in Mansarovar, Vaishali Nagar, and C-Scheme; and corporate hubs including JECC Sitapura, Tonk Road, and JLN Marg. He also travels Jaipur & Rajasthan and across Rajasthan for destination events." },
   { q: "Is Anchor Yash Soni available for Sangeet and Haldi in Jaipur?", a: "Yes. Sangeet and Haldi ceremonies are core specialisations. For Sangeet events on Ajmer Road and Bhankrota farmhouses, he routinely manages 500–1,500 guests with dance floors packed until 4 AM. For Haldi, he curates interactive games, viral moments, and crowd energy that makes the ceremony genuinely memorable." },
   { q: "Can this anchor handle a large farmhouse crowd of 1000+ guests on Ajmer Road?", a: "This is a signature strength. Yash Soni has commanded open events of 10,000+ people unscripted. A farmhouse crowd of 1,000–1,500 guests on Ajmer Road is a standard evening. The ability to read a large crowd's energy, control chaos, and redirect attention is the core skill that separates a real anchor from an announcer." },

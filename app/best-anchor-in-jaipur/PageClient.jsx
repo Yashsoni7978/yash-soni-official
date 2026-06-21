@@ -41,7 +41,7 @@ const SLIDER_IMAGES = [
 const STATS = [
   { val: "1100+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic },
   { val: "10,000+", label: "Largest Crowd", sub: "Commanded. Unscripted.", icon: Users },
-  { val: "4.9★", label: "Client Rating", sub: "200+ verified reviews", icon: Star },
+  { val: "4.9★", label: "Client Rating", sub: "50+ verified reviews", icon: Star },
   { val: "8+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
 ];
 const SERVICES = [
@@ -103,7 +103,7 @@ const BLOGS = [
   { title: "Anchor Charges in Jaipur 2026: Complete Transparent Pricing", href: "/blog/anchor-charges-jaipur-2026", category: "Pricing Guide", date: "07 Mar 2026" },
 ];
 const FAQS = [
-  { q: "Who is the best anchor in Jaipur for weddings and events?", a: "Anchor Yash Soni is one of Jaipur's most reviewed event anchors with a 4.9★ rating across 200+ verified reviews on Google, WedMeGood, WeddingWire, and Justdial. He has hosted 1,100+ events across Rajasthan and India, specialising in luxury weddings, Sangeet nights, corporate award shows, Haldi and Mehendi ceremonies, NRI destination weddings, and VIP birthday galas." },
+  { q: "Who is the best anchor in Jaipur for weddings and events?", a: "Anchor Yash Soni is one of Jaipur's most reviewed event anchors with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, WeddingWire, and Justdial. He has hosted 1,100+ events across Rajasthan and India, specialising in luxury weddings, Sangeet nights, corporate award shows, Haldi and Mehendi ceremonies, NRI destination weddings, and VIP birthday galas." },
   { q: "What areas of Jaipur does the anchor cover?", a: "Yash Soni covers all major event zones across Jaipur — palace and heritage venues in Kukas, Amer Road, and Delhi Road; farmhouse wedding venues on Ajmer Road, Bhankrota, and Jhotwara; premium banquets in Mansarovar, Vaishali Nagar, and C-Scheme; and corporate hubs including JECC Sitapura, Tonk Road, and JLN Marg. He also travels Jaipur & Rajasthan and across Rajasthan for destination events." },
   { q: "Is Anchor Yash Soni available for Sangeet and Haldi in Jaipur?", a: "Yes. Sangeet and Haldi ceremonies are core specialisations. For Sangeet events on Ajmer Road and Bhankrota farmhouses, he routinely manages 500–1,500 guests with dance floors packed until 4 AM. For Haldi, he curates interactive games, viral moments, and crowd energy that makes the ceremony genuinely memorable." },
   { q: "Can this anchor handle a large farmhouse crowd of 1000+ guests on Ajmer Road?", a: "This is a signature strength. Yash Soni has commanded open events of 10,000+ people unscripted. A farmhouse crowd of 1,000–1,500 guests on Ajmer Road is a standard evening. The ability to read a large crowd's energy, control chaos, and redirect attention is the core skill that separates a real anchor from an announcer." },
@@ -305,7 +305,7 @@ const faqSchema = {
               {/* Badge */}
               <div className="mb-5">
                 <span className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-4 py-1.5 rounded-full /50 text-[#D4AF37] text-[10px] md:text-xs font-bold uppercase tracking-widest backdrop-blur-md">
-                  <Star size={10} fill={GOLD} /> 4.9★ · 200+ Verified Reviews · Jaipur
+                  <Star size={10} fill={GOLD} /> 4.9★ · 50+ Verified Reviews · Jaipur
                 </span>
               </div>
               {/* H1 — primary keyword */}
@@ -368,7 +368,7 @@ const faqSchema = {
               <G>One Name Appears.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted across Jaipur & Rajasthan</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni has earned a reputation that no award can manufacture — only 1,100+ events can build.
+              With <strong className="text-white">1,100+ events hosted across Jaipur & Rajasthan</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has earned a reputation that no award can manufacture — only 1,100+ events can build.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               Whether it is a royal Varmala ceremony at a Kukas palace property, a 1,500-guest farmhouse Sangeet on Ajmer Road that needs to stay electric until 4 AM, a national brand's annual award night at JECC Sitapura, or a milestone birthday gala in Mansarovar — Yash Soni is the anchor Jaipur's elite families, NRI clients, and national corporations choose when the event cannot afford to be ordinary.
@@ -479,7 +479,7 @@ const faqSchema = {
               Jaipur's event market is saturated with anchors who boast "20 years of experience." What that means in practice: 20 years of reading from the same paper script while your million-rupee venue decor rots in awkward silence.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
-              With a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni has built his reputation the only way that matters — through 1,100+ events where clients kept coming back and guests kept asking for his number.
+              With a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has built his reputation the only way that matters — through 1,100+ events where clients kept coming back and guests kept asking for his number.
             </p>
             <div className="space-y-3 mb-8">
               {[
@@ -568,7 +568,7 @@ const faqSchema = {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
-              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2">4.9★ · 200+ Verified Reviews</p>
+              <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-2">4.9★ · 50+ Verified Reviews</p>
               <h2 className="text-3xl md:text-4xl font-bold">
                 Why Jaipur <G>Trusts Yash.</G>
               </h2>

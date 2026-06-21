@@ -84,7 +84,7 @@ const FAQItem = ({ q, a, id }) => {
 const STATS = [
   { val: "1100", suffix: "+", label: "Events Anchored", sub: "Across India", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
-  { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
+  { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
 ];
 
@@ -174,7 +174,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "Who is the best anchor for luxury events in Mumbai?",
-    a: "Anchor Yash Soni is widely regarded as a premier choice for high-end events in Mumbai. Rated 4.9★ across 200+ reviews, he specializes in elite corporate events in BKC and luxury weddings at iconic properties like the Taj Mahal Palace and The St. Regis."
+    a: "Anchor Yash Soni is widely regarded as a premier choice for high-end events in Mumbai. Rated 4.9★ across 50+ reviews, he specializes in elite corporate events in BKC and luxury weddings at iconic properties like the Taj Mahal Palace and The St. Regis."
   },
   {
     q: "Do you host corporate award nights and summits in Mumbai?",

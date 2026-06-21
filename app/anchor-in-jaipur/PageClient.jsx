@@ -231,7 +231,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash the best anchor in Jaipur over other options?",
-    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 200+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 1,100+ events, not one viral moment. Second, completely unscripted — zero paper scripts across an 8+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
+    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 1,100+ events, not one viral moment. Second, completely unscripted — zero paper scripts across an 8+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
   },
   {
     q: "What is the difference between an anchor, emcee, and host in Jaipur events?",
@@ -239,7 +239,7 @@ const FAQS = [
   },
   {
     q: "Who is the best emcee in Jaipur for weddings?",
-    a: "Anchor Yash Soni is Jaipur's top-rated wedding emcee with a 4.9★ rating across 200+ verified reviews on Google, WedMeGood, and WeddingWire. As a wedding emcee in Jaipur, he has hosted 1,100+ events — Sangeet nights, Haldi functions, Mehndi ceremonies, and grand reception events — across Rambagh Palace, Fairmont Jaipur, Jai Mahal Palace, and farmhouse venues on Ajmer Road.",
+    a: "Anchor Yash Soni is Jaipur's top-rated wedding emcee with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, and WeddingWire. As a wedding emcee in Jaipur, he has hosted 1,100+ events — Sangeet nights, Haldi functions, Mehndi ceremonies, and grand reception events — across Rambagh Palace, Fairmont Jaipur, Jai Mahal Palace, and farmhouse venues on Ajmer Road.",
   },
   {
     q: "Who is the best corporate emcee in Jaipur?",
@@ -398,7 +398,7 @@ const faqSchema = {
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full /60 backdrop-blur-xl mb-8 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
               <Star className="w-4 h-4 text-[#B5952F] fill-[#D4AF37]" />
               <span className="text-[#B5952F] text-xs uppercase tracking-widest font-bold">
-                4.9★ · 200+ Reviews · Local Jaipur Anchor
+                4.9★ · 50+ Reviews · Local Jaipur Anchor
               </span>
             </div>
             {/* H1 — primary keyword */}
@@ -462,7 +462,7 @@ const faqSchema = {
           <Reveal>
             <p className="yash-citable text-xl md:text-2xl text-zinc-300 leading-relaxed font-light mb-12 border-l-2 border-[#D4AF37]/50 pl-6">
               Anchor Yash Soni is Jaipur's highest-reviewed professional event anchor — rated{" "}
-              <strong className="text-white">4.9★ across 200+ verified reviews</strong> on Google,
+              <strong className="text-white">4.9★ across 50+ verified reviews</strong> on Google,
               WedMeGood, and WeddingWire India — with{" "}
               <strong className="text-white">1,100+ events hosted</strong> spanning palace weddings
               at Rambagh Palace and Fairmont Jaipur, Sangeet nights at Ajmer Road farmhouses with
@@ -477,7 +477,7 @@ const faqSchema = {
             {[
               { stat: "1,100+", label: "Events in Jaipur", detail: "Career verified total" },
               { stat: "4.9★", label: "Average Client Rating", detail: "Google · WedMeGood · WeddingWire" },
-              { stat: "200+", label: "Verified Reviews", detail: "Across all platforms" },
+              { stat: "50+", label: "Verified Reviews", detail: "Across all platforms" },
               { stat: "0", label: "Paper Scripts Used", detail: "Across 8+ year career" },
             ].map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
@@ -529,7 +529,7 @@ const faqSchema = {
               },
               {
                 platform: "Google Reviews",
-                detail: "4.9★ · 200+ Verified Client Reviews",
+                detail: "4.9★ · 50+ Verified Client Reviews",
                 href: "https://share.google/pMZGzEGOhXnJpLq5g",
                 cta: "Read Reviews →",
               },
@@ -701,7 +701,7 @@ const faqSchema = {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Jaipur",
-                desc: "4.9★ across 200+ verified reviews on Google, WedMeGood, and WeddingWire. 1,100+ events. The most reviewed event professional in Jaipur — by any name.",
+                desc: "4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire. 1,100+ events. The most reviewed event professional in Jaipur — by any name.",
                 keywords: ["best emcee in jaipur", "best anchor in jaipur", "best host in jaipur", "best mc jaipur"],
               },
               {

@@ -402,7 +402,7 @@ export default function GalaDinnerEventPlanner() {
       <section className="py-24  border-b border-[#3B82F6]/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
-            { num: "200+", label: "Galas Hosted" },
+            { num: "50+", label: "Galas Hosted" },
             { num: "10K+", label: "Plates Served" },
             { num: "100%", label: "Brand Compliant" },
             { num: "Zero", label: "Protocol Errors" }

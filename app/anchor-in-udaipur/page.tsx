@@ -100,7 +100,7 @@ const personSchema = {
     "Lake Palace Event Hosting",
     "Rajasthan Destination Weddings",
   ],
-  award: "4.9★ Rated — 200+ Five-Star Reviews",
+  award: "4.9★ Rated — 50+ Five-Star Reviews",
   alumniOf: { "@type": "Organization", name: "Rajasthan Event Industry" },
 };
 // Breadcrumb

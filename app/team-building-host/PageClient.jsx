@@ -314,7 +314,7 @@ export default function TeamBuildingHost() {
               In corporate Jaipur, &ldquo;team building&rdquo; has a reputation for being awkward — forced trust falls, painfully slow ice-breakers, and an HR manager who also looks like they'd rather be somewhere else.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light max-w-2xl mx-auto">
-              With <strong className="text-white">70+ national brands</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni creates the atmosphere of <strong className="text-[#B5952F]">psychological safety</strong> where the intern feels comfortable high-fiving the CEO — not because they were told to, but because the energy of the room made it natural.
+              With <strong className="text-white">70+ national brands</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni creates the atmosphere of <strong className="text-[#B5952F]">psychological safety</strong> where the intern feels comfortable high-fiving the CEO — not because they were told to, but because the energy of the room made it natural.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed font-light max-w-2xl mx-auto">
               From 60-minute Fun Friday sessions at Jaipur's IT parks in Malviya Nagar and Sitapura, to full-day residential offsites at Aravalli resort properties near Ajmer Road, to Annual Day productions for 600+ employees at JECC Sitapura — every format is a different discipline, and every one has been mastered.

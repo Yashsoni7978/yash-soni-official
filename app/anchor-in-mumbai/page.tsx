@@ -105,7 +105,7 @@ const personSchema = {
     "South Bombay Elite Events",
     "BKC Corporate Summits",
   ],
-  award: "4.9★ Rated — 200+ Five-Star Reviews",
+  award: "4.9★ Rated — 50+ Five-Star Reviews",
 };
 
 const breadcrumbSchema = {
@@ -224,7 +224,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Who is the best anchor for luxury events in Mumbai?",
-    a: "Anchor Yash Soni is widely regarded as a premier choice for high-end events in Mumbai. Rated 4.9★ across 200+ reviews, he specializes in elite corporate events in BKC and luxury weddings at iconic properties like the Taj Mahal Palace and The St. Regis."
+    a: "Anchor Yash Soni is widely regarded as a premier choice for high-end events in Mumbai. Rated 4.9★ across 50+ reviews, he specializes in elite corporate events in BKC and luxury weddings at iconic properties like the Taj Mahal Palace and The St. Regis."
   },
   {
     q: "Do you host corporate award nights and summits in Mumbai?",

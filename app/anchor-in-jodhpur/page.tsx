@@ -99,7 +99,7 @@ const personSchema = {
     "Umaid Bhawan Palace Events",
     "Mehrangarh Fort Events",
   ],
-  award: "4.9★ Rated — 200+ Five-Star Reviews",
+  award: "4.9★ Rated — 50+ Five-Star Reviews",
 };
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -237,7 +237,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash different from local Jodhpur anchors?",
-    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 1,100+ events, a 4.9★ rating from 200+ verified clients, and a zero-paper-script career.",
+    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 1,100+ events, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
   },
   {
     q: "Who is the best emcee in Jodhpur for destination weddings?",

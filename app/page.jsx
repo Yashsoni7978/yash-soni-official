@@ -56,7 +56,7 @@ const STATS = [
   { value: "1100+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic },
   { value: "10,000+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { value: "4+", label: "Years on Stage", sub: "Zero scripts", icon: Award },
-  { value: "4.9★", label: "Rated by Clients", sub: "200+ reviews", icon: UserCheck },
+  { value: "4.9★", label: "Rated by Clients", sub: "50+ reviews", icon: UserCheck },
 ];
 
 const SERVICES = [
@@ -146,11 +146,11 @@ const REVIEWS = [
 ];
 
 const FAQS = [
-  { q: "Who is Anchor Yash Soni?", a: "Anchor Yash Soni is a premium event host and emcee with 1,100+ events hosted across Jaipur & Rajasthan. With a 4.9★ rating across 200+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in Rajasthani cultural traditions." },
+  { q: "Who is Anchor Yash Soni?", a: "Anchor Yash Soni is a premium event host and emcee with 1,100+ events hosted across Jaipur & Rajasthan. With a 4.9★ rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in Rajasthani cultural traditions." },
   { q: "Do you travel for Destination Weddings?", a: "Absolutely. While Jaipur is home, I host events across Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and travel across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
   { q: "Which languages are you fluent in?", a: "I switch effortlessly between Hindi for the emotions, English for the class, and a bit of Rajasthani/Marwari to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
   { q: "Can you handle a crowd of 1,000+ guests?", a: "Large-format crowds are a specialty. I have commanded open events of 10,000+ people unscripted. Crowd psychology — reading energy patterns, controlling chaos, redirecting attention — is the core skill that separates a real anchor from an announcer." },
-  { q: "Why should we hire Anchor Yash over others?", a: "Because I have never used a paper script in 1,100+ events. If the PA fails, I turn it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. I am your insurance policy against awkward silences — the difference between an event people attend and one they remember. My 4.9★ rating across 200+ reviews says the rest." },
+  { q: "Why should we hire Anchor Yash over others?", a: "Because I have never used a paper script in 1,100+ events. If the PA fails, I turn it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. I am your insurance policy against awkward silences — the difference between an event people attend and one they remember. My 4.9★ rating across 50+ reviews says the rest." },
   { q: "How far in advance should I book?", a: "My calendar fills 6–8 months ahead for peak wedding season (October–February). I do not maintain a waitlist and do not send replacements. Once your date is confirmed, it is exclusively reserved. Reach out via WhatsApp the moment your date is finalised." },
   { q: "Do you prepare scripts for our family members?", a: "Yes. I know Chachas and Masis get nervous. I provide simple, funny script templates and do a quick 10-minute rehearsal with them before the show so they look like pros on stage." },
   { q: "What happens if something goes wrong on the day?", a: "Technical failures, power cuts, last-minute schedule changes, delayed brides — all handled without the guests noticing. Crisis management under pressure is a core competency, not an afterthought." },
@@ -295,7 +295,7 @@ export default function HomePage() {
               <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
                 Bilingual in Hindi and English. Fluent in Rajasthani culture.{" "}
                 <strong className="text-white">
-                  Rated 4.9★ by 200+ clients across Jaipur & Rajasthan.
+                  Rated 4.9★ by 50+ clients across Jaipur & Rajasthan.
                 </strong>
               </p>
               <Link
@@ -507,7 +507,7 @@ export default function HomePage() {
                 room, and makes your family feel like the only event that has
                 ever mattered.{" "}
                 <strong className="text-white">
-                  That&apos;s why 200+ clients have rated Yash 4.9★.
+                  That&apos;s why 50+ clients have rated Yash 4.9★.
                 </strong>
               </p>
               <div className="space-y-3 mb-8">

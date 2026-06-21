@@ -94,7 +94,7 @@ const FAQItem = ({ q, a, id }) => {
 const STATS = [
   { val: "1100", suffix: "+", label: "Events Anchored", sub: "across Rajasthan", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
-  { val: "4.9", suffix: "★", label: "Client Rating", sub: "200+ reviews", icon: Star },
+  { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
   { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
 ];
 
@@ -575,7 +575,7 @@ export default function NeemranaPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Neemrana",
-                desc: "4.9★ across 200+ verified reviews. 1,100+ events. The most reviewed event professional in Neemrana — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 1,100+ events. The most reviewed event professional in Neemrana — by any name.",
                 keywords: ["best emcee in neemrana", "best anchor in neemrana", "best host in neemrana", "best mc neemrana"],
               },
               {

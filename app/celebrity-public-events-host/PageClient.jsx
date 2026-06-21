@@ -124,7 +124,7 @@ const EVENTS_HOSTED = [
 const FAQS = [
   {
     q: "Who is the best celebrity event host in Jaipur?",
-    a: "Anchor Yash Soni is one of Jaipur's most reviewed public event hosts with a 4.9★ rating across 200+ verified reviews. He has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, corporate award galas at JECC Sitapura, and music events across Rajasthan. His experience spans 1,100+ events including 70+ national brand formats.",
+    a: "Anchor Yash Soni is one of Jaipur's most reviewed public event hosts with a 4.9★ rating across 50+ verified reviews. He has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, corporate award galas at JECC Sitapura, and music events across Rajasthan. His experience spans 1,100+ events including 70+ national brand formats.",
   },
   {
     q: "Can you manage a crowd of 5,000+ at a public event?",
@@ -331,7 +331,7 @@ export default function CelebrityAnchorPage() {
               When a Bollywood star walks into a Jaipur venue, when a luxury brand opens on JLN Marg, when a music festival fills JECC Sitapura with 5,000 people — you don't need an announcer. You need someone who can hold the entire room, manage the unexpected, and make it look effortless on camera.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-6 leading-relaxed font-light">
-              Anchor Yash Soni has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, music events, and award galas for <strong className="text-white">70+ national brands</strong> across India. A <strong className="text-white">4.9★ rating across 200+ verified reviews</strong> is the evidence.
+              Anchor Yash Soni has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, music events, and award galas for <strong className="text-white">70+ national brands</strong> across India. A <strong className="text-white">4.9★ rating across 50+ verified reviews</strong> is the evidence.
             </p>
             <div className="space-y-3">
               {[

@@ -338,7 +338,7 @@ export default function SangeetAnchor() {
               Forget &ldquo;And Next on Stage...&rdquo;<br /><G>This is a Concert.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 200+ verified reviews</strong>, Anchor Yash Soni is the Sangeet host Jaipur's elite families trust when a Sangeet needs to be more than background noise.
+              With <strong className="text-white">1,100+ events hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni is the Sangeet host Jaipur's elite families trust when a Sangeet needs to be more than background noise.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               Farmhouse Sangeets on Ajmer Road with 1,500 guests packed until 4 AM. Palace Sangeet events at heritage venues in Kukas and Amer Road with NRI families from the UK, USA, and Gulf. Intimate family Sangeets in Mansarovar and Vaishali Nagar. Every format is a different discipline — and every one has been mastered.

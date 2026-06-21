@@ -290,7 +290,7 @@ export default function SangeetDecorationJaipur() {
             <Image src="/jal-mahal-jaipur-artist.webp" alt="Anchor Yash Soni" fill className="object-cover shadow-2xl"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" quality={75} />
             <div className="absolute bottom-0 right-0 bg-gradient-to-br from-[#4C1D95] to-[#2E1065] p-8 text-[#FAF9F6] rounded-tl-3xl border-t border-l border-white/10">
               <div className="absolute inset-0 opacity-10 bg-[url('/bikaner.webp')] bg-cover bg-center mix-blend-overlay"></div>
-              <span className="font-['Rekalgera'] text-4xl relative z-10">200+</span>
+              <span className="font-['Rekalgera'] text-4xl relative z-10">50+</span>
               <span className="font-sans block text-sm tracking-widest uppercase mt-2 relative z-10">Sangeets Hosted</span>
             </div>
           </motion.div>
@@ -402,7 +402,7 @@ export default function SangeetDecorationJaipur() {
       <section className="py-24  border-b border-[#4C1D95]/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
-            { num: "200+", label: "Stages Built" },
+            { num: "50+", label: "Stages Built" },
             { num: "10K+", label: "SqFt LED Used" },
             { num: "100%", label: "Custom Graphics" },
             { num: "Zero", label: "Mic Drops" }
