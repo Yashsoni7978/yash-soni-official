@@ -49,7 +49,6 @@ const navLinks = [
       { name: "Artist Management", href: "/artist-management-jaipur" },
     ],
   },
-  { name: "Best Anchor Jaipur", href: "/anchor-in-jaipur" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "/blog" },
 ];
