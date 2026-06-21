@@ -20,6 +20,7 @@ import { PlatformsMarquee } from "./_components/PlatformsMarquee";
 import { ReviewsMarquee } from "./_components/ReviewsMarquee";
 import { FAQSection } from "./_components/FAQSection";
 import { GalleryMarquee } from "./_components/GalleryMarquee";
+import StarsBackground from "../components/StarsBackground";
 
 // ── HOMEPAGE METADATA ──────────────────────────────────────────────────────
 // Title intentionally differentiated from layout default via a distinct
@@ -220,6 +221,8 @@ const reviewSchema = {
 export default function HomePage() {
   return (
     <>
+      <StarsBackground speed={0.8} />
+
       {/* FIXED: Removed wrapping <main> — layout.tsx already provides
           <main id="main-content">. Nested <main> elements are invalid HTML. */}
 
@@ -246,7 +249,7 @@ export default function HomePage() {
 
       {/* STATS */}
       <section
-        className="py-16 md:py-20 border-b border-white/5 bg-zinc-950 relative z-10"
+        className="py-16 md:py-20 border-b border-white/5 relative z-10"
         aria-label="Key statistics"
       >
         <div className="container mx-auto px-5 md:px-10">
@@ -418,7 +421,7 @@ export default function HomePage() {
 
       {/* TRUSTED TAGS */}
       <section
-        className="py-16 md:py-20 bg-zinc-950 border-y border-white/5"
+        className="py-16 md:py-20 border-y border-white/5"
         aria-label="Event types hosted by Anchor Yash Soni"
       >
         <div className="container mx-auto px-5 md:px-10 text-center">
@@ -487,7 +490,7 @@ export default function HomePage() {
 
       {/* VS TABLE */}
       <section
-        className="py-20 md:py-28 bg-zinc-950 border-y border-white/5"
+        className="py-20 md:py-28 border-y border-white/5"
         aria-labelledby="vs-heading"
       >
         <div className="container mx-auto px-5 md:px-10">
@@ -701,7 +704,7 @@ export default function HomePage() {
 
       {/* SCARCITY CLOSE */}
       <section
-        className="py-24 md:py-32 bg-zinc-950 border-t border-white/5 relative overflow-hidden"
+        className="py-24 md:py-32 border-t border-white/5 relative overflow-hidden"
         aria-label="Book Anchor Yash Soni"
       >
         <div
@@ -763,7 +766,7 @@ export default function HomePage() {
 
       {/* SEO PHILOSOPHY PILLAR */}
       <section
-        className="py-24 md:py-32 bg-black border-t border-white/5 relative overflow-hidden"
+        className="py-24 md:py-32 border-t border-white/5 relative overflow-hidden"
         aria-labelledby="philosophy-heading"
       >
         <div className="container mx-auto px-5 md:px-10 max-w-5xl">
