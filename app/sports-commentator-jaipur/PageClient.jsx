@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Trophy, Flag, Timer, Mic2, Star, Youtube, Instagram, MapPin, CheckCircle2, CalendarCheck, Plus, Minus, Users } from "lucide-react";
+import { AnimatedStatsCard } from "../../components/AnimatedStatsCard";
 
 // ─────────────────────────────────────────────
 // CONFIG
@@ -59,10 +60,10 @@ const SectionHeading = ({ subtitle, title, align = "left", dark = false }) => (
 // DATA
 // ─────────────────────────────────────────────
 const STATS = [
-  { num: "50+", label: "Sports Leagues Hosted" },
-  { num: "10,000+", label: "Marathon Runners Hyped" },
-  { num: "4.9★", label: "Client Rating" },
-  { num: "8+", label: "Years Experience" },
+  { value: "50+", label: "Sports Leagues", sub: "Hosted locally & nationally", icon: Trophy },
+  { value: "10,000+", label: "Runners Hyped", sub: "Marathons & Cyclothons", icon: Flag },
+  { value: "4.9★", label: "Client Rating", sub: "Verified reviews", icon: Star },
+  { value: "8+", label: "Years Experience", sub: "Live commentary", icon: Mic2 },
 ];
 
 const FORMATS = [
@@ -247,7 +248,7 @@ const FAQItem = ({ question, answer, id }) => {
 // ─────────────────────────────────────────────
 export default function SportsCommentator() {
   return (
-    <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
+    <main className="bg-transparent relative z-10 text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
       
       {/* BREADCRUMB */}
@@ -290,15 +291,15 @@ export default function SportsCommentator() {
                 50+ Leagues &nbsp;·&nbsp; Bilingual Commentary &nbsp;·&nbsp; Broadcast-ready
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.35)] active:scale-95">
-                    Book Now →
+                  <button className="gold-animated-btn w-full sm:w-64 h-16 text-[#D4AF37] font-black uppercase tracking-widest text-xs md:text-sm">
+                    <span>Book Now →</span>
                   </button>
                 </Link>
                 <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto px-10 py-4 border border-[#D4AF37]/40 text-[#D4AF37] text-sm font-medium rounded-full hover:bg-[#D4AF37]/10 transition-all flex items-center justify-center gap-2">
-                    <Youtube className="w-4 h-4" /> Watch Action
+                  <button className="gold-animated-btn w-full sm:w-64 h-16 text-white font-bold uppercase tracking-widest text-[11px] md:text-xs">
+                    <span className="flex items-center gap-2"><Youtube className="w-4 h-4" /> Watch Action</span>
                   </button>
                 </a>
               </div>
@@ -308,15 +309,12 @@ export default function SportsCommentator() {
       </section>
 
       {/* STATS */}
-      <section className=" border-y border-white/5">
-        <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4">
+      <section className="border-y border-white/5 py-16 md:py-20 relative z-10">
+        <div className="container mx-auto px-5 md:px-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {STATS.map((s, i) => (
-              <Reveal key={i} delay={i * 0.07}>
-                <div className="text-center py-10 md:py-14 px-3">
-                  <div className="text-4xl md:text-5xl font-black mb-1 text-[#D4AF37]">{s.num}</div>
-                  <div className="text-zinc-500 text-[10px] uppercase tracking-widest">{s.label}</div>
-                </div>
+              <Reveal key={i} delay={i * 0.1} className="w-full h-full flex">
+                <AnimatedStatsCard value={s.value} label={s.label} sub={s.sub} icon={s.icon} />
               </Reveal>
             ))}
           </div>
@@ -347,9 +345,9 @@ export default function SportsCommentator() {
           <Reveal delay={0.12}>
             <div className="grid grid-cols-2 gap-4">
               {STATS.map((s, i) => (
-                <div key={i} className="bg-zinc-900/50 p-6 rounded-xl border border-white/8 text-center hover:border-[#D4AF37]/40 transition-colors">
-                  <div className="text-3xl md:text-4xl font-black text-[#D4AF37] mb-2">{s.num}</div>
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest">{s.label}</p>
+                <div key={i} className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center hover:border-[#D4AF37]/40 transition-colors">
+                  <div className="text-3xl md:text-4xl font-black text-[#D4AF37] mb-2">{s.value}</div>
+                  <p className="text-zinc-400 text-[10px] uppercase tracking-widest">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -358,18 +356,22 @@ export default function SportsCommentator() {
       </section>
 
       {/* IMAGE GALLERY (Replacement for video reel since we want normal pictures) */}
-      <section className="py-16 md:py-24 bg-[#080808] border-y border-white/5">
+      <section className="py-16 md:py-24 bg-transparent relative z-10 border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <SectionHeading subtitle="The Action" title="Live On Ground." align="center" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-            <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/8">
-              <Image src="/gallery-2.webp" alt="Yash Soni Sports Host" fill className="object-cover" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+            <div className="relative aspect-video rounded-[20px] transition-all duration-300 bg-[linear-gradient(163deg,#FFFFF0_0%,#D4AF37_100%)] hover:shadow-[0_0_30px_1px_rgba(212,175,55,0.30)] group/card">
+              <div className="absolute inset-0 bg-[#050505] rounded-[20px] transition-all duration-200 group-hover/card:scale-[0.98] overflow-hidden z-10">
+                <Image src="/gallery-2.webp" alt="Yash Soni Sports Host" fill className="object-cover transition-transform duration-700 group-hover/card:scale-105" />
+              </div>
             </div>
-            <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/8">
-              <Image src="/gallery-4.webp" alt="Anchor Yash Soni Commentary" fill className="object-cover" />
+            <div className="relative aspect-video rounded-[20px] transition-all duration-300 bg-[linear-gradient(163deg,#FFFFF0_0%,#D4AF37_100%)] hover:shadow-[0_0_30px_1px_rgba(212,175,55,0.30)] group/card">
+              <div className="absolute inset-0 bg-[#050505] rounded-[20px] transition-all duration-200 group-hover/card:scale-[0.98] overflow-hidden z-10">
+                <Image src="/gallery-4.webp" alt="Anchor Yash Soni Commentary" fill className="object-cover transition-transform duration-700 group-hover/card:scale-105" />
+              </div>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 mt-8">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10 mt-10">
             <a href="https://www.youtube.com/@Anchor_Yash" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#D4AF37] hover:text-white text-xs font-bold uppercase tracking-widest transition-colors">
               <Youtube size={16} /> Watch on YouTube
@@ -383,14 +385,14 @@ export default function SportsCommentator() {
       </section>
 
       {/* FORMATS */}
-      <section className="py-16 md:py-24 px-5 md:px-10">
+      <section className="py-16 md:py-24 px-5 md:px-10 relative z-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Formats" title="Sports I Host." align="center" />
           <div className="grid md:grid-cols-3 gap-5">
             {FORMATS.map((f, i) => (
               <Reveal key={i} delay={i * 0.07}>
-                <div className="bg-[#0a0a0a] border border-white/8 p-7 rounded-2xl hover:border-[#D4AF37]/40 transition-all group hover:-translate-y-1 duration-300 h-full">
-                  <div className="mb-5 bg-zinc-900 w-14 h-14 rounded-full flex items-center justify-center group-hover:bg-[#D4AF37]/10 transition-colors">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-7 rounded-2xl hover:border-[#D4AF37]/40 transition-all group hover:-translate-y-1 duration-300 h-full">
+                  <div className="mb-5 bg-black/40 w-14 h-14 rounded-full flex items-center justify-center group-hover:bg-[#D4AF37]/10 transition-colors">
                     <f.icon className="w-6 h-6 text-[#D4AF37]" />
                   </div>
                   <h3 className="text-lg font-black text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{f.title}</h3>
