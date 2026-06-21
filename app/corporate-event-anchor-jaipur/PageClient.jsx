@@ -64,7 +64,7 @@ const STATS = [
   { num: "1100+", label: "Total Events Hosted" },
   { num: "70+", label: "Corporate Brands" },
   { num: "4.9★", label: "Client Rating" },
-  { num: "8+", label: "Years Experience" },
+  { num: "5+", label: "Years Experience" },
 ];
 const FORMATS = [
   {

@@ -248,7 +248,7 @@ export default function PageClient() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the undisputed authority for high-stakes anchoring in Kota's complex event ecosystem.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the undisputed authority for high-stakes anchoring in Kota's complex event ecosystem.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Kota operates on two distinct but equally demanding peaks: the supreme royal heritage of <strong className="text-[#B5952F]">Umed Bhawan Palace</strong> and the hyper-intellectual environment of the city’s massive education and corporate sector. Yash commands both effortlessly.

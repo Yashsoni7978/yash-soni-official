@@ -63,7 +63,7 @@ const STATS = [
   { value: "50+", label: "Sports Leagues", sub: "Hosted locally & nationally", icon: Trophy },
   { value: "10,000+", label: "Runners Hyped", sub: "Marathons & Cyclothons", icon: Flag },
   { value: "4.9★", label: "Client Rating", sub: "Verified reviews", icon: Star },
-  { value: "8+", label: "Years Experience", sub: "Live commentary", icon: Mic2 },
+  { value: "5+", label: "Years Experience", sub: "Live commentary", icon: Mic2 },
 ];
 
 const FORMATS = [
@@ -128,7 +128,7 @@ const CAPABILITIES = [
     desc: "Professional, broadcast-style award distributions. Interviewing the Man of the Match and team owners with the respect and gravitas the moment requires." },
   {
     title: "The Hype Engine",
-    desc: "Sports is about emotion. I bring relentless, unflagging energy to the mic for 8+ hours, ensuring the final match feels just as electric as the first." },
+    desc: "Sports is about emotion. I bring relentless, unflagging energy to the mic for 5+ hours, ensuring the final match feels just as electric as the first." },
 ];
 
 const PROCESS = [

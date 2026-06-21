@@ -247,7 +247,7 @@ export default function MountAbuPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as the most technically proficient and culturally aware host in Rajasthan's unique hill station environment.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as the most technically proficient and culturally aware host in Rajasthan's unique hill station environment.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Mount Abu is not just another Rajasthan city; it is an acoustic and cultural anomaly. From the open air of <strong className="text-[#B5952F]">Cama Rajputana Club</strong> to the lakeside terraces of Nakki Lake, Yash commands these challenging environments with zero reliance on paper scripts.

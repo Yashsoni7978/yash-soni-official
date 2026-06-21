@@ -247,7 +247,7 @@ export default function BharatpurPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor — simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor — simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Bharatpur occupies a unique strategic position — the <strong className="text-[#B5952F]">Lohagarh Fort</strong>, the only unconquered fort in India, anchors a heritage circuit that connects seamlessly to Agra, Jaipur, and Delhi NCR. The guest lists at Bharatpur events are among the most diverse in Rajasthan's destination circuit.

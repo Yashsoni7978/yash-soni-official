@@ -280,7 +280,7 @@ export default function JaisalmerPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the definitive voice for luxury destination weddings that refuse to compromise.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> is the definitive voice for luxury destination weddings that refuse to compromise.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 In Jaisalmer, where the margin for error is zero due to the extreme logistics and HNI expectations, Yash brings absolute control. Whether anchoring a flawless bilingual reception at <strong className="text-[#B5952F]">Suryagarh</strong> or mastering the wind-swept acoustics of a private desert dune, his execution is entirely unscripted.

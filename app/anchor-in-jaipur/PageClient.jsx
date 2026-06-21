@@ -66,7 +66,7 @@ const STATS = [
   { val: "1100+", label: "Events in Jaipur", icon: Mic },
   { val: "10,000+", label: "Largest Crowd", icon: Users },
   { val: "4.9★", label: "Client Rating", icon: Star },
-  { val: "8+", label: "Years Local", icon: Award },
+  { val: "5+", label: "Years Local", icon: Award },
 ];
 // ALL Jaipur micro-zones — SEO net
 const JAIPUR_ZONES = [
@@ -231,7 +231,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash the best anchor in Jaipur over other options?",
-    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 1,100+ events, not one viral moment. Second, completely unscripted — zero paper scripts across an 8+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
+    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 1,100+ events, not one viral moment. Second, completely unscripted — zero paper scripts across an 5+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
   },
   {
     q: "What is the difference between an anchor, emcee, and host in Jaipur events?",
@@ -478,7 +478,7 @@ const faqSchema = {
               { stat: "1,100+", label: "Events in Jaipur", detail: "Career verified total" },
               { stat: "4.9★", label: "Average Client Rating", detail: "Google · WedMeGood · WeddingWire" },
               { stat: "50+", label: "Verified Reviews", detail: "Across all platforms" },
-              { stat: "0", label: "Paper Scripts Used", detail: "Across 8+ year career" },
+              { stat: "0", label: "Paper Scripts Used", detail: "Across 5+ year career" },
             ].map((s, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <div className="p-5 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded-2xl bg-[#0a0a0a] transition-all">

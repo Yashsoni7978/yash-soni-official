@@ -115,7 +115,7 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash the best anchor in Jaipur over other options?",
-    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 1,100+ events, not one viral moment. Second, completely unscripted — zero paper scripts across an 8+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
+    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 1,100+ events, not one viral moment. Second, completely unscripted — zero paper scripts across an 5+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
   },
   {
     q: "What is the difference between an anchor, emcee, and host in Jaipur events?",

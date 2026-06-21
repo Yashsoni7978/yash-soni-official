@@ -283,7 +283,7 @@ export default function JodhpurPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the grand heights of <strong className="text-[#B5952F]">Umaid Bhawan Palace</strong> to the historic Mehrangarh Fort, Yash brings a level of sophistication and energy that reflects the royal heritage of Jodhpur.

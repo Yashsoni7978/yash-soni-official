@@ -271,7 +271,7 @@ export default function PageClient() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the dramatic stepped terraces of <strong className="text-[#B5952F]">Neemrana Fort Palace</strong> to the serene lakeside gardens of Siliserh, and from the tiger-territory tented lounges of Sariska to the hilltop heritage havelis of Alwar — every corner of this circuit has been hosted with the same absolute command.

@@ -274,7 +274,7 @@ export default function NeemranaPage() {
                 Corporate Polish.<br /><G>Fortress Authority.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute apex of weekend destination hosting in Neemrana.
+                With 5+ years on stage and 1,100+ events handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute apex of weekend destination hosting in Neemrana.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Neemrana is an architectural anomaly. A 15th-century, 14-tier vertical <strong className="text-[#B5952F]">Fort Palace</strong> means the anchor is actively battling extreme acoustic dead zones and stringent decibel limits that kill standard DJs. Furthermore, the crowd is almost exclusively composed of elite Delhi NCR business families and corporate executives requiring razor-sharp, unscripted English articulation.

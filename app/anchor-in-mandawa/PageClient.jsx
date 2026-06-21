@@ -248,7 +248,7 @@ export default function PageClient() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most culturally fluent destination wedding anchor — commanding crowds with zero paper scripts across every format and venue type in the state.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most culturally fluent destination wedding anchor — commanding crowds with zero paper scripts across every format and venue type in the state.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the painted courtyards of <strong className="text-[#B5952F]">Castle Mandawa</strong> to the rooftop stages overlooking the Shekhawati desert, Yash brings a level of cultural awareness and event command that transforms extraordinary venues into extraordinary experiences.

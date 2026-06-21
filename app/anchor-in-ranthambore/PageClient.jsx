@@ -245,7 +245,7 @@ export default function RanthamborePage() {
               <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">Beyond <G>Announcements.</G><br />Beyond Scripts.</h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding the most challenging and distinctive event environments in India — including the completely unique jungle luxury circuit of Ranthambore.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding the most challenging and distinctive event environments in India — including the completely unique jungle luxury circuit of Ranthambore.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the candlelit tent lawns of <strong className="text-[#B5952F]">Sher Bagh</strong> to the ultra-luxury tented villas of The Oberoi Vanyavilas, and from intimate 80-person Mehndi mornings to 250-person Sangeet nights under the Aravalli tree canopy — every Ranthambore event requires a fundamentally different hosting approach from the city or palace circuits.

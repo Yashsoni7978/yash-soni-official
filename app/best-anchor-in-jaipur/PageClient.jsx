@@ -42,7 +42,7 @@ const STATS = [
   { val: "1100+", label: "Events Anchored", sub: "across Jaipur & Rajasthan", icon: Mic },
   { val: "10,000+", label: "Largest Crowd", sub: "Commanded. Unscripted.", icon: Users },
   { val: "4.9★", label: "Client Rating", sub: "50+ verified reviews", icon: Star },
-  { val: "8+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
+  { val: "5+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
 ];
 const SERVICES = [
   { icon: Heart, title: "Wedding Anchor Jaipur", desc: "Every ritual — Varmala, Baraat, Bidaai — conducted with cultural precision. Palace venues, farmhouse lawns, destination properties.", href: "/wedding-anchor-jaipur", tag: "Weddings", color: "from-rose-950/40" },

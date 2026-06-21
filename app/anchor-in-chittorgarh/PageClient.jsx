@@ -245,7 +245,7 @@ export default function ChittorgarhPage() {
               <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">Beyond <G>Announcements.</G><br />Beyond Scripts.</h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 8+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built an unmatched reputation for commanding the most complex and culturally significant events in Rajasthan — with complete zero paper scripts.
+                With 5+ years on stage and 1,100+ events handled, <strong className="text-white">Anchor Yash Soni</strong> has built an unmatched reputation for commanding the most complex and culturally significant events in Rajasthan — with complete zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Chittorgarh is the most culturally demanding destination in the entire Rajasthan circuit. Its identity is not constructed around tourism or luxury aesthetics — it is built on 700 years of Rajput sacrifice, sovereign honour, and cultural pride. An anchor working in <strong className="text-[#B5952F]">Chittorgarh Fort</strong> is not decorating an event. They are participating in a living cultural statement.
