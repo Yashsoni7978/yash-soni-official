@@ -1,47 +1,210 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// ── SCHEMA DATA ────────────────────────────────────────────────────────────
+// app/anchor-in-jodhpur/layout.jsx
+// SERVER COMPONENT — SEO metadata only. All JSON-LD schemas in page.jsx.
+const CITY       = "Jodhpur";
+const SLUG       = "anchor-in-jodhpur";
+const DOMAIN     = "yashsoni.in";
+const FULL_URL   = `https://${DOMAIN}/${SLUG}`;
+const LAT        = "26.2389";
+const LNG        = "73.0243";
+const OG_IMAGE   = `https://${DOMAIN}/backgrounds/jodhpur_bg.webp`;
+// ─── JSON-LD SCHEMAS ───────────────────────────────────────────────────────
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Anchor Yash Soni",
-  image: "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  url: "https://yashsoni.in",
-  telephone: "+917737877978",
+  "@type":    "ProfessionalService",
+  "@id":      `${FULL_URL}/#business`,
+  name:        `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  alternateName: [
+    `Anchor in ${CITY}`,
+    `Wedding Anchor ${CITY}`,
+    `Emcee ${CITY}`,
+    `Destination Wedding Anchor ${CITY}`,
+    `Sangeet Host ${CITY}`,
+    `Event Host ${CITY}`,
+    "Umaid Bhawan Palace Wedding Anchor",
+    "Mehrangarh Fort Wedding Host",
+    "RAAS Jodhpur Event Host",
+  ],
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  url:         FULL_URL,
+  telephone:   "+917737877978",
+  priceRange:  "₹₹₹₹",
+  image:        OG_IMAGE,
+  sameAs: [
+    "https://www.instagram.com/yashsoni_official",
+    "https://www.youtube.com/@anchorYashSoni",
+  ],
   address: {
-    "@type": "PostalAddress",
-    streetAddress: "Vaishali Nagar",
-    addressLocality: "Jaipur",
-    postalCode: "302021",
-    addressRegion: "RJ",
-    addressCountry: "IN",
+    "@type":           "PostalAddress",
+    addressLocality:   CITY,
+    addressRegion:     "Rajasthan",
+    addressCountry:    "IN",
+    postalCode:        "342001",
   },
   geo: {
-    "@type": "GeoCoordinates",
-    latitude: 26.2389,
-    longitude: 73.0243,
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
+    "@type":    "GeoCoordinates",
+    latitude:   LAT,
+    longitude:  LNG,
   },
   openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    opens: "00:00",
-    closes: "23:59",
+    "@type":     "OpeningHoursSpecification",
+    dayOfWeek:   ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    opens:       "09:00",
+    closes:      "21:00",
   },
-  sameAs: [
-    "https://www.instagram.com/anchor_yash_official",
-    "https://www.facebook.com/anchoryashsoni",
-    "https://www.wedmegood.com/profile/anchor-yash-25628297",
-    "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
+  areaServed: [
+    { "@type": "City",               name: CITY },
+    { "@type": "AdministrativeArea", name: "Rajasthan" },
+    { "@type": "Country",            name: "India" },
+  ],
+  aggregateRating: {
+    "@type":       "AggregateRating",
+    ratingValue:   "4.9",
+    reviewCount:   "200",
+    bestRating:    "5",
+    worstRating:   "1",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Anchoring Services in Jodhpur",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Royal Wedding Anchor Jodhpur", description: "Full bilingual wedding anchoring at Umaid Bhawan Palace and Mehrangarh Fort" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sangeet Emcee Jodhpur", description: "Fort courtyard Sangeet hosting at Mehrangarh and RAAS Jodhpur" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Event Anchor Jodhpur", description: "Corporate galas, dealer meets and conferences at Ajit Bhawan and Vivanta Jodhpur" } },
+    ],
+  },
+};
+const personSchema = {
+  "@context":    "https://schema.org",
+  "@type":       "Person",
+  "@id":         `https://${DOMAIN}/#person`,
+  name:          "Yash Soni",
+  alternateName: ["Anchor Yash Soni", "Anchor Yash"],
+  jobTitle:      "Professional Event Anchor & Emcee",
+  description:   `Yash Soni is a professional event anchor with 4+ years of experience in royal palace weddings and corporate events. He has hosted 1,100+ events including luxury destination weddings at Umaid Bhawan Palace and Mehrangarh Fort in Jodhpur.`,
+  url:           `https://${DOMAIN}`,
+  image:         `https://${DOMAIN}/intro-portrait-top.webp`,
+  telephone:     "+917737877978",
+  knows:         CITY,
+  knowsAbout: [
+    "Wedding Anchoring",
+    "Royal Palace Wedding Hosting",
+    "Fort Courtyard Sangeet Hosting",
+    "Rajputana Family Protocol",
+    "Bilingual Hindi English Hosting",
+    "NRI Wedding Management",
+    "Jodhpur Destination Weddings",
+    "Umaid Bhawan Palace Events",
+    "Mehrangarh Fort Events",
+  ],
+  award: "4.9★ Rated — 200+ Five-Star Reviews",
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type":    "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home",                item: `https://${DOMAIN}` },
+    { "@type": "ListItem", position: 2, name: "Anchor in Rajasthan",  item: `https://${DOMAIN}/anchor-in-rajasthan` },
+    { "@type": "ListItem", position: 3, name: `Anchor in ${CITY}`,   item: FULL_URL },
   ],
 };
+// ─── METADATA EXPORT ───────────────────────────────────────────────────────
+export const metadata: Metadata = {
+  metadataBase: new URL(`https://${DOMAIN}`),
+  title: `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host — Anchor Yash Soni`,
+  description:
+    `Looking for the best anchor in Jodhpur? Anchor Yash Soni — 4.9★ rated, 1,100+ events, 4+ years. Expert for royal weddings at Umaid Bhawan Palace, Mehrangarh Fort & RAAS Jodhpur. Bilingual, unscripted, NRI & Rajputana protocol experienced.`,
+  keywords: [
+    // Core identity
+    "anchor in jodhpur",
+    "best anchor in jodhpur",
+    "wedding anchor jodhpur",
+    "event anchor jodhpur",
+    "emcee jodhpur",
+    "event host jodhpur",
+    // Venue-specific — high intent
+    "umaid bhawan palace wedding anchor",
+    "mehrangarh fort wedding host",
+    "raas jodhpur wedding emcee",
+    "ajit bhawan anchor",
+    "bal samand lake palace anchor",
+    "vivanta jodhpur wedding host",
+    // Event type
+    "destination wedding anchor jodhpur",
+    "nri wedding anchor jodhpur",
+    "royal wedding anchor jodhpur",
+    "sangeet host jodhpur",
+    "sangeet emcee jodhpur fort",
+    "haldi anchor jodhpur",
+    "corporate anchor jodhpur",
+    "bilingual anchor jodhpur",
+    // Semantic/long-tail
+    "anchor for destination wedding jodhpur",
+    "best emcee jodhpur",
+    "jodhpur palace wedding anchor",
+    "jodhpur destination wedding host",
+    "royal event host jodhpur",
+    "anchor yash soni jodhpur",
+    "professional anchor jodhpur rajasthan",
+    "fort wedding anchor jodhpur",
+    "blue city wedding anchor",
+    // Branded
+    "anchor yash",
+    "anchor yash soni",
+    "yash soni anchor",
+  ],
+  alternates: {
+    canonical: FULL_URL,
+  },
+  robots: {
+    index:  true,
+    follow: true,
+    googleBot: {
+      index:               true,
+      follow:              true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet":       -1,
+    },
+  },
+  openGraph: {
+    type:        "website",
+    locale:      "en_IN",
+    url:          FULL_URL,
+    siteName:    "Anchor Yash Soni",
+    title:       `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host — Anchor Yash Soni`,
+    description: `4.9★ rated. 1,100+ events. Jodhpur's most trusted anchor for Umaid Bhawan Palace weddings, Mehrangarh Fort Sangeets & NRI destination events. Bilingual, unscripted, royal protocol aware.`,
+    images: [
+      {
+        url:    OG_IMAGE,
+        width:  1200,
+        height: 630,
+        alt:    `Best Anchor in Jodhpur — Anchor Yash Soni at Mehrangarh Fort`,
+      },
+    ],
+  },
+  twitter: {
+    card:        "summary_large_image",
+    site:        "@yashsonianchor",
+    creator:     "@yashsonianchor",
+    title:       `Best Anchor in Jodhpur | Anchor Yash Soni — 4.9★`,
+    description: `Umaid Bhawan Palace. Mehrangarh Fort. RAAS Jodhpur. The Blue City's most trusted destination wedding anchor — 1,100+ events, 4.9★ rated.`,
+    images:      [OG_IMAGE],
+  },
+  other: {
+    "geo.region":    "IN-RJ",
+    "geo.placename": `${CITY}, Rajasthan, India`,
+    "geo.position":  `${LAT};${LNG}`,
+    ICBM:            `${LAT}, ${LNG}`,
+    "DC.subject":    `Event Anchor, Wedding Anchor, Emcee, ${CITY}, Rajasthan, India`,
+    "rating":        "4.9",
+    "reviewCount":   "200",
+  },
+};
+// ─── LAYOUT ────────────────────────────────────────────────────────────────
+
 
 const FAQS = [
   {
@@ -89,123 +252,42 @@ const FAQS = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: FAQS.map((f) => ({
+  mainEntity: FAQS.map(f => ({
     "@type": "Question",
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://yashsoni.in/locations" },
-    { "@type": "ListItem", position: 3, name: "Anchor in Jodhpur", item: "https://yashsoni.in/anchor-in-jodhpur" },
-  ],
-};
-
-// ── GEO SCHEMAS ────────────────────────────────────────────────────────────
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Best Anchor in Jodhpur | Yash Soni — Palace & Fort Wedding Specialist",
-  url: "https://yashsoni.in/anchor-in-jodhpur",
-  description: "Anchor Yash Soni is Jodhpur's top-rated wedding anchor and emcee — 4.9★ across 200+ reviews. Specialist in palace weddings at Umaid Bhawan, fort events at Mehrangarh, and NRI destination weddings in the Blue City.",
+  "@id": `https://yashsoni.in/anchor-in-jodhpur/#webpage`,
+  url: `https://${DOMAIN}/${SLUG}`,
+  name: `Best Anchor in Jodhpur | Wedding & Event Host — Yash Soni`,
+  description: `Anchor Yash Soni is the premium event anchor in Jodhpur. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
-  about: {
-    "@type": "Person",
-    name: "Yash Soni",
-    alternateName: "Anchor Yash Soni",
-    jobTitle: "Professional Event Anchor, Emcee, and Host",
-    url: "https://yashsoni.in",
-    telephone: "+917737877978",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "200",
-      bestRating: "5",
-    },
-    sameAs: [
-      "https://www.instagram.com/anchor_yash_official",
-      "https://www.facebook.com/anchoryashsoni",
-      "https://www.wedmegood.com/profile/anchor-yash-25628297",
-      "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
-    ],
-  },
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"],
-  },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }
 };
 
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How to Hire the Best Anchor or Emcee for a Jodhpur Destination Wedding",
-  description: "Step-by-step process to book Anchor Yash Soni for palace weddings, fort Sangeets, and corporate functions in Jodhpur, Rajasthan.",
+  name: `How to Hire the Best Anchor in Jodhpur`,
+  description: `Step-by-step process to book Anchor Yash Soni for weddings and corporate events in Jodhpur.`,
   totalTime: "PT48H",
   step: [
-    {
-      "@type": "HowToStep",
-      position: 1,
-      name: "Check Availability via WhatsApp",
-      text: "Message +91 7737877978 with your Jodhpur event date, type, and venue name. The Jodhpur palace circuit (November–February) books 6–8 months ahead — confirm availability before finalising your venue.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 2,
-      name: "Receive a Jodhpur-Specific Quote",
-      text: "A quote covering travel, stay, and event hosting for Jodhpur destination events is provided within the hour. Umaid Bhawan, Mehrangarh Fort, RAAS, and Ajit Bhawan each have different logistics requirements factored into the quote.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 3,
-      name: "Confirm with Advance Payment",
-      text: "The date is exclusively blocked on receipt of advance payment. No tentative holds or waitlists for Jodhpur destination dates — competition for premium palace and fort dates is high.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 4,
-      name: "Pre-Event Venue Walkthrough",
-      text: "For fort and palace venues, a pre-event walkthrough of Mehrangarh Fort or Umaid Bhawan covers acoustics, crowd flow, staging, and royal family protocol requirements. This preparation is non-negotiable for Jodhpur heritage venues.",
-    },
-  ],
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: `WhatsApp +91 7737877978 with your event dates and venues in Jodhpur.` },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show and specific venue logistics." }
+  ]
 };
 
-// ── METADATA ───────────────────────────────────────────────────────────────
-export const metadata: Metadata = {
-  title: "Best Anchor in Jodhpur | Yash Soni — Palace & Fort Wedding Specialist",
-  description: "Anchor Yash Soni is Jodhpur's 4.9★ rated wedding anchor and emcee — specialist in palace events at Umaid Bhawan, fort Sangeets at Mehrangarh, and NRI destination weddings. The most reviewed anchor and emcee in the Blue City.",
-  alternates: {
-    canonical: "https://yashsoni.in/anchor-in-jodhpur",
-  },
-  openGraph: {
-    title: "Best Anchor in Jodhpur | Yash Soni — Palace & Fort Wedding Specialist",
-    description: "Anchor Yash Soni is Jodhpur's 4.9★ rated wedding anchor and emcee — specialist in palace events at Umaid Bhawan, fort Sangeets at Mehrangarh, and NRI destination weddings.",
-    url: "https://yashsoni.in/anchor-in-jodhpur",
-    siteName: "Anchor Yash Soni",
-    locale: "en_IN",
-    type: "website",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Jodhpur — Yash Soni" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Best Anchor in Jodhpur | Yash Soni",
-    description: "4.9★ · 200+ reviews · Umaid Bhawan · Mehrangarh Fort. Jodhpur's top anchor, emcee, and wedding host.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
-  },
-};
-
-// ── PAGE ───────────────────────────────────────────────────────────────────
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, personSchema, breadcrumbSchema, webPageSchema, howToSchema, faqSchema]) }} />
       <PageClient />
     </>
   );

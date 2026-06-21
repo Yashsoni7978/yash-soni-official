@@ -62,6 +62,29 @@ const breadcrumbSchema = {
   ],
 };
 
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Wedding Anchor in Jaipur | Best Wedding Emcee | Yash Soni",
+  url: "https://yashsoni.in/wedding-anchor-jaipur",
+  description: "Best wedding anchor in Jaipur. Yash Soni has hosted 1,100+ events across Rajasthan — bilingual, energetic and deeply experienced wedding emcee.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Wedding Anchor in Jaipur",
+  description: "Step-by-step process to book Anchor Yash Soni for your luxury wedding in Jaipur.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your event dates and venues. Peak season dates fill 6+ months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. No tentative holds are maintained." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show, bilingual scripting requirements, and specific venue logistics." },
+  ],
+};
+
 // FIXED: VideoObject schema removed — had 3 TODO placeholder fields which
 // produce invalid JSON-LD and fail Google Rich Results Test.
 // Re-add once you have a real YouTube URL + thumbnail + upload date.
@@ -112,6 +135,8 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

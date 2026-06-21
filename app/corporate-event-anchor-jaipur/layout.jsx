@@ -1,25 +1,18 @@
 // app/corporate-event-anchor-jaipur/layout.jsx
+import { buildServiceSchema } from "../../lib/schema/serviceSchema";
+
 // SERVER COMPONENT — metadata only
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://yashsoni.in/corporate-event-anchor-jaipur",
+const serviceSchema = buildServiceSchema({
+  pageUrl: "https://yashsoni.in/corporate-event-anchor-jaipur",
   name: "Corporate Event Anchor Jaipur — Anchor Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
-  provider: {
-    "@type": "Person",
-    name: "Yash Soni",
-    url: "https://yashsoni.in",
-    telephone: "+917737877978",
-    jobTitle: "Corporate Event Anchor & Emcee",
-  },
+  description: "700+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  serviceType: "Corporate Event Hosting",
+  providerJobTitle: "Corporate Event Anchor & Emcee",
   areaServed: [
     { "@type": "City", name: "Jaipur" },
     { "@type": "AdministrativeArea", name: "Rajasthan" },
     { "@type": "Country", name: "India" },
   ],
-  url: "https://yashsoni.in/corporate-event-anchor-jaipur",
-  serviceType: "Corporate Event Hosting",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Corporate Event Services Jaipur",
@@ -32,13 +25,7 @@ const serviceSchema = {
       { "@type": "Offer", name: "Dealer Meet Host Jaipur" },
     ],
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
-};
+});
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

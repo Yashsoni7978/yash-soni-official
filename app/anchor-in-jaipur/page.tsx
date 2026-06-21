@@ -1,55 +1,72 @@
-import type { Metadata } from "next";
-import PageClient from "./PageClient";
+import type { Metadata } from 'next';
+import PageClient from './PageClient';
 
-// ── SCHEMA DATA ────────────────────────────────────────────────────────────
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Anchor Yash Soni",
-  image: "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  url: "https://yashsoni.in",
-  telephone: "+917737877978",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Vaishali Nagar",
-    addressLocality: "Jaipur",
-    postalCode: "302021",
-    addressRegion: "RJ",
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 26.9124,
-    longitude: 75.7873,
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
-  },
-  sameAs: [
-    "https://www.instagram.com/anchor_yash_official",
-    "https://www.facebook.com/anchoryashsoni",
-    "https://www.wedmegood.com/profile/anchor-yash-25628297",
-    "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
+// app/anchor-in-jaipur/layout.jsx
+// SERVER COMPONENT — metadata only, no head/script tags
+export const metadata: Metadata = {
+  metadataBase: new URL("https://yashsoni.in"),
+  title: "Best Anchor in Jaipur | Anchor Yash Soni — 4.9★ Local Event Host",
+  description:
+    "Yash Soni — the most trusted anchor in Jaipur. 1,100+ events, 4.9★ rated, bilingual Hindi/English host for weddings, sangeets and corporate events.",
+  keywords: [
+    "anchor in jaipur",
+    "best anchor in jaipur",
+    "anchors in jaipur",
+    "anchor jaipur",
+    "jaipur event host",
+    "jaipur anchor",
+    "anchor yash soni",
+    "anchor yash",
+    "wedding emcee jaipur",
+    "wedding anchor jaipur",
+    "corporate anchor jaipur",
+    "sangeet anchor jaipur",
+    "local anchor jaipur",
+    "anchor near me jaipur",
+    "best emcee jaipur",
+    "event anchor jaipur",
+    "anchor in rajasthan",
+    "jaipur destination wedding anchor",
+    "anchor kukas jaipur",
+    "anchor ajmer road jaipur",
+    "anchor mansarovar jaipur",
+    "anchor sitapura jaipur",
+    "anchor vaishali nagar jaipur",
+    "anchor amer road jaipur",
+    "rambagh palace wedding anchor",
+    "fairmont jaipur wedding anchor",
   ],
-};
+  alternates: {
+    canonical: "https://yashsoni.in/anchor-in-jaipur" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1 } },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://yashsoni.in/anchor-in-jaipur",
+    siteName: "Anchor Yash Soni",
+    title: "Best Anchor in Jaipur | Anchor Yash Soni — 4.9★",
+    description:
+      "4.9★ rated local Jaipur anchor. 1100+ events at Rambagh Palace, Fairmont, Kukas, Ajmer Road & JECC Sitapura.",
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Jaipur — Anchor Yash Soni" }] },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Anchor in Jaipur | Anchor Yash Soni",
+    description: "4.9★ rated. 1100+ events. Jaipur's most trusted local event anchor.",
+    images: ["/og-image.webp"] },
+  other: {
+    "geo.region": "IN-RJ",
+    "geo.placename": "Jaipur, Rajasthan, India",
+    "geo.position": "26.9124;75.7873",
+    ICBM: "26.9124, 75.7873" } };
+
 
 const FAQS = [
   {
@@ -125,159 +142,42 @@ const FAQS = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: FAQS.map((f) => ({
+  mainEntity: FAQS.map(f => ({
     "@type": "Question",
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Anchor in Jaipur",
-      item: "https://yashsoni.in/anchor-in-jaipur",
-    },
-  ],
-};
-
-// ── GEO SCHEMAS — Generative Engine Optimization ────────────────────────────
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Best Anchor in Jaipur | Yash Soni — 1100+ Events",
-  url: "https://yashsoni.in/anchor-in-jaipur",
-  description:
-    "Anchor Yash Soni is Jaipur's 4.9★ rated event anchor with 1,100+ events hosted. Trusted for palace weddings at Rambagh and Fairmont Jaipur, Sangeet nights on Ajmer Road, and corporate galas at JECC Sitapura.",
+  "@id": `https://yashsoni.in/anchor-in-jaipur/#webpage`,
+  url: `https://yashsoni.in/anchor-in-jaipur`,
+  name: `Best Anchor in jaipur | Wedding & Event Host — Yash Soni`,
+  description: `Anchor Yash Soni is the premium event anchor in jaipur. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
-  about: {
-    "@type": "Person",
-    name: "Yash Soni",
-    alternateName: "Anchor Yash Soni",
-    jobTitle: "Professional Event Anchor and Emcee",
-    url: "https://yashsoni.in",
-    telephone: "+917737877978",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Jaipur",
-      addressRegion: "Rajasthan",
-      addressCountry: "IN",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "200",
-      bestRating: "5",
-    },
-    sameAs: [
-      "https://www.instagram.com/anchor_yash_official",
-      "https://www.facebook.com/anchoryashsoni",
-      "https://www.wedmegood.com/profile/anchor-yash-25628297",
-      "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
-    ],
-  },
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"],
-  },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }
 };
 
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How to Hire the Best Anchor in Jaipur",
-  description:
-    "Step-by-step process to book Anchor Yash Soni for weddings, Sangeet nights, and corporate events in Jaipur, Rajasthan.",
-  totalTime: "PT24H",
+  name: `How to Hire the Best Anchor in jaipur`,
+  description: `Step-by-step process to book Anchor Yash Soni for weddings and corporate events in jaipur.`,
+  totalTime: "PT48H",
   step: [
-    {
-      "@type": "HowToStep",
-      position: 1,
-      name: "Check Availability via WhatsApp",
-      text: "Message +91 7737877978 on WhatsApp with your event date, type (wedding / Sangeet / corporate), venue location in Jaipur, and approximate guest count. Jaipur's peak wedding season (October through February) books 6–8 months in advance.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 2,
-      name: "Receive a Personalised Quote",
-      text: "A customised quote is provided within the hour. Pricing depends on event type, duration, date, and venue zone within Jaipur. All Jaipur venues — Kukas, Amer Road, Ajmer Road, Mansarovar, and Sitapura — are treated as fully local with zero travel surcharges.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 3,
-      name: "Confirm with Advance Payment",
-      text: "The event date is exclusively blocked on receipt of the agreed advance payment. No tentative holds or waitlists are maintained — the date is reserved exclusively for your event.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 4,
-      name: "Pre-Event Research Call",
-      text: "A dedicated pre-event call covers the full run-of-show, crowd games, family dynamics, cultural and ceremonial specifics, and any VIP or NRI guest requirements. Yash Soni arrives at the venue two hours early on event day.",
-    },
-  ],
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: `WhatsApp +91 7737877978 with your event dates and venues in jaipur.` },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show and specific venue logistics." }
+  ]
 };
 
-// ── METADATA ───────────────────────────────────────────────────────────────
-export const metadata: Metadata = {
-  title: "Best Anchor in Jaipur | Yash Soni — 1100+ Events",
-  description:
-    "Anchor Yash Soni is Jaipur's 4.9★ rated event anchor with 1,100+ events hosted. Trusted for palace weddings, Sangeet nights, and corporate galas across all Jaipur venues — from Rambagh Palace to JECC Sitapura.",
-  alternates: {
-    canonical: "https://yashsoni.in/anchor-in-jaipur",
-  },
-  openGraph: {
-    title: "Best Anchor in Jaipur | Yash Soni — 1100+ Events",
-    description:
-      "Anchor Yash Soni is Jaipur's 4.9★ rated event anchor with 1,100+ events hosted. Trusted for palace weddings, Sangeet nights, and corporate galas across all Jaipur venues — from Rambagh Palace to JECC Sitapura.",
-    url: "https://yashsoni.in/anchor-in-jaipur",
-    siteName: "Anchor Yash Soni",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/og-image.webp",
-        width: 1200,
-        height: 630,
-        alt: "Best Anchor in Jaipur — Yash Soni on stage",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Best Anchor in Jaipur | Yash Soni",
-    description:
-      "1,100+ events. 4.9★ across 200+ verified reviews. Jaipur's most trusted anchor for palace weddings, Sangeet nights, and corporate galas.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
-  },
-};
-
-// ── PAGE ───────────────────────────────────────────────────────────────────
 export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([faqSchema, localBusinessSchema]),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([webPageSchema, howToSchema, faqSchema]) }} />
       <PageClient />
     </>
   );

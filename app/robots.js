@@ -10,13 +10,12 @@ export default function robots() {
         disallow: [
           "/private/",
           "/admin/",
-          // FIXED: Removed '/*.json$' — regex patterns are NOT valid robots.txt syntax.
-          // Googlebot ignores them silently. Use specific paths instead.
-          // FIXED: Removed '/api/' block entirely — it was preventing the allowed
-          // '/api/og' route above from working. Googlebot follows the most specific rule.
-          // If you have specific API routes to block, list them explicitly:
-          // '/api/some-private-route',
         ],
+      },
+      {
+        // Explicitly allow AI Search crawlers for GEO (Generative Engine Optimization)
+        userAgent: ["GPTBot", "ClaudeBot", "PerplexityBot", "OAI-SearchBot"],
+        allow: ["/"],
       },
       {
         // Prevent search engine bots from indexing /_next/ internal paths

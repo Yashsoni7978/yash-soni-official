@@ -1,7 +1,108 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
+// app/anchor-for-birthday-party-jaipur/layout.jsx
+// SERVER COMPONENT — metadata + all schemas
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://yashsoni.in/anchor-for-birthday-party-jaipur",
+  name: "Anchor for Birthday Party Jaipur — Yash Soni",
+  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  provider: {
+    "@type": "Person",
+    name: "Yash Soni",
+    url: "https://yashsoni.in",
+    telephone: "+917737877978",
+    jobTitle: "Professional Birthday Party Anchor & Event Host",
+  },
+  areaServed: [
+    { "@type": "City", name: "Jaipur" },
+    { "@type": "AdministrativeArea", name: "Rajasthan" },
+    { "@type": "Country", name: "India" },
+  ],
+  url: "https://yashsoni.in/anchor-for-birthday-party-jaipur",
+  serviceType: "Birthday Party Anchor & Host",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Birthday Anchoring Services Jaipur",
+    itemListElement: [
+      { "@type": "Offer", name: "Milestone Birthday Anchor Jaipur" },
+      { "@type": "Offer", name: "Kids Birthday Party Host Jaipur" },
+      { "@type": "Offer", name: "Surprise Birthday Event Anchor Jaipur" },
+      { "@type": "Offer", name: "Celebrity Birthday Gala Host Jaipur" },
+      { "@type": "Offer", name: "Anniversary Celebration Anchor Jaipur" },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "200",
+    bestRating: "5",
+  },
+};
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
+    { "@type": "ListItem", position: 2, name: "Anchor in Jaipur", item: "https://yashsoni.in/anchor-in-jaipur" },
+    { "@type": "ListItem", position: 3, name: "Birthday Party Anchor Jaipur", item: "https://yashsoni.in/anchor-for-birthday-party-jaipur" },
+  ],
+};
+export const metadata: Metadata = {
+  metadataBase: new URL("https://yashsoni.in"),
+  title: "Anchor for Birthday Party in Jaipur | Professional Birthday Host | Yash Soni",
+  description:
+    "Looking for an anchor for birthday party in Jaipur? Yash Soni hosts milestone birthdays, kids parties, surprise events & celebrity galas — custom scripts, bilingual Hindi/English. Book via WhatsApp.",
+  keywords: [
+    "anchor for birthday party jaipur",
+    "birthday party anchor jaipur",
+    "birthday party host jaipur",
+    "birthday anchor jaipur",
+    "birthday party emcee jaipur",
+    "anchor for birthday in jaipur",
+    "milestone birthday anchor jaipur",
+    "kids birthday party anchor jaipur",
+    "surprise birthday anchor jaipur",
+    "birthday event anchor jaipur",
+    "anchor for 50th birthday jaipur",
+    "anchor for 25th birthday jaipur",
+    "birthday gala anchor jaipur",
+    "birthday anchor rajasthan",
+    "professional birthday host jaipur",
+    "anchor for anniversary jaipur",
+    "anniversary celebration anchor jaipur",
+    "yash soni birthday anchor",
+    "anchor for birthday party near me",
+    "anchor for private party jaipur",
+  ],
+  alternates: { canonical: "https://yashsoni.in/anchor-for-birthday-party-jaipur" },
+  robots: {
+    index: true, follow: true,
+    googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  openGraph: {
+    type: "website", locale: "en_IN",
+    url: "https://yashsoni.in/anchor-for-birthday-party-jaipur",
+    siteName: "Anchor Yash Soni",
+    title: "Anchor for Birthday Party Jaipur | Yash Soni",
+    description: "Custom scripted, bilingual birthday party anchor in Jaipur. Milestone birthdays, kids parties, surprise events & celebrity galas.",
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Birthday Party Anchor Jaipur — Yash Soni" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Birthday Party Anchor Jaipur | Yash Soni",
+    description: "Custom scripted. Bilingual. 1100+ events. Professional birthday party anchor in Jaipur.",
+    images: ["/og-image.webp"],
+  },
+  other: {
+    "geo.region": "IN-RJ", "geo.placename": "Jaipur, Rajasthan, India",
+    "geo.position": "26.9124;75.7873", ICBM: "26.9124, 75.7873",
+  },
+};
+
+
 const FAQS = [
   {
     q:"How much does a birthday party anchor in Jaipur cost?",
@@ -36,34 +137,44 @@ const FAQS = [
 ];
 
 const faqSchema = {
-  "@context":"https://schema.org","@type":"FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })) };
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map(f => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
+};
 
-export const metadata: Metadata = {
-  title: 'Birthday Party Anchor in Jaipur | Yash Soni',
-  description: 'Make your birthday party unforgettable with anchor Yash Soni in Jaipur. Energetic, fun hosting for birthday parties of all sizes.',
-  alternates: {
-    canonical: 'https://yashsoni.in/anchor-for-birthday-party-jaipur',
-  },
-  openGraph: {
-    title: 'Birthday Party Anchor in Jaipur | Yash Soni',
-    description: 'Make your birthday party unforgettable with anchor Yash Soni in Jaipur. Energetic, fun hosting for birthday parties of all sizes.',
-    url: 'https://yashsoni.in/anchor-for-birthday-party-jaipur',
-    siteName: 'Yash Soni - Anchor & Emcee',
-    locale: 'en_IN',
-    type: 'website',
-  },
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `https://yashsoni.in/anchor-for-birthday-party-jaipur/#webpage`,
+  url: `https://yashsoni.in/anchor-for-birthday-party-jaipur`,
+  name: `Best Anchor in jaipur | Wedding & Event Host — Yash Soni`,
+  description: `Anchor Yash Soni is the premium event anchor in jaipur. Flawless unscripted hosting for weddings and corporate events.`,
+  inLanguage: "en-IN",
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: `How to Hire the Best Anchor in jaipur`,
+  description: `Step-by-step process to book Anchor Yash Soni for weddings and corporate events in jaipur.`,
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: `WhatsApp +91 7737877978 with your event dates and venues in jaipur.` },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show and specific venue logistics." }
+  ]
 };
 
 export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema)
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([webPageSchema, howToSchema, faqSchema]) }} />
       <PageClient />
     </>
   );

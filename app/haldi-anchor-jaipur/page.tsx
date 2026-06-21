@@ -34,6 +34,43 @@ const faqSchema = {
     }))
   };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Haldi Anchor Jaipur",
+      item: "https://yashsoni.in/haldi-anchor-jaipur",
+    },
+  ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Haldi Ceremony Anchor in Jaipur | Yash Soni",
+  url: "https://yashsoni.in/haldi-anchor-jaipur",
+  description: "Make your haldi ceremony unforgettable with Yash Soni, Jaipur's top haldi anchor. Fun, energetic hosting that keeps the celebration alive.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Haldi Anchor in Jaipur",
+  description: "Step-by-step process to book Anchor Yash Soni for your high-energy Haldi ceremony in Jaipur.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your event dates and venues. Peak season dates fill 6+ months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. No tentative holds are maintained." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show, bilingual scripting requirements, and specific venue logistics." },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Haldi Ceremony Anchor in Jaipur | Yash Soni',
   description: "Make your haldi ceremony unforgettable with Yash Soni, Jaipur's top haldi anchor. Fun, energetic hosting that keeps the celebration alive.",
@@ -59,6 +96,9 @@ export default function Page() {
           __html: JSON.stringify(faqSchema)
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

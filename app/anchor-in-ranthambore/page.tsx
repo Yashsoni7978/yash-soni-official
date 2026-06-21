@@ -1,20 +1,74 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
+// app/anchor-in-ranthambore/layout.jsx
+const CITY     = "Ranthambore";
+const SLUG     = "anchor-in-ranthambore";
+const DOMAIN   = "yashsoni.in";
+const FULL_URL = `https://${DOMAIN}/${SLUG}`;
+const LAT      = "26.0173";
+const LNG      = "76.5026";
+const OG_IMAGE = `https://${DOMAIN}/backgrounds/ranthambore_bg.webp`;
+
 const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Anchor Yash Soni",
-  image: "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  url: "https://yashsoni.in",
-  telephone: "+917737877978",
-  address: { "@type": "PostalAddress", streetAddress: "Vaishali Nagar", addressLocality: "Jaipur", postalCode: "302021", addressRegion: "RJ", addressCountry: "IN" },
-  geo: { "@type": "GeoCoordinates", latitude: 26.0173, longitude: 76.3505 },
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" },
-  openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" },
-  sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"],
+  "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
+  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  alternateName: ["Anchor in Ranthambore","Wedding Anchor Ranthambore","Wildlife Destination Wedding Anchor","Ranthambore Safari Wedding Host","Sher Bagh Anchor","Khem Villas Event Emcee","Nahargarh Fort Ranthambore Anchor","Jungle Luxury Wedding Anchor"],
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
+  sameAs: ["https://www.instagram.com/yashsoni_official","https://www.youtube.com/@anchorYashSoni"],
+  address: { "@type": "PostalAddress", addressLocality: "Sawai Madhopur", addressRegion: "Rajasthan", addressCountry: "IN", postalCode: "322001" },
+  geo: { "@type": "GeoCoordinates", latitude: LAT, longitude: LNG },
+  openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "09:00", closes: "21:00" },
+  areaServed: [{ "@type": "City", name: CITY },{ "@type": "City", name: "Sawai Madhopur" },{ "@type": "AdministrativeArea", name: "Rajasthan" },{ "@type": "Country", name: "India" }],
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5", worstRating: "1" },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog", name: "Anchoring Services in Ranthambore",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Jungle Luxury Wedding Anchor Ranthambore", description: "Wildlife-adjacent destination wedding hosting at Sher Bagh and Khem Villas" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sangeet Host Ranthambore", description: "Open-air tented Sangeet emcee in the tiger reserve circuit" } },
+    ],
+  },
 };
+
+const personSchema = {
+  "@context": "https://schema.org", "@type": "Person", "@id": `https://${DOMAIN}/#person`,
+  name: "Yash Soni", alternateName: ["Anchor Yash Soni","Anchor Yash"],
+  jobTitle: "Professional Event Anchor & Emcee",
+  url: `https://${DOMAIN}`, image: `https://${DOMAIN}/intro-portrait-top.webp`, telephone: "+917737877978",
+  knowsAbout: ["Wildlife Destination Wedding Anchoring","Jungle Luxury Event Hosting","NRI Wedding Management","Bilingual Emceeing","Ranthambore Tiger Reserve Acoustics","Tented Camp Event Management"],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `https://${DOMAIN}` },
+    { "@type": "ListItem", position: 2, name: "Anchor in Rajasthan", item: `https://${DOMAIN}/anchor-in-rajasthan` },
+    { "@type": "ListItem", position: 3, name: `Anchor in ${CITY}`, item: FULL_URL },
+  ],
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(`https://${DOMAIN}`),
+  title: `Best Anchor in Ranthambore | Jungle Luxury Wedding Host — Yash Soni`,
+  description: `Looking for the best anchor in Ranthambore? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for wildlife tented destination weddings at Sher Bagh & Khem Villas. Bilingual, unscripted, NRI-experienced.`,
+  keywords: [
+    "anchor in ranthambore","best anchor in ranthambore","wedding anchor ranthambore",
+    "wildlife wedding anchor ranthambore","jungle luxury wedding host",
+    "sher bagh wedding anchor","khem villas event emcee",
+    "nahargarh fort ranthambore anchor","tiger reserve wedding anchor",
+    "destination wedding anchor ranthambore","nri wedding anchor ranthambore",
+    "sangeet host ranthambore","tented camp wedding anchor",
+    "bilingual anchor ranthambore","anchor yash","anchor yash soni"
+  ],
+  alternates: { canonical: FULL_URL },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+  openGraph: { type: "website", locale: "en_IN", url: FULL_URL, siteName: "Anchor Yash Soni", title: `Best Anchor in Ranthambore | Jungle Luxury Wedding Host`, description: `4.9★ rated. 1,100+ events. Ranthambore's most trusted anchor for wildlife tented weddings at Sher Bagh & Khem Villas. Bilingual, unscripted, NRI-experienced.`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ranthambore — Anchor Yash Soni jungle luxury wedding` }] },
+  twitter: { card: "summary_large_image", site: "@yashsonianchor", creator: "@yashsonianchor", title: `Best Anchor in Ranthambore | Anchor Yash Soni — 4.9★`, description: `Sher Bagh. Khem Villas. Nahargarh Fort. Ranthambore's most trusted jungle luxury wedding anchor.`, images: [OG_IMAGE] },
+  other: { "geo.region": "IN-RJ", "geo.placename": `${CITY}, Sawai Madhopur, Rajasthan, India`, "geo.position": `${LAT};${LNG}`, ICBM: `${LAT}, ${LNG}`, "DC.subject": `Event Anchor, Wildlife Wedding, Jungle Luxury, ${CITY}, Rajasthan, India` },
+};
+
+
 
 const FAQS = [
   { q: "Who is the best anchor for destination weddings in Ranthambore?", a: "Anchor Yash Soni is rated 4.9★ across 1,100+ events and is a specialist in Ranthambore's luxury jungle resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium wildlife-adjacent venues." },
@@ -26,47 +80,45 @@ const FAQS = [
   { q: "What is the difference between a wedding anchor, emcee, and host in Ranthambore?", a: "Anchor, emcee, host, and MC are terms for the same professional role. International event planners often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the term used." },
 ];
 
-const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
-const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },{ "@type": "ListItem", position: 2, name: "Locations", item: "https://yashsoni.in/locations" },{ "@type": "ListItem", position: 3, name: "Anchor in Ranthambore", item: "https://yashsoni.in/anchor-in-ranthambore" }] };
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map(f => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
+};
 
 const webPageSchema = {
-  "@context": "https://schema.org", "@type": "WebPage",
-  name: "Best Anchor in Ranthambore | Yash Soni — Jungle Resort Wedding Specialist",
-  url: "https://yashsoni.in/anchor-in-ranthambore",
-  description: "Anchor Yash Soni is Ranthambore's top-rated wedding anchor and emcee — 4.9★ across 200+ reviews. Specialist in luxury jungle resort weddings and destination events in Ranthambore, Rajasthan.",
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `https://yashsoni.in/anchor-in-ranthambore/#webpage`,
+  url: `https://${DOMAIN}/${SLUG}`,
+  name: `Best Anchor in Ranthambore | Wedding & Event Host — Yash Soni`,
+  description: `Anchor Yash Soni is the premium event anchor in Ranthambore. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
-  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
-  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }
 };
 
 const howToSchema = {
-  "@context": "https://schema.org", "@type": "HowTo",
-  name: "How to Hire the Best Anchor or Emcee for a Ranthambore Destination Wedding",
-  description: "Step-by-step process to book Anchor Yash Soni for luxury jungle resort weddings and destination events in Ranthambore, Rajasthan.",
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: `How to Hire the Best Anchor in Ranthambore`,
+  description: `Step-by-step process to book Anchor Yash Soni for weddings and corporate events in Ranthambore.`,
   totalTime: "PT48H",
   step: [
-    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your Ranthambore event date and venue. Peak season dates fill 6+ months ahead." },
-    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering travel, stay, and event hosting logistics for Ranthambore is provided within the hour." },
-    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. No tentative holds are maintained." },
-    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show, bilingual scripting requirements, and specific venue noise regulations." },
-  ],
-};
-
-export const metadata: Metadata = {
-  title: "Best Anchor in Ranthambore | Yash Soni — Jungle Resort Wedding Specialist",
-  description: "Anchor Yash Soni is Ranthambore's 4.9★ rated wedding anchor and emcee — specialist in luxury jungle resort weddings, grand Sangeets, and NRI destination events.",
-  alternates: { canonical: "https://yashsoni.in/anchor-in-ranthambore" },
-  openGraph: { title: "Best Anchor in Ranthambore | Yash Soni", description: "4.9★ rated wedding anchor and emcee in Ranthambore. Luxury jungle resort weddings and grand destination events.", url: "https://yashsoni.in/anchor-in-ranthambore", siteName: "Anchor Yash Soni", locale: "en_IN", type: "website", images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Ranthambore — Yash Soni" }] },
-  twitter: { card: "summary_large_image", title: "Best Anchor in Ranthambore | Yash Soni", description: "4.9★ · 200+ reviews. Ranthambore's top anchor, emcee, and wedding host.", images: [{ url: "/og-image.webp", width: 1200, height: 630 }] },
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: `WhatsApp +91 7737877978 with your event dates and venues in Ranthambore.` },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show and specific venue logistics." }
+  ]
 };
 
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, personSchema, breadcrumbSchema, webPageSchema, howToSchema, faqSchema]) }} />
       <PageClient />
     </>
   );

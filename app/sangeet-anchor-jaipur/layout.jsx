@@ -1,31 +1,14 @@
 // app/sangeet-anchor-jaipur/layout.jsx
+import { buildServiceSchema } from "../../lib/schema/serviceSchema";
+
 // SERVER COMPONENT — no head tags, no scripts, metadata only
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://yashsoni.in/sangeet-anchor-jaipur",
+const serviceSchema = buildServiceSchema({
+  pageUrl: "https://yashsoni.in/sangeet-anchor-jaipur",
   name: "Sangeet Anchor Jaipur — Anchor Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
-  provider: {
-    "@type": "Person",
-    name: "Yash Soni",
-    url: "https://yashsoni.in",
-    telephone: "+917737877978",
-    jobTitle: "Premium Sangeet Anchor & Emcee",
-  },
-  areaServed: [
-    { "@type": "City", name: "Jaipur" },
-    { "@type": "AdministrativeArea", name: "Rajasthan" },
-  ],
-  url: "https://yashsoni.in/sangeet-anchor-jaipur",
+  description: "700+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   serviceType: "Sangeet Ceremony Hosting",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
-};
+  providerJobTitle: "Premium Sangeet Anchor & Emcee",
+});
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

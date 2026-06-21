@@ -73,6 +73,29 @@ const breadcrumbSchema = {
 // FIXED: VideoObject schema removed — had 3 TODO placeholder fields which
 // produce invalid JSON-LD. Re-add when you have a real YouTube corporate showreel.
 
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Corporate Event Anchor in Jaipur | Emcee | Yash Soni",
+  url: "https://yashsoni.in/corporate-event-anchor-jaipur",
+  description: "Top corporate event anchor and emcee in Jaipur. Yash Soni has hosted 500+ corporate events — conferences, annual days, product launches, and award nights.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Corporate Event Anchor in Jaipur",
+  description: "Step-by-step process to book Anchor Yash Soni for your corporate event or summit in Jaipur.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your corporate event dates and venues. Q4 and annual day dates fill 3-4 months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote & Invoice", text: "A comprehensive quote and GST invoice covering all event logistics is provided." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment and formal agreement." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the brand guidelines, run-of-show, panel moderation notes, and specific stage logistics." },
+  ],
+};
+
 // ── METADATA ───────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: "Corporate Event Anchor in Jaipur | Emcee | Yash Soni",
@@ -118,6 +141,8 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

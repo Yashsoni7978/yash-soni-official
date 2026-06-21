@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // Schema data — moved here from PageClient.jsx for server-side rendering
@@ -55,6 +55,43 @@ const faqSchema = {
     })),
   };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Team Building Host",
+      item: "https://yashsoni.in/team-building-host",
+    },
+  ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Team Building Event Host & Facilitator | Yash Soni",
+  url: "https://yashsoni.in/team-building-host",
+  description: "Professional team building event host Yash Soni. Engaging facilitation for corporate team building activities, retreats and annual days.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire a Corporate Team Building Host",
+  description: "Step-by-step process to book Anchor Yash Soni for your corporate offsite or team building retreat.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your offsite dates, employee headcount, and location." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote and GST invoice covering facilitation and activity logistics is provided." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment and signed agreement." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call with HR covers employee demographics, physical limitations, company goals, and the selected activities." },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Team Building Event Host & Facilitator | Yash Soni',
   description: 'Professional team building event host Yash Soni. Engaging facilitation for corporate team building activities, retreats and annual days.',
@@ -80,6 +117,9 @@ export default function Page() {
           __html: JSON.stringify(faqSchema)
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

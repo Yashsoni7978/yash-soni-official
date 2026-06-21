@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // Schema data — moved here from PageClient.jsx for server-side rendering
@@ -63,6 +63,43 @@ const faqSchema = {
     })),
   };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Destination Wedding Anchor",
+      item: "https://yashsoni.in/destination-wedding-anchor",
+    },
+  ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Destination Wedding Anchor & Emcee | Yash Soni",
+  url: "https://yashsoni.in/destination-wedding-anchor",
+  description: "Destination wedding anchor Yash Soni has hosted weddings across Rajasthan, Goa, Himachal and more. Bilingual hosting, seamless event flow.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Destination Wedding Anchor in India",
+  description: "Step-by-step process to book Anchor Yash Soni for your luxury destination wedding in Rajasthan, Goa, or abroad.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your destination wedding dates and exact venue. Destination dates block 3-4 days and fill 6-9 months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Flat Package Quote", text: "A comprehensive quote covering all events over the 2-3 days is provided. No hidden hourly charges." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. Flight logistics are discussed." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call with you and your wedding planner covers the run-of-show, bilingual scripting requirements, and venue-specific logistics." },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Destination Wedding Anchor & Emcee | Yash Soni',
   description: 'Destination wedding anchor Yash Soni has hosted weddings across Rajasthan, Goa, Himachal and more. Bilingual hosting, seamless event flow.',
@@ -88,6 +125,9 @@ export default function Page() {
           __html: JSON.stringify(faqSchema)
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

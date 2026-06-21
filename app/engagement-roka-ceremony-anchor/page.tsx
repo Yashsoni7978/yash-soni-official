@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // Schema data — moved here from PageClient.jsx for server-side rendering
@@ -36,6 +36,43 @@ const faqSchema = {
   "@context":"https://schema.org","@type":"FAQPage",
   mainEntity: FAQS.map(f => ({ "@type":"Question", name:f.q, acceptedAnswer:{ "@type":"Answer", text:f.a } })) };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Engagement Roka Ceremony Anchor",
+      item: "https://yashsoni.in/engagement-roka-ceremony-anchor",
+    },
+  ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Engagement & Roka Ceremony Anchor | Yash Soni",
+  url: "https://yashsoni.in/engagement-roka-ceremony-anchor",
+  description: "Professional engagement and roka ceremony anchor Yash Soni. Fun, warm hosting that makes your engagement celebration truly special.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire the Best Engagement & Roka Anchor in Jaipur",
+  description: "Step-by-step process to book Anchor Yash Soni for your engagement, roka, or ring ceremony in Jaipur.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your event dates and venues. Peak season dates fill 6+ months ahead." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment. No tentative holds are maintained." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show, family dynamics, and custom game planning." },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Engagement & Roka Ceremony Anchor | Yash Soni',
   description: 'Professional engagement and roka ceremony anchor Yash Soni. Fun, warm hosting that makes your engagement celebration truly special.',
@@ -61,6 +98,9 @@ export default function Page() {
           __html: JSON.stringify(faqSchema)
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

@@ -1,19 +1,14 @@
 // app/destination-wedding-anchor/layout.jsx
+import { buildServiceSchema } from "../../lib/schema/serviceSchema";
+
 // SERVER COMPONENT — national-rank SEO metadata
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://yashsoni.in/destination-wedding-anchor",
+const serviceSchema = buildServiceSchema({
+  pageUrl: "https://yashsoni.in/destination-wedding-anchor",
   name: "Destination Wedding Anchor India — Anchor Yash Soni",
-  description: "1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
-  provider: {
-    "@type": "Person",
-    name: "Yash Soni",
-    url: "https://yashsoni.in",
-    telephone: "+917737877978",
-    jobTitle: "Destination Wedding Anchor & Emcee",
-    knowsLanguage: ["Hindi", "English", "Rajasthani", "Marwari"],
-  },
+  description: "700+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
+  serviceType: "Destination Wedding Hosting",
+  providerJobTitle: "Destination Wedding Anchor & Emcee",
+  knowsLanguage: ["Hindi", "English", "Rajasthani", "Marwari"],
   areaServed: [
     { "@type": "City", name: "Jaipur" },
     { "@type": "City", name: "Udaipur" },
@@ -24,8 +19,6 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", name: "Goa" },
     { "@type": "Country", name: "India" },
   ],
-  url: "https://yashsoni.in/destination-wedding-anchor",
-  serviceType: "Destination Wedding Hosting",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Destination Wedding Services India",
@@ -39,13 +32,7 @@ const serviceSchema = {
       { "@type": "Offer", name: "3-Day Wedding Package Anchor India" },
     ],
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
-};
+});
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

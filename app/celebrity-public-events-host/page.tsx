@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // Schema data — moved here from PageClient.jsx for server-side rendering
@@ -51,6 +51,43 @@ const faqSchema = {
     })),
   };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Celebrity & Public Events Host",
+      item: "https://yashsoni.in/celebrity-public-events-host",
+    },
+  ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  name: "Celebrity & Public Event Host | Yash Soni",
+  url: "https://yashsoni.in/celebrity-public-events-host",
+  description: "Professional celebrity event host and public event anchor Yash Soni. Experienced in high-profile events, award nights and brand launches across India.",
+  inLanguage: "en-IN",
+  about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org", "@type": "HowTo",
+  name: "How to Hire a Celebrity & Public Event Host in Jaipur",
+  description: "Step-by-step process to book Anchor Yash Soni for your high-profile celebrity event, concert, or brand launch.",
+  totalTime: "PT48H",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: "WhatsApp +91 7737877978 with your public event dates, crowd size, and specific venue details. Large formats require 3-6 months notice." },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote and GST invoice covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment and signed agreement." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the celebrity protocols, PR notes, run-of-show, brand guidelines, and crowd management plans." },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Celebrity & Public Event Host | Yash Soni',
   description: 'Professional celebrity event host and public event anchor Yash Soni. Experienced in high-profile events, award nights and brand launches across India.',
@@ -76,6 +113,9 @@ export default function Page() {
           __html: JSON.stringify(faqSchema)
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <PageClient />
     </>
   );

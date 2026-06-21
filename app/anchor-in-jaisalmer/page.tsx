@@ -1,47 +1,240 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// ── SCHEMA DATA ────────────────────────────────────────────────────────────
+// app/anchor-in-jaisalmer/layout.jsx
+// Golden Fort & Desert Wedding Anchor — Full Triple Schema + Rich SEO Layout
+
+const CITY     = "Jaisalmer";
+const REGION   = "Thar Desert, Western Rajasthan";
+const SLUG     = "anchor-in-jaisalmer";
+const DOMAIN   = "yashsoni.in";
+const FULL_URL = `https://${DOMAIN}/${SLUG}`;
+const LAT      = "26.9157";
+const LNG      = "70.9083";
+const OG_IMAGE = `https://${DOMAIN}/backgrounds/jaisalmer_bg.webp`;
+
+// ─── 1. LOCAL BUSINESS SCHEMA ─────────────────────────────────────────────
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Anchor Yash Soni",
-  image: "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  url: "https://yashsoni.in",
+  "@type": "ProfessionalService",
+  "@id": `${FULL_URL}/#business`,
+  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  alternateName: [
+    "Anchor in Jaisalmer",
+    "Best Wedding Anchor Jaisalmer",
+    "Desert Destination Wedding Anchor",
+    "Suryagarh Wedding Anchor",
+    "Jaisalmer Marriott Event Host",
+    "Golden City Wedding Emcee",
+    "Thar Desert Safari Anchor",
+    "Bhati Rajput Heritage Wedding Anchor",
+    "Sam Sand Dunes Event Host",
+    "Jaisalmer Fort Royal Wedding Anchor",
+    "Luxury Desert Camp Event Emcee",
+  ],
+  description: `1,100+ Premium Events Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  url: FULL_URL,
   telephone: "+917737877978",
+  email: "bookings@yashsoni.in",
+  priceRange: "₹₹₹₹",
+  image: OG_IMAGE,
+  logo: `https://${DOMAIN}/logo.webp`,
+  sameAs: [
+    "https://www.instagram.com/yashsoni_official",
+    "https://www.youtube.com/@anchorYashSoni",
+    "https://g.co/kgs/anchoryashsoni",
+  ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Vaishali Nagar",
-    addressLocality: "Jaipur",
-    postalCode: "302021",
-    addressRegion: "RJ",
+    streetAddress: "Sam Road",
+    addressLocality: CITY,
+    addressRegion: "Rajasthan",
     addressCountry: "IN",
+    postalCode: "345001",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 26.9157,
-    longitude: 70.9083,
+    latitude: LAT,
+    longitude: LNG,
   },
+  hasMap: `https://maps.google.com/?q=${LAT},${LNG}`,
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    opens: "09:00",
+    closes: "21:00",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+917737877978",
+    contactType: "booking",
+    availableLanguage: ["Hindi","English"],
+    contactOption: "TollFree",
+  },
+  areaServed: [
+    { "@type": "City", name: "Jaisalmer" },
+    { "@type": "City", name: "Sam Sand Dunes" },
+    { "@type": "City", name: "Khuri" },
+    { "@type": "AdministrativeArea", name: "Thar Desert" },
+    { "@type": "AdministrativeArea", name: "Western Rajasthan" },
+    { "@type": "Country", name: "India" },
+  ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     reviewCount: "200",
     bestRating: "5",
+    worstRating: "1",
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    opens: "00:00",
-    closes: "23:59",
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      author: { "@type": "Person", name: "Goenka Family" },
+      reviewBody: "Our Suryagarh wedding required absolute understated elegance. Yash read our international guest list perfectly. He connected deeply with the elders while keeping our friends from London wholly engaged.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      author: { "@type": "Person", name: "Desai Family" },
+      reviewBody: "Managing a Sangeet in the open desert dunes was an acoustic nightmare until Yash stepped on stage. His energy outmatched the desert wind, holding 500 guests locked to the stage for a straight 4-hour set.",
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Anchoring Services in Jaisalmer & Thar Desert",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Suryagarh Heritage Wedding Anchor", description: "Bespoke hosting for ultra-luxury weddings at Jaisalmer's premier fortress property" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Desert Camp Sangeet Emcee", description: "High-energy open-air Sangeet hosting against the backdrop of the Sam Sand Dunes" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Marriott Golden City Wedding Host", description: "Seamless bilingual anchoring for NRI and metropolitan Indian families" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Reward Trip Host", description: "Desert safaris and corporate gala dinner hosting for elite business delegations" } },
+    ],
   },
-  sameAs: [
-    "https://www.instagram.com/anchor_yash_official",
-    "https://www.facebook.com/anchoryashsoni",
-    "https://www.wedmegood.com/profile/anchor-yash-25628297",
-    "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
+};
+
+// ─── 2. PERSON SCHEMA ─────────────────────────────────────────────────────
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `https://${DOMAIN}/#person`,
+  name: "Yash Soni",
+  alternateName: ["Anchor Yash Soni", "Anchor Yash", "Jaisalmer NRI Wedding Anchor"],
+  jobTitle: "Professional Event Anchor & Emcee",
+  description: "Professional event anchor and emcee with 4+ years and 1,100+ events across Rajasthan. Specialist in luxury Jaisalmer destination weddings, open-desert acoustic command, and bilingual English/Hindi premium family hosting.",
+  url: `https://${DOMAIN}`,
+  image: `https://${DOMAIN}/intro-portrait-top.webp`,
+  telephone: "+917737877978",
+  email: "bookings@yashsoni.in",
+  sameAs: ["https://www.instagram.com/yashsoni_official", "https://www.youtube.com/@anchorYashSoni"],
+  knowsAbout: [
+    "Suryagarh Jaisalmer Event Protocol",
+    "Open Desert Acoustic Management",
+    "Luxury HNI Destination Weddings",
+    "NRI Guest List Bilingual Hosting",
+    "Golden City Heritage Ceremonies",
+    "Bhati Rajput Heritage Integration",
+    "Desert Safari Corporate Gala Hosting",
+    "Jaisalmer Multi-Day Logistics",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Anchor Yash Soni Events",
+    url: `https://${DOMAIN}`,
+  },
+};
+
+// ─── 3. BREADCRUMB SCHEMA ─────────────────────────────────────────────────
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `https://${DOMAIN}` },
+    { "@type": "ListItem", position: 2, name: "Anchor in Rajasthan", item: `https://${DOMAIN}/anchor-in-rajasthan` },
+    { "@type": "ListItem", position: 3, name: "Western Rajasthan Desert Anchor", item: `https://${DOMAIN}/anchor-in-rajasthan#western` },
+    { "@type": "ListItem", position: 4, name: `Best Anchor in ${CITY}`, item: FULL_URL },
   ],
 };
+
+// ─── 4. WEBPAGE SCHEMA ────────────────────────────────────────────────────
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `https://yashsoni.in/anchor-in-jaisalmer/#webpage`,
+  url: FULL_URL,
+  name: `Best Anchor in Jaisalmer | Suryagarh & Desert Wedding Host — Yash Soni`,
+  headline: `India's Most Trusted Event Anchor for Jaisalmer, Suryagarh & Golden City Sand Dune Celebrations`,
+  description: `Anchor Yash Soni — 4.9★ rated, 1,100+ events. Premier anchor for Jaisalmer destination weddings at Suryagarh, Marriott & Sam dunes. NRI/HNI bilingual expert. Open-desert acoustic mastery. Zero scripts.`,
+  inLanguage: "en-IN",
+  isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
+  about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Thar Desert, Rajasthan` },
+  breadcrumb: breadcrumbSchema,
+  speakable: { "@type": "SpeakableSpecification", xPath: ["/html/head/title", "/html/head/meta[@name='description']/@content"] },
+};
+
+// ─── METADATA ─────────────────────────────────────────────────────────────
+export const metadata: Metadata = {
+  metadataBase: new URL(`https://${DOMAIN}`),
+  title: `Best Anchor in Jaisalmer | Desert & Heritage Wedding Host — Yash Soni`,
+  description: `Looking for the best anchor in Jaisalmer? Anchor Yash Soni — 4.9★ rated, 1,100+ events. Expert for Suryagarh, Marriott & Sam dunes luxury destination weddings. HNI/NRI bilingual specialist, open-air desert acoustic command.`,
+  keywords: [
+    "anchor in jaisalmer",
+    "best anchor in jaisalmer",
+    "wedding anchor jaisalmer",
+    "suryagarh wedding anchor",
+    "jaisalmer marriott event host",
+    "desert destination wedding anchor",
+    "sam sand dunes event emcee",
+    "golden city wedding anchor",
+    "nri wedding anchor jaisalmer",
+    "hni destination wedding rajasthan",
+    "sangeet anchor jaisalmer",
+    "bilingual anchor jaisalmer rajasthan",
+    "luxury desert camp anchor",
+    "bhati rajput wedding anchor",
+    "anchor yash",
+    "anchor yash soni",
+    "best anchor rajasthan desert",
+  ],
+  alternates: { canonical: FULL_URL },
+  robots: {
+    index: true, follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: FULL_URL,
+    siteName: "Anchor Yash Soni",
+    title: `Best Anchor in Jaisalmer | Luxury Desert Wedding Host`,
+    description: `4.9★ rated. 1,100+ events. Jaisalmer's most trusted anchor for Suryagarh, Marriott & luxury desert camps. NRI/HNI bilingual expert. Open-air desert acoustic command.`,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Jaisalmer — Anchor Yash Soni at the Golden Fort and Thar Desert` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@yashsonianchor",
+    creator: "@yashsonianchor",
+    title: `Best Anchor in Jaisalmer | Anchor Yash Soni — 4.9★`,
+    description: `Suryagarh. Marriott. Sam Dunes. Western Rajasthan's most trusted luxury desert weapon. 1,100+ events. Zero scripts.`,
+    images: [OG_IMAGE],
+  },
+  other: {
+    "geo.region": "IN-RJ",
+    "geo.placename": `${CITY}, ${REGION}, India`,
+    "geo.position": `${LAT};${LNG}`,
+    ICBM: `${LAT}, ${LNG}`,
+    "DC.title": `Best Anchor in Jaisalmer | Desert Heritage Anchor — Yash Soni`,
+    "DC.subject": `Event Anchor, Luxury Wedding, HNI Emcee, Desert Safari, ${CITY}, Rajasthan, India`,
+    "DC.coverage": `${CITY}, Thar Desert, Rajasthan, India`,
+    "DC.language": "en-IN",
+    "DC.creator": "Anchor Yash Soni",
+    "rating": "General",
+    "revisit-after": "7 days",
+    "content-language": "en-in",
+  },
+};
+
+// ─── LAYOUT ────────────────────────────────────────────────────────────────
+
 
 const FAQS = [
   {
@@ -89,123 +282,31 @@ const FAQS = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: FAQS.map((f) => ({
+  mainEntity: FAQS.map(f => ({
     "@type": "Question",
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://yashsoni.in" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://yashsoni.in/locations" },
-    { "@type": "ListItem", position: 3, name: "Anchor in Jaisalmer", item: "https://yashsoni.in/anchor-in-jaisalmer" },
-  ],
-};
-
-// ── GEO SCHEMAS ────────────────────────────────────────────────────────────
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Best Anchor in Jaisalmer | Yash Soni — Desert & Fort Wedding Specialist",
-  url: "https://yashsoni.in/anchor-in-jaisalmer",
-  description: "Anchor Yash Soni is Jaisalmer's top-rated wedding anchor and emcee — 4.9★ across 200+ reviews. Specialist in desert weddings at Suryagarh, The Serai, Sam Sand Dunes, fort events, and NRI destination weddings in the Golden City.",
-  inLanguage: "en-IN",
-  about: {
-    "@type": "Person",
-    name: "Yash Soni",
-    alternateName: "Anchor Yash Soni",
-    jobTitle: "Professional Event Anchor, Emcee, and Host",
-    url: "https://yashsoni.in",
-    telephone: "+917737877978",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "200",
-      bestRating: "5",
-    },
-    sameAs: [
-      "https://www.instagram.com/anchor_yash_official",
-      "https://www.facebook.com/anchoryashsoni",
-      "https://www.wedmegood.com/profile/anchor-yash-25628297",
-      "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
-    ],
-  },
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"],
-  },
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
 };
 
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How to Hire the Best Anchor or Emcee for a Jaisalmer Desert Wedding",
-  description: "Step-by-step process to book Anchor Yash Soni for desert weddings, fort events, and corporate retreats in Jaisalmer, Rajasthan.",
-  totalTime: "PT72H",
+  name: `How to Hire the Best Anchor in Jaisalmer`,
+  description: `Step-by-step process to book Anchor Yash Soni for weddings and corporate events in Jaisalmer.`,
+  totalTime: "PT48H",
   step: [
-    {
-      "@type": "HowToStep",
-      position: 1,
-      name: "Check Availability via WhatsApp",
-      text: "Message +91 7737877978 with your Jaisalmer event date, type, and venue. Jaisalmer's desert circuit (November–February) books 6–8 months ahead. Confirm availability simultaneously with venue selection.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 2,
-      name: "Receive a Jaisalmer-Specific Quote",
-      text: "A quote covering multi-day travel, stay logistics, and event hosting for the Jaisalmer destination circuit is provided within the hour. Desert camp, fort, and palace venue logistics differ significantly and are factored in.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 3,
-      name: "Confirm with Advance Payment",
-      text: "The date is exclusively blocked on receipt of advance payment. No tentative holds — Jaisalmer peak-season dates fill quickly due to limited premium venue availability.",
-    },
-    {
-      "@type": "HowToStep",
-      position: 4,
-      name: "Pre-Event Desert Briefing",
-      text: "A pre-event briefing covers desert temperature management, acoustic handling for open venues, Manganiyar folk music integration, bilingual scripting for NRI guests, and sunset timing for the Sangeet or ceremony.",
-    },
-  ],
+    { "@type": "HowToStep", position: 1, name: "Check Availability", text: `WhatsApp +91 7737877978 with your event dates and venues in Jaisalmer.` },
+    { "@type": "HowToStep", position: 2, name: "Receive Quote", text: "A comprehensive quote covering all event logistics is provided within the hour." },
+    { "@type": "HowToStep", position: 3, name: "Confirm with Advance", text: "Date exclusively blocked on receipt of advance payment." },
+    { "@type": "HowToStep", position: 4, name: "Pre-Event Briefing", text: "A detailed pre-event call covers the run-of-show and specific venue logistics." }
+  ]
 };
 
-// ── METADATA ───────────────────────────────────────────────────────────────
-export const metadata: Metadata = {
-  title: "Best Anchor in Jaisalmer | Yash Soni — Desert & Fort Wedding Specialist",
-  description: "Anchor Yash Soni is Jaisalmer's 4.9★ rated wedding anchor and emcee — specialist in desert weddings at Suryagarh, The Serai, Sam Sand Dunes, and NRI destination weddings in the Golden City.",
-  alternates: {
-    canonical: "https://yashsoni.in/anchor-in-jaisalmer",
-  },
-  openGraph: {
-    title: "Best Anchor in Jaisalmer | Yash Soni — Desert & Fort Wedding Specialist",
-    description: "Anchor Yash Soni is Jaisalmer's 4.9★ rated wedding anchor and emcee — specialist in desert weddings at Suryagarh, The Serai, and NRI destination weddings in the Golden City.",
-    url: "https://yashsoni.in/anchor-in-jaisalmer",
-    siteName: "Anchor Yash Soni",
-    locale: "en_IN",
-    type: "website",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Best Anchor in Jaisalmer — Yash Soni" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Best Anchor in Jaisalmer | Yash Soni",
-    description: "4.9★ · 200+ reviews · Suryagarh · The Serai · Sam Sand Dunes. Jaisalmer's top anchor, emcee, and desert wedding host.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
-  },
-};
-
-// ── PAGE ───────────────────────────────────────────────────────────────────
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, localBusinessSchema]) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, personSchema, breadcrumbSchema, webPageSchema, howToSchema, faqSchema]) }} />
       <PageClient />
     </>
   );

@@ -150,7 +150,7 @@ const breadcrumbSchema = {
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `${FULL_URL}/#webpage`,
+  "@id": `https://yashsoni.in/anchor-in-coorg/#webpage`,
   url: FULL_URL,
   name: `Best Anchor in Coorg | Taj Madikeri & Tamara Emcee — Yash Soni`,
   headline: `Coorg's Premier Event Anchor for Ultra-Luxury Coffee Estate Destination Weddings`,
