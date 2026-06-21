@@ -81,7 +81,7 @@ export default function Contact() {
         {/* --- HEADER --- */}
         <div className="text-center mb-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2 rounded-full bg-black/50 backdrop-blur-xl mb-8 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
+             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2 rounded-full /50 backdrop-blur-xl mb-8 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
                <Crown className="w-4 h-4 text-[#B5952F]" />
                <span className="text-[#B5952F] text-xs uppercase tracking-[0.2em] font-bold">
                  Initiate The Dialogue

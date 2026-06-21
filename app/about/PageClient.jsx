@@ -413,7 +413,7 @@ export default function AboutPageClient() {
                 aria-label={`Learn more about ${spec.title}`}
               >
                 <div
-                  className="border border-white/8 rounded-2xl p-7 md:p-9 h-full transition-all duration-500 hover:-translate-y-1 hover:border-opacity-60 bg-zinc-950/50"
+                  className="border border-white/8 rounded-2xl p-7 md:p-9 h-full transition-all duration-500 hover:-translate-y-1 hover:border-opacity-60 /50"
                   style={{
                     "--spec-accent": spec.accent,
                     borderColor: "rgba(255,255,255,0.08)",
@@ -480,7 +480,7 @@ export default function AboutPageClient() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/75 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
-                <div className="bg-black/60 backdrop-blur-sm border border-white/10 rounded-xl p-4">
+                <div className="/60 backdrop-blur-sm border border-white/10 rounded-xl p-4">
                   <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-1.5 font-bold">
                     Zero paper scripts
                   </p>
@@ -536,7 +536,7 @@ export default function AboutPageClient() {
           PULL QUOTE 2 — full-bleed dark panel
       ══════════════════════════════════════ */}
       <Reveal>
-        <div className="bg-zinc-950/60 border-y border-white/5 py-16 md:py-20 px-5 md:px-10">
+        <div className="/60 border-y border-white/5 py-16 md:py-20 px-5 md:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-zinc-600 text-[10px] tracking-[0.42em] uppercase mb-7">
               The Standard
@@ -669,7 +669,7 @@ export default function AboutPageClient() {
                   </div>
                 </GoldBorderCard>
               ) : (
-                <div className="border border-white/8 rounded-2xl p-7 md:p-9 h-full bg-zinc-950/50 hover:border-[#D4AF37]/25 transition-colors">
+                <div className="border border-white/8 rounded-2xl p-7 md:p-9 h-full /50 hover:border-[#D4AF37]/25 transition-colors">
                   <h3 className="text-white text-base font-bold mb-4 uppercase tracking-widest border-l-2 border-[#D4AF37] pl-4">
                     {p.title}
                   </h3>
@@ -778,7 +778,7 @@ export default function AboutPageClient() {
           10. GEOGRAPHIC REACH
       ══════════════════════════════════════ */}
       <Reveal>
-        <div className="bg-zinc-950/40 border-y border-white/5 px-5 md:px-10 py-12 md:py-16">
+        <div className="/40 border-y border-white/5 px-5 md:px-10 py-12 md:py-16">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-3 mb-8">
               <MapPin size={14} className="text-[#B5952F]" aria-hidden="true" />

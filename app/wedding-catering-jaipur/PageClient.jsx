@@ -450,7 +450,7 @@ export default function WeddingCateringJaipur() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tier 1 */}
-            <div className="border border-white/10 p-10 hover:border-[#B45309]/50 transition-colors duration-500 group rounded-lg bg-black/50">
+            <div className="border border-white/10 p-10 hover:border-[#B45309]/50 transition-colors duration-500 group rounded-lg /50">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#FDE68A] transition-colors">The Traditional Feast</h3>
               <p className="font-['Rekalgera'] text-xs text-white/40 uppercase tracking-widest mb-8">Authentic & Rich</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
@@ -474,7 +474,7 @@ export default function WeddingCateringJaipur() {
               </ul>
             </div>
             {/* Tier 3 */}
-            <div className="border border-white/10 p-10 hover:border-[#B45309]/50 transition-colors duration-500 group rounded-lg bg-black/50">
+            <div className="border border-white/10 p-10 hover:border-[#B45309]/50 transition-colors duration-500 group rounded-lg /50">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#FDE68A] transition-colors">The Palace Sit-Down</h3>
               <p className="font-['Rekalgera'] text-xs text-white/40 uppercase tracking-widest mb-8">Michelin Level</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">

@@ -318,7 +318,7 @@ export default function DestinationAnchor() {
         </div>
         <div className="relative z-20 container mx-auto px-5 md:px-10 text-center">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            <div className="inline-flex items-center gap-3 border border-white/20 px-5 py-2 rounded-full bg-black/40 backdrop-blur-xl mb-8">
+            <div className="inline-flex items-center gap-3 border border-white/20 px-5 py-2 rounded-full /40 backdrop-blur-xl mb-8">
               <Globe className="w-3.5 h-3.5 text-[#B5952F]" />
               <span className="text-white text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Destination Wedding Anchor · India & Global
@@ -364,7 +364,7 @@ export default function DestinationAnchor() {
       {/* ══════════════════════════════════════
           3. STATS
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-b border-white/5">
+      <section className=" border-b border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -432,7 +432,7 @@ export default function DestinationAnchor() {
       {/* ══════════════════════════════════════
           5. WHY DIFFERENT — 4 points
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
           <Reveal>
             <SectionHeading subtitle="The Role" title="The Social Glue." />
@@ -462,7 +462,7 @@ export default function DestinationAnchor() {
                 sizes="(max-width:1024px) 100vw, 50vw"
               quality={90} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
+              <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-1">4.9★ Destination Wedding Anchor</p>
                 <p className="text-white text-xs">NRI specialist · Bilingual · Full 2–3 day coverage</p>
               </div>
@@ -505,7 +505,7 @@ export default function DestinationAnchor() {
           7. DESTINATION GRID — SEO location cards
           (Original location postcards expanded)
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Home Grounds" title="Destination Expertise Across India." />
           <div className="grid md:grid-cols-2 gap-5 mb-8">
@@ -575,7 +575,7 @@ export default function DestinationAnchor() {
       {/* ══════════════════════════════════════
           9. FAQ — 12 questions, national PAA
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-5xl mx-auto">
           <SectionHeading subtitle="Logistics & Planning" title="Destination Wedding Anchor — FAQ." align="center" />
           <div className="grid md:grid-cols-2 gap-4">
@@ -616,7 +616,7 @@ export default function DestinationAnchor() {
       {/* ══════════════════════════════════════
           11. SCARCITY CTA
       ══════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-zinc-950 border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
+      <section className="py-20 md:py-28  border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.07),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span className="font-black text-[16vw] text-white/[0.02] leading-none whitespace-nowrap">DESTINATION</span>

@@ -20,7 +20,6 @@ import { PlatformsMarquee } from "./_components/PlatformsMarquee";
 import { ReviewsMarquee } from "./_components/ReviewsMarquee";
 import { FAQSection } from "./_components/FAQSection";
 import { GalleryMarquee } from "./_components/GalleryMarquee";
-import StarsBackground from "../components/StarsBackground";
 
 // ── HOMEPAGE METADATA ──────────────────────────────────────────────────────
 // Title intentionally differentiated from layout default via a distinct
@@ -221,7 +220,6 @@ const reviewSchema = {
 export default function HomePage() {
   return (
     <>
-      <StarsBackground speed={0.8} />
 
       {/* FIXED: Removed wrapping <main> — layout.tsx already provides
           <main id="main-content">. Nested <main> elements are invalid HTML. */}
@@ -657,7 +655,7 @@ export default function HomePage() {
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="relative pl-10 md:pl-8 border-l md:border-l border-white/10 hover:border-[#D4AF37] transition-colors group h-full">
                   <span
-                    className="absolute -left-3 top-0 w-6 h-6 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center text-[9px] text-[#B5952F] font-bold group-hover:scale-125 transition-transform"
+                    className="absolute -left-3 top-0 w-6 h-6  border border-[#D4AF37] rounded-full flex items-center justify-center text-[9px] text-[#B5952F] font-bold group-hover:scale-125 transition-transform"
                     aria-hidden="true"
                   >
                     {step.num}

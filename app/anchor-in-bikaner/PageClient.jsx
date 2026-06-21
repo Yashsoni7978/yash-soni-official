@@ -193,7 +193,7 @@ export default function PageClient() {
         </div>
         <div className="relative z-20 text-center px-5 max-w-6xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 36 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}>
-            <div className="mb-8 inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full bg-black/60 backdrop-blur-xl shadow-[0_0_24px_rgba(212,175,55,0.2)]">
+            <div className="mb-8 inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full /60 backdrop-blur-xl shadow-[0_0_24px_rgba(212,175,55,0.2)]">
               <MapPin size={13} className="text-[#B5952F]" />
               <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em]">Best Event Anchor · Bikaner · The Fort City</span>
             </div>
@@ -220,7 +220,7 @@ export default function PageClient() {
       </section>
 
       {/* ══ 2. STATS ══ */}
-      <section className="py-16 bg-zinc-950 border-y border-[#D4AF37]/12 z-20 relative">
+      <section className="py-16  border-y border-[#D4AF37]/12 z-20 relative">
         <div className="max-w-5xl mx-auto px-5 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -299,7 +299,7 @@ export default function PageClient() {
       </section>
 
       {/* ══ 4. VS TABLE ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12 bg-zinc-950 border-b border-white/5">
+      <section className="py-20 md:py-28 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="text-center mb-12">
@@ -308,10 +308,10 @@ export default function PageClient() {
             </div>
           </Reveal>
           <div className="grid grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/8">
-            <div className="bg-zinc-950 px-6 py-4 border-b border-white/5"><p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">What you usually get</p></div>
+            <div className=" px-6 py-4 border-b border-white/5"><p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">What you usually get</p></div>
             <div className="bg-zinc-900/50 px-6 py-4 border-b border-white/5"><p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">What you get here</p></div>
             {VS.map((row, i) => (<>
-              <div key={`p${i}`} className="bg-zinc-950 px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-red-500/40 shrink-0" /><p className="text-zinc-500 text-sm">{row.problem}</p></div>
+              <div key={`p${i}`} className=" px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-red-500/40 shrink-0" /><p className="text-zinc-500 text-sm">{row.problem}</p></div>
               <div key={`f${i}`} className="bg-zinc-900/30 px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3"><CheckCircle2 size={14} className="text-[#B5952F] shrink-0" /><p className="text-zinc-200 text-sm font-medium">{row.fix}</p></div>
             </>))}
           </div>
@@ -345,7 +345,7 @@ export default function PageClient() {
       </section>
 
       {/* ══ 6. VENUES ══ */}
-      <section className="py-16 bg-zinc-950 border-b border-white/5 px-5 md:px-12">
+      <section className="py-16  border-b border-white/5 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10">
@@ -418,12 +418,12 @@ export default function PageClient() {
       </section>
 
       {/* ══ 9. CROWD COMMAND ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12 bg-zinc-950 border-b border-white/5">
+      <section className="py-20 md:py-28 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="aspect-video rounded-2xl overflow-hidden border border-[#D4AF37]/20 relative group"><Image src="/vintage-car-couple-shoot.webp" alt="Bikaner Junagarh Fort Heritage" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" quality={75} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
+              <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Bikaner · The Desert Fort City</p>
                 <p className="text-white text-xs">Rajasthan's most culturally rooted heritage event destination — commanded with authentic Rathore authority.</p>
               </div>
@@ -478,7 +478,7 @@ export default function PageClient() {
           KEYWORD CLUSTER SECTION
           Anchor · Emcee · Host · MC — All Variants
       ══════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+      <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
           <Reveal>
             <div className="text-center mb-14">
@@ -606,7 +606,7 @@ export default function PageClient() {
       </section>
 
       {/* ══ 12. FAQ ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12 bg-zinc-950 border-b border-white/5">
+      <section className="py-20 md:py-28 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <div className="text-center mb-12">
@@ -675,7 +675,7 @@ export default function PageClient() {
         </div>
       </section>
 
-      <footer className="py-16 border-t border-white/10 bg-black text-center text-zinc-600">
+      <footer className="py-16 border-t border-white/10  text-center text-zinc-600">
         <div className="container mx-auto px-5">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] uppercase tracking-widest font-bold mb-8">
             {[

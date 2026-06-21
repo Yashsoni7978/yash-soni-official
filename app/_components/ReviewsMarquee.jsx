@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 
 export const ReviewsMarquee = ({ reviews }) => {
   return (
-    <section className="py-20 md:py-28 overflow-hidden bg-zinc-950 border-y border-white/5">
+    <section className="py-20 md:py-28 overflow-hidden  border-y border-white/5">
       <div className="container mx-auto px-5 md:px-10 mb-12 text-center">
         <h2 className="text-2xl md:text-4xl font-bold">
           Real Words. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">Real Impact.</span>

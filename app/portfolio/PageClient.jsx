@@ -130,7 +130,7 @@ export default function Portfolio() {
     }
   };
   return (
-    <div className="bg-black text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans pt-32 pb-20">
+    <div className=" text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans pt-32 pb-20">
       {/* --- HEADER --- */}
       <div className="container mx-auto px-4 mb-20 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -146,7 +146,7 @@ export default function Portfolio() {
       </div>
       {/* --- FILTER BAR --- */}
       <div className="container mx-auto px-4 mb-16 sticky top-20 z-30">
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4 bg-black/80 backdrop-blur-md py-4 border-y border-neutral-900 w-fit mx-auto px-8 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 /80 backdrop-blur-md py-4 border-y border-neutral-900 w-fit mx-auto px-8 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -189,11 +189,11 @@ export default function Portfolio() {
                       {/* Badges */}
                       <div className="absolute top-4 left-4 z-20">
                          {item.type === "video" ? (
-                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-[#D4AF37] group-hover:text-[#B5952F] transition-colors">
+                           <div className="w-10 h-10 /50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-[#D4AF37] group-hover:text-[#B5952F] transition-colors">
                              <Play className="w-4 h-4 fill-current" />
                            </div>
                          ) : (
-                           <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-white transition-colors">
+                           <div className="w-10 h-10 /50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-white transition-colors">
                              <Camera className="w-4 h-4" />
                            </div>
                          )}

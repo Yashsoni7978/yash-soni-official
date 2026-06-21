@@ -183,16 +183,16 @@ function ImageSlider() {
         <AnimatePresence mode="wait">
           <motion.span key={current} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 bg-black/50 px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">
+            className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 /50 px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">
             {SLIDER_IMAGES[current].caption}
           </motion.span>
         </AnimatePresence>
       </div>
       {/* Arrows — desktop only */}
-      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex w-10 h-10 items-center justify-center rounded-full border border-white/20 bg-black/40 backdrop-blur-sm text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
+      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex w-10 h-10 items-center justify-center rounded-full border border-white/20 /40 backdrop-blur-sm text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
         <ChevronLeft size={18} />
       </button>
-      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex w-10 h-10 items-center justify-center rounded-full border border-white/20 bg-black/40 backdrop-blur-sm text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
+      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex w-10 h-10 items-center justify-center rounded-full border border-white/20 /40 backdrop-blur-sm text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
         <ChevronRight size={18} />
       </button>
       {/* Dots */}
@@ -280,7 +280,7 @@ const faqSchema = {
     })),
   };
   return (
-    <main className="bg-black text-white overflow-x-hidden font-sans">
+    <main className=" text-white overflow-x-hidden font-sans">
       <style>{css}</style>
       {/* ══════════════════════════════════════════
           BREADCRUMB
@@ -304,7 +304,7 @@ const faqSchema = {
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.2 }}>
               {/* Badge */}
               <div className="mb-5">
-                <span className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-4 py-1.5 rounded-full bg-black/50 text-[#D4AF37] text-[10px] md:text-xs font-bold uppercase tracking-widest backdrop-blur-md">
+                <span className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-4 py-1.5 rounded-full /50 text-[#D4AF37] text-[10px] md:text-xs font-bold uppercase tracking-widest backdrop-blur-md">
                   <Star size={10} fill={GOLD} /> 4.9★ · 200+ Verified Reviews · Jaipur
                 </span>
               </div>
@@ -340,7 +340,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════════
           2. CREDENTIAL BAR — no boxes
       ══════════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-white/5 py-0">
+      <section className=" border-y border-white/5 py-0">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -402,7 +402,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════════
           4. SERVICES GRID — 8 cards, all linked
       ══════════════════════════════════════════ */}
-      <section className="py-14 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
@@ -468,7 +468,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════════
           6. COMPETITOR TAKEDOWN
       ══════════════════════════════════════════ */}
-      <section className="py-14 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
           <Reveal>
             <p className="text-[#D4AF37] text-[10px] uppercase tracking-widest mb-4 font-bold">The Market Reality</p>
@@ -564,7 +564,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════════
           8. TESTIMONIALS — 6 cards with location data
       ══════════════════════════════════════════ */}
-      <section className="py-14 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
@@ -630,7 +630,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════════
           10. PROCESS — 4 steps
       ══════════════════════════════════════════ */}
-      <section className="py-14 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-12 md:mb-16">
@@ -644,7 +644,7 @@ const faqSchema = {
             {PROCESS.map((s, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <div className="relative pl-8 pr-4 py-6 border-l border-white/10 hover:border-[#D4AF37]/50 group transition-colors pb-10">
-                  <span className="absolute -left-3 top-6 w-6 h-6 bg-black border border-[#D4AF37] rounded-full text-[10px] text-[#D4AF37] font-black flex items-center justify-center group-hover:scale-125 transition-transform">
+                  <span className="absolute -left-3 top-6 w-6 h-6  border border-[#D4AF37] rounded-full text-[10px] text-[#D4AF37] font-black flex items-center justify-center group-hover:scale-125 transition-transform">
                     {s.n}
                   </span>
                   <h3 className="text-base font-bold text-white mb-2">{s.title}</h3>
@@ -691,7 +691,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════════
           12. BLOG PREVIEW — 3 articles
       ══════════════════════════════════════════ */}
-      <section className="py-14 md:py-20 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-20  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
@@ -748,7 +748,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════════
           14. SCARCITY CLOSE
       ══════════════════════════════════════════ */}
-      <section className="py-20 md:py-32 bg-zinc-950 border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
+      <section className="py-20 md:py-32  border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span className="font-black text-[20vw] text-white/[0.02] leading-none whitespace-nowrap">JAIPUR</span>
         </div>

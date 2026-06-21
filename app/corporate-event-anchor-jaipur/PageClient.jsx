@@ -320,7 +320,7 @@ export default function CorporateAnchor() {
       {/* ══════════════════════════════════════
           2. STATS — updated to real numbers
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-white/5">
+      <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -375,7 +375,7 @@ export default function CorporateAnchor() {
       <section className="py-16 md:py-24 bg-[#080808] border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <SectionHeading subtitle="Watch The Reel" title="In Action." align="center" />
-          <div className="relative aspect-video w-full max-w-4xl mx-auto bg-black rounded-2xl overflow-hidden border border-white/8 shadow-2xl group cursor-pointer hover:border-blue-500/40 transition-colors duration-400">
+          <div className="relative aspect-video w-full max-w-4xl mx-auto  rounded-2xl overflow-hidden border border-white/8 shadow-2xl group cursor-pointer hover:border-blue-500/40 transition-colors duration-400">
             {/* FIX: next/image replaces <img> */}
             <Image src="/gallery-5.webp"
               alt="Anchor Yash Soni corporate event showreel Jaipur"
@@ -430,7 +430,7 @@ export default function CorporateAnchor() {
       {/* ══════════════════════════════════════
           6. VENUE COVERAGE — NEW SEO section
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Jaipur Corporate Venues" title="Corporate Anchor Across All Jaipur Hubs." align="center" />
           <p className="text-center text-zinc-500 max-w-xl mx-auto -mt-8 mb-12 text-sm leading-relaxed">
@@ -493,7 +493,7 @@ export default function CorporateAnchor() {
       {/* ══════════════════════════════════════
           8. TESTIMONIALS — NEW section
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="4.9★ Verified Reviews" title="What Corporate Clients Say." align="center" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -536,7 +536,7 @@ export default function CorporateAnchor() {
       {/* ══════════════════════════════════════
           10. RELATED SERVICES — internal links
       ══════════════════════════════════════ */}
-      <section className="py-14 md:py-20 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-20  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">

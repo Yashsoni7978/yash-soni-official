@@ -395,7 +395,7 @@ const faqSchema = {
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             {/* Badge — review-based, not "Rated #1" */}
-            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full bg-black/60 backdrop-blur-xl mb-8 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full /60 backdrop-blur-xl mb-8 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
               <Star className="w-4 h-4 text-[#B5952F] fill-[#D4AF37]" />
               <span className="text-[#B5952F] text-xs uppercase tracking-widest font-bold">
                 4.9★ · 200+ Reviews · Local Jaipur Anchor
@@ -429,7 +429,7 @@ const faqSchema = {
       {/* ══════════════════════════════════════
           2. STATS — no boxes
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+      <section className=" border-y border-[#D4AF37]/15 relative z-10">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -587,28 +587,28 @@ const faqSchema = {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[250px]">
           <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
             <Image src="/gallery-1.webp" alt="Anchor Yash Soni hosting Haldi ceremony in Jaipur" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" quality={90} />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
+            <div className="absolute inset-0 /20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
             <Image src="/gallery-2.webp" alt="Best anchor in Jaipur crowd interaction at destination wedding" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" quality={90} />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
+            <div className="absolute inset-0 /20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
             <Image src="/gallery-3.webp" alt="Sangeet anchor Jaipur high energy crowd" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" quality={90} />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
+            <div className="absolute inset-0 /20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
             <Image src="/gallery-4.webp" alt="Corporate event anchor Jaipur on stage" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" quality={90} />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
+            <div className="absolute inset-0 /20 group-hover:bg-transparent transition-all" />
           </div>
           <div className="col-span-1 row-span-2 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
             <Image src="/gallery-5.webp" alt="Anchor Yash Soni Varmala ceremony Jaipur" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" quality={90} />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
+            <div className="absolute inset-0 /20 group-hover:bg-transparent transition-all" />
           </div>
           {/* Extra image added */}
           <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group border border-[#D4AF37]/20">
             <Image src="/gallery-5.webp" alt="Anchor in Jaipur luxury wedding venue" fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" quality={90} />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
+            <div className="absolute inset-0 /20 group-hover:bg-transparent transition-all" />
           </div>
         </div>
       </section>
@@ -659,7 +659,7 @@ const faqSchema = {
           6B. KEYWORD CLUSTER SECTION
           Anchor · Emcee · Host · MC — All Variants
       ══════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-zinc-950 border-y border-[#D4AF37]/15 relative z-10">
+      <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
           <Reveal>
             <div className="text-center mb-14">
@@ -915,7 +915,7 @@ const faqSchema = {
           Original was red/dark red bg — replaced
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 relative overflow-hidden z-10">
-        <div className="absolute inset-0 bg-zinc-950" />
+        <div className="absolute inset-0 " />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.07),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span className="font-black text-[20vw] text-white/[0.02] leading-none whitespace-nowrap">JAIPUR</span>

@@ -211,7 +211,7 @@ export default function HaldiAnchor() {
                Warning: Booking me may result in excessive laughter and sore feet from dancing.
             </p>
             <Link href="/contact" aria-label="Contact Yash Soni">
-               <button className="px-12 py-5 bg-black text-white font-black uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl border-2 border-black hover:border-white">
+               <button className="px-12 py-5  text-white font-black uppercase tracking-widest hover:scale-105 transition-transform rounded-full shadow-2xl border-2 border-black hover:border-white">
                   Check Availability Now
                </button>
             </Link>

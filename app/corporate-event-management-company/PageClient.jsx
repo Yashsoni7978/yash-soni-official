@@ -49,7 +49,7 @@ export default function CorporateEventManagement() {
     <div ref={containerRef} className="bg-[#FAF9F6] text-[#1A1A1A] w-full min-h-screen overflow-hidden selection:bg-[#1E3A8A] selection:text-white">
       
       {/* 1. THE CINEMATIC HERO (100vh) */}
-      <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24 bg-black">
+      <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24 ">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <AnimatePresence>
             <motion.div
@@ -75,7 +75,7 @@ export default function CorporateEventManagement() {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative z-20 backdrop-blur-xl bg-black/60 p-8 md:p-14 lg:p-20 max-w-3xl shadow-2xl border-l-4 border-[#1E3A8A]"
+          className="relative z-20 backdrop-blur-xl /60 p-8 md:p-14 lg:p-20 max-w-3xl shadow-2xl border-l-4 border-[#1E3A8A]"
         >
           <span className="font-['Rekalgera'] uppercase tracking-[0.3em] text-[#93C5FD] text-xs md:text-sm mb-6 block">
             Executive Execution
@@ -260,7 +260,7 @@ export default function CorporateEventManagement() {
       </section>
 
       {/* 8. THE HERITAGE MARQUEE */}
-      <section className="py-20 bg-black overflow-hidden whitespace-nowrap flex items-center border-y border-[#1E3A8A]/30">
+      <section className="py-20  overflow-hidden whitespace-nowrap flex items-center border-y border-[#1E3A8A]/30">
         <div className="animate-[scroll_40s_linear_infinite] flex gap-16 items-center">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16 items-center">
@@ -315,7 +315,7 @@ export default function CorporateEventManagement() {
       </section>
 
       {/* 10. CURATED STAGES OF CELEBRATION (Timeline) */}
-      <section className="py-32 bg-black text-[#FAF9F6] relative overflow-hidden border-t border-white/5">
+      <section className="py-32  text-[#FAF9F6] relative overflow-hidden border-t border-white/5">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#1E3A8A]/10 rounded-full blur-[150px] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 lg:px-24">
           <h2 className="font-['The_Seasons'] text-6xl md:text-8xl mb-24 text-center">The Blueprint</h2>
@@ -399,7 +399,7 @@ export default function CorporateEventManagement() {
       </section>
 
       {/* 14. NUMBERS THAT SPEAK */}
-      <section className="py-24 bg-black border-b border-[#1E3A8A]/30">
+      <section className="py-24  border-b border-[#1E3A8A]/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
             { num: "500+", label: "Events Executed" },
@@ -450,7 +450,7 @@ export default function CorporateEventManagement() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tier 1 */}
-            <div className="border border-white/10 p-10 hover:border-[#1E3A8A]/50 transition-colors duration-500 group rounded-lg bg-black/30">
+            <div className="border border-white/10 p-10 hover:border-[#1E3A8A]/50 transition-colors duration-500 group rounded-lg /30">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#93C5FD] transition-colors">Executive Meets</h3>
               <p className="font-['Rekalgera'] text-xs text-gray-500 uppercase tracking-widest mb-8">50 - 150 Delegates</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
@@ -474,7 +474,7 @@ export default function CorporateEventManagement() {
               </ul>
             </div>
             {/* Tier 3 */}
-            <div className="border border-white/10 p-10 hover:border-[#1E3A8A]/50 transition-colors duration-500 group rounded-lg bg-black/30">
+            <div className="border border-white/10 p-10 hover:border-[#1E3A8A]/50 transition-colors duration-500 group rounded-lg /30">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#93C5FD] transition-colors">The Reveal</h3>
               <p className="font-['Rekalgera'] text-xs text-gray-500 uppercase tracking-widest mb-8">Product Launches</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
@@ -512,7 +512,7 @@ export default function CorporateEventManagement() {
       </section>
 
       {/* 18. PRESS & RECOGNITION */}
-      <section className="py-20 bg-black text-center border-t border-white/5">
+      <section className="py-20  text-center border-t border-white/5">
         <span className="font-['Rekalgera'] text-gray-600 tracking-[0.3em] uppercase text-xs mb-8 block">Recognized By</span>
         <div className="flex flex-wrap justify-center gap-12 opacity-30 grayscale">
           <span className="font-['Runiga'] text-3xl text-white">FORBES</span>
@@ -574,7 +574,7 @@ export default function CorporateEventManagement() {
       </section>
 
       {/* 21. SEO PILLAR FOOTER */}
-      <section className="py-12 bg-black text-center px-6">
+      <section className="py-12  text-center px-6">
         <div className="max-w-5xl mx-auto border-t border-white/10 pt-12">
           <p className="font-sans text-[10px] md:text-xs text-white/30 leading-loose text-justify text-balance">
             Top corporate event management company in Jaipur. Anchor Yash Soni organizes high-end corporate galas, MICE travel, dealer meets, and product launches with massive tech production and flawless show calling across Rajasthan and India. Best corporate planner agency execution managed by Anchor Yash Soni.

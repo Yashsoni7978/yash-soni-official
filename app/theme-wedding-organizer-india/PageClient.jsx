@@ -49,7 +49,7 @@ export default function ThemeWeddingOrganizerIndia() {
     <div ref={containerRef} className="bg-[#FAF9F6] text-[#1A1A1A] w-full min-h-screen overflow-hidden selection:bg-[#0F766E] selection:text-white">
       
       {/* 1. THE CINEMATIC HERO (100vh) */}
-      <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24 bg-black">
+      <section className="relative w-full h-screen flex items-end pb-24 md:pb-32 px-6 md:px-12 lg:px-24 ">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <AnimatePresence>
             <motion.div
@@ -75,7 +75,7 @@ export default function ThemeWeddingOrganizerIndia() {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative z-20 backdrop-blur-xl bg-black/60 p-8 md:p-14 lg:p-20 max-w-3xl shadow-2xl border-l-4 border-[#0F766E]"
+          className="relative z-20 backdrop-blur-xl /60 p-8 md:p-14 lg:p-20 max-w-3xl shadow-2xl border-l-4 border-[#0F766E]"
         >
           <span className="font-['Rekalgera'] uppercase tracking-[0.3em] text-[#5EEAD4] text-xs md:text-sm mb-6 block">
             Theatrical Imagination
@@ -260,7 +260,7 @@ export default function ThemeWeddingOrganizerIndia() {
       </section>
 
       {/* 8. THE HERITAGE MARQUEE */}
-      <section className="py-20 bg-black overflow-hidden whitespace-nowrap flex items-center border-y border-[#0F766E]/30">
+      <section className="py-20  overflow-hidden whitespace-nowrap flex items-center border-y border-[#0F766E]/30">
         <div className="animate-[scroll_40s_linear_infinite] flex gap-16 items-center">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16 items-center">
@@ -315,7 +315,7 @@ export default function ThemeWeddingOrganizerIndia() {
       </section>
 
       {/* 10. CURATED STAGES OF CELEBRATION (Timeline) */}
-      <section className="py-32 bg-black text-[#FAF9F6] relative overflow-hidden border-t border-white/5">
+      <section className="py-32  text-[#FAF9F6] relative overflow-hidden border-t border-white/5">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#0F766E]/10 rounded-full blur-[150px] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 lg:px-24">
           <h2 className="font-['The_Seasons'] text-6xl md:text-8xl mb-24 text-center">The Creative Process</h2>
@@ -399,7 +399,7 @@ export default function ThemeWeddingOrganizerIndia() {
       </section>
 
       {/* 14. NUMBERS THAT SPEAK */}
-      <section className="py-24 bg-black border-b border-[#0F766E]/30">
+      <section className="py-24  border-b border-[#0F766E]/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
             { num: "100+", label: "Sets Fabricated" },
@@ -450,7 +450,7 @@ export default function ThemeWeddingOrganizerIndia() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tier 1 */}
-            <div className="border border-white/10 p-10 hover:border-[#0F766E]/50 transition-colors duration-500 group rounded-lg bg-black/30">
+            <div className="border border-white/10 p-10 hover:border-[#0F766E]/50 transition-colors duration-500 group rounded-lg /30">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#5EEAD4] transition-colors">The Aesthetic Shift</h3>
               <p className="font-['Rekalgera'] text-xs text-gray-400 uppercase tracking-widest mb-8">Color & Floral Based</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-300 mb-10">
@@ -474,7 +474,7 @@ export default function ThemeWeddingOrganizerIndia() {
               </ul>
             </div>
             {/* Tier 3 */}
-            <div className="border border-white/10 p-10 hover:border-[#0F766E]/50 transition-colors duration-500 group rounded-lg bg-black/30">
+            <div className="border border-white/10 p-10 hover:border-[#0F766E]/50 transition-colors duration-500 group rounded-lg /30">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#5EEAD4] transition-colors">The Grand Production</h3>
               <p className="font-['Rekalgera'] text-xs text-gray-400 uppercase tracking-widest mb-8">Theatrical Build</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-300 mb-10">
@@ -512,7 +512,7 @@ export default function ThemeWeddingOrganizerIndia() {
       </section>
 
       {/* 18. PRESS & RECOGNITION */}
-      <section className="py-20 bg-black text-center border-t border-white/5">
+      <section className="py-20  text-center border-t border-white/5">
         <span className="font-['Rekalgera'] text-gray-600 tracking-[0.3em] uppercase text-xs mb-8 block">Recognized By</span>
         <div className="flex flex-wrap justify-center gap-12 opacity-30 grayscale">
           <span className="font-['Runiga'] text-3xl text-white">VOGUE</span>
@@ -573,7 +573,7 @@ export default function ThemeWeddingOrganizerIndia() {
       </section>
 
       {/* 21. SEO PILLAR FOOTER */}
-      <section className="py-12 bg-black text-center px-6">
+      <section className="py-12  text-center px-6">
         <div className="max-w-5xl mx-auto border-t border-white/10 pt-12">
           <p className="font-sans text-[10px] md:text-xs text-white/30 leading-loose text-justify text-balance">
             Top theme wedding organizer in India. Anchor Yash Soni provides bespoke 3D set fabrication, thematic decor, and immersive destination wedding designs across Jaipur, Udaipur, and Rajasthan. Best theme wedding agency execution managed by Anchor Yash Soni.

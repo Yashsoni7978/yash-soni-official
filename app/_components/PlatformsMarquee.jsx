@@ -3,7 +3,7 @@
 
 import Link from "next/link";export const PlatformsMarquee = ({ platforms }) => {
   return (
-    <section className="py-14 md:py-16 border-y border-white/5 bg-black">
+    <section className="py-14 md:py-16 border-y border-white/5 ">
       <div className="mb-8 flex justify-center">
         <span className="text-[10px] font-bold tracking-[0.3em] text-white/30 uppercase border border-white/8 bg-white/3 rounded-full px-6 py-2.5">
           VERIFIED & TRUSTED ON

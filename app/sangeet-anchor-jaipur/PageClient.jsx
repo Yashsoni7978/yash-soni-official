@@ -276,7 +276,7 @@ export default function SangeetAnchor() {
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             {/* Badge — gold, not purple */}
-            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/50 backdrop-blur-xl mb-8">
+            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full /50 backdrop-blur-xl mb-8">
               <Star className="w-3 h-3 text-[#B5952F] fill-[#D4AF37]" />
               <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Best Sangeet Anchor in Jaipur
@@ -312,7 +312,7 @@ export default function SangeetAnchor() {
       {/* ══════════════════════════════════════
           2. STATS — real numbers, gold, no boxes
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-white/5">
+      <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -364,7 +364,7 @@ export default function SangeetAnchor() {
               quality={90} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               {/* Overlay card */}
-              <div className="absolute bottom-5 left-5 right-5 bg-black/70 backdrop-blur-sm border border-[#D4AF37]/30 rounded-xl p-4">
+              <div className="absolute bottom-5 left-5 right-5 /70 backdrop-blur-sm border border-[#D4AF37]/30 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-1">4.9★ Sangeet Anchor</p>
                 <p className="text-white text-xs">Dance floors packed until 4 AM · 1,100+ events</p>
               </div>
@@ -376,7 +376,7 @@ export default function SangeetAnchor() {
           4. SIGNATURE SEGMENTS — 3 show cards
           (Structure kept, colors fixed to gold)
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Signature Segments" title="The Blockbuster Lineup." align="center" />
           <p className="text-center text-zinc-500 max-w-xl mx-auto -mt-8 mb-12 text-sm leading-relaxed">
@@ -390,7 +390,7 @@ export default function SangeetAnchor() {
                     ? "bg-zinc-900 border-[#D4AF37]/50 shadow-[0_0_30px_rgba(212,175,55,0.08)]"
                     : "bg-[#0a0a0a] border-white/8 hover:border-[#D4AF37]/30"
                 }`}>
-                  <div className="mb-5 w-14 h-14 rounded-2xl bg-black border border-white/10 group-hover:border-[#D4AF37]/40 flex items-center justify-center transition-all">
+                  <div className="mb-5 w-14 h-14 rounded-2xl  border border-white/10 group-hover:border-[#D4AF37]/40 flex items-center justify-center transition-all">
                     <card.icon className={`w-7 h-7 ${card.color}`} />
                   </div>
                   <h3 className="text-xl font-black text-white mb-3 uppercase tracking-tight group-hover:text-[#B5952F] transition-colors">{card.title}</h3>
@@ -458,7 +458,7 @@ export default function SangeetAnchor() {
           6. LOCATION COVERAGE — SEO section
           (NEW — was missing from original)
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Jaipur Coverage" title="Sangeet Anchor Across All Jaipur Zones." align="center" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -518,7 +518,7 @@ export default function SangeetAnchor() {
       {/* ══════════════════════════════════════
           8. FAQ — upgraded questions
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto">
           <SectionHeading subtitle="People Also Ask" title="Sangeet Anchor Jaipur — FAQ." align="center" />
           <div className="flex flex-col gap-3">
@@ -560,7 +560,7 @@ export default function SangeetAnchor() {
       {/* ══════════════════════════════════════
           10. SCARCITY CTA — dark gold, not purple
       ══════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-zinc-950 border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
+      <section className="py-20 md:py-28  border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.07),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span className="font-black text-[18vw] text-white/[0.02] leading-none whitespace-nowrap">SANGEET</span>

@@ -5,6 +5,7 @@ import "./globals.css";
 import HeaderController from "../components/HeaderController";
 import FooterController from "../components/FooterController";
 import FloatingContact from "../components/FloatingContact";
+import StarsBackground from "../components/StarsBackground";
 
 import {
   Playfair_Display,
@@ -312,7 +313,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className="bg-black text-white antialiased relative">
+      <body className="bg-transparent text-white antialiased relative">
+        <StarsBackground speed={0.8} />
+
         {/* Skip-to-content link for keyboard accessibility */}
         <a
           href="#main-content"

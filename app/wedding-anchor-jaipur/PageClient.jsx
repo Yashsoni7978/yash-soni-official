@@ -238,7 +238,7 @@ export default function WeddingAnchor() {
           1. HERO — H1 is the primary keyword
       ══════════════════════════════════════ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-black">
+        <div className="absolute inset-0 z-0 ">
           <AnimatePresence mode="popLayout">
             <motion.img
               key={index}
@@ -256,7 +256,7 @@ export default function WeddingAnchor() {
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full bg-black/40 backdrop-blur-md mb-8">
+            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full /40 backdrop-blur-md mb-8">
               <Star className="w-3 h-3 text-[#B5952F] fill-[#D4AF37]" />
               <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">4.9★ · Best Wedding Anchor in Jaipur</span>
             </div>
@@ -324,7 +324,7 @@ export default function WeddingAnchor() {
               <div className="absolute inset-0 border-2 border-[#D4AF37]/20 m-5 rounded-2xl pointer-events-none" />
               {/* Credential overlay */}
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-black/70 backdrop-blur-sm border border-white/10 rounded-xl p-4 flex items-center gap-4">
+                <div className="/70 backdrop-blur-sm border border-white/10 rounded-xl p-4 flex items-center gap-4">
                   <div>
                     <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-0.5">4.9★ Wedding Anchor</p>
                     <p className="text-white text-xs">1,100+ weddings · Jaipur & Jaipur & Rajasthan</p>
@@ -357,7 +357,7 @@ export default function WeddingAnchor() {
       {/* ══════════════════════════════════════
           4. EVENT FLOW — same structure
       ══════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-black border-t border-white/5">
+      <section className="py-24 md:py-32  border-t border-white/5">
         <div className="container mx-auto px-5 md:px-10">
           <SectionHeading subtitle="Total Show Management" title="From Welcome to After Party" align="center" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -407,7 +407,7 @@ export default function WeddingAnchor() {
       {/* ══════════════════════════════════════
           6. THE TRILOGY — same structure, upgraded alt text
       ══════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-black border-t border-white/5">
+      <section className="py-24 md:py-32  border-t border-white/5">
         <div className="container mx-auto px-5 md:px-10">
           <SectionHeading subtitle="Signature Hosting" title="The Wedding Event Trilogy" align="center" />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
@@ -472,7 +472,7 @@ export default function WeddingAnchor() {
           Original was yellow bg — changed to dark
           brand-consistent version
       ══════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-zinc-950 border-t border-white/5 relative overflow-hidden">
+      <section className="py-24 md:py-32  border-t border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.07),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span className="font-black text-[20vw] text-white/[0.02] leading-none whitespace-nowrap">WEDDING</span>

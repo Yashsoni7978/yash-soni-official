@@ -285,7 +285,7 @@ export default function TeamBuildingHost() {
       {/* ══════════════════════════════════════
           2. STATS — real numbers
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-white/5">
+      <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -303,7 +303,7 @@ export default function TeamBuildingHost() {
       {/* ══════════════════════════════════════
           3. INTRO — keyword-rich body text
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-b border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-b border-white/5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <p className="text-[#B5952F] text-[10px] uppercase tracking-widest mb-4 font-bold">More Than Just Games</p>
@@ -353,7 +353,7 @@ export default function TeamBuildingHost() {
       {/* ══════════════════════════════════════
           5. ACTIVITIES — 6 cards (original kept + expanded)
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <Reveal>
@@ -366,7 +366,7 @@ export default function TeamBuildingHost() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {ACTIVITIES.map((a, i) => (
               <Reveal key={i} delay={i * 0.07}>
-                <div className="h-full flex flex-col p-7 bg-black border border-white/8 rounded-2xl hover:border-[#D4AF37]/30 transition-all duration-400 hover:-translate-y-1 group">
+                <div className="h-full flex flex-col p-7  border border-white/8 rounded-2xl hover:border-[#D4AF37]/30 transition-all duration-400 hover:-translate-y-1 group">
                   <h3 className="text-lg font-bold mb-3 flex items-center gap-3 group-hover:text-[#B5952F] transition-colors">
                     <Zap className="w-4 h-4 text-[#B5952F] shrink-0" />
                     {a.title}
@@ -442,7 +442,7 @@ export default function TeamBuildingHost() {
       {/* ══════════════════════════════════════
           7. TESTIMONIALS — NEW
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10">
@@ -494,7 +494,7 @@ export default function TeamBuildingHost() {
       {/* ══════════════════════════════════════
           9. RELATED SERVICES — internal links
       ══════════════════════════════════════ */}
-      <section className="py-14 md:py-20 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-20  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">

@@ -227,7 +227,7 @@ export default function BirthdayAnchorJaipur() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
           <motion.div initial={{ opacity:0, y:32 }} animate={{ opacity:1, y:0 }} transition={{ duration:1 }}>
-            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/40 px-5 py-2 rounded-full bg-black/40 backdrop-blur-sm mb-7">
+            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/40 px-5 py-2 rounded-full /40 backdrop-blur-sm mb-7">
               <Cake size={12} className="text-[#B5952F]"/>
               <span className="text-[#B5952F] text-[9px] font-bold uppercase tracking-[.3em]">Birthday Party Anchor · Jaipur</span>
             </div>
@@ -260,7 +260,7 @@ export default function BirthdayAnchorJaipur() {
       {/* ══════════════════════════════════════
           2. ANIMATED STATS
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-[#D4AF37]/12">
+      <section className=" border-y border-[#D4AF37]/12">
         <div className="max-w-6xl mx-auto px-5 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s,i) => (
@@ -304,7 +304,7 @@ export default function BirthdayAnchorJaipur() {
                 fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
                 style={{ filter:"grayscale(10%)" }}quality={75} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
-              <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
+              <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Live · Unscripted · Personalised</p>
                 <p className="text-white text-xs">Custom built for every birthday. Never the same show twice.</p>
               </div>
@@ -315,7 +315,7 @@ export default function BirthdayAnchorJaipur() {
       {/* ══════════════════════════════════════
           4. PARTY FORMATS — 6 cards
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-5 md:px-12 bg-zinc-950 border-b border-white/5">
+      <section className="py-16 md:py-24 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 md:mb-14">
@@ -381,7 +381,7 @@ export default function BirthdayAnchorJaipur() {
       {/* ══════════════════════════════════════
           6. VS — THE DIFFERENCE
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-12">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-12">
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
@@ -392,7 +392,7 @@ export default function BirthdayAnchorJaipur() {
             </div>
           </Reveal>
           <div className="grid grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/8">
-            <div className="bg-zinc-950 px-6 py-4 border-b border-white/5">
+            <div className=" px-6 py-4 border-b border-white/5">
               <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">What you usually get</p>
             </div>
             <div className="bg-zinc-900/50 px-6 py-4 border-b border-white/5">
@@ -400,7 +400,7 @@ export default function BirthdayAnchorJaipur() {
             </div>
             {VS.map((row, i) => (
               <>
-                <div key={`p${i}`} className="bg-zinc-950 px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3">
+                <div key={`p${i}`} className=" px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-red-500/50 shrink-0"/>
                   <p className="text-zinc-500 text-sm">{row.problem}</p>
                 </div>
@@ -438,7 +438,7 @@ export default function BirthdayAnchorJaipur() {
       {/* ══════════════════════════════════════
           8. TESTIMONIALS
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-12">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
@@ -505,7 +505,7 @@ export default function BirthdayAnchorJaipur() {
       {/* ══════════════════════════════════════
           11. RELATED SERVICES
       ══════════════════════════════════════ */}
-      <section className="py-14 bg-zinc-950 border-y border-white/5 px-5 md:px-12">
+      <section className="py-14  border-y border-white/5 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">

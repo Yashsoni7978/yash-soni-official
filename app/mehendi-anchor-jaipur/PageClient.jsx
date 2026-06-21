@@ -354,7 +354,7 @@ export default function MehendiAnchor() {
       {/* ══════════════════════════════════════
           2. STATS — real numbers
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-white/5">
+      <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -418,7 +418,7 @@ export default function MehendiAnchor() {
       {/* ══════════════════════════════════════
           4. GAMES MENU — emerald/teal/green kept
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Crowd Engagement" title="Interactive Mehendi Games." align="center" />
           <p className="text-center text-zinc-500 max-w-xl mx-auto -mt-8 mb-12 text-sm leading-relaxed">
@@ -489,7 +489,7 @@ export default function MehendiAnchor() {
               quality={90} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               {/* Overlay card */}
-              <div className="absolute bottom-5 left-5 right-5 bg-black/70 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-4">
+              <div className="absolute bottom-5 left-5 right-5 /70 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-4">
                 <p className="text-emerald-400 text-[10px] uppercase tracking-widest font-bold mb-1">4.9★ Mehendi Anchor</p>
                 <p className="text-white text-xs">Hands-free games · Zero boring moments · 1,100+ events</p>
               </div>
@@ -500,7 +500,7 @@ export default function MehendiAnchor() {
       {/* ══════════════════════════════════════
           6. LOCATION COVERAGE — SEO section
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Jaipur Coverage" title="Mehendi Anchor Across All Jaipur Zones." align="center" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -562,7 +562,7 @@ export default function MehendiAnchor() {
       {/* ══════════════════════════════════════
           8. FAQ — 11 questions targeting PAA
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto">
           <SectionHeading subtitle="People Also Ask" title="Mehendi Anchor Jaipur — FAQ." align="center" />
           <div className="flex flex-col gap-3">
@@ -607,7 +607,7 @@ export default function MehendiAnchor() {
           Fixed: no green gradient bg — dark base
           with emerald accents kept for identity
       ══════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-zinc-950 border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
+      <section className="py-20 md:py-28  border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
         {/* Subtle emerald glow — keeps the Mehendi identity without the garish gradient */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.07),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">

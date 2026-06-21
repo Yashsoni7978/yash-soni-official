@@ -450,7 +450,7 @@ export default function WeddingPlanningJaipur() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tier 1 */}
-            <div className="border border-white/10 p-10 hover:border-[#991B1B]/50 transition-colors duration-500 group rounded-lg bg-black/50">
+            <div className="border border-white/10 p-10 hover:border-[#991B1B]/50 transition-colors duration-500 group rounded-lg /50">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#FCA5A5] transition-colors">Partial Planning</h3>
               <p className="font-['Rekalgera'] text-xs text-white/40 uppercase tracking-widest mb-8">Coordination Based</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">
@@ -474,7 +474,7 @@ export default function WeddingPlanningJaipur() {
               </ul>
             </div>
             {/* Tier 3 */}
-            <div className="border border-white/10 p-10 hover:border-[#991B1B]/50 transition-colors duration-500 group rounded-lg bg-black/50">
+            <div className="border border-white/10 p-10 hover:border-[#991B1B]/50 transition-colors duration-500 group rounded-lg /50">
               <h3 className="font-['The_Seasons'] text-3xl mb-2 group-hover:text-[#FCA5A5] transition-colors">The Palace Buyout</h3>
               <p className="font-['Rekalgera'] text-xs text-white/40 uppercase tracking-widest mb-8">VVIP Level</p>
               <ul className="space-y-4 font-sans font-light text-sm text-gray-400 mb-10">

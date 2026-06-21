@@ -307,7 +307,7 @@ export default function AnchorInRajasthan() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-12 w-full">
           <motion.div initial={{ opacity:0, y:32 }} animate={{ opacity:1, y:0 }} transition={{ duration:1 }}>
-            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/40 px-5 py-2 rounded-full bg-black/40 backdrop-blur-sm mb-7">
+            <div className="inline-flex items-center gap-3 border border-[#D4AF37]/40 px-5 py-2 rounded-full /40 backdrop-blur-sm mb-7">
               <MapPin size={12} className="text-[#B5952F]"/>
               <span className="text-[#B5952F] text-[9px] font-bold uppercase tracking-[.3em]">Anchor in Rajasthan · 7+ Cities</span>
             </div>
@@ -340,7 +340,7 @@ export default function AnchorInRajasthan() {
       {/* ══════════════════════════════════════
           2. ANIMATED STATS
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-y border-[#D4AF37]/12">
+      <section className=" border-y border-[#D4AF37]/12">
         <div className="max-w-6xl mx-auto px-5 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s,i) => (
@@ -386,7 +386,7 @@ export default function AnchorInRajasthan() {
                 fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw"
                 style={{ filter:"grayscale(10%)" }}quality={75} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"/>
-              <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
+              <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Pan-Rajasthan · All Venues</p>
                 <p className="text-white text-xs">Palace. Fort. Desert camp. Heritage haveli. Every format covered.</p>
               </div>
@@ -397,7 +397,7 @@ export default function AnchorInRajasthan() {
       {/* ══════════════════════════════════════
           4. CITY CARDS — internal linking hub
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-5 md:px-12 bg-zinc-950 border-b border-white/5">
+      <section className="py-16 md:py-24 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 md:mb-14">
@@ -470,7 +470,7 @@ export default function AnchorInRajasthan() {
       {/* ══════════════════════════════════════
           6. GALLERY — 5 image bento
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-12">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="flex justify-between items-end flex-wrap gap-4 mb-10">
@@ -529,7 +529,7 @@ export default function AnchorInRajasthan() {
       {/* ══════════════════════════════════════
           8. TESTIMONIALS
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-12">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-10 md:mb-14">
@@ -596,7 +596,7 @@ export default function AnchorInRajasthan() {
       {/* ══════════════════════════════════════
           11. CITY LINKS — internal link grid
       ══════════════════════════════════════ */}
-      <section className="py-14 bg-zinc-950 border-y border-white/5 px-5 md:px-12 text-center">
+      <section className="py-14  border-y border-white/5 px-5 md:px-12 text-center">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10">

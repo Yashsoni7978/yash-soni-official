@@ -255,7 +255,7 @@ export default function CelebrityAnchorPage() {
         </div>
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/40 px-5 py-2 rounded-full bg-black/50 backdrop-blur-xl mb-8">
+            <div className="inline-flex items-center gap-2 border border-[#D4AF37]/40 px-5 py-2 rounded-full /50 backdrop-blur-xl mb-8">
               <Star className="w-3 h-3 text-[#B5952F] fill-[#D4AF37]" />
               <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Celebrity & Public Events Host · Jaipur
@@ -302,7 +302,7 @@ export default function CelebrityAnchorPage() {
       {/* ══════════════════════════════════════
           3. STATS — real numbers
       ══════════════════════════════════════ */}
-      <section className="bg-zinc-950 border-b border-white/5">
+      <section className=" border-b border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((s, i) => (
@@ -375,7 +375,7 @@ export default function CelebrityAnchorPage() {
       {/* ══════════════════════════════════════
           5. SERVICES — 4 cards, gold branding
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="The Showbiz Portfolio" title="Every Public Format Covered." align="center" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -463,7 +463,7 @@ export default function CelebrityAnchorPage() {
       {/* ══════════════════════════════════════
           7. GALLERY GRID — next/image, proper alts
       ══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="The Vibe" title="Electric Atmosphere." />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 h-[300px] md:h-[500px]">
@@ -481,7 +481,7 @@ export default function CelebrityAnchorPage() {
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                   sizes="(max-width:768px) 50vw, 33vw"
                 quality={90} />
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-all" />
+                <div className="absolute inset-0 /30 group-hover:bg-transparent transition-all" />
               </div>
             ))}
           </div>
@@ -505,7 +505,7 @@ export default function CelebrityAnchorPage() {
       {/* ══════════════════════════════════════
           9. RELATED SERVICES — internal links
       ══════════════════════════════════════ */}
-      <section className="py-14 md:py-20 bg-zinc-950 border-y border-white/5 px-5 md:px-10">
+      <section className="py-14 md:py-20  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-8">
