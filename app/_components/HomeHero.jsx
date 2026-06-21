@@ -47,21 +47,16 @@ export const HomeHero = ({ waLink }) => {
           </p>
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href={waLink} target="_blank" rel="noopener noreferrer">
-              <button className="px-10 py-5 bg-[#D4AF37] text-black font-black uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 text-xs md:text-sm">
-                CLAIM YOUR DATE →
+            <Link href={waLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <button className="gold-animated-btn w-full sm:w-64 h-16 text-[#D4AF37] font-black uppercase tracking-widest text-xs md:text-sm shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+                <span>CLAIM YOUR DATE →</span>
               </button>
             </Link>
-            <div className="flex gap-2">
-               <Link href="/portfolio" className="flex-1 sm:flex-none">
-                 <button className="w-full px-8 py-5 border border-white/20 text-white font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-all text-[11px] md:text-xs">
-                   PORTFOLIO
-                 </button>
-               </Link>
-               <button className="p-5 border border-white/20 text-white rounded-full hover:bg-white/10 transition-all flex items-center justify-center group">
-                 <Play size={14} className="fill-white group-hover:scale-110 transition-transform" />
-               </button>
-            </div>
+            <Link href="/portfolio" className="w-full sm:w-auto">
+              <button className="gold-animated-btn w-full sm:w-64 h-16 text-white font-bold uppercase tracking-widest text-[11px] md:text-xs">
+                <span>PORTFOLIO</span>
+              </button>
+            </Link>
           </div>
         </motion.div>
       </div>
