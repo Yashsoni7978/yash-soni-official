@@ -335,7 +335,7 @@ export default function NainitalPage() {
                 Heritage Scale.<br /><G>Kumaon Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury lakeside destination hosting in Nainital.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury lakeside destination hosting in Nainital.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Nainital operates at the zenith of heritage exclusivity. You are dealing with beautiful, complex venues spanning the hills where <strong className="text-[#B5952F]">sweeping outdoor lake acoustics and top-tier Delhi NCR VIP crowds</strong> require flawless execution. Yash steps into these sprawling mountain environments and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.

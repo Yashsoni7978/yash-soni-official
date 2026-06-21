@@ -336,7 +336,7 @@ export default function ChennaiPage() {
                 Imperial Scale.<br /><G>Coastal Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury coastal destination hosting across South India.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury coastal destination hosting across South India.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Chennai operates as a definitive sanctuary for India's industrial and corporate royalty. You are dealing with vast imperial architectures like ITC Grand Chola where <strong className="text-[#B5952F]">sweeping ballroom scale and international corporate demographics</strong> requires flawless execution. Yash steps into these sprawling architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together unscripted.

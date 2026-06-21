@@ -123,7 +123,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Yash Soni Bharatpur Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor and emcee with 4+ years and 700+ shows across Rajasthan, India. Specialist in fort heritage weddings, Braj cultural events, Golden Triangle multi-city guest management, and bilingual English/Hindi destination wedding hosting.",
+  description: "Professional event anchor and emcee with 5+ years and 700+ shows across Rajasthan, India. Specialist in fort heritage weddings, Braj cultural events, Golden Triangle multi-city guest management, and bilingual English/Hindi destination wedding hosting.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

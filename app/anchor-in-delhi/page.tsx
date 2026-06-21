@@ -90,7 +90,7 @@ const personSchema = {
   name:          "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash"],
   jobTitle:      "Professional Event Anchor & Corporate Emcee",
-  description:   `Yash Soni is a high-profile corporate and wedding anchor with 4+ years of unscripted stage presence. He regularly commands expansive Chhatarpur farm weddings and Fortune 500 summits at properties like Taj Palace Delhi, The Leela Palace, and ITC Maurya.`,
+  description:   `Yash Soni is a high-profile corporate and wedding anchor with 5+ years of unscripted stage presence. He regularly commands expansive Chhatarpur farm weddings and Fortune 500 summits at properties like Taj Palace Delhi, The Leela Palace, and ITC Maurya.`,
   url:           `https://${DOMAIN}`,
   image:         `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone:     "+917737877978",

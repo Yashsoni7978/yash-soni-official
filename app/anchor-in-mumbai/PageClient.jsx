@@ -146,7 +146,7 @@ const VENUES = [
 
 const VS = [
   { problem: "Over-the-top hosting that ruins the sophisticated South Bombay vibe", fix: "Sharp, articulate, VIP-calibrated stage presence" },
-  { problem: "Cannot handle rapid agenda changes during live corporate awards", fix: "4+ years of unscripted expertise — seamless live bridging" },
+  { problem: "Cannot handle rapid agenda changes during live corporate awards", fix: "5+ years of unscripted expertise — seamless live bridging" },
   { problem: "Misreads the crowd mix of NRIs, locals, and business partners", fix: "Real-time demographic awareness and bilingual code-switching" },
   { problem: "Tries to be the star instead of elevating the family/brand", fix: "Ego-free anchoring focused entirely on guest experience" },
   { problem: "Relies on paper scripts or teleprompters", fix: "Total eye contact and crowd command without reading cards" },
@@ -322,7 +322,7 @@ export default function MumbaiPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the heritage ballrooms of the <strong className="text-[#B5952F]">Taj Mahal Palace</strong> to the high-stakes corporate stages of BKC, Yash brings a level of sophistication and electric energy that reflects the unstoppable pace of Mumbai.
@@ -477,7 +477,7 @@ export default function MumbaiPage() {
                Mumbai events regularly experience VIP delays, rapid schedule changes, and strict media protocols. Managing the audience's energy while executives or celebrities shuffle behind the scenes is the hallmark of a true professional.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-               4+ years of top-tier events across India means the brand sensitivities, the VVIP protocols, and the live crisis management are already hardwired — no second-guessing required.
+               5+ years of top-tier events across India means the brand sensitivities, the VVIP protocols, and the live crisis management are already hardwired — no second-guessing required.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

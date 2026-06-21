@@ -146,7 +146,7 @@ const VENUES = [
 const VS = [
   { problem: "NCR city anchor brings metro energy — completely wrong for Sariska jungle", fix: "Wildlife-adjacent crowd management through voice and interaction, not volume" },
   { problem: "Unfamiliar with Neemrana's specific acoustic zones and terrace layout", fix: "Venue-specific knowledge from repeated events at Neemrana Fort Palace" },
-  { problem: "Cannot bridge Delhi NCR corporate guests and Rajasthani heritage families", fix: "Fluent cultural code-switching built over 4+ years of cross-demographic events" },
+  { problem: "Cannot bridge Delhi NCR corporate guests and Rajasthani heritage families", fix: "Fluent cultural code-switching built over 5+ years of cross-demographic events" },
   { problem: "Generic anchor who treats Alwar like a hotel ballroom event", fix: "Heritage venue specialist — every property's character informs every hosting choice" },
   { problem: "Low energy during the Mehndi morning that ruins the pre-wedding vibe", fix: "Warm, interactive, unscripted crowd warmth specifically calibrated for intimate events" },
   { problem: "Cannot handle remote destination logistics or venue-side coordination", fix: "Pro-active venue liaison and pre-event walkthrough — zero on-stage surprises" },

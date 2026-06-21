@@ -312,7 +312,7 @@ export default function BangalorePage() {
                 Urban Polish.<br /><G>Megascale Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled natively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of corporate and luxury hosting in Bengaluru.
+                With 5+ years on stage and 700+ shows handled natively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute summit of corporate and luxury hosting in Bengaluru.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Bengaluru is a city of distinct power centers: from the hyper-intellectual tech parks in Whitefield to the deeply heritage-driven ballrooms of <strong className="text-[#B5952F]">The Leela Palace</strong>. Yash operates seamlessly across these lines. His English articulation is precision-engineered for global CEOs, while his Hindi grounds traditional Marwari events with authentic emotional weight.

@@ -335,7 +335,7 @@ export default function AgraPage() {
                 VIP Polish.<br /><G>Royal Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury destination hosting in Agra.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury destination hosting in Agra.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Agra operates at the zenith of heritage exclusivity. You are dealing with highly scrutinized venues like The Oberoi Amarvilas where <strong className="text-[#B5952F]">stringent noise constraints and top-tier VIP/Executive crowds</strong> require flawless execution. Yash steps into these immaculate environments and manufactures raw, authentic dancing energy entirely organically, without compromising the prestige of the Taj footprint.

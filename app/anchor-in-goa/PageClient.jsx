@@ -336,7 +336,7 @@ export default function GoaPage() {
                 NRI Polish.<br /><G>Coastal Domination.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of destination wedding hosting in Goa.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of destination wedding hosting in Goa.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Goa functions precisely at the limits of extreme scale. You are dealing with massive <strong className="text-[#B5952F]">oceanfront acoustic dispersal</strong>, strictly enforced property decibel limits, and an audience heavily skewed towards international, highly-educated NRI families. Yash steps into these infinite spaces and manufactures intense, raw dancing energy entirely organically.

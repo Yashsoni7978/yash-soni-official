@@ -55,7 +55,7 @@ const WA_LINK =
 const STATS = [
   { value: "700+", label: "Shows Hosted", sub: "across Jaipur & Rajasthan", icon: Mic },
   { value: "10,000+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
-  { value: "4+", label: "Years on Stage", sub: "Zero scripts", icon: Award },
+  { value: "5+", label: "Years on Stage", sub: "Zero scripts", icon: Award },
   { value: "4.9★", label: "Rated by Clients", sub: "50+ reviews", icon: UserCheck },
 ];
 

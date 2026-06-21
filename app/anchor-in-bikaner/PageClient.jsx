@@ -144,7 +144,7 @@ const VS = [
   { problem: "Confuses Bikaner's Rathore identity with generic Western Rajasthan culture", fix: "Clan-specific cultural fluency — Rathore lineage, Bikaner history, correct ceremonial vocabulary" },
   { problem: "Generic energy that disrespects the understated Marwari business elite aesthetic", fix: "Calibrated premium register that matches Bikaner's restrained, deep cultural pride" },
   { problem: "Bilingual gaps causing disconnection between elder Marwari guests and younger diapora", fix: "Authentic bilingual code-switching — formal Marwari-contextual Hindi and polished English" },
-  { problem: "Cannot adapt across indoor stone halls and outdoor desert-edge lawns in the same event", fix: "4+ years of venue-specific adaptability built in Rajasthan's hardest acoustic environments" },
+  { problem: "Cannot adapt across indoor stone halls and outdoor desert-edge lawns in the same event", fix: "5+ years of venue-specific adaptability built in Rajasthan's hardest acoustic environments" },
 ];
 
 const TESTIMONIALS = [

@@ -118,7 +118,7 @@ const personSchema = {
   name: "Yash Soni",
   alternateName: ["Anchor Yash Soni", "Anchor Yash", "Neemrana Wedding Anchor"],
   jobTitle: "Professional Event Anchor & Emcee",
-  description: "Professional event anchor with 4+ years and 700+ shows. Specialist in Neemrana's unique weekend proximity to NCR: acting as the executive moderator for Delhi corporate retreats, and overcoming the architectural challenges of 15th-century stepped forts.",
+  description: "Professional event anchor with 5+ years and 700+ shows. Specialist in Neemrana's unique weekend proximity to NCR: acting as the executive moderator for Delhi corporate retreats, and overcoming the architectural challenges of 15th-century stepped forts.",
   url: `https://${DOMAIN}`,
   image: `https://${DOMAIN}/intro-portrait-top.webp`,
   telephone: "+917737877978",

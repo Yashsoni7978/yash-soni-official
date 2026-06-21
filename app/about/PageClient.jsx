@@ -31,7 +31,7 @@ const STATS = [
   { value: "700+", label: "Shows Hosted", sub: "Across Jaipur & Rajasthan", variant: "gold" },
   { value: "10,000+", label: "Largest Crowd", sub: "Commanded live, unscripted", variant: "green" },
   { value: "4.9★", label: "Client Rating", sub: "Across 40+ verified reviews", variant: "hunter" },
-  { value: "4+", label: "Years on Stage", sub: "Zero paper scripts", variant: "sage" },
+  { value: "5+", label: "Years on Stage", sub: "Zero paper scripts", variant: "sage" },
 ];
 
 // Specializations — all facts from homepage SERVICES & WHY_ME arrays
@@ -282,7 +282,7 @@ export default function AboutPageClient() {
                 never looked back.&rdquo;
               </p>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
-                I am Yash Soni. Over the last 4+ years and 700+ events, I have
+                I am Yash Soni. Over the last 5+ years and 700+ events, I have
                 hosted everything from intimate 50-guest birthday galas in
                 Mansarovar to 1,500-person farmhouse Sangeets on Ajmer Road —
                 from royal Varmala ceremonies at Rambagh Palace to national
@@ -744,7 +744,7 @@ export default function AboutPageClient() {
           </h2>
           <p className="text-zinc-500 text-sm mb-10 max-w-lg leading-relaxed">
             You don&apos;t trust a pilot who hasn&apos;t flown. Over the last
-            4+ years, I have held the mic at some of India&apos;s most iconic
+            5+ years, I have held the mic at some of India&apos;s most iconic
             venues. I know their acoustics, their layouts, and their teams.
           </p>
         </Reveal>

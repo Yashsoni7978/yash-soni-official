@@ -149,7 +149,7 @@ const VS = [
   { problem: "Unfamiliar with the isolation logistics of a hill destination", fix: "Pre-event coordination with Kumbhalgarh teams ensures zero on-stage surprises" },
   { problem: "Energy level mismatch — same tone for Sangeet and phero ceremony", fix: "Real-time calibration — electric for Sangeet, majestic for ceremony" },
   { problem: "Mispronounces Mewar clan names and wedding ritual references", fix: "Pre-event research deck — every name, every clan, every ritual pre-loaded" },
-  { problem: "Cannot hold crowd attention over a long destination event night", fix: "4+ years of destination circuit means the stamina and crowd read are hardwired" },
+  { problem: "Cannot hold crowd attention over a long destination event night", fix: "5+ years of destination circuit means the stamina and crowd read are hardwired" },
 ];
 
 const TESTIMONIALS = [
@@ -427,7 +427,7 @@ export default function KumbhalgarhPage() {
               The Mewar identity is specific. Families from this lineage carry immense pride in the Maharana Pratap legacy, the sacrifices of the Haldighati battle, and the particular brand of Rajput dignity that distinguishes Mewar from every other Rajasthan heritage zone. An anchor who conflates Mewar with Jaipur or Jodhpur has already lost the room.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              4+ years of Rajasthan destination circuit means Mewar's clan structures, the correct Rajputana ceremonial sequences, and the particular emotional register of this region are already internalised — not researched the morning of the event.
+              5+ years of Rajasthan destination circuit means Mewar's clan structures, the correct Rajputana ceremonial sequences, and the particular emotional register of this region are already internalised — not researched the morning of the event.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

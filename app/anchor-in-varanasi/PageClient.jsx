@@ -335,7 +335,7 @@ export default function VaranasiPage() {
                 Heritage Scale.<br /><G>VIP Protocol.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury spiritual destination hosting in Varanasi.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury spiritual destination hosting in Varanasi.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Varanasi operates at the highest frequency of Indian cultural prestige. You are managing fiercely exclusive events at properties like Taj Nadesar Palace and BrijRama where <strong className="text-[#B5952F]">the intersection of international NRIs, Delhi executives, and profound traditional energy</strong> creates an incredibly heavy stage. Yash steps into these intensely beautiful, complex environments and manufactures cohesive, elegant energy entirely organically, without falling back on generic MC tropes.

@@ -322,7 +322,7 @@ export default function DelhiPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding massive crowds with zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding massive crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the protocol-heavy ballrooms of <strong className="text-[#B5952F]">Taj Palace</strong> to the high-energy chaos of a massive Chhatarpur farm wedding, Yash brings a level of sophistication and electric command that matches Delhi's unmatched scale.
@@ -477,7 +477,7 @@ export default function DelhiPage() {
                Managing a crowd's energy while security details sweep the room or VVIPs make unscheduled appearances is the hallmark of a true professional. It requires discretion, a razor-sharp bilingual vocabulary, and zero panic.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-               4+ years of top-tier events across India means the brand sensitivities, the diplomatic protocols, and the live crisis management are already hardwired — no second-guessing required.
+               5+ years of top-tier events across India means the brand sensitivities, the diplomatic protocols, and the live crisis management are already hardwired — no second-guessing required.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

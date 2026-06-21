@@ -335,7 +335,7 @@ export default function ShimlaPage() {
                 VIP Polish.<br /><G>Himalayan Command.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury destination hosting in the Northern Hills.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury destination hosting in the Northern Hills.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Shimla operates at the zenith of high-altitude exclusivity. You are dealing with highly scrutinized venues like Wildflower Hall where <strong className="text-[#B5952F]">stringent cold weather limits and top-tier Chandigarh/Delhi executive crowds</strong> require flawless execution. Yash steps into these immaculate mountain environments and manufactures raw, authentic dancing energy entirely organically, without compromising the prestige of the heritage architectures.

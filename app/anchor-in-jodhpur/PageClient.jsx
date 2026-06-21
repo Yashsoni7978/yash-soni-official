@@ -432,7 +432,7 @@ export default function JodhpurPage() {
               Royal family members may attend. Heritage guests from ancestral Jodhpur lineages will notice every detail. NRI cousins from London who've heard top international MCs will notice a different set of details. The register must satisfy all of them simultaneously — and it must feel effortless.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              4+ years of Rajasthan's top-tier wedding circuit means the palace protocols, the clan references, and the cultural nuances are already known — not studied the night before.
+              5+ years of Rajasthan's top-tier wedding circuit means the palace protocols, the clan references, and the cultural nuances are already known — not studied the night before.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

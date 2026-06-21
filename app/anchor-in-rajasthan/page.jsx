@@ -317,7 +317,7 @@ export default function AnchorInRajasthan() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-t border-white/10 pt-8">
               <div>
                 <p className="text-zinc-300 text-base md:text-lg font-light leading-relaxed max-w-lg mb-2">
-                  Jaipur · Udaipur · Jodhpur · Jaisalmer · Pushkar · Alwar · Ranthambore · Mount Abu · Kumbhalgarh · Mandawa · Bikaner · Kota · Bharatpur · Chittorgarh. One anchor. 4+ years experience. Unscripted.
+                  Jaipur · Udaipur · Jodhpur · Jaisalmer · Pushkar · Alwar · Ranthambore · Mount Abu · Kumbhalgarh · Mandawa · Bikaner · Kota · Bharatpur · Chittorgarh. One anchor. 5+ years experience. Unscripted.
                 </p>
                 <p className="text-zinc-500 text-sm">700+ shows · 4.9★ · Available pan-Rajasthan</p>
               </div>

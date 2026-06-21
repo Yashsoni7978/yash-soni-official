@@ -335,7 +335,7 @@ export default function HaridwarPage() {
                 Spiritual Scale.<br /><G>Global Flow.</G>
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 4+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury spiritual destination hosting across the Ganges corridor.
+                With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of luxury spiritual destination hosting across the Ganges corridor.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 Haridwar operates with extreme reverence. You are dealing with ultra-restricted properties like Pilibhit House where <strong className="text-[#B5952F]">absolute acoustic curfews, zero-alcohol (Satvik) limits, and top-tier NRI/Corporate families</strong> collide. A loud, disorganized anchor ruins the spiritual flow. Yash steps into these environments and executes perfectly polished, articulate English moderation, managing the silence of the ghats while still manufacturing raw, exploding energy when the timeline transitions to celebration.

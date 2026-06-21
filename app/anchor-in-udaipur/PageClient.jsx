@@ -186,7 +186,7 @@ const FAQS = [
   },
   {
     q: "Do you anchor Sangeet functions on Jagmandir Island?",
-    a: "Jagmandir Island Sangeets are among the most technically complex events on the Udaipur circuit — island acoustics, elevated crowd spread, boat-transfer timing for guest flow, and the echo off Lake Pichola. Sangeets here have run 4+ hours without an energy drop using unscripted crowd games, high-energy bilingual hosting, and real-time adaptation to the island's quirks.",
+    a: "Jagmandir Island Sangeets are among the most technically complex events on the Udaipur circuit — island acoustics, elevated crowd spread, boat-transfer timing for guest flow, and the echo off Lake Pichola. Sangeets here have run 5+ hours without an energy drop using unscripted crowd games, high-energy bilingual hosting, and real-time adaptation to the island's quirks.",
   },
   {
     q: "Can you anchor corporate events and dealer meets in Udaipur?",
@@ -437,7 +437,7 @@ export default function UdaipurPage() {
               The NRI grandchild needs an anchor who sounds like the world they grew up in. The Rajasthani parents need someone who respects the rituals they planned for their life. Both need to see their moments honoured — and neither can feel like the afterthought.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Bilingual code-switching, cultural fluency, and 4+ years of reading mixed rooms — this is what the Udaipur circuit demands and what this anchor delivers.
+              Bilingual code-switching, cultural fluency, and 5+ years of reading mixed rooms — this is what the Udaipur circuit demands and what this anchor delivers.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
