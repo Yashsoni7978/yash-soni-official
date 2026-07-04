@@ -226,39 +226,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "How do you handle outdoor functions in Manali where the freezing wind kills the crowd's energy?",
-    a: "This is the true test of an alpine destination anchor. When the temperature drops rapidly at dusk, guests immediately want to retreat to the heaters. You cannot solve this purely with a DJ. I use 'Psychological Momentum'—accelerating the timeline aggressively, using extreme vocal projection to physically compress the crowd towards the stage, and pulling them into an intense, highly interactive dancing state before the cold sets in."
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Manali?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Manali. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "We are holding our Varmala by the Beas River. The water is incredibly loud. How do you manage the sound?",
-    a: "The acoustic environment at riverside venues like Span Resort is hostile. I actively use 'Acoustic Defense'. Instead of fighting the river with speakers, I restructure the crowd physically—pulling the seating tighter to the mandap—and I project my voice dynamically to overpower the ambient noise, ensuring the emotional depth of the Pheras is completely preserved."
+    q: "What type of events does Yash Soni host in Manali?",
+    a: "Yash Soni specialises in premium, high-energy events. In Manali, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "The demographic driving our Manali wedding is extremely high-profile Chandigarh elite. Can you generate enough hype for a Punjabi Sangeet?",
-    a: "Absolutely. I do not do passive hosting. For a Punjabi VIP crowd, you cannot just stand behind a podium. I dive into the crowd natively, using highly rapid, unscripted bilingual code-switching (English/Hindi/Punjabi) to generate an explosive, highly-interactive dance floor that satisfies the highest expectations."
+    q: "Can you host bilingual (Hindi/English) weddings and events in Manali?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Manali feels included and engaged."
   },
   {
-    q: "Do you use teleprompters or scripts during these complex multi-day destination itineraries?",
-    a: "Never. Scripts destroy raw party energy. When you read from a clipboard, you break eye contact with the high-net-worth audience. I memorize the family lineages, the complicated inside jokes, and the overarching timeline, allowing me to host 100% unscripted to maintain absolute command over the room."
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Manali, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "What if Himalayan weather systems (rain/snow) force us to suddenly move our event indoors at the last minute?",
-    a: "Alpine logistics are inherently volatile. If heavy rain forces us to compress an outdoor 4-hour Sangeet into a 2-hour indoor banquet hall timeline, I do not panic. Because I am entirely unscripted, I instantly rewrite the pacing, stitch family performances together on the fly, and accelerate the hype perfectly."
+    q: "Do you travel for destination weddings and corporate events in Manali?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Manali, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "Since you travel nationally, how are your logistics handled for Kullu-Manali?",
-    a: "Logistics to Manali (via Bhuntar Airport or the Chandigarh highway) are fully streamlined. Because I am heavily active across Northern India, there are no hidden travel complications; the exact logistical rider is provided instantly to you and your wedding planners upon booking."
-  },
-  {
-    q: "When should we freeze your dates for an alpine event?",
-    a: "Manali’s premium destination season aligns directly with peak summer escapes and intense winter snow weddings. The premium properties vanish over a year in advance. The exact moment your luxury venue is locked down, send me a WhatsApp to initiate the calendar block."
-  },
+    q: "What are your charges for events in Manali, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Manali is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

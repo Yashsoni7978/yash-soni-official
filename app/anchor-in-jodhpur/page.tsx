@@ -207,51 +207,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "Who is the best anchor for destination weddings in Jodhpur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Jodhpur's fort and palace wedding circuit — Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, Ajit Bhawan, Bal Samand Lake Palace, and Vivanta. Bilingual Hindi/English, unscripted, experienced in royal family protocols and NRI destination weddings.",
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Jodhpur?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Jodhpur. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "Have you hosted weddings at Umaid Bhawan Palace?",
-    a: "Umaid Bhawan Palace is among the most demanding venues in India. The palace management has strict protocols — specific staging areas, sound system limitations in the heritage wings, and the requirement to interact respectfully with members of the royal family who may attend. Knowing what is and is not appropriate in this setting comes from working there, not from research.",
+    q: "What type of events does Yash Soni host in Jodhpur?",
+    a: "Yash Soni specialises in premium, high-energy events. In Jodhpur, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "How do you manage the acoustics at Mehrangarh Fort events?",
-    a: "The fort courtyard bounces sound off thick stone walls and loses it to the open sky simultaneously. The technique is to use the crowd rather than fight the acoustics — pulling people closer, building circular energy rather than projecting outward. This setting specifically requires an anchor who has worked it before, not one figuring it out during your wedding.",
+    q: "Can you host bilingual (Hindi/English) weddings and events in Jodhpur?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Jodhpur feels included and engaged."
   },
   {
-    q: "Can you manage a large NRI crowd at a Jodhpur palace wedding?",
-    a: "Jodhpur's destination circuit consistently brings families from the UK, US, and UAE. The hosting challenge is specific — the international cousins need English that sounds native, not anchored. The Rajputana family elders need a tone that respects the heritage of the house. Code-switching across these registers, live and unscripted, is the core skill.",
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Jodhpur, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "How far in advance should I book for a Jodhpur destination wedding?",
-    a: "Palace venues in Jodhpur — particularly Umaid Bhawan — have extremely limited availability windows. The anchor calendar for November through February fills 6–8 months ahead at premium properties. Blocking the date requires an advance payment. No tentative holds or waitlists — WhatsApp the moment your venue is confirmed.",
+    q: "Do you travel for destination weddings and corporate events in Jodhpur?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Jodhpur, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "Do you anchor Sangeet functions at Jodhpur fort venues?",
-    a: "Mehrangarh Fort Sangeets are among the most complex events to anchor — the courtyard layout, the acoustic behaviour of the stone, crowd movement across multiple levels, and the desert chill after 9 PM all affect crowd energy. These are variables managed in real time, producing a Sangeet that feels electric rather than fighting the space.",
-  },
-  {
-    q: "Can you anchor corporate events in Jodhpur?",
-    a: "Corporate events — dealer meets, annual galas, and leadership summits at Ajit Bhawan, Vivanta Jodhpur, and WelcomHeritage Mandir Palace — are a regular part of the Jodhpur calendar. The corporate hosting register is brand-specific and sharp, not a wedding tone re-purposed for a boardroom. Bilingual Hindi/English is standard.",
-  },
-  {
-    q: "What makes Anchor Yash different from local Jodhpur anchors?",
-    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 700+ shows, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
-  },
-  {
-    q: "Who is the best emcee in Jodhpur for destination weddings?",
-    a: "Anchor Yash Soni is the top-rated wedding emcee for Jodhpur destination events — with a 4.9★ verified rating and deep experience at Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, and Ajit Bhawan. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Jodhpur venues.",
-  },
-  {
-    q: "What is the difference between a wedding anchor, emcee, and host in Jodhpur?",
-    a: "Anchor, emcee, host, and MC are four terms for the same role — the professional who leads the event programme, manages transitions, and commands the room. Wedding planners in Jodhpur's destination circuit often prefer 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates flawlessly across all formats regardless of what the role is called.",
-  },
+    q: "What are your charges for events in Jodhpur, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Jodhpur is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

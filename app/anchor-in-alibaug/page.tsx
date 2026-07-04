@@ -227,39 +227,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "How do you handle the highly intimate, VIP dynamic of an Alibaug villa wedding?",
-    a: "Alibaug is the opposite of a mega-banquet. You aren't broadcasting to a thousand strangers; you are hosting 150 incredibly high-net-worth individuals. I utilize 'Conversational Dominance'—putting down the heavy 'stage voice' in favor of sharp, highly intelligent, interactive English that treats the VIPs as participants rather than spectators. It instantly shatters the invisible wall between the stage and the audience."
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Alibaug?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Alibaug. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "Half our guests are traditional Gujarati/Marwari, and half are modern corporate friends from South Bombay. Can you manage both?",
-    a: "Absolutely. This 'Cross-Cultural Collision' is my primary specialty. I provide flawless, executive-grade English anchoring to ensure your corporate guests stay locked in, while seamlessly code-switching into deep, respectful Hindi to honor the local elders. Neither side ever feels excluded, and the party remains fully integrated."
+    q: "What type of events does Yash Soni host in Alibaug?",
+    a: "Yash Soni specialises in premium, high-energy events. In Alibaug, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "Do you use scripts during a chaotic multi-family Sangeet?",
-    a: "Never. Scripts destroy the raw energy of an intimate Alibaug party. When you read from a clipboard, you break eye contact with the audience. I memorize the family dynamics, the complex performance cue-sheet, and the overarching timeline, allowing me to host 100% unscripted. This means I can react instantly to an unexpected joke or an impromptu VIP toast."
+    q: "Can you host bilingual (Hindi/English) weddings and events in Alibaug?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Alibaug feels included and engaged."
   },
   {
-    q: "Our event takes place across different areas of The Mansion House. How do you keep the crowd together?",
-    a: "Private luxury estates are notorious for 'Audience Drift', where guests split off to the pool, the bar, and the lawn. I act as the central timeline engine. Using specific vocal pacing and hyper-interactive stage movement, I actively 'stitch' the event together, pulling the fragmented crowd back into a single, high-energy focal point."
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Alibaug, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "Are you familiar with the logistics of Alibaug's top luxury properties?",
-    a: "Intimately. Working at ultra-luxury properties like The Mansion House or Radisson Blu requires high-level coordination with the hotel's GM, banquet heads, and shadow planners. I understand the stringent luxury timelines and protocols, ensuring the hosting elevates the prestige of the property perfectly."
+    q: "Do you travel for destination weddings and corporate events in Alibaug?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Alibaug, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "Since you travel nationally, how are your logistics handled for Alibaug?",
-    a: "Because I travel Jaipur & Rajasthan handling massive volumes of destination weddings, my technical rider and logistics to Alibaug (whether via Mumbai airport and Ro-Ro/Speedboat or by road) are completely streamlined. My team provides the exact requirements instantly upon booking to your planner."
-  },
-  {
-    q: "When should we freeze your dates for an Alibaug wedding?",
-    a: "Alibaug’s destination season (October through March) is incredibly dense, heavily overlapping with Mumbai's billionaire weekend retreat schedules. The premium dates vanish over a year in advance. The exact moment your luxury venue is locked, send me a WhatsApp to initiate the calendar block."
-  },
+    q: "What are your charges for events in Alibaug, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Alibaug is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

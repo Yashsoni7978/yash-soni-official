@@ -28,7 +28,7 @@ const localBusinessSchema = {
     "Oberoi Udaivilas Anchor",
     "Jagmandir Island Wedding Host",
   ],
-  description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
+  description: `Anchor Yash Soni delivers flawless destination weddings across Udaipur. Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island specialist. Elite bilingual event anchor for NRI weddings and corporate events.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",
@@ -208,51 +208,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "Who is the best anchor for destination weddings in Udaipur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Udaipur's lake palace destination wedding circuit — Taj Lake Palace, Oberoi Udaivilas, Jagmandir Island, Leela Udaipur, Raffles, and Fateh Garh. Bilingual Hindi/English, unscripted, NRI-experienced, with zero paper scripts across his entire career.",
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Udaipur?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Udaipur. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "Have you hosted events at Taj Lake Palace and Jagmandir Island?",
-    a: "Taj Lake Palace and Jagmandir Island are both venues with specific acoustic challenges, boat-arrival timing, and heritage sound protocols. The lake setting changes how crowd energy travels — these are not venues you learn on the job. The operational knowledge for Maharana Pratap Sthal, the terrace at Udaivilas, and the courtyard stages at Jagmandir comes from repeated work at these properties.",
+    q: "What type of events does Yash Soni host in Udaipur?",
+    a: "Yash Soni specialises in premium, high-energy events. In Udaipur, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "Can you manage a bilingual NRI wedding crowd in Udaipur?",
-    a: "Bilingual hosting for NRI families is the core specialty of the Udaipur destination circuit. NRI families from the UK, USA, and Canada bring their extended diaspora — three generations in one room means three different emotional vocabularies. Sophisticated English for the international crowd, warm rooted Hindi for the parents and elders, and cultural Rajasthani references that make the home crowd feel the pride of the city they chose.",
+    q: "Can you host bilingual (Hindi/English) weddings and events in Udaipur?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Udaipur feels included and engaged."
   },
   {
-    q: "What is the typical cost of hiring an anchor for a destination wedding in Udaipur?",
-    a: "Destination wedding anchoring fees cover event duration, travel logistics, pre-event research time, and programme complexity. Multi-day weddings with bilingual scripting and full event management are priced differently from single-ceremony events. WhatsApp the event details for a customised quote within the hour.",
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Udaipur, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "How far in advance should I book for Udaipur's peak wedding season?",
-    a: "Udaipur's peak season runs October through March. Dates at lake palace venues fill 6–8 months ahead, especially for Diwali, New Year, and Valentine's weekend. No replacements are sent and no waitlist is maintained. The date is exclusively blocked on receipt of advance — WhatsApp the moment your venue date is confirmed.",
+    q: "Do you travel for destination weddings and corporate events in Udaipur?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Udaipur, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "Do you anchor Sangeet functions on Jagmandir Island?",
-    a: "Jagmandir Island Sangeets are among the most technically complex events on the Udaipur circuit — island acoustics, elevated crowd spread, boat-transfer timing for guest flow, and the echo off Lake Pichola. Sangeets here have run 5+ hours without an energy drop using unscripted crowd games, high-energy bilingual hosting, and real-time adaptation to the island's quirks.",
-  },
-  {
-    q: "Can you anchor corporate events and dealer meets in Udaipur?",
-    a: "Corporate events — annual galas, product launches, dealer meets, and leadership summits at Leela Udaipur, Radisson Blu, and Trident Udaipur — are a strong specialisation. The hosting register is sharp, brand-aligned, and aware of C-suite hierarchy, not a wedding energy copy-pasted into a boardroom setting.",
-  },
-  {
-    q: "What makes Anchor Yash different from local Udaipur anchors?",
-    a: "Local anchors know the city. Anchor Yash Soni knows the city and the crowd psychology to command every segment of it — 700+ shows, 10,000+ crowds commanded, 4.9★ rating, and a specific track record at Udaipur's top-tier palace properties. The difference shows when the NRI grandfather from London feels as included as the local Rajasthani family cousin dancing in the front row.",
-  },
-  {
-    q: "Who is the best emcee in Udaipur for lake palace weddings?",
-    a: "Anchor Yash Soni is the top-rated wedding emcee for Udaipur destination events — 4.9★ verified, with deep experience at Taj Lake Palace, Jagmandir Island, Oberoi Udaivilas, and Leela Udaipur. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Udaipur lake palace venues.",
-  },
-  {
-    q: "What is the difference between a wedding anchor, emcee, and host in Udaipur?",
-    a: "Anchor, emcee, host, and MC are four terms for the same role — the professional who leads the event programme, manages transitions, and commands the room. Wedding planners in Udaipur's destination circuit often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates flawlessly across all formats and audience types.",
-  },
+    q: "What are your charges for events in Udaipur, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Udaipur is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

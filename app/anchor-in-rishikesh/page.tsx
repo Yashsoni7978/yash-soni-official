@@ -226,39 +226,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "A lot of our guests are worried the Sangeet will be dull because it’s a strict dry (no-alcohol) event. How do you fix this?",
-    a: "This is arguably the most valuable skillset an anchor can possess. When alcohol isn't present to loosen up a crowd, the anchor must become the catalyst. I employ 'Psychological Momentum'—using rapid-fire interactive segments, highly personalized unscripted humor, and aggressive timeline pacing to pull guests onto the dance floor via pure, organic energy."
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Rishikesh?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Rishikesh. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "We are holding a corporate offsite at Taj Rishikesh. Our crowd is purely C-Suite. Can you match this tone?",
-    a: "Absolutely. A VIP corporate audience doesn't need a high-pitched 'hype man'; it needs an Executive Moderator. I drop all standard 'entertainment tropes' and host with sharp, highly conversational English taking zero paper notes to the stage. It bridges the gap between formal strategy and luxury relaxation seamlessly."
+    q: "What type of events does Yash Soni host in Rishikesh?",
+    a: "Yash Soni specialises in premium, high-energy events. In Rishikesh, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "How do you handle the massive outdoor acoustics of a riverside Varmala?",
-    a: "The Himalayan valley wind acts as a giant vacuum, instantly sucking away standard DJ sound. I actively prevent 'audience drift'. I use targeted vocal projection and physical stage boundaries to condense the VIPs exactly where the energy needs to be, forcing an intimate, tightly-packed atmosphere despite the infinite backdrop."
+    q: "Can you host bilingual (Hindi/English) weddings and events in Rishikesh?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Rishikesh feels included and engaged."
   },
   {
-    q: "Do you use scripts during a chaotic multi-family timeline?",
-    a: "Never. Scripts destroy raw party energy. When you read from a clipboard, you break eye contact with the audience. I memorize the complex family dynamics, the performance cue-sheet, and the overarching timeline, allowing me to host 100% unscripted. This means I can react instantly to an unexpected joke or an impromptu delay."
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Rishikesh, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "Since our event is heavily spiritual, can you ensure the modern English hosting doesn't disrespect the traditions?",
-    a: "This is exactly why couples book me for Rishikesh. I execute pristine 'Bilingual Code-Switching'. The modern, global guests receive sharp, highly intelligent English validation, while I seamlessly intertwine deep, respectful Hindi so the gravity of the spiritual rituals by the Ganges is completely honored."
+    q: "Do you travel for destination weddings and corporate events in Rishikesh?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Rishikesh, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "Since you travel nationally, how are your logistics handled for Rishikesh?",
-    a: "Because I am heavily active across the Delhi-NCR circuit, the logistics to Rishikesh (via Dehradun Jolly Grant Airport or highway) are completely streamlined. There are no hidden complications, and the exact travel rider is provided instantly upon booking to your planner."
-  },
-  {
-    q: "When should we freeze your dates for a Rishikesh wedding?",
-    a: "Rishikesh’s destination season aligns directly with the absolute peak winter dates of North India. The premium luxury properties (like Taj and Roseate) vanish over a year in advance. The exact moment your luxury venue is locked, send me a WhatsApp to initiate the calendar block."
-  },
+    q: "What are your charges for events in Rishikesh, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Rishikesh is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

@@ -227,39 +227,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "How do you handle the massive outdoor sound dispersion of Chennai's ECR beachfront properties?",
-    a: "This is the cardinal rule of coastal hosting. The second you are on a 10-acre ECR lawn, the guests want to drift. A basic setup fails. I utilize 'Crowd Compression'—speeding up the timeline, initiating physical interaction, and detonating a massive dancing session that pulls the dispersed VIPs into a tight, high-energy core."
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Chennai?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Chennai. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "Our guest list includes international dignitaries and board directors. Can you match this tone?",
-    a: "Completely. Elite properties like ITC Grand Chola and The Leela Palace do not need 'shouting MCs'. They require an Executive Moderator. I deliberately drop standard gimmicks. I host with formal, razor-sharp, unscripted English that respects the pedigree of the VIPs, perfectly bridging high-level networking with eventual massive celebration."
+    q: "What type of events does Yash Soni host in Chennai?",
+    a: "Yash Soni specialises in premium, high-energy events. In Chennai, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "The humidity on Chennai's coast can drain guest energy. How do you adapt?",
-    a: "I execute 'Phase-Based Pacing'. I allow for formal, seated elegance during the high-humidity sunset phase, then once the temperature drops slightly and the after-party begins, I deploy aggressively high-frequency energy work to 're-start' the room and drive the dance floor unhinged."
+    q: "Can you host bilingual (Hindi/English) weddings and events in Chennai?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Chennai feels included and engaged."
   },
   {
-    q: "Do you use teleprompters or scripts during these complex multi-day Chennai itineraries?",
-    a: "Never. Reading from a clipboard instantly kills raw party energy. It breaks your eye contact, and the high-net-worth audience realizes you are not in command. I memorize the family lineages, the corporate tensions, and the full timeline, enabling me to host 100% unscripted and dictate the absolute flow of the room."
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Chennai, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "What if the coastal rains force us to suddenly move our event from the lawns into the banquets?",
-    a: "Chennai weather systems are volatile. If rain forces us to rip down an outdoor setup and compress an sprawling Sangeet into an indoor ballroom dynamically, I operate with zero panic. Because I am purely unscripted, I instantly recalibrate the pacing, compress the performances on the fly, and reconstruct the hype natively indoors."
+    q: "Do you travel for destination weddings and corporate events in Chennai?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Chennai, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "Since you travel nationally, how are your logistics handled for Chennai?",
-    a: "Travel to Chennai is completely streamlined. I am constantly active across the South India luxury wedding circuit, so there are zero hidden logistical risks. All exact requirements are calculated and provided instantly when blocking dates."
-  },
-  {
-    q: "When should we freeze your dates for a Chennai coastal event?",
-    a: "Chennai’s premium destination windows (especially for Fisherman's Cove and Grand Chola) vanish over 12 months in advance for big weekends. Lock my dates the instant your luxury venue contract is confirmed."
-  },
+    q: "What are your charges for events in Chennai, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Chennai is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

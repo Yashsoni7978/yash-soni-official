@@ -26,23 +26,22 @@ import { AnimatedStatsCard } from "../components/AnimatedStatsCard";
 // Title intentionally differentiated from layout default via a distinct
 // primary keyword to avoid duplicate title tag in Google's index.
 export const metadata = {
-  title: "Anchor Yash Soni | #1 Event Host in Jaipur — 700+ Shows",
+  title: "Yash Soni | Professional Event Anchor & Emcee — Jaipur, Rajasthan",
   description:
-    "Anchor Yash Soni is India's premier event host for luxury weddings, corporate galas, and celebrity events. 700+ shows hosted unscripted with a 4.9★ rating.",
+    "Yash Soni is a professional event anchor and emcee based in Jaipur. Specializing in weddings, corporate events, sports commentary & destination events across Rajasthan and India.",
   alternates: {
     canonical: "https://yashsoni.in",
   },
   openGraph: {
-    title: "Best Anchor in Jaipur | Anchor Yash Soni — 700+ Shows",
+    title: "Yash Soni | Event Anchor & Emcee — 700+ Shows, 4.9★",
     description:
-      "700+ shows. 10,000+ crowd commanded. Jaipur's most trusted anchor for weddings, Sangeets, corporate galas & VIP events.",
-    // FIXED: og-home.webp confirmed missing in /public — using existing og-image.webp
+      "700+ shows. 4.9★ rated. Professional event anchor & emcee based in Jaipur — weddings, corporate galas, sangeets, sports & destination events.",
     images: [
       {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni performing live on stage",
+        alt: "Yash Soni — Professional Event Anchor & Emcee performing live on stage",
       },
     ],
   },

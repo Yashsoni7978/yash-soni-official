@@ -134,10 +134,10 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   verification: {
-    // ⚠️ ACTION REQUIRED: Replace YOUR_GSC_TOKEN_HERE with the real token from
-    // Google Search Console → Settings → Ownership Verification → HTML tag
-    // It looks like: google: "aBcD1234eFgH5678iJkL"
-    google: "YOUR_GSC_TOKEN_HERE",
+    // Set NEXT_PUBLIC_GSC_TOKEN in Vercel Environment Variables
+    // Value: your token from GSC → Settings → Ownership Verification → HTML tag
+    // Example: google: "aBcD1234eFgH5678iJkL"
+    google: process.env.NEXT_PUBLIC_GSC_TOKEN || "",
   },
 };
 

@@ -229,43 +229,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "Who is the best anchor for luxury and corporate events in Bangalore?",
-    a: "Anchor Yash Soni is highly sought after in Bangalore's elite circuit. With 700+ shows and a flawless bilingual (English/Hindi) capability, he provides the intellectual polish required for Whitefield corporate summits and the deep cultural respect needed for Taj West End or Palace Grounds luxury weddings."
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Bangalore?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Bangalore. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "We are an IT firm hosting a major summit in Bangalore. Do you use scripts?",
-    a: "No. All my corporate anchoring is 100% unscripted. Executive and tech audiences instantly disengage when a host reads from cards. I memorize timelines, panelist bios, and transition logic so I can maintain absolute eye contact and command the room dynamically."
+    q: "What type of events does Yash Soni host in Bangalore?",
+    a: "Yash Soni specialises in premium, high-energy events. In Bangalore, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "Ours is a cross-cultural wedding (North Indian & South Indian) in Bengaluru. Can you manage both crowds?",
-    a: "Yes. This is a very common requirement in Bangalore. The hosting strategy here is bilingual code-switching. I utilize deeply respectful Hindi to honor the North Indian/Marwari rituals, and flawless metropolitan English to ensure the South Indian family and local VIPs are completely integrated and engaged."
+    q: "Can you host bilingual (Hindi/English) weddings and events in Bangalore?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Bangalore feels included and engaged."
   },
   {
-    q: "Can you project enough energy for a mega-wedding at Bangalore Palace Grounds?",
-    a: "Venues like Palace Grounds require a completely different skill set than indoor banquets due to massive sound dissipation and crowd scatter. I use specific acoustic pacing, strategic stage movement, and crowd-condensing techniques to ensure a 2,000-person event feels tightly unified."
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Bangalore, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "Are you familiar with the protocol for properties like The Leela Palace or Taj West End?",
-    a: "Absolutely. These ultra-premium urban properties mandate 'understated authority.' You cannot use loud, cheap humor here. The anchor must be the authoritative spine of the event—directing proceedings with immaculate diction and ensuring the host family's prestige is protected at all times."
+    q: "Do you travel for destination weddings and corporate events in Bangalore?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Bangalore, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "Do you anchor Sangeet events in Bangalore?",
-    a: "Yes. For elite metropolitan Sangeets, I focus on rapid timeline execution. I transition the evening smoothly from formal family dance performances directly into a high-voltage, interactive dance floor environment, ensuring there are no dead spaces in the energy."
-  },
-  {
-    q: "What languages do you anchor in?",
-    a: "I provide premium bilingual anchoring in English and Hindi. For Bangalore, this exact combination is usually perfect—English serves the global, professional, and cross-cultural demographic, while Hindi drives the energy for Sangeets and North Indian ceremonial rituals."
-  },
-  {
-    q: "When should we book you for a Bangalore event?",
-    a: "Because I travel pan-India from Rajasthan, flying to Bangalore requires dedicated multi-day blockouts. The corporate summit season often clashes directly with peak wedding dates (Oct–Feb). Please reach out via WhatsApp the moment your venue dates are finalized."
-  },
+    q: "What are your charges for events in Bangalore, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Bangalore is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

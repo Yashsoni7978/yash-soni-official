@@ -224,39 +224,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "How do you manage the massive, open acoustics of a remote Andaman beach?",
-    a: "The ocean is essentially an acoustic void—it absorbs all standard sound. Furthermore, properties on Radhanagar Beach are sprawling. I actively prevent 'audience drift'. I use targeted vocal projection and physical stage boundaries to condense the VIPs exactly where the energy needs to be, forcing an intimate, tightly-packed atmosphere despite the infinite horizon."
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Andaman?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Andaman. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "Our Andaman guest list is incredibly distilled—only 100 highly important VIPs. Can you host a room this small?",
-    a: "This is exactly my specialty. A 1,000-person wedding requires broadcasting. A 100-person island wedding requires 'Conversational Dominance'. I dismantle the formal 'stage persona' and interact with the VIPs intimately, in immaculate English. It feels more like a high-end executive gala hosted by a close friend than a scripted show."
+    q: "What type of events does Yash Soni host in Andaman?",
+    a: "Yash Soni specialises in premium, high-energy events. In Andaman, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "We have international guests flying into Port Blair and traditional family from mainland India. Can you bridge them?",
-    a: "Absolutely. I execute pristine 'Bilingual Code-Switching'. The modern, global guests receive sharp, highly intelligent English validation, while I seamlessly intertwine deep, respectful Hindi so the traditional family feels completely centered and secure in the rituals."
+    q: "Can you host bilingual (Hindi/English) weddings and events in Andaman?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Andaman feels included and engaged."
   },
   {
-    q: "Do you use teleprompters or scripts for these intricate VIP events?",
-    a: "Never. Reading from paper in front of 100 highly intelligent VIPs instantly drops your authority. I memorize the family lineages, the complex itineraries, and the cross-border dynamics. This allows me to maintain absolute eye contact and run the entire multi-day itinerary 100% unscripted."
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Andaman, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "How are your logistics and travel managed for the Andamans?",
-    a: "Because I travel Pan-India handling massive volumes of destination weddings, my technical rider is highly optimized. Travel to Port Blair (and the subsequent ferry to Havelock/Neil) is clearly defined in the initial contract. There are no hidden surprises; my team coordinates seamlessly with your destination planner."
+    q: "Do you travel for destination weddings and corporate events in Andaman?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Andaman, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "What if island logistics (like ferry delays) force a sudden change in our Sangeet timeline?",
-    a: "Island logistics are inherently volatile. If a ferry delay forces us to compress a 4-hour Sangeet into 2 hours, I do not panic. Because I am entirely unscripted, I can instantly rewrite the pacing, stitch performances together on the fly, and accelerate the hype without the audience ever realizing the timeline was compromised."
-  },
-  {
-    q: "When should we freeze your dates for an Andaman event?",
-    a: "The Andaman wedding season aligns closely with extreme peak winter dates nationwide. Because flying into Port Blair and transferring to Havelock requires a multi-day blackout on my calendar, I strictly do not hold dates. The moment your resort is finalized, secure the dates immediately."
-  },
+    q: "What are your charges for events in Andaman, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Andaman is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {

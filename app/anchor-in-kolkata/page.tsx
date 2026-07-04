@@ -229,39 +229,30 @@ export const metadata: Metadata = {
 
 
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "Who is the best anchor for luxury Marwari weddings in Kolkata?",
-    a: "Anchor Yash Soni is highly specialized in hosting for the elite business families of East India. With a deep understanding of Marwari rituals and the ability to project massive authority across giant venues like the ITC Royal Bengal, he delivers a flawless, premium experience."
+    q: "Who is Anchor Yash Soni, and why should I hire him for my event in Kolkata?",
+    a: "Anchor Yash Soni is a premium, professionally rated event emcee with over 700+ shows hosted across India. Known for his flawless command over audiences and zero-script hosting, he brings a highly energetic and sophisticated presence to luxury weddings, corporate galas, and VIP events in Kolkata. His 4.9★ rating across 50+ reviews is a testament to his unmatched stage presence."
   },
   {
-    q: "How do you handle the massive indoor acoustics at venues like ITC Royal Bengal or JW Marriott?",
-    a: "Massive pillarless banquets suffer from extreme sound reverberation. A host who just 'yells louder' will create a wall of noise that drives guests outside. I use very specific mic pacing, strategic pausing, and visual crowd control to cut through the echo and force the audience's attention to the stage."
+    q: "What type of events does Yash Soni host in Kolkata?",
+    a: "Yash Soni specialises in premium, high-energy events. In Kolkata, he frequently anchors luxury destination weddings, electrifying Sangeet nights, Haldi and Mehendi ceremonies, corporate award nights, product launches, and massive public concerts. He is also a sought-after sports commentator."
   },
   {
-    q: "Can you host corporate tech and FMCG summits in Rajarhat?",
-    a: "Yes. Kolkata's corporate belt in Rajarhat requires absolute professional polish. My corporate delivery is 100% unscripted, utilizing flawless English to moderate panels, manage multi-speaker schedules, and execute complex award felicitations without breaking eye contact with the audience."
+    q: "Can you host bilingual (Hindi/English) weddings and events in Kolkata?",
+    a: "Absolutely. Yash is a bilingual expert who seamlessly transitions between English for international/NRI guests and corporate audiences, and warm, culturally rooted Hindi for family elders and traditional ceremonies. This ensures every single guest in Kolkata feels included and engaged."
   },
   {
-    q: "Ours is a cross-cultural wedding. Are you fluent in English and Hindi?",
-    a: "I am perfectly bilingual. For cross-cultural events spanning Marwari, Bengali, and NRI demographics in Kolkata, I seamlessly code-switch between languages to ensure no segment of the 1,000+ guest list ever feels excluded."
+    q: "What is your anchoring style, and how much experience do you have?",
+    a: "With over 5 years of stage experience and 700+ live shows under his belt, Yash's style is dynamic, unscripted, and deeply interactive. He doesn't just read from a script; he reads the crowd's energy. Whether it's managing a massive corporate crowd of 10,000+ or an intimate VIP gathering in Kolkata, he ensures the event flows flawlessly even during technical glitches."
   },
   {
-    q: "Do you use scripts during your anchoring?",
-    a: "Never. Scripts destroy the connection between an anchor and the audience. Whether I am guiding a deeply traditional ritual at Taj Bengal or hosting a 600-person tech summit, I operate entirely unscripted to maintain total situational control."
+    q: "Do you travel for destination weddings and corporate events in Kolkata?",
+    a: "Yes, Anchor Yash Soni is highly experienced in destination events. If you are planning a destination wedding, corporate retreat, or luxury Sangeet at a premium venue or resort in Kolkata, he travels nationwide to host. All travel and accommodation logistics are discussed transparently during the initial booking."
   },
   {
-    q: "We are concerned about keeping our older guests engaged during the Sangeet.",
-    a: "A great Sangeet honors the family first. I ensure the choreographed family performances are introduced with immense respect and tailored, unscripted introductions. Once the family feels validated, I rapidly shift the gear to high-energy, pulling both elders and youth onto the floor."
-  },
-  {
-    q: "When should we secure your availability for a Kolkata event?",
-    a: "Because I travel Pan-India and manage heavy volumes during the Rajasthan wedding season, my availability gets locked extremely fast during winter (Oct–Feb). The moment your venue—like the ITC or Taj—is confirmed, please send a WhatsApp inquiry to block the date."
-  },
+    q: "What are your charges for events in Kolkata, and how can I book you?",
+    a: "Charges depend on the event type, scale, duration, and whether travel to Kolkata is required. Yash offers premium services for clients who value flawless execution. To check his availability for your dates and get a customized quote, you can directly contact his team via the WhatsApp button on this website or email bookings@yashsoni.in."
+  }
 ];
 
 const faqSchema = {
