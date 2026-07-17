@@ -107,7 +107,7 @@ Yes, these are typically separate vendors, but your anchor should be looped in d
 *Whatever entry you choose, the anchor is who keeps the baraat's energy building instead of stalling. [Anchor Yash Soni](https://yashsoni.in/wedding-anchor-jaipur) coordinates baraat, Varmala, and reception hosting across Jaipur's palace, farmhouse, and hotel venues — bilingual, unscripted, one wedding per date. [Check your date on WhatsApp](https://wa.me/917737877978?text=Hi%20Yash!%20I%27d%20like%20to%20talk%20through%20baraat%20and%20anchoring%20for%20my%20wedding.).*
 
 **Related reading:** [The Perfect Sangeet Timeline](https://yashsoni.in/blog/perfect-sangeet-timeline-manage-family-performances) · [Top 10 Royal Palace Wedding Venues in Jaipur](https://yashsoni.in/blog/top-10-royal-palace-wedding-venues-jaipur) · [Best Farmhouse Wedding Venues in Jaipur](https://yashsoni.in/blog/farmhouse-wedding-venues-jaipur) · [Anchor Charges in Jaipur 2026](https://yashsoni.in/blog/anchor-charges-jaipur-2026-pricing)
-\`
+`
   },
   // ==========================================
   // BLOG 26: Shubh Vivah Muhurat 2026-27
@@ -198,6 +198,6 @@ For dates within the peak windows (January–March and late November–December)
 *Once your muhurat is confirmed, the next call to make is your venue and your anchor — in that order. [Anchor Yash Soni](https://yashsoni.in/wedding-anchor-jaipur) hosts one wedding per date across Jaipur's palace, farmhouse, and hotel venues, bilingual in Hindi and English. [Check availability for your date on WhatsApp](https://wa.me/917737877978?text=Hi%20Yash!%20I%27d%20like%20to%20check%20anchor%20availability%20for%20my%20wedding%20date.).*
 
 **Related reading:** [Planning a Winter Wedding in Jaipur](https://yashsoni.in/blog/planning-winter-wedding-jaipur-logistics) · [Top 10 Royal Palace Wedding Venues in Jaipur](https://yashsoni.in/blog/top-10-royal-palace-wedding-venues-jaipur) · [Jaipur Wedding Costs 2026: Complete Budget Breakdown](https://yashsoni.in/blog/jaipur-wedding-costs-budget-2026) · [Complete Wedding Planning Guide for Jaipur 2026](https://yashsoni.in/blog/complete-wedding-planning-guide-jaipur)
-\`
+`
   }
 ];
