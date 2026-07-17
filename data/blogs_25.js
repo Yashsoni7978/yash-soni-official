@@ -304,5 +304,89 @@ Yes — this is one of the most common planning gaps. Loop your anchor in on the
 
 **Related reading:** [Baraat Entry Ideas for Jaipur Weddings](https://yashsoni.in/blog/baraat-entry-ideas-jaipur-2026) · [The Perfect Sangeet Timeline](https://yashsoni.in/blog/perfect-sangeet-timeline-manage-family-performances) · [Top 10 Royal Palace Wedding Venues in Jaipur](https://yashsoni.in/blog/top-10-royal-palace-wedding-venues-jaipur) · [Best Farmhouse Wedding Venues in Jaipur](https://yashsoni.in/blog/farmhouse-wedding-venues-jaipur)
 `
+  },
+  // ==========================================
+  // BLOG 28: Wedding Guest Accommodation 2026
+  // ==========================================
+  {
+    id: 115,
+    slug: "wedding-guest-accommodation-jaipur-hotels-2026",
+    category: "Wedding Planning",
+    date: "17 Jul",
+    fullDate: "July 17, 2026",
+    readTime: "7 min",
+    title: "Where to Stay for a Jaipur Wedding: A Zone-by-Zone Guest Accommodation Guide (2026)",
+    desc: "Planning guest accommodation for a Jaipur wedding? A zone-by-zone hotel guide for Kukas, Ajmer Road, Sitapura & more, plus how to block rooms for out-of-town guests.",
+    image: "/accommodation-thumbnail.png",
+    content: `
+If a good chunk of your guest list is flying or driving in from outside Jaipur — which is true for most destination and NRI weddings in this city — accommodation stops being a side detail and becomes one of the first three decisions you need to make, right alongside your venue and your date. Jaipur is a large, spread-out city, and the difference between guests staying five minutes from the venue versus forty-five minutes away genuinely changes how your wedding week feels: whether people show up rested for the Haldi or exhausted from a highway commute, whether the after-party actually happens or fizzles out because everyone has a long drive back.
+
+Here's a practical, venue-zone-based breakdown of where to look for guest accommodation depending on where you're getting married in Jaipur.
+
+## Why This Needs to Be Decided Early
+
+Jaipur's wedding hotels and resorts — especially in Kukas, where a large share of the city's palace and heritage venues are concentrated — get booked out for rooms just as fast as they get booked out for functions, particularly across the peak wedding season (roughly November through March). If your own venue doesn't have enough rooms to house your full outstation guest list, you need to start blocking nearby hotel rooms the moment your date is confirmed, not a month before the wedding.
+
+## Kukas & Amer Road — Palace & Heritage Wedding Zone
+
+This belt, along the Delhi–Jaipur highway, is where most of Jaipur's grand palace and heritage resort weddings happen, and it's genuinely one of the better zones in the city for guest accommodation because several venues here are hotels in their own right — meaning your ceremony and your guests' rooms can be under one roof.
+
+- **Full-property options** where the wedding venue itself has substantial room inventory: The Leela Palace Jaipur, Fairmont Jaipur, JW Marriott, Rajasthali Resort & Spa, Le Meridien Jaipur, DoubleTree by Hilton Jaipur Amer, Golden Tulip Jaipur Kukas, and Lohagarh Fort Resort & Spa all combine event space with sizeable guest room counts, which is worth checking first if you're hosting a large outstation list.
+- **Nearby overflow options** if your primary venue has limited rooms: Cambay Grand Kukas and Jaibagh Palace both sit on the same highway corridor and are commonly used as overflow blocks for weddings at neighbouring heritage properties.
+- **Good for:** NRI families, large outstation guest lists, and anyone who wants the wedding and the guest stay to feel like one continuous experience rather than a commute between two locations.
+
+## Ajmer Road & Bhankrota — Farmhouse Sangeet Belt
+
+This is Jaipur's highest-volume farmhouse wedding zone — big lawns, big guest counts, Sangeet nights that run until 4 AM. The trade-off is that most farmhouses here are event-only properties without significant room inventory of their own, so guest accommodation almost always means booking a nearby hotel rather than staying on-site.
+
+- Most families booking a farmhouse on Ajmer Road pair it with a hotel block in the Jaipur city/Malviya Nagar corridor or closer toward Sitapura, depending on which stretch of Ajmer Road the farmhouse sits on — check the actual drive time from your specific farmhouse before locking a hotel, since "Ajmer Road" covers a fairly long stretch.
+- **Good for:** Large local and semi-local guest lists where most people are driving in for the day rather than staying multiple nights — but if you do have outstation guests, confirm the transport plan between hotel and farmhouse as part of your logistics, since this is the one zone where distance most commonly catches families off guard.
+
+## Sitapura & JLN Marg — 5-Star Hotel Wedding Zone
+
+This is the most convenient zone in the city for guest accommodation, simply because the wedding venue and the guest rooms are usually the same building.
+
+- **ITC Rajputana, a Luxury Collection Hotel** — a haveli-inspired 5-star property in the heart of the city with over 200 rooms and full wedding event space, making it one of the simplest single-venue options for both ceremony and guest stay.
+- **Jaipur Marriott Hotel** and other Sitapura-area 5-star properties similarly combine banquet space with substantial room blocks.
+- **Good for:** Couples who want zero-commute logistics for guests, corporate-adjacent families used to hotel-standard service, and shorter 2–3 day wedding itineraries where guests are flying in and out quickly.
+
+## Mansarovar & Vaishali Nagar — Premium Banquet Zone
+
+This is Jaipur's urban, resident-heavy wedding belt, generally used by families with a larger proportion of local Jaipur-based guests and a smaller outstation contingent.
+
+- Accommodation needs here are typically lighter — a modest hotel block for immediate outstation family (parents' siblings, close cousins flying in) rather than a full guest-list block.
+- **Good for:** Urban elite and milestone-celebration weddings with a mostly local guest base, where accommodation is a smaller line item than at a full destination wedding.
+
+## How to Actually Block Rooms Without Overpaying
+
+1. **Lock your venue and rough guest count first**, then approach 2–3 hotels in the same zone for group rate quotes — don't just take your venue's in-house rate as final if it also has a hotel wing.
+2. **Ask about a wedding room block with a release date** — most Jaipur wedding hotels will hold a block of rooms at a fixed group rate up to a set date (commonly 30–45 days before the wedding), after which unbooked rooms release back to general inventory. Get this in writing.
+3. **Separate your VIP block from your general guest block** — parents' close family and the couple's own party often need rooms in the venue itself or the closest possible property, while extended guests can be a short drive away without anyone noticing.
+4. **Confirm shuttle logistics in the contract**, not verbally — if your venue and hotel block aren't the same property, a scheduled shuttle (not "guests can take a cab") is what actually prevents half your Sangeet crowd showing up an hour late.
+5. **Build in a buffer for last-minute RSVPs** — Indian wedding guest counts rarely shrink between the invite and the event; block slightly more rooms than your current confirmed list, with a cancellation window that doesn't penalise you for releasing them back.
+
+## Frequently Asked Questions
+
+**Which Jaipur wedding zone is easiest for out-of-town guest accommodation?**
+Sitapura & JLN Marg, since most venues there are 5-star hotels with their own substantial room inventory — guests can attend every function without leaving the property. Kukas & Amer Road is a close second, since several palace venues there are also full-service hotels.
+
+**Do farmhouses on Ajmer Road have their own guest rooms?**
+Most don't, or have very limited room counts — farmhouses in this belt are primarily event venues, so guest accommodation almost always needs to be booked separately at a nearby hotel, with transport factored into your planning.
+
+**How far in advance should we block hotel rooms for wedding guests?**
+As soon as your venue and guest count are confirmed — ideally 6+ months ahead for peak season (November–March) weddings, since the same hotels that host Jaipur's weddings also fill their own room inventory fast during that window.
+
+**Is it cheaper to book individual guest rooms or a group block?**
+A group block with a fixed rate and release date is almost always better value than guests booking individually, and it also protects you from a hotel selling out rooms to other groups closer to your date.
+
+**Should NRI wedding guests stay at the venue or in the city?**
+For NRI and international guests, staying at or very near the venue is almost always the better call — it removes the friction of navigating an unfamiliar city between functions and keeps the whole extended family together for the week, which matters more than city sightseeing convenience during a packed wedding schedule.
+
+---
+
+*Guest accommodation is one of the first logistics calls to make once your venue is locked — right alongside booking your anchor. [Anchor Yash Soni](https://yashsoni.in/wedding-anchor-jaipur) has hosted 700+ weddings across every one of these Jaipur zones and can walk you through what's actually worked for NRI and outstation-heavy guest lists. [Message on WhatsApp](https://wa.me/917737877978?text=Hi%20Yash!%20I%27d%20like%20some%20advice%20on%20guest%20accommodation%20and%20anchoring%20for%20my%20wedding.).*
+
+**Related reading:** [Top 10 Royal Palace Wedding Venues in Jaipur](https://yashsoni.in/blog/top-10-royal-palace-wedding-venues-jaipur) · [Best Farmhouse Wedding Venues in Jaipur](https://yashsoni.in/blog/farmhouse-wedding-venues-jaipur) · [The Ultimate NRI Destination Wedding Guide for Rajasthan](https://yashsoni.in/blog/nri-destination-wedding-guide-rajasthan-2026) · [Jaipur Wedding Costs 2026: Complete Budget Breakdown](https://yashsoni.in/blog/jaipur-wedding-costs-budget-2026)
+`
   }
 ];
