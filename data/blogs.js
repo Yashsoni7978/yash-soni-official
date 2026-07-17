@@ -4,6 +4,7 @@ import { NEW_BLOGS_BATCH_3 } from './blogs_18_19';
 import { NEW_BLOGS_BATCH_4 } from './blogs_20_21';
 import { NEW_BLOGS_BATCH_5 } from './blogs_22_23';
 import { NEW_BLOGS_BATCH_6 } from './blogs_24';
+import { NEW_BLOGS_BATCH_7 } from './blogs_25';
 
 // ===================================================
 // MASTER BLOG DATA - YASHSONI.IN
@@ -1538,7 +1539,8 @@ export const BLOG_POSTS = [
   ...NEW_BLOGS_BATCH_3,
   ...NEW_BLOGS_BATCH_4,
   ...NEW_BLOGS_BATCH_5,
-  ...NEW_BLOGS_BATCH_6
+  ...NEW_BLOGS_BATCH_6,
+  ...NEW_BLOGS_BATCH_7
 ];
 
 export default BLOG_POSTS;
