@@ -102,6 +102,7 @@ export default function sitemap() {
     // 0.95 — Primary money pages (highest commercial intent)
     else if (
       [
+        "/anchor-in-delhi",
         "/anchor-in-jaipur",
         "/best-anchor-in-jaipur",
         "/wedding-anchor-jaipur",

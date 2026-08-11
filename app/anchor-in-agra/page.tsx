@@ -77,23 +77,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Delhi NCR" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Corporate Director — Delhi NCR" },
       reviewBody: "Hosting a sunset reception at The Oberoi Amarvilas requires an anchor who understands immense prestige. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet with complete authority. He commands the room effortlessly.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Singhania Family" },
       reviewBody: "We had international guests and traditional elders flying into ITC Mughal. Yash’s bilingual code-switching was perfect. He bridged the cultural gap so naturally. No awkward jokes, no loud club behavior—just pure, refined stage presence.",
     },

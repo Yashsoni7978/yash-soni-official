@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Goa" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Chowdary Family (Dubai)" },
       reviewBody: "A beach wedding at Taj Exotica is stunning, but the ocean wind completely destroys normal sound systems. Yash knew exactly how to project his voice and physically control the crowd so our 400 guests stayed engaged during the Varmala. Absolute top-tier professional.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Mehta & Singh" },
       reviewBody: "Our Sangeet at W Goa was insane. Yash handled the transition from the formal family performances into an explosive, unscripted dance floor natively. He speaks perfect English for our international friends, but kept the deep Hindi traditions alive for the elders.",
     },

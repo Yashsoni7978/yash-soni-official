@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Uttarakhand" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "NRI Destination Wedding — London" },
       reviewBody: "Hosting at Pilibhit House required absolute reverence but also the ability to run a highly sophisticated timeline. Yash was flawless. His English narration of the Ganga Aarti brought the entire international guest list to tears. Astounding stage command.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Corporate Heritage Initiative" },
       reviewBody: "We held an executive spiritual retreat on the ghats. Yash moderated the multi-day event with incredible grace. He possesses an authentic understanding of spiritual logistics combined with raw corporate polish.",
     },

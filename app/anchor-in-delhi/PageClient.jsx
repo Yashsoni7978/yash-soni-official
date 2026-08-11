@@ -1,695 +1,1182 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import { ArrowRight, Award, Building2, CalendarCheck, CheckCircle2, Crown, Diamond, Gem, MapPin, Mic2, Minus, Music2, Plus, Power, ShieldCheck, Sparkles, Star, Users, Zap } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import {
+  Mic2,
+  Users,
+  Award,
+  CalendarCheck,
+  MapPin,
+  ChevronRight,
+  Plus,
+  Minus,
+  Sparkles,
+  ShieldCheck,
+  CheckCircle2,
+  ArrowRight,
+  MessageCircle,
+  Crown,
+  Building2,
+  Music2,
+  Layers,
+  Sparkle,
+  Star
+} from "lucide-react";
 
+// ───────────────────────────────────────────────────────────────────────────
+// CONSTANTS & HELPERS
+// ───────────────────────────────────────────────────────────────────────────
+const GOLD = "#D4AF37";
+const WHATSAPP_URL = "https://wa.me/917737877978?text=Hi%20Anchor%20Yash!%20I%27m%20planning%20an%20event%20in%20Delhi%20NCR.%20I%27d%20like%20to%20check%20your%20availability.";
 
-// ─────────────────────────────────────────────
-// CONSTANTS
-// ─────────────────────────────────────────────const GOLD = "#D4AF37";
-const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20planning%20an%20event%20in%20Delhi%20NCR.%20Can%20you%20check%20availability%3F";
+function Reveal({ children, delay = 0, className = "" }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
-const css = `
-  @keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-  .gs{background:linear-gradient(120deg,#a8891a 0%,#D4AF37 30%,#f0d878 50%,#D4AF37 70%,#a8891a 100%);background-size:300% auto;animation:shimmer 4s linear infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-  @keyframes slowzoom{0%{transform:scale(1)}100%{transform:scale(1.1)}}
-  .slow-zoom{animation:slowzoom 18s ease-in-out infinite alternate;}
-  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-  .marquee{animation:marquee 40s linear infinite;}
-  .mask-fade{-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);}
-`;
-
-const G = ({ children }) => (
-  <span className="bg-clip-text text-transparent bg-cover bg-center"
-    style={{ backgroundImage: "url('/texture/delhi.webp')", backgroundColor: GOLD }}>
-    {children}
-  </span>
-);
-
-const Reveal = ({ children, delay = 0, className = "" }) => (
-  <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
-    className={className}>
-    {children}
-  </motion.div>
-);
-
-function Counter({ target, suffix = "" }) {
-  const [val, setVal] = useState(0);
+function AnimatedCounter({ target, suffix = "" }) {
+  const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+
   useEffect(() => {
     if (!inView) return;
-    const to = parseInt(target.replace(/\D/g, ""), 10);
+    const num = parseInt(target.replace(/\D/g, ""), 10);
     let start = null;
-    const step = ts => {
+    const step = (ts) => {
       if (!start) start = ts;
-      const p = Math.min((ts - start) / 2000, 1);
-      setVal(Math.round(to * (1 - Math.pow(1 - p, 3))));
-      if (p < 1) requestAnimationFrame(step);
+      const progress = Math.min((ts - start) / 2000, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(num * ease));
+      if (progress < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
   }, [inView, target]);
-  return <span ref={ref}>{val.toLocaleString("en-IN")}{suffix}</span>;
+
+  return <span ref={ref}>{count.toLocaleString("en-IN")}{suffix}</span>;
 }
 
-const FAQItem = ({ q, a, id }) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={`rounded-2xl border transition-all duration-300 ${open ? "border-[#D4AF37]/60 bg-[#D4AF37]/5" : "border-white/10 hover:border-white/20"}`}>
-      <button onClick={() => setOpen(o => !o)} aria-expanded={open} aria-controls={id}
-        className="w-full flex justify-between items-start gap-4 p-5 md:p-6 text-left focus:outline-none">
-        <span className={`font-semibold text-sm md:text-base leading-snug pr-2 transition-colors ${open ? "text-[#B5952F]" : "text-zinc-200"}`}>{q}</span>
-        <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all mt-0.5 ${open ? "bg-[#D4AF37] text-black" : "border border-white/30"}`}>
-          {open ? <Minus size={13} /> : <Plus size={13} />}
-        </div>
-      </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div id={id} initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-            <p className="px-5 md:px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-[#D4AF37]/15 pt-4">{a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+// ───────────────────────────────────────────────────────────────────────────
+// DATA STRUCTURES
+// ───────────────────────────────────────────────────────────────────────────
 
-// ─────────────────────────────────────────────
-// DATA — All Delhi-specific
-// ─────────────────────────────────────────────
+// Section 02 — Event Categories
+const ENERGY_CATEGORIES = [
+  {
+    id: "weddings",
+    title: "WEDDINGS",
+    subtitle: "GRAND BARAAT & VARMALA",
+    tag: "Luxury Shaadi",
+    desc: "Delhi weddings demand an anchor who can elevate royal traditions, coordinate effortlessly with multi-acre decor setups, and command massive family gatherings with poise.",
+    highlights: ["Baraat Entry Coordination", "Varmala Stage Spectacle", "Family Cultural Protocols"],
+    image: "/premium_events/grand_wedding_venue.webp"
+  },
+  {
+    id: "corporate",
+    title: "CORPORATE",
+    subtitle: "DIPLOMATIC & VIP SUMMITS",
+    tag: "Aerocity & BKC",
+    desc: "From Aerocity summits to C-suite awards at Taj Palace, Yash brings protocol awareness, bilingual eloquence, and flawless run-of-show timing.",
+    highlights: ["Diplomatic Protocol", "C-Suite & VIP Courtesy", "Bilingual English/Hindi"],
+    image: "/corporate-anchor-yash-soni-presentation.webp"
+  },
+  {
+    id: "celebrations",
+    title: "CELEBRATIONS",
+    subtitle: "PUNJABI SANGEET & COCKTAILS",
+    tag: "High Octane",
+    desc: "Electric after-parties and Punjabi Sangeet nights in Chhatarpur require an anchor with unscripted wit, DJ coordination, and non-stop crowd energy.",
+    highlights: ["Crowd Energy Control", "DJ & Dhol Sync", "Family Dance Sequence Flow"],
+    image: "/sangeet-red-glitter-stage.webp"
+  },
+  {
+    id: "big-stages",
+    title: "BIG STAGES",
+    subtitle: "MASSIVE LAWNS & ARENAS",
+    tag: "10,000+ Audience",
+    desc: "Projecting across open-air lawns without losing intimacy. Managing spatial crowd dynamics and keeping thousands engaged without reading from paper scripts.",
+    highlights: ["Open-Air Lawn Acoustics", "10,000+ Crowd Command", "Zero Paper Scripts"],
+    image: "/hero-slide-1.webp"
+  }
+];
+
+// Section 03 — Territory Locations
+const TERRITORIES = [
+  {
+    id: "chattarpur",
+    name: "CHATTARPUR",
+    type: "Farmhouse Luxury",
+    desc: "Sprawling farmhouse weddings, Sangeet celebrations, and multi-event wedding weekends across multi-acre estates.",
+    highlights: ["Morbagh", "A-Dosi Estate", "Manaktala Farms"]
+  },
+  {
+    id: "aerocity",
+    name: "AEROCITY",
+    type: "Corporate & Hospitality Hub",
+    desc: "Corporate summits, international conferences, brand launches, and formal evening galas at 5-star properties.",
+    highlights: ["Andaz Delhi", "Roseate House", "Pullman Aerocity"]
+  },
+  {
+    id: "gurugram",
+    name: "GURUGRAM",
+    type: "Executive & Luxury Galas",
+    desc: "Executive gatherings, corporate celebrations, tech launches, and high-net-worth family celebrations.",
+    highlights: ["DLF Cyber City", "Oberoi Gurugram", "Leela Ambience"]
+  },
+  {
+    id: "south-delhi",
+    name: "SOUTH DELHI",
+    type: "Elite Social Events",
+    desc: "Premium social celebrations, intimate high-end weddings, cocktail evenings, and milestone anniversaries.",
+    highlights: ["Taj Palace", "ITC Maurya", "The Leela Palace"]
+  },
+  {
+    id: "noida",
+    name: "NOIDA",
+    type: "Conventions & Summits",
+    desc: "Large-scale corporate summits, industrial conventions, exhibition galas, and public event arenas.",
+    highlights: ["India Expo Centre", "Radisson Blu", "Stellar Gymkhana"]
+  },
+  {
+    id: "faridabad",
+    name: "FARIDABAD",
+    type: "Grand Celebrations",
+    desc: "Industrial leadership conventions, expansive wedding lawns, and multi-generational family celebrations.",
+    highlights: ["Surajkund Resorts", "Radisson Blu", "Imperial Lawns"]
+  }
+];
+
+// Section 04 — Playbook Tabs
+const PLAYBOOK_TABS = [
+  {
+    id: "weddings",
+    label: "WEDDINGS",
+    title: "Grand Farmhouse & Palace Weddings",
+    desc: "Delhi weddings move between profound emotional rituals and grand spectacle. As your emcee, Yash connects family elders, guides Varmala sequences, and ensures the entire wedding timeline flows without awkward lulls.",
+    contribution: "Seamless transition management, family member introductions, and commanding multi-acre lawn crowds during main rituals.",
+    energy: "Regal, warm, and respectfully authoritative.",
+    image: "/premium_events/grand_wedding_venue.webp"
+  },
+  {
+    id: "sangeet",
+    label: "SANGEET",
+    title: "High-Energy Punjabi Sangeet Nights",
+    desc: "A Delhi Sangeet is an explosion of music, dance, and competitive family banter. Yash keeps the energy soaring between family performances, coordinates cues with the DJ and Dhol team, and turns the dance floor into a celebration.",
+    contribution: "Unscripted crowd banter, rhythm control, family group integration, and high-octane stage energy.",
+    energy: "Electrifying, witty, and infectious.",
+    image: "/sangeet-red-glitter-stage.webp"
+  },
+  {
+    id: "corporate",
+    label: "CORPORATE EVENTS",
+    title: "Bilingual Corporate Galas & Leadership Gatherings",
+    desc: "Corporate rooms in Aerocity and Connaught Place demand absolute professional clarity. Yash balances executive protocol with subtle humor, ensuring sponsors, keynote speakers, and awardees are presented with dignity.",
+    contribution: "Flawless bilingual delivery (English/Hindi), strict timeline adherence, and protocol-aware stage introductions.",
+    energy: "Sophisticated, articulate, and poised.",
+    image: "/corporate-anchor-yash-soni-presentation.webp"
+  },
+  {
+    id: "conferences",
+    label: "CONFERENCES",
+    title: "National Summits & Industry Conventions",
+    desc: "Managing full-day conference agendas with panel discussions, keynote transitions, and audience Q&A sessions across Delhi NCR's major convention centers.",
+    contribution: "Stage continuity across multi-session events, speaker moderation, and audience engagement.",
+    energy: "Professional, focused, and crisp.",
+    image: "/product-launch-corporate-hero.webp"
+  },
+  {
+    id: "awards",
+    label: "AWARDS",
+    title: "Annual Award Nights & Excellence Galas",
+    desc: "Creating cinematic build-ups for award rollouts, keeping trophy distribution swift, and maintaining audience enthusiasm through long presentation sequences.",
+    contribution: "High-impact winner announcements, trophy handoff choreography, and pacing control.",
+    energy: "Celebratory, impactful, and dramatic.",
+    image: "/corporate_gala_dinner-green.webp"
+  },
+  {
+    id: "launches",
+    label: "PRODUCT LAUNCHES",
+    title: "Brand Reveals & Experiential Launches",
+    desc: "Building suspense leading up to key product unveilings for automotive, tech, fashion, and luxury brands across Delhi.",
+    contribution: "Countdown hype creation, brand narrative delivery, and media-friendly stage moments.",
+    energy: "Dynamic, modern, and high-value.",
+    image: "/product-launch-stage-reveal.webp"
+  },
+  {
+    id: "fests",
+    label: "COLLEGE / FEST EVENTS",
+    title: "Large-Scale College Fests & Concert Stages",
+    desc: "Commanding thousands of energetic youth, artist introductions, and keeping crowd safety and enthusiasm balanced.",
+    contribution: "Audience chant activation, artist entry hype, and crowd control.",
+    energy: "Vibrant, electric, and unstoppable.",
+    image: "/hero-slide-1.webp"
+  },
+  {
+    id: "private",
+    label: "PRIVATE CELEBRATIONS",
+    title: "Cocktail Soirées & Anniversary Dinners",
+    desc: "Intimate gatherings requiring personalized storytelling, family anecdotes, and a warm, approachable host presence.",
+    contribution: "Personalized toast facilitation, interactive guest moments, and graceful ceremony flow.",
+    energy: "Intimate, warm, and charming.",
+    image: "/sagai-ring-ceremony-jaipur-hero.webp"
+  }
+];
+
+// Section 05 — Event Stories Gallery
+const EVENT_STORIES = [
+  {
+    id: 1,
+    title: "Chhatarpur Farmhouse Wedding Spectacle",
+    category: "WEDDING",
+    location: "Chattarpur Farms, Delhi NCR",
+    desc: "A grand 1,200-guest outdoor wedding celebration across 3 acres of open lawns. Yash commanded the crowd from Baraat arrival through the Varmala pyro sequence.",
+    image: "/premium_events/grand_wedding_venue.webp"
+  },
+  {
+    id: 2,
+    title: "Aerocity Punjabi Sangeet Night",
+    category: "SANGEET",
+    location: "Aerocity Ballroom, Delhi",
+    desc: "High-energy Sangeet night with 30+ family dance performances, live Dhol synchronization, and non-stop after-party momentum.",
+    image: "/sangeet-red-glitter-stage.webp"
+  },
+  {
+    id: 3,
+    title: "Taj Palace National Corporate Summit",
+    category: "CORPORATE",
+    location: "Taj Palace, Diplomatic Enclave",
+    desc: "Protocol-heavy summit attended by cabinet dignitaries and industry leaders. Flawless bilingual hosting with zero script reliance.",
+    image: "/corporate-anchor-yash-soni-presentation.webp"
+  },
+  {
+    id: 4,
+    title: "Large-Format Concert & Stage Reveal",
+    category: "LIVE EVENT",
+    location: "Delhi NCR Arena",
+    desc: "Commanding a crowd of over 10,000 live attendees with open-air acoustics and high-impact stage presence.",
+    image: "/hero-slide-1.webp"
+  }
+];
+
+// Section 07 — Approved Statistics
 const STATS = [
-  { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
-  { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
-  { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
-  { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
+  { val: "700", suffix: "+", label: "EVENTS HOSTED", sub: "Pan-India Record" },
+  { val: "10", suffix: "K+", label: "LIVE AUDIENCE", sub: "Single Stage Scale" },
+  { val: "5", suffix: "+", label: "YEARS EXPERIENCE", sub: "Unscripted Mastery" },
+  { val: "5", suffix: "+", label: "EVENT TYPES", sub: "Corporate to Weddings" }
 ];
 
-const DELHI_IDENTITY = [
-  {
-    icon: Power,
-    title: "The Capital Matrix",
-    desc: "Delhi events consistently feature political dignitaries, bureaucrats, and the highest echelon of corporate leadership. Hosting at Taj Palace or ITC Maurya requires an anchor who understands implicit power dynamics and can conduct the room respectfully without losing control of the agenda."
-  },
-  {
-    icon: Users,
-    title: "Chhatarpur Farm Scale",
-    desc: "A Delhi NCR farmhouse wedding operates on an entirely different scale — sprawling grounds, massive guest counts, and non-stop energy. The anchor must bridge the gap between keeping a 1000-person Punjabi Sangeet highly electric while ensuring the formal Varmala execution remains deeply regal."
-  },
-  {
-    icon: Zap,
-    title: "High-Octane Energy",
-    desc: "Delhi crowds are unapologetic and demand high entertainment value. A low-energy host will get buried at an Aerocity Sangeet. It requires an aggressive, unscripted wit and the sheer vocal command to keep an entire ballroom locked in past midnight."
-  },
-];
-
-const SERVICES = [
-  {
-    icon: Music2,
-    title: "Punjabi Sangeet Emcee",
-    desc: "Delhi Sangeets are legendary. Commanding hyper-energetic crowds, coordinating with massive dhol-troupes, managing family dance off-flows, and ensuring the energy peaks exactly when the DJ takes over.",
-    tag: "High Energy"
-  },
-  {
-    icon: Crown,
-    title: "Farmhouse Wedding Anchor",
-    desc: "Navigating massive multi-acre venues in Chhatarpur and NH8. Managing grandiose baraat entries, coordinating with large event teams, and pulling decentralized crowds into the main Phero sequences.",
-    tag: "Shaadi"
-  },
-  {
-    icon: Building2,
-    title: "National Summits & Awards",
-    desc: "Hosting national policy summits, association awards, and corporate leadership galas in Aerocity and Connaught Place with complete bilingual fluency and protocol adherence.",
-    tag: "Corporate"
-  },
-  {
-    icon: Star,
-    title: "VIP & Diplomatic Galas",
-    desc: "Hosting at venues heavily guarded by protocol. Discretion, sharp stage presence, and a formal English register tailored for international delegates.",
-    tag: "Protocol"
-  },
-];
-
-const VENUES = [
-  { name: "Taj Palace Delhi", tag: "Diplomatic Enclave · Regal", icon: Crown },
-  { name: "ITC Maurya", tag: "Iconic Luxury · Sardar Patel", icon: Gem },
-  { name: "The Leela Palace", tag: "Ultra Premium · Chanakyapuri", icon: Diamond },
-  { name: "Roseate House", tag: "Contemporary · Aerocity", icon: Sparkles },
-  { name: "Morbagh", tag: "Luxury Farm · Chhatarpur", icon: MapPin },
-  { name: "Pullman Aerocity", tag: "Massive Ballroom · NCR", icon: Building2 },
-  { name: "Andaz Delhi", tag: "Modern Scale · Aerocity", icon: Users },
-  { name: "A-Dosi Farm", tag: "Elite Estate · Chhatarpur", icon: Star },
-];
-// Note: diamond not imported, fallback to Gem
-VENUES[2].icon = Gem;
-
-const VS = [
-  { problem: "Low energy anchors who lose the crowd at a Punjabi Sangeet", fix: "High-octane, magnetic stage presence that feeds off the crowd" },
-  { problem: "Overly casual hosts who embarrass VIPs at corporate galas", fix: "Chanakyapuri-level protocol awareness and extreme discretion" },
-  { problem: "Inability to project across a 3-acre Chhatarpur farm venue", fix: "Physical crowd-control mechanics and open-air vocal strength" },
-  { problem: "Relying on outdated jokes that alienate a sophisticated crowd", fix: "Completely unscripted, organic crowd-work tailored to the moment" },
-  { problem: "Cannot handle the bilingual demands of an NCR audience", fix: "Seamless code-switching between impeccable English and sharp Hindi" },
-];
-
+// Section 07 — Real Authentic Testimonials
 const TESTIMONIALS = [
   {
-    name: "Arora Family",
     quote: "Our Sangeet at a Chhatarpur farmhouse had 1,200 people. It was chaotic in the best way possible. Yash stepped on stage and completely owned the sheer madness of a true Delhi Sangeet. He had uncles laughing, cousins cheering, and never once let the energy drop.",
+    name: "Arora Family",
     event: "Sangeet · Chhatarpur Farms · 1,200 guests"
   },
   {
-    name: "Head of Events — National IT Association",
     quote: "We hosted an international tech summit at the Taj Palace with cabinet ministers in attendance. Yash handled the stage with such gravitas and precision that many delegates assumed he was a senior member of our own board. Highly articulate.",
+    name: "Head of Events — National IT Association",
     event: "Tech Summit · Taj Palace · 600 delegates"
   },
   {
-    name: "Chadha Family",
     quote: "From the Varmala at The Leela to the late-night after-party, Yash's transitions were flawless. He understands the Delhi crowd deeply — he knows when to be fully respectful to the elders and when to turn up the heat for the youngsters.",
+    name: "Chadha Family",
     event: "Wedding · The Leela Palace · 500 guests"
-  },
+  }
 ];
 
+// Section 08 — The Difference Comparison
+const DIFFERENCES = [
+  {
+    generic: "ANNOUNCES",
+    yash: "CONNECTS",
+    genericSub: "Reads names off a queue sheet mechanically",
+    yashSub: "Creates organic emotional bridges with the audience"
+  },
+  {
+    generic: "FOLLOWS THE SCRIPT",
+    yash: "READS THE ROOM",
+    genericSub: "Panics when delays or schedule shifts occur",
+    yashSub: "Uses zero paper scripts, adapting instantly to crowd energy"
+  },
+  {
+    generic: "FILLS TIME",
+    yash: "CREATES MOMENTS",
+    genericSub: "Uses generic filler copy between stage setups",
+    yashSub: "Crafts memorable interactive highlights every minute on stage"
+  }
+];
+
+// Section 09 — Delhi FAQs
 const FAQS = [
-  { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
-  { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
-  { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
-  { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
-    q: "Who is the best anchor for massive weddings in Delhi NCR?",
-    a: "Anchor Yash Soni is highly sought after for large-scale Delhi NCR events. With a 4.9★ rating across 700+ shows, he brings the high-energy command required for massive Chhatarpur farm weddings and the sophisticated protocol needed for properties like Taj Palace and ITC Maurya."
+    q: "Can you host weddings in Chattarpur?",
+    a: "Yes. Sprawling Chattarpur farmhouses are a mainstay of Delhi weddings. Anchor Yash specializes in managing open-air acoustic distribution, massive baraat entries, and unscripted family Sangeets on multi-acre lawns."
   },
   {
-    q: "Do you host high-energy Punjabi Sangeets in Delhi?",
-    a: "Yes. Delhi Sangeets operate at a completely different energy level. They require an anchor who refuses to use paper scripts, feeds off massive crowds, and can seamlessly coordinate with large dhol troupes and complex family performances without losing control of the timeline."
+    q: "Do you travel across Delhi NCR?",
+    a: "Yes. Anchor Yash hosts events across South Delhi, Chattarpur, Aerocity, Gurugram, Noida, and Faridabad, maintaining seamless punctuality and venue familiarity across the entire National Capital Region."
   },
   {
-    q: "Can you handle corporate summits with politicians and VIPs?",
-    a: "Absolutely. Yash has extensive experience hosting protocol-heavy events in Delhi's Diplomatic Enclave and Aerocity. He understands the strict stage chronologies, the VIP acknowledgment hierarchies, and the precise English/Hindi register required for government and corporate elites."
+    q: "Can you host events in Gurugram?",
+    a: "Yes. From corporate leadership summits at Cyber City to luxury ballroom galas at Golf Course Road hotels, Yash brings sharp executive presence and bilingual command to Gurugram stages."
   },
   {
-    q: "Are you comfortable hosting outdoor events at Chhatarpur Farms?",
-    a: "Yes. Open-air farmhouses present unique acoustic and crowd-control challenges. Yash uses advanced spatial crowd-work techniques — rather than just shouting into a mic, he physically works the zones of a massive lawn to unify a decentralized crowd into a single moment."
+    q: "Do you host corporate events in Aerocity?",
+    a: "Yes. Aerocity hosts major national summits and corporate galas at venues like Andaz Delhi, Roseate House, and Pullman. Yash handles protocol-heavy stages with cabinet ministers, C-suite executives, and international delegates."
   },
   {
-    q: "Do you travel to Gurugram and Noida for events?",
-    a: "Yes. Anchor Yash covers the entire Delhi NCR region, including premium venues in Gurugram (like the DLF Country Club and Leela Ambiance) and massive exhibition grounds in Greater Noida."
+    q: "Can you handle large wedding audiences?",
+    a: "Yes. Anchor Yash regularly commands 1,000+ guest audiences in Delhi. His unscripted crowd work and vocal command keep expansive crowds focused without relying on paper scripts."
   },
   {
-    q: "How far in advance should we book for the Delhi winter wedding season?",
-    a: "The Delhi peak wedding season (November to February) is the busiest in the country. Key saaya (auspicious) dates at prime venues like Roseate and Andaz book out 6 to 8 months in advance. Yash operates strictly on a first-to-confirm, advance-payment basis."
+    q: "Do you host Sangeet and cocktail evenings?",
+    a: "Yes. High-energy Punjabi Sangeets and glamorous cocktail nights in Delhi are his signature events, bridging upbeat crowd interaction with structured sequence transitions."
   },
+  {
+    q: "Can you coordinate with wedding planners and event production teams?",
+    a: "Yes. Yash collaborates seamlessly with top wedding planners, dhol troupes, production crews, and DJs across Delhi NCR to ensure tight cue execution and zero stage downtime."
+  },
+  {
+    q: "How early should we book an anchor for a Delhi event?",
+    a: "For peak Delhi winter wedding season (November to February), bookings are recommended 6 to 8 months in advance as prime dates sell out rapidly."
+  }
 ];
 
+// Section 10 — Booking Steps
+const BOOKING_STEPS = [
+  { step: "01", title: "TELL ME THE EVENT", desc: "Share your event format, whether it's a grand Chhatarpur wedding or an Aerocity summit." },
+  { step: "02", title: "SHARE THE DATE + VENUE", desc: "Specify the exact venue and date so date exclusivity can be checked immediately." },
+  { step: "03", title: "UNDERSTAND THE AUDIENCE", desc: "We discuss the crowd profile, language preferences (English/Hindi), and key highlights." },
+  { step: "04", title: "BUILD THE HOSTING APPROACH", desc: "Crafting the stage narrative, cue sheets, and coordination points with planners & DJs." },
+  { step: "05", title: "TAKE THE STAGE", desc: "Flawless, unscripted live execution that leaves the room electric and memorable." }
+];
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Anchor Yash Soni",
-  "image": "https://yashsoni.in/og-image.webp",
-  "@id": "https://yashsoni.in/#organization",
-  "url": "https://yashsoni.in",
-  "telephone": "+917737877978",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Vaishali Nagar",
-    "addressLocality": "Jaipur",
-    "postalCode": "302021",
-    "addressRegion": "RJ",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anchoryashsoni",
-    "https://www.facebook.com/anchoryashsoni"
-  ]
-};
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+// Section 12 — City Links
+const CITY_NETWORK = [
+  { name: "JAIPUR", href: "/anchor-in-jaipur", desc: "Palace & Royal Heritage" },
+  { name: "UDAIPUR", href: "/anchor-in-udaipur", desc: "Lake Palace Destination" },
+  { name: "MUMBAI", href: "/anchor-in-mumbai", desc: "Sea-Facing Luxury & BKC" },
+  { name: "GURUGRAM", href: "/anchor-in-delhi", desc: "Cyber City & Corporate" },
+  { name: "GOA", href: "/anchor-in-goa", desc: "Beachfront Celebrations" },
+  { name: "BANGALORE", href: "/anchor-in-bangalore", desc: "Tech Galas & Summits" },
+  { name: "JODHPUR", href: "/anchor-in-jodhpur", desc: "Fort & Royal Weddings" },
+  { name: "AGRA", href: "/anchor-in-agra", desc: "Heritage Taj Celebrations" }
+];
 
-// ─────────────────────────────────────────────
-// PAGE
-// ─────────────────────────────────────────────
-export default function DelhiPage() {
+// ───────────────────────────────────────────────────────────────────────────
+// COMPONENT
+// ───────────────────────────────────────────────────────────────────────────
+export default function PageClient() {
+  const [activeTab, setActiveTab] = useState("weddings");
+  const [activeStory, setActiveStory] = useState(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  const selectedTabData = PLAYBOOK_TABS.find((t) => t.id === activeTab) || PLAYBOOK_TABS[0];
+  const selectedStoryData = EVENT_STORIES[activeStory] || EVENT_STORIES[0];
+
   return (
-    <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
-      <style>{css}</style>
-
-      {/* ══ 1. HERO ══ */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/delhi_bg.webp" alt="Best Anchor in Delhi — National Capital Heritage at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
+    <div className="bg-[#050505] text-[#FDFBF7] font-sans antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-black min-h-screen">
+      
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 01 — CINEMATIC HERO */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden border-b border-[#D4AF37]/20">
+        
+        {/* Responsive AI Generated Hero Background */}
+        <div className="absolute inset-0 z-0">
+          <picture>
+            <source media="(min-width: 768px)" srcSet="/backgrounds/delhi_hero_desktop.png" />
+            <img
+              src="/backgrounds/delhi_hero_mobile.png"
+              alt="Anchor Yash Soni commanding a grand luxury Delhi event stage"
+              className="w-full h-full object-cover object-center filter brightness-[0.65] contrast-[1.1] scale-105 transition-transform duration-1000"
+              loading="eager"
+            />
+          </picture>
+          
+          {/* Subtle editorial overlays for readability & luxury ambience */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/45 to-black/40" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#050505_90%)]" />
         </div>
 
-        <div className="relative z-20 text-center px-5 max-w-6xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 36 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}>
-            <div className="mb-8 inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full /60 backdrop-blur-xl shadow-[0_0_24px_rgba(212,175,55,0.2)]">
-              <MapPin size={13} className="text-[#B5952F]" />
-              <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em]">
-                Best Event Anchor · Delhi NCR · The Capital
-              </span>
-            </div>
+        {/* Hero Content */}
+        <div className="relative z-10 container mx-auto px-5 md:px-8 text-center max-w-5xl py-24 md:py-32">
+          
+          {/* Eyebrow badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center gap-2 bg-[#050505]/80 backdrop-blur-md border border-[#D4AF37]/40 px-4 py-1.5 rounded-full mb-8 shadow-[0_0_20px_rgba(212,175,55,0.15)]"
+          >
+            <MapPin size={14} className="text-[#D4AF37]" />
+            <span className="text-[#D4AF37] text-[11px] md:text-xs font-semibold tracking-[0.25em] uppercase">
+              DELHI NCR · PROFESSIONAL EVENT HOST & EMCEE
+            </span>
+          </motion.div>
 
-            {/* H1 — ANCHOR + Texture City Name */}
-            <h1 className="font-black uppercase tracking-tighter leading-[0.82] mb-8">
-              <span className="block text-white text-[17vw] md:text-[12vw] lg:text-[9rem] opacity-90 drop-shadow-2xl">ANCHOR</span>
-              <span className="block text-[15vw] md:text-[10vw] lg:text-[8rem] bg-clip-text text-transparent bg-cover bg-center mt-2 pb-4" style={{ backgroundImage: "url('/texture/delhi.webp')" }}>
-                DELHI
-              </span>
-            </h1>
+          {/* H1 Title — Primary H1 on Page */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-[#FDFBF7] leading-[1.1] mb-8"
+          >
+            DELHI DOESN’T NEED<br />
+            <span className="text-[#D4AF37] italic font-normal">AN ANNOUNCEMENT.</span><br />
+            IT NEEDS AN ARRIVAL.
+          </motion.h1>
 
-            <p className="text-lg md:text-2xl text-zinc-300 max-w-2xl mx-auto font-light mb-12 leading-relaxed">
-              The premier choice for <G>massive farm weddings</G>, high-energy Sangeets, and VIP corporate galas across the National Capital Region.
-            </p>
+          {/* Supporting Copy */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.4 }}
+            className="text-base sm:text-lg md:text-xl text-[#E8E2D5]/90 max-w-3xl mx-auto font-light leading-relaxed mb-10"
+          >
+            From grand weddings and Sangeet celebrations to corporate stages and large-format events across Delhi NCR, Anchor Yash brings structure, spontaneity and unmistakable stage presence to rooms that demand more than a microphone.
+          </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={WA} target="_blank" rel="noopener noreferrer">
-                <button className="px-10 py-5 bg-[#D4AF37] text-black font-black uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.45)] hover:scale-105 active:scale-95">
-                  SECURE YOUR DATE →
-                </button>
-              </Link>
-              <Link href="/portfolio">
-                <button className="px-10 py-5 border border-[#D4AF37]/50 text-[#B5952F] font-black uppercase tracking-widest rounded-full hover:bg-[#D4AF37]/10 transition-all">
-                  VIEW PORTFOLIO
-                </button>
-              </Link>
-            </div>
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+          >
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#D4AF37] text-black font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase px-8 py-4 rounded-full hover:bg-[#FDFBF7] transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.35)] hover:scale-105 active:scale-95"
+            >
+              <CalendarCheck size={16} />
+              PLAN YOUR DELHI EVENT
+            </a>
+            
+            <a
+              href="#delhi-energy"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#FDFBF7]/30 text-[#FDFBF7] font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase px-8 py-4 rounded-full hover:bg-[#FDFBF7]/10 hover:border-[#D4AF37] transition-all duration-300"
+            >
+              EXPLORE THE EXPERIENCE
+              <ChevronRight size={16} />
+            </a>
           </motion.div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 opacity-40">
-          <div className="w-px h-12 bg-gradient-to-b from-[#D4AF37] to-transparent" />
-        </div>
+        {/* Bottom subtle gradient divider */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none" />
       </section>
 
-      {/* ══ 2. STATS ══ */}
-      <section className="py-16  border-y border-[#D4AF37]/12 z-20 relative">
-        <div className="max-w-5xl mx-auto px-5 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {STATS.map((s, i) => (
-              <Reveal key={i} delay={i * 0.07}>
-                <div className="text-center py-8 border-r border-white/5 last:border-r-0">
-                  <s.icon size={16} className="text-[#B5952F] mx-auto mb-3 opacity-60" />
-                  <div className="text-4xl md:text-5xl font-black mb-1 gs">
-                    <Counter target={s.val} suffix={s.suffix} />
-                  </div>
-                  <p className="text-zinc-200 text-[11px] font-semibold uppercase tracking-widest mb-0.5">{s.label}</p>
-                  <p className="text-zinc-600 text-[9px] uppercase tracking-wider">{s.sub}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 2.5 ABOUT SECTION ══ */}
-      <section className="py-24 md:py-32 relative overflow-hidden bg-[#050505]">
-        <div className="container mx-auto px-5 md:px-10 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <Reveal>
-              <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
-              <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">
-                Beyond <G>Announcements.</G><br />
-                Beyond Scripts.
-              </h2>
-              <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding massive crowds with zero paper scripts.
-              </p>
-              <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
-                From the protocol-heavy ballrooms of <strong className="text-[#B5952F]">Taj Palace</strong> to the high-energy chaos of a massive Chhatarpur farm wedding, Yash brings a level of sophistication and electric command that matches Delhi's unmatched scale.
-              </p>
-              <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
-                MY FULL STORY <ArrowRight size={14} />
-              </Link>
-            </Reveal>
-
-            <div className="grid grid-cols-2 gap-4">
-               <Reveal className="mt-12">
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group relative"><Image src="/intro-portrait-top.webp" alt="Yash Soni Anchor" fill sizes="(max-width:768px) 50vw, 30vw" className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" quality={75} />
-                  </div>
-               </Reveal>
-               <Reveal>
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 group relative"><Image src="/intro-portrait-bottom.webp" alt="Anchor Yash in Delhi" fill sizes="(max-width:768px) 50vw, 30vw" className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" quality={75} />
-                  </div>
-               </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 3. DELHI IDENTITY ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12 border-b border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Why Delhi NCR is Different</p>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-4">
-              The Capital Demands<br />an <G>Unmatched Scale.</G>
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 02 — DELHI EVENT ENERGY */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section id="delhi-energy" className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15 relative">
+        <div className="container mx-auto max-w-6xl">
+          
+          <Reveal className="mb-12 md:mb-16 text-center max-w-3xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              THE CAPITAL AUDIENCE DYNAMIC
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-6">
+              DELHI HAS A DIFFERENT KIND OF ENERGY.
             </h2>
-            <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Delhi NCR does not do small events. Whether it is a sprawling farmhouse wedding in Chhatarpur or a government-attended corporate summit in Aerocity, the stages are massive. An anchor with a quiet presence will simply be swallowed by the room.
+            <p className="text-[#E8E2D5]/80 text-sm sm:text-base font-light leading-relaxed">
+              Delhi celebrations move rapidly between deep emotional family rituals, formal protocol, uninhibited dance celebrations, and high-octane audience interaction. An anchor must read the room continuously to match and elevate that momentum.
             </p>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-5">
-            {DELHI_IDENTITY.map((item, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <div className="border border-white/8 hover:border-[#D4AF37]/40 rounded-2xl p-7 transition-all h-full group hover:bg-zinc-900/50 relative overflow-hidden">
-                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-5 group-hover:bg-[#D4AF37] transition-all">
-                    <item.icon size={18} className="text-[#B5952F] group-hover:text-black transition-colors" />
-                  </div>
-                  <h3 className="text-base font-black text-white uppercase tracking-tight mb-3 group-hover:text-[#B5952F] transition-colors">{item.title}</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed font-light">{item.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ══ 4. VS TABLE ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12  border-b border-white/5">
-        <div className="max-w-5xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-12">
-               <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">The Difference Is Real</p>
-               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
-                 Generic Anchor <G>vs This One.</G>
-               </h2>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/8">
-            <div className=" px-6 py-4 border-b border-white/5">
-              <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">What you usually get</p>
-            </div>
-            <div className="bg-zinc-900/50 px-6 py-4 border-b border-white/5">
-              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">What you get here</p>
-            </div>
-            {VS.map((row, i) => (
-              <>
-                <div key={`p${i}`} className=" px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-red-500/40 shrink-0" />
-                  <p className="text-zinc-500 text-sm">{row.problem}</p>
-                </div>
-                <div key={`f${i}`} className="bg-zinc-900/30 px-6 py-4 border-b border-white/5 last:border-b-0 flex items-center gap-3">
-                  <CheckCircle2 size={14} className="text-[#B5952F] shrink-0" />
-                  <p className="text-zinc-200 text-sm font-medium">{row.fix}</p>
-                </div>
-              </>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 5. SERVICES ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12 border-b border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="mb-12">
-              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">What I Anchor</p>
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
-                Farmhouse Scale to <br/><G>Diplomatic Galas.</G>
-              </h2>
-            </div>
-          </Reveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {SERVICES.map((s, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <div className="border border-white/8 hover:border-[#D4AF37]/40 rounded-2xl p-6 transition-all group h-full hover:bg-zinc-900/50 relative overflow-hidden">
-                  <div className="absolute top-3 right-3">
-                    <span className="text-[8px] font-bold uppercase tracking-widest text-[#B5952F]/60 border border-[#D4AF37]/20 px-2 py-0.5 rounded-full">{s.tag}</span>
-                  </div>
-                  <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-5 mt-1 group-hover:bg-[#D4AF37] transition-all">
-                    <s.icon size={18} className="text-[#B5952F] group-hover:text-black transition-colors" />
-                  </div>
-                  <h3 className="text-sm font-black text-white uppercase tracking-tight mb-3 group-hover:text-[#B5952F] transition-colors">{s.title}</h3>
-                  <p className="text-zinc-400 text-xs leading-relaxed font-light">{s.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 6. VENUES ══ */}
-      <section className="py-16  border-b border-white/5 px-5 md:px-12">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-10">
-              <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">Venue Expertise</p>
-              <h2 className="text-2xl md:text-3xl font-black uppercase">Capital <G>Dominance.</G></h2>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {VENUES.map((v, i) => (
-              <Reveal key={i} delay={i * 0.05}>
-                <div className="border border-white/10 hover:border-[#D4AF37]/40 rounded-xl p-4 text-center group transition-all">
-                  <v.icon size={14} className="text-[#B5952F] mx-auto mb-2" />
-                  <p className="text-white text-xs font-semibold group-hover:text-[#B5952F] transition-colors">{v.name}</p>
-                  <p className="text-zinc-600 text-[9px] mt-0.5">{v.tag}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 7. PROTOCOL SECTION ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12 border-b border-white/5">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <Reveal>
-            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">The VIP Challenge</p>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">
-              Executive Presence.<br /><G>Uncompromised.</G>
-            </h2>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-               Delhi events frequently feature union ministers, international delegates, and the highest echelons of corporate India. The stage requires an anchor who is entirely unfazed by authority, capable of maintaining the event's timeline while respecting elite protocol.
-            </p>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-               Managing a crowd's energy while security details sweep the room or VVIPs make unscheduled appearances is the hallmark of a true professional. It requires discretion, a razor-sharp bilingual vocabulary, and zero panic.
-            </p>
-            <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-               5+ years of top-tier events across India means the brand sensitivities, the diplomatic protocols, and the live crisis management are already hardwired — no second-guessing required.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { label: "Diplomatic Protocol", sub: "Handling VVIP movement gracefully" },
-                { label: "Live Agenda Bridging", sub: "Flawless delay management" },
-                { label: "High-Energy Crowd Control", sub: "Managing massive Chhatarpur lawns" },
-                { label: "Bilingual Precision", sub: "English · Hindi · Punjabi Context" },
-              ].map((item, i) => (
-                <div key={i} className="border border-white/10 hover:border-[#D4AF37]/30 rounded-2xl p-5 transition-all group">
-                  <div className="w-2 h-2 rounded-full bg-[#D4AF37] mb-3" />
-                  <p className="text-white text-sm font-bold group-hover:text-[#B5952F] transition-colors">{item.label}</p>
-                  <p className="text-zinc-500 text-[10px] mt-1">{item.sub}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ══ 8. GALLERY MARQUEE ══ */}
-      <section className="py-12 overflow-hidden border-b border-white/5 mask-fade">
-        <div className="flex marquee whitespace-nowrap gap-5">
-          {[...Array(3)].map((_, r) => (
-            <div key={r} className="flex gap-5 shrink-0">
-               {["/gallery-5.webp", "/gallery-2.webp", "/gallery-1.webp", "/gallery-4.webp", "/gallery-3.webp"].map((src, i) => (
-                <div key={i} className="w-56 h-72 md:w-72 md:h-96 rounded-2xl overflow-hidden border border-white/8 shrink-0 relative">
-                  <Image src={src} alt={`Anchor Yash Soni Delhi NCR event ${i + 1}`} fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ══ 9. CROWD COMMAND ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12  border-b border-white/5">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <Reveal>
-            <div className="aspect-video rounded-2xl overflow-hidden border border-[#D4AF37]/20 relative group"><Image src="/backgrounds/delhi_bg.webp" alt="Delhi Heritage Scale" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" quality={75} />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
-                <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Delhi NCR · Farmhouse Scale</p>
-                <p className="text-white text-xs">The epicenter of India's biggest celebrations — commanded with absolute authority.</p>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Scale</p>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">
-               10,000+ Crowd.<br /><G>Massive Lawns.</G><br />Zero Scripts.
-            </h2>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-               Delhi hosts the largest weddings and summits in the nation. The physical prowess required to project across a 3-acre Chhatarpur lawn or an Aerocity exhibition ground is vast. You need an anchor whose presence commands the perimeter, unifying a scattered crowd without merely shouting into a microphone.
-            </p>
-            <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
-              <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
-                 <ShieldCheck size={16} className="text-[#B5952F]" /> Open-Air Acoustics mastery
-              </div>
-              <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                 Flawless handling of outdoor acoustic drops, wind factors, and massive spatial distribution — ensuring every guest, from the front row to the very back, is entirely locked in.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ══ 10. TESTIMONIALS ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12 border-b border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-12">
-               <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">4.9★ Verified</p>
-               <h2 className="text-3xl md:text-4xl font-black uppercase">Real Words. <G>Elite NCR Events.</G></h2>
-            </div>
-          </Reveal>
-          <div className="grid md:grid-cols-3 gap-5">
-            {TESTIMONIALS.map((t, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <a href="https://share.google/pMZGzEGOhXnJpLq5g" target="_blank" rel="noopener noreferrer"
-                  className="flex flex-col h-full border border-white/10 hover:border-[#D4AF37]/40 rounded-2xl p-6 bg-[#0a0a0a] hover:bg-zinc-900/50 transition-all group cursor-pointer">
-                  <div className="flex gap-0.5 mb-4">
-                    {[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />)}
-                  </div>
-                  <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
+          {/* Desktop Grid / Mobile Horizontal Swipe Carousel */}
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 hide-scrollbar -mx-5 px-5 md:mx-0 md:px-0">
+            {ENERGY_CATEGORIES.map((cat, i) => (
+              <Reveal key={cat.id} delay={i * 0.1} className="w-[85vw] sm:w-[320px] md:w-auto shrink-0 snap-center">
+                <div className="bg-[#0A0A0A] border border-[#D4AF37]/20 rounded-2xl p-6 h-full flex flex-col justify-between hover:border-[#D4AF37]/60 transition-all duration-300 group hover:shadow-[0_10px_30px_rgba(212,175,55,0.1)]">
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
-                    <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
+                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-5 border border-[#D4AF37]/15">
+                      <Image
+                        src={cat.image}
+                        alt={`Anchor Yash Soni hosting ${cat.title} in Delhi`}
+                        fill
+                        sizes="(max-width: 768px) 80vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90"
+                      />
+                      <div className="absolute top-3 right-3 bg-[#050505]/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-[#D4AF37]/30 text-[10px] text-[#D4AF37] font-semibold tracking-wider">
+                        {cat.tag}
+                      </div>
+                    </div>
+
+                    <span className="text-[#D4AF37] text-[10px] font-semibold tracking-[0.2em] uppercase block mb-1">
+                      {cat.subtitle}
+                    </span>
+                    <h3 className="font-serif text-xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-3">
+                      {cat.title}
+                    </h3>
+                    <p className="text-xs text-[#E8E2D5]/75 leading-relaxed font-light mb-5">
+                      {cat.desc}
+                    </p>
                   </div>
-                </a>
+
+                  <ul className="space-y-2 border-t border-[#D4AF37]/10 pt-4">
+                    {cat.highlights.map((h, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-[11px] text-[#E8E2D5]/90">
+                        <Sparkle size={10} className="text-[#D4AF37] shrink-0" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </Reveal>
             ))}
+          </div>
+
+          {/* Swipe indicator on mobile */}
+          <div className="text-center md:hidden mt-4 text-[10px] text-[#D4AF37]/60 uppercase tracking-widest flex items-center justify-center gap-2">
+            <span>SWIPE TO EXPLORE CATEGORIES</span>
+            <ArrowRight size={12} />
           </div>
         </div>
       </section>
 
-      {/* ══ 11. TICKER ══ */}
-      <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
-        <div className="flex marquee whitespace-nowrap gap-12">
-          {[...Array(2)].map((_, r) => (
-            <div key={r} className="flex gap-12 shrink-0">
-               {["Taj Palace Delhi", "ITC Maurya", "The Leela Palace", "Massive Farm Weddings", "Corporate Summit Host", "Bilingual Hindi/English", "Unscripted Mastery", "4.9★ Rated"].map((t, i) => (
-                <span key={i} className="flex items-center gap-3 text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
-                  <span className="w-1 h-1 rounded-full bg-[#D4AF37] inline-block" />
-                  {t}
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ══ 12. FAQ ══ */}
-      <section className="py-20 md:py-28 px-5 md:px-12  border-b border-white/5">
-        <div className="max-w-4xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-12">
-               <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-3">Planning FAQs</p>
-               <h2 className="text-3xl md:text-4xl font-black uppercase">Delhi NCR <G>Anchor FAQ.</G></h2>
-            </div>
-          </Reveal>
-          <div className="flex flex-col gap-3">
-            {FAQS.map((faq, idx) => (
-              <Reveal key={idx} delay={idx * 0.025}>
-                <FAQItem q={faq.q} a={faq.a} id={`faq-delhi-${idx}`} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 13. RELATED CITIES ══ */}
-      <section className="py-14 border-b border-white/5 px-5 md:px-12">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-8">
-               <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Pan-India Authority</p>
-               <h2 className="text-2xl md:text-3xl font-black uppercase">Metros & <G>Beyond.</G></h2>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              { icon: MapPin, label: "Mumbai", href: "/anchor-in-mumbai", desc: "Corporate · Sea-Facing" },
-              { icon: MapPin, label: "Goa", href: "/anchor-in-goa", desc: "Beachfront · Luxury" },
-              { icon: MapPin, label: "Jaipur", href: "/anchor-in-jaipur", desc: "Palace Destination" },
-              { icon: MapPin, label: "Bangalore", href: "/anchor-in-bangalore", desc: "Tech Hub · Grand Galas" },
-            ].map((r, i) => (
-              <Reveal key={i} delay={i * 0.05}>
-                <Link href={r.href}>
-                  <div className="border border-white/10 hover:border-[#D4AF37]/50 rounded-2xl p-4 text-center transition-all group cursor-pointer hover:bg-zinc-900/50">
-                    <r.icon size={14} className="text-[#B5952F] mx-auto mb-2" />
-                    <p className="text-white text-xs font-semibold group-hover:text-[#B5952F] transition-colors">{r.label}</p>
-                    <p className="text-zinc-600 text-[9px] mt-0.5">{r.desc}</p>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 14. CTA ══ */}
-      <section className="py-24 md:py-32 px-5 md:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.07),transparent_70%)] pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-5 py-2 mb-8">
-               <ShieldCheck size={13} className="text-[#B5952F]" />
-               <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">Limited 2025–26 Season Dates</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-[0.9]">
-               Own The Stage <br /><G>In Delhi.</G>
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 03 — DELHI / NCR TERRITORY */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15 bg-[#030303]">
+        <div className="container mx-auto max-w-6xl">
+          
+          <Reveal className="mb-14 text-center max-w-3xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              GEOGRAPHIC & VENUE COVERAGE
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-6">
+              FROM SOUTH DELHI TO THE NCR STAGE.
             </h2>
-            <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
-               Winter dates for massive NCR events and prime auspicious wedding weekends fill 6–8 months in advance. 
+            <p className="text-[#E8E2D5]/80 text-sm sm:text-base font-light leading-relaxed">
+              Every region in Delhi NCR has its distinct event ethos. Anchor Yash understands the specific logistics, audience profiles, and stage requirements across the premier hubs.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
-            <Link href={WA} target="_blank" rel="noopener noreferrer">
-              <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
-                 <CalendarCheck size={18} /> CLAIM YOUR DATE
+          </Reveal>
+
+          {/* Grid of Locations with Map Context */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TERRITORIES.map((loc, i) => (
+              <Reveal key={loc.id} delay={i * 0.08}>
+                <div className="bg-[#080808] border border-[#D4AF37]/20 rounded-2xl p-6 hover:border-[#D4AF37]/60 transition-all duration-300 group relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.08),transparent_70%)] pointer-events-none" />
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <MapPin size={16} className="text-[#D4AF37]" />
+                      <h3 className="font-serif text-lg font-bold uppercase tracking-tight text-[#FDFBF7]">
+                        {loc.name}
+                      </h3>
+                    </div>
+                    <span className="text-[10px] text-[#D4AF37] font-mono tracking-wider border border-[#D4AF37]/30 px-2 py-0.5 rounded-full">
+                      {loc.type}
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-[#E8E2D5]/80 leading-relaxed font-light mb-5">
+                    {loc.desc}
+                  </p>
+
+                  <div className="border-t border-[#D4AF37]/10 pt-3">
+                    <span className="text-[10px] text-[#D4AF37]/70 font-semibold tracking-wider uppercase block mb-1.5">
+                      KEY VENUES & NODES:
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {loc.highlights.map((h, idx) => (
+                        <span key={idx} className="text-[10px] bg-[#111111] text-[#E8E2D5]/90 border border-white/5 px-2 py-0.5 rounded">
+                          {h}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 04 — DELHI EVENT PLAYBOOK */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15">
+        <div className="container mx-auto max-w-6xl">
+          
+          <Reveal className="mb-12 text-center max-w-3xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              THE HOSTING PLAYBOOK
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-6">
+              WHAT KIND OF ROOM ARE YOU ASKING ME TO COMMAND?
+            </h2>
+            <p className="text-[#E8E2D5]/80 text-sm sm:text-base font-light leading-relaxed">
+              Select an event format below to explore how Anchor Yash shapes the stage narrative, crowd dynamics, and hosting contributions for specific celebrations.
+            </p>
+          </Reveal>
+
+          {/* Interactive Tabs */}
+          <div className="flex flex-wrap justify-center gap-2 mb-10 border-b border-[#D4AF37]/15 pb-6">
+            {PLAYBOOK_TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? "bg-[#D4AF37] text-black shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+                    : "bg-[#0A0A0A] text-[#E8E2D5]/70 hover:text-[#FDFBF7] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50"
+                }`}
+              >
+                {tab.label}
               </button>
-            </Link>
+            ))}
+          </div>
+
+          {/* Active Tab Panel */}
+          <div className="bg-[#0A0A0A] border border-[#D4AF37]/30 rounded-2xl p-6 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              
+              <div>
+                <span className="text-[#D4AF37] text-xs font-semibold tracking-[0.2em] uppercase block mb-2">
+                  EVENT SPECIFIC PLAYBOOK · {selectedTabData.label}
+                </span>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold uppercase text-[#FDFBF7] mb-4">
+                  {selectedTabData.title}
+                </h3>
+                <p className="text-sm text-[#E8E2D5]/85 leading-relaxed font-light mb-6">
+                  {selectedTabData.desc}
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="bg-[#050505] p-4 rounded-xl border border-[#D4AF37]/15">
+                    <h4 className="text-xs text-[#D4AF37] font-semibold tracking-wider uppercase mb-1 flex items-center gap-2">
+                      <Award size={14} /> WHAT THE HOST CONTRIBUTES:
+                    </h4>
+                    <p className="text-xs text-[#E8E2D5]/80 font-light leading-relaxed">
+                      {selectedTabData.contribution}
+                    </p>
+                  </div>
+
+                  <div className="bg-[#050505] p-4 rounded-xl border border-[#D4AF37]/15">
+                    <h4 className="text-xs text-[#D4AF37] font-semibold tracking-wider uppercase mb-1 flex items-center gap-2">
+                      <Users size={14} /> AUDIENCE & ENERGY CONTEXT:
+                    </h4>
+                    <p className="text-xs text-[#E8E2D5]/80 font-light leading-relaxed">
+                      {selectedTabData.energy}
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#D4AF37] text-black font-semibold text-xs tracking-widest uppercase px-6 py-3 rounded-full hover:bg-[#FDFBF7] transition-all"
+                >
+                  DISCUSS YOUR {selectedTabData.label} EVENT
+                  <ArrowRight size={14} />
+                </a>
+              </div>
+
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[#D4AF37]/25 shadow-2xl">
+                <Image
+                  src={selectedTabData.image}
+                  alt={`Anchor Yash hosting ${selectedTabData.title} in Delhi`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover filter brightness-95"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-xs text-[#FDFBF7]/90 font-serif italic bg-black/60 backdrop-blur-md p-3 rounded-lg border border-white/10">
+                  &ldquo;Every stage demands its own rhythm — never a copy-paste routine.&rdquo;
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 05 — EVENT STORIES */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15 bg-[#030303]">
+        <div className="container mx-auto max-w-6xl">
+          
+          <Reveal className="mb-12 text-center max-w-3xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              AUTHENTIC STAGE MEMORIES
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-6">
+              THE ROOMS I’VE BEEN ASKED TO COMMAND.
+            </h2>
+            <p className="text-[#E8E2D5]/80 text-sm sm:text-base font-light leading-relaxed">
+              Explore authentic photographs from actual events. Select any thumbnail to view stage details and location context.
+            </p>
+          </Reveal>
+
+          {/* Main Story Display */}
+          <div className="bg-[#0A0A0A] border border-[#D4AF37]/25 rounded-2xl p-6 md:p-8 mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div className="lg:col-span-7 relative aspect-[16/10] rounded-xl overflow-hidden border border-[#D4AF37]/20">
+                <Image
+                  src={selectedStoryData.image}
+                  alt={selectedStoryData.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover filter brightness-95 transition-all duration-700"
+                />
+                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-[#D4AF37]/30 text-xs text-[#D4AF37] font-semibold">
+                  {selectedStoryData.category}
+                </div>
+              </div>
+
+              <div className="lg:col-span-5">
+                <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider block mb-2 flex items-center gap-1.5">
+                  <MapPin size={12} /> {selectedStoryData.location}
+                </span>
+                <h3 className="font-serif text-2xl font-bold uppercase text-[#FDFBF7] mb-4">
+                  {selectedStoryData.title}
+                </h3>
+                <p className="text-sm text-[#E8E2D5]/80 leading-relaxed font-light mb-6">
+                  {selectedStoryData.desc}
+                </p>
+                <div className="border-t border-[#D4AF37]/15 pt-4 text-xs text-[#D4AF37] font-mono">
+                  AUTHENTIC UNRETROSPECTIVE STAGE PHOTOGRAPHY
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Thumbnails Row */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {EVENT_STORIES.map((story, index) => (
+              <button
+                key={story.id}
+                onClick={() => setActiveStory(index)}
+                className={`relative aspect-[16/10] rounded-xl overflow-hidden border transition-all duration-300 text-left group ${
+                  activeStory === index
+                    ? "border-[#D4AF37] ring-2 ring-[#D4AF37]/50 scale-[1.02]"
+                    : "border-white/10 hover:border-[#D4AF37]/40 opacity-70 hover:opacity-100"
+                }`}
+              >
+                <Image
+                  src={story.image}
+                  alt={story.title}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-3 flex flex-col justify-end">
+                  <span className="text-[9px] text-[#D4AF37] font-semibold tracking-wider uppercase block">
+                    {story.category}
+                  </span>
+                  <span className="text-[11px] text-[#FDFBF7] font-medium truncate">
+                    {story.title}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 06 — HOSTING PHILOSOPHY */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-24 md:py-32 px-5 md:px-8 border-b border-[#D4AF37]/20 bg-[#020202] text-center relative overflow-hidden">
+        
+        {/* Subtle radial glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06),transparent_65%)] pointer-events-none" />
+
+        <div className="container mx-auto max-w-4xl relative z-10">
+          
+          <Reveal>
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.35em] block mb-4">
+              STAGE CREED & PRINCIPLES
+            </span>
+            <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-[#FDFBF7] leading-tight mb-12">
+              A HOST IS NOT<br />
+              <span className="text-[#D4AF37] italic font-normal">A HUMAN MICROPHONE.</span>
+            </h2>
+          </Reveal>
+
+          {/* 5 Core Principles */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
+            {[
+              { num: "01", title: "READ THE ROOM", sub: "Anticipate energy shifts continuously" },
+              { num: "02", title: "CONTROL THE MOMENT", sub: "Turn delays into seamless highlights" },
+              { num: "03", title: "BUILD THE ENERGY", sub: "Escalate crowd participation naturally" },
+              { num: "04", title: "KNOW WHEN TO DISAPPEAR", sub: "Let elders and VIPs own the spotlight" },
+              { num: "05", title: "KNOW WHEN TO TAKE OVER", sub: "Step up immediately during glitches" }
+            ].map((item, i) => (
+              <Reveal key={item.num} delay={i * 0.08}>
+                <div className="bg-[#070707] border border-[#D4AF37]/20 rounded-xl p-5 h-full flex flex-col items-center justify-center hover:border-[#D4AF37]/60 transition-all duration-300 group">
+                  <span className="text-xs font-mono text-[#D4AF37] mb-2">{item.num}</span>
+                  <h3 className="font-serif text-sm font-bold uppercase text-[#FDFBF7] mb-2 group-hover:text-[#D4AF37] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-[11px] text-[#E8E2D5]/70 font-light leading-relaxed">
+                    {item.sub}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 07 — EXPERIENCE + SOCIAL PROOF */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15">
+        <div className="container mx-auto max-w-6xl">
+          
+          {/* Approved Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+            {STATS.map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 0.1} className="text-center bg-[#0A0A0A] border border-[#D4AF37]/20 rounded-2xl p-6">
+                <div className="font-serif text-4xl sm:text-5xl font-extrabold text-[#D4AF37] mb-2">
+                  <AnimatedCounter target={stat.val} suffix={stat.suffix} />
+                </div>
+                <div className="text-xs font-bold uppercase tracking-wider text-[#FDFBF7] mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-[10px] text-[#E8E2D5]/60 font-light uppercase tracking-wider">
+                  {stat.sub}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Testimonials */}
+          <Reveal className="mb-12 text-center max-w-2xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              CLIENT TESTIMONIALS
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-[#FDFBF7]">
+              WORDS FROM REAL DELHII EVENTS
+            </h3>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((t, i) => (
+              <Reveal key={t.name} delay={i * 0.1}>
+                <div className="bg-[#0A0A0A] border border-[#D4AF37]/20 rounded-2xl p-6 h-full flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all">
+                  <div>
+                    <div className="flex items-center gap-1 text-[#D4AF37] mb-4">
+                      {[...Array(5)].map((_, idx) => (
+                        <Star key={idx} size={14} fill="#D4AF37" />
+                      ))}
+                    </div>
+                    <p className="text-xs sm:text-sm text-[#E8E2D5]/85 italic leading-relaxed font-light mb-6">
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                  </div>
+                  <div className="border-t border-[#D4AF37]/10 pt-4">
+                    <h4 className="text-xs font-bold text-[#FDFBF7] uppercase tracking-wider">
+                      {t.name}
+                    </h4>
+                    <span className="text-[10px] text-[#D4AF37]/80 block mt-0.5">
+                      {t.event}
+                    </span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 08 — THE DIFFERENCE */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15 bg-[#030303]">
+        <div className="container mx-auto max-w-5xl">
+          
+          <Reveal className="mb-14 text-center max-w-3xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              POSITIONING & APPROACH
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-6">
+              THE DIFFERENCE ISN’T THE MICROPHONE.
+            </h2>
+            <p className="text-[#E8E2D5]/80 text-sm sm:text-base font-light leading-relaxed">
+              How a true event emcee elevates an entire evening compared to conventional announcements.
+            </p>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {DIFFERENCES.map((diff, i) => (
+              <Reveal key={diff.generic} delay={i * 0.1}>
+                <div className="bg-[#080808] border border-[#D4AF37]/20 rounded-2xl p-6 h-full flex flex-col justify-between">
+                  <div className="mb-6">
+                    <span className="text-[10px] text-red-400/80 uppercase tracking-widest font-mono block mb-1">
+                      GENERIC HOST
+                    </span>
+                    <h3 className="font-serif text-lg font-bold text-red-300 uppercase mb-2">
+                      {diff.generic}
+                    </h3>
+                    <p className="text-xs text-[#E8E2D5]/60 font-light leading-relaxed">
+                      {diff.genericSub}
+                    </p>
+                  </div>
+
+                  <div className="bg-[#0F0F0F] border border-[#D4AF37]/30 rounded-xl p-4">
+                    <span className="text-[10px] text-[#D4AF37] uppercase tracking-widest font-mono block mb-1">
+                      ANCHOR YASH
+                    </span>
+                    <h4 className="font-serif text-xl font-bold text-[#D4AF37] uppercase mb-2">
+                      {diff.yash}
+                    </h4>
+                    <p className="text-xs text-[#FDFBF7]/90 font-light leading-relaxed">
+                      {diff.yashSub}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 09 — FAQ */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15">
+        <div className="container mx-auto max-w-4xl">
+          
+          <Reveal className="mb-14 text-center max-w-2xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              DELHI BOOKING CLARITY
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-4">
+              FREQUENTLY ASKED QUESTIONS
+            </h2>
+            <p className="text-[#E8E2D5]/80 text-sm font-light">
+              Clear answers regarding logistics, travel, venue formats, and host booking across Delhi NCR.
+            </p>
+          </Reveal>
+
+          <div className="space-y-4">
+            {FAQS.map((faq, index) => {
+              const isOpen = openFaqIndex === index;
+              return (
+                <Reveal key={index} delay={index * 0.05}>
+                  <div className="bg-[#0A0A0A] border border-[#D4AF37]/20 rounded-xl overflow-hidden transition-colors">
+                    <button
+                      onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                      aria-expanded={isOpen}
+                      className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none"
+                    >
+                      <span className="font-serif text-base md:text-lg font-semibold text-[#FDFBF7]">
+                        {faq.q}
+                      </span>
+                      <span className="text-[#D4AF37] p-1 bg-[#111111] rounded-full shrink-0">
+                        {isOpen ? <Minus size={16} /> : <Plus size={16} />}
+                      </span>
+                    </button>
+
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className="px-6 pb-5 text-xs sm:text-sm text-[#E8E2D5]/80 font-light leading-relaxed border-t border-[#D4AF37]/10 pt-4">
+                            {faq.a}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 10 — BOOKING PROCESS */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-5 md:px-8 border-b border-[#D4AF37]/15 bg-[#030303]">
+        <div className="container mx-auto max-w-6xl">
+          
+          <Reveal className="mb-14 text-center max-w-3xl mx-auto">
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] block mb-3">
+              PRE-STAGE COLLABORATION
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-6">
+              YOUR DELHI EVENT STARTS LONG BEFORE THE STAGE.
+            </h2>
+            <p className="text-[#E8E2D5]/80 text-sm sm:text-base font-light leading-relaxed">
+              A structured 5-step process ensures complete alignment between your planner, production team, and host.
+            </p>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {BOOKING_STEPS.map((step, i) => (
+              <Reveal key={step.step} delay={i * 0.08}>
+                <div className="bg-[#080808] border border-[#D4AF37]/20 rounded-2xl p-5 h-full flex flex-col justify-between hover:border-[#D4AF37]/50 transition-all">
+                  <div>
+                    <span className="text-2xl font-mono font-bold text-[#D4AF37] block mb-3">
+                      {step.step}
+                    </span>
+                    <h3 className="font-serif text-xs font-bold uppercase text-[#FDFBF7] tracking-wider mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-[11px] text-[#E8E2D5]/70 font-light leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[#D4AF37] text-black font-semibold text-xs tracking-[0.2em] uppercase px-8 py-4 rounded-full hover:bg-[#FDFBF7] transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+            >
+              <CalendarCheck size={16} />
+              CHECK DATE AVAILABILITY
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 11 — FINAL CTA */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-24 md:py-32 px-5 md:px-8 border-b border-[#D4AF37]/20 relative overflow-hidden text-center">
+        
+        {/* Background Visual */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/premium_events/grand_wedding_venue.webp"
+            alt="Anchor Yash Soni Delhi Stage Finale"
+            fill
+            sizes="100vw"
+            className="object-cover filter brightness-[0.25] scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-[#050505]" />
+        </div>
+
+        <div className="relative z-10 container mx-auto max-w-3xl">
+          <Reveal>
+            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.35em] block mb-4">
+              SECURE YOUR DELHI DATES
+            </span>
+            <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold uppercase tracking-tight text-[#FDFBF7] mb-6 leading-tight">
+              READY TO PUT<br />
+              <span className="text-[#D4AF37] italic font-normal">A HOST ON THAT STAGE?</span>
+            </h2>
+            <p className="text-base sm:text-lg text-[#E8E2D5]/90 font-light leading-relaxed mb-10">
+              Tell me about your Delhi event — dates, venue, and scale. Receive immediate availability and booking details.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#D4AF37] text-black font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase px-9 py-4.5 rounded-full hover:bg-[#FDFBF7] transition-all shadow-[0_0_35px_rgba(212,175,55,0.4)]"
+              >
+                <CalendarCheck size={16} />
+                CHECK DATE AVAILABILITY
+              </a>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#FDFBF7]/30 text-[#FDFBF7] font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase px-8 py-4.5 rounded-full hover:bg-[#FDFBF7]/10 transition-all"
+              >
+                <MessageCircle size={16} />
+                TALK TO ANCHOR YASH
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ══ FOOTER ══ */}
-      <footer className="py-16 border-t border-white/10  text-center text-zinc-600">
-        <div className="container mx-auto px-5">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] uppercase tracking-widest font-bold mb-8">
-            {[
-              { label: "Home", href: "/" }, { label: "About", href: "/about" },
-              { label: "Portfolio", href: "/portfolio" }, { label: "Contact", href: "/contact" },
-              { label: "Anchor in Mumbai", href: "/anchor-in-mumbai" },
-              { label: "Anchor in Bangalore", href: "/anchor-in-bangalore" },
-              { label: "Anchor in Jaipur", href: "/anchor-in-jaipur" },
-              { label: "Rajasthan Hub", href: "/anchor-in-rajasthan" },
-            ].map((l, i) => (
-              <Link key={i} href={l.href} className="hover:text-[#B5952F] transition-colors">{l.label}</Link>
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* 12 — CITY NETWORK */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <section className="py-16 md:py-20 px-5 md:px-8 bg-[#030303]">
+        <div className="container mx-auto max-w-6xl">
+          
+          <div className="text-center mb-10">
+            <span className="text-[#D4AF37] text-[11px] font-semibold uppercase tracking-[0.25em] block mb-2">
+              DESTINATION & METRO HOST NETWORK
+            </span>
+            <h3 className="font-serif text-xl sm:text-2xl font-bold uppercase text-[#FDFBF7]">
+              EXPLORE OTHER CITY STAGES
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {CITY_NETWORK.map((city) => (
+              <Link
+                key={city.name}
+                href={city.href}
+                className="bg-[#080808] border border-[#D4AF37]/20 rounded-xl p-4 text-center hover:border-[#D4AF37] transition-all group"
+              >
+                <span className="font-serif text-sm font-bold text-[#FDFBF7] group-hover:text-[#D4AF37] transition-colors block">
+                  {city.name}
+                </span>
+                <span className="text-[10px] text-[#E8E2D5]/60 block mt-1 font-light">
+                  {city.desc}
+                </span>
+              </Link>
             ))}
           </div>
-          <p className="text-[11px] opacity-40 uppercase tracking-widest">
-            © {new Date().getFullYear()} ANCHOR YASH SONI · DELHI NCR & PAN-INDIA
-          </p>
+
         </div>
-      </footer>
-    </main>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      {/* STICKY MOBILE CTA */}
+      {/* ─────────────────────────────────────────────────────────────────── */}
+      <div className="block md:hidden fixed bottom-0 left-0 right-0 z-[9990] bg-[#050505]/95 backdrop-blur-md border-t border-[#D4AF37]/30 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-5px_25px_rgba(0,0,0,0.8)]">
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-semibold text-xs tracking-[0.15em] uppercase py-3.5 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.3)] active:scale-95 transition-transform"
+        >
+          <CalendarCheck size={16} />
+          CHECK DATE AVAILABILITY
+        </a>
+      </div>
+
+    </div>
   );
 }

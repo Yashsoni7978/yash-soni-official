@@ -74,23 +74,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Karnataka" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "NRI Destination Wedding — Singapore" },
       reviewBody: "Hosting at Taj Madikeri required absolute poise and the ability to manage a sprawling rainforest estate. Yash was incredible. His English moderation for our international guests was flawlessly professional and unscripted.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Tech Leadership — Bangalore" },
       reviewBody: "We held an executive offsite at Tamara. Yash moderated our high-stakes strategy sessions with pure executive polish. He perfectly bridges the gap between formal corporate needs and high-energy gala hosting.",
     },

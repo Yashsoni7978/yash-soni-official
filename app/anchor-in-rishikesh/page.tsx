@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Uttarakhand" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Bansal Family — Delhi" },
       reviewBody: "Hosting a Satvik wedding at Taj Rishikesh was beautiful but we were terrified the Sangeet would be boring without alcohol. Yash completely changed the game. He brought an insane level of pure, organic hype using his voice and crowd interaction. The dance floor was packed till the venue shut down.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Venture Capital Summit — Gurgaon" },
       reviewBody: "We held a 3-day wellness and strategy summit at The Roseate Ganges. Yash anchored the entire schedule. His English is exceptionally sharp, and his ability to pace a room without relying on notes made him look like one of the executives. True professional.",
     },

@@ -79,23 +79,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Western Rajasthan" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Goenka Family" },
       reviewBody: "Our Suryagarh wedding required absolute understated elegance. Yash read our international guest list perfectly. He connected deeply with the elders while keeping our friends from London wholly engaged.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Desai Family" },
       reviewBody: "Managing a Sangeet in the open desert dunes was an acoustic nightmare until Yash stepped on stage. His energy outmatched the desert wind, holding 500 guests locked to the stage for a straight 4-hour set.",
     },

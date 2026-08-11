@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Andaman" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Executive family — UAE" },
       reviewBody: "Flying our 100 closest guests to Havelock was a logistical mountain. We needed an anchor who didn't just 'talk' but actively managed the entire flow of the island resort. Yash was brilliant. His English delivery for our international guests was sharper than any host we've seen in Dubai.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Singhania Foundation" },
       reviewBody: "Taj Exotica Havelock is massive and entirely open to the sea. The acoustics are terrible for ordinary speakers. Yash used sheer stage dominance to physically pull our guests together during the dusk Varmala, making it feel perfectly intimate against the ocean.",
     },

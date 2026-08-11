@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Uttarakhand" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Executive Corporate Retreat — Delhi NCR" },
       reviewBody: "Hosting a sunset reception at JW Marriott Walnut Grove requires an anchor who understands immense prestige. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet despite the massive indoor scale of the ballrooms. Absolute executive polish.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Bhargava Family — Dehradun" },
       reviewBody: "Choosing The Savoy meant we had a highly restricted, incredibly VIP guest list inside a heritage property. We needed an anchor, not a noisy MC. Yash was absolute perfection. Intense conversational flow, no reading from notes, completely owning the space without ever crossing the line.",
     },

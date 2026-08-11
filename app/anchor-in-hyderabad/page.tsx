@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Telangana" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Reddy Family" },
       reviewBody: "Anchoring at Taj Falaknuma requires absolute vocal command without resorting to shouting. Yash understood the architectural authority of the palace perfectly. He bridged our North and South Indian relatives flawlessly.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Director — Media Conglomerate" },
       reviewBody: "Ramoji Film City is so incredibly large that you need an anchor with pure stage dominance to stop a 2,000-person crowd from fracturing. Yash held the event together start to finish with no script.",
     },

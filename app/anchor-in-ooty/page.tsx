@@ -77,23 +77,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Tamil Nadu" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "NRI Destination Wedding — USA" },
       reviewBody: "Hosting a colonial-themed wedding at Ferrnhills Royale Palace meant we needed someone with absolute poise and flawless English. Yash was the perfect choice. He managed the global guest list with incredible unscripted wit and authority.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Corporate Summit — Bangalore" },
       reviewBody: "We held a leadership retreat at Savoy. Yash moderated our gala evening with pure executive class. He is much more than a wedding anchor; he is a sophisticated moderator who understands corporate pedigree.",
     },

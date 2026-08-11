@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "West Bengal" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Kedia Family" },
       reviewBody: "Kolkata’s Marwari weddings are intensely traditional but the guest list is incredibly modern. Yash’s bilingual control at ITC Royal Bengal was flawless. He knew exactly when to be deeply respectful during rituals and when to energize the Sangeet.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Managing Director — FMCG Corporation" },
       reviewBody: "We needed a highly articulate English-speaking host for our national distributor meet in Rajarhat. Yash commanded 600 delegates with no notes, extreme precision, and total authority.",
     },

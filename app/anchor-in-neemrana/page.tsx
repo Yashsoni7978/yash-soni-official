@@ -77,23 +77,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Rajasthan" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Director — Tech Startup NCR" },
       reviewBody: "We brought our entire C-suite out to Neemrana for a leadership summit. Yash anchored the daytime panels with incredible English precision, and then transitioned into hosting our evening gala flawlessly. True executive hosting.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Malhotra Family (Delhi)" },
       reviewBody: "Neemrana Fort has 14 different levels. It’s impossible to manage guests naturally, and they don't allow loud DJs. Yash stepped up and literally kept our entire wedding together using purely his voice and stage presence. Magic.",
     },

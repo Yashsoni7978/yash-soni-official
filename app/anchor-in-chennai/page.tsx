@@ -77,23 +77,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Tamil Nadu" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "NRI Destination Wedding — Australia" },
       reviewBody: "Hosting at Taj Fisherman's Cove required absolute poise and the ability to manage a massive coastal lawn. Yash was incredible. His English moderation for our global guests was flawlessly professional and unscripted.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Corporate Summit — ITC Grand Chola" },
       reviewBody: "We held an international leadership summit at ITC Grand Chola. Yash moderated our strategic gala sessions with pure executive polish. He perfectly bridges the gap between formal corporate requirements and high-energy hosting.",
     },

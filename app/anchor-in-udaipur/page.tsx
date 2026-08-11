@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// app/anchor-in-udaipur/layout.jsx
 // SERVER COMPONENT — SEO metadata only. All JSON-LD schemas in page.jsx.
 const CITY        = "Udaipur";
 const SLUG        = "anchor-in-udaipur";
@@ -10,6 +9,7 @@ const FULL_URL    = `https://${DOMAIN}/${SLUG}`;
 const LAT         = "24.5854";
 const LNG         = "73.7125";
 const OG_IMAGE    = `https://${DOMAIN}/backgrounds/udaipur_bg.webp`;
+
 // ─── JSON-LD SCHEMAS ───────────────────────────────────────────────────────
 // LocalBusiness (ProfessionalService)
 const localBusinessSchema = {
@@ -60,13 +60,6 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Rajasthan" },
     { "@type": "Country",            name: "India" },
   ],
-  aggregateRating: {
-    "@type":       "AggregateRating",
-    ratingValue:   "4.9",
-    reviewCount:   "200",
-    bestRating:    "5",
-    worstRating:   "1",
-  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Anchoring Services in Udaipur",
@@ -77,6 +70,7 @@ const localBusinessSchema = {
     ],
   },
 };
+
 // Person schema for E-E-A-T
 const personSchema = {
   "@context":        "https://schema.org",
@@ -103,6 +97,7 @@ const personSchema = {
   award: "4.9★ Rated — 50+ Five-Star Reviews",
   alumniOf: { "@type": "Organization", name: "Rajasthan Event Industry" },
 };
+
 // Breadcrumb
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -113,6 +108,7 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 3, name: `Anchor in ${CITY}`,  item: FULL_URL },
   ],
 };
+
 // ─── METADATA EXPORT ───────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
@@ -120,35 +116,30 @@ export const metadata: Metadata = {
   description:
     `Looking for the best anchor in Udaipur? Anchor Yash Soni — 4.9★ rated, 700+ shows, 5+ years. Expert for destination weddings at Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island. Bilingual Hindi/English, unscripted, NRI-experienced.`,
   keywords: [
-    // Core identity — highest volume
     "anchor in udaipur",
     "best anchor in udaipur",
     "wedding anchor udaipur",
     "event anchor udaipur",
     "emcee udaipur",
     "event host udaipur",
-    // Venue-specific — high intent
     "anchor taj lake palace udaipur",
     "wedding anchor oberoi udaivilas",
     "jagmandir island wedding host",
     "leela udaipur anchor",
     "raffles udaipur wedding emcee",
     "fateh garh wedding anchor",
-    // Event type
     "destination wedding anchor udaipur",
     "nri wedding anchor udaipur",
     "sangeet host udaipur",
     "haldi anchor udaipur",
     "corporate anchor udaipur",
     "bilingual anchor udaipur",
-    // Semantic/long-tail
     "anchor for destination wedding udaipur",
     "best emcee udaipur wedding",
     "udaipur lake palace wedding anchor",
     "udaipur destination wedding host",
     "anchor yash soni udaipur",
     "professional anchor udaipur rajasthan",
-    // Branded
     "anchor yash",
     "anchor yash soni",
     "yash soni anchor",
@@ -191,21 +182,14 @@ export const metadata: Metadata = {
     description: `Taj Lake Palace. Oberoi Udaivilas. Jagmandir Island. Udaipur's most trusted destination wedding anchor — 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
-  // Geo signals — Google uses these for local SEO
   other: {
     "geo.region":    "IN-RJ",
     "geo.placename": `${CITY}, Rajasthan, India`,
     "geo.position":  `${LAT};${LNG}`,
     ICBM:            `${LAT}, ${LNG}`,
-    // Classification
     "DC.subject":    `Event Anchor, Wedding Anchor, Emcee, ${CITY}, Rajasthan, India`,
-    // Rating signals
-    "rating":        "4.9",
-    "reviewCount":   "200",
   },
 };
-// ─── LAYOUT ────────────────────────────────────────────────────────────────
-
 
 const FAQS = [
   {

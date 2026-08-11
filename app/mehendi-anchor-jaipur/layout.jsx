@@ -19,12 +19,7 @@ const serviceSchema = {
   ],
   url: "https://yashsoni.in/mehendi-anchor-jaipur",
   serviceType: "Mehendi Ceremony & Ladies Sangeet Hosting",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
+  
 };
 const breadcrumb = {
   "@context": "https://schema.org",

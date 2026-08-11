@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Uttar Pradesh" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "NRI Family — London" },
       reviewBody: "Hosting a wedding on the ghats of Varanasi at BrijRama Palace is incredibly complex logistically. We needed someone who could translate the immense depth of the rituals for our UK guests without turning it into a lecture. Yash's bilingual anchoring was absolute perfection. He commanded the space elegantly.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Corporate Group — Mumbai" },
       reviewBody: "We held an executive strategy retreat and spiritual trip in Varanasi. Yash anchored our evening panels at Taj Nadesar Palace. He doesn't rely on paper notes at all. His ability to moderate high-level discussions while respecting the city's aura is unmatched.",
     },

@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Himachal Pradesh" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Gill Family — Chandigarh" },
       reviewBody: "Hosting a Punjabi Sangeet at Span Resort in November is risky because the cold kills the crowd. Yash bypassed the weather entirely. He generated so much interactive, unscripted hype that the dance floor was packed instantly. The best anchor we've ever hired.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Tech Startup Offsite — Gurgaon" },
       reviewBody: "We held an executive strategy retreat at Baragarh Resort. Yash anchored the summit gracefully, shifting completely away from the 'wedding MC' vibe into a sharp, articulate moderator. Highly recommended for corporate VIPs.",
     },

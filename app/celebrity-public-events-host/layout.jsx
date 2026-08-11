@@ -20,12 +20,7 @@ const serviceSchema = {
   ],
   url: "https://yashsoni.in/celebrity-public-events-host",
   serviceType: "Celebrity & Public Event Hosting",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
+  
 };
 const breadcrumb = {
   "@context": "https://schema.org",

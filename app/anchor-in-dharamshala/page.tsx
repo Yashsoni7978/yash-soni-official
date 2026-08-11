@@ -77,23 +77,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Himachal Pradesh" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Corporate Summit — Chandigarh" },
       reviewBody: "Choosing Taj Dharamshala meant we needed an extremely refined host for our executive summit. Yash anchored with pure executive polish. Unscripted, sharp, and totally in control of the multi-day agenda.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Punjabi Destination Sangeet" },
       reviewBody: "Mountain weather is a mood killer. But Yash brought massive Sangeet hype entirely natively. He switched between English for the VIPs and heavy Punjabi crowd-work effortlessly. The dance floor at Hyatt Regency exploded.",
     },

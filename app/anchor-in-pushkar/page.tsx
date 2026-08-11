@@ -77,23 +77,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Rajasthan" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Jindal Family (NRI)" },
       reviewBody: "Pushkar is a holy town with strict alcohol restrictions, so we were terrified the Sangeet at Ananta Resort would fall flat. Yash came in completely unscripted and generated so much raw energy that nobody even noticed the lack of a bar. An absolute masterclass.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Deshmukh & Sharma Families" },
       reviewBody: "Our wedding at Westin Pushkar featured guests from London and Dubai alongside traditional elders. Yash's bilingual capability ensured the ceremonies felt impossibly grand but culturally connected. Best host in Rajasthan.",
     },

@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Karnataka" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Agarwal Family" },
       reviewBody: "Hosting our Marwari wedding at the Taj West End required someone who could respect our rituals in Hindi, while communicating perfectly with our business partners in English. Yash executed this duality perfectly.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "VP Communications — Global IT Firm, Whitefield" },
       reviewBody: "We flew Yash down for our annual leadership summit. Standing in front of 1,200 tech executives, he carried the entire three-day agenda without a single script or teleprompter. A genuinely elite corporate asset.",
     },

@@ -25,12 +25,7 @@ const localBusinessSchema = {
     latitude: 26.9124,
     longitude: 75.7873,
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
+  
   sameAs: [
     "https://www.instagram.com/anchor_yash_official",
     "https://www.youtube.com/@anchor_yash",

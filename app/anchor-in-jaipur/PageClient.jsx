@@ -371,7 +371,7 @@ const faqSchema = {
     url: "https://yashsoni.in",
     telephone: "+917737877978",
     address: { "@type": "PostalAddress", addressLocality: "Jaipur", addressRegion: "Rajasthan", addressCountry: "IN" },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" },
+    
     areaServed: { "@type": "City", name: "Jaipur" },
   };
   return (

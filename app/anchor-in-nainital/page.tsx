@@ -77,23 +77,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Uttarakhand" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Executive Offsite — Gurgaon" },
       reviewBody: "Hosting our annual corporate retreat at a heritage property in Nainital required a very specific tone. Yash was exactly what we needed. High-end English hosting, entirely unscripted, blending the corporate strategy daytime talks immediately into the lakeside evening gala.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Kapur Family — Delhi NCR" },
       reviewBody: "The logistics of lakeside acoustic drop-off are real. Our Sangeet threatened to lose energy, but Yash physically compressed the crowd dynamically and pushed the interactions into overdrive. He saved the Sangeet entirely.",
     },

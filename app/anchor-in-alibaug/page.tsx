@@ -76,23 +76,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Maharashtra" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Corporate Director — Mumbai" },
       reviewBody: "Alibaug weddings are incredibly intimate and highly scrutinized because the guest list is pure VIP. Yash anchored our Sangeet at The Mansion House flawlessly. Phenomenal English dialect mixed with perfect timing—he didn't just host the event, he controlled the entire weekend.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Shah & Agarwal Families" },
       reviewBody: "We chose Radisson Blu for a 300-guest event. The challenge was transitioning the crowd from the massive lawn to the indoor parties dynamically. Yash was absolute magic. He brought a totally unscripted, high-voltage energy that kept the Mumbai crowd hyped till 3 AM.",
     },
