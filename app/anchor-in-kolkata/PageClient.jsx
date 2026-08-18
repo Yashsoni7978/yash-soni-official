@@ -95,7 +95,7 @@ const STATS = [
   { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
   { val: "10", suffix: "K+", label: "Largest Crowd", sub: "Commanded live", icon: Users },
   { val: "4.9", suffix: "★", label: "Client Rating", sub: "50+ reviews", icon: Star },
-  { val: "8", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
+  { val: "5", suffix: "+", label: "Years on Stage", sub: "Zero paper scripts", icon: Award },
 ];
 
 const KOLKATA_IDENTITY = [

@@ -93,8 +93,7 @@ const webPageSchema = {
     jobTitle: "Professional Event Anchor, Emcee, and Host",
     url: "https://yashsoni.in",
     telephone: "+917737877978",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" },
-    sameAs: [
+        sameAs: [
       "https://www.instagram.com/anchor_yash_official",
       "https://www.facebook.com/anchoryashsoni",
       "https://www.wedmegood.com/profile/anchor-yash-25628297",

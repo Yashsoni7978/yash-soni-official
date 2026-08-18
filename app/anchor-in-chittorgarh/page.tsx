@@ -21,7 +21,7 @@ const localBusinessSchema = {
   geo: { "@type": "GeoCoordinates", latitude: LAT, longitude: LNG },
   openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "09:00", closes: "21:00" },
   areaServed: [{ "@type": "City", name: CITY },{ "@type": "City", name: "Bhilwara" },{ "@type": "AdministrativeArea", name: "Rajasthan" },{ "@type": "Country", name: "India" }],
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5", worstRating: "1" },
+  
 };
 
 const personSchema = {

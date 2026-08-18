@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-manali/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Manali",
     "Best Wedding Anchor Manali",
@@ -76,24 +76,18 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Himachal Pradesh" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Gill Family, Chandigarh" },
+      
+      author: { "@type": "Person", name: "Gill Family — Chandigarh" },
       reviewBody: "Hosting a Punjabi Sangeet at Span Resort in November is risky because the cold kills the crowd. Yash bypassed the weather entirely. He generated so much interactive, unscripted hype that the dance floor was packed instantly. The best anchor we've ever hired.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Tech Startup Offsite, Gurgaon" },
+      
+      author: { "@type": "Person", name: "Tech Startup Offsite — Gurgaon" },
       reviewBody: "We held an executive strategy retreat at Baragarh Resort. Yash anchored the summit gracefully, shifting completely away from the 'wedding MC' vibe into a sharp, articulate moderator. Highly recommended for corporate VIPs.",
     },
   ],
@@ -154,9 +148,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-manali/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Manali | Span Resort & Alpine Emcee, Yash Soni`,
+  name: `Best Anchor in Manali | Span Resort & Alpine Emcee — Yash Soni`,
   headline: `Manali's Premier Event Anchor for Ultra-Luxury Alpine Destination Weddings`,
-  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Manali destination weddings. Mastering prestigious properties like Span Resort and Baragarh with unscripted executive hosting.`,
+  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Manali destination weddings. Mastering prestigious properties like Span Resort and Baragarh with unscripted executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Himachal Pradesh` },
@@ -168,7 +162,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Manali | Luxury Alpine Wedding Emcee`,
-  description: `Looking for the best anchor in Manali? Anchor Yash Soni, 4.9★. Expert for Span Resort, Baragarh, and ultra-prestigious destination weddings. Flawless unscripted hosting for high-voltage VIP events.`,
+  description: `Looking for the best anchor in Manali? Anchor Yash Soni — 4.9★. Expert for Span Resort, Baragarh, and ultra-prestigious destination weddings. Flawless unscripted hosting for high-voltage VIP events.`,
   keywords: [
     "anchor in manali",
     "best anchor in manali",
@@ -196,13 +190,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Manali | Elite Alpine Destination Wedding Host`,
     description: `4.9★ rated. Manali's premium anchor for highly prestigious destination weddings at Span Resort and Baragarh. Unscripted high-voltage excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Manali, Anchor Yash Soni at Alpine Luxury Resorts` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Manali — Anchor Yash Soni at Alpine Luxury Resorts` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Manali | Anchor Yash Soni, 4.9★`,
+    title: `Best Anchor in Manali | Anchor Yash Soni — 4.9★`,
     description: `Span Resort. Baragarh. Manali's premier bilingual event anchor for exclusive VIP Sangeets and massive alpine ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -211,7 +205,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Manali | Alpine VIP Destination Emcee, Yash Soni`,
+    "DC.title": `Best Anchor in Manali | Alpine VIP Destination Emcee — Yash Soni`,
     "DC.subject": `Event Anchor, Mountain Wedding, VIP Events, ${CITY}, Himachal Pradesh, India`,
     "DC.coverage": `${CITY}, Himachal Pradesh, India`,
     "DC.language": "en-IN",

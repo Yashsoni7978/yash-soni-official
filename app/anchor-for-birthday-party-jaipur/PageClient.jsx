@@ -88,7 +88,7 @@ const STATS = [
   { val:"700", suffix:"+", label:"Shows Hosted",   sub:"across Jaipur & Rajasthan",          icon:Mic2   },
   { val:"200",  suffix:"+", label:"Verified Reviews",  sub:"4.9★ average",          icon:Star   },
   { val:"500",  suffix:"+", label:"Birthday Events",   sub:"Kids to celebrity galas",icon:Cake  },
-  { val:"8",    suffix:"+", label:"Years on Stage",    sub:"Zero paper scripts",    icon:Award  },
+  { val: "5",    suffix:"+", label:"Years on Stage",    sub:"Zero paper scripts",    icon:Award  },
 ];
 const PARTY_TYPES = [
   {

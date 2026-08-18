@@ -79,23 +79,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Central Rajasthan" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Bansal Family" },
       reviewBody: "Choosing Pratap Palace meant we needed someone who matched the Taj standard. Yash's hosting was flawless. He merged our formal ceremonies with unscripted celebration that got both sides of the family invested.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Qureshi Family" },
       reviewBody: "Bilingual, sophisticated, and deeply aware of our traditions. Yash hosted our 500-guest reception near Ana Sagar with incredible dignity and warmth.",
     },

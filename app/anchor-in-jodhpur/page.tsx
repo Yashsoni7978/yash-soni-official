@@ -59,13 +59,7 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Rajasthan" },
     { "@type": "Country",            name: "India" },
   ],
-  aggregateRating: {
-    "@type":       "AggregateRating",
-    ratingValue:   "4.9",
-    reviewCount:   "200",
-    bestRating:    "5",
-    worstRating:   "1",
-  },
+  
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Anchoring Services in Jodhpur",
@@ -200,7 +194,7 @@ export const metadata: Metadata = {
     ICBM:            `${LAT}, ${LNG}`,
     "DC.subject":    `Event Anchor, Wedding Anchor, Emcee, ${CITY}, Rajasthan, India`,
     "rating":        "4.9",
-    "reviewCount":   "200",
+    "reviewCount": "50",
   },
 };
 // ─── LAYOUT ────────────────────────────────────────────────────────────────

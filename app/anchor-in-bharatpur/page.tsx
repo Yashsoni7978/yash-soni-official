@@ -82,23 +82,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Rajasthan" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Singhania Family" },
       reviewBody: "Yash understood that Lohagarh was not just a beautiful venue but a statement about our heritage. His references to the fort's history were specific and accurate. The family felt genuinely honoured.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Agarwal Family" },
       reviewBody: "The Laxmi Vilas Sangeet ran from 7pm to midnight without dropping energy once. 300 guests from Delhi, Agra and Jaipur, Yash managed all three communities with complete authority.",
     },

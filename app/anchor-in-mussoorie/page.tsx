@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-mussoorie/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Mussoorie",
     "Best Wedding Anchor Mussoorie",
@@ -76,24 +76,18 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Uttarakhand" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Executive Corporate Retreat, Delhi NCR" },
+      
+      author: { "@type": "Person", name: "Executive Corporate Retreat — Delhi NCR" },
       reviewBody: "Hosting a sunset reception at JW Marriott Walnut Grove requires an anchor who understands immense prestige. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet despite the massive indoor scale of the ballrooms. Absolute executive polish.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Bhargava Family, Dehradun" },
+      
+      author: { "@type": "Person", name: "Bhargava Family — Dehradun" },
       reviewBody: "Choosing The Savoy meant we had a highly restricted, incredibly VIP guest list inside a heritage property. We needed an anchor, not a noisy MC. Yash was absolute perfection. Intense conversational flow, no reading from notes, completely owning the space without ever crossing the line.",
     },
   ],
@@ -154,9 +148,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-mussoorie/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Mussoorie | JW Marriott & The Savoy Emcee, Yash Soni`,
+  name: `Best Anchor in Mussoorie | JW Marriott & The Savoy Emcee — Yash Soni`,
   headline: `Mussoorie's Premier Event Anchor for Ultra-Luxury Himalayan Destination Weddings`,
-  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Mussoorie destination weddings. Mastering prestigious properties like JW Marriott Walnut Grove and The Savoy with unscripted executive hosting.`,
+  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Mussoorie destination weddings. Mastering prestigious properties like JW Marriott Walnut Grove and The Savoy with unscripted executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Uttarakhand` },
@@ -168,7 +162,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Mussoorie | Luxury Heritage Wedding Emcee`,
-  description: `Looking for the best anchor in Mussoorie? Anchor Yash Soni, 4.9★. Expert for JW Marriott, The Savoy, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
+  description: `Looking for the best anchor in Mussoorie? Anchor Yash Soni — 4.9★. Expert for JW Marriott, The Savoy, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
   keywords: [
     "anchor in mussoorie",
     "best anchor in mussoorie",
@@ -196,13 +190,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Mussoorie | Elite Heritage Destination Wedding Host`,
     description: `4.9★ rated. Mussoorie's premium anchor for highly prestigious destination weddings at JW Marriott Walnut Grove and The Savoy. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Mussoorie, Anchor Yash Soni at Himalayan Luxury Resorts` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Mussoorie — Anchor Yash Soni at Himalayan Luxury Resorts` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Mussoorie | Anchor Yash Soni, 4.9★`,
+    title: `Best Anchor in Mussoorie | Anchor Yash Soni — 4.9★`,
     description: `JW Marriott Walnut Grove. The Savoy. Mussoorie's premier bilingual event anchor for exclusive VIP Sangeets and highly restricted heritage ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -211,7 +205,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Mussoorie | Doon Valley VIP Destination Emcee, Yash Soni`,
+    "DC.title": `Best Anchor in Mussoorie | Doon Valley VIP Destination Emcee — Yash Soni`,
     "DC.subject": `Event Anchor, Mountain Wedding, VIP Events, ${CITY}, Uttarakhand, India`,
     "DC.coverage": `${CITY}, Uttarakhand, India`,
     "DC.language": "en-IN",

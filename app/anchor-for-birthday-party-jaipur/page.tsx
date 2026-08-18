@@ -34,12 +34,7 @@ const serviceSchema = {
       { "@type": "Offer", name: "Anniversary Celebration Anchor Jaipur" },
     ],
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
+  
 };
 const breadcrumb = {
   "@context": "https://schema.org",

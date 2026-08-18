@@ -81,23 +81,17 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Gujarat" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Shah Family" },
       reviewBody: "Yash was completely attuned to our Jain community's values and ceremonial structure. The event felt both joyful and dignified throughout.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Mehta Family" },
       reviewBody: "The Nakki Lake Sangeet was a dream. Yash read the environment completely, building the energy through the mist and the lake atmosphere with masterful timing.",
     },

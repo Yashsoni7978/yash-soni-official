@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-nainital/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Nainital",
     "Best Wedding Anchor Nainital",
@@ -77,24 +77,18 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Uttarakhand" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Executive Offsite, Gurgaon" },
+      
+      author: { "@type": "Person", name: "Executive Offsite — Gurgaon" },
       reviewBody: "Hosting our annual corporate retreat at a heritage property in Nainital required a very specific tone. Yash was exactly what we needed. High-end English hosting, entirely unscripted, blending the corporate strategy daytime talks immediately into the lakeside evening gala.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Kapur Family, Delhi NCR" },
+      
+      author: { "@type": "Person", name: "Kapur Family — Delhi NCR" },
       reviewBody: "The logistics of lakeside acoustic drop-off are real. Our Sangeet threatened to lose energy, but Yash physically compressed the crowd dynamically and pushed the interactions into overdrive. He saved the Sangeet entirely.",
     },
   ],
@@ -155,9 +149,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-nainital/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Nainital | Kumaon Lakeside Emcee, Yash Soni`,
+  name: `Best Anchor in Nainital | Kumaon Lakeside Emcee — Yash Soni`,
   headline: `Nainital's Premier Event Anchor for Ultra-Luxury Lakeside Destination Weddings`,
-  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Nainital destination weddings. Mastering prestigious properties like The Naini Retreat with unscripted VIP executive hosting.`,
+  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Nainital destination weddings. Mastering prestigious properties like The Naini Retreat with unscripted VIP executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Uttarakhand` },
@@ -169,7 +163,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Nainital | Luxury Heritage Lakeside Emcee`,
-  description: `Looking for the best anchor in Nainital? Anchor Yash Soni, 4.9★. Expert for The Naini Retreat, Bhimtal luxury, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
+  description: `Looking for the best anchor in Nainital? Anchor Yash Soni — 4.9★. Expert for The Naini Retreat, Bhimtal luxury, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
   keywords: [
     "anchor in nainital",
     "best anchor in nainital",
@@ -197,13 +191,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Nainital | Elite Lakeside Destination Wedding Host`,
     description: `4.9★ rated. Nainital's premium anchor for highly prestigious destination weddings spanning the Kumaon lakes. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Nainital, Anchor Yash Soni at Lakeside Luxury Resorts` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Nainital — Anchor Yash Soni at Lakeside Luxury Resorts` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Nainital | Anchor Yash Soni, 4.9★`,
+    title: `Best Anchor in Nainital | Anchor Yash Soni — 4.9★`,
     description: `The Naini Retreat. Bhimtal Estates. Nainital's premier bilingual event anchor for exclusive VIP Sangeets and heavily restricted heritage ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +206,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Nainital | Kumaon VIP Destination Emcee, Yash Soni`,
+    "DC.title": `Best Anchor in Nainital | Kumaon VIP Destination Emcee — Yash Soni`,
     "DC.subject": `Event Anchor, Mountain Lakeside Wedding, VIP Events, ${CITY}, Uttarakhand, India`,
     "DC.coverage": `${CITY}, Uttarakhand, India`,
     "DC.language": "en-IN",

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-hyderabad/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Hyderabad",
     "Best Wedding Anchor Hyderabad",
@@ -76,24 +76,18 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Telangana" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      
       author: { "@type": "Person", name: "Reddy Family" },
       reviewBody: "Anchoring at Taj Falaknuma requires absolute vocal command without resorting to shouting. Yash understood the architectural authority of the palace perfectly. He bridged our North and South Indian relatives flawlessly.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Director, Media Conglomerate" },
+      
+      author: { "@type": "Person", name: "Director — Media Conglomerate" },
       reviewBody: "Ramoji Film City is so incredibly large that you need an anchor with pure stage dominance to stop a 2,000-person crowd from fracturing. Yash held the event together start to finish with no script.",
     },
   ],
@@ -155,9 +149,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-hyderabad/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Hyderabad | Taj Falaknuma & Ramoji Host, Yash Soni`,
+  name: `Best Anchor in Hyderabad | Taj Falaknuma & Ramoji Host — Yash Soni`,
   headline: `Hyderabad's Most Trusted Event Anchor for Falaknuma Palace, Ramoji Film City & Corporate Summits`,
-  description: `Anchor Yash Soni, 4.9★ rated, 700+ shows. Premier anchor for Hyderabad luxury weddings. Mega-event specialist for Ramoji Film City. Flawless bilingual English/Hindi execution. Zero scripts.`,
+  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Hyderabad luxury weddings. Mega-event specialist for Ramoji Film City. Flawless bilingual English/Hindi execution. Zero scripts.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Telangana` },
@@ -168,8 +162,8 @@ const webPageSchema = {
 // ─── METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Hyderabad | Luxury Wedding Emcee, Yash Soni`,
-  description: `Looking for the best anchor in Hyderabad? Anchor Yash Soni, 4.9★ rated, 700+ shows. Expert for Taj Falaknuma Palace, Ramoji Film City weddings, and HITEC City corporate summits. Flawless elite bilingual hosting.`,
+  title: `Best Anchor in Hyderabad | Luxury Wedding Emcee — Yash Soni`,
+  description: `Looking for the best anchor in Hyderabad? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for Taj Falaknuma Palace, Ramoji Film City weddings, and HITEC City corporate summits. Flawless elite bilingual hosting.`,
   keywords: [
     "anchor in hyderabad",
     "best anchor in hyderabad",
@@ -199,13 +193,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Hyderabad | Elite Wedding & Corporate Host`,
     description: `4.9★ rated. 700+ shows. Hyderabad's most trusted anchor for Taj Falaknuma Palace and Ramoji Film City mega-events. Impeccable bilingual English/Hindi execution.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Hyderabad, Anchor Yash Soni at Taj Falaknuma Palace` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Hyderabad — Anchor Yash Soni at Taj Falaknuma Palace` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Hyderabad | Anchor Yash Soni, 4.9★`,
+    title: `Best Anchor in Hyderabad | Anchor Yash Soni — 4.9★`,
     description: `Taj Falaknuma. Ramoji Film City. HITEC City. Hyderabad's premier bilingual event anchor. 700+ shows. Zero scripts.`,
     images: [OG_IMAGE],
   },
@@ -214,7 +208,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Hyderabad | Luxury Heritage Emcee, Yash Soni`,
+    "DC.title": `Best Anchor in Hyderabad | Luxury Heritage Emcee — Yash Soni`,
     "DC.subject": `Event Anchor, Luxury Wedding, Mega Events, Corporate Emcee, ${CITY}, Telangana, India`,
     "DC.coverage": `${CITY}, Telangana, India`,
     "DC.language": "en-IN",

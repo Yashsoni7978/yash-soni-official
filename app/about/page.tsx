@@ -3,7 +3,7 @@ import PageClient from "./PageClient";
 
 // ── STRUCTURED DATA ────────────────────────────────────────────────────────
 // Numbers sourced from lib/schema/serviceSchema.js defaults:
-// ratingValue: "4.9", reviewCount: "40"
+// ratingValue: "4.9", reviewCount: "50"
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",

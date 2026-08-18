@@ -214,13 +214,7 @@ const localBusinessSchema = {
     "Destination Wedding Anchor",
     "Award Night Host",
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   sameAs: [
     "https://www.instagram.com/anchor_yash_official",
     "https://www.instagram.com/best_anchor_jaipur",

@@ -204,21 +204,12 @@ const reviewSchema = {
   "@type": "LocalBusiness",
   "@id": "https://yashsoni.in/#reviews",
   name: "Anchor Yash Soni",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "40",
-    bestRating: "5",
-  },
+  
   review: REVIEWS.map((r) => ({
     "@type": "Review",
     author: { "@type": "Person", name: r.name },
     reviewBody: r.text,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
+    
   })),
 };
 
@@ -239,10 +230,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
+      
 
       {/* FIXED: h1 is now visible-to-screen-readers via sr-only AND rendered
           inside HomeHero below for visual display. sr-only here serves SEO

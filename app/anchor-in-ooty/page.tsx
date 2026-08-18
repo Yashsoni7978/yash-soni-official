@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-ooty/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Ooty",
     "Best Wedding Anchor Ooty",
@@ -77,24 +77,18 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", name: "Tamil Nadu" },
     { "@type": "Country", name: "India" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  
   review: [
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "NRI Destination Wedding, USA" },
+      
+      author: { "@type": "Person", name: "NRI Destination Wedding — USA" },
       reviewBody: "Hosting a colonial-themed wedding at Ferrnhills Royale Palace meant we needed someone with absolute poise and flawless English. Yash was the perfect choice. He managed the global guest list with incredible unscripted wit and authority.",
     },
     {
       "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Corporate Summit, Bangalore" },
+      
+      author: { "@type": "Person", name: "Corporate Summit — Bangalore" },
       reviewBody: "We held a leadership retreat at Savoy. Yash moderated our gala evening with pure executive class. He is much more than a wedding anchor; he is a sophisticated moderator who understands corporate pedigree.",
     },
   ],
@@ -155,9 +149,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-ooty/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Ooty | Savoy & Ferrnhills Emcee, Yash Soni`,
+  name: `Best Anchor in Ooty | Savoy & Ferrnhills Emcee — Yash Soni`,
   headline: `Ooty's Premier Event Anchor for Ultra-Luxury Colonial Heritage Destination Weddings`,
-  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Ooty destination weddings. Mastering prestigious properties like Savoy and Ferrnhills Royale Palace with unscripted VIP executive hosting.`,
+  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Ooty destination weddings. Mastering prestigious properties like Savoy and Ferrnhills Royale Palace with unscripted VIP executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Tamil Nadu` },
@@ -169,7 +163,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Ooty | Luxury Colonial Heritage Wedding Emcee`,
-  description: `Looking for the best anchor in Ooty? Anchor Yash Soni, 4.9★. Expert for Savoy (IHCL), Ferrnhills Royale Palace, and ultra-prestigious tea estate weddings. Flawless unscripted bilingual hosting for VIP events.`,
+  description: `Looking for the best anchor in Ooty? Anchor Yash Soni — 4.9★. Expert for Savoy (IHCL), Ferrnhills Royale Palace, and ultra-prestigious tea estate weddings. Flawless unscripted bilingual hosting for VIP events.`,
   keywords: [
     "anchor in ooty",
     "best anchor in ooty",
@@ -197,13 +191,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Ooty | Elite Colonial Heritage Destination Wedding Host`,
     description: `4.9★ rated. Ooty's premium anchor for highly prestigious destination weddings spanning the Nilgiri heritage corridors. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ooty, Anchor Yash Soni at Nilgiri Heritage Properties` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ooty — Anchor Yash Soni at Nilgiri Heritage Properties` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Ooty | Anchor Yash Soni, 4.9★`,
+    title: `Best Anchor in Ooty | Anchor Yash Soni — 4.9★`,
     description: `Savoy Ooty. Ferrnhills Royale Palace. Ooty's premier bilingual event anchor for exclusive VIP Sangeets and heavily restricted mountain VIP ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +206,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Ooty | Nilgiri VIP Destination Emcee, Yash Soni`,
+    "DC.title": `Best Anchor in Ooty | Nilgiri VIP Destination Emcee — Yash Soni`,
     "DC.subject": `Event Anchor, Heritage Wedding, VIP Events, ${CITY}, Tamil Nadu, India`,
     "DC.coverage": `${CITY}, Tamil Nadu, India`,
     "DC.language": "en-IN",
