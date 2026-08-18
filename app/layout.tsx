@@ -127,11 +127,12 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    // Use app/icon.png, Next.js auto-generates all favicon sizes from it.
-    // Do NOT manually specify .webp favicons: not supported by all browsers.
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
   verification: {
     // Set NEXT_PUBLIC_GSC_TOKEN in Vercel Environment Variables
