@@ -8,17 +8,17 @@ import { ArrowRight, CalendarCheck, Camera, Heart, MapPin, Minus, Music, Plus, S
 
 
 
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // CONFIG
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20looking%20for%20a%20wedding%20anchor%20in%20Jaipur.%20I%27d%20like%20to%20check%20availability%20for%20my%20event.";
 const style = `
   @keyframes shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
   .sparkle-text { background-size:200% auto; animation:shimmer 4s linear infinite; }
 `;
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // HELPERS
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const revealUp = {
   hidden: { y: 60, opacity: 0 },
   visible: { y: 0, opacity: 1, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
@@ -43,7 +43,7 @@ const G = ({ children, className = "" }) => (
     {children}
   </span>
 );
-// Keeps original SectionHeading structure — SEO fix: subtitle is span, title is h2
+// Keeps original SectionHeading structure â€” SEO fix: subtitle is span, title is h2
 const SectionHeading = ({ subtitle, title, align = "left" }) => (
   <div className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}>
     <motion.div
@@ -64,39 +64,39 @@ const SectionHeading = ({ subtitle, title, align = "left" }) => (
     </motion.div>
   </div>
 );
-// ─────────────────────────────────────────────
-// DATA — SEO text upgraded throughout
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// DATA â€” SEO text upgraded throughout
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const WEDDING_TYPES = [
   {
     title: "Hindu Weddings",
     desc: "Expert Vedic ritual commentary, soulful Pheras narration, and commanding Baraat energy. The best wedding anchor in Jaipur for traditional Hindu ceremonies across all venues.",
-    icon: "🕉️"
+    icon: "ðŸ•‰ï¸"
   },
   {
     title: "Punjabi Weddings",
     desc: "Unmatched energy for Dhol entries, Bhangra crowd activation, and high-voltage cocktail evenings. Farmhouse weddings on Ajmer Road are a Punjabi Sangeet specialty.",
-    icon: "🪘"
+    icon: "ðŸª˜"
   },
   {
     title: "Jain Weddings",
     desc: "Sophisticated, respectful hosting that deeply honours Jain traditions and family values. Elegant hosting for premium banquet venues across Mansarovar and Vaishali Nagar.",
-    icon: "🪷"
+    icon: "ðŸª·"
   },
   {
     title: "Islamic Nikkah",
-    desc: "Grace and dignity for the Walima and Nikkah ceremony — poetic Urdu hosting and thoughtful bilingual narration for the sacred milestones.",
-    icon: "🌙"
+    desc: "Grace and dignity for the Walima and Nikkah ceremony â€” poetic Urdu hosting and thoughtful bilingual narration for the sacred milestones.",
+    icon: "ðŸŒ™"
   },
   {
     title: "Christian Weddings",
     desc: "Classy, formal emceeing for the Toast, Cake Cutting, and First Dance. Crisp English hosting with the warmth that makes every family feel included.",
-    icon: "⛪"
+    icon: "â›ª"
   },
   {
     title: "Cross-Cultural",
     desc: "Seamlessly blending diverse traditions for modern, global destination couples flying into Jaipur from the UK, USA, Canada, and Gulf. Bilingual. Protocol-aware. Fully adaptable.",
-    icon: "🤝"
+    icon: "ðŸ¤"
   }
 ];
 const EVENT_FLOW = [
@@ -109,10 +109,10 @@ const EVENT_FLOW = [
   { title: "Grand Reception", icon: Camera },
   { title: "After Party", icon: Users },
 ];
-// Location-specific coverage — SEO signals
+// Location-specific coverage â€” SEO signals
 const WEDDING_ZONES = [
   { zone: "Kukas & Amer Road", type: "Palace & Heritage Weddings", note: "NRI families, international guests, heritage protocol" },
-  { zone: "Ajmer Road & Bhankrota", type: "Farmhouse Sangeet Specialist", note: "1,000–1,500 guests, packed floors until 4 AM" },
+  { zone: "Ajmer Road & Bhankrota", type: "Farmhouse Sangeet Specialist", note: "1,000â€“1,500 guests, packed floors until 4 AM" },
   { zone: "Mansarovar & Vaishali Nagar", type: "Premium Banquet Weddings", note: "Urban elite families, milestone celebrations" },
   { zone: "Sitapura & JLN Marg", type: "5-Star Hotel Weddings", note: "Fairmont, Marriott, ITC Rajputana" },
 ];
@@ -120,11 +120,11 @@ const FAQS = [
   { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
   { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
   { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
+  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences ï¿½ the difference between an event people attend and one they remember." },
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "Who is the best wedding anchor in Jaipur for premium weddings?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated wedding anchor with 700+ weddings hosted across Rajasthan and India. He specialises in luxury weddings at palace venues in Kukas and Amer Road, farmhouse Sangeets on Ajmer Road, and NRI destination weddings. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top choice for elite families."
+    a: "Anchor Yash Soni is Jaipur's 4.9â˜… rated wedding anchor with 700+ shows hosted across Rajasthan and India. He specialises in luxury weddings at palace venues in Kukas and Amer Road, farmhouse Sangeets on Ajmer Road, and NRI destination weddings. His bilingual Hindi/English fluency and unscripted crowd psychology make him the top choice for elite families."
   },
   {
     q: "Do you prepare scripts for family members hosting performances?",
@@ -132,32 +132,32 @@ const FAQS = [
   },
   {
     q: "Can you handle a crowd that is shy to dance or participate?",
-    a: "That is a specialty. I use interactive Ice-Breaker games and crowd psychology techniques that naturally pull even the shyest guests onto the floor — without force or awkwardness. The dance floor at every Sangeet I host ends up packed. That is the benchmark."
+    a: "That is a specialty. I use interactive Ice-Breaker games and crowd psychology techniques that naturally pull even the shyest guests onto the floor â€” without force or awkwardness. The dance floor at every Sangeet I host ends up packed. That is the benchmark."
   },
   {
     q: "Do you travel for destination weddings across Rajasthan and India?",
     a: "Absolutely. While Jaipur is the base, I regularly host destination weddings in Udaipur, Jodhpur, Jaisalmer, Pushkar, and across Jaipur & Rajasthan. Travel logistics and accommodation are structured into the booking terms. Early enquiry is recommended as destination slots fill faster."
   },
   {
-    q: "What is your hosting style — traditional or modern?",
-    a: "Both, and knowing which to use when is the craft. High-energy, sharp wit for the Sangeet and Baraat. Deeply traditional, poetic, and sophisticated for the Varmala and Pheras. The ability to shift between these registers seamlessly — without the room noticing the switch — is what sets a real wedding anchor apart."
+    q: "What is your hosting style â€” traditional or modern?",
+    a: "Both, and knowing which to use when is the craft. High-energy, sharp wit for the Sangeet and Baraat. Deeply traditional, poetic, and sophisticated for the Varmala and Pheras. The ability to shift between these registers seamlessly â€” without the room noticing the switch â€” is what sets a real wedding anchor apart."
   },
   {
     q: "Do you provide fluent commentary in English and Hindi?",
-    a: "Yes, fluently in both. For NRI families with international guests, I switch between Hindi and English seamlessly — sometimes mid-sentence — without breaking the room's energy. I also add Marwari and Rajasthani cultural touches to connect with family elders."
+    a: "Yes, fluently in both. For NRI families with international guests, I switch between Hindi and English seamlessly â€” sometimes mid-sentence â€” without breaking the room's energy. I also add Marwari and Rajasthani cultural touches to connect with family elders."
   },
   {
     q: "What happens if the wedding timeline runs late?",
-    a: "Indian weddings always run late — I plan for it. I carry a library of crowd interactions, games, and filler moments specifically designed for unexpected gaps. When the delay happens, the guests don't see a problem. They see a planned crowd moment. That is the real skill."
+    a: "Indian weddings always run late â€” I plan for it. I carry a library of crowd interactions, games, and filler moments specifically designed for unexpected gaps. When the delay happens, the guests don't see a problem. They see a planned crowd moment. That is the real skill."
   },
   {
     q: "How far in advance should we book a wedding anchor in Jaipur?",
-    a: "Jaipur's peak wedding season (October–February) fills 6–8 months in advance. I do not maintain a waitlist and do not send replacements. Once your date is confirmed, it is exclusively reserved for your event. The moment your venue is locked, reach out via WhatsApp."
+    a: "Jaipur's peak wedding season (Octoberâ€“February) fills 6â€“8 months in advance. I do not maintain a waitlist and do not send replacements. Once your date is confirmed, it is exclusively reserved for your event. The moment your venue is locked, reach out via WhatsApp."
   }
 ];
-// ─────────────────────────────────────────────
-// FAQ ITEM — keeps original hover-to-open behaviour
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// FAQ ITEM â€” keeps original hover-to-open behaviour
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const FAQItem = ({ question, answer, id }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -203,9 +203,9 @@ const FAQItem = ({ question, answer, id }) => {
     </div>
   );
 };
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // MAIN PAGE
-// ─────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function WeddingAnchor() {
   const [index, setIndex] = useState(0);
   const heroImages = ["/hero-slide-1.webp", "/gallery-4.webp", "/service-wedding.webp"];
@@ -213,7 +213,7 @@ export default function WeddingAnchor() {
     const timer = setInterval(() => setIndex((i) => (i + 1) % heroImages.length), 5000);
     return () => clearInterval(timer);
   }, []);
-  // FAQ JSON-LD — injected in page (LocalBusiness is in layout)
+  // FAQ JSON-LD â€” injected in page (LocalBusiness is in layout)
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -226,22 +226,22 @@ export default function WeddingAnchor() {
   return (
     <main className="bg-[#050505] text-white min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans">
       <style>{style}</style>
-      {/* FAQ schema only — LocalBusiness + Breadcrumb are in layout.jsx */}
-      {/* ══════════════════════════════════════
+      {/* FAQ schema only â€” LocalBusiness + Breadcrumb are in layout.jsx */}
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           BREADCRUMB
-      ══════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <nav className="pt-24 md:pt-28 pb-0 px-5 md:px-10 max-w-6xl mx-auto sr-only">
         <div className="flex items-center gap-2 text-xs text-zinc-600">
           <Link href="/" className="hover:text-[#B5952F] transition-colors">Home</Link>
-          <span>›</span>
+          <span>â€º</span>
           <Link href="/anchor-in-jaipur" className="hover:text-[#B5952F] transition-colors">Best Anchor Jaipur</Link>
-          <span>›</span>
+          <span>â€º</span>
           <span className="text-zinc-400">Wedding Anchor</span>
         </div>
       </nav>
-      {/* ══════════════════════════════════════
-          1. HERO — H1 is the primary keyword
-      ══════════════════════════════════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          1. HERO â€” H1 is the primary keyword
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 ">
           <AnimatePresence mode="popLayout">
@@ -263,18 +263,18 @@ export default function WeddingAnchor() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full /40 backdrop-blur-md mb-8">
               <Star className="w-3 h-3 text-[#B5952F] fill-[#D4AF37]" />
-              <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">4.9★ · Best Wedding Anchor in Jaipur</span>
+              <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">4.9â˜… Â· Best Wedding Anchor in Jaipur</span>
             </div>
-            {/* H1 — primary keyword */}
+            {/* H1 â€” primary keyword */}
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
               The Voice of <br /> <G>Forever.</G>
             </h1>
             {/* Subhead with location keywords */}
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-4">
-              Jaipur's most trusted wedding anchor — palace weddings in Kukas, Sangeets on Ajmer Road, and destination weddings across Rajasthan.
+              Jaipur's most trusted wedding anchor â€” palace weddings in Kukas, Sangeets on Ajmer Road, and destination weddings across Rajasthan.
             </p>
             <p className="text-zinc-500 text-sm mb-10 tracking-wide">
-              700+ weddings &nbsp;·&nbsp; Bilingual Hindi/English &nbsp;·&nbsp; 100% Unscripted &nbsp;·&nbsp; NRI specialist
+              700+ shows &nbsp;Â·&nbsp; Bilingual Hindi/English &nbsp;Â·&nbsp; 100% Unscripted &nbsp;Â·&nbsp; NRI specialist
             </p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" aria-label="Book best wedding anchor in Jaipur">
               <button className="px-10 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:scale-105 hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)] active:scale-95">
@@ -284,37 +284,37 @@ export default function WeddingAnchor() {
           </motion.div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          2. PHILOSOPHY — kept original structure
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          2. PHILOSOPHY â€” kept original structure
           SEO: h4 upgraded to h3
-      ══════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 md:py-32 container mx-auto px-5 md:px-10">
         <div className="grid lg:grid-cols-12 gap-12 md:gap-16 items-center">
           <div className="lg:col-span-5">
-            <SectionHeading subtitle="The Professional Approach" title="Beyond The Microphone." />
+            <SectionHeading subtitle="Your Wedding Anchor and Emcee" title="Beyond The Microphone." />
             <p className="text-zinc-300 text-lg leading-relaxed mb-10 border-l-4 border-[#D4AF37] pl-6 font-medium">
-              The best wedding anchor in Jaipur isn't the one with the most years — it's the one who becomes part of your family for the night. I bridge the gap between families, transforming a room of strangers into one unforgettable celebration.
+              The best wedding anchor in Jaipur isn't the one with the most years â€” it's the one who becomes part of your family for the night. I bridge the gap between families, transforming a room of strangers into one unforgettable celebration.
             </p>
             <div className="space-y-6">
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
                 <Heart className="w-10 h-10 text-[#B5952F] shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Emotional Intelligence</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">Knowing exactly when to ignite the Sangeet and when to let the sacred Varmala ritual breathe in silence. Two completely different disciplines — mastered in one.</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">Knowing exactly when to ignite the Sangeet and when to let the sacred Varmala ritual breathe in silence. Two completely different disciplines â€” mastered in one.</p>
                 </div>
               </div>
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
                 <Sparkles className="w-10 h-10 text-[#B5952F] shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">100% Unscripted</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">Zero paper scripts in 700+ weddings. Every word is earned live. Spontaneous family banter and crowd psychology that feels personal, never rehearsed.</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">Zero paper scripts in 700+ shows. Every word is earned live. Spontaneous family banter and crowd psychology that feels personal, never rehearsed.</p>
                 </div>
               </div>
               <div className="flex gap-5 p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
                 <ShieldCheck className="w-10 h-10 text-[#B5952F] shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Crisis Invisible</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">PA failures, delayed brides, last-minute changes — all handled invisible to your guests. Your wedding runs flawlessly. Always.</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">PA failures, delayed brides, last-minute changes â€” all handled invisible to your guests. Your wedding runs flawlessly. Always.</p>
                 </div>
               </div>
             </div>
@@ -323,7 +323,7 @@ export default function WeddingAnchor() {
             <div className="absolute inset-0 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
               <Image src="/service-wedding.webp"
                 className="w-full h-full object-cover"
-                alt="Anchor Yash Soni — best wedding anchor in Jaipur hosting a luxury Rajasthan wedding"
+                alt="Anchor Yash Soni â€” best wedding anchor in Jaipur hosting a luxury Rajasthan wedding"
                 priority
               quality={90} sizes="(max-width: 768px) 100vw, 50vw" />
               <div className="absolute inset-0 border-2 border-[#D4AF37]/20 m-5 rounded-2xl pointer-events-none" />
@@ -331,8 +331,8 @@ export default function WeddingAnchor() {
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="/70 backdrop-blur-sm border border-white/10 rounded-xl p-4 flex items-center gap-4">
                   <div>
-                    <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-0.5">4.9★ Wedding Anchor</p>
-                    <p className="text-white text-xs">700+ weddings · Jaipur & Jaipur & Rajasthan</p>
+                    <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-0.5">4.9â˜… Wedding Anchor</p>
+                    <p className="text-white text-xs">700+ shows Â· Jaipur & Jaipur & Rajasthan</p>
                   </div>
                 </div>
               </div>
@@ -340,9 +340,9 @@ export default function WeddingAnchor() {
           </div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          3. CULTURAL EXPERTISE — SEO text upgraded
-      ══════════════════════════════════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          3. CULTURAL EXPERTISE â€” SEO text upgraded
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 md:py-32 bg-[#080808] border-t border-white/5">
         <div className="container mx-auto px-5 md:px-10">
           <SectionHeading subtitle="Cultural Fluency" title="Celebrating Every Tradition" align="center" />
@@ -359,9 +359,9 @@ export default function WeddingAnchor() {
           </div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          4. EVENT FLOW — same structure
-      ══════════════════════════════════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          4. EVENT FLOW â€” same structure
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 md:py-32  border-t border-white/5">
         <div className="container mx-auto px-5 md:px-10">
           <SectionHeading subtitle="Total Show Management" title="From Welcome to After Party" align="center" />
@@ -377,10 +377,10 @@ export default function WeddingAnchor() {
           </div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          5. LOCATION COVERAGE — NEW SEO SECTION
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          5. LOCATION COVERAGE â€” NEW SEO SECTION
           Replaces no location data in original
-      ══════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 md:py-32 bg-[#080808] border-t border-white/5">
         <div className="container mx-auto px-5 md:px-10">
           <SectionHeading subtitle="Jaipur Coverage" title="Wedding Anchor Across All Jaipur Zones" align="center" />
@@ -409,9 +409,9 @@ export default function WeddingAnchor() {
           </ScrollReveal>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          6. THE TRILOGY — same structure, upgraded alt text
-      ══════════════════════════════════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          6. THE TRILOGY â€” same structure, upgraded alt text
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 md:py-32  border-t border-white/5">
         <div className="container mx-auto px-5 md:px-10">
           <SectionHeading subtitle="Signature Hosting" title="The Wedding Event Trilogy" align="center" />
@@ -421,14 +421,14 @@ export default function WeddingAnchor() {
                 title: "The Sangeet",
                 img: "/gallery-1.webp",
                 icon: Music,
-                desc: "High-voltage energy, interactive family roasts, and non-stop crowd activation. Dance floor packed until 4 AM — guaranteed.",
+                desc: "High-voltage energy, interactive family roasts, and non-stop crowd activation. Dance floor packed until 4 AM â€” guaranteed.",
                 href: "/sangeet-anchor-jaipur"
               },
               {
                 title: "The Varmala",
                 img: "/gallery-4.webp",
                 icon: Heart,
-                desc: "Poetic commentary and cinematic narration for the wedding's most emotional spotlight. Bilingual — Hindi poetry and English warmth.",
+                desc: "Poetic commentary and cinematic narration for the wedding's most emotional spotlight. Bilingual â€” Hindi poetry and English warmth.",
                 href: "/wedding-anchor-jaipur"
               },
               {
@@ -444,7 +444,7 @@ export default function WeddingAnchor() {
                   <div className="group relative h-[480px] md:h-[550px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl cursor-pointer hover:shadow-[0_0_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37]/40 transition-all duration-400">
                     <Image src={item.img}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 grayscale group-hover:grayscale-0"
-                      alt={`${item.title} — best wedding anchor in Jaipur`}
+                      alt={`${item.title} â€” best wedding anchor in Jaipur`}
                       
                     quality={90} sizes="(max-width: 768px) 100vw, 50vw" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8 flex flex-col justify-end">
@@ -460,10 +460,10 @@ export default function WeddingAnchor() {
           </div>
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          7. FAQ — same hover behaviour kept
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          7. FAQ â€” same hover behaviour kept
           Questions upgraded for Google PAA
-      ══════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 md:py-32 container mx-auto px-5 md:px-10 max-w-4xl">
         <SectionHeading subtitle="Wedding Support" title="Wedding Anchor FAQs" align="center" />
         <div className="space-y-4">
@@ -472,11 +472,11 @@ export default function WeddingAnchor() {
           ))}
         </div>
       </section>
-      {/* ══════════════════════════════════════
-          8. CTA — dark version, keeps urgency
-          Original was yellow bg — changed to dark
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          8. CTA â€” dark version, keeps urgency
+          Original was yellow bg â€” changed to dark
           brand-consistent version
-      ══════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 md:py-32  border-t border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.07),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -489,7 +489,7 @@ export default function WeddingAnchor() {
               The Stage <G>Awaits.</G>
             </h2>
             <p className="text-zinc-400 text-base mb-3 leading-relaxed max-w-lg mx-auto">
-              Don't leave your wedding's most important voice to chance. Jaipur's most reviewed wedding anchor books <strong className="text-[#B5952F]">6–8 months in advance.</strong>
+              Don't leave your wedding's most important voice to chance. Jaipur's most reviewed wedding anchor books <strong className="text-[#B5952F]">6â€“8 months in advance.</strong>
             </p>
             <p className="text-zinc-600 text-sm mb-10">No replacements sent. No waitlist kept. One wedding per date.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
@@ -498,7 +498,7 @@ export default function WeddingAnchor() {
               </button>
             </Link>
             <p className="text-zinc-700 text-[10px] uppercase tracking-widest mt-5">
-              Best Wedding Anchor in Jaipur · <strong className="text-[#B5952F]">Limited Dates Remaining</strong>
+              Best Wedding Anchor in Jaipur Â· <strong className="text-[#B5952F]">Limited Dates Remaining</strong>
             </p>
             {/* Internal links */}
             <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-zinc-600 text-[10px] uppercase tracking-widest">

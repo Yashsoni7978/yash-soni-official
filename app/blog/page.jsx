@@ -1,4 +1,4 @@
-import { BLOG_POSTS } from "../../data/blogs";
+﻿import { BLOG_POSTS } from "../../data/blogs";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Wedding Anchor Blog | Tips & Guides | Anchor Yash Soni",
   description:
-    "Expert tips, real event stories, and hosting insights from Anchor Yash Soni — Jaipur's most trusted anchor for weddings, sangeets, and corporate events across Rajasthan.",
+    "Expert tips, real event stories, and hosting insights from Anchor Yash Soni, Jaipur's most trusted anchor for weddings, sangeets, and corporate events across Rajasthan.",
   alternates: {
     canonical: "https://yashsoni.in/blog",
   },
@@ -30,7 +30,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni Blog — Event Hosting Tips",
+        alt: "Anchor Yash Soni Blog, Event Hosting Tips",
       },
     ],
   },
@@ -101,7 +101,7 @@ export default function BlogPage() {
       />
 
       {/*
-        FIXED: Removed <main> wrapper — layout.tsx already provides the main landmark.
+        FIXED: Removed <main> wrapper, layout.tsx already provides the main landmark.
         Nested <main> elements are invalid HTML and break screen reader navigation.
       */}
       <div className="min-h-screen bg-[#050505] pt-32 pb-20 font-sans selection:bg-[#D4AF37] selection:text-black">
@@ -128,7 +128,7 @@ export default function BlogPage() {
                   {featured.image && (
                     <Image
                       src={featured.image}
-                      alt={`${featured.title} — featured blog article by Anchor Yash Soni`}
+                      alt={`${featured.title}, featured blog article by Anchor Yash Soni`}
                       fill
                       priority
                       // FIXED: removed unoptimized={true} from all blog images
@@ -195,7 +195,7 @@ export default function BlogPage() {
                   {vertical.image && (
                     <Image
                       src={vertical.image}
-                      alt={`${vertical.title} — blog article by Anchor Yash Soni`}
+                      alt={`${vertical.title}, blog article by Anchor Yash Soni`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       quality={80}

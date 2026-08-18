@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -155,18 +155,18 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "Using cheap, loud humor that ruins the elegance of a Pratap Palace (Taj) event", fix: "Taj-standard hosting — refined, impeccably bilingual, and deeply elegant" },
+  { problem: "Using cheap, loud humor that ruins the elegance of a Pratap Palace (Taj) event", fix: "Taj-standard hosting, refined, impeccably bilingual, and deeply elegant" },
   { problem: "Ignoring Ajmer's syncretic culture and pushing a one-dimensional Royal Rajput theme", fix: "Culturally intelligent anchoring that reads and honors the family's exact heritage" },
   { problem: "Losing the crowd during outdoor Sangeets near the windy Ana Sagar Lake", fix: "Mastery of open-air acoustic projection and crowd-condensing psychology" },
   { problem: "Failing to bridge the gap between VIP guests/elders and younger NRI friends", fix: "Seamless code-switching between formal Hindi respect and metropolitan English" },
-  { problem: "Over-reading scripts during complex corporate or felicitation galas", fix: "100% unscripted flow—maintaining direct eye contact and instant crowd control" },
+  { problem: "Over-reading scripts during complex corporate or felicitation galas", fix: "100% unscripted flow-maintaining direct eye contact and instant crowd control" },
   { problem: "Unable to adapt when an event transitions from Ajmer to Pushkar venues", fix: "Complete regional fluency, adapting energy to match the specific city vibe" },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Bansal Family",
-    quote: "Choosing Pratap Palace meant we needed someone who matched the Taj standard. We were terrified of getting a loud 'typical' wedding MC. Yash was a revelation. His hosting was flawless—combining perfect poise during the formal ceremonies with unscripted celebration that got both sides of our international family fully invested.",
+    quote: "Choosing Pratap Palace meant we needed someone who matched the Taj standard. We were terrified of getting a loud 'typical' wedding MC. Yash was a revelation. His hosting was flawless-combining perfect poise during the formal ceremonies with unscripted celebration that got both sides of our international family fully invested.",
     event: "Heritage Wedding · Pratap Palace · 350 guests"
   },
   {
@@ -175,7 +175,7 @@ const TESTIMONIALS = [
     event: "Grand Reception · Ana Sagar Resort · 500 guests"
   },
   {
-    name: "Secretary — State Medical Association",
+    name: "Secretary, State Medical Association",
     quote: "Our annual medical conference in Ajmer needed an anchor who could manage the felicitation of 60 senior doctors without a single hiccup, and then turn the evening into a lively gala. Yash executed both halves of the day flawlessly. Unbelievable memory, zero scripts, total control.",
     event: "Corporate Summit · Mansingh Palace · 400 Delegates"
   },
@@ -187,13 +187,13 @@ const FAQS = [
   { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
   { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
-  { q: "Who is the best anchor for destination weddings in Ajmer?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows, specialising in Ajmer and Pushkar's unique destination wedding circuit — including premium resorts and heritage properties. Bilingual Hindi/English, completely unscripted, and experienced in managing large-scale destination events for NRI and traditional Indian families." },
+  { q: "Who is the best anchor for destination weddings in Ajmer?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows, specialising in Ajmer and Pushkar's unique destination wedding circuit, including premium resorts and heritage properties. Bilingual Hindi/English, completely unscripted, and experienced in managing large-scale destination events for NRI and traditional Indian families." },
   { q: "How do you manage events in Ajmer given its proximity to Pushkar?", a: "Ajmer and Pushkar often operate as a combined destination wedding hub. While Pushkar venues focus on lakeside heritage, Ajmer venues often accommodate larger capacities with a blend of modern luxury and tradition. The hosting style adapts seamlessly between the spiritual depth required for a Pushkar ceremony and the high-energy luxury needed for an Ajmer reception." },
-  { q: "Can you host bilingual events for NRI families in Ajmer?", a: "Yes. Destination weddings in Ajmer frequently attract NRI families. Bilingual hosting is critical here — sophisticated English for the international guests and respectful, culturally rich Hindi for the local relatives. This ensures every guest feels completely connected to the celebration." },
+  { q: "Can you host bilingual events for NRI families in Ajmer?", a: "Yes. Destination weddings in Ajmer frequently attract NRI families. Bilingual hosting is critical here, sophisticated English for the international guests and respectful, culturally rich Hindi for the local relatives. This ensures every guest feels completely connected to the celebration." },
   { q: "Do you anchor corporate events in Ajmer?", a: "Corporate events, dealer meets, and annual galas at Ajmer's premium hotels are a strong specialisation. The corporate hosting register is sharp, brand-aligned, and professional, distinctly different from a wedding tone." },
   { q: "How far in advance should I book for an Ajmer wedding?", a: "Ajmer's peak season aligns with the general Rajasthan wedding season (October–March). Premium properties and top anchors book out 6–8 months ahead. Secure your dates via WhatsApp as soon as your venue is confirmed." },
-  { q: "Who is the best emcee or host in Ajmer for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ajmer destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies across all Ajmer venues." },
-  { q: "What is the difference between a wedding anchor, emcee, and host in Ajmer?", a: "Anchor, emcee, host, and MC refer to the same professional role leading the event. While event planners may say 'emcee' and traditional families say 'anchor', the skill set — managing transitions, commanding the room, and engaging the crowd — remains identical." },
+  { q: "Who is the best emcee or host in Ajmer for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ajmer destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies across all Ajmer venues." },
+  { q: "What is the difference between a wedding anchor, emcee, and host in Ajmer?", a: "Anchor, emcee, host, and MC refer to the same professional role leading the event. While event planners may say 'emcee' and traditional families say 'anchor', the skill set, managing transitions, commanding the room, and engaging the crowd, remains identical." },
 ];
 
 
@@ -205,7 +205,7 @@ export default function AjmerPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/pushkar_bg.webp" alt="Best Anchor in Ajmer — Premium Heritage Destination" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/pushkar_bg.webp" alt="Best Anchor in Ajmer, Premium Heritage Destination" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -286,7 +286,7 @@ export default function AjmerPage() {
                 Whether commanding a Taj-standard reception at <strong className="text-[#B5952F]">Pratap Palace</strong> or electrifying an open-air Sangeet beside Ana Sagar lake, Yash brings an unmatched level of bilingual polish and unscripted authority.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                Ajmer requires a profound understanding of syncretic heritage. It is a city where deep spiritual roots meet spectacular palatial luxury. Yash bridges this dynamic flawlessly—delivering the formal elegance expected by NRI and HNI families while retaining the authentic cultural heartbeat of India’s most welcoming city.
+                Ajmer requires a profound understanding of syncretic heritage. It is a city where deep spiritual roots meet spectacular palatial luxury. Yash bridges this dynamic flawlessly-delivering the formal elegance expected by NRI and HNI families while retaining the authentic cultural heartbeat of India’s most welcoming city.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -435,7 +435,7 @@ export default function AjmerPage() {
               Simultaneously, the vast outdoor lawns by Ana Sagar lake host some of the most massive local Marwari and community weddings. Here, extreme crowd psychology and traditional linguistic markers are required to engage the elders. Operating successfully in Ajmer means never being a one-trick pony; you must be as capable in a Taj boardroom as you are commanding 1,000 guests under the desert stars.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Ajmer fluency—mastering the Taj protocol, managing lake-side acoustics, and providing elite bilingual flow—is not a skill that can be faked.
+              Ajmer fluency-mastering the Taj protocol, managing lake-side acoustics, and providing elite bilingual flow-is not a skill that can be faked.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -491,7 +491,7 @@ export default function AjmerPage() {
               Grand Receptions.<br /><G>Royal Banquets.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Ajmer events swing wildly in scale. One day you are ensuring an impeccably timed entrance for a VIP function at Pratap Palace; the next, you are controlling a booming Sangeet crowd across a massive garden near Ana Sagar. This isn't just about vocal projection—it is about possessing enough stage presence that 1,000 moving people stop and focus whenever you take the mic.
+              Ajmer events swing wildly in scale. One day you are ensuring an impeccably timed entrance for a VIP function at Pratap Palace; the next, you are controlling a booming Sangeet crowd across a massive garden near Ana Sagar. This isn't just about vocal projection-it is about possessing enough stage presence that 1,000 moving people stop and focus whenever you take the mic.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
@@ -528,7 +528,7 @@ export default function AjmerPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -540,7 +540,7 @@ export default function AjmerPage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -548,10 +548,10 @@ export default function AjmerPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Ajmer's Best.</G>
+                Whatever You Call It -{" "}<G>Ajmer's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Ajmer —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Ajmer -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -563,7 +563,7 @@ export default function AjmerPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Ajmer",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Ajmer.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Ajmer.",
                 keywords: ["best wedding anchor ajmer", "wedding emcee ajmer", "wedding host ajmer", "wedding mc ajmer"],
               },
               {
@@ -581,13 +581,13 @@ export default function AjmerPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Ajmer",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Ajmer — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Ajmer, by any name.",
                 keywords: ["best emcee in ajmer", "best anchor in ajmer", "best host in ajmer", "best mc ajmer"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Ajmer",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host ajmer", "english speaking anchor ajmer", "bilingual emcee ajmer"],
               },
               {
@@ -628,7 +628,7 @@ export default function AjmerPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -734,7 +734,7 @@ export default function AjmerPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Ajmer experiences massive overlap between premium destination weddings and large-scale medical/corporate conferences. Elite hosts are locked in months in advance.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

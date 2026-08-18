@@ -1,4 +1,4 @@
-// app/anchor-in-coorg/layout.jsx
+﻿// app/anchor-in-coorg/layout.jsx
 // Ultra-Luxury Eco-Estate Destination Anchor Layout
 
 const CITY     = "Coorg";
@@ -15,7 +15,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Coorg",
     "Best Wedding Anchor Coorg",
@@ -85,13 +85,13 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "NRI Destination Wedding — Singapore" },
+      author: { "@type": "Person", name: "NRI Destination Wedding, Singapore" },
       reviewBody: "Hosting at Taj Madikeri required absolute poise and the ability to manage a sprawling rainforest estate. Yash was incredible. His English moderation for our international guests was flawlessly professional and unscripted.",
     },
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Tech Leadership — Bangalore" },
+      author: { "@type": "Person", name: "Tech Leadership, Bangalore" },
       reviewBody: "We held an executive offsite at Tamara. Yash moderated our high-stakes strategy sessions with pure executive polish. He perfectly bridges the gap between formal corporate needs and high-energy gala hosting.",
     },
   ],
@@ -152,9 +152,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-coorg/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Coorg | Taj Madikeri & Tamara Emcee — Yash Soni`,
+  name: `Best Anchor in Coorg | Taj Madikeri & Tamara Emcee, Yash Soni`,
   headline: `Coorg's Premier Event Anchor for Ultra-Luxury Coffee Estate Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Coorg destination weddings. Mastering prestigious properties like Taj Madikeri and Tamara Coorg with unscripted VIP executive hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Coorg destination weddings. Mastering prestigious properties like Taj Madikeri and Tamara Coorg with unscripted VIP executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Karnataka` },
@@ -166,7 +166,7 @@ const webPageSchema = {
 export const metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Coorg | Luxury Coffee Estate Wedding Emcee`,
-  description: `Looking for the best anchor in Coorg? Anchor Yash Soni — 4.9★. Expert for Taj Madikeri, Tamara, and ultra-prestigious coffee estate weddings. Flawless unscripted bilingual hosting for VIP events.`,
+  description: `Looking for the best anchor in Coorg? Anchor Yash Soni, 4.9★. Expert for Taj Madikeri, Tamara, and ultra-prestigious coffee estate weddings. Flawless unscripted bilingual hosting for VIP events.`,
   keywords: [
     "anchor in coorg",
     "best anchor in coorg",
@@ -194,13 +194,13 @@ export const metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Coorg | Elite Coffee Estate Destination Wedding Host`,
     description: `4.9★ rated. Coorg's premium anchor for highly prestigious destination weddings spanning the Western Ghats luxury ridge. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Coorg — Anchor Yash Soni at Coffee Estate Luxury Resorts` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Coorg, Anchor Yash Soni at Coffee Estate Luxury Resorts` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Coorg | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Coorg | Anchor Yash Soni, 4.9★`,
     description: `Taj Madikeri. Tamara Coorg. Coorg's premier bilingual event anchor for exclusive VIP Sangeets and heavily restricted estate ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -209,7 +209,7 @@ export const metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Coorg | Western Ghats VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Coorg | Western Ghats VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Coffee Estate Wedding, VIP Events, ${CITY}, Karnataka, India`,
     "DC.coverage": `${CITY}, Karnataka, India`,
     "DC.language": "en-IN",

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 // ── FAQ DATA ───────────────────────────────────────────────────────────────
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Sports Commentator Anchor Yash Soni — Jaipur",
+        alt: "Sports Commentator Anchor Yash Soni, Jaipur",
       },
     ],
   },

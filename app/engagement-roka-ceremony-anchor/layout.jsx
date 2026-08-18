@@ -1,9 +1,9 @@
-// app/engagement-roka-ceremony-anchor/layout.jsx
+﻿// app/engagement-roka-ceremony-anchor/layout.jsx
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://yashsoni.in/engagement-roka-ceremony-anchor",
-  name: "Engagement & Roka Ceremony Anchor Jaipur — Yash Soni",
+  name: "Engagement & Roka Ceremony Anchor Jaipur, Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
@@ -84,7 +84,7 @@ export const metadata = {
     siteName: "Anchor Yash Soni",
     title: "Engagement & Roka Ceremony Anchor Jaipur | Yash Soni",
     description: "Custom scripted engagement, roka & ring ceremony anchor in Jaipur. Interactive games and bilingual hosting for families meeting for the first time.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Engagement Ceremony Anchor Jaipur — Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Engagement Ceremony Anchor Jaipur, Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",

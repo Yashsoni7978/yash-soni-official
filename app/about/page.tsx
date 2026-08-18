@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 // ── STRUCTURED DATA ────────────────────────────────────────────────────────
@@ -53,9 +53,9 @@ const aboutPageSchema = {
   "@type": "AboutPage",
   "@id": "https://yashsoni.in/about",
   url: "https://yashsoni.in/about",
-  name: "About Anchor Yash Soni — Professional Event Anchor & Emcee, Jaipur",
+  name: "About Anchor Yash Soni, Professional Event Anchor & Emcee, Jaipur",
   description:
-    "The story, philosophy, and credentials of Anchor Yash Soni — Jaipur's 4.9★ rated premium event anchor with 700+ events hosted across Rajasthan and India.",
+    "The story, philosophy, and credentials of Anchor Yash Soni, Jaipur's 4.9★ rated premium event anchor with 700+ events hosted across Rajasthan and India.",
   mainEntity: {
     "@type": "Person",
     "@id": "https://yashsoni.in/#person",
@@ -105,9 +105,9 @@ const breadcrumbSchema = {
 // Distinct from homepage: profile-type OG, unique title keyword "story"
 // to avoid title duplication in Google's index.
 export const metadata: Metadata = {
-  title: "About Anchor Yash Soni | 4.9★ Event Anchor — 700+ Events, Jaipur",
+  title: "About Anchor Yash Soni | 4.9★ Event Anchor, 700+ Events, Jaipur",
   description:
-    "Meet Yash Soni — Jaipur's 4.9★ rated premium event anchor. 700+ events hosted unscripted across Rajasthan. His story, philosophy, approach, and what makes him Jaipur's most trusted anchor.",
+    "Meet Yash Soni, Jaipur's 4.9★ rated premium event anchor. 700+ events hosted unscripted across Rajasthan. His story, philosophy, approach, and what makes him Jaipur's most trusted anchor.",
   alternates: {
     canonical: "https://yashsoni.in/about",
   },
@@ -127,7 +127,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://yashsoni.in/about",
     siteName: "Anchor Yash Soni",
-    title: "About Anchor Yash Soni | Premium Event Anchor — Jaipur",
+    title: "About Anchor Yash Soni | Premium Event Anchor, Jaipur",
     description:
       "700+ events. 4.9★ across 40+ reviews. The story, philosophy, and craft behind Jaipur's most trusted event anchor.",
     images: [
@@ -135,7 +135,7 @@ export const metadata: Metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — About Page",
+        alt: "Anchor Yash Soni, About Page",
       },
     ],
     firstName: "Yash",
@@ -145,7 +145,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Anchor Yash Soni | Best Anchor in Jaipur",
     description:
-      "4.9★. 700+ events. The story behind Jaipur's most trusted event anchor — 4 years, zero paper scripts.",
+      "4.9★. 700+ events. The story behind Jaipur's most trusted event anchor, 4 years, zero paper scripts.",
     images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
   },
 };

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -73,12 +73,12 @@ const MANDAWA_IDENTITY = [
   {
     icon: Palette,
     title: "The Fresco Haveli Universe",
-    desc: "Mandawa is the undisputed capital of Shekhawati's open-air fresco art tradition. The havelis here are covered floor-to-ceiling in centuries-old painted murals depicting everything from mythological scenes to steam engines and early motorcars. Hosting a wedding against these painted walls is not decorating an event — it is stepping into a living museum. The anchor must inhabit that space with the awareness and reverence it deserves while generating genuine celebration energy."
+    desc: "Mandawa is the undisputed capital of Shekhawati's open-air fresco art tradition. The havelis here are covered floor-to-ceiling in centuries-old painted murals depicting everything from mythological scenes to steam engines and early motorcars. Hosting a wedding against these painted walls is not decorating an event, it is stepping into a living museum. The anchor must inhabit that space with the awareness and reverence it deserves while generating genuine celebration energy."
   },
   {
     icon: Globe,
     title: "The Marwari Mercantile Legacy",
-    desc: "Shekhawati was the home of Rajasthan's great trading families — the Birlas, the Singhanias, the Poddars — whose merchant wealth built the havelis and whose descendants now host destination weddings in them. The cultural register of a Mandawa event is governed by the Marwari mercantile tradition: understated elegance, community pride, and a very specific ceremonial vocabulary that distinguishes insiders from guests. The anchor who reads this room correctly creates an immediate bond of trust."
+    desc: "Shekhawati was the home of Rajasthan's great trading families, the Birlas, the Singhanias, the Poddars, whose merchant wealth built the havelis and whose descendants now host destination weddings in them. The cultural register of a Mandawa event is governed by the Marwari mercantile tradition: understated elegance, community pride, and a very specific ceremonial vocabulary that distinguishes insiders from guests. The anchor who reads this room correctly creates an immediate bond of trust."
   },
   {
     icon: Landmark,
@@ -97,13 +97,13 @@ const SERVICES = [
   {
     icon: Music2,
     title: "Castle Roof Sangeet Emcee",
-    desc: "Rooftop Sangeet events at Castle Mandawa — where the Shekhawati horizon stretches in every direction and the painted tower silhouettes frame the stage. Managing the open rooftop acoustic and the dramatic sunset backdrop that arrives precisely at the peak energy moment — using it as a crescendo rather than a distraction.",
+    desc: "Rooftop Sangeet events at Castle Mandawa, where the Shekhawati horizon stretches in every direction and the painted tower silhouettes frame the stage. Managing the open rooftop acoustic and the dramatic sunset backdrop that arrives precisely at the peak energy moment, using it as a crescendo rather than a distraction.",
     tag: "Sangeet"
   },
   {
     icon: Flower2,
     title: "Courtyard Pre-Wedding Events",
-    desc: "Mehndi mornings in Mandawa's iconic painted haveli courtyards — where the fresco walls become the event's visual identity. Interactive, unscripted, and deeply attuned to the heritage character of the space and the diverse guest mix of a Shekhawati destination event. The warm personal hosting that turns strangers into family before the main wedding events.",
+    desc: "Mehndi mornings in Mandawa's iconic painted haveli courtyards, where the fresco walls become the event's visual identity. Interactive, unscripted, and deeply attuned to the heritage character of the space and the diverse guest mix of a Shekhawati destination event. The warm personal hosting that turns strangers into family before the main wedding events.",
     tag: "Pre-Wedding"
   },
   {
@@ -126,28 +126,28 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "No awareness of Shekhawati's Marwari mercantile cultural identity and ceremonial protocols", fix: "Deep Marwari heritage fluency — correct community register, ceremony vocabulary, family structure respect" },
+  { problem: "No awareness of Shekhawati's Marwari mercantile cultural identity and ceremonial protocols", fix: "Deep Marwari heritage fluency, correct community register, ceremony vocabulary, family structure respect" },
   { problem: "Treats the fresco haveli courtyards like any hotel banquet venue", fix: "Haveli-specific hosting that inhabits and honours the extraordinary painted artistic environment" },
-  { problem: "Cannot manage the intimate acoustics of enclosed painted haveli courtyards", fix: "Stone courtyard acoustic technique — close-range crowd command without amplification disruption" },
+  { problem: "Cannot manage the intimate acoustics of enclosed painted haveli courtyards", fix: "Stone courtyard acoustic technique, close-range crowd command without amplification disruption" },
   { problem: "International guests feel excluded by hosting that ignores their cultural context", fix: "Bilingual heritage-context English that makes international art-enthusiast guests genuinely included" },
-  { problem: "Generic Jaipur-style energy feels completely misplaced in this quiet art town", fix: "Shekhawati register — warm, cultured, celebratory without mass-market event energy" },
+  { problem: "Generic Jaipur-style energy feels completely misplaced in this quiet art town", fix: "Shekhawati register, warm, cultured, celebratory without mass-market event energy" },
   { problem: "No preparation for rooftop open-air acoustic challenges at Castle Mandawa", fix: "Rooftop crowd command technique built from repeated open-air destination heritage events" },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Birla Family",
-    quote: "Our family's connection to Shekhawati is personal — it is where our great-grandfathers built their trading dynasty. Hosting the wedding at Mandawa was a homecoming. Yash understood that weight completely. His references to the Marwari heritage, the fresco tradition, and the specific identity of Shekhawati were accurate and deeply felt. The elders were moved in a way we have never seen at a wedding event.",
+    quote: "Our family's connection to Shekhawati is personal, it is where our great-grandfathers built their trading dynasty. Hosting the wedding at Mandawa was a homecoming. Yash understood that weight completely. His references to the Marwari heritage, the fresco tradition, and the specific identity of Shekhawati were accurate and deeply felt. The elders were moved in a way we have never seen at a wedding event.",
     event: "Heritage Wedding · Castle Mandawa · 300 guests"
   },
   {
     name: "Poddar Family",
-    quote: "The Sangeet on Castle Mandawa's rooftop with the Shekhawati desert stretching behind the stage was a moment we will never forget. Yash held that entire crowd — many of them first-time visitors to Shekhawati who were overwhelmed by the environment — for four hours. He made the setting work with the celebration, not against it.",
+    quote: "The Sangeet on Castle Mandawa's rooftop with the Shekhawati desert stretching behind the stage was a moment we will never forget. Yash held that entire crowd, many of them first-time visitors to Shekhawati who were overwhelmed by the environment, for four hours. He made the setting work with the celebration, not against it.",
     event: "Sangeet · Castle Mandawa Rooftop · 250 guests"
   },
   {
     name: "European Heritage Art Tour Group",
-    quote: "We organised a cultural event for 80 art historians and heritage connoisseurs visiting Shekhawati's fresco circuit. Yash anchored the evening at Murmuria Haveli with both academic respect for the art tradition and genuine warmth as a host. Our international delegates were genuinely impressed — both by the venue and by how the event was managed.",
+    quote: "We organised a cultural event for 80 art historians and heritage connoisseurs visiting Shekhawati's fresco circuit. Yash anchored the evening at Murmuria Haveli with both academic respect for the art tradition and genuine warmth as a host. Our international delegates were genuinely impressed, both by the venue and by how the event was managed.",
     event: "Cultural Summit · Murmuria Haveli · 80 delegates"
   },
 ];
@@ -163,7 +163,7 @@ const FAQS = [
   { q: "Can you host bilingual events for NRI families in Mandawa?", a: "Yes. Destination weddings in Mandawa attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Mandawa?", a: "Mandawa is a unique destination for corporate offsites and leadership retreats. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for intimate summits and galas." },
   { q: "How far in advance should I book for a Mandawa wedding?", a: "Mandawa is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Mandawa for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Mandawa destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "Who is the best emcee or host in Mandawa for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Mandawa destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Mandawa?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
@@ -178,7 +178,7 @@ export default function PageClient() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/bride-groom-fort-shoot.webp" alt="Best Anchor in Mandawa — Shekhawati fresco havelis at twilight" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/bride-groom-fort-shoot.webp" alt="Best Anchor in Mandawa, Shekhawati fresco havelis at twilight" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -253,13 +253,13 @@ export default function PageClient() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most culturally fluent destination wedding anchor — commanding crowds with zero paper scripts across every format and venue type in the state.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most culturally fluent destination wedding anchor, commanding crowds with zero paper scripts across every format and venue type in the state.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the painted courtyards of <strong className="text-[#B5952F]">Castle Mandawa</strong> to the rooftop stages overlooking the Shekhawati desert, Yash brings a level of cultural awareness and event command that transforms extraordinary venues into extraordinary experiences.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                Mandawa demands a very specific hosting intelligence — Marwari mercantile cultural fluency, haveli acoustic technique, and bilingual warmth for guest lists that regularly include international art enthusiasts alongside Indian heritage families. These are not improvised skills. They are built through deep cultural immersion and repeated performance in this unique ecosystem.
+                Mandawa demands a very specific hosting intelligence, Marwari mercantile cultural fluency, haveli acoustic technique, and bilingual warmth for guest lists that regularly include international art enthusiasts alongside Indian heritage families. These are not improvised skills. They are built through deep cultural immersion and repeated performance in this unique ecosystem.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -288,7 +288,7 @@ export default function PageClient() {
               The World's Open-Air Gallery<br />Demands a <G>Cultured Voice.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Mandawa is where centuries of Marwari mercantile wealth crystallised into painted art — covering entire havelis in fresco murals that have survived monsoons, wars, and the disappearance of the trading families who commissioned them. An event in this environment is inherently a cultural statement, and the anchor's hosting must reflect that depth.
+              Mandawa is where centuries of Marwari mercantile wealth crystallised into painted art, covering entire havelis in fresco murals that have survived monsoons, wars, and the disappearance of the trading families who commissioned them. An event in this environment is inherently a cultural statement, and the anchor's hosting must reflect that depth.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -402,13 +402,13 @@ export default function PageClient() {
               Marwari Heritage.<br /><G>Fresco Context.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              The families who host events at Castle Mandawa and Murmuria Haveli are, in many cases, descendants of the original Marwari merchant clans who built these properties. For them, a wedding at Mandawa is not a tourism choice — it is a return to the seat of their ancestral identity. The hosting must understand and honour that without ever turning the event into a heritage lecture.
+              The families who host events at Castle Mandawa and Murmuria Haveli are, in many cases, descendants of the original Marwari merchant clans who built these properties. For them, a wedding at Mandawa is not a tourism choice, it is a return to the seat of their ancestral identity. The hosting must understand and honour that without ever turning the event into a heritage lecture.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              The fresco walls themselves require a specific hosting response. In a courtyard where every surface tells a visual story, the anchor competes for guest attention with centuries of extraordinary art. The technique is to work with the environment — referencing it warmly, incorporating it into the event narrative — rather than pretending it is not there and losing to it anyway.
+              The fresco walls themselves require a specific hosting response. In a courtyard where every surface tells a visual story, the anchor competes for guest attention with centuries of extraordinary art. The technique is to work with the environment, referencing it warmly, incorporating it into the event narrative, rather than pretending it is not there and losing to it anyway.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Shekhawati cultural fluency — the Marwari merchant lineages, the fresco art tradition, the correct haveli ceremony vocabulary — is built from deep regional immersion. It is not googled the morning of the event.
+              Shekhawati cultural fluency, the Marwari merchant lineages, the fresco art tradition, the correct haveli ceremony vocabulary, is built from deep regional immersion. It is not googled the morning of the event.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -454,7 +454,7 @@ export default function PageClient() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Mandawa · Shekhawati · The Open-Air Gallery</p>
-                <p className="text-white text-xs">India's most extraordinary fresco heritage destination — every wall a painting, every event a masterpiece.</p>
+                <p className="text-white text-xs">India's most extraordinary fresco heritage destination, every wall a painting, every event a masterpiece.</p>
               </div>
             </div>
           </Reveal>
@@ -464,7 +464,7 @@ export default function PageClient() {
               Intimate Courtyards.<br /><G>Castle Rooftops.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Mandawa events range from 80-person intimate haveli courtyard Mehndis to 350-person rooftop Sangeets at Castle Mandawa. Each scale requires a completely different hosting approach — the same generic energy does not work across both formats. The intimate courtyard requires warmth, proximity, and personal interaction. The rooftop stage requires projection, horizon-scale energy, and acoustic command across an open space with no walls.
+              Mandawa events range from 80-person intimate haveli courtyard Mehndis to 350-person rooftop Sangeets at Castle Mandawa. Each scale requires a completely different hosting approach, the same generic energy does not work across both formats. The intimate courtyard requires warmth, proximity, and personal interaction. The rooftop stage requires projection, horizon-scale energy, and acoustic command across an open space with no walls.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
@@ -501,7 +501,7 @@ export default function PageClient() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -513,7 +513,7 @@ export default function PageClient() {
 
             {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -521,10 +521,10 @@ export default function PageClient() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Mandawa's Best.</G>
+                Whatever You Call It -{" "}<G>Mandawa's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Mandawa —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Mandawa -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -536,7 +536,7 @@ export default function PageClient() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Mandawa",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Mandawa.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Mandawa.",
                 keywords: ["best wedding anchor mandawa", "wedding emcee mandawa", "wedding host mandawa", "wedding mc mandawa"],
               },
               {
@@ -554,13 +554,13 @@ export default function PageClient() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Mandawa",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Mandawa — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Mandawa, by any name.",
                 keywords: ["best emcee in mandawa", "best anchor in mandawa", "best host in mandawa", "best mc mandawa"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Mandawa",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host mandawa", "english speaking anchor mandawa", "bilingual emcee mandawa"],
               },
               {
@@ -601,7 +601,7 @@ export default function PageClient() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -706,7 +706,7 @@ export default function PageClient() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Castle Mandawa and Shekhawati's boutique havelis have strictly limited event capacity. Peak winter dates go fast and I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

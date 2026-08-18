@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-alwar/layout.jsx
-// Minimal layout — all metadata & schemas are in page.tsx
+// Minimal layout, all metadata & schemas are in page.tsx
 
 
 const FAQS = [
@@ -47,7 +47,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-alwar/#webpage`,
   url: `https://yashsoni.in/anchor-in-alwar`,
-  name: `Best Anchor in alwar | Wedding & Event Host — Yash Soni`,
+  name: `Best Anchor in alwar | Wedding & Event Host, Yash Soni`,
   description: `Anchor Yash Soni is the premium event anchor in alwar. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

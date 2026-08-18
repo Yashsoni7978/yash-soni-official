@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -78,7 +78,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 // ─────────────────────────────────────────────
-// DATA — All Alwar-specific
+// DATA, All Alwar-specific
 // ─────────────────────────────────────────────
 const STATS = [
   { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
@@ -91,17 +91,17 @@ const ALWAR_IDENTITY = [
   {
     icon: Globe,
     title: "The NCR Destination Gateway",
-    desc: "Alwar and the surrounding circuit — Sariska, Neemrana, Siliserh — sits at a strategic sweet spot between Delhi NCR and Jaipur. Families booking destination events here are choosing a heritage experience within reach of a metropolitan guest list. The anchor must understand both the NCR client expectations and the Rajputana hospitality culture they are creating."
+    desc: "Alwar and the surrounding circuit, Sariska, Neemrana, Siliserh, sits at a strategic sweet spot between Delhi NCR and Jaipur. Families booking destination events here are choosing a heritage experience within reach of a metropolitan guest list. The anchor must understand both the NCR client expectations and the Rajputana hospitality culture they are creating."
   },
   {
     icon: TreePine,
     title: "The Sariska Wilderness Factor",
-    desc: "The Sariska Tiger Reserve creates a unique character for events in the Alwar region. Safari tented resorts, wildlife-adjacent lawns, and jungle-fringe venues demand a host who can generate enormous energy in an environment where blaring horns and DJ drops are simply not options. Crowd command through voice, storytelling, and interactive technique — not volume."
+    desc: "The Sariska Tiger Reserve creates a unique character for events in the Alwar region. Safari tented resorts, wildlife-adjacent lawns, and jungle-fringe venues demand a host who can generate enormous energy in an environment where blaring horns and DJ drops are simply not options. Crowd command through voice, storytelling, and interactive technique, not volume."
   },
   {
     icon: Crown,
     title: "The Neemrana Heritage Prestige",
-    desc: "Neemrana Fort Palace is one of the most photographed heritage event venues in India. International publications, travel magazines, and Instagram luxury accounts regularly feature its stepped battlements and blue-pool terraces. Clients booking Neemrana have chosen it as a personal brand statement. The event anchor must match that level of prestige — in voice, presence, and cultural discernment."
+    desc: "Neemrana Fort Palace is one of the most photographed heritage event venues in India. International publications, travel magazines, and Instagram luxury accounts regularly feature its stepped battlements and blue-pool terraces. Clients booking Neemrana have chosen it as a personal brand statement. The event anchor must match that level of prestige, in voice, presence, and cultural discernment."
   },
 ];
 
@@ -115,7 +115,7 @@ const SERVICES = [
   {
     icon: Music2,
     title: "Heritage Sangeet Emcee",
-    desc: "Sangeet nights at Siliserh Lake Palace or Sariska Palace — where the lakeside or jungle backdrop creates a once-in-a-lifetime stage setting. High-energy crowd management through the full NRI family-plus-local guest mix without losing the luxury and heritage tone of the venue.",
+    desc: "Sangeet nights at Siliserh Lake Palace or Sariska Palace, where the lakeside or jungle backdrop creates a once-in-a-lifetime stage setting. High-energy crowd management through the full NRI family-plus-local guest mix without losing the luxury and heritage tone of the venue.",
     tag: "Sangeet"
   },
   {
@@ -127,7 +127,7 @@ const SERVICES = [
   {
     icon: Building2,
     title: "NCR Corporate Offsite Host",
-    desc: "Delhi NCR corporate leadership and sales team offsites at Alwar heritage and wildlife resorts. The format shifts from high-energy day sessions to polished evening awards without losing momentum — and always operates within the specific aesthetic of whichever heritage property is hosting.",
+    desc: "Delhi NCR corporate leadership and sales team offsites at Alwar heritage and wildlife resorts. The format shifts from high-energy day sessions to polished evening awards without losing momentum, and always operates within the specific aesthetic of whichever heritage property is hosting.",
     tag: "Corporate"
   },
 ];
@@ -144,28 +144,28 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "NCR city anchor brings metro energy — completely wrong for Sariska jungle", fix: "Wildlife-adjacent crowd management through voice and interaction, not volume" },
+  { problem: "NCR city anchor brings metro energy, completely wrong for Sariska jungle", fix: "Wildlife-adjacent crowd management through voice and interaction, not volume" },
   { problem: "Unfamiliar with Neemrana's specific acoustic zones and terrace layout", fix: "Venue-specific knowledge from repeated events at Neemrana Fort Palace" },
   { problem: "Cannot bridge Delhi NCR corporate guests and Rajasthani heritage families", fix: "Fluent cultural code-switching built over 5+ years of cross-demographic events" },
-  { problem: "Generic anchor who treats Alwar like a hotel ballroom event", fix: "Heritage venue specialist — every property's character informs every hosting choice" },
+  { problem: "Generic anchor who treats Alwar like a hotel ballroom event", fix: "Heritage venue specialist, every property's character informs every hosting choice" },
   { problem: "Low energy during the Mehndi morning that ruins the pre-wedding vibe", fix: "Warm, interactive, unscripted crowd warmth specifically calibrated for intimate events" },
-  { problem: "Cannot handle remote destination logistics or venue-side coordination", fix: "Pro-active venue liaison and pre-event walkthrough — zero on-stage surprises" },
+  { problem: "Cannot handle remote destination logistics or venue-side coordination", fix: "Pro-active venue liaison and pre-event walkthrough, zero on-stage surprises" },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Mittal Family",
-    quote: "We hosted our daughter's wedding at Neemrana Fort Palace with 320 guests — many of them NRIs from the UK and Singapore. Yash understood the venue completely. He knew which terraces to use for different moments, how to manage the acoustics in the stone corridors, and how to keep the Delhi guests and Rajasthan family equally engaged across three days.",
+    quote: "We hosted our daughter's wedding at Neemrana Fort Palace with 320 guests, many of them NRIs from the UK and Singapore. Yash understood the venue completely. He knew which terraces to use for different moments, how to manage the acoustics in the stone corridors, and how to keep the Delhi guests and Rajasthan family equally engaged across three days.",
     event: "Destination Wedding · Neemrana Fort Palace · 320 guests"
   },
   {
     name: "Gupta Family",
-    quote: "The Siliserh Lake Palace Sangeet was something out of a film — lakeside stage, full moon, 250 guests. The setting did half the work, but Yash did the other half completely. He created moments that the lake backdrop could not have created alone. The energy at midnight was as high as it was at the opening performance.",
+    quote: "The Siliserh Lake Palace Sangeet was something out of a film, lakeside stage, full moon, 250 guests. The setting did half the work, but Yash did the other half completely. He created moments that the lake backdrop could not have created alone. The energy at midnight was as high as it was at the opening performance.",
     event: "Sangeet · Siliserh Lake Palace · 250 guests"
   },
   {
-    name: "Head of Sales — Delhi-based MNC",
-    quote: "We brought 200 regional managers to Sariska Tiger Den for our annual kick-off. The challenge was energising a diverse team after a gruelling conference day. Yash took the stage for the evening gala and completely transformed the energy. The team left Sariska genuinely motivated — not just through the presentations, but through the entire experience he created.",
+    name: "Head of Sales, Delhi-based MNC",
+    quote: "We brought 200 regional managers to Sariska Tiger Den for our annual kick-off. The challenge was energising a diverse team after a gruelling conference day. Yash took the stage for the evening gala and completely transformed the energy. The team left Sariska genuinely motivated, not just through the presentations, but through the entire experience he created.",
     event: "Sales Offsite · Sariska Tiger Den · 200 delegates"
   },
 ];
@@ -181,7 +181,7 @@ const FAQS = [
   { q: "Can you host bilingual events for NRI families in Alwar?", a: "Yes. Given its proximity to Delhi, Alwar is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Alwar?", a: "Alwar is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR region. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
   { q: "How far in advance should I book for an Alwar wedding?", a: "Alwar is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Alwar for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Alwar destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "Who is the best emcee or host in Alwar for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Alwar destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Alwar?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
@@ -199,7 +199,7 @@ export default function PageClient() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="relative w-full h-full"><Image src="/backgrounds/alwar_bg.webp" alt="Best Anchor in Alwar — Neemrana Fort and Sariska landscape at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+          <div className="relative w-full h-full"><Image src="/backgrounds/alwar_bg.webp" alt="Best Anchor in Alwar, Neemrana Fort and Sariska landscape at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -222,7 +222,7 @@ export default function PageClient() {
             </h1>
 
             <p className="text-lg md:text-2xl text-zinc-300 max-w-2xl mx-auto font-light mb-12 leading-relaxed">
-              The premier choice for <G>Neemrana Fort Palace weddings</G>, Siliserh Lake Sangeets, and luxury Sariska retreats — the NCR's most prestigious destination circuit.
+              The premier choice for <G>Neemrana Fort Palace weddings</G>, Siliserh Lake Sangeets, and luxury Sariska retreats, the NCR's most prestigious destination circuit.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -276,13 +276,13 @@ export default function PageClient() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor — commanding crowds with absolute zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination event anchor, commanding crowds with absolute zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
-                From the dramatic stepped terraces of <strong className="text-[#B5952F]">Neemrana Fort Palace</strong> to the serene lakeside gardens of Siliserh, and from the tiger-territory tented lounges of Sariska to the hilltop heritage havelis of Alwar — every corner of this circuit has been hosted with the same absolute command.
+                From the dramatic stepped terraces of <strong className="text-[#B5952F]">Neemrana Fort Palace</strong> to the serene lakeside gardens of Siliserh, and from the tiger-territory tented lounges of Sariska to the hilltop heritage havelis of Alwar, every corner of this circuit has been hosted with the same absolute command.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                The Alwar-Neemrana circuit draws some of India's most discerning event families — Delhi NCR elites, NRI diaspora, and Rajputana heritage clans — all within the same guest list. Navigating this mix without diluting the luxury experience requires a host who understands corporate polish, international warmth, and heritage protocol simultaneously.
+                The Alwar-Neemrana circuit draws some of India's most discerning event families, Delhi NCR elites, NRI diaspora, and Rajputana heritage clans, all within the same guest list. Navigating this mix without diluting the luxury experience requires a host who understands corporate polish, international warmth, and heritage protocol simultaneously.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -314,7 +314,7 @@ export default function PageClient() {
               The NCR Gateway Demands<br />a <G>Premium Standard.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              The Alwar belt — encompassing Neemrana, Sariska, Siliserh, and Tijara — is India's most accessible luxury heritage destination. It offers Rajasthan's grandeur within three hours of Delhi IGI. But accessibility does not mean simplicity. The events here are premium, multi-day, multi-cultural, and logistically complex.
+              The Alwar belt, encompassing Neemrana, Sariska, Siliserh, and Tijara, is India's most accessible luxury heritage destination. It offers Rajasthan's grandeur within three hours of Delhi IGI. But accessibility does not mean simplicity. The events here are premium, multi-day, multi-cultural, and logistically complex.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -430,13 +430,13 @@ export default function PageClient() {
               Delhi NCR's Luxury<br /><G>Rajasthan Gateway.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              The Alwar circuit occupies a rare strategic position in Indian destination weddings. It delivers the full heritage experience — fort venues, palace hotels, wildlife landscapes — within practical travel distance for the country's largest metropolitan guest base. The events here are consistently premium, consistently large, and consistently demanding.
+              The Alwar circuit occupies a rare strategic position in Indian destination weddings. It delivers the full heritage experience, fort venues, palace hotels, wildlife landscapes, within practical travel distance for the country's largest metropolitan guest base. The events here are consistently premium, consistently large, and consistently demanding.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               The guest lists routinely mix Delhi NCR corporate professionals, Rajput heritage families, NRI relatives from multiple countries, and younger guests who have international entertainment expectations. Holding all four communities in the same energy requires a very specific combination of cultural awareness, bilingual ease, and pure stage craft.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              The Alwar-Neemrana circuit has grown dramatically as a destination wedding market over the past five years, and specific venue expertise — built from repeatedly working each property — is the single most significant asset an anchor can bring to this circuit.
+              The Alwar-Neemrana circuit has grown dramatically as a destination wedding market over the past five years, and specific venue expertise, built from repeatedly working each property, is the single most significant asset an anchor can bring to this circuit.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -482,7 +482,7 @@ export default function PageClient() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Alwar · Neemrana · Sariska</p>
-                <p className="text-white text-xs">Delhi NCR's most prestigious heritage destination circuit — commanded with full authority.</p>
+                <p className="text-white text-xs">Delhi NCR's most prestigious heritage destination circuit, commanded with full authority.</p>
               </div>
             </div>
           </Reveal>
@@ -492,14 +492,14 @@ export default function PageClient() {
               10,000+ Crowd.<br /><G>Heritage Palaces.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              The Alwar circuit events range from intimate 80-person Mehndi mornings in Neemrana's poolside gardens to 500-person Sangeet nights on the stepped terraces of the fort. The acoustic behaviour, the crowd dynamics, and the venue-specific logistics shift dramatically between each format — and the anchor must shift seamlessly with them.
+              The Alwar circuit events range from intimate 80-person Mehndi mornings in Neemrana's poolside gardens to 500-person Sangeet nights on the stepped terraces of the fort. The acoustic behaviour, the crowd dynamics, and the venue-specific logistics shift dramatically between each format, and the anchor must shift seamlessly with them.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> Multi-Day Event Arc Management
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Managing tone across a 3-day destination event — from the casual warmth of Day 1 Mehndi to the grandeur of Day 3 Wedding ceremony — without the momentum ever flattening or the crowd ever disengaging.
+                Managing tone across a 3-day destination event, from the casual warmth of Day 1 Mehndi to the grandeur of Day 3 Wedding ceremony, without the momentum ever flattening or the crowd ever disengaging.
               </p>
             </div>
           </Reveal>
@@ -525,7 +525,7 @@ export default function PageClient() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -537,7 +537,7 @@ export default function PageClient() {
 
             {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -545,10 +545,10 @@ export default function PageClient() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Alwar's Best.</G>
+                Whatever You Call It -{" "}<G>Alwar's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Alwar —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Alwar -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -560,7 +560,7 @@ export default function PageClient() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Alwar",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Alwar.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Alwar.",
                 keywords: ["best wedding anchor alwar", "wedding emcee alwar", "wedding host alwar", "wedding mc alwar"],
               },
               {
@@ -578,13 +578,13 @@ export default function PageClient() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Alwar",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Alwar — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Alwar, by any name.",
                 keywords: ["best emcee in alwar", "best anchor in alwar", "best host in alwar", "best mc alwar"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Alwar",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host alwar", "english speaking anchor alwar", "bilingual emcee alwar"],
               },
               {
@@ -625,7 +625,7 @@ export default function PageClient() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -731,7 +731,7 @@ export default function PageClient() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Neemrana's peak destination season fills 5–7 months in advance. Sariska dates mirror venue availability which is strictly limited.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

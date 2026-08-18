@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -73,12 +73,12 @@ const MOUNT_ABU_IDENTITY = [
   {
     icon: Wind,
     title: "The Hill Station Acoustic",
-    desc: "Rajasthan's only hill station presents unique hosting dynamics. The air is thinner, the evenings are colder, and the open-air venues on the Aravalli peaks—like Cama Rajputana Club—do not trap sound the way a walled fort does. Sound dissipates quickly. An anchor here must understand how to project energy into open mountain air without simply increasing the volume. It requires a specific vocal technique and crowd containment strategy."
+    desc: "Rajasthan's only hill station presents unique hosting dynamics. The air is thinner, the evenings are colder, and the open-air venues on the Aravalli peaks-like Cama Rajputana Club-do not trap sound the way a walled fort does. Sound dissipates quickly. An anchor here must understand how to project energy into open mountain air without simply increasing the volume. It requires a specific vocal technique and crowd containment strategy."
   },
   {
     icon: Globe,
     title: "The Gujarat-Rajasthan Bridge",
-    desc: "Geographically and culturally, Mount Abu sits exactly on the border of Gujarat and Rajasthan. The vast majority of destination weddings here are hosted by affluent Gujarati families who want a Rajasthani heritage aesthetic within driving distance. The event register must seamlessly bridge Gujarati warmth and community feel with the formal Rajasthani royal heritage setting—failing to balance both leaves half the guest list alienated."
+    desc: "Geographically and culturally, Mount Abu sits exactly on the border of Gujarat and Rajasthan. The vast majority of destination weddings here are hosted by affluent Gujarati families who want a Rajasthani heritage aesthetic within driving distance. The event register must seamlessly bridge Gujarati warmth and community feel with the formal Rajasthani royal heritage setting-failing to balance both leaves half the guest list alienated."
   },
   {
     icon: Landmark,
@@ -103,7 +103,7 @@ const SERVICES = [
   {
     icon: Flower2,
     title: "Aravalli Pre-Wedding Events",
-    desc: "Daytime outdoor Mehndi and Haldi celebrations taking full advantage of Mount Abu's agreeable climate. Interactive, unscripted hosting that builds community among the guests—bridging the gap between the formal Rajasthani setting and the Gujarati family atmosphere before the main wedding night.",
+    desc: "Daytime outdoor Mehndi and Haldi celebrations taking full advantage of Mount Abu's agreeable climate. Interactive, unscripted hosting that builds community among the guests-bridging the gap between the formal Rajasthani setting and the Gujarati family atmosphere before the main wedding night.",
     tag: "Pre-Wedding"
   },
   {
@@ -126,10 +126,10 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "Using loud Punjabi-wedding energy that offends traditional Jain family boundaries", fix: "Calibrated Jain-heritage register — joyful, respectful, culturally appropriate" },
+  { problem: "Using loud Punjabi-wedding energy that offends traditional Jain family boundaries", fix: "Calibrated Jain-heritage register, joyful, respectful, culturally appropriate" },
   { problem: "Overlooking the Gujarati guest majority in favour of generic Rajasthani hosting", fix: "Bilingual (Gujarati/Hindi/English) code-switching that validates the guest identity" },
-  { problem: "Sound gets lost in the open air of peak-top venues like Cama Rajputana", fix: "Hill station acoustic projection techniques — condensing crowd focus physically" },
-  { problem: "Treats a Jain ceremony like a generic Hindu wedding, missing key ritual nuances", fix: "Pre-researched protocol adherence — correct vocabulary, correct sequencing" },
+  { problem: "Sound gets lost in the open air of peak-top venues like Cama Rajputana", fix: "Hill station acoustic projection techniques, condensing crowd focus physically" },
+  { problem: "Treats a Jain ceremony like a generic Hindu wedding, missing key ritual nuances", fix: "Pre-researched protocol adherence, correct vocabulary, correct sequencing" },
   { problem: "Fails to engage elders who expect formal respect in a heritage setting", fix: "Understated elegance and Marwari/Gujarati business community fluency" },
   { problem: "Loses control of outdoor Sangeets when temperatures drop rapidly at night", fix: "Pacing techniques that keep the crowd physically engaged and active on the floor" },
 ];
@@ -142,11 +142,11 @@ const TESTIMONIALS = [
   },
   {
     name: "Mehta Family",
-    quote: "The Nakki Lake Sangeet was a dream, but we were worried about the open-air acoustics and the chill in the air. Yash read the environment completely—he tightened the seating arrangement, built the energy rapidly, and used the mist and the lake atmosphere as an asset rather than a problem. He held the crowd perfectly.",
+    quote: "The Nakki Lake Sangeet was a dream, but we were worried about the open-air acoustics and the chill in the air. Yash read the environment completely-he tightened the seating arrangement, built the energy rapidly, and used the mist and the lake atmosphere as an asset rather than a problem. He held the crowd perfectly.",
     event: "Sangeet · Hotel Hillock · 300 guests"
   },
   {
-    name: "Director — Textile Group Ahmedabad",
+    name: "Director, Textile Group Ahmedabad",
     quote: "We chose Mount Abu for our annual dealer meet because it's easily accessible from Gujarat. We needed an anchor who could manage a senior corporate audience during the day sessions and transition into high energy for the evening gala. Yash's bilingual ability and sheer stage presence made it the best retreat we've had in a decade.",
     event: "Corporate Summit · Connaught House · 150 delegates"
   },
@@ -160,10 +160,10 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   { q: "Who is the best anchor for destination weddings in Mount Abu?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Mount Abu's hill station and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and highly experienced in managing grand destination weddings in Rajasthan's only hill station." },
   { q: "How do you handle the logistics and weather conditions of weddings in Mount Abu?", a: "Mount Abu's hill station environment offers a unique climate, especially during winter and summer evenings. Managing open-air events here requires pacing the timeline effectively to maintain high crowd energy against cooler temperatures, ensuring the celebration remains vibrant and engaging." },
-  { q: "Can you host bilingual events for NRI families in Mount Abu?", a: "Yes. Mount Abu attracts NRI families and high-profile domestic clients seeking a scenic destination. Bilingual hosting is critical — sophisticated English for international guests and culturally resonant Hindi for local relatives, ensuring every guest feels connected to the celebration." },
-  { q: "What makes Mount Abu different from other Rajasthan destination wedding locations?", a: "Unlike the desert forts or lake palaces, Mount Abu provides a lush, elevated, and serene backdrop. The hosting style must complement this — offering elegant, sophisticated, and warm interaction that suits a scenic hill station environment." },
+  { q: "Can you host bilingual events for NRI families in Mount Abu?", a: "Yes. Mount Abu attracts NRI families and high-profile domestic clients seeking a scenic destination. Bilingual hosting is critical, sophisticated English for international guests and culturally resonant Hindi for local relatives, ensuring every guest feels connected to the celebration." },
+  { q: "What makes Mount Abu different from other Rajasthan destination wedding locations?", a: "Unlike the desert forts or lake palaces, Mount Abu provides a lush, elevated, and serene backdrop. The hosting style must complement this, offering elegant, sophisticated, and warm interaction that suits a scenic hill station environment." },
   { q: "How far in advance should I book for a Mount Abu wedding?", a: "Mount Abu is a popular year-round destination, particularly in summer and early winter. Premium dates at top properties book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Mount Abu for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Mount Abu destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "Who is the best emcee or host in Mount Abu for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Mount Abu destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Mount Abu?", a: "Anchor, emcee, host, and MC refer to the same professional role. Event planners often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
@@ -177,7 +177,7 @@ export default function MountAbuPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/varmala-fireworks-color-shots.webp" alt="Best Anchor in Mount Abu — Nakki Lake and Aravalli Hills" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/varmala-fireworks-color-shots.webp" alt="Best Anchor in Mount Abu, Nakki Lake and Aravalli Hills" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -407,7 +407,7 @@ export default function MountAbuPage() {
               Furthermore, the prominence of Jain weddings here means the anchor must be deeply educated in the community's protocols. Knowing when to elevate the energy and when to step back in reverence is the mark of a seasoned professional. You cannot 'wing' a Jain ceremony.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Mount Abu cultural fluency—the Gujarati-Rajasthani bridge, the Jain protocols, and the hilltop acoustic mastery—is a highly specific trinity of skills built over years.
+              Mount Abu cultural fluency-the Gujarati-Rajasthani bridge, the Jain protocols, and the hilltop acoustic mastery-is a highly specific trinity of skills built over years.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -453,7 +453,7 @@ export default function MountAbuPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Mount Abu · The Aravalli Crown</p>
-                <p className="text-white text-xs">Rajasthan's only hill station — requiring specialized outdoor acoustic command and deep cultural nuance.</p>
+                <p className="text-white text-xs">Rajasthan's only hill station, requiring specialized outdoor acoustic command and deep cultural nuance.</p>
               </div>
             </div>
           </Reveal>
@@ -463,7 +463,7 @@ export default function MountAbuPage() {
               Nakki Lake Vistas.<br /><G>Open Air.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Whether projecting past the wind at Cama Rajputana Club for a 400-guest Jain wedding reception, or maintaining the intimacy of an indoor corporate retreat at Connaught House, Yash’s stage presence scales flawlessly. Environmental challenges that derail inexperienced anchors—like dropping nighttime temperatures—are actively managed through pacing and crowd interaction.
+              Whether projecting past the wind at Cama Rajputana Club for a 400-guest Jain wedding reception, or maintaining the intimacy of an indoor corporate retreat at Connaught House, Yash’s stage presence scales flawlessly. Environmental challenges that derail inexperienced anchors-like dropping nighttime temperatures-are actively managed through pacing and crowd interaction.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
@@ -500,7 +500,7 @@ export default function MountAbuPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -512,7 +512,7 @@ export default function MountAbuPage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -520,10 +520,10 @@ export default function MountAbuPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Mount Abu's Best.</G>
+                Whatever You Call It -{" "}<G>Mount Abu's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Mount Abu —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Mount Abu -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -535,7 +535,7 @@ export default function MountAbuPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Mount Abu",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Mount Abu.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Mount Abu.",
                 keywords: ["best wedding anchor mount abu", "wedding emcee mount abu", "wedding host mount abu", "wedding mc mount abu"],
               },
               {
@@ -553,13 +553,13 @@ export default function MountAbuPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Mount Abu",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Mount Abu — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Mount Abu, by any name.",
                 keywords: ["best emcee in mount abu", "best anchor in mount abu", "best host in mount abu", "best mc mount abu"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Mount Abu",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host mount abu", "english speaking anchor mount abu", "bilingual emcee mount abu"],
               },
               {
@@ -600,7 +600,7 @@ export default function MountAbuPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -706,7 +706,7 @@ export default function MountAbuPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Mount Abu has fewer premium heritage properties than Udaipur or Jaipur, meaning peak winter dates disappear rapidly. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

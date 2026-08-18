@@ -1,10 +1,10 @@
-// app/sports-commentator-jaipur/layout.jsx
+﻿// app/sports-commentator-jaipur/layout.jsx
 import { buildServiceSchema } from "../../lib/schema/serviceSchema";
 
-// SERVER COMPONENT — metadata only
+// SERVER COMPONENT, metadata only
 const serviceSchema = buildServiceSchema({
   pageUrl: "https://yashsoni.in/sports-commentator-jaipur",
-  name: "Sports Commentator & Anchor Jaipur — Yash Soni",
+  name: "Sports Commentator & Anchor Jaipur, Yash Soni",
   description: "High-octane sports commentator and anchor in Jaipur. Live play-by-play commentary, marathon hosting, cricket leagues, and corporate sports events.",
   serviceType: "Sports Commentary and Event Hosting",
   providerJobTitle: "Sports Commentator, Host & Anchor",
@@ -82,7 +82,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Sports Commentator Jaipur",
+        alt: "Anchor Yash Soni, Sports Commentator Jaipur",
       },
     ],
   },

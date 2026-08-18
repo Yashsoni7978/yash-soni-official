@@ -1,4 +1,4 @@
-import Script from 'next/script';
+﻿import Script from 'next/script';
 export const metadata = {
   title: "Celebrity & Artist Management Agency Jaipur | Anchor Yash Soni",
   description: "End-to-end artist booking and management in Jaipur. Yash Soni Studio handles talent sourcing, coordination and performance delivery for premium events.",
@@ -45,11 +45,11 @@ const jsonLd = {
     itemListElement: [
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Live Band & DJ — Wedding Night" },
+        itemOffered: { "@type": "Service", name: "Live Band & DJ, Wedding Night" },
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Celebrity Performance — Sangeet & Reception" },
+        itemOffered: { "@type": "Service", name: "Celebrity Performance, Sangeet & Reception" },
       },
       {
         "@type": "Offer",

@@ -1,10 +1,10 @@
-// app/celebrity-public-events-host/layout.jsx
-// SERVER COMPONENT — metadata only, no head/script tags
+﻿// app/celebrity-public-events-host/layout.jsx
+// SERVER COMPONENT, metadata only, no head/script tags
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://yashsoni.in/celebrity-public-events-host",
-  name: "Celebrity & Public Events Host Jaipur — Anchor Yash Soni",
+  name: "Celebrity & Public Events Host Jaipur, Anchor Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
@@ -38,9 +38,9 @@ const breadcrumb = {
 };
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Celebrity & Public Events Host Jaipur | Anchor Yash Soni — Concerts & Launches",
+  title: "Celebrity & Public Events Host Jaipur | Anchor Yash Soni, Concerts & Launches",
   description:
-    "Celebrity and public events host in Jaipur — Anchor Yash Soni. 4.9★ rated. Music concerts, fashion shows, luxury brand launches, Bollywood celebrity events. 5,000+ crowd management. Book now.",
+    "Celebrity and public events host in Jaipur, Anchor Yash Soni. 4.9★ rated. Music concerts, fashion shows, luxury brand launches, Bollywood celebrity events. 5,000+ crowd management. Book now.",
   keywords: [
     "celebrity event host jaipur",
     "celebrity anchor jaipur",
@@ -82,7 +82,7 @@ export const metadata = {
     locale: "en_IN",
     url: "https://yashsoni.in/celebrity-public-events-host",
     siteName: "Anchor Yash Soni",
-    title: "Celebrity & Public Events Host Jaipur | Anchor Yash Soni — 4.9★",
+    title: "Celebrity & Public Events Host Jaipur | Anchor Yash Soni, 4.9★",
     description:
       "Music concerts, fashion shows, luxury launches & Bollywood events. 5,000+ crowd management. 4.9★ rated Jaipur celebrity events anchor.",
     images: [
@@ -90,7 +90,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Celebrity & Public Events Host Jaipur",
+        alt: "Anchor Yash Soni, Celebrity & Public Events Host Jaipur",
       },
     ],
   },

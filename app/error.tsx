@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
 
 /**
- * error.tsx — Next.js App Router error boundary
+ * error.tsx, Next.js App Router error boundary
  *
  * MUST be a Client Component ("use client").
  * Renders when an unhandled error occurs in a route segment.

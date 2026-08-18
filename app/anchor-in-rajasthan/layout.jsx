@@ -1,17 +1,17 @@
-// app/anchor-in-rajasthan/layout.jsx
-// SERVER COMPONENT — metadata + schema only
+﻿// app/anchor-in-rajasthan/layout.jsx
+// SERVER COMPONENT, metadata + schema only
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://yashsoni.in/anchor-in-rajasthan",
-  name: "Anchor in Rajasthan — Yash Soni",
+  name: "Anchor in Rajasthan, Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
     name: "Yash Soni",
     url: "https://yashsoni.in",
     telephone: "+917737877978",
-    jobTitle: "Premier Event Anchor — Rajasthan",
+    jobTitle: "Premier Event Anchor, Rajasthan",
   },
   areaServed: [
     { "@type": "City", name: "Jaipur" },
@@ -25,7 +25,7 @@ const serviceSchema = {
     { "@type": "Country", name: "India" },
   ],
   url: "https://yashsoni.in/anchor-in-rajasthan",
-  serviceType: "Event Anchor & Emcee — Rajasthan",
+  serviceType: "Event Anchor & Emcee, Rajasthan",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Anchor Services Across Rajasthan",
@@ -58,7 +58,7 @@ export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
   title: "Anchor in Rajasthan | Wedding & Event Host Across Rajasthan | Yash Soni",
   description:
-    "Looking for an anchor in Rajasthan? Yash Soni covers all major Rajasthan cities — Jaipur, Udaipur, Jodhpur, Jaisalmer, Pushkar. Palace weddings, destination events, corporate galas across the royal state.",
+    "Looking for an anchor in Rajasthan? Yash Soni covers all major Rajasthan cities, Jaipur, Udaipur, Jodhpur, Jaisalmer, Pushkar. Palace weddings, destination events, corporate galas across the royal state.",
   keywords: [
     "anchor in rajasthan",
     "event anchor rajasthan",
@@ -90,9 +90,9 @@ export const metadata = {
     type: "website", locale: "en_IN",
     url: "https://yashsoni.in/anchor-in-rajasthan",
     siteName: "Anchor Yash Soni",
-    title: "Anchor in Rajasthan | Yash Soni — Jaipur · Udaipur · Jodhpur · Jaisalmer",
+    title: "Anchor in Rajasthan | Yash Soni, Jaipur · Udaipur · Jodhpur · Jaisalmer",
     description: "Premier event anchor across all of Rajasthan. Palace weddings, destination events & corporate galas across every major Rajasthan city.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Anchor in Rajasthan — Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Anchor in Rajasthan, Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",

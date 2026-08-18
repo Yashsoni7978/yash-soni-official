@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-varanasi/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Varanasi",
     "Best Wedding Anchor Varanasi",
@@ -87,13 +87,13 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "NRI Family — London" },
+      author: { "@type": "Person", name: "NRI Family, London" },
       reviewBody: "Hosting a wedding on the ghats of Varanasi at BrijRama Palace is incredibly complex logistically. We needed someone who could translate the immense depth of the rituals for our UK guests without turning it into a lecture. Yash's bilingual anchoring was absolute perfection. He commanded the space elegantly.",
     },
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Corporate Group — Mumbai" },
+      author: { "@type": "Person", name: "Corporate Group, Mumbai" },
       reviewBody: "We held an executive strategy retreat and spiritual trip in Varanasi. Yash anchored our evening panels at Taj Nadesar Palace. He doesn't rely on paper notes at all. His ability to moderate high-level discussions while respecting the city's aura is unmatched.",
     },
   ],
@@ -154,9 +154,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-varanasi/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Varanasi | Taj Nadesar & BrijRama Emcee — Yash Soni`,
+  name: `Best Anchor in Varanasi | Taj Nadesar & BrijRama Emcee, Yash Soni`,
   headline: `Varanasi's Premier Event Anchor for Ultra-Luxury Spiritual Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Varanasi destination weddings. Mastering prestigious properties like Taj Nadesar Palace and BrijRama with unscripted bilingual hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Varanasi destination weddings. Mastering prestigious properties like Taj Nadesar Palace and BrijRama with unscripted bilingual hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Uttar Pradesh` },
@@ -168,7 +168,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Varanasi | Heritage Spiritual Wedding Host`,
-  description: `Looking for the best anchor in Varanasi? Anchor Yash Soni — 4.9★. Expert for Taj Nadesar Palace, BrijRama, and heritage Kashi weddings. Flawless bilingual hosting merging modern VIPs with deep traditions.`,
+  description: `Looking for the best anchor in Varanasi? Anchor Yash Soni, 4.9★. Expert for Taj Nadesar Palace, BrijRama, and heritage Kashi weddings. Flawless bilingual hosting merging modern VIPs with deep traditions.`,
   keywords: [
     "anchor in varanasi",
     "best anchor in varanasi",
@@ -195,13 +195,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Varanasi | Elite Spiritual Heritage Wedding Host`,
     description: `4.9★ rated. Varanasi's premium anchor for highly profound destination weddings at Taj Nadesar Palace and BrijRama. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Varanasi — Anchor Yash Soni at Kashi Heritage Properties` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Varanasi, Anchor Yash Soni at Kashi Heritage Properties` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Varanasi | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Varanasi | Anchor Yash Soni, 4.9★`,
     description: `BrijRama Palace. Taj Nadesar. Varanasi's premier bilingual event anchor bridging international VIPs with deep spiritual traditions on the Ganges.`,
     images: [OG_IMAGE],
   },
@@ -210,7 +210,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Varanasi | Heritage Spiritual VIP Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Varanasi | Heritage Spiritual VIP Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Spiritual Wedding, VIP Events, ${CITY}, Uttar Pradesh, India`,
     "DC.coverage": `${CITY}, Uttar Pradesh, India`,
     "DC.language": "en-IN",

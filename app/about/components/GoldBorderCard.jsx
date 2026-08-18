@@ -1,5 +1,5 @@
-/**
- * GoldBorderCard — Effect 1
+﻿/**
+ * GoldBorderCard, Effect 1
  * Mechanic: rotating conic-gradient border via CSS custom property animation.
  * Brand palette: Royal Gold (#D4AF37) → Ivory (#FAF7F0) → Sage Whisper (#B5C4AE)
  * 80/20 rule: Black panel dominant, gold border accent only.

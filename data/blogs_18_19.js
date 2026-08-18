@@ -1,6 +1,6 @@
-export const NEW_BLOGS_BATCH_3 = [
+﻿export const NEW_BLOGS_BATCH_3 = [
   // ==========================================
-  // BLOG 18: PUSHKAR & AJMER WEDDINGS — UPGRADED + EXPANDED
+  // BLOG 18: PUSHKAR & AJMER WEDDINGS, UPGRADED + EXPANDED
   // ==========================================
   {
     id: 105,
@@ -15,13 +15,13 @@ export const NEW_BLOGS_BATCH_3 = [
     content: `
 When people think of a "Rajasthan Destination Wedding," two cities immediately dominate the conversation: [Jaipur](https://yashsoni.in/anchor-in-jaipur) for its grand royal heritage, and [Udaipur](https://yashsoni.in/anchor-in-udaipur) for its breathtaking lakeside romance.
 
-But over the last two wedding seasons, as a [destination wedding anchor in Rajasthan](https://yashsoni.in/destination-wedding-anchor), I have witnessed a significant shift among couples in the know. Couples who want the royal aesthetic of Rajasthan — without the overwhelming commercialization, heavy traffic, and skyrocketing budgets of the major capitals — are discovering the hidden brilliance of **Pushkar and Ajmer**.
+But over the last two wedding seasons, as a [destination wedding anchor in Rajasthan](https://yashsoni.in/destination-wedding-anchor), I have witnessed a significant shift among couples in the know. Couples who want the royal aesthetic of Rajasthan, without the overwhelming commercialization, heavy traffic, and skyrocketing budgets of the major capitals, are discovering the hidden brilliance of **Pushkar and Ajmer**.
 
-If you are planning an intimate destination wedding anywhere in the range of 80 to 250 guests, here is exactly why [Pushkar](https://yashsoni.in/anchor-in-pushkar) or Ajmer might be the smartest — and most beautiful — decision you make for your celebration.
+If you are planning an intimate destination wedding anywhere in the range of 80 to 250 guests, here is exactly why [Pushkar](https://yashsoni.in/anchor-in-pushkar) or Ajmer might be the smartest, and most beautiful, decision you make for your celebration.
 
 ### 1. The Spiritual Aesthetic That Money Cannot Replicate
 
-Pushkar is fiercely unique in a way that Jaipur and Udaipur simply cannot compete with. It is not just a beautiful city; it is one of the most ancient and spiritually charged cities in Jaipur & Rajasthan — home to the world's only temple dedicated to Lord Brahma, surrounded by the Aravalli hills, and centered around its sacred lake.
+Pushkar is fiercely unique in a way that Jaipur and Udaipur simply cannot compete with. It is not just a beautiful city; it is one of the most ancient and spiritually charged cities in Jaipur & Rajasthan, home to the world's only temple dedicated to Lord Brahma, surrounded by the Aravalli hills, and centered around its sacred lake.
 
 **What This Means for Your Wedding:**
 Rather than standard hotel ballrooms, a Pushkar wedding is typically hosted in sprawling resort properties nested against the Aravallis, or in boutique heritage havelis overlooking the famous Pushkar Lake itself.
@@ -36,7 +36,7 @@ Let us talk numbers, because this is where Pushkar becomes a game-changer.
 
 The exact same standard of luxury that costs ₹40 Lakhs in Udaipur, or ₹35 Lakhs in peak-season Jaipur, will typically cost between ₹20 to ₹28 Lakhs in Ajmer or Pushkar for a comparable 3-day experience.
 
-Because the region has built a significant boom of luxury properties — the Westin Pushkar Resort & Spa, Pratap Mahal Ajmer, Ananta Spa & Resorts, and the Pushkar Palace — you receive genuine five-star infrastructure at significantly lower "Tier-1 City" rates. This budget advantage allows couples to redirect that saved money toward immersive, memorable experiences:
+Because the region has built a significant boom of luxury properties, the Westin Pushkar Resort & Spa, Pratap Mahal Ajmer, Ananta Spa & Resorts, and the Pushkar Palace, you receive genuine five-star infrastructure at significantly lower "Tier-1 City" rates. This budget advantage allows couples to redirect that saved money toward immersive, memorable experiences:
 *   Upgrading to dramatically heavy, all-fresh floral mandap constructions.
 *   Booking premium entertainment and hiring a top-tier [bilingual destination wedding anchor](https://yashsoni.in/anchor-in-jaipur) to manage the complete multi-day itinerary.
 *   Investing in high-end cinematic wedding photography and drone videography.
@@ -58,7 +58,7 @@ All of this without a single guest ever having to board a bus or face city traff
 
 One of the biggest anxieties couples have about choosing a secondary destination is elderly relatives and outstation guests. *"How will my grandparents get there safely?"*
 
-Ajmer solves this beautifully. It is a major railway hub, heavily connected by the Vande Bharat Express, Shatabdi, and Rajdhani trains from New Delhi — offering comfortable, air-conditioned travel for guests who cannot endure long road trips. The drive from Jaipur International Airport to Ajmer or Pushkar is a straight, well-maintained national highway run of approximately 2.5 hours.
+Ajmer solves this beautifully. It is a major railway hub, heavily connected by the Vande Bharat Express, Shatabdi, and Rajdhani trains from New Delhi, offering comfortable, air-conditioned travel for guests who cannot endure long road trips. The drive from Jaipur International Airport to Ajmer or Pushkar is a straight, well-maintained national highway run of approximately 2.5 hours.
 
 You get the complete isolation and peace of a desert retreat, backed by the logistical safety net of excellent national transport links.
 
@@ -69,9 +69,9 @@ There is a widespread misconception that if a wedding is "intimate" (under 100 g
 In reality, small Pushkar weddings need an anchor *significantly more* than massive 1,000-guest [Jaipur](https://yashsoni.in/anchor-in-jaipur) events. Here is why: In a massive wedding, the crowd itself becomes a self-sustaining noisy entity. In a 100-person intimate celebration, if there is a 20-minute gap because the bride's makeup is delayed, the silence is absolutely deafening. Every person in the room feels it. The energy collapses immediately.
 
 At an intimate [Pushkar destination wedding](https://yashsoni.in/anchor-in-pushkar), my role as the [event anchor](https://yashsoni.in/anchor-in-jaipur) is deeply personal:
-*   I bridge the gap between the two families through highly personalized, conversational crowd work — referencing specific family stories the couple has shared with me in pre-event planning calls.
+*   I bridge the gap between the two families through highly personalized, conversational crowd work, referencing specific family stories the couple has shared with me in pre-event planning calls.
 *   I host customized trivia games during natural downtimes that reference real moments from the couple's relationship.
-*   I ensure that every beautiful spiritual ceremony at Pushkar — which carries immense historical weight — is actually *understood* by guests rather than passively observed.
+*   I ensure that every beautiful spiritual ceremony at Pushkar, which carries immense historical weight, is actually *understood* by guests rather than passively observed.
 
 ### 6. Top Venues in Pushkar & Ajmer
 
@@ -85,7 +85,7 @@ Boutique property with warm Rajasthani architecture. Ideal for intimate weddings
 Heritage property offering authentic Rajput architecture right within Ajmer city. Strong for traditional couples wanting maximum cultural authenticity.
 
 **Pushkar Palace (Heritage Wing):**
-Direct lakeside views of the sacred Pushkar Lake. A deeply iconic setting. Very limited availability — book 12+ months in advance.
+Direct lakeside views of the sacred Pushkar Lake. A deeply iconic setting. Very limited availability, book 12+ months in advance.
 
 ### Frequently Asked Questions (FAQ)
 
@@ -114,7 +114,7 @@ If your vision is a wedding that feels like a private, luxurious, deeply spiritu
   },
 
   // ==========================================
-  // BLOG 19: SANGEET TIMELINE — UPGRADED
+  // BLOG 19: SANGEET TIMELINE, UPGRADED
   // ==========================================
   {
     id: 106,
@@ -133,7 +133,7 @@ You know exactly what that feels like. You sit down at 8:00 PM at a beautifully 
 
 A Sangeet night should not feel like a 4-hour school talent show recital. It should feel like a high-energy, emotional, and deeply personal concert where your families are the rockstars.
 
-As a [professional Sangeet anchor in Jaipur](https://yashsoni.in/sangeet-anchor-jaipur), I have hosted over 450 Sangeet ceremonies across Rajasthan — from intimate farmhouse events to 800-guest ballroom spectacles at Fairmont Jaipur. The single biggest difference between a Sangeet that drags on painfully and a Sangeet that has the crowd screaming for "one more song" at 2:00 AM comes down to one thing: **the architecture of the timeline**.
+As a [professional Sangeet anchor in Jaipur](https://yashsoni.in/sangeet-anchor-jaipur), I have hosted over 450 Sangeet ceremonies across Rajasthan, from intimate farmhouse events to 800-guest ballroom spectacles at Fairmont Jaipur. The single biggest difference between a Sangeet that drags on painfully and a Sangeet that has the crowd screaming for "one more song" at 2:00 AM comes down to one thing: **the architecture of the timeline**.
 
 Here is my exact, tested blueprint for managing family performance chaos and executing a flawless Sangeet night that your guests will talk about for years.
 
@@ -152,7 +152,7 @@ The most common Sangeet mistake is launching the formal program the instant the 
 
 **The Reality:** The first hour is always controlled chaos. Guests are getting drinks, navigating seating assignments, saying their hellos, and taking selfies at the photo booth. Sitting them down for performances at 7:45 PM means half your audience is still milling around the bar.
 
-**The Anchor's Approach:** During this first hour, I am entirely off-stage. I roam the floor with a wireless microphone. I conduct quick, playful 45-second interviews with the bride's closest friends at their table. I introduce myself informally to the groom's extended family. I figure out who the naturally loud, energetic individuals are in the room — I will use them strategically later during the interactive segments. By 8:30 PM, the crowd already knows my voice, trusts my presence, and is physically settled with drinks and appetizers in hand.
+**The Anchor's Approach:** During this first hour, I am entirely off-stage. I roam the floor with a wireless microphone. I conduct quick, playful 45-second interviews with the bride's closest friends at their table. I introduce myself informally to the groom's extended family. I figure out who the naturally loud, energetic individuals are in the room, I will use them strategically later during the interactive segments. By 8:30 PM, the crowd already knows my voice, trusts my presence, and is physically settled with drinks and appetizers in hand.
 
 ### Phase 3: The Explosive Opening (8:30 PM - 8:45 PM)
 
@@ -168,29 +168,29 @@ This is where amateur [event planners](https://yashsoni.in/wedding-planning-jaip
 
 The solution is the **3-Block Strategy.**
 
-**Block A — The Emotional Opening (20 Minutes):**
+**Block A, The Emotional Opening (20 Minutes):**
 Reserve the front slots for the performances that command the deepest respect and the most rapt attention. The grandparents' surprise dance. The mother's heartfelt solo tribute. The traditional Ghoomar. The crowd is fresh, fully settled, and their emotional receptiveness is at maximum. These performances generate genuine, spontaneous tears and standing ovations.
 
 **The Palate Cleanser (10 Minutes):**
-Deliberately stop all performances. Kill the visual expectation. I step onto the stage and launch a high-energy interactive game directly involving the couple — a "Shoe Game" or a "Couple's Trivia Roast." This resets every person's attention span simultaneously. People are laughing, leaning forward, and talking to each other. The room is re-energized.
+Deliberately stop all performances. Kill the visual expectation. I step onto the stage and launch a high-energy interactive game directly involving the couple, a "Shoe Game" or a "Couple's Trivia Roast." This resets every person's attention span simultaneously. People are laughing, leaning forward, and talking to each other. The room is re-energized.
 
-**Block B — The High-Energy Friends Set (25 Minutes):**
+**Block B, The High-Energy Friends Set (25 Minutes):**
 Now the heavy beats drop. The bridesmaids, the groomsmen, the college batch squads. The performance energy shifts from "respectfully emotional" to "full nightclub." The crowd has fresh attention after the palate cleanser, so they are ready to genuinely hype and cheer for these groups.
 
 **The Mid-Point Recognition Break (10 Minutes):**
-Another deliberate stop. I run a brief "Funny Awards Ceremony" — handing out pre-planned humorous recognitions to family members (Most Likely to Start Crying First, Best Improvised Dance Move, The Person Who Actually Rehearsed The Most). The crowd goes wild for this section every single time without exception.
+Another deliberate stop. I run a brief "Funny Awards Ceremony", handing out pre-planned humorous recognitions to family members (Most Likely to Start Crying First, Best Improvised Dance Move, The Person Who Actually Rehearsed The Most). The crowd goes wild for this section every single time without exception.
 
-**Block C — The Couple's Final Statement (20 Minutes):**
-The grand emotional finale of the formal performance program. The couple takes the stage for their curated solo performance. It ends with a massive, spontaneous group dance involving both immediate families simultaneously — symbolically uniting them before the DJ takes over.
+**Block C, The Couple's Final Statement (20 Minutes):**
+The grand emotional finale of the formal performance program. The couple takes the stage for their curated solo performance. It ends with a massive, spontaneous group dance involving both immediate families simultaneously, symbolically uniting them before the DJ takes over.
 
 ### Phase 5: The Dance Floor Transition (10:30 PM Onward)
 
 This is the single hardest management challenge in any Sangeet. Getting conservative Indian guests who have been sitting in their chairs for 3 hours off their seats and onto a dance floor is a genuine psychological challenge.
 
-If the DJ simply drops a track and I announce "Dance floor is open!" — nothing happens. People head directly to the buffet stations. The beautiful dance floor sits empty for 20 minutes.
+If the DJ simply drops a track and I announce "Dance floor is open!", nothing happens. People head directly to the buffet stations. The beautiful dance floor sits empty for 20 minutes.
 
 **The Anchor's Transition Technique:**
-I never allow the final performance group to exit the stage. I jump directly into the crowd with my wireless microphone. I identify the youngest cousins, the most enthusiastic aunties, the most openly excited guests — and I physically walk them to the center of the floor on camera, building a live visible crowd. I coordinate a massive, highly structured "Dance Circle" while the DJ drops the biggest track of the evening.
+I never allow the final performance group to exit the stage. I jump directly into the crowd with my wireless microphone. I identify the youngest cousins, the most enthusiastic aunties, the most openly excited guests, and I physically walk them to the center of the floor on camera, building a live visible crowd. I coordinate a massive, highly structured "Dance Circle" while the DJ drops the biggest track of the evening.
 
 Once a critical mass of 50+ people is actively dancing in the visible center, human social psychology takes over automatically. The floor stays packed until 2:00 AM without any further intervention needed.
 
@@ -203,13 +203,13 @@ A: The absolute maximum for sustained crowd energy is 12 performances, and that 
 A: 7:30 PM for guest arrivals, with the formal program launching at 8:15-8:30 PM. This gives early-arriving guests time to settle while respecting that most guests in Jaipur will genuinely arrive between 7:45-8:00 PM.
 
 **Q: Should the [Sangeet anchor](https://yashsoni.in/sangeet-anchor-jaipur) use a script or improvise?**
-A: Both. A strong base script with the exact running order, personalized couple details, and pre-planned game structures is essential. But the best [event anchor](https://yashsoni.in/anchor-in-jaipur) layers live improvisation on top — reading the crowd's energy in real time and adjusting the pacing accordingly.
+A: Both. A strong base script with the exact running order, personalized couple details, and pre-planned game structures is essential. But the best [event anchor](https://yashsoni.in/anchor-in-jaipur) layers live improvisation on top, reading the crowd's energy in real time and adjusting the pacing accordingly.
 
 **Q: What happens if a key performer is late or cancels on the night?**
-A: This is precisely why you need a professional anchor — not your cousin's friend who "loves talking on the mic." An experienced [wedding anchor from Jaipur](https://yashsoni.in/wedding-anchor-jaipur) has pre-planned contingency games for exactly this scenario. The audience will never know a performer was delayed or missed.
+A: This is precisely why you need a professional anchor, not your cousin's friend who "loves talking on the mic." An experienced [wedding anchor from Jaipur](https://yashsoni.in/wedding-anchor-jaipur) has pre-planned contingency games for exactly this scenario. The audience will never know a performer was delayed or missed.
 
 **Q: Can you manage a bilingual Hindi and English Sangeet audience simultaneously?**
-A: Absolutely. As a fully [bilingual anchor](https://yashsoni.in/destination-wedding-anchor), I run every game, every announcement, and every crowd interaction in the dominant language of that segment of the audience — switching fluidly based on who I am addressing at any given moment.
+A: Absolutely. As a fully [bilingual anchor](https://yashsoni.in/destination-wedding-anchor), I run every game, every announcement, and every crowd interaction in the dominant language of that segment of the audience, switching fluidly based on who I am addressing at any given moment.
 
 ---
 

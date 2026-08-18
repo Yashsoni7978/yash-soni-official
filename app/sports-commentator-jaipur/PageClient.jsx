@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -268,7 +268,7 @@ export default function SportsCommentator() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-[#050505]/30 z-10" />
           <Image src="/gallery-1.webp"
-            alt="Best sports commentator and anchor in Jaipur — Yash Soni"
+            alt="Best sports commentator and anchor in Jaipur, Yash Soni"
             fill priority
             className="object-cover opacity-50 grayscale"
             sizes="100vw"
@@ -476,7 +476,7 @@ export default function SportsCommentator() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-[#D4AF37] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-[#D4AF37] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                     <p className="text-[#D4AF37] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>

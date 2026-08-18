@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -130,7 +130,7 @@ const VS = [
   { problem: "Using only pure Hindi in a city where English is the primary metropolitan bridge", fix: "Flawless bilingual code-switching (English/Hindi) tuned to the regional dynamic" },
   { problem: "Losing control of 1,500+ guests at the sprawling Bangalore Palace Grounds", fix: "Mastery of mega-scale acoustic projection and physical stage presence" },
   { problem: "Unable to respectfully weave together a North-South cross-cultural wedding", fix: "Cultural intelligence that honors Marwari rituals while engaging local VIPs" },
-  { problem: "Reading from paper notes during rapid-fire startup pitch events or felicitations", fix: "100% unscripted flow—maintaining absolute eye contact and timeline mastery" },
+  { problem: "Reading from paper notes during rapid-fire startup pitch events or felicitations", fix: "100% unscripted flow-maintaining absolute eye contact and timeline mastery" },
   { problem: "Failing to match the understated elegance required at the Taj West End", fix: "Refined, Taj-standard hosting that elevates the family's prestige" },
 ];
 
@@ -141,7 +141,7 @@ const TESTIMONIALS = [
     event: "Luxury Wedding · Taj West End · 400 guests"
   },
   {
-    name: "VP Marketing — Global Software Firm",
+    name: "VP Marketing, Global Software Firm",
     quote: "We flew Yash to Bengaluru for our annual leadership summit. Standing in front of 1,200 tech executives, he carried the entire three-day agenda without a single script or teleprompter. He pivoted effortlessly from serious keynotes to evening gala entertainment. A genuinely elite corporate asset.",
     event: "IT Leadership Summit · Whitefield · 1,200 delegates"
   },
@@ -176,7 +176,7 @@ const FAQS = [
   },
   {
     q: "Are you familiar with the protocol for properties like The Leela Palace or Taj West End?",
-    a: "Absolutely. These ultra-premium urban properties mandate 'understated authority.' You cannot use loud, cheap humor here. The anchor must be the authoritative spine of the event—directing proceedings with immaculate diction and ensuring the host family's prestige is protected at all times."
+    a: "Absolutely. These ultra-premium urban properties mandate 'understated authority.' You cannot use loud, cheap humor here. The anchor must be the authoritative spine of the event-directing proceedings with immaculate diction and ensuring the host family's prestige is protected at all times."
   },
   {
     q: "Do you anchor Sangeet events in Bangalore?",
@@ -184,7 +184,7 @@ const FAQS = [
   },
   {
     q: "What languages do you anchor in?",
-    a: "I provide premium bilingual anchoring in English and Hindi. For Bangalore, this exact combination is usually perfect—English serves the global, professional, and cross-cultural demographic, while Hindi drives the energy for Sangeets and North Indian ceremonial rituals."
+    a: "I provide premium bilingual anchoring in English and Hindi. For Bangalore, this exact combination is usually perfect-English serves the global, professional, and cross-cultural demographic, while Hindi drives the energy for Sangeets and North Indian ceremonial rituals."
   },
   {
     q: "When should we book you for a Bangalore event?",
@@ -242,7 +242,7 @@ export default function BangalorePage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/backgrounds/bangalore_bg.webp" alt="Best Anchor in Bangalore — Luxury Urban Events" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/backgrounds/bangalore_bg.webp" alt="Best Anchor in Bangalore, Luxury Urban Events" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -472,7 +472,7 @@ export default function BangalorePage() {
               On the corporate front, speaking to 1,200 tech delegates in Whitefield requires an entirely different frequency. You must understand panel moderation, exact execution of timed agendas, and the ability to project raw confidence without reading from a script.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Bengaluru fluency—from Palace Grounds to the Taj—marks an anchor who operates at the true metropolitan peak of the industry.
+              Bengaluru fluency-from Palace Grounds to the Taj-marks an anchor who operates at the true metropolitan peak of the industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -528,7 +528,7 @@ export default function BangalorePage() {
               Global Scale.<br /><G>Intimate Command.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Bangalore represents massive logistical pressure. When you are managing an international business family's wedding at The Leela Palace, every minute of the timeline is scrutinized. Yash builds his stage presence to physically and vocally anchor these extreme environments—ensuring no matter how large the venue, the host remains the undeniable center of gravity.
+              Scaling an event in Bangalore represents massive logistical pressure. When you are managing an international business family's wedding at The Leela Palace, every minute of the timeline is scrutinized. Yash builds his stage presence to physically and vocally anchor these extreme environments-ensuring no matter how large the venue, the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
@@ -565,7 +565,7 @@ export default function BangalorePage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -654,7 +654,7 @@ export default function BangalorePage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Bengaluru experiences intense overlapping of the corporate summit season and peak luxury wedding dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

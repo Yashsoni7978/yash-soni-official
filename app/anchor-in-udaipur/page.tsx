@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-udaipur/layout.jsx
-// SERVER COMPONENT — SEO metadata only. All JSON-LD schemas in page.jsx.
+// SERVER COMPONENT, SEO metadata only. All JSON-LD schemas in page.jsx.
 const CITY        = "Udaipur";
 const SLUG        = "anchor-in-udaipur";
 const DOMAIN      = "yashsoni.in";
@@ -16,7 +16,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type":    "ProfessionalService",
   "@id":      `${FULL_URL}/#business`,
-  name:        `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name:        `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     `Anchor in ${CITY}`,
     `Wedding Anchor ${CITY}`,
@@ -100,7 +100,7 @@ const personSchema = {
     "Lake Palace Event Hosting",
     "Rajasthan Destination Weddings",
   ],
-  award: "4.9★ Rated — 50+ Five-Star Reviews",
+  award: "4.9★ Rated, 50+ Five-Star Reviews",
   alumniOf: { "@type": "Organization", name: "Rajasthan Event Industry" },
 };
 // Breadcrumb
@@ -116,18 +116,18 @@ const breadcrumbSchema = {
 // ─── METADATA EXPORT ───────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Udaipur | Wedding & Destination Event Host — Anchor Yash Soni`,
+  title: `Best Anchor in Udaipur | Wedding & Destination Event Host, Anchor Yash Soni`,
   description:
-    `Looking for the best anchor in Udaipur? Anchor Yash Soni — 4.9★ rated, 700+ shows, 5+ years. Expert for destination weddings at Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island. Bilingual Hindi/English, unscripted, NRI-experienced.`,
+    `Looking for the best anchor in Udaipur? Anchor Yash Soni, 4.9★ rated, 700+ shows, 5+ years. Expert for destination weddings at Taj Lake Palace, Oberoi Udaivilas & Jagmandir Island. Bilingual Hindi/English, unscripted, NRI-experienced.`,
   keywords: [
-    // Core identity — highest volume
+    // Core identity, highest volume
     "anchor in udaipur",
     "best anchor in udaipur",
     "wedding anchor udaipur",
     "event anchor udaipur",
     "emcee udaipur",
     "event host udaipur",
-    // Venue-specific — high intent
+    // Venue-specific, high intent
     "anchor taj lake palace udaipur",
     "wedding anchor oberoi udaivilas",
     "jagmandir island wedding host",
@@ -172,14 +172,14 @@ export const metadata: Metadata = {
     locale:      "en_IN",
     url:          FULL_URL,
     siteName:    "Anchor Yash Soni",
-    title:       `Best Anchor in Udaipur | Destination Wedding & Event Host — Anchor Yash Soni`,
+    title:       `Best Anchor in Udaipur | Destination Wedding & Event Host, Anchor Yash Soni`,
     description: `4.9★ rated. 700+ shows. Udaipur's most trusted anchor for lake palace weddings, Sangeets at Jagmandir Island & NRI destination events. Unscripted, bilingual, premium.`,
     images: [
       {
         url:    OG_IMAGE,
         width:  1200,
         height: 630,
-        alt:    `Best Anchor in Udaipur — Anchor Yash Soni at Lake Pichola`,
+        alt:    `Best Anchor in Udaipur, Anchor Yash Soni at Lake Pichola`,
       },
     ],
   },
@@ -187,11 +187,11 @@ export const metadata: Metadata = {
     card:        "summary_large_image",
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
-    title:       `Best Anchor in Udaipur | Anchor Yash Soni — 4.9★`,
-    description: `Taj Lake Palace. Oberoi Udaivilas. Jagmandir Island. Udaipur's most trusted destination wedding anchor — 700+ shows, 4.9★ rated.`,
+    title:       `Best Anchor in Udaipur | Anchor Yash Soni, 4.9★`,
+    description: `Taj Lake Palace. Oberoi Udaivilas. Jagmandir Island. Udaipur's most trusted destination wedding anchor, 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
-  // Geo signals — Google uses these for local SEO
+  // Geo signals, Google uses these for local SEO
   other: {
     "geo.region":    "IN-RJ",
     "geo.placename": `${CITY}, Rajasthan, India`,
@@ -249,7 +249,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-udaipur/#webpage`,
   url: `https://${DOMAIN}/${SLUG}`,
-  name: `Best Anchor in Udaipur | Wedding & Event Host — Yash Soni`,
+  name: `Best Anchor in Udaipur | Wedding & Event Host, Yash Soni`,
   description: `Anchor Yash Soni is the premium event anchor in Udaipur. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

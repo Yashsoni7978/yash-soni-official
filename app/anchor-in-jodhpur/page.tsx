@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-jodhpur/layout.jsx
-// SERVER COMPONENT — SEO metadata only. All JSON-LD schemas in page.jsx.
+// SERVER COMPONENT, SEO metadata only. All JSON-LD schemas in page.jsx.
 const CITY       = "Jodhpur";
 const SLUG       = "anchor-in-jodhpur";
 const DOMAIN     = "yashsoni.in";
@@ -15,7 +15,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type":    "ProfessionalService",
   "@id":      `${FULL_URL}/#business`,
-  name:        `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name:        `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     `Anchor in ${CITY}`,
     `Wedding Anchor ${CITY}`,
@@ -99,7 +99,7 @@ const personSchema = {
     "Umaid Bhawan Palace Events",
     "Mehrangarh Fort Events",
   ],
-  award: "4.9★ Rated — 50+ Five-Star Reviews",
+  award: "4.9★ Rated, 50+ Five-Star Reviews",
 };
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -113,9 +113,9 @@ const breadcrumbSchema = {
 // ─── METADATA EXPORT ───────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host — Anchor Yash Soni`,
+  title: `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host, Anchor Yash Soni`,
   description:
-    `Looking for the best anchor in Jodhpur? Anchor Yash Soni — 4.9★ rated, 700+ shows, 5+ years. Expert for royal weddings at Umaid Bhawan Palace, Mehrangarh Fort & RAAS Jodhpur. Bilingual, unscripted, NRI & Rajputana protocol experienced.`,
+    `Looking for the best anchor in Jodhpur? Anchor Yash Soni, 4.9★ rated, 700+ shows, 5+ years. Expert for royal weddings at Umaid Bhawan Palace, Mehrangarh Fort & RAAS Jodhpur. Bilingual, unscripted, NRI & Rajputana protocol experienced.`,
   keywords: [
     // Core identity
     "anchor in jodhpur",
@@ -124,7 +124,7 @@ export const metadata: Metadata = {
     "event anchor jodhpur",
     "emcee jodhpur",
     "event host jodhpur",
-    // Venue-specific — high intent
+    // Venue-specific, high intent
     "umaid bhawan palace wedding anchor",
     "mehrangarh fort wedding host",
     "raas jodhpur wedding emcee",
@@ -174,14 +174,14 @@ export const metadata: Metadata = {
     locale:      "en_IN",
     url:          FULL_URL,
     siteName:    "Anchor Yash Soni",
-    title:       `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host — Anchor Yash Soni`,
+    title:       `Best Anchor in Jodhpur | Royal Palace & Destination Wedding Host, Anchor Yash Soni`,
     description: `4.9★ rated. 700+ shows. Jodhpur's most trusted anchor for Umaid Bhawan Palace weddings, Mehrangarh Fort Sangeets & NRI destination events. Bilingual, unscripted, royal protocol aware.`,
     images: [
       {
         url:    OG_IMAGE,
         width:  1200,
         height: 630,
-        alt:    `Best Anchor in Jodhpur — Anchor Yash Soni at Mehrangarh Fort`,
+        alt:    `Best Anchor in Jodhpur, Anchor Yash Soni at Mehrangarh Fort`,
       },
     ],
   },
@@ -189,8 +189,8 @@ export const metadata: Metadata = {
     card:        "summary_large_image",
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
-    title:       `Best Anchor in Jodhpur | Anchor Yash Soni — 4.9★`,
-    description: `Umaid Bhawan Palace. Mehrangarh Fort. RAAS Jodhpur. The Blue City's most trusted destination wedding anchor — 700+ shows, 4.9★ rated.`,
+    title:       `Best Anchor in Jodhpur | Anchor Yash Soni, 4.9★`,
+    description: `Umaid Bhawan Palace. Mehrangarh Fort. RAAS Jodhpur. The Blue City's most trusted destination wedding anchor, 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
   other: {
@@ -248,7 +248,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-jodhpur/#webpage`,
   url: `https://${DOMAIN}/${SLUG}`,
-  name: `Best Anchor in Jodhpur | Wedding & Event Host — Yash Soni`,
+  name: `Best Anchor in Jodhpur | Wedding & Event Host, Yash Soni`,
   description: `Anchor Yash Soni is the premium event anchor in Jodhpur. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

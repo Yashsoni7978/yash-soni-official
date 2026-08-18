@@ -1,9 +1,9 @@
-// app/award-night-anchor-jaipur/layout.jsx
+﻿// app/award-night-anchor-jaipur/layout.jsx
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://yashsoni.in/award-night-anchor-jaipur",
-  name: "Award Night Anchor Jaipur — Yash Soni",
+  name: "Award Night Anchor Jaipur, Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
@@ -81,9 +81,9 @@ export const metadata = {
     type: "website", locale: "en_IN",
     url: "https://yashsoni.in/award-night-anchor-jaipur",
     siteName: "Anchor Yash Soni",
-    title: "Award Night Anchor Jaipur | Yash Soni — JECC Sitapura & Luxury Venue Specialist",
+    title: "Award Night Anchor Jaipur | Yash Soni, JECC Sitapura & Luxury Venue Specialist",
     description: "Corporate award night anchor in Jaipur. 70+ national brands. JECC Sitapura, Fairmont & ITC Rajputana specialist.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Award Night Anchor Jaipur — Yash Soni" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Award Night Anchor Jaipur, Yash Soni" }],
   },
   twitter: {
     card: "summary_large_image",

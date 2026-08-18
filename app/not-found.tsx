@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function NotFound() {
         {/* Gold badge */}
         <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-5 py-2 mb-8">
           <span className="text-[#B5952F] text-[10px] font-bold uppercase tracking-widest">
-            404 — Page Not Found
+            404, Page Not Found
           </span>
         </div>
 

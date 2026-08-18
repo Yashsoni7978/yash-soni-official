@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-rishikesh/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Rishikesh",
     "Best Wedding Anchor Rishikesh",
@@ -87,13 +87,13 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Bansal Family — Delhi" },
+      author: { "@type": "Person", name: "Bansal Family, Delhi" },
       reviewBody: "Hosting a Satvik wedding at Taj Rishikesh was beautiful but we were terrified the Sangeet would be boring without alcohol. Yash completely changed the game. He brought an insane level of pure, organic hype using his voice and crowd interaction. The dance floor was packed till the venue shut down.",
     },
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Venture Capital Summit — Gurgaon" },
+      author: { "@type": "Person", name: "Venture Capital Summit, Gurgaon" },
       reviewBody: "We held a 3-day wellness and strategy summit at The Roseate Ganges. Yash anchored the entire schedule. His English is exceptionally sharp, and his ability to pace a room without relying on notes made him look like one of the executives. True professional.",
     },
   ],
@@ -154,9 +154,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-rishikesh/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Rishikesh | Taj Rishikesh & Satvik Host — Yash Soni`,
+  name: `Best Anchor in Rishikesh | Taj Rishikesh & Satvik Host, Yash Soni`,
   headline: `Rishikesh's Premier Event Anchor for Ultra-Luxury Satvik Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Rishikesh destination weddings. Mastering Satvik (no-alcohol) party momentum, Taj Rishikesh protocols, and elite bilingual hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Rishikesh destination weddings. Mastering Satvik (no-alcohol) party momentum, Taj Rishikesh protocols, and elite bilingual hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Uttarakhand` },
@@ -168,7 +168,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Rishikesh | Elite Satvik Destination Wedding Emcee`,
-  description: `Looking for the best anchor in Rishikesh? Anchor Yash Soni — 4.9★. Expert for Taj Rishikesh, The Roseate, and luxury Satvik destination weddings. Flawless unscripted bilingual hosting driving pure organic energy.`,
+  description: `Looking for the best anchor in Rishikesh? Anchor Yash Soni, 4.9★. Expert for Taj Rishikesh, The Roseate, and luxury Satvik destination weddings. Flawless unscripted bilingual hosting driving pure organic energy.`,
   keywords: [
     "anchor in rishikesh",
     "best anchor in rishikesh",
@@ -196,13 +196,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Rishikesh | Luxury Riverside Destination Host`,
     description: `4.9★ rated. Rishikesh's premium anchor for highly exclusive Satvik destination weddings at Taj Rishikesh. Driving massive, unscripted organic energy for elite crowds.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Rishikesh — Anchor Yash Soni at Himalayan Destinations` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Rishikesh, Anchor Yash Soni at Himalayan Destinations` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Rishikesh | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Rishikesh | Anchor Yash Soni, 4.9★`,
     description: `Taj Rishikesh. The Roseate. Rishikesh's premier bilingual event anchor for exclusive VIP Satvik Sangeets and luxury riverside ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -211,7 +211,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Rishikesh | Satvik VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Rishikesh | Satvik VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Spiritual Wedding, VIP Events, ${CITY}, Uttarakhand, India`,
     "DC.coverage": `${CITY}, Uttarakhand, India`,
     "DC.language": "en-IN",

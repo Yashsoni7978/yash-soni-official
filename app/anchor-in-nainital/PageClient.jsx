@@ -102,12 +102,12 @@ const NAINITAL_IDENTITY = [
   {
     icon: Waves,
     title: "Lakeside Acoustic Drop-off",
-    desc: "Nainital and Bhimtal events almost universally occur on sprawling outdoor terraces directly overlooking the water. The combination of high-altitude thin air and immense open lakes completely strips sound systems of their power. Yash utilizes strict 'Acoustic Defense'—physically relocating audiences tighter to the stage and projecting pure unscripted vocal presence to stop the crowd from mentally disconnecting as the evening drops colder."
+    desc: "Nainital and Bhimtal events almost universally occur on sprawling outdoor terraces directly overlooking the water. The combination of high-altitude thin air and immense open lakes completely strips sound systems of their power. Yash utilizes strict 'Acoustic Defense'-physically relocating audiences tighter to the stage and projecting pure unscripted vocal presence to stop the crowd from mentally disconnecting as the evening drops colder."
   },
   {
     icon: Building2,
     title: "The Kumaon Heritage Protocol",
-    desc: "Properties like The Naini Retreat have profound historical weight. They attract the peak of Delhi NCR's legacy corporate families. These crowds instantly reject loud, unpolished 'MCing'. Yash acts as a true Executive Moderator—executing a highly articulate, unscripted English flow that perfectly matches the intellectual and historical pedigree of the massive heritage architectures."
+    desc: "Properties like The Naini Retreat have profound historical weight. They attract the peak of Delhi NCR's legacy corporate families. These crowds instantly reject loud, unpolished 'MCing'. Yash acts as a true Executive Moderator-executing a highly articulate, unscripted English flow that perfectly matches the intellectual and historical pedigree of the massive heritage architectures."
   },
   {
     icon: Briefcase,
@@ -158,24 +158,24 @@ const VS = [
   { problem: "The anchor's voice dissipating entirely across the vast open lakes at sunset", fix: "Mastery of timeline-stitching and acoustic centralizing to pull the entire party tightly towards the stage" },
   { problem: "Using 'cheap MC' club humor that instantly alienates an ultra-premium VIP guest list at a heritage property", fix: "Intimate, highly conversational executive-grade delivery matching the crowd's precise pedigree" },
   { problem: "Guests retreating to their heated rooms early because the mountain temperatures freeze the Sangeet", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd instantaneously" },
-  { problem: "Reading rigidly from paper notes during an incredibly visually exposed mountain Varmala", fix: "100% unscripted flow—maintaining absolute eye contact despite severe high-altitude weather shifts" },
+  { problem: "Reading rigidly from paper notes during an incredibly visually exposed mountain Varmala", fix: "100% unscripted flow-maintaining absolute eye contact despite severe high-altitude weather shifts" },
   { problem: "Being unable to bridge formal C-suite networking with the massive high-energy Sangeet format", fix: "Executing an intense psychological transition that drags the VIPs directly to the dance floor" },
   { problem: "An anchor getting totally flustered by sudden Kumaon weather systems that force the reception indoors", fix: "Absolute stoic command, restructuring the event flow natively without the guests ever sensing panic" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Executive Corporate Retreat — Gurgaon",
+    name: "Executive Corporate Retreat, Gurgaon",
     quote: "Hosting our annual corporate retreat at a heritage property in Nainital required a very specific tone. Yash was exactly what we needed. High-end English hosting, entirely unscripted, blending the corporate strategy daytime talks immediately into the lakeside evening gala.",
     event: "Leadership Offsite · The Naini Retreat"
   },
   {
-    name: "Kapur Family — Delhi NCR",
+    name: "Kapur Family, Delhi NCR",
     quote: "The logistics of lakeside acoustic drop-off are real. Our Sangeet threatened to lose energy, but Yash physically compressed the crowd dynamically and pushed the interactions into overdrive. He completely saved the Sangeet.",
     event: "Destination Sangeet · Bhimtal Luxury Resort"
   },
   {
-    name: "Chadha Legacy Wedding — UP",
+    name: "Chadha Legacy Wedding, UP",
     quote: "We hosted 300 guests across Shervani Hilltop. Organizing families across that property is a nightmare. Yash didn't just host; he acted as the operational spine of the evening. He dragged the timeline back on track purely through commanding stage presence.",
     event: "Massive Kumaon Wedding · Shervani Hilltop"
   },
@@ -189,14 +189,14 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle outdoor functions by Naini Lake where the altitude drops the temperature drastically?",
-    a: "This is the true test of a Kumaon destination anchor. When the evening cold hits the lake, guests instantly mentally check out and want to go inside. A generic DJ set will fail here. I use 'Psychological Momentum'—accelerating the timeline aggressively, physically moving into the crowd, and forcing an explosive dancing state via unscripted interaction before the cold ruins the event."
+    a: "This is the true test of a Kumaon destination anchor. When the evening cold hits the lake, guests instantly mentally check out and want to go inside. A generic DJ set will fail here. I use 'Psychological Momentum'-accelerating the timeline aggressively, physically moving into the crowd, and forcing an explosive dancing state via unscripted interaction before the cold ruins the event."
   },
   {
     q: "We are holding our Varmala outdoors. The wind off the lake is usually very loud. Can you manage the audio spread?",
-    a: "The acoustic drop-off at properties in Bhimtal and Nainital is massive. I actively deploy 'Acoustic Defense'. Instead of just telling the DJ to max the volume (which causes terrible echo), I restructure the crowd physically—pulling the seating tighter to the stage—and I use heavy vocal projection to overpower the ambient wind, ensuring the emotional depth of the Pheras is deeply felt."
+    a: "The acoustic drop-off at properties in Bhimtal and Nainital is massive. I actively deploy 'Acoustic Defense'. Instead of just telling the DJ to max the volume (which causes terrible echo), I restructure the crowd physically-pulling the seating tighter to the stage-and I use heavy vocal projection to overpower the ambient wind, ensuring the emotional depth of the Pheras is deeply felt."
   },
   {
-    q: "Our guest list is highly exclusive—mostly South Delhi executives and VIP corporate legacy families. Can you match this tone?",
+    q: "Our guest list is highly exclusive-mostly South Delhi executives and VIP corporate legacy families. Can you match this tone?",
     a: "Completely. A VIP destination wedding at The Naini Retreat does not need a high-pitched 'hype man'; it requires an Executive Moderator. I drop all standard 'wedding gimmick' games. I host with sharp, highly conversational, unscripted English that treats the VIPs with intellectual respect, bridging the gap between networking and raw celebration."
   },
   {
@@ -266,7 +266,7 @@ export default function NainitalPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/nainital_bg.webp" alt="Best Anchor in Nainital — VIP Luxury Lakeside Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/nainital_bg.webp" alt="Best Anchor in Nainital, VIP Luxury Lakeside Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function NainitalPage() {
                 Nainital operates at the zenith of heritage exclusivity. You are dealing with beautiful, complex venues spanning the hills where <strong className="text-[#B5952F]">sweeping outdoor lake acoustics and top-tier Delhi NCR VIP crowds</strong> require flawless execution. Yash steps into these sprawling mountain environments and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and passive 'MC behavior'. For high-net-worth weddings at properties like The Naini Retreat, Yash provides an elite bilingual execution—flawless English that drops the invisible wall between the stage and the corporate network, while honoring the colonial prestige of the venue flawlessly.
+                He completely rejects paper scripts and passive 'MC behavior'. For high-net-worth weddings at properties like The Naini Retreat, Yash provides an elite bilingual execution-flawless English that drops the invisible wall between the stage and the corporate network, while honoring the colonial prestige of the venue flawlessly.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -375,7 +375,7 @@ export default function NainitalPage() {
               The Lakeside Ridge Demands<br />an <G>Elite Frequency.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Nainital and Bhimtal combine profound mountain heritage with massive, ultra-modern luxury lake infrastructure. The properties here feature sweeping waterfront views that entirely scatter outdoor audio, and the demographic is decisively weighted towards Delhi NCR's highest corporate tier wanting a pristine escape. Yash masters this—possessing razor-sharp cultural intelligence to navigate VIP corporate mechanics, the linguistic polish to match high-end heritage lineage, and the unscripted explosive power to ignite a Sangeet against the dropping mountain weather.
+              Nainital and Bhimtal combine profound mountain heritage with massive, ultra-modern luxury lake infrastructure. The properties here feature sweeping waterfront views that entirely scatter outdoor audio, and the demographic is decisively weighted towards Delhi NCR's highest corporate tier wanting a pristine escape. Yash masters this-possessing razor-sharp cultural intelligence to navigate VIP corporate mechanics, the linguistic polish to match high-end heritage lineage, and the unscripted explosive power to ignite a Sangeet against the dropping mountain weather.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -489,13 +489,13 @@ export default function NainitalPage() {
               VIP Reality.<br /><G>Lakeside Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Nainital requires an elite understanding of 'Property Dominance'. Venues here stretch out heavily along the lake rims. The moment formal networking concludes, the crowd scatters entirely across the massive outdoor footprint. Yash assumes the role of the Timeline Architect—using extreme vocal pacing and dominant stage psychology to forcefully pull the VIPs together, instantly sparking a massive Sangeet before the energy dies to the dropping temperature.
+              Hosting a luxury event in Nainital requires an elite understanding of 'Property Dominance'. Venues here stretch out heavily along the lake rims. The moment formal networking concludes, the crowd scatters entirely across the massive outdoor footprint. Yash assumes the role of the Timeline Architect-using extreme vocal pacing and dominant stage psychology to forcefully pull the VIPs together, instantly sparking a massive Sangeet before the energy dies to the dropping temperature.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               Furthermore, Nainital is a definitive playground for Delhi NCR's most sophisticated corporate families. Yash fundamentally validates their presence with pristine, unscripted English moderation, then seamlessly flips into an aggressively high-energy North Indian hype set when the timeline demands immense intensity.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Lakeside VIP fluency—defeating sprawling architectures and dominating the South Delhi corporate tier—is the mark of an anchor who operates at the true apex of the destination industry.
+              Lakeside VIP fluency-defeating sprawling architectures and dominating the South Delhi corporate tier-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,14 +551,14 @@ export default function NainitalPage() {
               Himalayan Peak.<br /><G>Corporate Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Nainital is an intense logistical challenge. Properties physically fragment guests constantly across various lake-facing lawns and heritage lounges. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Nainital is an intense logistical challenge. Properties physically fragment guests constantly across various lake-facing lawns and heritage lounges. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Heritage VIP Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling Himalayan constraints.
+                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling Himalayan constraints.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function NainitalPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function NainitalPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Nainital and Bhimtal experience extreme saturation from the Delhi VIP destination season. Top-tier anchors require multi-day blockouts for Kumaon mountain transit. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

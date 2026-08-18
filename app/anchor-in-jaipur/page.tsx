@@ -1,13 +1,13 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-jaipur/layout.jsx
-// SERVER COMPONENT — metadata only, no head/script tags
+// SERVER COMPONENT, metadata only, no head/script tags
 export const metadata: Metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Anchor in Jaipur — Yash Soni | Local Event Host for Weddings & Corporate",
+  title: "Anchor in Jaipur, Yash Soni | Local Event Host for Weddings & Corporate",
   description:
-    "Looking for a professional anchor in Jaipur? Yash Soni has hosted 700+ events across Jaipur — weddings, corporate events, sangeets & sports. Locally based, bilingual Hindi/English. Available for bookings.",
+    "Looking for a professional anchor in Jaipur? Yash Soni has hosted 700+ events across Jaipur, weddings, corporate events, sangeets & sports. Locally based, bilingual Hindi/English. Available for bookings.",
   keywords: [
     "anchor in jaipur",
     "best anchor in jaipur",
@@ -52,13 +52,13 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://yashsoni.in/anchor-in-jaipur",
     siteName: "Anchor Yash Soni",
-    title: "Anchor in Jaipur — Yash Soni | Local Event Host",
+    title: "Anchor in Jaipur, Yash Soni | Local Event Host",
     description:
-      "Locally based anchor in Jaipur. 700+ events hosted — weddings, sangeets, corporate & sports. Rambagh Palace, Fairmont, Kukas, Ajmer Road farmhouses & JECC Sitapura.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Anchor in Jaipur — Yash Soni locally based professional event host" }] },
+      "Locally based anchor in Jaipur. 700+ events hosted, weddings, sangeets, corporate & sports. Rambagh Palace, Fairmont, Kukas, Ajmer Road farmhouses & JECC Sitapura.",
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Anchor in Jaipur, Yash Soni locally based professional event host" }] },
   twitter: {
     card: "summary_large_image",
-    title: "Anchor in Jaipur — Yash Soni | Local Event Host",
+    title: "Anchor in Jaipur, Yash Soni | Local Event Host",
     description: "Locally based anchor in Jaipur. 700+ events. Weddings, Sangeets, corporate & sports. All Jaipur venues covered.",
     images: ["/og-image.webp"] },
   other: {
@@ -110,7 +110,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-jaipur/#webpage`,
   url: `https://yashsoni.in/anchor-in-jaipur`,
-  name: `Anchor in Jaipur — Yash Soni | Local Event Host for Weddings & Corporate`,
+  name: `Anchor in Jaipur, Yash Soni | Local Event Host for Weddings & Corporate`,
   description: `Yash Soni is a professional event anchor based in Jaipur, Rajasthan. He hosts weddings, corporate events, sangeets, and award nights across Jaipur and Rajasthan. With 700+ shows hosted, he is one of the most experienced anchors in Jaipur.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

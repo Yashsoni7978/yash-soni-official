@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 
 import Link from "next/link";
@@ -119,7 +119,7 @@ export default function LuxuryWeddingPlannerRajasthan() {
         >
           <span className="font-['Orange_Avenue'] text-4xl text-[#B5952F] mb-6 block">Beyond Ordinary</span>
           <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-[#1A1A1A] leading-tight mb-10">True luxury is not just what you see, it's how you feel.</h2>
-          <p className="font-sans text-lg md:text-xl text-gray-600 font-light leading-relaxed">For the discerning few, we offer a wedding experience free from compromise. We secure the most elite properties in Rajasthan and manage every detail—from private jet arrivals to Michelin-star catering—ensuring your family celebrates in absolute privacy and opulence.</p>
+          <p className="font-sans text-lg md:text-xl text-gray-600 font-light leading-relaxed">For the discerning few, we offer a wedding experience free from compromise. We secure the most elite properties in Rajasthan and manage every detail-from private jet arrivals to Michelin-star catering-ensuring your family celebrates in absolute privacy and opulence.</p>
         </motion.div>
       </section>
 

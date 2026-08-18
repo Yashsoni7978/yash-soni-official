@@ -102,12 +102,12 @@ const DHARAMSHALA_IDENTITY = [
   {
     icon: CloudFog,
     title: "Dhauladhar Weather Reality",
-    desc: "Events spanning across properties like Taj Dharamshala or Hyatt Regency are constantly subject to rapid, unpredictable cloud cover and temperature drops coming off the Dhauladhar range. Yash executes 'Timeline Defense'—he never waits for the evening to 'die down'. He dynamically accelerates the Sangeet's timeline organically, using unscripted bilingual crowd psychology to ignite the party aggressively before the cold forces families indoors."
+    desc: "Events spanning across properties like Taj Dharamshala or Hyatt Regency are constantly subject to rapid, unpredictable cloud cover and temperature drops coming off the Dhauladhar range. Yash executes 'Timeline Defense'-he never waits for the evening to 'die down'. He dynamically accelerates the Sangeet's timeline organically, using unscripted bilingual crowd psychology to ignite the party aggressively before the cold forces families indoors."
   },
   {
     icon: Building2,
     title: "Mountain Retreat Protocol",
-    desc: "Because Dharamshala is deeply associated with Buddhist serenity and extreme luxury retreats, the daytime ceremonies require absolute grace. Yash operates as a highly articulate Executive Host—navigating the profound architectural weight of these luxury mountain properties utilizing flawless English that validates the C-suite network, entirely avoiding loud, disruptive 'DJ-style MCing'."
+    desc: "Because Dharamshala is deeply associated with Buddhist serenity and extreme luxury retreats, the daytime ceremonies require absolute grace. Yash operates as a highly articulate Executive Host-navigating the profound architectural weight of these luxury mountain properties utilizing flawless English that validates the C-suite network, entirely avoiding loud, disruptive 'DJ-style MCing'."
   },
   {
     icon: Music2,
@@ -158,24 +158,24 @@ const VS = [
   { problem: "The anchor freezing and panicking when mountain rain forces an outdoor Sangeet suddenly indoors", fix: "Absolute stoic command, restructuring the event flow and timeline natively without the guests sensing the shift" },
   { problem: "Using 'cheap MC' club humor that instantly alienates an ultra-premium VIP guest list at the Taj", fix: "Intimate, highly conversational executive-grade delivery matching the absolute pinnacle of crowd pedigree" },
   { problem: "Guests retreating to their heated rooms early because the mountain temperatures freeze the event", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd instantaneously" },
-  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor mountain ceremony", fix: "100% unscripted flow—maintaining absolute eye contact despite severe high-altitude distractions" },
+  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor mountain ceremony", fix: "100% unscripted flow-maintaining absolute eye contact despite severe high-altitude distractions" },
   { problem: "Being unable to bridge formal C-suite networking with a massive Punjabi high-energy Sangeet format", fix: "Executing an intense psychological transition that drags the Punjab VIPs directly to the dance floor natively" },
   { problem: "The anchor's voice dissipating entirely as guests wander across the vast Himalayan estates", fix: "Mastery of timeline sequencing and vocal centralizing to pull the entire party tightly towards the event core" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Corporate Summit — Chandigarh",
+    name: "Corporate Summit, Chandigarh",
     quote: "Choosing Taj Dharamshala meant we needed an incredibly refined host for our executive summit. Yash anchored with pure executive polish. Unscripted, razor-sharp, and totally in control of the multi-day strategic agenda.",
     event: "Leadership Offsite · Taj Dharamshala"
   },
   {
-    name: "Sodhi Family — Punjab",
+    name: "Sodhi Family, Punjab",
     quote: "Mountain weather is a Sangeet killer. But Yash didn't wait. He brought massive hype right from the entrance entirely natively. He switched between English for the VIPs and heavy Punjabi banter effortlessly. The dance floor at Hyatt Regency exploded.",
     event: "Destination Sangeet · Hyatt Regency Dharamshala"
   },
   {
-    name: "Heritage Wedding Retreat — NCR",
+    name: "Heritage Wedding Retreat, NCR",
     quote: "We hosted deep in the Kangra valley at a boutique estate. We had high-profile guests who hate 'typical' wedding anchors. Yash bypassed all the generic games and hosted conversationally. He built immense momentum through pure stage dominance.",
     event: "VIP Intimate Wedding · Rakkh Resort"
   },
@@ -189,15 +189,15 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle open-air events in Dharamshala when the Dhauladhar cold rolls in at sunset?",
-    a: "This is the cardinal rule of high-altitude hosting. The second the sun sets over Kangra, the crowd wants to go inside. A basic DJ setup cannot counter this psychology. I utilize 'Temperature Compression'—speeding up the entire timeline aggressively, plunging into the crowd physically, and detonating a massive dancing session with high-intensity unscripted crowd-work before the cold paralyzes the night."
+    a: "This is the cardinal rule of high-altitude hosting. The second the sun sets over Kangra, the crowd wants to go inside. A basic DJ setup cannot counter this psychology. I utilize 'Temperature Compression'-speeding up the entire timeline aggressively, plunging into the crowd physically, and detonating a massive dancing session with high-intensity unscripted crowd-work before the cold paralyzes the night."
   },
   {
-    q: "Our Mussoorie guest list is absolutely exclusive—mostly Chandigarh executives and corporate VIPs. Can you match this tone?",
+    q: "Our Mussoorie guest list is absolutely exclusive-mostly Chandigarh executives and corporate VIPs. Can you match this tone?",
     a: "Completely. Elite destination properties like Taj Dharamshala do not need a loud, shouting 'hype man'. They require an Executive Moderator. I deliberately drop standard, childish 'wedding gimmicks'. I host with formal, razor-sharp, unscripted English that respects the pedigree of the VIPs, perfectly bridging high-level networking with eventual massive celebration."
   },
   {
     q: "The properties here are beautiful but sprawling. How do you prevent guests from wandering off to the lounges?",
-    a: "Large luxury properties inevitably cause 'Audience Drift'. In Dharamshala, guests go wandering for valley views. I play the role of the 'Timeline Catalyst'—deploying rapid-fire, high-frequency pacing that constantly drags the guests back to the main stage, actively preventing the energy from bleeding away across the resort footprint."
+    a: "Large luxury properties inevitably cause 'Audience Drift'. In Dharamshala, guests go wandering for valley views. I play the role of the 'Timeline Catalyst'-deploying rapid-fire, high-frequency pacing that constantly drags the guests back to the main stage, actively preventing the energy from bleeding away across the resort footprint."
   },
   {
     q: "Do you use teleprompters or scripts during these massive VIP itineraries?",
@@ -267,7 +267,7 @@ export default function DharamshalaPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/dharamshala_bg.webp" alt="Best Anchor in Dharamshala — VIP Luxury Mountain Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/dharamshala_bg.webp" alt="Best Anchor in Dharamshala, VIP Luxury Mountain Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -347,7 +347,7 @@ export default function DharamshalaPage() {
                 Dharamshala operates as an exclusive sanctuary away from standard chaotic wedding hubs. You are dealing with vast properties like Taj Dharamshala where <strong className="text-[#B5952F]">sweeping mountain views and top-tier Chandigarh/Punjab corporate crowds</strong> require flawless execution. Yash steps into these sprawling, spiritually-tied mountain architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the corporate network, suddenly flipping into heavy Punjabi momentum when the Sangeet demands unhinged energy.
+                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the corporate network, suddenly flipping into heavy Punjabi momentum when the Sangeet demands unhinged energy.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -490,13 +490,13 @@ export default function DharamshalaPage() {
               VIP Reality.<br /><G>Dhauladhar Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Dharamshala requires an elite understanding of 'Property Dominance'. Venues like Hyatt Regency drag across vast terrains. The moment formal day-networking concludes, the crowd fragments entirely across the resort. Yash assumes the role of the Timeline Architect—using extreme vocal pacing and dominant stage psychology to forcefully pull the Chandigarh VIPs into the central phase, instantly generating massive momentum before the mountain drop paralyzes energy.
+              Hosting a luxury event in Dharamshala requires an elite understanding of 'Property Dominance'. Venues like Hyatt Regency drag across vast terrains. The moment formal day-networking concludes, the crowd fragments entirely across the resort. Yash assumes the role of the Timeline Architect-using extreme vocal pacing and dominant stage psychology to forcefully pull the Chandigarh VIPs into the central phase, instantly generating massive momentum before the mountain drop paralyzes energy.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               Furthermore, Dharamshala is a definitive destination for Chandigarh and Punjab's most sophisticated corporate families. Yash fundamentally validates their presence with pristine, unscripted English moderation, then seamlessly flips into an aggressively high-energy Punjabi format when the evening formal wear comes off.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              High-altitude VIP fluency—defeating sprawling architectures and dominating the Chandigarh corporate tier—is the mark of an anchor who operates at the true apex of the destination industry.
+              High-altitude VIP fluency-defeating sprawling architectures and dominating the Chandigarh corporate tier-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -552,14 +552,14 @@ export default function DharamshalaPage() {
               Himalayan Retreat.<br /><G>Chandigarh Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Dharamshala is an intense logistical challenge. Properties physically drop off across the Kangra valleys, scattering guests continuously. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Dharamshala is an intense logistical challenge. Properties physically drop off across the Kangra valleys, scattering guests continuously. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "VVIP Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Punjab families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling Himlayan constraints.
+                High-net-worth Punjab families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling Himlayan constraints.
               </p>
             </div>
           </Reveal>
@@ -589,7 +589,7 @@ export default function DharamshalaPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -678,7 +678,7 @@ export default function DharamshalaPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Dharamshala experiences intense overlapping of the Punjab VIP destination season and peak Chandigarh extreme-luxury dates. Top-tier anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

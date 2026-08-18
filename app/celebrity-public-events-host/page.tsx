@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
+// Schema data, moved here from PageClient.jsx for server-side rendering
 const FAQS = [
   { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
   { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
@@ -14,7 +14,7 @@ const FAQS = [
   },
   {
     q: "Can you manage a crowd of 5,000+ at a public event?",
-    a: "Large-scale public event management is a core specialisation. Yash has commanded open events of 10,000+ people unscripted. Managing crowd energy at scale — keeping thousands energised and safe simultaneously — requires a completely different discipline from wedding or corporate hosting. Both have been mastered.",
+    a: "Large-scale public event management is a core specialisation. Yash has commanded open events of 10,000+ people unscripted. Managing crowd energy at scale, keeping thousands energised and safe simultaneously, requires a completely different discipline from wedding or corporate hosting. Both have been mastered.",
   },
   {
     q: "Do you host Bollywood celebrity interviews and red carpet events?",
@@ -22,15 +22,15 @@ const FAQS = [
   },
   {
     q: "Can you anchor a fashion show or runway event in Jaipur?",
-    a: "Fashion show hosting is a specialisation. The voice of the runway must match the aesthetic of the collection — sophisticated, confident, and never overshadowing the designs. Yash has hosted fashion events at premium Jaipur venues including The Lalit and Marriott.",
+    a: "Fashion show hosting is a specialisation. The voice of the runway must match the aesthetic of the collection, sophisticated, confident, and never overshadowing the designs. Yash has hosted fashion events at premium Jaipur venues including The Lalit and Marriott.",
   },
   {
     q: "Do you work with teleprompters for televised events?",
-    a: "Yes. For televised events, formal product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining eye contact with a live audience — so it never looks scripted on camera — is a trained skill.",
+    a: "Yes. For televised events, formal product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining eye contact with a live audience, so it never looks scripted on camera, is a trained skill.",
   },
   {
     q: "Can you host a luxury brand launch or store opening?",
-    a: "Luxury brand launches are a core format. Creating the anticipation, the queue culture, the social media moment, and the VIP experience that turns a store opening into a city event — this is the craft. From premium brand events on JLN Marg to large-format launches at Jaipur's five-star hotels.",
+    a: "Luxury brand launches are a core format. Creating the anticipation, the queue culture, the social media moment, and the VIP experience that turns a store opening into a city event, this is the craft. From premium brand events on JLN Marg to large-format launches at Jaipur's five-star hotels.",
   },
   {
     q: "Do you travel for celebrity events outside Jaipur?",

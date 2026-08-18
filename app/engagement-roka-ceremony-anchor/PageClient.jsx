@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -86,25 +86,25 @@ const CEREMONY_TYPES = [
     icon:Heart,
     title:"Roka Ceremony",
     sub:"The official family agreement",
-    desc:"The roka is the moment two families formally agree to the union — often the first time both sides are in the same room. The anchor's job is to dissolve the formal stiffness and replace it with warmth. Custom games that get both families laughing together within the first twenty minutes.",
+    desc:"The roka is the moment two families formally agree to the union, often the first time both sides are in the same room. The anchor's job is to dissolve the formal stiffness and replace it with warmth. Custom games that get both families laughing together within the first twenty minutes.",
     tag:"Roka" },
   {
     icon:Sparkles,
     title:"Ring Exchange Ceremony",
     sub:"The public commitment moment",
-    desc:"The ring exchange is the centrepiece. The build-up, the presentation, the emotional pause, the crowd's reaction — all of this is choreographed and narrated. The anchor creates a frame for the moment that makes it feel significant, not rushed.",
+    desc:"The ring exchange is the centrepiece. The build-up, the presentation, the emotional pause, the crowd's reaction, all of this is choreographed and narrated. The anchor creates a frame for the moment that makes it feel significant, not rushed.",
     tag:"Ring Ceremony" },
   {
     icon:Users2,
     title:"Sagai Ceremony",
     sub:"Traditional engagement with rituals",
-    desc:"The sagai involves specific ritual sequences that vary by family and region. The anchor navigates these with cultural fluency — knowing the sequence, guiding guests through it, and maintaining the right tone across the formal ritual and the celebration that follows.",
+    desc:"The sagai involves specific ritual sequences that vary by family and region. The anchor navigates these with cultural fluency, knowing the sequence, guiding guests through it, and maintaining the right tone across the formal ritual and the celebration that follows.",
     tag:"Sagai" },
   {
     icon:Globe,
     title:"NRI & Cross-Cultural Engagement",
     sub:"Bilingual · International protocols",
-    desc:"Engagements where one or both families are NRI or international bring unique challenges — cultural assumptions don't align, language shifts mid-ceremony, and the audience demographic requires real bilingual fluency rather than token English phrases.",
+    desc:"Engagements where one or both families are NRI or international bring unique challenges, cultural assumptions don't align, language shifts mid-ceremony, and the audience demographic requires real bilingual fluency rather than token English phrases.",
     tag:"NRI" },
   {
     icon:Laugh,
@@ -116,35 +116,35 @@ const CEREMONY_TYPES = [
     icon:Crown,
     title:"Intimate Luxury Engagements",
     sub:"50 guests · Palace & heritage venues",
-    desc:"High-net-worth intimate engagements at Jaipur's premium hotels and heritage properties. The register is completely different — understated elegance over broadcast energy. Personalisation and emotional precision over crowd games.",
+    desc:"High-net-worth intimate engagements at Jaipur's premium hotels and heritage properties. The register is completely different, understated elegance over broadcast energy. Personalisation and emotional precision over crowd games.",
     tag:"Luxury" },
 ];
 const ICE_BREAKERS = [
   { title:"Two Families, One Quiz",    desc:"Custom trivia built around both families' shared history, the couple's story, and light cultural differences. Gets both sides competing and laughing simultaneously." },
-  { title:"The Honest Roast",          desc:"Gentle, well-researched roast of the couple's best-known habits and quirks — contributed by family and close friends. Calculated to embarrass exactly the right amount." },
-  { title:"Who Knows Them Better?",    desc:"A game played between both families — who knows the bride better, who knows the groom better, and what happens when they're both wrong about the same thing." },
+  { title:"The Honest Roast",          desc:"Gentle, well-researched roast of the couple's best-known habits and quirks, contributed by family and close friends. Calculated to embarrass exactly the right amount." },
+  { title:"Who Knows Them Better?",    desc:"A game played between both families, who knows the bride better, who knows the groom better, and what happens when they're both wrong about the same thing." },
   { title:"Couple's Truth Round",      desc:"Questions posed to the couple separately, answered simultaneously. The differences reveal the real story. The crowd is judge." },
 ];
 const VS = [
   { problem:"Awkward silence while both families sit on opposite sides",    fix:"Custom games that force interaction within the first 15 minutes" },
-  { problem:"Ring exchange feels rushed and unplanned",                     fix:"Scripted build-up, pause, and narrated moment — it lands emotionally" },
-  { problem:"One language excludes half the guests",                        fix:"Bilingual Hindi/English switching — nobody misses a moment" },
+  { problem:"Ring exchange feels rushed and unplanned",                     fix:"Scripted build-up, pause, and narrated moment, it lands emotionally" },
+  { problem:"One language excludes half the guests",                        fix:"Bilingual Hindi/English switching, nobody misses a moment" },
   { problem:"Rituals happen without explanation for younger/NRI guests",    fix:"Cultural narration that honours ritual without making it feel like a class" },
   { problem:"Energy dies after the ring exchange",                          fix:"Designed second-half that transitions from formal to celebratory" },
   { problem:"Uncle ji awkwardly trying to run the event himself",           fix:"Professional anchor takes the pressure completely off the family" },
 ];
 const TESTIMONIALS = [
   {
-    name:"Sharma Family — Delhi & Jaipur",
+    name:"Sharma Family, Delhi & Jaipur",
     quote:"Our families had never met. Sixty people from two completely different cities, sitting in careful formation on opposite sides of the room. Within thirty minutes of the anchor starting the games, they were mixed together and nobody remembered which side they'd started on.",
     event:"Roka Ceremony · ITC Rajputana Jaipur · 60 guests" },
   {
     name:"Kapoor Family",
-    quote:"The ring exchange was the best five minutes of the entire event. The build-up the anchor created, the pause before the exchange, the narration — it made something that could have felt like a formality feel genuinely significant. My daughter cried. So did I.",
+    quote:"The ring exchange was the best five minutes of the entire event. The build-up the anchor created, the pause before the exchange, the narration, it made something that could have felt like a formality feel genuinely significant. My daughter cried. So did I.",
     event:"Ring Ceremony · Jai Mahal Palace Jaipur · 120 guests" },
   {
     name:"Mehta-Singh Family",
-    quote:"Our engagement had guests from the UK, US, and three Indian states. The bilingual hosting — genuinely bilingual, not just code-switching every few sentences — meant every single guest felt the event was made for them. That's rare.",
+    quote:"Our engagement had guests from the UK, US, and three Indian states. The bilingual hosting, genuinely bilingual, not just code-switching every few sentences, meant every single guest felt the event was made for them. That's rare.",
     event:"Sagai Ceremony · Fairmont Jaipur · NRI families · 200 guests" },
 ];
 const FAQS = [
@@ -158,28 +158,28 @@ const FAQS = [
     a:"Engagement and roka ceremony anchoring in Jaipur starts from ₹12,000 for a standard 2–3 hour event. Ring ceremony galas with custom scripting, family games, and ring exchange narration are priced based on event duration and complexity. WhatsApp the event details for a quote within the hour." },
   {
     q:"What does an engagement ceremony anchor actually do?",
-    a:"An engagement anchor scripts and manages the entire ceremony flow — the ring exchange build-up, family introductions, both-family games, ritual narration, and the transition from formal ceremony to celebration. The anchor is the reason the two families stop being strangers and start feeling like one extended family." },
+    a:"An engagement anchor scripts and manages the entire ceremony flow, the ring exchange build-up, family introductions, both-family games, ritual narration, and the transition from formal ceremony to celebration. The anchor is the reason the two families stop being strangers and start feeling like one extended family." },
   {
     q:"Do you anchor roka ceremonies in Jaipur?",
-    a:"Yes. Roka ceremonies are a specific specialisation — the first formal family meeting is the highest-pressure icebreaker situation in the wedding calendar. Custom games, bilingual hosting, and genuine warmth that turns a formal agreement into a real celebration." },
+    a:"Yes. Roka ceremonies are a specific specialisation, the first formal family meeting is the highest-pressure icebreaker situation in the wedding calendar. Custom games, bilingual hosting, and genuine warmth that turns a formal agreement into a real celebration." },
   {
     q:"Can you host a ring ceremony or sagai in Jaipur?",
     a:"Yes. Ring ceremony and sagai anchoring includes custom scripted ring exchange narration, both-family games, cultural ritual guidance for guests unfamiliar with traditions, and bilingual Hindi/English hosting throughout." },
   {
     q:"What makes a roka ceremony anchor different from a wedding anchor?",
-    a:"A roka is about two families meeting for the first time and leaving as one. A wedding is about celebrating a union already established. The roka anchor's job is fundamentally about icebreaking — building warmth and laughter between strangers. This is a different skill set from wedding ceremony anchoring." },
+    a:"A roka is about two families meeting for the first time and leaving as one. A wedding is about celebrating a union already established. The roka anchor's job is fundamentally about icebreaking, building warmth and laughter between strangers. This is a different skill set from wedding ceremony anchoring." },
   {
     q:"Do you handle bilingual and NRI families at engagements?",
-    a:"Yes. NRI and cross-cultural engagements are common — families where one side is from the UK or US and the other from Rajasthan or Delhi. Genuine bilingual Hindi/English hosting that adapts in real time to the demographic in front of you, not a scripted code-switch every paragraph." },
+    a:"Yes. NRI and cross-cultural engagements are common, families where one side is from the UK or US and the other from Rajasthan or Delhi. Genuine bilingual Hindi/English hosting that adapts in real time to the demographic in front of you, not a scripted code-switch every paragraph." },
   {
     q:"How far in advance should we book an engagement anchor in Jaipur?",
     a:"For engagement ceremonies at premium venues, 3–4 weeks minimum. For large-format engagement galas with extensive game design and custom scripting, 4–6 weeks. Weekend dates in peak season fill quickly. WhatsApp as soon as the date and venue are confirmed." },
   {
     q:"Which venues in Jaipur do you anchor engagement events at?",
-    a:"All major Jaipur engagement venues — hotel ballrooms and banquet halls at Fairmont, ITC Rajputana, Marriott, Leela, Jai Mahal Palace, standalone event venues in Mansarovar and Vaishali Nagar, and farmhouses on Ajmer Road. The anchor adapts the format to the venue's size, acoustic properties, and audience." },
+    a:"All major Jaipur engagement venues, hotel ballrooms and banquet halls at Fairmont, ITC Rajputana, Marriott, Leela, Jai Mahal Palace, standalone event venues in Mansarovar and Vaishali Nagar, and farmhouses on Ajmer Road. The anchor adapts the format to the venue's size, acoustic properties, and audience." },
   {
     q:"Do you design the family games for the engagement ceremony?",
-    a:"Yes. Games are custom-designed for each engagement based on the specific families — their backgrounds, the couple's story, and what will work for the exact guest mix present. Never recycled templates. The 'who knows them better' game uses real information gathered from both families in the pre-event briefing." },
+    a:"Yes. Games are custom-designed for each engagement based on the specific families, their backgrounds, the couple's story, and what will work for the exact guest mix present. Never recycled templates. The 'who knows them better' game uses real information gathered from both families in the pre-event briefing." },
 ];
 const faqSchema = {
   "@context":"https://schema.org","@type":"FAQPage",
@@ -215,7 +215,7 @@ export default function EngagementRokaAnchor() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-t border-white/10 pt-8">
               <div>
                 <p className="text-zinc-300 text-base md:text-lg font-light leading-relaxed max-w-lg mb-2">
-                  Roka · Ring Ceremony · Sagai · Engagement — custom scripted, custom games, bilingual Hindi/English. Both families leave feeling like one.
+                  Roka · Ring Ceremony · Sagai · Engagement, custom scripted, custom games, bilingual Hindi/English. Both families leave feeling like one.
                 </p>
                 <p className="text-zinc-500 text-sm">Jaipur · Rajasthan · 4.9★ · 700+ shows</p>
               </div>
@@ -257,7 +257,7 @@ export default function EngagementRokaAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. THE PROBLEM — the awkward room
+          3. THE PROBLEM, the awkward room
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
@@ -270,10 +270,10 @@ export default function EngagementRokaAnchor() {
               You have invited two families who have never met to sit across from each other in a formal setting and perform a ceremony. Without the right anchor, this is what happens: polite stiffness, careful seating arrangements, and sixty people waiting for somebody else to make it feel normal.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              The engagement anchor's job is to break that stiffness inside the first twenty minutes — using games designed specifically for the two families present, humour that works across generational and cultural divides, and a natural bilingual flow that makes every guest feel the event was made for them.
+              The engagement anchor's job is to break that stiffness inside the first twenty minutes, using games designed specifically for the two families present, humour that works across generational and cultural divides, and a natural bilingual flow that makes every guest feel the event was made for them.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Done right, the two families leave the roka <em className="text-[#B5952F]">actually liking each other</em> — not just having survived the formality.
+              Done right, the two families leave the roka <em className="text-[#B5952F]">actually liking each other</em>, not just having survived the formality.
             </p>
           </Reveal>
           <Reveal delay={.1}>
@@ -291,7 +291,7 @@ export default function EngagementRokaAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. CEREMONY TYPES — 6 cards
+          4. CEREMONY TYPES, 6 cards
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-6xl mx-auto">
@@ -324,7 +324,7 @@ export default function EngagementRokaAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. ICEBREAKER GAMES — the secret weapon
+          5. ICEBREAKER GAMES, the secret weapon
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
@@ -350,7 +350,7 @@ export default function EngagementRokaAnchor() {
             ))}
           </div>
           <Reveal delay={.2}>
-            <p className="text-zinc-600 text-xs text-center mt-8 italic">Every game is custom-designed for the specific families present — never recycled templates from the last engagement.</p>
+            <p className="text-zinc-600 text-xs text-center mt-8 italic">Every game is custom-designed for the specific families present, never recycled templates from the last engagement.</p>
           </Reveal>
         </div>
       </section>
@@ -443,7 +443,7 @@ export default function EngagementRokaAnchor() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -539,7 +539,7 @@ export default function EngagementRokaAnchor() {
               Two Families.<br/><G>One Celebration.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-2">Weekend engagement dates book 3–4 weeks out.</p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the ceremony format and guest count — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the ceremony format and guest count, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-2 px-12 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
                 <CalendarCheck size={16}/> Book via WhatsApp

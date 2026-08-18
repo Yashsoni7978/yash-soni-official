@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
+// Schema data, moved here from PageClient.jsx for server-side rendering
 const FAQS = [
   { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
   { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
@@ -14,39 +14,39 @@ const FAQS = [
   },
   {
     q: "What does the destination wedding package cover?",
-    a: "The full 2–3 day destination wedding package covers every event from the Welcome Lunch or Sundowner through the Pool Party or Haldi, Sangeet Gala, Varmala ceremony, and Reception. Every event gets a custom run-of-show, dedicated preparation, and a professional presence that matches the venue's grandeur. There are no hidden hourly charges — it is a flat package fee.",
+    a: "The full 2–3 day destination wedding package covers every event from the Welcome Lunch or Sundowner through the Pool Party or Haldi, Sangeet Gala, Varmala ceremony, and Reception. Every event gets a custom run-of-show, dedicated preparation, and a professional presence that matches the venue's grandeur. There are no hidden hourly charges, it is a flat package fee.",
   },
   {
     q: "Do you travel for weddings in Udaipur and other Rajasthan cities?",
-    a: "Yes. Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and all Rajasthan destination cities are regularly hosted. Rajasthan is the primary destination wedding territory — the heritage venues, the palace properties, and the visual backdrop are unmatched in India. Travel from Jaipur to any Rajasthan city is seamless.",
+    a: "Yes. Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and all Rajasthan destination cities are regularly hosted. Rajasthan is the primary destination wedding territory, the heritage venues, the palace properties, and the visual backdrop are unmatched in India. Travel from Jaipur to any Rajasthan city is seamless.",
   },
   {
     q: "Do you travel for destination weddings in Goa and other Indian states?",
-    a: "Yes. Goa, Mumbai, Kerala, Mussoorie, Ranthambore, and other destination locations across India are available. Beach weddings in Goa and hill station weddings in Mussoorie are completely different formats from palace weddings — the energy, the crowd profile, and the hosting style adapt to each location.",
+    a: "Yes. Goa, Mumbai, Kerala, Mussoorie, Ranthambore, and other destination locations across India are available. Beach weddings in Goa and hill station weddings in Mussoorie are completely different formats from palace weddings, the energy, the crowd profile, and the hosting style adapt to each location.",
   },
   {
     q: "Do you host international destination weddings?",
     a: "Yes. A valid passport is held and international destination weddings in Dubai, Thailand, Bali, and other global locations are available. International bookings require at least 3–4 months notice for visa logistics and require client arrangement of return flights from Jaipur and accommodation at the wedding venue.",
   },
   {
-    q: "Do you have experience with palace weddings — Rambagh, Umaid Bhawan, Leela?",
-    a: "Yes. Rambagh Palace Jaipur, Umaid Bhawan Jodhpur, Taj Lake Palace Udaipur, Leela Palace, and City Palace Udaipur have all been hosted. Heritage palace venues have their own acoustic quirks, lighting protocols, and event team hierarchies — knowing these before you arrive is the difference between competent and commanding.",
+    q: "Do you have experience with palace weddings, Rambagh, Umaid Bhawan, Leela?",
+    a: "Yes. Rambagh Palace Jaipur, Umaid Bhawan Jodhpur, Taj Lake Palace Udaipur, Leela Palace, and City Palace Udaipur have all been hosted. Heritage palace venues have their own acoustic quirks, lighting protocols, and event team hierarchies, knowing these before you arrive is the difference between competent and commanding.",
   },
   {
     q: "Can you handle NRI guests and international families at destination weddings?",
-    a: "NRI destination weddings are a core specialisation. Bilingual Hindi/English hosting, international etiquette awareness, and cultural navigation between Rajasthani traditions and Western protocols — all handled seamlessly. Families from the UK, USA, Canada, and Gulf fly in with specific expectations of both the cultural experience and the international standard of presentation. Both are delivered.",
+    a: "NRI destination weddings are a core specialisation. Bilingual Hindi/English hosting, international etiquette awareness, and cultural navigation between Rajasthani traditions and Western protocols, all handled seamlessly. Families from the UK, USA, Canada, and Gulf fly in with specific expectations of both the cultural experience and the international standard of presentation. Both are delivered.",
   },
   {
     q: "What is your role during the non-stage events like a Welcome Lunch?",
-    a: "At non-stage events, I act as the 'Social Glue.' I move through the room, facilitate introductions between families who are meeting for the first time, run casual ice-breaker games, and ensure both sides of the family are genuinely mixing — not sitting in separate groups. By the time the Sangeet starts, the room already knows each other. That changes everything.",
+    a: "At non-stage events, I act as the 'Social Glue.' I move through the room, facilitate introductions between families who are meeting for the first time, run casual ice-breaker games, and ensure both sides of the family are genuinely mixing, not sitting in separate groups. By the time the Sangeet starts, the room already knows each other. That changes everything.",
   },
   {
     q: "Who handles travel and accommodation for destination bookings?",
-    a: "The client arranges return flights from Jaipur and accommodation at the wedding venue — same hotel as guests — for the anchor and one assistant. I always arrive at least one full day before the first event specifically to sync with the venue events team, check all technical setups, and anticipate any location-specific challenges.",
+    a: "The client arranges return flights from Jaipur and accommodation at the wedding venue, same hotel as guests, for the anchor and one assistant. I always arrive at least one full day before the first event specifically to sync with the venue events team, check all technical setups, and anticipate any location-specific challenges.",
   },
   {
     q: "How far in advance should we book a destination wedding anchor?",
-    a: "Destination wedding packages block 3–4 full days of the calendar. Book 6–9 months in advance for peak destination season (October–February for Rajasthan, November–January for Goa). International bookings need a minimum 3–4 months notice. WhatsApp the moment your venue and dates are confirmed — destination slots are the first to fill.",
+    a: "Destination wedding packages block 3–4 full days of the calendar. Book 6–9 months in advance for peak destination season (October–February for Rajasthan, November–January for Goa). International bookings need a minimum 3–4 months notice. WhatsApp the moment your venue and dates are confirmed, destination slots are the first to fill.",
   },
   {
     q: "What languages do you host in at destination weddings?",

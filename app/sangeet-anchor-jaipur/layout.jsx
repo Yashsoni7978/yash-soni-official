@@ -1,10 +1,10 @@
-// app/sangeet-anchor-jaipur/layout.jsx
+﻿// app/sangeet-anchor-jaipur/layout.jsx
 import { buildServiceSchema } from "../../lib/schema/serviceSchema";
 
-// SERVER COMPONENT — no head tags, no scripts, metadata only
+// SERVER COMPONENT, no head tags, no scripts, metadata only
 const serviceSchema = buildServiceSchema({
   pageUrl: "https://yashsoni.in/sangeet-anchor-jaipur",
-  name: "Sangeet Anchor Jaipur — Anchor Yash Soni",
+  name: "Sangeet Anchor Jaipur, Anchor Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   serviceType: "Sangeet Ceremony Hosting",
   providerJobTitle: "Premium Sangeet Anchor & Emcee",
@@ -20,9 +20,9 @@ const breadcrumb = {
 };
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Best Sangeet Anchor in Jaipur | Anchor Yash Soni — 4.9★ Sangeet Host",
+  title: "Best Sangeet Anchor in Jaipur | Anchor Yash Soni, 4.9★ Sangeet Host",
   description:
-    "Best Sangeet anchor in Jaipur — Anchor Yash Soni. 4.9★ rated. Dance floors packed until 4 AM. Farmhouse Sangeets on Ajmer Road, palace events in Kukas. Family roasts, awards nights, crowd games. Book now.",
+    "Best Sangeet anchor in Jaipur, Anchor Yash Soni. 4.9★ rated. Dance floors packed until 4 AM. Farmhouse Sangeets on Ajmer Road, palace events in Kukas. Family roasts, awards nights, crowd games. Book now.",
   keywords: [
     "sangeet anchor jaipur",
     "best sangeet anchor in jaipur",
@@ -64,7 +64,7 @@ export const metadata = {
     locale: "en_IN",
     url: "https://yashsoni.in/sangeet-anchor-jaipur",
     siteName: "Anchor Yash Soni",
-    title: "Best Sangeet Anchor in Jaipur | Anchor Yash Soni — 4.9★",
+    title: "Best Sangeet Anchor in Jaipur | Anchor Yash Soni, 4.9★",
     description:
       "4.9★ Sangeet anchor. Dance floors packed until 4 AM. Farmhouse Sangeets on Ajmer Road & palace events in Kukas, Jaipur.",
     images: [
@@ -72,7 +72,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Best Sangeet Anchor in Jaipur on stage",
+        alt: "Anchor Yash Soni, Best Sangeet Anchor in Jaipur on stage",
       },
     ],
   },

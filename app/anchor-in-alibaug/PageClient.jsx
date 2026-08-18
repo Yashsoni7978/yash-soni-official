@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -107,12 +107,12 @@ const ALIBAUG_IDENTITY = [
   {
     icon: Gem,
     title: "Ultra-Luxury Villa Pacing",
-    desc: "Events here frequently take place at extremely exclusive venues like The Mansion House or private coastal estates. Unlike massive lawns, these spaces are architecturally fragmented into pool decks, indoor lounges, and cabanas. Yash excels at 'timeline stitching'—using intelligent vocal pacing and physical movement to pull guests seamlessly through these fragmented luxury spaces without ever breaking the party momentum."
+    desc: "Events here frequently take place at extremely exclusive venues like The Mansion House or private coastal estates. Unlike massive lawns, these spaces are architecturally fragmented into pool decks, indoor lounges, and cabanas. Yash excels at 'timeline stitching'-using intelligent vocal pacing and physical movement to pull guests seamlessly through these fragmented luxury spaces without ever breaking the party momentum."
   },
   {
     icon: Sparkles,
     title: "The High-Society Transition",
-    desc: "Alibaug Sangeets start with heavy corporate/business networking and transition into intense, all-night private parties. An amateur host fails to bridge these two extremes. Yash acts as the catalyst—navigating the formal executive English requirements of the evening reception flawlessly, before instantly converting into high-voltage, unscripted Hindi/English hype to drive the midnight dance floor."
+    desc: "Alibaug Sangeets start with heavy corporate/business networking and transition into intense, all-night private parties. An amateur host fails to bridge these two extremes. Yash acts as the catalyst-navigating the formal executive English requirements of the evening reception flawlessly, before instantly converting into high-voltage, unscripted Hindi/English hype to drive the midnight dance floor."
   },
 ];
 
@@ -158,15 +158,15 @@ const VS = [
   { problem: "Using 'club MC' yelling that immediately alienates an ultra-premium Mumbai VIP guest list", fix: "Intimate, highly conversational executive-grade delivery matching the crowd's pedigree" },
   { problem: "Losing control of a 150-pax party drifting across a private villa's fragmented layout", fix: "Mastery of timeline-stitching and acoustic centralizing to pull the entire party together" },
   { problem: "Being unable to bridge the formal C-suite networking with the high-energy Sangeet", fix: "Executing an intense psychological transition that drags the VIPs directly to the dance floor" },
-  { problem: "Reading rigidly from paper notes during a highly exclusive family Sangeet performance", fix: "100% unscripted flow—maintaining absolute eye contact and reacting to inside jokes in real-time" },
+  { problem: "Reading rigidly from paper notes during a highly exclusive family Sangeet performance", fix: "100% unscripted flow-maintaining absolute eye contact and reacting to inside jokes in real-time" },
   { problem: "Failing to fuse the cultures during a massive Mumbai-Gujarati cross-border wedding", fix: "Bilingual emotional intelligence that bridges modern urban executives directly with local elders" },
   { problem: "Sound dispersion killing the Varmala energy on an open coastal property lawn", fix: "Aggressive, tight-knit crowd-condensing frameworks that force acoustic intimacy" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Corporate Director — Mumbai Headquarters",
-    quote: "Alibaug weddings are incredibly intimate and highly scrutinized because the guest list is pure VIP; our entire C-suite was there. Yash anchored our Sangeet at The Mansion House flawlessly. Phenomenal English dialect mixed with perfect comedic timing—he didn't just host the event, he controlled the entire weekend.",
+    name: "Corporate Director, Mumbai Headquarters",
+    quote: "Alibaug weddings are incredibly intimate and highly scrutinized because the guest list is pure VIP; our entire C-suite was there. Yash anchored our Sangeet at The Mansion House flawlessly. Phenomenal English dialect mixed with perfect comedic timing-he didn't just host the event, he controlled the entire weekend.",
     event: "Destination Sunset Wedding · The Mansion House"
   },
   {
@@ -175,7 +175,7 @@ const TESTIMONIALS = [
     event: "Cross-Cultural Sangeet · Radisson Blu Alibaug"
   },
   {
-    name: "Managing Partner — National Law Firm",
+    name: "Managing Partner, National Law Firm",
     quote: "We hosted an exclusive multi-day partner retreat at a private estate in Mandwa. The challenge was keeping the executive team focused on strategy during the day, while hosting intense networking galas at night. Yash's intellectual, unscripted hosting was incredibly sharp. Complete, unshakeable authority.",
     event: "Leadership Retreat Gala · Mandwa Private Estate"
   },
@@ -189,7 +189,7 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle the highly intimate, VIP dynamic of an Alibaug villa wedding?",
-    a: "Alibaug is the opposite of a mega-banquet. You aren't broadcasting to a thousand strangers; you are hosting 150 incredibly high-net-worth individuals. I utilize 'Conversational Dominance'—putting down the heavy 'stage voice' in favor of sharp, highly intelligent, interactive English that treats the VIPs as participants rather than spectators. It instantly shatters the invisible wall between the stage and the audience."
+    a: "Alibaug is the opposite of a mega-banquet. You aren't broadcasting to a thousand strangers; you are hosting 150 incredibly high-net-worth individuals. I utilize 'Conversational Dominance'-putting down the heavy 'stage voice' in favor of sharp, highly intelligent, interactive English that treats the VIPs as participants rather than spectators. It instantly shatters the invisible wall between the stage and the audience."
   },
   {
     q: "Half our guests are traditional Gujarati/Marwari, and half are modern corporate friends from South Bombay. Can you manage both?",
@@ -266,7 +266,7 @@ export default function AlibaugPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/alibaug_bg.webp" alt="Best Anchor in Alibaug — VIP Luxury Coastal Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/alibaug_bg.webp" alt="Best Anchor in Alibaug, VIP Luxury Coastal Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function AlibaugPage() {
                 Alibaug functions as a highly exclusive, low-density ecosystem. You are not dealing with a thousand chaotic guests; you are dealing with a fiercely curated, 150-guest audience containing South Mumbai's <strong className="text-[#B5952F]">top business executives and billionaires</strong>. Yash steps into these intensely VIP environments and manufactures raw, authentic dancing energy entirely organically.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and standard 'MC yelling'. For high-net-worth cross-cultural weddings at The Mansion House or Radisson Blu, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the VIPs, integrated natively with the deep Hindi warmth that the traditional ceremonies demand.
+                He completely rejects paper scripts and standard 'MC yelling'. For high-net-worth cross-cultural weddings at The Mansion House or Radisson Blu, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the VIPs, integrated natively with the deep Hindi warmth that the traditional ceremonies demand.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -492,10 +492,10 @@ export default function AlibaugPage() {
               Hosting a luxury event in Alibaug requires an elite understanding of 'Intimate Crowd Compression'. Many of the area's most beautiful properties feature sweeping, sprawling villa layouts. An amateur anchor loses the crowd entirely out here, letting them drift to the bar or the pool. Yash actively collapses the psychological distance between the VIPs and the stage, using extremely sharp voice projection and timeline pacing to keep a 150-guest Sangeet locked in and fiercely hyped.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Alibaug's crowds are almost invariably a mix of highly modern Mumbai executives and traditional business-family elders. The host must bridge this gap instantly. Yash does this through total unscripted fluidity—validating the corporate guests with pristine English, then flipping elegantly into deep Hindi/Gujarati warmth to anchor the core family.
+              Furthermore, Alibaug's crowds are almost invariably a mix of highly modern Mumbai executives and traditional business-family elders. The host must bridge this gap instantly. Yash does this through total unscripted fluidity-validating the corporate guests with pristine English, then flipping elegantly into deep Hindi/Gujarati warmth to anchor the core family.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Coastal VIP fluency—defeating the fragmented villa layouts and uniting the high-net-worth demographic—is the mark of an anchor who operates at the true apex of the luxury industry.
+              Coastal VIP fluency-defeating the fragmented villa layouts and uniting the high-net-worth demographic-is the mark of an anchor who operates at the true apex of the luxury industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,14 +551,14 @@ export default function AlibaugPage() {
               Private Estates.<br /><G>VIP Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Alibaug’s luxury ecosystem is an intimate logistical challenge. Properties like The Mansion House do not offer one massive lawn; they scatter 200 high-profile guests across indoor lounges and outdoor pools, leading to immense audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Alibaug’s luxury ecosystem is an intimate logistical challenge. Properties like The Mansion House do not offer one massive lawn; they scatter 200 high-profile guests across indoor lounges and outdoor pools, leading to immense audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Billionaire Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Mumbai families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling private villa constraints.
+                High-net-worth Mumbai families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling private villa constraints.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function AlibaugPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function AlibaugPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Alibaug experiences intense overlapping of the Mumbai VIP destination season and peak local corporate retreat dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

@@ -91,6 +91,7 @@ export default function Footer() {
               <ProfileLink href="https://www.shaadidukaan.com/profile/yash-2" text="ShaadiDukaan" />
               <ProfileLink href="https://www.justdial.com/Jaipur/Anchor-Yash-St-Wilfred-College-Mansarovar/0141PX141-X141-240423192409-I1E8_BZDET" text="Justdial" />
               <ProfileLink href="https://share.google/pMZGzEGOhXnJpLq5g" text="Google Reviews" highlight />
+              <ProfileLink href="https://www.google.com/search?kgmid=/g/11w1fnfjrs" text="Google Business Profile" />
             </ul>
           </div>
 

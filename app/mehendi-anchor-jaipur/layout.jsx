@@ -1,10 +1,10 @@
-// app/mehendi-anchor-jaipur/layout.jsx
-// SERVER COMPONENT — metadata only
+﻿// app/mehendi-anchor-jaipur/layout.jsx
+// SERVER COMPONENT, metadata only
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://yashsoni.in/mehendi-anchor-jaipur",
-  name: "Mehendi Anchor Jaipur — Anchor Yash Soni",
+  name: "Mehendi Anchor Jaipur, Anchor Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
@@ -37,9 +37,9 @@ const breadcrumb = {
 };
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Best Mehendi Anchor in Jaipur | Ladies Sangeet Host | Anchor Yash Soni — 4.9★",
+  title: "Best Mehendi Anchor in Jaipur | Ladies Sangeet Host | Anchor Yash Soni, 4.9★",
   description:
-    "Best Mehendi anchor in Jaipur — Anchor Yash Soni. 4.9★ rated. Ladies Sangeet specialist. Hands-free musical games, couple trivia, zero awkward silences. Book Jaipur's top Mehendi ceremony host.",
+    "Best Mehendi anchor in Jaipur, Anchor Yash Soni. 4.9★ rated. Ladies Sangeet specialist. Hands-free musical games, couple trivia, zero awkward silences. Book Jaipur's top Mehendi ceremony host.",
   keywords: [
     "mehendi anchor jaipur",
     "best mehendi anchor in jaipur",
@@ -83,7 +83,7 @@ export const metadata = {
     // FIX: was /mehendi-anchor (wrong). Corrected.
     url: "https://yashsoni.in/mehendi-anchor-jaipur",
     siteName: "Anchor Yash Soni",
-    title: "Best Mehendi Anchor in Jaipur | Anchor Yash Soni — 4.9★",
+    title: "Best Mehendi Anchor in Jaipur | Anchor Yash Soni, 4.9★",
     description:
       "Ladies Sangeet specialist. Hands-free musical games, couple trivia, zero awkward silences. Jaipur's 4.9★ Mehendi ceremony host.",
     images: [
@@ -91,7 +91,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Best Mehendi Anchor in Jaipur",
+        alt: "Anchor Yash Soni, Best Mehendi Anchor in Jaipur",
       },
     ],
   },

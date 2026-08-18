@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-chittorgarh/layout.jsx
@@ -12,7 +12,7 @@ const OG_IMAGE = `https://${DOMAIN}/bride-groom-fort-shoot.webp`;
 
 const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: ["Anchor in Chittorgarh","Wedding Anchor Chittorgarh","Heritage Wedding Host Chittorgarh","Chittorgarh Fort Wedding Anchor","Padmini Palace Event Emcee","Mewar Wedding Anchor","Rajput Honour Wedding Host"],
   description: `700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.`,
   url: FULL_URL, telephone: "+917737877978", priceRange: "₹₹₹₹", image: OG_IMAGE,
@@ -43,8 +43,8 @@ const breadcrumbSchema = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Chittorgarh | Rajput Heritage Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Chittorgarh? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert Rajput honour heritage weddings at Chittorgarh Fort. Mewar cultural fluency, bilingual, zero paper scripts.`,
+  title: `Best Anchor in Chittorgarh | Rajput Heritage Wedding Host, Yash Soni`,
+  description: `Looking for the best anchor in Chittorgarh? Anchor Yash Soni, 4.9★ rated, 700+ shows. Expert Rajput honour heritage weddings at Chittorgarh Fort. Mewar cultural fluency, bilingual, zero paper scripts.`,
   keywords: [
     "anchor in chittorgarh","best anchor in chittorgarh","wedding anchor chittorgarh",
     "heritage wedding anchor chittorgarh","chittorgarh fort wedding anchor",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: FULL_URL },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-  openGraph: { type: "website", locale: "en_IN", url: FULL_URL, siteName: "Anchor Yash Soni", title: `Best Anchor in Chittorgarh | Rajput Heritage Wedding Host`, description: `4.9★ rated. 700+ shows. Chittorgarh's most trusted anchor for Rajput honour heritage weddings at the Fort. Mewar cultural fluency, bilingual, unscripted.`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Chittorgarh — Anchor Yash Soni at Chittorgarh Fort` }] },
-  twitter: { card: "summary_large_image", site: "@yashsonianchor", creator: "@yashsonianchor", title: `Best Anchor in Chittorgarh | Anchor Yash Soni — 4.9★`, description: `Chittorgarh Fort. Padmini Palace. Most trusted Rajput heritage wedding anchor in Mewar.`, images: [OG_IMAGE] },
+  openGraph: { type: "website", locale: "en_IN", url: FULL_URL, siteName: "Anchor Yash Soni", title: `Best Anchor in Chittorgarh | Rajput Heritage Wedding Host`, description: `4.9★ rated. 700+ shows. Chittorgarh's most trusted anchor for Rajput honour heritage weddings at the Fort. Mewar cultural fluency, bilingual, unscripted.`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Chittorgarh, Anchor Yash Soni at Chittorgarh Fort` }] },
+  twitter: { card: "summary_large_image", site: "@yashsonianchor", creator: "@yashsonianchor", title: `Best Anchor in Chittorgarh | Anchor Yash Soni, 4.9★`, description: `Chittorgarh Fort. Padmini Palace. Most trusted Rajput heritage wedding anchor in Mewar.`, images: [OG_IMAGE] },
   other: { "geo.region": "IN-RJ", "geo.placename": `${CITY}, Rajasthan, India`, "geo.position": `${LAT};${LNG}`, ICBM: `${LAT}, ${LNG}`, "DC.subject": `Event Anchor, Rajput Heritage Wedding, Fort Emcee, ${CITY}, Rajasthan, India` },
 };
 
@@ -104,7 +104,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-chittorgarh/#webpage`,
   url: `https://${DOMAIN}/${SLUG}`,
-  name: `Best Anchor in Chittorgarh | Wedding & Event Host — Yash Soni`,
+  name: `Best Anchor in Chittorgarh | Wedding & Event Host, Yash Soni`,
   description: `Anchor Yash Soni is the premium event anchor in Chittorgarh. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

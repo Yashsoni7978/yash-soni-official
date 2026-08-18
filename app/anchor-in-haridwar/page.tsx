@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-haridwar/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Haridwar",
     "Best Wedding Anchor Haridwar",
@@ -87,7 +87,7 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "NRI Destination Wedding — London" },
+      author: { "@type": "Person", name: "NRI Destination Wedding, London" },
       reviewBody: "Hosting at Pilibhit House required absolute reverence but also the ability to run a highly sophisticated timeline. Yash was flawless. His English narration of the Ganga Aarti brought the entire international guest list to tears. Astounding stage command.",
     },
     {
@@ -154,9 +154,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-haridwar/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Haridwar | Pilibhit House & Ganges Emcee — Yash Soni`,
+  name: `Best Anchor in Haridwar | Pilibhit House & Ganges Emcee, Yash Soni`,
   headline: `Haridwar's Premier Event Anchor for Ultra-Luxury Spiritual Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Haridwar destination weddings. Mastering prestigious properties like Pilibhit House and the Ganges Ghats with unscripted VIP spiritual hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Haridwar destination weddings. Mastering prestigious properties like Pilibhit House and the Ganges Ghats with unscripted VIP spiritual hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Uttarakhand` },
@@ -168,7 +168,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Haridwar | Luxury Spiritual Wedding Emcee`,
-  description: `Looking for the best anchor in Haridwar? Anchor Yash Soni — 4.9★. Expert for Pilibhit House, Ganges Aarti logistics, and ultra-prestigious spiritual destination weddings. Flawless unscripted bilingual hosting.`,
+  description: `Looking for the best anchor in Haridwar? Anchor Yash Soni, 4.9★. Expert for Pilibhit House, Ganges Aarti logistics, and ultra-prestigious spiritual destination weddings. Flawless unscripted bilingual hosting.`,
   keywords: [
     "anchor in haridwar",
     "best anchor in haridwar",
@@ -196,13 +196,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Haridwar | Elite Spiritual Destination Wedding Host`,
     description: `4.9★ rated. Haridwar's premium anchor for highly prestigious destination weddings intersecting the Ganges. Unscripted bilingual spiritual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Haridwar — Anchor Yash Soni at Ganges Luxury Properties` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Haridwar, Anchor Yash Soni at Ganges Luxury Properties` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Haridwar | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Haridwar | Anchor Yash Soni, 4.9★`,
     description: `Pilibhit House. The Ganges Ghats. Haridwar's premier bilingual event anchor for exclusive VIP retreats and heavily restricted spiritual ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -211,7 +211,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Haridwar | Ganges VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Haridwar | Ganges VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Spiritual Wedding, VIP Events, ${CITY}, Uttarakhand, India`,
     "DC.coverage": `${CITY}, Uttarakhand, India`,
     "DC.language": "en-IN",

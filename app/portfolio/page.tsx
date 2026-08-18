@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
+// Schema data, moved here from PageClient.jsx for server-side rendering
 const schemaData = {
     "@context": "https://schema.org",
     "@type": "ImageGallery",

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -86,7 +86,7 @@ const BIKANER_IDENTITY = [
   {
     icon: Landmark,
     title: "The Marwari Business Capital",
-    desc: "Bikaner is not only a city of forts — it is one of Rajasthan's primary Marwari business communities. Weddings here carry dual expectations: the deep Rajputana ceremonial weight of the fort-city backdrop AND the refined, understated elegance that affluent Marwari families invest in their celebrations. An anchor must hold both registers simultaneously without over-performing in either direction."
+    desc: "Bikaner is not only a city of forts, it is one of Rajasthan's primary Marwari business communities. Weddings here carry dual expectations: the deep Rajputana ceremonial weight of the fort-city backdrop AND the refined, understated elegance that affluent Marwari families invest in their celebrations. An anchor must hold both registers simultaneously without over-performing in either direction."
   },
   {
     icon: Wind,
@@ -104,7 +104,7 @@ const SERVICES = [
   {
     icon: Heart,
     title: "Junagarh Fort Heritage Wedding",
-    desc: "Majestic fort-side ceremonies in Junagarh's iconic courtyards. Managing the red sandstone acoustic, coordinating with Marwari family traditions, and ensuring the Rathore heritage is honoured through every ceremonial segment — from the baraat entry to the final phero ritual.",
+    desc: "Majestic fort-side ceremonies in Junagarh's iconic courtyards. Managing the red sandstone acoustic, coordinating with Marwari family traditions, and ensuring the Rathore heritage is honoured through every ceremonial segment, from the baraat entry to the final phero ritual.",
     tag: "Shaadi"
   },
   {
@@ -116,7 +116,7 @@ const SERVICES = [
   {
     icon: Flower2,
     title: "Heritage Pre-Wedding Events",
-    desc: "Mehndi and Haldi mornings at Bikaner's boutique heritage properties — where the pre-wedding vibe blends Rajasthani artisanal culture with modern destination entertainment. Unscripted crowd interaction that warms up a multi-city guest list organically.",
+    desc: "Mehndi and Haldi mornings at Bikaner's boutique heritage properties, where the pre-wedding vibe blends Rajasthani artisanal culture with modern destination entertainment. Unscripted crowd interaction that warms up a multi-city guest list organically.",
     tag: "Pre-Wedding"
   },
   {
@@ -139,28 +139,28 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "No understanding of Marwari wedding ceremonial structure and business community protocols", fix: "Marwari ceremony fluency — correct sequence, right references, business family respect" },
+  { problem: "No understanding of Marwari wedding ceremonial structure and business community protocols", fix: "Marwari ceremony fluency, correct sequence, right references, business family respect" },
   { problem: "Cannot manage Junagarh Fort's complex stone reverb in open courtyards", fix: "Fort-specific acoustic technique from repeated events in red sandstone heritage halls" },
-  { problem: "Confuses Bikaner's Rathore identity with generic Western Rajasthan culture", fix: "Clan-specific cultural fluency — Rathore lineage, Bikaner history, correct ceremonial vocabulary" },
+  { problem: "Confuses Bikaner's Rathore identity with generic Western Rajasthan culture", fix: "Clan-specific cultural fluency, Rathore lineage, Bikaner history, correct ceremonial vocabulary" },
   { problem: "Generic energy that disrespects the understated Marwari business elite aesthetic", fix: "Calibrated premium register that matches Bikaner's restrained, deep cultural pride" },
-  { problem: "Bilingual gaps causing disconnection between elder Marwari guests and younger diapora", fix: "Authentic bilingual code-switching — formal Marwari-contextual Hindi and polished English" },
+  { problem: "Bilingual gaps causing disconnection between elder Marwari guests and younger diapora", fix: "Authentic bilingual code-switching, formal Marwari-contextual Hindi and polished English" },
   { problem: "Cannot adapt across indoor stone halls and outdoor desert-edge lawns in the same event", fix: "5+ years of venue-specific adaptability built in Rajasthan's hardest acoustic environments" },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Bajaj Family",
-    quote: "We were clear from day one — our wedding at Junagarh had to feel like it belonged there. Not a generic event with a fort backdrop. Yash understood completely. His references to Bikaner's history were accurate, his energy matched the grandeur without being theatrical, and the entire family — from the oldest to the youngest — was completely engaged throughout.",
+    quote: "We were clear from day one, our wedding at Junagarh had to feel like it belonged there. Not a generic event with a fort backdrop. Yash understood completely. His references to Bikaner's history were accurate, his energy matched the grandeur without being theatrical, and the entire family, from the oldest to the youngest, was completely engaged throughout.",
     event: "Heritage Wedding · Junagarh Fort · 500 guests"
   },
   {
     name: "Singhania Family",
-    quote: "The Lallgarh Sangeet was the highlight of our three-day event. Yash had the crowd on their feet for four straight hours. He managed the indoor-to-outdoor transition perfectly — different energy, different acoustic, same locked crowd. We have never seen anything like it.",
+    quote: "The Lallgarh Sangeet was the highlight of our three-day event. Yash had the crowd on their feet for four straight hours. He managed the indoor-to-outdoor transition perfectly, different energy, different acoustic, same locked crowd. We have never seen anything like it.",
     event: "Sangeet · Lallgarh Palace · 400 guests"
   },
   {
-    name: "Regional Head — Industrial Group",
-    quote: "We brought 150 senior dealers and distributors to Narendra Bhawan for our annual review and gala. The challenge was keeping a conservative business audience genuinely entertained in a heritage setting without the evening becoming stiff. Yash delivered a perfectly calibrated evening — authoritative, warm, and memorable.",
+    name: "Regional Head, Industrial Group",
+    quote: "We brought 150 senior dealers and distributors to Narendra Bhawan for our annual review and gala. The challenge was keeping a conservative business audience genuinely entertained in a heritage setting without the evening becoming stiff. Yash delivered a perfectly calibrated evening, authoritative, warm, and memorable.",
     event: "Corporate Gala · Narendra Bhawan · 150 delegates"
   },
 ];
@@ -176,7 +176,7 @@ const FAQS = [
   { q: "Can you host bilingual events for NRI families in Bikaner?", a: "Yes. Destination weddings in Bikaner attract families seeking deep Rajasthani heritage. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional relatives connect deeply through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Bikaner?", a: "Bikaner is a majestic destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
   { q: "How far in advance should I book for a Bikaner wedding?", a: "Bikaner is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Bikaner for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Bikaner destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "Who is the best emcee or host in Bikaner for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Bikaner destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Bikaner?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
@@ -192,7 +192,7 @@ export default function PageClient() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/vintage-car-couple-shoot.webp" alt="Best Anchor in Bikaner — Junagarh Fort at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/vintage-car-couple-shoot.webp" alt="Best Anchor in Bikaner, Junagarh Fort at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -250,7 +250,7 @@ export default function PageClient() {
               <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">Beyond <G>Announcements.</G><br />Beyond Scripts.</h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> is Rajasthan's most trusted heritage destination wedding anchor — commanding crowds with zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> is Rajasthan's most trusted heritage destination wedding anchor, commanding crowds with zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
                 From the iconic red sandstone courtyards of <strong className="text-[#B5952F]">Junagarh Fort</strong> to the royal banquet halls of Lallgarh Palace, Yash commands Bikaner's unique fusion of Rathore Rajput heritage and Marwari business community elegance.
@@ -283,7 +283,7 @@ export default function PageClient() {
               The Desert Fort City Demands<br />a <G>Rathore Standard.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Bikaner is a city of genuine, undiluted heritage. Unlike the heavily-touristed circuits of Jaipur and Udaipur, a Bikaner event is rarely staged for an external audience. The families here celebrate for themselves — and the anchor who cannot read that self-possessed pride will immediately feel out of place.
+              Bikaner is a city of genuine, undiluted heritage. Unlike the heavily-touristed circuits of Jaipur and Udaipur, a Bikaner event is rarely staged for an external audience. The families here celebrate for themselves, and the anchor who cannot read that self-possessed pride will immediately feel out of place.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -385,7 +385,7 @@ export default function PageClient() {
               Rathore Rajput ceremonial structure has specific sequences, specific energy requirements at each stage, and specific protocols around how family members are named, acknowledged, and invited into the ritual. An anchor who handles this correctly creates moments the family will talk about for years. An anchor who gets it wrong does the opposite.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Bikaner heritage fluency — Rathore ceremonial vocabulary, Marwari business family register, Junagarh acoustic technique — is built from deep immersion in this specific cultural ecosystem. It is not improvised.
+              Bikaner heritage fluency, Rathore ceremonial vocabulary, Marwari business family register, Junagarh acoustic technique, is built from deep immersion in this specific cultural ecosystem. It is not improvised.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -430,7 +430,7 @@ export default function PageClient() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Bikaner · The Desert Fort City</p>
-                <p className="text-white text-xs">Rajasthan's most culturally rooted heritage event destination — commanded with authentic Rathore authority.</p>
+                <p className="text-white text-xs">Rajasthan's most culturally rooted heritage event destination, commanded with authentic Rathore authority.</p>
               </div>
             </div>
           </Reveal>
@@ -438,14 +438,14 @@ export default function PageClient() {
             <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Scale</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">10,000+ Crowd.<br /><G>Fort Courtyards.</G><br />Zero Scripts.</h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Commanding Bikaner's heritage venues — from the massive open courtyards of Junagarh to the sweeping desert-edge gardens of Gajner Palace — requires a host whose stage presence is genuinely large enough to fill a 16th-century fort without amplification alone. The acoustic challenges of heritage sandstone demand technique, not volume.
+              Commanding Bikaner's heritage venues, from the massive open courtyards of Junagarh to the sweeping desert-edge gardens of Gajner Palace, requires a host whose stage presence is genuinely large enough to fill a 16th-century fort without amplification alone. The acoustic challenges of heritage sandstone demand technique, not volume.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> Marwari Community Protocol Management
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Multi-generational family structures, specific ceremonial sequencing requirements, and the understated elegance expected of a Marwari business elite wedding — all pre-researched, pre-calibrated, and seamlessly executed from the first baraat beat to the final reception toast.
+                Multi-generational family structures, specific ceremonial sequencing requirements, and the understated elegance expected of a Marwari business elite wedding, all pre-researched, pre-calibrated, and seamlessly executed from the first baraat beat to the final reception toast.
               </p>
             </div>
           </Reveal>
@@ -469,7 +469,7 @@ export default function PageClient() {
                   <div className="flex gap-0.5 mb-4">{[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />)}</div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -481,7 +481,7 @@ export default function PageClient() {
 
             {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -489,10 +489,10 @@ export default function PageClient() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Bikaner's Best.</G>
+                Whatever You Call It -{" "}<G>Bikaner's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Bikaner —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Bikaner -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -504,7 +504,7 @@ export default function PageClient() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Bikaner",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Bikaner.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Bikaner.",
                 keywords: ["best wedding anchor bikaner", "wedding emcee bikaner", "wedding host bikaner", "wedding mc bikaner"],
               },
               {
@@ -522,13 +522,13 @@ export default function PageClient() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Bikaner",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Bikaner — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Bikaner, by any name.",
                 keywords: ["best emcee in bikaner", "best anchor in bikaner", "best host in bikaner", "best mc bikaner"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Bikaner",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host bikaner", "english speaking anchor bikaner", "bilingual emcee bikaner"],
               },
               {
@@ -569,7 +569,7 @@ export default function PageClient() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -670,7 +670,7 @@ export default function PageClient() {
             </div>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-[0.9]">Your Junagarh Date<br /><G>Won't Wait.</G></h2>
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">Bikaner's peak season fills faster than most of Rajasthan. Heritage venue availability is strictly limited and I do not hold dates without confirmation.</p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

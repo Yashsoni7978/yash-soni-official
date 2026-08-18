@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -77,7 +77,7 @@ const FAQItem = ({ q, a, id }) => {
   );
 };
 // ─────────────────────────────────────────────
-// DATA — All Udaipur-specific, zero generic copy
+// DATA, All Udaipur-specific, zero generic copy
 // ─────────────────────────────────────────────
 const STATS = [
   { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
@@ -89,30 +89,30 @@ const UDAIPUR_IDENTITY = [
   {
     icon: Crown,
     title: "Lake Palace Ceremonials",
-    desc: "The Taj Lake Palace sits in the middle of Lake Pichola like a floating dream. Varmala ceremonies here require precise spatial management — the boat arrival, the dhol timing, the lakeside echo acoustics. Every transition must feel choreographed yet spontaneous."
+    desc: "The Taj Lake Palace sits in the middle of Lake Pichola like a floating dream. Varmala ceremonies here require precise spatial management, the boat arrival, the dhol timing, the lakeside echo acoustics. Every transition must feel choreographed yet spontaneous."
   },
   {
     icon: Globe,
     title: "NRI & International Circuits",
-    desc: "Udaipur hosts India's highest concentration of NRI destination weddings. UK, USA, Canada — three generations in one room. The anchor must hold each one. English for the diaspora grandchildren, warm Hindi for the elders, Rajasthani references for the home crowd."
+    desc: "Udaipur hosts India's highest concentration of NRI destination weddings. UK, USA, Canada, three generations in one room. The anchor must hold each one. English for the diaspora grandchildren, warm Hindi for the elders, Rajasthani references for the home crowd."
   },
   {
     icon: Sparkles,
     title: "The Palace Protocol",
-    desc: "Oberoi Udaivilas, Raffles Udaipur, Leela Udaipur — each property has its own sound restrictions, lighting cues, and protocol for royal families. Working within these constraints while keeping the crowd on fire is a craft learned over dozens of events."
+    desc: "Oberoi Udaivilas, Raffles Udaipur, Leela Udaipur, each property has its own sound restrictions, lighting cues, and protocol for royal families. Working within these constraints while keeping the crowd on fire is a craft learned over dozens of events."
   },
 ];
 const SERVICES = [
   {
     icon: Heart,
     title: "Wedding Anchor",
-    desc: "From the lakeside Varmala at Taj Lake Palace to the royal reception at Oberoi Udaivilas — each ritual is managed with cultural precision. NRI protocol, bilingual delivery, zero paper scripts.",
+    desc: "From the lakeside Varmala at Taj Lake Palace to the royal reception at Oberoi Udaivilas, each ritual is managed with cultural precision. NRI protocol, bilingual delivery, zero paper scripts.",
     tag: "Shaadi"
   },
   {
     icon: Music2,
     title: "Sangeet Emcee",
-    desc: "Jagmandir Island Sangeets are iconic — they echo across the lake. The crowd energy needs to match. Unscripted games, live crowd work, and the muscle to keep 500 guests dancing until 2 AM.",
+    desc: "Jagmandir Island Sangeets are iconic, they echo across the lake. The crowd energy needs to match. Unscripted games, live crowd work, and the muscle to keep 500 guests dancing until 2 AM.",
     tag: "Sangeet"
   },
   {
@@ -139,12 +139,12 @@ const VENUES = [
   { name: "Aurika Udaipur", tag: "Modern Luxury · 400+", icon: Sparkles },
 ];
 const VS = [
-  { problem: "Reads from a script, loses the palace crowd by hour two", fix: "Unscripted mastery — same energy at the 5th hour as the 1st" },
-  { problem: "Treats NRI guests and local family as the same audience", fix: "Switches registers instantly — English, Hindi, Rajasthani" },
-  { problem: "Mispronounces Rajasthani family surnames and ritual names", fix: "Pre-event research — every name, every ritual, verified" },
+  { problem: "Reads from a script, loses the palace crowd by hour two", fix: "Unscripted mastery, same energy at the 5th hour as the 1st" },
+  { problem: "Treats NRI guests and local family as the same audience", fix: "Switches registers instantly, English, Hindi, Rajasthani" },
+  { problem: "Mispronounces Rajasthani family surnames and ritual names", fix: "Pre-event research, every name, every ritual, verified" },
   { problem: "Dead silence during boat-arrival at lake venues", fix: "Acoustic crowd-pull technique specific to lake settings" },
   { problem: "Panics when palace sound restrictions limit volume", fix: "Adapted intimacy-hosting style for heritage properties" },
-  { problem: "Generic tone that fits every city", fix: "Poetic Udaipur register — regal, warm, and never loud" },
+  { problem: "Generic tone that fits every city", fix: "Poetic Udaipur register, regal, warm, and never loud" },
 ];
 const TESTIMONIALS = [
   {
@@ -154,12 +154,12 @@ const TESTIMONIALS = [
   },
   {
     name: "Singhania Family",
-    quote: "The Jagmandir Sangeet was a different beast — the echo, the island acoustics, the crowd spread across three levels. Yash adapted in real time. Not once did the energy drop. When the power flickered for 90 seconds, he turned it into a crowd moment. Nobody noticed.",
+    quote: "The Jagmandir Sangeet was a different beast, the echo, the island acoustics, the crowd spread across three levels. Yash adapted in real time. Not once did the energy drop. When the power flickered for 90 seconds, he turned it into a crowd moment. Nobody noticed.",
     event: "Sangeet · Jagmandir Island · 450 guests"
   },
   {
-    name: "Events Head — FMCG Group",
-    quote: "Annual dealer meet at Leela Udaipur — 380 delegates from across Rajasthan and Gujarat. Day programme, evening gala. The anchor held both formats without a tone change that felt jarring. Senior dealers and new partners both felt seen. That is rare.",
+    name: "Events Head, FMCG Group",
+    quote: "Annual dealer meet at Leela Udaipur, 380 delegates from across Rajasthan and Gujarat. Day programme, evening gala. The anchor held both formats without a tone change that felt jarring. Senior dealers and new partners both felt seen. That is rare.",
     event: "Dealer Meet · The Leela Udaipur · 380 delegates"
   },
 ];
@@ -171,15 +171,15 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "Who is the best anchor for destination weddings in Udaipur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Udaipur's lake palace destination wedding circuit — Taj Lake Palace, Oberoi Udaivilas, Jagmandir Island, Leela Udaipur, Raffles, and Fateh Garh. Bilingual Hindi/English, unscripted, NRI-experienced, with zero paper scripts across his entire career.",
+    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Udaipur's lake palace destination wedding circuit, Taj Lake Palace, Oberoi Udaivilas, Jagmandir Island, Leela Udaipur, Raffles, and Fateh Garh. Bilingual Hindi/English, unscripted, NRI-experienced, with zero paper scripts across his entire career.",
   },
   {
     q: "Have you hosted events at Taj Lake Palace and Jagmandir Island?",
-    a: "Taj Lake Palace and Jagmandir Island are both venues with specific acoustic challenges, boat-arrival timing, and heritage sound protocols. The lake setting changes how crowd energy travels — these are not venues you learn on the job. The operational knowledge for Maharana Pratap Sthal, the terrace at Udaivilas, and the courtyard stages at Jagmandir comes from repeated work at these properties.",
+    a: "Taj Lake Palace and Jagmandir Island are both venues with specific acoustic challenges, boat-arrival timing, and heritage sound protocols. The lake setting changes how crowd energy travels, these are not venues you learn on the job. The operational knowledge for Maharana Pratap Sthal, the terrace at Udaivilas, and the courtyard stages at Jagmandir comes from repeated work at these properties.",
   },
   {
     q: "Can you manage a bilingual NRI wedding crowd in Udaipur?",
-    a: "Bilingual hosting for NRI families is the core specialty of the Udaipur destination circuit. NRI families from the UK, USA, and Canada bring their extended diaspora — three generations in one room means three different emotional vocabularies. Sophisticated English for the international crowd, warm rooted Hindi for the parents and elders, and cultural Rajasthani references that make the home crowd feel the pride of the city they chose.",
+    a: "Bilingual hosting for NRI families is the core specialty of the Udaipur destination circuit. NRI families from the UK, USA, and Canada bring their extended diaspora, three generations in one room means three different emotional vocabularies. Sophisticated English for the international crowd, warm rooted Hindi for the parents and elders, and cultural Rajasthani references that make the home crowd feel the pride of the city they chose.",
   },
   {
     q: "What is the typical cost of hiring an anchor for a destination wedding in Udaipur?",
@@ -187,27 +187,27 @@ const FAQS = [
   },
   {
     q: "How far in advance should I book for Udaipur's peak wedding season?",
-    a: "Udaipur's peak season runs October through March. Dates at lake palace venues fill 6–8 months ahead, especially for Diwali, New Year, and Valentine's weekend. No replacements are sent and no waitlist is maintained. The date is exclusively blocked on receipt of advance — WhatsApp the moment your venue date is confirmed.",
+    a: "Udaipur's peak season runs October through March. Dates at lake palace venues fill 6–8 months ahead, especially for Diwali, New Year, and Valentine's weekend. No replacements are sent and no waitlist is maintained. The date is exclusively blocked on receipt of advance, WhatsApp the moment your venue date is confirmed.",
   },
   {
     q: "Do you anchor Sangeet functions on Jagmandir Island?",
-    a: "Jagmandir Island Sangeets are among the most technically complex events on the Udaipur circuit — island acoustics, elevated crowd spread, boat-transfer timing for guest flow, and the echo off Lake Pichola. Sangeets here have run 5+ hours without an energy drop using unscripted crowd games, high-energy bilingual hosting, and real-time adaptation to the island's quirks.",
+    a: "Jagmandir Island Sangeets are among the most technically complex events on the Udaipur circuit, island acoustics, elevated crowd spread, boat-transfer timing for guest flow, and the echo off Lake Pichola. Sangeets here have run 5+ hours without an energy drop using unscripted crowd games, high-energy bilingual hosting, and real-time adaptation to the island's quirks.",
   },
   {
     q: "Can you anchor corporate events and dealer meets in Udaipur?",
-    a: "Corporate events — annual galas, product launches, dealer meets, and leadership summits at Leela Udaipur, Radisson Blu, and Trident Udaipur — are a strong specialisation. The hosting register is sharp, brand-aligned, and aware of C-suite hierarchy, not a wedding energy copy-pasted into a boardroom setting.",
+    a: "Corporate events, annual galas, product launches, dealer meets, and leadership summits at Leela Udaipur, Radisson Blu, and Trident Udaipur, are a strong specialisation. The hosting register is sharp, brand-aligned, and aware of C-suite hierarchy, not a wedding energy copy-pasted into a boardroom setting.",
   },
   {
     q: "What makes Anchor Yash different from local Udaipur anchors?",
-    a: "Local anchors know the city. Anchor Yash Soni knows the city and the crowd psychology to command every segment of it — 700+ shows, 10,000+ crowds commanded, 4.9★ rating, and a specific track record at Udaipur's top-tier palace properties. The difference shows when the NRI grandfather from London feels as included as the local Rajasthani family cousin dancing in the front row.",
+    a: "Local anchors know the city. Anchor Yash Soni knows the city and the crowd psychology to command every segment of it, 700+ shows, 10,000+ crowds commanded, 4.9★ rating, and a specific track record at Udaipur's top-tier palace properties. The difference shows when the NRI grandfather from London feels as included as the local Rajasthani family cousin dancing in the front row.",
   },
   {
     q: "Who is the best emcee in Udaipur for lake palace weddings?",
-    a: "Anchor Yash Soni is the top-rated wedding emcee for Udaipur destination events — 4.9★ verified, with deep experience at Taj Lake Palace, Jagmandir Island, Oberoi Udaivilas, and Leela Udaipur. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Udaipur lake palace venues.",
+    a: "Anchor Yash Soni is the top-rated wedding emcee for Udaipur destination events, 4.9★ verified, with deep experience at Taj Lake Palace, Jagmandir Island, Oberoi Udaivilas, and Leela Udaipur. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Udaipur lake palace venues.",
   },
   {
     q: "What is the difference between a wedding anchor, emcee, and host in Udaipur?",
-    a: "Anchor, emcee, host, and MC are four terms for the same role — the professional who leads the event programme, manages transitions, and commands the room. Wedding planners in Udaipur's destination circuit often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates flawlessly across all formats and audience types.",
+    a: "Anchor, emcee, host, and MC are four terms for the same role, the professional who leads the event programme, manages transitions, and commands the room. Wedding planners in Udaipur's destination circuit often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates flawlessly across all formats and audience types.",
   },
 ];
 
@@ -219,9 +219,9 @@ export default function UdaipurPage() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
       <style>{css}</style>
-      {/* ══ 1. HERO — Full-Bleed AI City Background ══ */}
+      {/* ══ 1. HERO, Full-Bleed AI City Background ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/udaipur_bg.webp" alt="Best Anchor in Udaipur — Lake Pichola at dusk" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/udaipur_bg.webp" alt="Best Anchor in Udaipur, Lake Pichola at dusk" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -234,7 +234,7 @@ export default function UdaipurPage() {
                 Best Event Anchor · Udaipur · Lake City
               </span>
             </div>
-            {/* H1 — ANCHOR + Texture City Name */}
+            {/* H1, ANCHOR + Texture City Name */}
             <h1 className="font-black uppercase tracking-tighter leading-[0.82] mb-8">
               <span className="block text-white text-[17vw] md:text-[12vw] lg:text-[9rem] opacity-90 drop-shadow-2xl">ANCHOR</span>
               <span className="block text-[15vw] md:text-[10vw] lg:text-[8rem] bg-clip-text text-transparent bg-cover bg-center mt-2 pb-4" style={{ backgroundImage: "url('/texture/udaipur.webp')" }}>
@@ -315,7 +315,7 @@ export default function UdaipurPage() {
           </div>
         </div>
       </section>
-      {/* ══ 3. UDAIPUR IDENTITY — What makes this city unique ══ */}
+      {/* ══ 3. UDAIPUR IDENTITY, What makes this city unique ══ */}
       <section className="py-20 md:py-28 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
@@ -324,7 +324,7 @@ export default function UdaipurPage() {
               The City of Lakes Demands<br />a <G>Different Standard.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Udaipur's wedding circuit is the most demanding in India. Palace properties, lake acoustics, royal family protocols, global NRI crowds — and an anchor who can read all of it in real time.
+              Udaipur's wedding circuit is the most demanding in India. Palace properties, lake acoustics, royal family protocols, global NRI crowds, and an anchor who can read all of it in real time.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -343,7 +343,7 @@ export default function UdaipurPage() {
           </div>
         </div>
       </section>
-      {/* ══ 4. THE PRO ANCHOR DIFFERENCE — VS TABLE ══ */}
+      {/* ══ 4. THE PRO ANCHOR DIFFERENCE, VS TABLE ══ */}
       <section className="py-20 md:py-28 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-5xl mx-auto">
           <Reveal>
@@ -436,13 +436,13 @@ export default function UdaipurPage() {
               Three Continents.<br />One <G>Wedding Room.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Udaipur's lake palaces attract Indian families from London, New York, Toronto, and Sydney. These are not homogeneous crowds. The grandparents who've never left Rajasthan sit next to cousins who grew up speaking English. The anchor must hold everyone — simultaneously.
+              Udaipur's lake palaces attract Indian families from London, New York, Toronto, and Sydney. These are not homogeneous crowds. The grandparents who've never left Rajasthan sit next to cousins who grew up speaking English. The anchor must hold everyone, simultaneously.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              The NRI grandchild needs an anchor who sounds like the world they grew up in. The Rajasthani parents need someone who respects the rituals they planned for their life. Both need to see their moments honoured — and neither can feel like the afterthought.
+              The NRI grandchild needs an anchor who sounds like the world they grew up in. The Rajasthani parents need someone who respects the rituals they planned for their life. Both need to see their moments honoured, and neither can feel like the afterthought.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Bilingual code-switching, cultural fluency, and 5+ years of reading mixed rooms — this is what the Udaipur circuit demands and what this anchor delivers.
+              Bilingual code-switching, cultural fluency, and 5+ years of reading mixed rooms, this is what the Udaipur circuit demands and what this anchor delivers.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -495,7 +495,7 @@ export default function UdaipurPage() {
               10,000+ Crowd.<br /><G>Never Unscripted.</G><br />Always Live.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Intimate 50-person VIP lake dinners and 3,000-guest fort weddings are different crafts entirely. Both have been mastered. The psychological grip on any crowd — regardless of size or setting — is the core skill that separates a real anchor from an announcer.
+              Intimate 50-person VIP lake dinners and 3,000-guest fort weddings are different crafts entirely. Both have been mastered. The psychological grip on any crowd, regardless of size or setting, is the core skill that separates a real anchor from an announcer.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
@@ -527,7 +527,7 @@ export default function UdaipurPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -538,7 +538,7 @@ export default function UdaipurPage() {
       </section>
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -546,10 +546,10 @@ export default function UdaipurPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Udaipur's Best.</G>
+                Whatever You Call It -{" "}<G>Udaipur's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Udaipur —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Udaipur -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -561,7 +561,7 @@ export default function UdaipurPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Udaipur",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Udaipur.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Udaipur.",
                 keywords: ["best wedding anchor udaipur", "wedding emcee udaipur", "wedding host udaipur", "wedding mc udaipur"],
               },
               {
@@ -579,13 +579,13 @@ export default function UdaipurPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Udaipur",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Udaipur — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Udaipur, by any name.",
                 keywords: ["best emcee in udaipur", "best anchor in udaipur", "best host in udaipur", "best mc udaipur"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Udaipur",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host udaipur", "english speaking anchor udaipur", "bilingual emcee udaipur"],
               },
               {
@@ -626,7 +626,7 @@ export default function UdaipurPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -730,7 +730,7 @@ export default function UdaipurPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Udaipur's peak season fills 6–8 months ahead. I do not maintain a waitlist and do not send replacements.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

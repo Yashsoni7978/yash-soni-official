@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -71,14 +71,14 @@ const SHOW_CARDS = [
     title: "The Royal Roast",
     icon: Flame,
     color: "text-orange-400",
-    desc: "Scripted, family-friendly comedy roasting the couple's quirks. Gets the room laughing in 60 seconds — elders, cousins, everyone.",
+    desc: "Scripted, family-friendly comedy roasting the couple's quirks. Gets the room laughing in 60 seconds, elders, cousins, everyone.",
     tags: ["Custom Script", "Comedy", "Family-Safe"],
   },
   {
     title: "The Sangeet Awards",
     icon: Trophy,
     color: "text-[#B5952F]",
-    desc: "Custom award categories — 'The Drama Queen', 'The Late Arrival' — with acceptance speeches and fanfares. Crowd favourite every time.",
+    desc: "Custom award categories, 'The Drama Queen', 'The Late Arrival', with acceptance speeches and fanfares. Crowd favourite every time.",
     tags: ["Interactive", "Trophies", "Bollywood-Style"],
     highlight: true,
   },
@@ -112,14 +112,14 @@ const LOCATIONS = [
   {
     zone: "All India & Destination",
     type: "Destination Sangeet",
-    desc: "Udaipur, Jodhpur, Jaisalmer, Goa, Dubai — the same concert-level Sangeet energy, anywhere in the world.",
+    desc: "Udaipur, Jodhpur, Jaisalmer, Goa, Dubai, the same concert-level Sangeet energy, anywhere in the world.",
     keywords: ["Destination Sangeet anchor India", "Sangeet host Rajasthan"],
   },
 ];
 const TESTIMONIALS = [
   {
     name: "Sharma Family",
-    quote: "The sound system failed for 3 minutes mid-Sangeet. Yash turned it into a crowd call-and-response that had 900 people screaming together. He didn't just save the night — he made it.",
+    quote: "The sound system failed for 3 minutes mid-Sangeet. Yash turned it into a crowd call-and-response that had 900 people screaming together. He didn't just save the night, he made it.",
     event: "Farmhouse Sangeet · Ajmer Road, Jaipur",
     guests: "900 guests",
   },
@@ -144,11 +144,11 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "Who is the best Sangeet anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 700+ shows hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM — consistently.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 700+ shows hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM, consistently.",
   },
   {
     q: "Why hire a professional Sangeet anchor instead of a family member?",
-    a: "A professional anchor manages the technical coordination with the DJ, eliminates dead air between performances, handles crises invisibly, and keeps energy peaking for 4–6 hours without fatigue. Family members bring personal moments — Yash brings the architecture that makes those moments land perfectly.",
+    a: "A professional anchor manages the technical coordination with the DJ, eliminates dead air between performances, handles crises invisibly, and keeps energy peaking for 4–6 hours without fatigue. Family members bring personal moments, Yash brings the architecture that makes those moments land perfectly.",
   },
   {
     q: "Do you help script family performances and entries?",
@@ -156,7 +156,7 @@ const FAQS = [
   },
   {
     q: "Can you handle farmhouse Sangeets on Ajmer Road with 1,000+ guests?",
-    a: "This is a core specialisation. Farmhouse Sangeets on Ajmer Road and Bhankrota with 1,000–1,500 guests are a regular format. Commanding open-air crowds at scale without a script — reading energy, redirecting it, and keeping the dance floor electric until 4 AM — is the skill that separates Yash from announcers.",
+    a: "This is a core specialisation. Farmhouse Sangeets on Ajmer Road and Bhankrota with 1,000–1,500 guests are a regular format. Commanding open-air crowds at scale without a script, reading energy, redirecting it, and keeping the dance floor electric until 4 AM, is the skill that separates Yash from announcers.",
   },
   {
     q: "How do you handle technical glitches or delays?",
@@ -164,7 +164,7 @@ const FAQS = [
   },
   {
     q: "Can you host a Bollywood-style Awards Night Sangeet?",
-    a: "The Sangeet Awards segment is a signature format — custom award categories like 'The Drama Queen' or 'The Late Arrival', acceptance speeches, trophy moments, and fanfares that involve the whole family. It turns a standard Sangeet into a full production.",
+    a: "The Sangeet Awards segment is a signature format, custom award categories like 'The Drama Queen' or 'The Late Arrival', acceptance speeches, trophy moments, and fanfares that involve the whole family. It turns a standard Sangeet into a full production.",
   },
   {
     q: "Do you coordinate with our DJ and sound team?",
@@ -176,11 +176,11 @@ const FAQS = [
   },
   {
     q: "How far in advance should we book a Sangeet anchor in Jaipur?",
-    a: "Jaipur's peak wedding season (October–February) books 6–8 months in advance. No waitlists are maintained and no replacement anchors are sent. The moment your venue is locked, reach out via WhatsApp immediately — Sangeet dates in peak season fill before wedding slots.",
+    a: "Jaipur's peak wedding season (October–February) books 6–8 months in advance. No waitlists are maintained and no replacement anchors are sent. The moment your venue is locked, reach out via WhatsApp immediately, Sangeet dates in peak season fill before wedding slots.",
   },
   {
     q: "What is the hosting duration for a Sangeet?",
-    a: "A standard Sangeet shift is 4–6 hours — from guest arrivals and family entries through the stage show and into the open dance floor. For large farmhouse events on Ajmer Road that run until 4 AM, extended duration terms are available.",
+    a: "A standard Sangeet shift is 4–6 hours, from guest arrivals and family entries through the stage show and into the open dance floor. For large farmhouse events on Ajmer Road that run until 4 AM, extended duration terms are available.",
   },
 ];
 const RELATED = [
@@ -254,7 +254,7 @@ export default function SangeetAnchor() {
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
       {/* ══════════════════════════════════════
-          BREADCRUMB — sr-only for SEO
+          BREADCRUMB, sr-only for SEO
       ══════════════════════════════════════ */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
@@ -270,7 +270,7 @@ export default function SangeetAnchor() {
           {/* FIX: next/image instead of <img> */}
           <Image
             src="/hero-slide-1.webp"
-            alt="Best Sangeet anchor in Jaipur — Anchor Yash Soni hosting a Sangeet night"
+            alt="Best Sangeet anchor in Jaipur, Anchor Yash Soni hosting a Sangeet night"
             fill
             priority
             quality={90}
@@ -280,14 +280,14 @@ export default function SangeetAnchor() {
         </div>
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            {/* Badge — gold, not purple */}
+            {/* Badge, gold, not purple */}
             <div className="inline-flex items-center gap-2 border border-[#D4AF37]/50 px-5 py-2 rounded-full /50 backdrop-blur-xl mb-8">
               <Star className="w-3 h-3 text-[#B5952F] fill-[#D4AF37]" />
               <span className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Best Sangeet Anchor in Jaipur
               </span>
             </div>
-            {/* H1 — primary keyword */}
+            {/* H1, primary keyword */}
             <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
               Turn Your Night<br /><G>Into A Concert.</G>
             </h1>
@@ -298,7 +298,7 @@ export default function SangeetAnchor() {
             <p className="text-zinc-500 text-sm mb-8 tracking-wide">
               700+ shows &nbsp;·&nbsp; Dance floors until 4 AM &nbsp;·&nbsp; 100% Unscripted
             </p>
-            {/* CTAs — WhatsApp primary, not /contact */}
+            {/* CTAs, WhatsApp primary, not /contact */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={WA} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto px-10 py-4 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all hover:scale-105 shadow-[0_0_40px_rgba(212,175,55,0.35)] active:scale-95">
@@ -315,7 +315,7 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          2. STATS — real numbers, gold, no boxes
+          2. STATS, real numbers, gold, no boxes
       ══════════════════════════════════════ */}
       <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
@@ -333,7 +333,7 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. KEYWORD-RICH INTRO — body text for Google
+          3. KEYWORD-RICH INTRO, body text for Google
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -346,7 +346,7 @@ export default function SangeetAnchor() {
               With <strong className="text-white">700+ shows hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni is the Sangeet host Jaipur's elite families trust when a Sangeet needs to be more than background noise.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              Farmhouse Sangeets on Ajmer Road with 1,500 guests packed until 4 AM. Palace Sangeet events at heritage venues in Kukas and Amer Road with NRI families from the UK, USA, and Gulf. Intimate family Sangeets in Mansarovar and Vaishali Nagar. Every format is a different discipline — and every one has been mastered.
+              Farmhouse Sangeets on Ajmer Road with 1,500 guests packed until 4 AM. Palace Sangeet events at heritage venues in Kukas and Amer Road with NRI families from the UK, USA, and Gulf. Intimate family Sangeets in Mansarovar and Vaishali Nagar. Every format is a different discipline, and every one has been mastered.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Zero paper scripts. Unscripted crowd psychology. Family roasts that get elders laughing in 60 seconds. And a dance floor that never empties.
@@ -378,7 +378,7 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. SIGNATURE SEGMENTS — 3 show cards
+          4. SIGNATURE SEGMENTS, 3 show cards
           (Structure kept, colors fixed to gold)
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
@@ -414,7 +414,7 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. THE METHOD — directing the chaos
+          5. THE METHOD, directing the chaos
           (Original section, images fixed)
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
@@ -435,7 +435,7 @@ export default function SangeetAnchor() {
           <Reveal delay={0.12}>
             <SectionHeading subtitle="The Method" title="Directing the Chaos." />
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light">
-              I don't announce names. I direct energy. Whether it's hyping up a nervous solo performer, managing a technical glitch invisibly, or getting the shyest elders to do a hookstep — the spotlight never fades.
+              I don't announce names. I direct energy. Whether it's hyping up a nervous solo performer, managing a technical glitch invisibly, or getting the shyest elders to do a hookstep, the spotlight never fades.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8 font-light">
               And when the stage show ends, the job doesn't. I transition into MC mode, kick open the dance floor, and keep the energy at concert levels until the very last song.
@@ -444,8 +444,8 @@ export default function SangeetAnchor() {
               {[
                 { title: "Script Support", desc: "Family member scripts refined so jokes land and transitions are sharp. Nervous Chacha becomes a star." },
                 { title: "Technical Sync", desc: "Arrive 2 hours early. Coordinate with DJ for stingers, entry tracks, and background scores timed perfectly." },
-                { title: "The After-Party MC", desc: "Stage show ends — dance floor opens. The energy doesn't drop. That's the benchmark." },
-                { title: "Crisis Invisible", desc: "50+ crowd interactions ready for any gap. PA failure, delayed performer, schedule change — guests never know." },
+                { title: "The After-Party MC", desc: "Stage show ends, dance floor opens. The energy doesn't drop. That's the benchmark." },
+                { title: "Crisis Invisible", desc: "50+ crowd interactions ready for any gap. PA failure, delayed performer, schedule change, guests never know." },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 group">
                   <CheckCircle2 size={16} className="text-[#B5952F] mt-0.5 shrink-0" />
@@ -460,8 +460,8 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. LOCATION COVERAGE — SEO section
-          (NEW — was missing from original)
+          6. LOCATION COVERAGE, SEO section
+          (NEW, was missing from original)
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -495,7 +495,7 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          7. TESTIMONIALS — NEW section
+          7. TESTIMONIALS, NEW section
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -510,7 +510,7 @@ export default function SangeetAnchor() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                     <p className="text-[#B5952F] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>
@@ -521,11 +521,11 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          8. FAQ — upgraded questions
+          8. FAQ, upgraded questions
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading subtitle="People Also Ask" title="Sangeet Anchor Jaipur — FAQ." align="center" />
+          <SectionHeading subtitle="People Also Ask" title="Sangeet Anchor Jaipur, FAQ." align="center" />
           <div className="flex flex-col gap-3">
             {FAQS.map((faq, idx) => (
               <Reveal key={idx} delay={idx * 0.03}>
@@ -536,8 +536,8 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. RELATED SERVICES — internal links
-          (NEW — was completely missing)
+          9. RELATED SERVICES, internal links
+          (NEW, was completely missing)
       ══════════════════════════════════════ */}
       <section className="py-14 md:py-20 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -563,7 +563,7 @@ export default function SangeetAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          10. SCARCITY CTA — dark gold, not purple
+          10. SCARCITY CTA, dark gold, not purple
       ══════════════════════════════════════ */}
       <section className="py-20 md:py-28  border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.07),transparent_65%)] pointer-events-none" />
@@ -579,7 +579,7 @@ export default function SangeetAnchor() {
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
               Jaipur's most reviewed Sangeet anchor books <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season. No replacements sent. No waitlist kept.
             </p>
-            <p className="text-zinc-600 text-xs mb-8">When the calendar is full — it is simply full.</p>
+            <p className="text-zinc-600 text-xs mb-8">When the calendar is full, it is simply full.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.2)] active:scale-95">
                 <CalendarCheck size={16} /> Check Sangeet Dates

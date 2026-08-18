@@ -158,7 +158,7 @@ const VS = [
   { problem: "Sangeet dying out early because the venue strictly prohibited an open bar", fix: "Mastering raw, organic crowd psychology to manufacture intense, natural dancing energy" },
   { problem: "Losing the crowd physically due to massive sound scatter on open desert lawns", fix: "Utilizing deep vocal projection and crowd-condensing techniques to force intimacy" },
   { problem: "Using cheap local humor that alienates the high-net-worth NRI guest list", fix: "Flawless, executive-grade English delivery mixed with highly respectful traditional Hindi" },
-  { problem: "Reading from paper notes during rapid-fire, multi-family Sangeet performances", fix: "100% unscripted flow—maintaining absolute eye contact and continuous stage momentum" },
+  { problem: "Reading from paper notes during rapid-fire, multi-family Sangeet performances", fix: "100% unscripted flow-maintaining absolute eye contact and continuous stage momentum" },
   { problem: "Failing to fuse the cultures during an international-Marwari wedding", fix: "Bilingual intelligence that bridges London/Dubai VIPs directly with local elders" },
   { problem: "Failing to respect the holy perimeter of Pushkar with inappropriate jokes", fix: "Pristine, culturally-aware hosting that elevates the prestige of the entire family" },
 ];
@@ -175,7 +175,7 @@ const TESTIMONIALS = [
     event: "Cross-Cultural Wedding · Westin Pushkar · 500 guests"
   },
   {
-    name: "VP Marketing — International Brand",
+    name: "VP Marketing, International Brand",
     quote: "We hosted an exclusive corporate retreat at The Greenhouse. The challenge was keeping the executive team engaged during evening galas in the middle of the desert without typical city distractions. Yash's intellectual, unscripted hosting was incredibly sharp. Complete authority.",
     event: "Corporate Retreat Gala · Greenhouse Resort · 150 delegates"
   },
@@ -187,12 +187,12 @@ const FAQS = [
   { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and regional touches to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
   { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences � the difference between an event people attend and one they remember." },
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
-  { q: "Who is the best anchor for destination weddings in Pushkar?", a: "Anchor Yash Soni is rated 4.9★ with 700+ shows across Rajasthan, specialising in Pushkar's unique sacred-city destination wedding circuit — Ananta Spa & Resorts, Westin Pushkar, The Bhanwar Singh Palace, and lakeside heritage properties. Bilingual Hindi/English, unscripted, experienced with NRI families who choose Pushkar for its spiritual and visual significance." },
-  { q: "What makes hosting a wedding in Pushkar uniquely challenging?", a: "Pushkar is a sacred city with specific cultural sensitivities around noise levels, timing, and ceremonial respect for the ghats and temple vicinity. Navigating event energy and crowd enthusiasm within those constraints requires a host who understands the city deeply — keeping celebrations joyful while honouring the sanctity of the location." },
-  { q: "Can you handle NRI families who choose Pushkar for a destination Mehendi or Sangeet?", a: "Pushkar increasingly attracts NRI families seeking a spiritual, intimate backdrop away from the grand palace circuit. The hosting challenge is intimacy at scale — keeping the energy personal and culturally resonant while ensuring international guests understand and feel part of the Rajasthani heritage. This is a core specialisation." },
-  { q: "Do you anchor events near Pushkar Lake and the camel fair grounds?", a: "Lakeside and heritage property events around Pushkar Lake are a distinct circuit. The open-air acoustic environment, crowd proximity to the ghats, and the spiritual atmosphere all require a host who reads the room and calibrates energy accordingly — celebratory without being irreverent." },
+  { q: "Who is the best anchor for destination weddings in Pushkar?", a: "Anchor Yash Soni is rated 4.9★ with 700+ shows across Rajasthan, specialising in Pushkar's unique sacred-city destination wedding circuit, Ananta Spa & Resorts, Westin Pushkar, The Bhanwar Singh Palace, and lakeside heritage properties. Bilingual Hindi/English, unscripted, experienced with NRI families who choose Pushkar for its spiritual and visual significance." },
+  { q: "What makes hosting a wedding in Pushkar uniquely challenging?", a: "Pushkar is a sacred city with specific cultural sensitivities around noise levels, timing, and ceremonial respect for the ghats and temple vicinity. Navigating event energy and crowd enthusiasm within those constraints requires a host who understands the city deeply, keeping celebrations joyful while honouring the sanctity of the location." },
+  { q: "Can you handle NRI families who choose Pushkar for a destination Mehendi or Sangeet?", a: "Pushkar increasingly attracts NRI families seeking a spiritual, intimate backdrop away from the grand palace circuit. The hosting challenge is intimacy at scale, keeping the energy personal and culturally resonant while ensuring international guests understand and feel part of the Rajasthani heritage. This is a core specialisation." },
+  { q: "Do you anchor events near Pushkar Lake and the camel fair grounds?", a: "Lakeside and heritage property events around Pushkar Lake are a distinct circuit. The open-air acoustic environment, crowd proximity to the ghats, and the spiritual atmosphere all require a host who reads the room and calibrates energy accordingly, celebratory without being irreverent." },
   { q: "How far in advance should I book for a Pushkar wedding?", a: "Pushkar's peak season aligns with the Camel Fair (November) and the general Rajasthan wedding season (October–February). Premium heritage properties book out 6+ months ahead. WhatsApp immediately upon confirming your Pushkar venue." },
-  { q: "Who is the best emcee or host in Pushkar for destination weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Pushkar destination events — with a 4.9★ rating and experience across Ananta, Westin Pushkar, and heritage lakeside properties. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies." },
+  { q: "Who is the best emcee or host in Pushkar for destination weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Pushkar destination events, with a 4.9★ rating and experience across Ananta, Westin Pushkar, and heritage lakeside properties. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Pushkar?", a: "Anchor, emcee, host, and MC are four terms for the same professional role. Pushkar's international destination wedding planners typically prefer 'emcee' or 'host'; traditional families say 'anchor'. Yash Soni operates flawlessly across all audience types and event formats regardless of what the role is called." },
 ];
 
@@ -205,7 +205,7 @@ export default function PushkarPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/pushkar_bg.webp" alt="Best Anchor in Pushkar — NRI & Luxury Desert Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/pushkar_bg.webp" alt="Best Anchor in Pushkar, NRI & Luxury Desert Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -282,10 +282,10 @@ export default function PushkarPage() {
                 With 5+ years on stage and 700+ shows handled instinctively, <strong className="text-white">Anchor Yash Soni</strong> represents the absolute pinnacle of destination wedding hosting in Pushkar.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
-                Pushkar functions entirely differently from the rest of Rajasthan. You aren't just dealing with massive fortresses; you are dealing with the <strong className="text-[#B5952F]">Satvik Protocol</strong>—where the finest 5-star properties often lack alcohol. Yash steps into these highly restricted 500-guest environments and manufactures intense, raw dancing energy entirely organically.
+                Pushkar functions entirely differently from the rest of Rajasthan. You aren't just dealing with massive fortresses; you are dealing with the <strong className="text-[#B5952F]">Satvik Protocol</strong>-where the finest 5-star properties often lack alcohol. Yash steps into these highly restricted 500-guest environments and manufactures intense, raw dancing energy entirely organically.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts. For high-net-worth NRI families flying into Ananta or The Westin, Yash provides an elite bilingual execution—flawless English that validates the international guests, layered over the deep Hindi warmth that the traditional Marwari ceremonies demand.
+                He completely rejects paper scripts. For high-net-worth NRI families flying into Ananta or The Westin, Yash provides an elite bilingual execution-flawless English that validates the international guests, layered over the deep Hindi warmth that the traditional Marwari ceremonies demand.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -434,7 +434,7 @@ export default function PushkarPage() {
               Furthermore, the sheer volume of international and NRI weddings at properties like The Westin demands absolute English proficiency. The host must translate the emotional weight of Rajasthani Marwari rituals into an inclusive, global framework without losing the inherent desi warmth.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Pushkar fluency—defeating the Satvik limitations and uniting the NRI divide—is the mark of an anchor who operates at the apex of Rajasthan’s destination industry.
+              Pushkar fluency-defeating the Satvik limitations and uniting the NRI divide-is the mark of an anchor who operates at the apex of Rajasthan’s destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -490,14 +490,14 @@ export default function PushkarPage() {
               Vast Valley Lawns.<br /><G>Intimate Crowd.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Pushkar’s luxury ecosystem is a massive logistical challenge. Properties like Ananta Spa or The Westin throw 500+ guests across colossal open valley lawns, leading to immediate acoustic scatter and audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments—using pacing and crowd psychology to compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Pushkar’s luxury ecosystem is a massive logistical challenge. Properties like Ananta Spa or The Westin throw 500+ guests across colossal open valley lawns, leading to immediate acoustic scatter and audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments-using pacing and crowd psychology to compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Destination Protocol" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth NRI families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within stringent Satvik resort conditions.
+                High-net-worth NRI families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within stringent Satvik resort conditions.
               </p>
             </div>
           </Reveal>
@@ -527,7 +527,7 @@ export default function PushkarPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -539,7 +539,7 @@ export default function PushkarPage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -547,10 +547,10 @@ export default function PushkarPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Pushkar's Best.</G>
+                Whatever You Call It -{" "}<G>Pushkar's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Pushkar —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Pushkar -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -562,7 +562,7 @@ export default function PushkarPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Pushkar",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Pushkar.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Pushkar.",
                 keywords: ["best wedding anchor pushkar", "wedding emcee pushkar", "wedding host pushkar", "wedding mc pushkar"],
               },
               {
@@ -580,13 +580,13 @@ export default function PushkarPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Pushkar",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Pushkar — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Pushkar, by any name.",
                 keywords: ["best emcee in pushkar", "best anchor in pushkar", "best host in pushkar", "best mc pushkar"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Pushkar",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host pushkar", "english speaking anchor pushkar", "bilingual emcee pushkar"],
               },
               {
@@ -627,7 +627,7 @@ export default function PushkarPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -733,7 +733,7 @@ export default function PushkarPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Pushkar experiences intense overlapping of the international destination season and peak local luxury wedding dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

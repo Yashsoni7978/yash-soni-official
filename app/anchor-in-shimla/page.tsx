@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-shimla/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Shimla",
     "Best Wedding Anchor Shimla",
@@ -88,13 +88,13 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Corporate Group — Delhi NCR" },
+      author: { "@type": "Person", name: "Corporate Group, Delhi NCR" },
       reviewBody: "Hosting a sunset reception at Taj Theog requires an anchor who understands immense prestige. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet despite the freezing outdoor temperatures with complete authority. He commands the room effortlessly.",
     },
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Garg Family — Chandigarh" },
+      author: { "@type": "Person", name: "Garg Family, Chandigarh" },
       reviewBody: "Choosing Wildflower Hall meant we had a highly restricted, incredibly VIP guest list. We needed an anchor, not a noisy MC. Yash was absolute perfection. Intense conversational flow, no reading from notes, completely owning the space.",
     },
   ],
@@ -155,9 +155,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-shimla/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Shimla | Taj Theog & Wildflower Hall Emcee — Yash Soni`,
+  name: `Best Anchor in Shimla | Taj Theog & Wildflower Hall Emcee, Yash Soni`,
   headline: `Shimla's Premier Event Anchor for Ultra-Luxury Himalayan Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Shimla destination weddings. Mastering prestigious properties like Taj Theog and Wildflower Hall with unscripted executive hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Shimla destination weddings. Mastering prestigious properties like Taj Theog and Wildflower Hall with unscripted executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Himachal Pradesh` },
@@ -169,7 +169,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Shimla | Luxury Himalayan Wedding Emcee`,
-  description: `Looking for the best anchor in Shimla? Anchor Yash Soni — 4.9★. Expert for Taj Theog, Wildflower Hall, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
+  description: `Looking for the best anchor in Shimla? Anchor Yash Soni, 4.9★. Expert for Taj Theog, Wildflower Hall, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
   keywords: [
     "anchor in shimla",
     "best anchor in shimla",
@@ -197,13 +197,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Shimla | Elite High-Altitude Destination Wedding Host`,
     description: `4.9★ rated. Shimla's premium anchor for highly prestigious destination weddings at Taj Theog and Wildflower Hall. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Shimla — Anchor Yash Soni at Himalayan Luxury Resorts` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Shimla, Anchor Yash Soni at Himalayan Luxury Resorts` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Shimla | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Shimla | Anchor Yash Soni, 4.9★`,
     description: `Taj Theog. Wildflower Hall. Shimla's premier bilingual event anchor for exclusive VIP Sangeets and highly restricted heritage ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Shimla | Himalayan VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Shimla | Himalayan VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Mountain Wedding, VIP Events, ${CITY}, Himachal Pradesh, India`,
     "DC.coverage": `${CITY}, Himachal Pradesh, India`,
     "DC.language": "en-IN",

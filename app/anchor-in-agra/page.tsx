@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-agra/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Agra",
     "Best Wedding Anchor Agra",
@@ -88,14 +88,14 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Corporate Director — Delhi NCR" },
+      author: { "@type": "Person", name: "Corporate Director, Delhi NCR" },
       reviewBody: "Hosting a sunset reception at The Oberoi Amarvilas requires an anchor who understands immense prestige. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet with complete authority. He commands the room effortlessly.",
     },
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
       author: { "@type": "Person", name: "Singhania Family" },
-      reviewBody: "We had international guests and traditional elders flying into ITC Mughal. Yash’s bilingual code-switching was perfect. He bridged the cultural gap so naturally. No awkward jokes, no loud club behavior—just pure, refined stage presence.",
+      reviewBody: "We had international guests and traditional elders flying into ITC Mughal. Yash’s bilingual code-switching was perfect. He bridged the cultural gap so naturally. No awkward jokes, no loud club behavior-just pure, refined stage presence.",
     },
   ],
   hasOfferCatalog: {
@@ -155,9 +155,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-agra/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Agra | Oberoi Amarvilas & Heritage Host — Yash Soni`,
+  name: `Best Anchor in Agra | Oberoi Amarvilas & Heritage Host, Yash Soni`,
   headline: `Agra's Premier Event Anchor for Ultra-Luxury Taj Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Agra destination weddings. Mastering prestigious layouts like The Oberoi Amarvilas and ITC Mughal with unscripted executive hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Agra destination weddings. Mastering prestigious layouts like The Oberoi Amarvilas and ITC Mughal with unscripted executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Uttar Pradesh` },
@@ -169,7 +169,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Agra | Heritage Destination Wedding Emcee`,
-  description: `Looking for the best anchor in Agra? Anchor Yash Soni — 4.9★. Expert for The Oberoi Amarvilas, ITC Mughal, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
+  description: `Looking for the best anchor in Agra? Anchor Yash Soni, 4.9★. Expert for The Oberoi Amarvilas, ITC Mughal, and ultra-prestigious destination weddings. Flawless unscripted bilingual hosting for extreme VIP events.`,
   keywords: [
     "anchor in agra",
     "best anchor in agra",
@@ -197,13 +197,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Agra | Elite Heritage Destination Wedding Host`,
     description: `4.9★ rated. Agra's premium anchor for highly prestigious destination weddings at The Oberoi Amarvilas and ITC Mughal. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Agra — Anchor Yash Soni at Oberoi Amarvilas` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Agra, Anchor Yash Soni at Oberoi Amarvilas` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Agra | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Agra | Anchor Yash Soni, 4.9★`,
     description: `The Oberoi Amarvilas. ITC Mughal. Agra's premier bilingual event anchor for exclusive VIP Sangeets and highly restricted heritage ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Agra | Heritage VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Agra | Heritage VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Heritage Wedding, VIP Events, ${CITY}, Uttar Pradesh, India`,
     "DC.coverage": `${CITY}, Uttar Pradesh, India`,
     "DC.language": "en-IN",

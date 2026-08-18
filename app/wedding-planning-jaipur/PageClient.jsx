@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 
 import Link from "next/link";
@@ -363,7 +363,7 @@ export default function WeddingPlanningJaipur() {
           <Image src="/gold-texture.webp" alt="Gold" width={100} height={100} className="mx-auto mb-8 rounded-full object-cover" quality={75} sizes="(max-width: 768px) 100vw, 50vw" />
           <h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#1A1A1A] mb-8">Crisis Aversion</h2>
           <p className="font-sans text-2xl text-gray-500 font-light max-w-3xl mx-auto leading-relaxed">
-            Something will always go wrong at a live event. A flight delays, a generator fails, or the weather turns. A great planner doesn't just execute the plan—they seamlessly pivot to Plan B without the family ever finding out.
+            Something will always go wrong at a live event. A flight delays, a generator fails, or the weather turns. A great planner doesn't just execute the plan-they seamlessly pivot to Plan B without the family ever finding out.
           </p>
         </motion.div>
       </section>
@@ -499,7 +499,7 @@ export default function WeddingPlanningJaipur() {
           
           <div className="space-y-2">
             {[
-              { q: "What is your pricing model for planning?", a: "We typically work on a fixed agency fee model rather than a percentage of your total budget. This ensures our goals align with yours—we want to save you money during negotiations, not increase your spend." },
+              { q: "What is your pricing model for planning?", a: "We typically work on a fixed agency fee model rather than a percentage of your total budget. This ensures our goals align with yours-we want to save you money during negotiations, not increase your spend." },
               { q: "Do we have to use your decorators?", a: "Not at all. While we have an excellent in-house production team, you are free to bring in any decorator, photographer, or makeup artist you prefer. We will manage them for you." },
               { q: "How many team members do you bring on-site?", a: "For a standard 300-guest wedding, we deploy a core team of 10-15 professionals, including dedicated stage managers, hospitality leads, and transport coordinators." },
               { q: "Can you help with obtaining government licenses?", a: "Yes, we handle all the tedious paperwork, including PPL/Novex music licenses, liquor permits, and local police permissions required for late-night events." },

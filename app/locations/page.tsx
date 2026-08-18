@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
+// Schema data, moved here from PageClient.jsx for server-side rendering
 const ALL_LOCATIONS = [
   { city: "Agra", slug: "anchor-in-agra", region: "Uttar Pradesh" },
   { city: "Ajmer", slug: "anchor-in-ajmer", region: "Rajasthan" },

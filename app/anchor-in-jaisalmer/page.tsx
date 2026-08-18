@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-jaisalmer/layout.jsx
-// Golden Fort & Desert Wedding Anchor — Full Triple Schema + Rich SEO Layout
+// Golden Fort & Desert Wedding Anchor, Full Triple Schema + Rich SEO Layout
 
 const CITY     = "Jaisalmer";
 const REGION   = "Thar Desert, Western Rajasthan";
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Jaisalmer",
     "Best Wedding Anchor Jaisalmer",
@@ -161,9 +161,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-jaisalmer/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Jaisalmer | Suryagarh & Desert Wedding Host — Yash Soni`,
+  name: `Best Anchor in Jaisalmer | Suryagarh & Desert Wedding Host, Yash Soni`,
   headline: `India's Most Trusted Event Anchor for Jaisalmer, Suryagarh & Golden City Sand Dune Celebrations`,
-  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Jaisalmer destination weddings at Suryagarh, Marriott & Sam dunes. NRI/HNI bilingual expert. Open-desert acoustic mastery. Zero scripts.`,
+  description: `Anchor Yash Soni, 4.9★ rated, 700+ shows. Premier anchor for Jaisalmer destination weddings at Suryagarh, Marriott & Sam dunes. NRI/HNI bilingual expert. Open-desert acoustic mastery. Zero scripts.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Thar Desert, Rajasthan` },
@@ -174,8 +174,8 @@ const webPageSchema = {
 // ─── METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Jaisalmer | Desert & Heritage Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Jaisalmer? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for Suryagarh, Marriott & Sam dunes luxury destination weddings. HNI/NRI bilingual specialist, open-air desert acoustic command.`,
+  title: `Best Anchor in Jaisalmer | Desert & Heritage Wedding Host, Yash Soni`,
+  description: `Looking for the best anchor in Jaisalmer? Anchor Yash Soni, 4.9★ rated, 700+ shows. Expert for Suryagarh, Marriott & Sam dunes luxury destination weddings. HNI/NRI bilingual specialist, open-air desert acoustic command.`,
   keywords: [
     "anchor in jaisalmer",
     "best anchor in jaisalmer",
@@ -207,13 +207,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Jaisalmer | Luxury Desert Wedding Host`,
     description: `4.9★ rated. 700+ shows. Jaisalmer's most trusted anchor for Suryagarh, Marriott & luxury desert camps. NRI/HNI bilingual expert. Open-air desert acoustic command.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Jaisalmer — Anchor Yash Soni at the Golden Fort and Thar Desert` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Jaisalmer, Anchor Yash Soni at the Golden Fort and Thar Desert` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Jaisalmer | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Jaisalmer | Anchor Yash Soni, 4.9★`,
     description: `Suryagarh. Marriott. Sam Dunes. Western Rajasthan's most trusted luxury desert weapon. 700+ shows. Zero scripts.`,
     images: [OG_IMAGE],
   },
@@ -222,7 +222,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Jaisalmer | Desert Heritage Anchor — Yash Soni`,
+    "DC.title": `Best Anchor in Jaisalmer | Desert Heritage Anchor, Yash Soni`,
     "DC.subject": `Event Anchor, Luxury Wedding, HNI Emcee, Desert Safari, ${CITY}, Rajasthan, India`,
     "DC.coverage": `${CITY}, Thar Desert, Rajasthan, India`,
     "DC.language": "en-IN",

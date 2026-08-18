@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -59,12 +59,12 @@ const MODULES = [
   {
     icon: Target,
     title: "Goal-Based Challenges",
-    desc: "Strategic games requiring collaboration, planning, and execution. Teams solve real problems under pressure — revealing natural leaders and hidden skills.",
+    desc: "Strategic games requiring collaboration, planning, and execution. Teams solve real problems under pressure, revealing natural leaders and hidden skills.",
   },
   {
     icon: Trophy,
     title: "Corporate Tournaments",
-    desc: "Cricket, box cricket, tug-of-war, and department leagues for 100–1,000+ employees. Managed end-to-end — brackets, commentary, trophies.",
+    desc: "Cricket, box cricket, tug-of-war, and department leagues for 100–1,000+ employees. Managed end-to-end, brackets, commentary, trophies.",
   },
   {
     icon: Smile,
@@ -75,7 +75,7 @@ const MODULES = [
 const ACTIVITIES = [
   {
     title: "Drum Circles",
-    desc: "Rhythmic synchronisation where every employee plays a beat to create one collective sound. Impossible to do without listening to each other — the lesson lands without a word of instruction.",
+    desc: "Rhythmic synchronisation where every employee plays a beat to create one collective sound. Impossible to do without listening to each other, the lesson lands without a word of instruction.",
   },
   {
     title: "Scavenger Hunts",
@@ -83,7 +83,7 @@ const ACTIVITIES = [
   },
   {
     title: "The Squid Game Challenges",
-    desc: "Popular adrenaline formats — Red Light Green Light, glass bridge decisions, trust-based challenges. Safe, controlled, and absolutely electric for large groups.",
+    desc: "Popular adrenaline formats, Red Light Green Light, glass bridge decisions, trust-based challenges. Safe, controlled, and absolutely electric for large groups.",
   },
   {
     title: "Talent Hunt",
@@ -91,7 +91,7 @@ const ACTIVITIES = [
   },
   {
     title: "Blindfold Challenges",
-    desc: "Trust-building exercises where communication is the only tool. Teams that can't see must direct each other precisely — the debrief writes itself.",
+    desc: "Trust-building exercises where communication is the only tool. Teams that can't see must direct each other precisely, the debrief writes itself.",
   },
   {
     title: "Rapid Fire Quiz",
@@ -130,27 +130,27 @@ const FAQS = [
   },
   {
     q: "Why do we need a professional host for team building instead of HR?",
-    a: "An internal HR manager can organise the games — but a professional host brings neutral authority, high energy, and the crowd psychology to manage 100–500 people simultaneously without office politics interfering. The intern participates the same as the CEO. That psychological safety is what makes team building actually work.",
+    a: "An internal HR manager can organise the games, but a professional host brings neutral authority, high energy, and the crowd psychology to manage 100–500 people simultaneously without office politics interfering. The intern participates the same as the CEO. That psychological safety is what makes team building actually work.",
   },
   {
     q: "Can you manage large groups of 100+ employees for team building?",
-    a: "Yes. Large-format employee engagement is a core specialisation. Groups of 100–1,000+ are managed using clear microphone instructions, subgroup division strategies, and a pace that keeps every team engaged simultaneously — nobody waits, nobody sits out.",
+    a: "Yes. Large-format employee engagement is a core specialisation. Groups of 100–1,000+ are managed using clear microphone instructions, subgroup division strategies, and a pace that keeps every team engaged simultaneously, nobody waits, nobody sits out.",
   },
   {
     q: "Do you conduct team building activities in Jaipur resorts?",
-    a: "Yes. Corporate offsites at Jaipur's Aravalli circuit resorts — Rambagh, Fairmont, Trident, and resort properties near Ajmer Road — are a regular format. Scavenger hunts, drum circles, and outdoor challenges are customised for the specific property layout.",
+    a: "Yes. Corporate offsites at Jaipur's Aravalli circuit resorts, Rambagh, Fairmont, Trident, and resort properties near Ajmer Road, are a regular format. Scavenger hunts, drum circles, and outdoor challenges are customised for the specific property layout.",
   },
   {
     q: "Do you bring your own props and materials?",
-    a: "Yes. Standard game kits — ropes, balls, placards, blindfolds, trivia boards, and tournament brackets — are carried. The client provides the venue and audience. Everything else is handled.",
+    a: "Yes. Standard game kits, ropes, balls, placards, blindfolds, trivia boards, and tournament brackets, are carried. The client provides the venue and audience. Everything else is handled.",
   },
   {
     q: "Can you conduct indoor team building for small offices in Jaipur?",
-    a: "Yes. A dedicated conference room module is designed for small spaces — mental challenges, rapid fire quizzes, virtual scavenger hunts, and Pictionary formats that work with 20–50 people in a standard office setting.",
+    a: "Yes. A dedicated conference room module is designed for small spaces, mental challenges, rapid fire quizzes, virtual scavenger hunts, and Pictionary formats that work with 20–50 people in a standard office setting.",
   },
   {
     q: "Do you host virtual team building sessions?",
-    a: "Yes. Virtual team building via Zoom and Microsoft Teams — virtual scavenger hunts, online Pictionary, rapid fire quizzes, and digital ice-breakers — for remote and hybrid teams across Jaipur & Rajasthan.",
+    a: "Yes. Virtual team building via Zoom and Microsoft Teams, virtual scavenger hunts, online Pictionary, rapid fire quizzes, and digital ice-breakers, for remote and hybrid teams across Jaipur & Rajasthan.",
   },
   {
     q: "How long does a typical team building session last?",
@@ -158,7 +158,7 @@ const FAQS = [
   },
   {
     q: "Can you host Annual Day events for companies in Jaipur?",
-    a: "Yes. Annual Day hosting — awards ceremony, entertainment anchoring, employee recognition, and engagement activities — for 200–1,000+ employees is a core corporate format. Venues across Jaipur including JECC Sitapura, Birla Auditorium, and five-star hotel ballrooms are regularly hosted.",
+    a: "Yes. Annual Day hosting, awards ceremony, entertainment anchoring, employee recognition, and engagement activities, for 200–1,000+ employees is a core corporate format. Venues across Jaipur including JECC Sitapura, Birla Auditorium, and five-star hotel ballrooms are regularly hosted.",
   },
   {
     q: "How far in advance should corporate team building be booked?",
@@ -233,7 +233,7 @@ export default function TeamBuildingHost() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
-      {/* BREADCRUMB — sr-only */}
+      {/* BREADCRUMB, sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
         <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
@@ -248,7 +248,7 @@ export default function TeamBuildingHost() {
           {/* FIX: next/image replaces <img> */}
           <Image
             src="/service-corporate.webp"
-            alt="Corporate team building host Jaipur — Anchor Yash Soni"
+            alt="Corporate team building host Jaipur, Anchor Yash Soni"
             fill priority
             className="object-cover opacity-40 grayscale"
             sizes="100vw"
@@ -262,7 +262,7 @@ export default function TeamBuildingHost() {
                 4.9★ · Team Building Host · Jaipur
               </span>
             </div>
-            {/* H1 — primary keyword */}
+            {/* H1, primary keyword */}
             <h1 className="text-4xl sm:text-7xl md:text-8xl font-black leading-tight mb-6 uppercase">
               Team Building<br /><G>Host in Jaipur.</G>
             </h1>
@@ -288,7 +288,7 @@ export default function TeamBuildingHost() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          2. STATS — real numbers
+          2. STATS, real numbers
       ══════════════════════════════════════ */}
       <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
@@ -306,7 +306,7 @@ export default function TeamBuildingHost() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. INTRO — keyword-rich body text
+          3. INTRO, keyword-rich body text
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-b border-white/5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -316,19 +316,19 @@ export default function TeamBuildingHost() {
               Bonding Happens Best When People<br /><G>Forget They're at Work.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light max-w-2xl mx-auto">
-              In corporate Jaipur, &ldquo;team building&rdquo; has a reputation for being awkward — forced trust falls, painfully slow ice-breakers, and an HR manager who also looks like they'd rather be somewhere else.
+              In corporate Jaipur, &ldquo;team building&rdquo; has a reputation for being awkward, forced trust falls, painfully slow ice-breakers, and an HR manager who also looks like they'd rather be somewhere else.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light max-w-2xl mx-auto">
-              With <strong className="text-white">70+ national brands</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni creates the atmosphere of <strong className="text-[#B5952F]">psychological safety</strong> where the intern feels comfortable high-fiving the CEO — not because they were told to, but because the energy of the room made it natural.
+              With <strong className="text-white">70+ national brands</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni creates the atmosphere of <strong className="text-[#B5952F]">psychological safety</strong> where the intern feels comfortable high-fiving the CEO, not because they were told to, but because the energy of the room made it natural.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed font-light max-w-2xl mx-auto">
-              From 60-minute Fun Friday sessions at Jaipur's IT parks in Malviya Nagar and Sitapura, to full-day residential offsites at Aravalli resort properties near Ajmer Road, to Annual Day productions for 600+ employees at JECC Sitapura — every format is a different discipline, and every one has been mastered.
+              From 60-minute Fun Friday sessions at Jaipur's IT parks in Malviya Nagar and Sitapura, to full-day residential offsites at Aravalli resort properties near Ajmer Road, to Annual Day productions for 600+ employees at JECC Sitapura, every format is a different discipline, and every one has been mastered.
             </p>
           </Reveal>
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. MODULES — 4 cards (original kept)
+          4. MODULES, 4 cards (original kept)
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -356,7 +356,7 @@ export default function TeamBuildingHost() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. ACTIVITIES — 6 cards (original kept + expanded)
+          5. ACTIVITIES, 6 cards (original kept + expanded)
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -384,7 +384,7 @@ export default function TeamBuildingHost() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. LOCATION COVERAGE — NEW SEO section
+          6. LOCATION COVERAGE, NEW SEO section
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -413,7 +413,7 @@ export default function TeamBuildingHost() {
               {
                 zone: "JECC Sitapura & Hotel Ballrooms",
                 type: "Large-Format Annual Days",
-                desc: "200–1,000+ employee Annual Day events at JECC, Marriott, Fairmont, and ITC Rajputana. Full production — awards, entertainment, and engagement in one seamless evening.",
+                desc: "200–1,000+ employee Annual Day events at JECC, Marriott, Fairmont, and ITC Rajputana. Full production, awards, entertainment, and engagement in one seamless evening.",
                 keywords: ["annual day host JECC Jaipur", "corporate annual day Jaipur"],
               },
               {
@@ -445,7 +445,7 @@ export default function TeamBuildingHost() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          7. TESTIMONIALS — NEW
+          7. TESTIMONIALS, NEW
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -465,7 +465,7 @@ export default function TeamBuildingHost() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                     <p className="text-[#B5952F] text-[10px] uppercase tracking-wider mt-0.5">{t.size}</p>
                   </div>
@@ -476,7 +476,7 @@ export default function TeamBuildingHost() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          8. FAQ — 10 questions
+          8. FAQ, 10 questions
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-4xl mx-auto">
@@ -497,7 +497,7 @@ export default function TeamBuildingHost() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. RELATED SERVICES — internal links
+          9. RELATED SERVICES, internal links
       ══════════════════════════════════════ */}
       <section className="py-14 md:py-20  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -538,7 +538,7 @@ export default function TeamBuildingHost() {
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
               No boring trust falls. Just pure engagement, meaningful bonding, and an activity session your team will actually talk about next week.
             </p>
-            <p className="text-zinc-600 text-xs mb-8">WhatsApp with your date, group size, and preference — quick confirmation guaranteed.</p>
+            <p className="text-zinc-600 text-xs mb-8">WhatsApp with your date, group size, and preference, quick confirmation guaranteed.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_30px_rgba(212,175,55,0.2)] active:scale-95">
                 <CalendarCheck size={16} /> Get a Custom Quote

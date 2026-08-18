@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -86,7 +86,7 @@ const RANTHAMBORE_IDENTITY = [
   {
     icon: TreePine,
     title: "The Jungle Luxury Paradox",
-    desc: "Ranthambore is the world's most sought-after tiger safari destination — and increasingly, one of India's most exclusive destination wedding circuits. The paradox of a black-tie Sangeet in a tented camp 400 metres from tiger territory requires an anchor who understands both luxury aesthetics and wildlife-adjacent environmental protocols. Getting either wrong is immediately visible to a discerning destination family."
+    desc: "Ranthambore is the world's most sought-after tiger safari destination, and increasingly, one of India's most exclusive destination wedding circuits. The paradox of a black-tie Sangeet in a tented camp 400 metres from tiger territory requires an anchor who understands both luxury aesthetics and wildlife-adjacent environmental protocols. Getting either wrong is immediately visible to a discerning destination family."
   },
   {
     icon: Globe,
@@ -96,7 +96,7 @@ const RANTHAMBORE_IDENTITY = [
   {
     icon: Tent,
     title: "The Tented Camp Acoustic Challenge",
-    desc: "Tented luxury camps — Sher Bagh, Khem Villas, The Oberoi's Vanyavilas — have no acoustic walls. The canvas ceiling, the open jungle air, and the strict sound ordinances in tiger reserve buffer zones create a hosting environment unlike any ballroom or fort courtyard. Volume is not the solution. Voice command, spatial crowd technique, and storytelling-led engagement are the only tools that work."
+    desc: "Tented luxury camps, Sher Bagh, Khem Villas, The Oberoi's Vanyavilas, have no acoustic walls. The canvas ceiling, the open jungle air, and the strict sound ordinances in tiger reserve buffer zones create a hosting environment unlike any ballroom or fort courtyard. Volume is not the solution. Voice command, spatial crowd technique, and storytelling-led engagement are the only tools that work."
   },
 ];
 
@@ -104,25 +104,25 @@ const SERVICES = [
   {
     icon: Heart,
     title: "Jungle Luxury Wedding Anchor",
-    desc: "Destination wedding ceremonies in the lawns and open-air event spaces of Ranthambore's luxury tented camps. Managing the ceremony energy in a wildlife-adjacent setting — where sound ordinances limit amplification and the evening jungle atmosphere does half the stage setting — requires a very specific hosting approach.",
+    desc: "Destination wedding ceremonies in the lawns and open-air event spaces of Ranthambore's luxury tented camps. Managing the ceremony energy in a wildlife-adjacent setting, where sound ordinances limit amplification and the evening jungle atmosphere does half the stage setting, requires a very specific hosting approach.",
     tag: "Shaadi"
   },
   {
     icon: Music2,
     title: "Tented Camp Sangeet Emcee",
-    desc: "Sangeet nights at Sher Bagh and Khem Villas — candlelit tent stages, the Aravalli tree canopy overhead, the quiet of the tiger reserve behind. High energy through voice + crowd interaction rather than pure volume. Managing the energy arc of a four-hour Sangeet night in this extraordinary environment from opening act to final performance.",
+    desc: "Sangeet nights at Sher Bagh and Khem Villas, candlelit tent stages, the Aravalli tree canopy overhead, the quiet of the tiger reserve behind. High energy through voice + crowd interaction rather than pure volume. Managing the energy arc of a four-hour Sangeet night in this extraordinary environment from opening act to final performance.",
     tag: "Sangeet"
   },
   {
     icon: Flower2,
     title: "Dawn Pre-Wedding Events",
-    desc: "Sunrise Mehndi ceremonies and Haldi mornings on the banks of the Chambal or in safari camp lawns. Creating warmth and genuine social connection among guests from across Jaipur & Rajasthan and the world — many meeting for the first time in a shared jungle environment that itself becomes part of the event.",
+    desc: "Sunrise Mehndi ceremonies and Haldi mornings on the banks of the Chambal or in safari camp lawns. Creating warmth and genuine social connection among guests from across Jaipur & Rajasthan and the world, many meeting for the first time in a shared jungle environment that itself becomes part of the event.",
     tag: "Pre-Wedding"
   },
   {
     icon: Building2,
     title: "Ecotourism & Corporate Offsite",
-    desc: "Conservation-focused corporate offsites and leadership retreats at Ranthambore — where the wildlife environment is the deliberate choice of the organiser. The anchor must reflect the environmental values of the setting while delivering sharp, bilingual corporate hosting across day sessions and evening galas.",
+    desc: "Conservation-focused corporate offsites and leadership retreats at Ranthambore, where the wildlife environment is the deliberate choice of the organiser. The anchor must reflect the environmental values of the setting while delivering sharp, bilingual corporate hosting across day sessions and evening galas.",
     tag: "Corporate"
   },
 ];
@@ -139,23 +139,23 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "Cannot manage wildlife-adjacent acoustic restrictions — uses DJs and high amplification", fix: "Voice-led crowd command built for tiger reserve sound ordinance compliance" },
-  { problem: "Brings city event energy to a conservation-conscious destination", fix: "Jungle luxury register — warm, intimate, environmentally attuned" },
+  { problem: "Cannot manage wildlife-adjacent acoustic restrictions, uses DJs and high amplification", fix: "Voice-led crowd command built for tiger reserve sound ordinance compliance" },
+  { problem: "Brings city event energy to a conservation-conscious destination", fix: "Jungle luxury register, warm, intimate, environmentally attuned" },
   { problem: "No experience with tented camp venue logistics and canvas acoustic behaviour", fix: "Repeated Ranthambore tented camp events mean venue quirks are pre-managed" },
-  { problem: "Treats the Sangeet like a hotel ballroom event — wrong energy, wrong tech", fix: "Open-air tented performance that uses storytelling and crowd work, not volume" },
+  { problem: "Treats the Sangeet like a hotel ballroom event, wrong energy, wrong tech", fix: "Open-air tented performance that uses storytelling and crowd work, not volume" },
   { problem: "International guests feel disconnected from a hosting style that ignores their context", fix: "Bilingual English/Hindi that respects both the jungle setting and international guest diversity" },
-  { problem: "Cannot handle the multi-format arc of a wildlife destination multi-day event", fix: "Pre-event calibration covers every format — Mehndi warmth to Sangeet electric to ceremony gravitas" },
+  { problem: "Cannot handle the multi-format arc of a wildlife destination multi-day event", fix: "Pre-event calibration covers every format, Mehndi warmth to Sangeet electric to ceremony gravitas" },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Mehta Family",
-    quote: "We specifically chose Ranthambore because we wanted something completely different — a wedding that felt like it belonged to nature. The hosting had to match that intention. Yash understood without being told. He created an evening at Sher Bagh that felt genuinely wild and genuine luxury simultaneously. No one wanted to leave.",
+    quote: "We specifically chose Ranthambore because we wanted something completely different, a wedding that felt like it belonged to nature. The hosting had to match that intention. Yash understood without being told. He created an evening at Sher Bagh that felt genuinely wild and genuine luxury simultaneously. No one wanted to leave.",
     event: "Destination Wedding · Sher Bagh · 200 guests"
   },
   {
     name: "Kapoor Family",
-    quote: "The Sangeet at Khem Villas was the most beautiful evening of our lives. Candlelit tent, jungle sounds, 180 guests from four countries. Yash managed the energy for four hours with no DJ, no loud speakers — just his voice and his absolute command of the crowd. It was unlike anything we have experienced at any other wedding.",
+    quote: "The Sangeet at Khem Villas was the most beautiful evening of our lives. Candlelit tent, jungle sounds, 180 guests from four countries. Yash managed the energy for four hours with no DJ, no loud speakers, just his voice and his absolute command of the crowd. It was unlike anything we have experienced at any other wedding.",
     event: "Sangeet · Khem Villas · 180 guests"
   },
   {
@@ -174,9 +174,9 @@ const FAQS = [
   { q: "Who is the best anchor for destination weddings in Ranthambore?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and is a specialist in Ranthambore's luxury jungle resort wedding circuit. Completely unscripted and bilingual, he delivers the elegant, high-energy hosting required for premium wildlife-adjacent venues." },
   { q: "How do you handle the unique acoustic and timeline constraints of Ranthambore jungle resorts?", a: "Ranthambore's proximity to the national park means strict noise regulations after certain hours and open-air acoustic challenges. Managing the timeline to ensure high-energy segments peak before restrictions, and shifting the crowd's energy seamlessly into intimate, late-night acoustic or DJ sessions, requires a highly experienced host." },
   { q: "Can you host bilingual events for NRI families in Ranthambore?", a: "Yes. Destination weddings in Ranthambore attract a mix of domestic luxury clients and NRI families. Bilingual hosting ensures international guests remain engaged through sophisticated English, while traditional Indian relatives connect deeply through culturally resonant Hindi." },
-  { q: "What makes Ranthambore different from other destination wedding locations?", a: "Ranthambore offers an exotic, wildlife-adjacent backdrop that feels both luxurious and wild. The hosting must mirror this — elegant and sophisticated, yet dynamic enough to match the adventurous spirit of a jungle destination." },
+  { q: "What makes Ranthambore different from other destination wedding locations?", a: "Ranthambore offers an exotic, wildlife-adjacent backdrop that feels both luxurious and wild. The hosting must mirror this, elegant and sophisticated, yet dynamic enough to match the adventurous spirit of a jungle destination." },
   { q: "How far in advance should I book for a Ranthambore wedding?", a: "Ranthambore is highly sought after during the winter wedding season (October–March). Premium jungle resorts book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Ranthambore for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ranthambore destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "Who is the best emcee or host in Ranthambore for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Ranthambore destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Ranthambore?", a: "Anchor, emcee, host, and MC are terms for the same professional role. International event planners often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the term used." },
 ];
 
@@ -191,7 +191,7 @@ export default function RanthamborePage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/ranthambore_bg.webp" alt="Best Anchor in Ranthambore — Jungle luxury tented camp at dusk" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/ranthambore_bg.webp" alt="Best Anchor in Ranthambore, Jungle luxury tented camp at dusk" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -250,10 +250,10 @@ export default function RanthamborePage() {
               <span className="text-[#B5952F] text-xs uppercase tracking-[0.3em] mb-6 block font-bold">About Anchor Yash</span>
               <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">Beyond <G>Announcements.</G><br />Beyond Scripts.</h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding the most challenging and distinctive event environments in India — including the completely unique jungle luxury circuit of Ranthambore.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation for commanding the most challenging and distinctive event environments in India, including the completely unique jungle luxury circuit of Ranthambore.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
-                From the candlelit tent lawns of <strong className="text-[#B5952F]">Sher Bagh</strong> to the ultra-luxury tented villas of The Oberoi Vanyavilas, and from intimate 80-person Mehndi mornings to 250-person Sangeet nights under the Aravalli tree canopy — every Ranthambore event requires a fundamentally different hosting approach from the city or palace circuits.
+                From the candlelit tent lawns of <strong className="text-[#B5952F]">Sher Bagh</strong> to the ultra-luxury tented villas of The Oberoi Vanyavilas, and from intimate 80-person Mehndi mornings to 250-person Sangeet nights under the Aravalli tree canopy, every Ranthambore event requires a fundamentally different hosting approach from the city or palace circuits.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
                 The hosting here must be simultaneously warm, sophisticated, environmentally intelligent, and bilingual across a guest list that routinely spans Indian business families, NRI diaspora, and international wildlife enthusiasts. No paper. No generic template. No city hotel approach transplanted into a tiger reserve.
@@ -283,7 +283,7 @@ export default function RanthamborePage() {
               India's Tiger Reserve Demands<br />a <G>Jungle Standard.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Ranthambore is the only event destination in India where the environment is not a backdrop but an active participant in the event. The tiger reserve, the jungle sounds, the conservation protocol, and the extraordinary natural setting are as central to the guest experience as the event itself. The anchor who ignores this is not just aesthetically wrong — they are fundamentally misunderstanding the place they are hosting in.
+              Ranthambore is the only event destination in India where the environment is not a backdrop but an active participant in the event. The tiger reserve, the jungle sounds, the conservation protocol, and the extraordinary natural setting are as central to the guest experience as the event itself. The anchor who ignores this is not just aesthetically wrong, they are fundamentally misunderstanding the place they are hosting in.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -379,13 +379,13 @@ export default function RanthamborePage() {
             <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">The Ranthambore Challenge</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">Wild Luxury.<br /><G>Zero Compromise.</G></h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Ranthambore's destination circuit caters to a very specific type of event client — one who is environmentally aware, aesthetically sophisticated, and deliberately choosing the wild over the conventional. These are guests who have read about the decline of tiger populations, who have booked Khem Villas specifically because of its conservation credentials, and who are hosting an event that is a reflection of their personal values.
+              Ranthambore's destination circuit caters to a very specific type of event client, one who is environmentally aware, aesthetically sophisticated, and deliberately choosing the wild over the conventional. These are guests who have read about the decline of tiger populations, who have booked Khem Villas specifically because of its conservation credentials, and who are hosting an event that is a reflection of their personal values.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              The anchor who walks into Sher Bagh and treats it like a Jaipur hotel ballroom has immediately communicated that they do not understand where they are or who they are serving. The resulting disconnect is felt immediately, most acutely by the most important guests in the room — the ones who chose this destination because of exactly the values the wrong anchor is ignoring.
+              The anchor who walks into Sher Bagh and treats it like a Jaipur hotel ballroom has immediately communicated that they do not understand where they are or who they are serving. The resulting disconnect is felt immediately, most acutely by the most important guests in the room, the ones who chose this destination because of exactly the values the wrong anchor is ignoring.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Jungle luxury hosting requires voice-led command, environmental sensitivity, genuine international bilingual ease, and event-arc management calibrated to the safari rhythm of a wildlife destination. All of these are built — not improvised.
+              Jungle luxury hosting requires voice-led command, environmental sensitivity, genuine international bilingual ease, and event-arc management calibrated to the safari rhythm of a wildlife destination. All of these are built, not improvised.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -430,7 +430,7 @@ export default function RanthamborePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Ranthambore · India's Premier Tiger Reserve</p>
-                <p className="text-white text-xs">India's most exclusive jungle luxury wedding destination — hosted with full environmental awareness and premium guest command.</p>
+                <p className="text-white text-xs">India's most exclusive jungle luxury wedding destination, hosted with full environmental awareness and premium guest command.</p>
               </div>
             </div>
           </Reveal>
@@ -438,14 +438,14 @@ export default function RanthamborePage() {
             <p className="text-[#B5952F] text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Scale</p>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-6">The Jungle Stage.<br /><G>No Walls.</G><br />No Scripts.</h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              A tented camp Sangeet in Ranthambore has no acoustic walls, no sound system infrastructure standard to city venues, and no crowd architecture designed to focus attention. The entire crowd focus is created by the anchor's voice, body language, crowd interaction technique, and storytelling — not by the venue's physical structure.
+              A tented camp Sangeet in Ranthambore has no acoustic walls, no sound system infrastructure standard to city venues, and no crowd architecture designed to focus attention. The entire crowd focus is created by the anchor's voice, body language, crowd interaction technique, and storytelling, not by the venue's physical structure.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> Safari Rhythm Energy Management
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Ranthambore guests wake at 5am for tiger safaris. The event hosting must account for this rhythm — building energy through the evening rather than burning it out early, and creating intimate warmth in the early segments that grows into full celebration by the time the tired safari guests have warmed into the night.
+                Ranthambore guests wake at 5am for tiger safaris. The event hosting must account for this rhythm, building energy through the evening rather than burning it out early, and creating intimate warmth in the early segments that grows into full celebration by the time the tired safari guests have warmed into the night.
               </p>
             </div>
           </Reveal>
@@ -469,7 +469,7 @@ export default function RanthamborePage() {
                   <div className="flex gap-0.5 mb-4">{[...Array(5)].map((_, j) => <Star key={j} size={11} fill={GOLD} className="text-[#B5952F]" />)}</div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -481,7 +481,7 @@ export default function RanthamborePage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -489,10 +489,10 @@ export default function RanthamborePage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Ranthambore's Best.</G>
+                Whatever You Call It -{" "}<G>Ranthambore's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Ranthambore —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Ranthambore -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -504,7 +504,7 @@ export default function RanthamborePage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Ranthambore",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Ranthambore.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Ranthambore.",
                 keywords: ["best wedding anchor ranthambore", "wedding emcee ranthambore", "wedding host ranthambore", "wedding mc ranthambore"],
               },
               {
@@ -522,13 +522,13 @@ export default function RanthamborePage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Ranthambore",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Ranthambore — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Ranthambore, by any name.",
                 keywords: ["best emcee in ranthambore", "best anchor in ranthambore", "best host in ranthambore", "best mc ranthambore"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Ranthambore",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host ranthambore", "english speaking anchor ranthambore", "bilingual emcee ranthambore"],
               },
               {
@@ -569,7 +569,7 @@ export default function RanthamborePage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -671,7 +671,7 @@ export default function RanthamborePage() {
             </div>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-[0.9]">Your Jungle Date<br /><G>Won't Wait.</G></h2>
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">Ranthambore's luxury tented camps have strictly limited capacity and dates fill 5–7 months in advance. The anchor calendar mirrors venue availability exactly.</p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

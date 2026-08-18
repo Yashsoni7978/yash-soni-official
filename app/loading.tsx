@@ -1,5 +1,5 @@
-/**
- * loading.tsx — Next.js App Router loading UI
+﻿/**
+ * loading.tsx, Next.js App Router loading UI
  *
  * Renders as a React Suspense boundary fallback during server-side
  * data fetching / route transitions. Keeps perceived performance high

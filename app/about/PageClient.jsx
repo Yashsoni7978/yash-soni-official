@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -21,7 +21,7 @@ import StatsHoverGroup from "./components/StatsHoverGroup";
 import GlowCard from "./components/GlowCard";
 
 // ─────────────────────────────────────────
-// CONFIG — all from canonical site sources
+// CONFIG, all from canonical site sources
 // ─────────────────────────────────────────
 const WA =
   "https://wa.me/917737877978?text=Hi%20Yash!%20I%20read%20your%20story%20and%20I%27d%20love%20to%20discuss%20my%20event.";
@@ -34,13 +34,13 @@ const STATS = [
   { value: "5+", label: "Years on Stage", sub: "Zero paper scripts", variant: "sage" },
 ];
 
-// Specializations — all facts from homepage SERVICES & WHY_ME arrays
+// Specializations, all facts from homepage SERVICES & WHY_ME arrays
 const SPECIALIZATIONS = [
   {
     icon: Mic,
     title: "Wedding Anchor",
     tag: "Weddings",
-    desc: "From the emotional Varmala to a chaotic Baraat — every ritual hosted with cultural precision. NRI families, palace venues, and farmhouse lawns handled flawlessly.",
+    desc: "From the emotional Varmala to a chaotic Baraat, every ritual hosted with cultural precision. NRI families, palace venues, and farmhouse lawns handled flawlessly.",
     href: "/wedding-anchor-jaipur",
     accent: "#D4AF37",
   },
@@ -48,7 +48,7 @@ const SPECIALIZATIONS = [
     icon: Users,
     title: "Sangeet Host",
     tag: "Sangeet",
-    desc: "The dance floor doesn't just stay alive — it stays packed. Unscripted crowd games, high-energy transitions, complete command of 500 to 1,500 guests.",
+    desc: "The dance floor doesn't just stay alive, it stays packed. Unscripted crowd games, high-energy transitions, complete command of 500 to 1,500 guests.",
     href: "/sangeet-anchor-jaipur",
     accent: "#2D6A4F",
   },
@@ -64,7 +64,7 @@ const SPECIALIZATIONS = [
     icon: Globe,
     title: "Destination Weddings",
     tag: "Destination",
-    desc: "Heritage venues, coastal resorts, and hill retreats across India. Jaipur, Udaipur, Jodhpur, Goa — full logistics handled, no anchor anxiety.",
+    desc: "Heritage venues, coastal resorts, and hill retreats across India. Jaipur, Udaipur, Jodhpur, Goa, full logistics handled, no anchor anxiety.",
     href: "/destination-wedding-anchor",
     accent: "#B5C4AE",
   },
@@ -73,11 +73,11 @@ const SPECIALIZATIONS = [
 // Credentials from homepage WHY_ME + VS_DATA
 const CREDENTIALS = [
   { label: "100% Unscripted", detail: "Zero paper scripts in 700+ events. Every word built live for your specific crowd." },
-  { label: "Crowd Psychology", detail: "50+ crisis interactions for power cuts, audio failures, delayed brides — all handled invisibly." },
+  { label: "Crowd Psychology", detail: "50+ crisis interactions for power cuts, audio failures, delayed brides, all handled invisibly." },
   { label: "Bilingual Command", detail: "Flawless Hindi/English transitions. International guests and traditional elders both feel at home." },
-  { label: "10,000+ Crowd Scale", detail: "Large-format events, open venues, stadium-scale command. Scale does not intimidate — it inspires." },
+  { label: "10,000+ Crowd Scale", detail: "Large-format events, open venues, stadium-scale command. Scale does not intimidate, it inspires." },
   { label: "Cultural Fluency", detail: "Deep fluency in Rajasthani traditions, NRI protocols, and regional ceremony formats." },
-  { label: "Crisis-Proof Standard", detail: "If the PA fails, it becomes a crowd moment. The audience never sees the problem — only the performance." },
+  { label: "Crisis-Proof Standard", detail: "If the PA fails, it becomes a crowd moment. The audience never sees the problem, only the performance." },
 ];
 
 // Philosophy pillars from homepage 'SEO PHILOSOPHY PILLAR' section
@@ -172,12 +172,12 @@ export default function AboutPageClient() {
       {/* ══════════════════════════════════════
           1. MAGAZINE COVER HERO
           Full-bleed portrait, editorial bottom-left headline.
-          Parallax on scroll. No JS-only effects — CSS handles overlay.
+          Parallax on scroll. No JS-only effects, CSS handles overlay.
       ══════════════════════════════════════ */}
       <section
         ref={heroRef}
         className="relative h-screen min-h-[640px] overflow-hidden"
-        aria-label="Anchor Yash Soni — About hero"
+        aria-label="Anchor Yash Soni, About hero"
       >
         {/* Parallax portrait */}
         <motion.div
@@ -187,7 +187,7 @@ export default function AboutPageClient() {
         >
           <Image
             src="/intro-portrait-top.webp"
-            alt="Anchor Yash Soni — Premium Event Anchor, Jaipur"
+            alt="Anchor Yash Soni, Premium Event Anchor, Jaipur"
             fill
             priority
             quality={95}
@@ -237,7 +237,7 @@ export default function AboutPageClient() {
           </h1>
 
           <p className="text-zinc-300 text-sm md:text-base max-w-md font-light leading-relaxed mb-7">
-            Anchor Yash Soni — 700+ events, 4.9★, and a philosophy that
+            Anchor Yash Soni, 700+ events, 4.9★, and a philosophy that
             changed how Jaipur thinks about what an anchor actually does.
           </p>
 
@@ -255,7 +255,7 @@ export default function AboutPageClient() {
       </section>
 
       {/* ══════════════════════════════════════
-          2. EDITORIAL BYLINE — opening quote + sidebar stats
+          2. EDITORIAL BYLINE, opening quote + sidebar stats
       ══════════════════════════════════════ */}
       <section className="px-5 md:px-10 pt-20 md:pt-28 pb-16 max-w-6xl mx-auto">
         <Reveal>
@@ -271,20 +271,20 @@ export default function AboutPageClient() {
             {/* Vertical rule */}
             <div className="hidden md:block w-px bg-white/6 self-stretch" />
 
-            {/* Opening editorial prose — sourced from existing PageClient Ch.1 */}
+            {/* Opening editorial prose, sourced from existing PageClient Ch.1 */}
             <div>
               <p
                 className="text-2xl md:text-3xl text-zinc-200 leading-[1.5] font-bold italic mb-7"
                 style={{ fontFamily: "var(--font-playfair, serif)" }}
               >
                 &ldquo;There are two types of anchors. The ones who announce.
-                And the ones who connect. I chose the second path — and have
+                And the ones who connect. I chose the second path, and have
                 never looked back.&rdquo;
               </p>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
                 I am Yash Soni. Over the last 5+ years and 700+ events, I have
                 hosted everything from intimate 50-guest birthday galas in
-                Mansarovar to 1,500-person farmhouse Sangeets on Ajmer Road —
+                Mansarovar to 1,500-person farmhouse Sangeets on Ajmer Road -
                 from royal Varmala ceremonies at Rambagh Palace to national
                 brand award nights at JECC Sitapura.
               </p>
@@ -292,7 +292,7 @@ export default function AboutPageClient() {
                 What I do is not announcing. It is crowd psychology. It is
                 cultural navigation. It is the invisible architecture that
                 determines whether your guests remember your event as ordinary
-                — or unforgettable.
+               , or unforgettable.
               </p>
             </div>
           </div>
@@ -302,7 +302,7 @@ export default function AboutPageClient() {
       <SectionDivider />
 
       {/* ══════════════════════════════════════
-          3. CHAPTER 01 — THE ORIGIN (Effect 1 on the image panel)
+          3. CHAPTER 01, THE ORIGIN (Effect 1 on the image panel)
       ══════════════════════════════════════ */}
       <section className="px-5 md:px-10 py-16 md:py-24 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
@@ -331,20 +331,20 @@ export default function AboutPageClient() {
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               While others memorised scripts, I studied the room. I observed
               what made crowds laugh, what made them lean in, and what made
-              them check their phones. I learned from the hard moments — bad
+              them check their phones. I learned from the hard moments, bad
               sound systems, tough crowds, power cuts mid-Sangeet, delayed
               brides that would make any announcer freeze.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
               Each failure taught me something no rehearsal could. And slowly,
-              what started as a hobby became an obsession — and then a
+              what started as a hobby became an obsession, and then a
               profession that has since taken me across Jaipur &amp; Rajasthan
               and into the rooms where the stakes are highest and the silences
               are most expensive.
             </p>
           </Reveal>
 
-          {/* Effect 1 — GoldBorderCard wraps the portrait */}
+          {/* Effect 1, GoldBorderCard wraps the portrait */}
           <Reveal delay={0.15} className="md:mt-14">
             <GoldBorderCard>
               <div className="relative aspect-[3/4]">
@@ -358,7 +358,7 @@ export default function AboutPageClient() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/60 to-transparent" />
                 <p className="absolute bottom-4 left-4 text-zinc-500 text-[10px] uppercase tracking-widest">
-                  Live — Jaipur, 2024
+                  Live, Jaipur, 2024
                 </p>
               </div>
             </GoldBorderCard>
@@ -367,7 +367,7 @@ export default function AboutPageClient() {
       </section>
 
       {/* ══════════════════════════════════════
-          PULL QUOTE 1 — full-width, dramatic
+          PULL QUOTE 1, full-width, dramatic
       ══════════════════════════════════════ */}
       <Reveal>
         <div className="px-5 md:px-10 py-16 md:py-20 max-w-4xl mx-auto text-center">
@@ -385,7 +385,7 @@ export default function AboutPageClient() {
       <SectionDivider />
 
       {/* ══════════════════════════════════════
-          4. SPECIALIZATIONS — 2×2 grid with rich cards
+          4. SPECIALIZATIONS, 2×2 grid with rich cards
       ══════════════════════════════════════ */}
       <section
         className="px-5 md:px-10 py-16 md:py-24 max-w-6xl mx-auto"
@@ -462,12 +462,12 @@ export default function AboutPageClient() {
       <SectionDivider />
 
       {/* ══════════════════════════════════════
-          5. CHAPTER 02 — PHILOSOPHY
+          5. CHAPTER 02, PHILOSOPHY
           Text-heavy. Sources: homepage Philosophy section verbatim.
       ══════════════════════════════════════ */}
       <section className="px-5 md:px-10 py-16 md:py-24 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
-          {/* Image — left on desktop */}
+          {/* Image, left on desktop */}
           <Reveal className="md:order-1">
             <div className="relative aspect-[4/3] md:aspect-[3/4] rounded-xl overflow-hidden">
               <Image
@@ -493,7 +493,7 @@ export default function AboutPageClient() {
             </div>
           </Reveal>
 
-          {/* Text — right on desktop */}
+          {/* Text, right on desktop */}
           <Reveal delay={0.12} className="md:order-2">
             <span
               className="text-[6rem] md:text-[9rem] font-black text-white/[0.035] leading-none select-none block -mb-8"
@@ -511,20 +511,20 @@ export default function AboutPageClient() {
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               There are two types of anchors in Jaipur. The ones who announce
-              — names, schedules, instructions. And the ones who connect —
+             , names, schedules, instructions. And the ones who connect -
               with the specific crowd in front of them, in the specific moment
               they are in.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               The difference is not talent. It is intent. The moment I step on
-              stage, every decision I make — every pause, every pivot, every
-              joke I choose not to make — is made in service of your
+              stage, every decision I make, every pause, every pivot, every
+              joke I choose not to make, is made in service of your
               crowd&apos;s experience, not my performance.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
               Whether it is a chaotic Sangeet with 800 dancing relatives on
               Ajmer Road, or a strictly formatted corporate award night at JECC
-              Sitapura with a CEO in the front row — I switch gears instantly,
+              Sitapura with a CEO in the front row, I switch gears instantly,
               without the audience ever seeing the gear shift. That is the
               craft.
             </p>
@@ -533,7 +533,7 @@ export default function AboutPageClient() {
       </section>
 
       {/* ══════════════════════════════════════
-          PULL QUOTE 2 — full-bleed dark panel
+          PULL QUOTE 2, full-bleed dark panel
       ══════════════════════════════════════ */}
       <Reveal>
         <div className="/60 border-y border-white/5 py-16 md:py-20 px-5 md:px-10">
@@ -554,7 +554,7 @@ export default function AboutPageClient() {
       </Reveal>
 
       {/* ══════════════════════════════════════
-          6. CHAPTER 03 — THE CRAFT
+          6. CHAPTER 03, THE CRAFT
       ══════════════════════════════════════ */}
       <section className="px-5 md:px-10 py-16 md:py-24 max-w-6xl mx-auto">
         <div className="max-w-2xl">
@@ -583,18 +583,18 @@ export default function AboutPageClient() {
               &ldquo;Pass the Parcel.&rdquo; I run a Couple Trivia Roast that
               has the elders laughing and the younger crowd screaming. For a
               corporate awards night, I do not do ice-breakers that make
-              people uncomfortable — I do rapid-fire industry formats that
+              people uncomfortable, I do rapid-fire industry formats that
               make people competitive and engaged.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
-              Every format — Sangeet, Haldi, Varmala, Bidaai, corporate gala,
-              birthday milestone — is a different discipline. What works on a
+              Every format, Sangeet, Haldi, Varmala, Bidaai, corporate gala,
+              birthday milestone, is a different discipline. What works on a
               1,500-person Ajmer Road lawn at midnight will destroy the energy
               of an intimate 80-person anniversary dinner in C-Scheme. Reading
               that difference instantly, without a briefing, is the skill.
             </p>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
-              The rule I live by: no one is forced to participate — but
+              The rule I live by: no one is forced to participate, but
               everyone will want to.
             </p>
           </Reveal>
@@ -609,7 +609,7 @@ export default function AboutPageClient() {
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-5">
               Over 700+ events, I have built a library of 50+ crowd
               interactions specifically designed for these gaps. When the
-              unexpected happens — and it always does at least once — the
+              unexpected happens, and it always does at least once, the
               audience does not see a problem. They see a planned moment.
             </p>
             <p className="text-zinc-500 text-sm leading-relaxed font-light italic">
@@ -623,7 +623,7 @@ export default function AboutPageClient() {
       <SectionDivider />
 
       {/* ══════════════════════════════════════
-          7. PHILOSOPHY PILLARS (Effect 1 — GoldBorderCard on hero pillar)
+          7. PHILOSOPHY PILLARS (Effect 1, GoldBorderCard on hero pillar)
           Source: homepage SEO Philosophy Pillar section
       ══════════════════════════════════════ */}
       <section
@@ -653,7 +653,7 @@ export default function AboutPageClient() {
           </p>
         </Reveal>
 
-        {/* First pillar wrapped in GoldBorderCard (Effect 1) — standout moment */}
+        {/* First pillar wrapped in GoldBorderCard (Effect 1), standout moment */}
         <div className="grid md:grid-cols-3 gap-5 md:gap-6">
           {PHILOSOPHY.map((p, i) => (
             <Reveal key={i} delay={i * 0.1}>
@@ -686,7 +686,7 @@ export default function AboutPageClient() {
       <SectionDivider />
 
       {/* ══════════════════════════════════════
-          8. WHY YASH — credentials (Effect 3 GlowCard on each)
+          8. WHY YASH, credentials (Effect 3 GlowCard on each)
           Source: homepage WHY_ME + VS_DATA
       ══════════════════════════════════════ */}
       <section
@@ -732,7 +732,7 @@ export default function AboutPageClient() {
       <SectionDivider />
 
       {/* ══════════════════════════════════════
-          9. VENUES — editorial list
+          9. VENUES, editorial list
       ══════════════════════════════════════ */}
       <section className="px-5 md:px-10 py-16 md:py-24 max-w-6xl mx-auto">
         <Reveal>
@@ -832,7 +832,7 @@ export default function AboutPageClient() {
       </Reveal>
 
       {/* ══════════════════════════════════════
-          12. CLOSING MANIFESTO — CTA
+          12. CLOSING MANIFESTO, CTA
       ══════════════════════════════════════ */}
       <section className="relative py-24 md:py-36 px-5 md:px-10 overflow-hidden">
         {/* Subtle BG image */}
@@ -866,7 +866,7 @@ export default function AboutPageClient() {
             <p className="text-zinc-400 text-sm md:text-base max-w-xl mx-auto mb-11 leading-relaxed font-light">
               When you hand me the mic, you aren&apos;t just hiring a vendor.
               You are handing over the responsibility of your guests&apos;
-              experience — the night they will talk about for years. I take
+              experience, the night they will talk about for years. I take
               that seriously. You enjoy the moment. I handle everything else.
             </p>
 
@@ -904,7 +904,7 @@ export default function AboutPageClient() {
       </section>
 
       {/* ══════════════════════════════════════
-          FOOTER NAV — minimal internal links
+          FOOTER NAV, minimal internal links
       ══════════════════════════════════════ */}
       <div className="border-t border-white/5 px-5 md:px-10 py-8">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">

@@ -1,10 +1,10 @@
-// app/corporate-event-anchor-jaipur/layout.jsx
+﻿// app/corporate-event-anchor-jaipur/layout.jsx
 import { buildServiceSchema } from "../../lib/schema/serviceSchema";
 
-// SERVER COMPONENT — metadata only
+// SERVER COMPONENT, metadata only
 const serviceSchema = buildServiceSchema({
   pageUrl: "https://yashsoni.in/corporate-event-anchor-jaipur",
-  name: "Corporate Event Anchor Jaipur — Anchor Yash Soni",
+  name: "Corporate Event Anchor Jaipur, Anchor Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   serviceType: "Corporate Event Hosting",
   providerJobTitle: "Corporate Event Anchor & Emcee",
@@ -37,9 +37,9 @@ const breadcrumb = {
 };
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni — Award Nights & Summits",
+  title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni, Award Nights & Summits",
   description:
-    "Top corporate event anchor in Jaipur — Anchor Yash Soni. 4.9★ rated. Award nights, conferences, product launches & gala dinners at JECC Sitapura, JLN Marg & Birla Auditorium. Book now.",
+    "Top corporate event anchor in Jaipur, Anchor Yash Soni. 4.9★ rated. Award nights, conferences, product launches & gala dinners at JECC Sitapura, JLN Marg & Birla Auditorium. Book now.",
   keywords: [
     "corporate event anchor jaipur",
     "best corporate anchor jaipur",
@@ -81,7 +81,7 @@ export const metadata = {
     locale: "en_IN",
     url: "https://yashsoni.in/corporate-event-anchor-jaipur",
     siteName: "Anchor Yash Soni",
-    title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni — 4.9★",
+    title: "Best Corporate Event Anchor in Jaipur | Anchor Yash Soni, 4.9★",
     description:
       "Award nights, conferences & galas at JECC Sitapura, JLN Marg & Birla Auditorium. 4.9★ rated corporate anchor in Jaipur.",
     images: [
@@ -89,7 +89,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Corporate Event Anchor Jaipur",
+        alt: "Anchor Yash Soni, Corporate Event Anchor Jaipur",
       },
     ],
   },

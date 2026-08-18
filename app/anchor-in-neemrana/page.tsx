@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-neemrana/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Neemrana",
     "Best Wedding Anchor Neemrana",
@@ -88,7 +88,7 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Director — Tech Startup NCR" },
+      author: { "@type": "Person", name: "Director, Tech Startup NCR" },
       reviewBody: "We brought our entire C-suite out to Neemrana for a leadership summit. Yash anchored the daytime panels with incredible English precision, and then transitioned into hosting our evening gala flawlessly. True executive hosting.",
     },
     {
@@ -156,9 +156,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-neemrana/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Neemrana | Delhi NCR Corporate Retreat & Fort Host — Yash Soni`,
+  name: `Best Anchor in Neemrana | Delhi NCR Corporate Retreat & Fort Host, Yash Soni`,
   headline: `Neemrana's Most Trusted Anchor for 15th-Century Fort Weddings & Gurgaon Corporate Escapes`,
-  description: `Anchor Yash Soni — 4.9★ rated. Premier anchor for Neemrana weekend destination weddings and NCR corporate retreats. Specialist in managing complex heritage acoustics at Neemrana Fort Palace and Tijara Fort.`,
+  description: `Anchor Yash Soni, 4.9★ rated. Premier anchor for Neemrana weekend destination weddings and NCR corporate retreats. Specialist in managing complex heritage acoustics at Neemrana Fort Palace and Tijara Fort.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Rajasthan` },
@@ -169,8 +169,8 @@ const webPageSchema = {
 // ─── METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Neemrana | Corporate Retreat & Fort Emcee — Yash Soni`,
-  description: `Looking for the best anchor in Neemrana? Anchor Yash Soni — 4.9★. Expert for Neemrana Fort Palace, Tijara Fort, and Delhi NCR weekend corporate retreats. Flawless unscripted bilingual hosting for extreme heritage venues.`,
+  title: `Best Anchor in Neemrana | Corporate Retreat & Fort Emcee, Yash Soni`,
+  description: `Looking for the best anchor in Neemrana? Anchor Yash Soni, 4.9★. Expert for Neemrana Fort Palace, Tijara Fort, and Delhi NCR weekend corporate retreats. Flawless unscripted bilingual hosting for extreme heritage venues.`,
   keywords: [
     "anchor in neemrana",
     "best anchor in neemrana",
@@ -199,13 +199,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Neemrana | Corporate Offsite & Elite Fort Host`,
     description: `4.9★ rated. Neemrana's premium anchor for 15th-century fort weddings and elite Delhi NCR corporate retreats. Flawless bilingual execution.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Neemrana — Anchor Yash Soni at Neemrana Fort Palace` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Neemrana, Anchor Yash Soni at Neemrana Fort Palace` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Neemrana | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Neemrana | Anchor Yash Soni, 4.9★`,
     description: `Neemrana Fort. Tijara Fort. NCR Corporate Retreats. Neemrana's premier event anchor for extreme heritage and executive hosting.`,
     images: [OG_IMAGE],
   },
@@ -214,7 +214,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Neemrana | Heritage Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Neemrana | Heritage Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Heritage Wedding, Corporate Retreats, ${CITY}, Rajasthan, India`,
     "DC.coverage": `${CITY}, Rajasthan, India`,
     "DC.language": "en-IN",

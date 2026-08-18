@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -98,7 +98,7 @@ const SERVICES = [
 const CAPABILITIES = [
   {
     title: "Crowd Control at Scale",
-    desc: "Managing 5,000+ people safely and energetically requires a completely different skill set than a 500-person wedding. Voice modulation, spatial awareness, and crowd psychology — mastered across 70+ large-format public events.",
+    desc: "Managing 5,000+ people safely and energetically requires a completely different skill set than a 500-person wedding. Voice modulation, spatial awareness, and crowd psychology, mastered across 70+ large-format public events.",
   },
   {
     title: "Celebrity Q&A Management",
@@ -106,11 +106,11 @@ const CAPABILITIES = [
   },
   {
     title: "Live Broadcast Precision",
-    desc: "Many celebrity and fashion events are televised or livestreamed. Tight timing, clean transitions, and zero on-air errors — the discipline that separates broadcast-ready anchors from stage hosts.",
+    desc: "Many celebrity and fashion events are televised or livestreamed. Tight timing, clean transitions, and zero on-air errors, the discipline that separates broadcast-ready anchors from stage hosts.",
   },
   {
     title: "Bilingual Fluency",
-    desc: "Hindi and English simultaneously for mixed audiences. National brand events with pan-India delegates, Bollywood events with international press — both handled seamlessly.",
+    desc: "Hindi and English simultaneously for mixed audiences. National brand events with pan-India delegates, Bollywood events with international press, both handled seamlessly.",
   },
 ];
 const EVENTS_HOSTED = [
@@ -133,7 +133,7 @@ const FAQS = [
   },
   {
     q: "Can you manage a crowd of 5,000+ at a public event?",
-    a: "Large-scale public event management is a core specialisation. Yash has commanded open events of 10,000+ people unscripted. Managing crowd energy at scale — keeping thousands energised and safe simultaneously — requires a completely different discipline from wedding or corporate hosting. Both have been mastered.",
+    a: "Large-scale public event management is a core specialisation. Yash has commanded open events of 10,000+ people unscripted. Managing crowd energy at scale, keeping thousands energised and safe simultaneously, requires a completely different discipline from wedding or corporate hosting. Both have been mastered.",
   },
   {
     q: "Do you host Bollywood celebrity interviews and red carpet events?",
@@ -141,15 +141,15 @@ const FAQS = [
   },
   {
     q: "Can you anchor a fashion show or runway event in Jaipur?",
-    a: "Fashion show hosting is a specialisation. The voice of the runway must match the aesthetic of the collection — sophisticated, confident, and never overshadowing the designs. Yash has hosted fashion events at premium Jaipur venues including The Lalit and Marriott.",
+    a: "Fashion show hosting is a specialisation. The voice of the runway must match the aesthetic of the collection, sophisticated, confident, and never overshadowing the designs. Yash has hosted fashion events at premium Jaipur venues including The Lalit and Marriott.",
   },
   {
     q: "Do you work with teleprompters for televised events?",
-    a: "Yes. For televised events, formal product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining eye contact with a live audience — so it never looks scripted on camera — is a trained skill.",
+    a: "Yes. For televised events, formal product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining eye contact with a live audience, so it never looks scripted on camera, is a trained skill.",
   },
   {
     q: "Can you host a luxury brand launch or store opening?",
-    a: "Luxury brand launches are a core format. Creating the anticipation, the queue culture, the social media moment, and the VIP experience that turns a store opening into a city event — this is the craft. From premium brand events on JLN Marg to large-format launches at Jaipur's five-star hotels.",
+    a: "Luxury brand launches are a core format. Creating the anticipation, the queue culture, the social media moment, and the VIP experience that turns a store opening into a city event, this is the craft. From premium brand events on JLN Marg to large-format launches at Jaipur's five-star hotels.",
   },
   {
     q: "Do you travel for celebrity events outside Jaipur?",
@@ -237,7 +237,7 @@ export default function CelebrityAnchorPage() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
-      {/* BREADCRUMB — sr-only */}
+      {/* BREADCRUMB, sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
         <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
@@ -252,7 +252,7 @@ export default function CelebrityAnchorPage() {
           {/* FIX: next/image replaces <img> */}
           <Image
             src="/service-fashion.webp"
-            alt="Celebrity and public events host Jaipur — Anchor Yash Soni"
+            alt="Celebrity and public events host Jaipur, Anchor Yash Soni"
             fill priority quality={90}
             className="object-cover grayscale contrast-125"
             sizes="100vw"
@@ -266,12 +266,12 @@ export default function CelebrityAnchorPage() {
                 4.9★ · Celebrity & Public Events Host · Jaipur
               </span>
             </div>
-            {/* H1 — primary keyword */}
+            {/* H1, primary keyword */}
             <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
               Hosting<br /><G>The Icons.</G>
             </h1>
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-3">
-              From managing crowds of <strong className="text-[#B5952F]">5,000+</strong> at concerts to Bollywood celebrity interviews on the red carpet — the full spectrum of public event hosting in Jaipur and across India.
+              From managing crowds of <strong className="text-[#B5952F]">5,000+</strong> at concerts to Bollywood celebrity interviews on the red carpet, the full spectrum of public event hosting in Jaipur and across India.
             </p>
             <p className="text-zinc-500 text-sm mb-8 tracking-wide">
               Concerts &nbsp;·&nbsp; Fashion Shows &nbsp;·&nbsp; Luxury Launches &nbsp;·&nbsp; Celebrity Events
@@ -292,7 +292,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          2. GOLD TICKER — fixed animation
+          2. GOLD TICKER, fixed animation
       ══════════════════════════════════════ */}
       <div className="bg-[#D4AF37] text-black py-3.5 overflow-hidden border-y border-white/10 relative z-30">
         <div className="flex whitespace-nowrap w-max ticker">
@@ -305,7 +305,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </div>
       {/* ══════════════════════════════════════
-          3. STATS — real numbers
+          3. STATS, real numbers
       ══════════════════════════════════════ */}
       <section className=" border-b border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
@@ -323,7 +323,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. INTRO — keyword-rich body text
+          4. INTRO, keyword-rich body text
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -333,17 +333,17 @@ export default function CelebrityAnchorPage() {
               Not Just A Host.<br /><G>A Personality.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              When a Bollywood star walks into a Jaipur venue, when a luxury brand opens on JLN Marg, when a music festival fills JECC Sitapura with 5,000 people — you don't need an announcer. You need someone who can hold the entire room, manage the unexpected, and make it look effortless on camera.
+              When a Bollywood star walks into a Jaipur venue, when a luxury brand opens on JLN Marg, when a music festival fills JECC Sitapura with 5,000 people, you don't need an announcer. You need someone who can hold the entire room, manage the unexpected, and make it look effortless on camera.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-6 leading-relaxed font-light">
               Anchor Yash Soni has hosted celebrity meet-and-greets, India Kids Fashion Week at The Lalit Jaipur, luxury brand launches, music events, and award galas for <strong className="text-white">70+ national brands</strong> across India. A <strong className="text-white">4.9★ rating across 50+ verified reviews</strong> is the evidence.
             </p>
             <div className="space-y-3">
               {[
-                "Crowd management from 200 to 10,000+ — same composure",
-                "Televised and livestreamed events — broadcast-ready",
-                "Bilingual Hindi/English — national and international audiences",
-                "Celebrity Q&A — researched, smooth, PR-safe every time",
+                "Crowd management from 200 to 10,000+, same composure",
+                "Televised and livestreamed events, broadcast-ready",
+                "Bilingual Hindi/English, national and international audiences",
+                "Celebrity Q&A, researched, smooth, PR-safe every time",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <CheckCircle2 size={14} className="text-[#B5952F] mt-0.5 shrink-0" />
@@ -352,7 +352,7 @@ export default function CelebrityAnchorPage() {
               ))}
             </div>
           </Reveal>
-          {/* Stacked images — original design kept */}
+          {/* Stacked images, original design kept */}
           <Reveal delay={0.15}>
             <div className="relative h-[500px] md:h-[600px] w-full">
               <div className="absolute top-0 right-0 w-3/4 h-3/4 rounded-2xl overflow-hidden border border-white/10 transform rotate-3 group">
@@ -378,7 +378,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. SERVICES — 4 cards, gold branding
+          5. SERVICES, 4 cards, gold branding
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -408,7 +408,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. THE METHOD — capabilities
+          6. THE METHOD, capabilities
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
@@ -418,7 +418,7 @@ export default function CelebrityAnchorPage() {
               Public events and celebrity formats are a completely different discipline from weddings or corporate shows. The stakes are higher, the audiences are less forgiving, and the cameras are always rolling.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
-              The craft is in managing 5,000 people safely while keeping them at concert energy — knowing when to build, when to release, and when to hold the room in silence so the next moment lands harder.
+              The craft is in managing 5,000 people safely while keeping them at concert energy, knowing when to build, when to release, and when to hold the room in silence so the next moment lands harder.
             </p>
             <div className="space-y-6">
               {CAPABILITIES.map((c, i) => (
@@ -466,7 +466,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          7. GALLERY GRID — next/image, proper alts
+          7. GALLERY GRID, next/image, proper alts
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -493,11 +493,11 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          8. FAQ — expanded 9 questions
+          8. FAQ, expanded 9 questions
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading subtitle="People Also Ask" title="Celebrity Events Host Jaipur — FAQ." align="center" />
+          <SectionHeading subtitle="People Also Ask" title="Celebrity Events Host Jaipur, FAQ." align="center" />
           <div className="flex flex-col gap-3">
             {FAQS.map((faq, idx) => (
               <Reveal key={idx} delay={idx * 0.03}>
@@ -508,7 +508,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. RELATED SERVICES — internal links
+          9. RELATED SERVICES, internal links
       ══════════════════════════════════════ */}
       <section className="py-14 md:py-20  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -534,7 +534,7 @@ export default function CelebrityAnchorPage() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          10. SCARCITY CTA — dark gold
+          10. SCARCITY CTA, dark gold
       ══════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-5 md:px-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.07),transparent_65%)] pointer-events-none" />
@@ -548,7 +548,7 @@ export default function CelebrityAnchorPage() {
               Need a <G>Headliner?</G>
             </h2>
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
-              For events that need more than a host — they need a <strong className="text-[#B5952F]">personality</strong>. Dates book quickly for peak season events. No replacements sent.
+              For events that need more than a host, they need a <strong className="text-[#B5952F]">personality</strong>. Dates book quickly for peak season events. No replacements sent.
             </p>
             <p className="text-zinc-600 text-xs mb-8">WhatsApp the moment your event is confirmed.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">

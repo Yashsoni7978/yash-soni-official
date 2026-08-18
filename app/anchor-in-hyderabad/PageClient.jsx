@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -129,7 +129,7 @@ const VS = [
   { problem: "Screaming 'wedding-style' energy into the historic dining halls of Taj Falaknuma", fix: "Regal, understated authority that respects the venue's intense heritage" },
   { problem: "Losing the crowd's attention entirely inside the vast open sets of Ramoji Film City", fix: "Mastery of extreme-scale acoustic projection and physical stage dominance" },
   { problem: "Using only Hindi in a city where metropolitan Telugu elites expect English fluency", fix: "Flawless bilingual code-switching (English/Hindi) tuned to the specific guest list" },
-  { problem: "Reading from paper scripts during high-stakes tech and medical summits in HITEC city", fix: "100% unscripted flow—maintaining absolute eye contact and timeline mastery" },
+  { problem: "Reading from paper scripts during high-stakes tech and medical summits in HITEC city", fix: "100% unscripted flow-maintaining absolute eye contact and timeline mastery" },
   { problem: "Failing to fuse the cultures during a massive North-South wedding", fix: "Cultural intelligence that honors Marwari rituals while engaging local VIPs" },
   { problem: "Using repetitive filler words that lower the perceived value of the event", fix: "High-net-worth vocabulary and executive-level articulation for premium crowds" },
 ];
@@ -141,12 +141,12 @@ const TESTIMONIALS = [
     event: "Heritage Wedding · Taj Falaknuma · 250 guests"
   },
   {
-    name: "Director — Media Conglomerate",
+    name: "Director, Media Conglomerate",
     quote: "Ramoji Film City is so incredibly large that you need an anchor with pure stage dominance to stop a 2,000-person crowd from fracturing into small groups. Yash held the event together from start to finish. His vocal projection and ability to read the massive room was incredible.",
     event: "Mega-Wedding Integration · Ramoji Film City · 2,200 guests"
   },
   {
-    name: "VP Operations — Pharma Major",
+    name: "VP Operations, Pharma Major",
     quote: "Our annual summit at Novotel HITEC city had 800 international delegates. Yash walked on stage with no script, moderated panel discussions cleanly, and kept the timeline razor-sharp. He transitioned from a highly formal daytime host to an engaging evening gala anchor seamlessly.",
     event: "Corporate Summit · HITEC City · 800 delegates"
   },
@@ -164,7 +164,7 @@ const FAQS = [
   },
   {
     q: "Are you familiar with the protocol required for properties like Taj Falaknuma Palace?",
-    a: "Absolutely. Taj properties—especially Falaknuma—mandate an 'understated authority.' You cannot use loud, club-style entertainment here. The host must act as the dignified voice of the family, projecting immense respect for the 19th-century architecture while keeping the event seamlessly on schedule."
+    a: "Absolutely. Taj properties-especially Falaknuma-mandate an 'understated authority.' You cannot use loud, club-style entertainment here. The host must act as the dignified voice of the family, projecting immense respect for the 19th-century architecture while keeping the event seamlessly on schedule."
   },
   {
     q: "Can you manage events at Ramoji Film City where the guest count exceeds 2,000?",
@@ -238,7 +238,7 @@ export default function HyderabadPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/backgrounds/hyderabad_bg.webp" alt="Best Anchor in Hyderabad — Premium Heritage & Urban Events" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/backgrounds/hyderabad_bg.webp" alt="Best Anchor in Hyderabad, Premium Heritage & Urban Events" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -468,7 +468,7 @@ export default function HyderabadPage() {
               On the corporate front, anchoring a medical or tech summit at HITEC City requires complete elimination of "wedding host" tropes. You must utilize elite vocabulary, handle complex multi-speaker transitions without reading from paper, and project raw confidence that commands CEOs.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Hyderabad fluency—from the intricate protocols of Taj Falaknuma to the sprawling sets of Ramoji—marks an anchor who operates at the absolute peak of the industry.
+              Hyderabad fluency-from the intricate protocols of Taj Falaknuma to the sprawling sets of Ramoji-marks an anchor who operates at the absolute peak of the industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -531,7 +531,7 @@ export default function HyderabadPage() {
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "High-Net-Worth" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Premium Hyderabad clients do not accept generic hosting. The execution here must reflect deep cultural intelligence, flawless articulation, and rapid adaptability—delivering an unscripted moderation that ensures the family or brand is represented at the highest possible tier.
+                Premium Hyderabad clients do not accept generic hosting. The execution here must reflect deep cultural intelligence, flawless articulation, and rapid adaptability-delivering an unscripted moderation that ensures the family or brand is represented at the highest possible tier.
               </p>
             </div>
           </Reveal>
@@ -561,7 +561,7 @@ export default function HyderabadPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -650,7 +650,7 @@ export default function HyderabadPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Hyderabad experiences intense overlapping of the corporate summit season and peak luxury wedding dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

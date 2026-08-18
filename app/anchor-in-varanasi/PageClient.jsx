@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -102,7 +102,7 @@ const VARANASI_IDENTITY = [
   {
     icon: Flame,
     title: "Global Spiritual Convergence",
-    desc: "Varanasi (Kashi) is not a standard banquet wedding destination. It is an intensely profound, highly spiritual epicentre. The guest lists here consist of deeply traditional Indian elders alongside modern international NRIs flying in specifically for the heritage. The anchor must bridge these two worlds precisely—commanding sharp English to validate the global guests while natively articulating the heavy cultural nuance required on the ghats."
+    desc: "Varanasi (Kashi) is not a standard banquet wedding destination. It is an intensely profound, highly spiritual epicentre. The guest lists here consist of deeply traditional Indian elders alongside modern international NRIs flying in specifically for the heritage. The anchor must bridge these two worlds precisely-commanding sharp English to validate the global guests while natively articulating the heavy cultural nuance required on the ghats."
   },
   {
     icon: Building2,
@@ -112,7 +112,7 @@ const VARANASI_IDENTITY = [
   {
     icon: Crown,
     title: "The VIP Palace Protocol",
-    desc: "Properties like Taj Nadesar Palace host an incredibly exclusive, elite corporate demographic. An anchor cannot use cheap 'MC humor' here. Yash brings a hyper-polished, unscripted executive flow—treating the VIP audience with complete intellectual respect, and transitioning them smoothly from formal networking to high-voltage midnight Sangeets."
+    desc: "Properties like Taj Nadesar Palace host an incredibly exclusive, elite corporate demographic. An anchor cannot use cheap 'MC humor' here. Yash brings a hyper-polished, unscripted executive flow-treating the VIP audience with complete intellectual respect, and transitioning them smoothly from formal networking to high-voltage midnight Sangeets."
   },
 ];
 
@@ -165,12 +165,12 @@ const VS = [
 
 const TESTIMONIALS = [
   {
-    name: "NRI Family — London/Mumbai",
+    name: "NRI Family, London/Mumbai",
     quote: "Hosting a wedding on the ghats of Varanasi at BrijRama Palace is incredibly complex logistically. We needed someone who could translate the immense depth of the rituals for our UK guests without turning it into a boring lecture. Yash's bilingual anchoring was absolute perfection. He commanded the space elegantly and handled the cross-cultural elements flawlessly.",
     event: "Destination Sunset Pheras · BrijRama Palace"
   },
   {
-    name: "Corporate VIP Group — Delhi NCR",
+    name: "Corporate VIP Group, Delhi NCR",
     quote: "We held an executive strategy retreat and spiritual trip in Varanasi for our top C-suite. Yash anchored our evening panels at Taj Nadesar Palace. He doesn't rely on paper notes at all. His ability to moderate high-level corporate discussions while respecting the city's aura is unmatched. Extreme polish.",
     event: "Leadership Offsite · Taj Nadesar Palace"
   },
@@ -193,7 +193,7 @@ const FAQS = [
   },
   {
     q: "How do you handle the strict acoustic and logistical constraints of heritage venues like BrijRama Palace?",
-    a: "Hosting at ancient stone structures requires architectural awareness. You cannot just crank the DJ volume—the echo becomes chaotic, and the heritage rules are incredibly strict. I rely on 'Acoustic Centralizing'—using advanced vocal projection and intense physical crowd-pacing to compress the energy tightly around the stage. I generate the momentum organically rather than relying purely on noise."
+    a: "Hosting at ancient stone structures requires architectural awareness. You cannot just crank the DJ volume-the echo becomes chaotic, and the heritage rules are incredibly strict. I rely on 'Acoustic Centralizing'-using advanced vocal projection and intense physical crowd-pacing to compress the energy tightly around the stage. I generate the momentum organically rather than relying purely on noise."
   },
   {
     q: "Our Sangeet at Taj Nadesar is purely VIP executives. We do not want standard, generic MC games. Can you match the tone?",
@@ -205,7 +205,7 @@ const FAQS = [
   },
   {
     q: "The logistics of getting all our guests down through the narrow lanes to the ghats will be chaotic. Can you handle timeline delays?",
-    a: "Varanasi logistics are beautifully chaotic. You will almost certainly face timeline shifts. Because I am entirely unscripted, I can instantly rewrite the evening. If we lose an hour, I stitch performances together, accelerate the pacing, and bring the hype forward rapidly—and the audience never even senses that the timeline was compressed."
+    a: "Varanasi logistics are beautifully chaotic. You will almost certainly face timeline shifts. Because I am entirely unscripted, I can instantly rewrite the evening. If we lose an hour, I stitch performances together, accelerate the pacing, and bring the hype forward rapidly-and the audience never even senses that the timeline was compressed."
   },
   {
     q: "Since you travel nationally, how are your logistics handled for Varanasi?",
@@ -266,7 +266,7 @@ export default function VaranasiPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/varanasi_bg.webp" alt="Best Anchor in Varanasi — VIP Spiritual Destination Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/varanasi_bg.webp" alt="Best Anchor in Varanasi, VIP Spiritual Destination Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function VaranasiPage() {
                 Varanasi operates at the highest frequency of Indian cultural prestige. You are managing fiercely exclusive events at properties like Taj Nadesar Palace and BrijRama where <strong className="text-[#B5952F]">the intersection of international NRIs, Delhi executives, and profound traditional energy</strong> creates an incredibly heavy stage. Yash steps into these intensely beautiful, complex environments and manufactures cohesive, elegant energy entirely organically, without falling back on generic MC tropes.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                For high-net-worth cross-cultural weddings on the ghats, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall for the international guests, heavily integrated with the deep Hindi reverence that the rituals demand.
+                For high-net-worth cross-cultural weddings on the ghats, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall for the international guests, heavily integrated with the deep Hindi reverence that the rituals demand.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -375,7 +375,7 @@ export default function VaranasiPage() {
               The Heritage Protocol Demands<br />an <G>Elite Frequency.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Varanasi is fundamentally disconnected from standard mega-banquet mentalities. It is an incredibly potent, historically dense environment. The logistics are strict—moving 200 VIPs down to the ghats for a Varmala requires immense authority. The guest list is pure prestige—blending massive corporate influence with deep religious reverence. A successful anchor here must possess razor-sharp cultural intelligence to navigate complex cross-border family dynamics, the linguistic polish to entertain a high-net-worth room, and the unscripted presence to honor Kashi perfectly.
+              Varanasi is fundamentally disconnected from standard mega-banquet mentalities. It is an incredibly potent, historically dense environment. The logistics are strict-moving 200 VIPs down to the ghats for a Varmala requires immense authority. The guest list is pure prestige-blending massive corporate influence with deep religious reverence. A successful anchor here must possess razor-sharp cultural intelligence to navigate complex cross-border family dynamics, the linguistic polish to entertain a high-net-worth room, and the unscripted presence to honor Kashi perfectly.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -492,10 +492,10 @@ export default function VaranasiPage() {
               Hosting a luxury event in Varanasi requires an elite understanding of 'Acoustic Compliance and Deep Reverence'. Properties along the ghats involve immensely intricate logistics. An amateur anchor fails completely when forced to manage 200 global VIPs off-mic against the ancient backdrop. Yash steps in immediately as the primary stabilizing force, actively collapsing the psychological distance between the VIPs and the deep traditions, using pure executive articulation to elevate the entire multi-day itinerary.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Varanasi destinations are almost always a combination of modern NRI/Metropolitan executives and local family elders. The host must bridge this gap instantly. Yash does this through total unscripted fluidity—validating the corporate guests with pristine English, then flipping elegantly into deep Hindi warmth to anchor the core rituals by the Ganges.
+              Furthermore, Varanasi destinations are almost always a combination of modern NRI/Metropolitan executives and local family elders. The host must bridge this gap instantly. Yash does this through total unscripted fluidity-validating the corporate guests with pristine English, then flipping elegantly into deep Hindi warmth to anchor the core rituals by the Ganges.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Varanasi VIP fluency—defeating strict heritage logistics and uniting the high-net-worth global demographic—is the mark of an anchor who operates at the true apex of the destination industry.
+              Varanasi VIP fluency-defeating strict heritage logistics and uniting the high-net-worth global demographic-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,14 +551,14 @@ export default function VaranasiPage() {
               Heritage Grandeur.<br /><G>VIP Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Varanasi’s luxury ecosystem is an intense logistical challenge. Properties along the ghats and massive royal hotels scatter luxury guests across complex architectures. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host and the traditions remain the undeniable center of gravity without ever using cheap tricks.
+              Scaling an event in Varanasi’s luxury ecosystem is an intense logistical challenge. Properties along the ghats and massive royal hotels scatter luxury guests across complex architectures. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host and the traditions remain the undeniable center of gravity without ever using cheap tricks.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Spiritual Prestige" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth NRI families do not accept generic templates. The execution here must reflect profound cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling historic constraints.
+                High-net-worth NRI families do not accept generic templates. The execution here must reflect profound cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling historic constraints.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function VaranasiPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function VaranasiPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Varanasi experiences intense demand overlapping NRI destination seasons and peak local luxury wedding dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

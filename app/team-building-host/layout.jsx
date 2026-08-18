@@ -1,10 +1,10 @@
-// app/team-building-host/layout.jsx
-// SERVER COMPONENT — metadata only
+﻿// app/team-building-host/layout.jsx
+// SERVER COMPONENT, metadata only
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://yashsoni.in/team-building-host",
-  name: "Corporate Team Building Host Jaipur — Anchor Yash Soni",
+  name: "Corporate Team Building Host Jaipur, Anchor Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   provider: {
     "@type": "Person",
@@ -38,9 +38,9 @@ const breadcrumb = {
 };
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Corporate Team Building Host in Jaipur | Anchor Yash Soni — Employee Engagement",
+  title: "Corporate Team Building Host in Jaipur | Anchor Yash Soni, Employee Engagement",
   description:
-    "4.9★ rated corporate team building host in Jaipur — Anchor Yash Soni. Employee engagement, drum circles, scavenger hunts, and corporate offsites for 50–1,000+ employees. Book now.",
+    "4.9★ rated corporate team building host in Jaipur, Anchor Yash Soni. Employee engagement, drum circles, scavenger hunts, and corporate offsites for 50–1,000+ employees. Book now.",
   keywords: [
     "team building host jaipur",
     "corporate team building jaipur",
@@ -82,7 +82,7 @@ export const metadata = {
     locale: "en_IN",
     url: "https://yashsoni.in/team-building-host",
     siteName: "Anchor Yash Soni",
-    title: "Corporate Team Building Host Jaipur | Anchor Yash Soni — 4.9★",
+    title: "Corporate Team Building Host Jaipur | Anchor Yash Soni, 4.9★",
     description:
       "4.9★ rated. Employee engagement, drum circles & scavenger hunts for 50–1,000+ employees. Jaipur's trusted team building host.",
     images: [
@@ -90,7 +90,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Corporate Team Building Host Jaipur",
+        alt: "Anchor Yash Soni, Corporate Team Building Host Jaipur",
       },
     ],
   },

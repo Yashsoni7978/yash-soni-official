@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Star } from "lucide-react";
 
 export const ReviewsMarquee = ({ reviews }) => {
@@ -9,7 +9,7 @@ export const ReviewsMarquee = ({ reviews }) => {
           Real Words. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">Real Impact.</span>
         </h2>
         <p className="text-zinc-500 text-xs md:text-sm mt-2">
-          4.9★ across 50+ client reviews — weddings, Sangeets, and corporate events
+          4.9★ across 50+ client reviews, weddings, Sangeets, and corporate events
         </p>
       </div>
       <div className="flex overflow-hidden mask-fade mb-5">
@@ -22,7 +22,7 @@ export const ReviewsMarquee = ({ reviews }) => {
               </div>
               <p className="text-zinc-300 text-sm leading-relaxed mb-4 flex-1">&ldquo;{r.text}&rdquo;</p>
               <div>
-                <span className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">— {r.name}</span>
+                <span className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">- {r.name}</span>
                 <span className="text-zinc-600 text-[11px] ml-2">{r.event}</span>
               </div>
             </a>
@@ -39,7 +39,7 @@ export const ReviewsMarquee = ({ reviews }) => {
               </div>
               <p className="text-zinc-300 text-sm leading-relaxed mb-4 flex-1">&ldquo;{r.text}&rdquo;</p>
               <div>
-                <span className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">— {r.name}</span>
+                <span className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">- {r.name}</span>
                 <span className="text-zinc-600 text-[11px] ml-2">{r.event}</span>
               </div>
             </a>

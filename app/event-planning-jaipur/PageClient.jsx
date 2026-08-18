@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 
 import Link from "next/link";
@@ -119,7 +119,7 @@ export default function EventPlanningJaipur() {
         >
           <span className="font-['Orange_Avenue'] text-4xl text-[#94A3B8] mb-6 block">The Logistics Experts</span>
           <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-white leading-tight mb-10">Ideas are easy. Execution is an art form.</h2>
-          <p className="font-sans text-lg md:text-xl text-gray-400 font-light leading-relaxed">Whether you are throwing an intimate anniversary dinner for 50 people or a massive corporate summit for 500, the foundation of a successful event is logistics. We handle the invisible backend—timeline management, vendor coordination, and crisis aversion—so you can actually enjoy the event you paid for.</p>
+          <p className="font-sans text-lg md:text-xl text-gray-400 font-light leading-relaxed">Whether you are throwing an intimate anniversary dinner for 50 people or a massive corporate summit for 500, the foundation of a successful event is logistics. We handle the invisible backend-timeline management, vendor coordination, and crisis aversion-so you can actually enjoy the event you paid for.</p>
         </motion.div>
       </section>
 
@@ -307,7 +307,7 @@ export default function EventPlanningJaipur() {
               Yash brings a level of obsessive detail to event planning that stems from his years on stage. He knows that an event is only as strong as its weakest vendor.
             </p>
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
-              By controlling the entire process—from design and tech to F&B and artist booking—he ensures a seamless experience where the client does nothing but enjoy.
+              By controlling the entire process-from design and tech to F&B and artist booking-he ensures a seamless experience where the client does nothing but enjoy.
             </p>
             <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" quality={75} sizes="(max-width: 768px) 100vw, 50vw" />
           </motion.div>

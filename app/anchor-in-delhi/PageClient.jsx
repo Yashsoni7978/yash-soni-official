@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -78,7 +78,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 // ─────────────────────────────────────────────
-// DATA — All Delhi-specific
+// DATA, All Delhi-specific
 // ─────────────────────────────────────────────
 const STATS = [
   { val: "700", suffix: "+", label: "Shows Hosted", sub: "Across India", icon: Mic2 },
@@ -96,7 +96,7 @@ const DELHI_IDENTITY = [
   {
     icon: Users,
     title: "Chhatarpur Farm Scale",
-    desc: "A Delhi NCR farmhouse wedding operates on an entirely different scale — sprawling grounds, massive guest counts, and non-stop energy. The anchor must bridge the gap between keeping a 1000-person Punjabi Sangeet highly electric while ensuring the formal Varmala execution remains deeply regal."
+    desc: "A Delhi NCR farmhouse wedding operates on an entirely different scale, sprawling grounds, massive guest counts, and non-stop energy. The anchor must bridge the gap between keeping a 1000-person Punjabi Sangeet highly electric while ensuring the formal Varmala execution remains deeply regal."
   },
   {
     icon: Zap,
@@ -160,13 +160,13 @@ const TESTIMONIALS = [
     event: "Sangeet · Chhatarpur Farms · 1,200 guests"
   },
   {
-    name: "Head of Events — National IT Association",
+    name: "Head of Events, National IT Association",
     quote: "We hosted an international tech summit at the Taj Palace with cabinet ministers in attendance. Yash handled the stage with such gravitas and precision that many delegates assumed he was a senior member of our own board. Highly articulate.",
     event: "Tech Summit · Taj Palace · 600 delegates"
   },
   {
     name: "Chadha Family",
-    quote: "From the Varmala at The Leela to the late-night after-party, Yash's transitions were flawless. He understands the Delhi crowd deeply — he knows when to be fully respectful to the elders and when to turn up the heat for the youngsters.",
+    quote: "From the Varmala at The Leela to the late-night after-party, Yash's transitions were flawless. He understands the Delhi crowd deeply, he knows when to be fully respectful to the elders and when to turn up the heat for the youngsters.",
     event: "Wedding · The Leela Palace · 500 guests"
   },
 ];
@@ -191,7 +191,7 @@ const FAQS = [
   },
   {
     q: "Are you comfortable hosting outdoor events at Chhatarpur Farms?",
-    a: "Yes. Open-air farmhouses present unique acoustic and crowd-control challenges. Yash uses advanced spatial crowd-work techniques — rather than just shouting into a mic, he physically works the zones of a massive lawn to unify a decentralized crowd into a single moment."
+    a: "Yes. Open-air farmhouses present unique acoustic and crowd-control challenges. Yash uses advanced spatial crowd-work techniques, rather than just shouting into a mic, he physically works the zones of a massive lawn to unify a decentralized crowd into a single moment."
   },
   {
     q: "Do you travel to Gurugram and Noida for events?",
@@ -250,7 +250,7 @@ export default function DelhiPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/delhi_bg.webp" alt="Best Anchor in Delhi — National Capital Heritage at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/delhi_bg.webp" alt="Best Anchor in Delhi, National Capital Heritage at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -264,7 +264,7 @@ export default function DelhiPage() {
               </span>
             </div>
 
-            {/* H1 — ANCHOR + Texture City Name */}
+            {/* H1, ANCHOR + Texture City Name */}
             <h1 className="font-black uppercase tracking-tighter leading-[0.82] mb-8">
               <span className="block text-white text-[17vw] md:text-[12vw] lg:text-[9rem] opacity-90 drop-shadow-2xl">ANCHOR</span>
               <span className="block text-[15vw] md:text-[10vw] lg:text-[8rem] bg-clip-text text-transparent bg-cover bg-center mt-2 pb-4" style={{ backgroundImage: "url('/texture/delhi.webp')" }}>
@@ -482,7 +482,7 @@ export default function DelhiPage() {
                Managing a crowd's energy while security details sweep the room or VVIPs make unscheduled appearances is the hallmark of a true professional. It requires discretion, a razor-sharp bilingual vocabulary, and zero panic.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-               5+ years of top-tier events across India means the brand sensitivities, the diplomatic protocols, and the live crisis management are already hardwired — no second-guessing required.
+               5+ years of top-tier events across India means the brand sensitivities, the diplomatic protocols, and the live crisis management are already hardwired, no second-guessing required.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -527,7 +527,7 @@ export default function DelhiPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Delhi NCR · Farmhouse Scale</p>
-                <p className="text-white text-xs">The epicenter of India's biggest celebrations — commanded with absolute authority.</p>
+                <p className="text-white text-xs">The epicenter of India's biggest celebrations, commanded with absolute authority.</p>
               </div>
             </div>
           </Reveal>
@@ -544,7 +544,7 @@ export default function DelhiPage() {
                  <ShieldCheck size={16} className="text-[#B5952F]" /> Open-Air Acoustics mastery
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                 Flawless handling of outdoor acoustic drops, wind factors, and massive spatial distribution — ensuring every guest, from the front row to the very back, is entirely locked in.
+                 Flawless handling of outdoor acoustic drops, wind factors, and massive spatial distribution, ensuring every guest, from the front row to the very back, is entirely locked in.
               </p>
             </div>
           </Reveal>
@@ -570,7 +570,7 @@ export default function DelhiPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -660,7 +660,7 @@ export default function DelhiPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
                Winter dates for massive NCR events and prime auspicious wedding weekends fill 6–8 months in advance. 
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                  <CalendarCheck size={18} /> CLAIM YOUR DATE

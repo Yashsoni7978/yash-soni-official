@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-pushkar/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Pushkar",
     "Best Wedding Anchor Pushkar",
@@ -156,9 +156,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-pushkar/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Pushkar | Elite NRI Destination Wedding Host — Yash Soni`,
+  name: `Best Anchor in Pushkar | Elite NRI Destination Wedding Host, Yash Soni`,
   headline: `Pushkar's Most Trusted Event Anchor for Westin, Ananta & Luxury Desert Inter-Cultural Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Pushkar luxury destination weddings. Specialist in handling global VIPs, massive open-air acoustics, and driving organic energy under strict traditional protocols.`,
+  description: `Anchor Yash Soni, 4.9★ rated, 700+ shows. Premier anchor for Pushkar luxury destination weddings. Specialist in handling global VIPs, massive open-air acoustics, and driving organic energy under strict traditional protocols.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Rajasthan` },
@@ -169,8 +169,8 @@ const webPageSchema = {
 // ─── METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Pushkar | Luxury Destination Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Pushkar? Anchor Yash Soni — 4.9★. Expert for Westin Pushkar, Ananta Spa, and luxury desert NRI weddings. Flawless unscripted bilingual hosting that bridges deep traditions with global premium standards.`,
+  title: `Best Anchor in Pushkar | Luxury Destination Wedding Host, Yash Soni`,
+  description: `Looking for the best anchor in Pushkar? Anchor Yash Soni, 4.9★. Expert for Westin Pushkar, Ananta Spa, and luxury desert NRI weddings. Flawless unscripted bilingual hosting that bridges deep traditions with global premium standards.`,
   keywords: [
     "anchor in pushkar",
     "best anchor in pushkar",
@@ -199,13 +199,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Pushkar | Elite Desert & NRI Wedding Host`,
     description: `4.9★ rated. 700+ shows. Pushkar's premium anchor for Westin and Ananta resort luxury weddings. Flawless bilingual English/Hindi execution.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Pushkar — Anchor Yash Soni at Desert Luxury Properties` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Pushkar, Anchor Yash Soni at Desert Luxury Properties` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Pushkar | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Pushkar | Anchor Yash Soni, 4.9★`,
     description: `Westin. Ananta. Pushkar's premier bilingual event anchor for NRI and luxury destination weddings. Zero scripts.`,
     images: [OG_IMAGE],
   },
@@ -214,7 +214,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Pushkar | Luxury Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Pushkar | Luxury Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Luxury Wedding, NRI Events, ${CITY}, Rajasthan, India`,
     "DC.coverage": `${CITY}, Rajasthan, India`,
     "DC.language": "en-IN",

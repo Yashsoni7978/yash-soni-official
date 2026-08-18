@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-alibaug/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Alibaug",
     "Best Wedding Anchor Alibaug",
@@ -87,8 +87,8 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Corporate Director — Mumbai" },
-      reviewBody: "Alibaug weddings are incredibly intimate and highly scrutinized because the guest list is pure VIP. Yash anchored our Sangeet at The Mansion House flawlessly. Phenomenal English dialect mixed with perfect timing—he didn't just host the event, he controlled the entire weekend.",
+      author: { "@type": "Person", name: "Corporate Director, Mumbai" },
+      reviewBody: "Alibaug weddings are incredibly intimate and highly scrutinized because the guest list is pure VIP. Yash anchored our Sangeet at The Mansion House flawlessly. Phenomenal English dialect mixed with perfect timing-he didn't just host the event, he controlled the entire weekend.",
     },
     {
       "@type": "Review",
@@ -155,9 +155,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-alibaug/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Alibaug | Luxury Villa & Coastal Wedding Host — Yash Soni`,
+  name: `Best Anchor in Alibaug | Luxury Villa & Coastal Wedding Host, Yash Soni`,
   headline: `Alibaug's Premier Event Anchor for Ultra-Luxury Mumbai VIP Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Alibaug destination weddings. Mastering highly intimate luxury villa acoustics, high-net-worth bilingual hosting, and unscripted VIP event flow.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Alibaug destination weddings. Mastering highly intimate luxury villa acoustics, high-net-worth bilingual hosting, and unscripted VIP event flow.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, India` },
@@ -169,7 +169,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Alibaug | Elite Weekend Destination Wedding Emcee`,
-  description: `Looking for the best anchor in Alibaug? Anchor Yash Soni — 4.9★. Expert for The Mansion House, Radisson Blu, and ultra-luxury private villa weddings. Flawless unscripted bilingual hosting bridging deep cultural roots with high-voltage elite energy.`,
+  description: `Looking for the best anchor in Alibaug? Anchor Yash Soni, 4.9★. Expert for The Mansion House, Radisson Blu, and ultra-luxury private villa weddings. Flawless unscripted bilingual hosting bridging deep cultural roots with high-voltage elite energy.`,
   keywords: [
     "anchor in alibaug",
     "best anchor in alibaug",
@@ -197,13 +197,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Alibaug | Elite VIP Destination Wedding Host`,
     description: `4.9★ rated. Alibaug's premium anchor for highly intimate, ultra-luxury destination weddings and exclusive corporate retreats for Mumbai's elite.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Alibaug — Anchor Yash Soni at Luxury Coastal Villas` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Alibaug, Anchor Yash Soni at Luxury Coastal Villas` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Alibaug | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Alibaug | Anchor Yash Soni, 4.9★`,
     description: `The Mansion House. Radisson Blu. Alibaug's premier bilingual event anchor for exclusive VIP Sangeets and luxury ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Alibaug | Luxury VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Alibaug | Luxury VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Coastal Wedding, VIP Events, ${CITY}, Maharashtra, India`,
     "DC.coverage": `${CITY}, Maharashtra, India`,
     "DC.language": "en-IN",

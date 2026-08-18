@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -78,7 +78,7 @@ const FAQItem = ({ q, a, id }) => {
 };
 
 // ─────────────────────────────────────────────
-// DATA — All Kumbhalgarh-specific
+// DATA, All Kumbhalgarh-specific
 // ─────────────────────────────────────────────
 const STATS = [
   { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
@@ -91,17 +91,17 @@ const KUMBHALGARH_IDENTITY = [
   {
     icon: Shield,
     title: "The Great Wall Scale",
-    desc: "The second-longest wall in the world stretching 36 kilometres forms part of the visual backdrop for weddings in Kumbhalgarh. Events in venues like The Kumbha Bagh or The Aodhi carry the entire historical weight of the Mewar kingdom behind them. The anchor must reflect that grandeur — not dilute it."
+    desc: "The second-longest wall in the world stretching 36 kilometres forms part of the visual backdrop for weddings in Kumbhalgarh. Events in venues like The Kumbha Bagh or The Aodhi carry the entire historical weight of the Mewar kingdom behind them. The anchor must reflect that grandeur, not dilute it."
   },
   {
     icon: Globe,
     title: "The Isolation Advantage",
-    desc: "Kumbhalgarh's geographic remoteness is precisely why premium destination families choose it. Guests have made the deliberate effort to travel here — which means expectations are extraordinarily high. When a family spends on logistics for 300 guests into the Aravalli hills, the stage performance needs to justify every rupee."
+    desc: "Kumbhalgarh's geographic remoteness is precisely why premium destination families choose it. Guests have made the deliberate effort to travel here, which means expectations are extraordinarily high. When a family spends on logistics for 300 guests into the Aravalli hills, the stage performance needs to justify every rupee."
   },
   {
     icon: Crown,
     title: "The Mewar Heritage Register",
-    desc: "Kumbhalgarh sits in the heartland of Mewar — the same lineage that gave India Maharana Pratap. The cultural identity is fiercely proud, deeply rooted, and historically literate. An anchor who mispronounces Rajputana names, misreads clan protocols, or brings a Jaipur-tourist energy to a Mewar hereditary celebration has fundamentally failed the room."
+    desc: "Kumbhalgarh sits in the heartland of Mewar, the same lineage that gave India Maharana Pratap. The cultural identity is fiercely proud, deeply rooted, and historically literate. An anchor who mispronounces Rajputana names, misreads clan protocols, or brings a Jaipur-tourist energy to a Mewar hereditary celebration has fundamentally failed the room."
   },
 ];
 
@@ -115,19 +115,19 @@ const SERVICES = [
   {
     icon: Music2,
     title: "Hilltop Sangeet Emcee",
-    desc: "Sunset Sangeets at The Kumbha Bagh or The Aodhi hotel rooftops — where the Aravalli ridgeline and the fort wall form the backdrop. Managing crowd energy across sprawling open-air stages in a desert-edge environment with zero acoustic support.",
+    desc: "Sunset Sangeets at The Kumbha Bagh or The Aodhi hotel rooftops, where the Aravalli ridgeline and the fort wall form the backdrop. Managing crowd energy across sprawling open-air stages in a desert-edge environment with zero acoustic support.",
     tag: "Sangeet"
   },
   {
     icon: Flower2,
     title: "Intimate Haldi & Mehndi",
-    desc: "Pre-wedding events for destination families who have gathered from across Jaipur & Rajasthan and abroad. Icebreaker games, interactive Mehndi rituals, and Haldi moments that feel warm, genuine, and completely un-scripted — even when the crowd is international.",
+    desc: "Pre-wedding events for destination families who have gathered from across Jaipur & Rajasthan and abroad. Icebreaker games, interactive Mehndi rituals, and Haldi moments that feel warm, genuine, and completely un-scripted, even when the crowd is international.",
     tag: "Pre-Wedding"
   },
   {
     icon: Building2,
     title: "Corporate Heritage Retreats",
-    desc: "Leadership offsites and annual award nights at Kumbhalgarh's safari and resort properties. The format blends team-building energy with the heritage gravitas of the location — a combination that requires precise tone calibration across day sessions and evening galas.",
+    desc: "Leadership offsites and annual award nights at Kumbhalgarh's safari and resort properties. The format blends team-building energy with the heritage gravitas of the location, a combination that requires precise tone calibration across day sessions and evening galas.",
     tag: "Corporate"
   },
 ];
@@ -144,28 +144,28 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "Generic tone completely misreads the Mewar heritage register", fix: "Mewar cultural fluency — Maharana references, Rajputana clan respect, correct pronunciation" },
+  { problem: "Generic tone completely misreads the Mewar heritage register", fix: "Mewar cultural fluency, Maharana references, Rajputana clan respect, correct pronunciation" },
   { problem: "Cannot manage open-air hilltop acoustics in Aravalli terrain", fix: "Fort-fringe outdoor mastery from repeated events at Kumbha Bagh and Aodhi" },
   { problem: "Unfamiliar with the isolation logistics of a hill destination", fix: "Pre-event coordination with Kumbhalgarh teams ensures zero on-stage surprises" },
-  { problem: "Energy level mismatch — same tone for Sangeet and phero ceremony", fix: "Real-time calibration — electric for Sangeet, majestic for ceremony" },
-  { problem: "Mispronounces Mewar clan names and wedding ritual references", fix: "Pre-event research deck — every name, every clan, every ritual pre-loaded" },
+  { problem: "Energy level mismatch, same tone for Sangeet and phero ceremony", fix: "Real-time calibration, electric for Sangeet, majestic for ceremony" },
+  { problem: "Mispronounces Mewar clan names and wedding ritual references", fix: "Pre-event research deck, every name, every clan, every ritual pre-loaded" },
   { problem: "Cannot hold crowd attention over a long destination event night", fix: "5+ years of destination circuit means the stamina and crowd read are hardwired" },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Chauhan Family",
-    quote: "We wanted a wedding that felt like it belonged to Kumbhalgarh — not a generic event transplanted to a hill. Yash understood that completely. His hosting reflected the Mewar heritage without ever feeling like a history lecture. The guests felt the weight and the celebration simultaneously.",
+    quote: "We wanted a wedding that felt like it belonged to Kumbhalgarh, not a generic event transplanted to a hill. Yash understood that completely. His hosting reflected the Mewar heritage without ever feeling like a history lecture. The guests felt the weight and the celebration simultaneously.",
     event: "Wedding · The Kumbha Bagh · 450 guests"
   },
   {
     name: "Rajawat Family",
-    quote: "The hilltop Sangeet at The Aodhi was our most complex event — open skies, Aravalli ridgeline, 380 guests across a massive lawn with no acoustic walls. Yash commanded the entire space without effort. The crowd did not drift once across a full four-hour Sangeet night.",
+    quote: "The hilltop Sangeet at The Aodhi was our most complex event, open skies, Aravalli ridgeline, 380 guests across a massive lawn with no acoustic walls. Yash commanded the entire space without effort. The crowd did not drift once across a full four-hour Sangeet night.",
     event: "Sangeet · The Aodhi Hotel · 380 guests"
   },
   {
-    name: "Senior VP — FMCG Brand",
-    quote: "We brought 280 senior regional managers into Kumbhalgarh for an annual review and gala. The challenge was maintaining corporate professionalism in a heritage wilderness setting. Yash balanced both perfectly — sharp and brand-aligned through the conference, warm and entertaining through the evening awards.",
+    name: "Senior VP, FMCG Brand",
+    quote: "We brought 280 senior regional managers into Kumbhalgarh for an annual review and gala. The challenge was maintaining corporate professionalism in a heritage wilderness setting. Yash balanced both perfectly, sharp and brand-aligned through the conference, warm and entertaining through the evening awards.",
     event: "Corporate Retreat · Fateh Safari Lodge · 280 delegates"
   },
 ];
@@ -178,10 +178,10 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   { q: "Who is the best anchor for destination weddings in Kumbhalgarh?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and is a specialist in Kumbhalgarh's majestic fort and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for both NRI and traditional Indian families seeking a royal backdrop." },
   { q: "How do you handle the logistics and acoustics of fort weddings in Kumbhalgarh?", a: "Kumbhalgarh's heritage venues often involve open-air settings with unique acoustic challenges and sprawling layouts. Navigating event energy in these vast, majestic spaces requires an experienced host who uses precise pacing and crowd psychology to draw guests together, creating an intimate, high-energy atmosphere despite the massive surroundings." },
-  { q: "Can you host bilingual events for NRI families in Kumbhalgarh?", a: "Yes, bilingual cultural bridging is essential for Kumbhalgarh destination weddings. NRI families from the US, UK, and UAE require hosting that is perfectly bilingual — sophisticated English for international guests and culturally rich Hindi for local relatives, ensuring everyone connects with the royal Rajasthani setting." },
-  { q: "What makes Kumbhalgarh different from other destination wedding locations?", a: "Kumbhalgarh offers a dramatic, remote, and monumental setting. The hosting must match this grandeur — it requires unmatched elegance, environmental awareness, and a stage presence capable of commanding an audience under the shadow of the second longest wall in the world." },
+  { q: "Can you host bilingual events for NRI families in Kumbhalgarh?", a: "Yes, bilingual cultural bridging is essential for Kumbhalgarh destination weddings. NRI families from the US, UK, and UAE require hosting that is perfectly bilingual, sophisticated English for international guests and culturally rich Hindi for local relatives, ensuring everyone connects with the royal Rajasthani setting." },
+  { q: "What makes Kumbhalgarh different from other destination wedding locations?", a: "Kumbhalgarh offers a dramatic, remote, and monumental setting. The hosting must match this grandeur, it requires unmatched elegance, environmental awareness, and a stage presence capable of commanding an audience under the shadow of the second longest wall in the world." },
   { q: "How far in advance should I book for a Kumbhalgarh wedding?", a: "Kumbhalgarh is highly sought after during the peak winter wedding season (October–March). Premium properties book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Kumbhalgarh for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Kumbhalgarh destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless royal event." },
+  { q: "Who is the best emcee or host in Kumbhalgarh for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Kumbhalgarh destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless royal event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Kumbhalgarh?", a: "Anchor, emcee, host, and MC are terms for the same professional role. International event planners often use 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the term used." },
 ];
 
@@ -197,7 +197,7 @@ export default function KumbhalgarhPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/kumbhalgarh_bg.webp" alt="Best Anchor in Kumbhalgarh — The Great Fort Wall at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/kumbhalgarh_bg.webp" alt="Best Anchor in Kumbhalgarh, The Great Fort Wall at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -274,13 +274,13 @@ export default function KumbhalgarhPage() {
                 Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination wedding anchor — commanding crowds with absolute zero paper scripts.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most trusted destination wedding anchor, commanding crowds with absolute zero paper scripts.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-8 leading-relaxed font-light">
                 From the massive courtyard of <strong className="text-[#B5952F]">The Kumbha Bagh</strong> to the wilderness hilltop of The Aodhi, Yash commands the grandeur of Kumbhalgarh's unique heritage stage with a presence that matches the scale of the Great Wall itself.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                No guest list is too complex. No venue is too remote. No acoustic challenge is too unusual. The combination of Mewar cultural fluency, open-air crowd command, and genuine bilingual ease — developed over hundreds of destination events — is what separates a real Kumbhalgarh performance from a transplanted city show.
+                No guest list is too complex. No venue is too remote. No acoustic challenge is too unusual. The combination of Mewar cultural fluency, open-air crowd command, and genuine bilingual ease, developed over hundreds of destination events, is what separates a real Kumbhalgarh performance from a transplanted city show.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -310,7 +310,7 @@ export default function KumbhalgarhPage() {
               The Great Wall City Demands<br />a <G>Mewar Standard.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Kumbhalgarh is not a resort town. It is a heritage fortress city with one of the most storied military lineages in Indian history. Families who choose Kumbhalgarh for destination weddings are making a statement about their identity — and the anchor must understand what that statement means.
+              Kumbhalgarh is not a resort town. It is a heritage fortress city with one of the most storied military lineages in Indian history. Families who choose Kumbhalgarh for destination weddings are making a statement about their identity, and the anchor must understand what that statement means.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -432,7 +432,7 @@ export default function KumbhalgarhPage() {
               The Mewar identity is specific. Families from this lineage carry immense pride in the Maharana Pratap legacy, the sacrifices of the Haldighati battle, and the particular brand of Rajput dignity that distinguishes Mewar from every other Rajasthan heritage zone. An anchor who conflates Mewar with Jaipur or Jodhpur has already lost the room.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              5+ years of Rajasthan destination circuit means Mewar's clan structures, the correct Rajputana ceremonial sequences, and the particular emotional register of this region are already internalised — not researched the morning of the event.
+              5+ years of Rajasthan destination circuit means Mewar's clan structures, the correct Rajputana ceremonial sequences, and the particular emotional register of this region are already internalised, not researched the morning of the event.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -477,7 +477,7 @@ export default function KumbhalgarhPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Kumbhalgarh · India's Great Wall</p>
-                <p className="text-white text-xs">The Aravalli's most dramatic wedding destination — commanded with full heritage authority.</p>
+                <p className="text-white text-xs">The Aravalli's most dramatic wedding destination, commanded with full heritage authority.</p>
               </div>
             </div>
           </Reveal>
@@ -494,7 +494,7 @@ export default function KumbhalgarhPage() {
                 <ShieldCheck size={16} className="text-[#B5952F]" /> Heritage Venue Crisis Management
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Power failures in remote heritage wings, weather changes on open hilltops, last-minute ceremony sequence changes from the pandit — all handled without the guests knowing anything has deviated from the plan.
+                Power failures in remote heritage wings, weather changes on open hilltops, last-minute ceremony sequence changes from the pandit, all handled without the guests knowing anything has deviated from the plan.
               </p>
             </div>
           </Reveal>
@@ -520,7 +520,7 @@ export default function KumbhalgarhPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -532,7 +532,7 @@ export default function KumbhalgarhPage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -540,10 +540,10 @@ export default function KumbhalgarhPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Kumbhalgarh's Best.</G>
+                Whatever You Call It -{" "}<G>Kumbhalgarh's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Kumbhalgarh —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Kumbhalgarh -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -555,7 +555,7 @@ export default function KumbhalgarhPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Kumbhalgarh",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Kumbhalgarh.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Kumbhalgarh.",
                 keywords: ["best wedding anchor kumbhalgarh", "wedding emcee kumbhalgarh", "wedding host kumbhalgarh", "wedding mc kumbhalgarh"],
               },
               {
@@ -573,13 +573,13 @@ export default function KumbhalgarhPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Kumbhalgarh",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Kumbhalgarh — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Kumbhalgarh, by any name.",
                 keywords: ["best emcee in kumbhalgarh", "best anchor in kumbhalgarh", "best host in kumbhalgarh", "best mc kumbhalgarh"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Kumbhalgarh",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host kumbhalgarh", "english speaking anchor kumbhalgarh", "bilingual emcee kumbhalgarh"],
               },
               {
@@ -620,7 +620,7 @@ export default function KumbhalgarhPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -727,7 +727,7 @@ export default function KumbhalgarhPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Kumbhalgarh's peak destination season fills 6–8 months ahead. Heritage properties have strictly limited availability.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

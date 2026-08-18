@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 // ── FAQ DATA ───────────────────────────────────────────────────────────────
@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "Are you comfortable with teleprompters for televised events?",
-    a: "Yes. For high-stakes summits, product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining full eye contact with a live audience — so it never looks scripted on camera — is a trained skill that comes from experience.",
+    a: "Yes. For high-stakes summits, product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining full eye contact with a live audience, so it never looks scripted on camera, is a trained skill that comes from experience.",
   },
   {
     q: "Can you moderate panel discussions and Q&A sessions?",
@@ -30,11 +30,11 @@ const FAQS = [
   },
   {
     q: "How do you handle audience engagement in long conferences?",
-    a: "Long conferences lose audiences in the gaps between sessions. The craft is in managing those transitions — using sharp wit, brief interactive moments, and energy pivots at exactly the right points. The audience stays present and your message gets through. This is what 70+ corporate brands have paid for.",
+    a: "Long conferences lose audiences in the gaps between sessions. The craft is in managing those transitions, using sharp wit, brief interactive moments, and energy pivots at exactly the right points. The audience stays present and your message gets through. This is what 70+ corporate brands have paid for.",
   },
   {
     q: "Can you anchor both the formal ceremony and the gala dinner afterparty?",
-    a: "Yes. Shifting from formal award ceremony to high-energy gala entertainment in the same evening — without the room noticing the gear change — is a core corporate skill. Both registers are mastered.",
+    a: "Yes. Shifting from formal award ceremony to high-energy gala entertainment in the same evening, without the room noticing the gear change, is a core corporate skill. Both registers are mastered.",
   },
   {
     q: "What is your approach to brand alignment on stage?",
@@ -46,7 +46,7 @@ const FAQS = [
   },
   {
     q: "What sets Anchor Yash apart from other corporate anchors in Jaipur?",
-    a: "Three things: First, 70+ national brands served — the experience shows. Second, completely unscripted crisis management — PA failures, delayed speakers, schedule overruns all handled invisible to the audience. Third, broadcast-ready precision — for events that are recorded or livestreamed, there are zero on-air errors.",
+    a: "Three things: First, 70+ national brands served, the experience shows. Second, completely unscripted crisis management, PA failures, delayed speakers, schedule overruns all handled invisible to the audience. Third, broadcast-ready precision, for events that are recorded or livestreamed, there are zero on-air errors.",
   },
 ];
 
@@ -75,14 +75,14 @@ const breadcrumbSchema = {
   ],
 };
 
-// FIXED: VideoObject schema removed — had 3 TODO placeholder fields which
+// FIXED: VideoObject schema removed, had 3 TODO placeholder fields which
 // produce invalid JSON-LD. Re-add when you have a real YouTube corporate showreel.
 
 const webPageSchema = {
   "@context": "https://schema.org", "@type": "WebPage",
   name: "Corporate Event Anchor in Jaipur | Emcee | Yash Soni",
   url: "https://yashsoni.in/corporate-event-anchor-jaipur",
-  description: "Top corporate event anchor and emcee in Jaipur. Yash Soni has hosted 500+ corporate events — conferences, annual days, product launches, and award nights.",
+  description: "Top corporate event anchor and emcee in Jaipur. Yash Soni has hosted 700+ shows, including large-scale conferences, annual days, product launches, and award nights.",
   inLanguage: "en-IN",
   about: { "@type": "Person", name: "Yash Soni", alternateName: "Anchor Yash Soni", jobTitle: "Professional Event Anchor, Emcee, and Host", url: "https://yashsoni.in", telephone: "+917737877978", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200", bestRating: "5" }, sameAs: ["https://www.instagram.com/anchor_yash_official","https://www.facebook.com/anchoryashsoni","https://www.wedmegood.com/profile/anchor-yash-25628297","https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166"] },
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] },
@@ -105,14 +105,14 @@ const howToSchema = {
 export const metadata: Metadata = {
   title: "Corporate Event Anchor in Jaipur | Emcee | Yash Soni",
   description:
-    "Top corporate event anchor and emcee in Jaipur. Yash Soni has hosted 500+ corporate events — conferences, annual days, product launches, and award nights.",
+    "Top corporate event anchor and emcee in Jaipur. Yash Soni has hosted 700+ shows, including large-scale conferences, annual days, product launches, and award nights.",
   alternates: {
     canonical: "https://yashsoni.in/corporate-event-anchor-jaipur",
   },
   openGraph: {
     title: "Corporate Event Anchor in Jaipur | Emcee | Yash Soni",
     description:
-      "Top corporate event anchor in Jaipur. 500+ corporate events — conferences, annual days, product launches, and award nights.",
+      "Top corporate event anchor in Jaipur. 700+ shows hosted, including conferences, annual days, product launches, and award nights.",
     url: "https://yashsoni.in/corporate-event-anchor-jaipur",
     siteName: "Anchor Yash Soni",
     locale: "en_IN",
@@ -122,14 +122,14 @@ export const metadata: Metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Corporate Event Anchor Yash Soni — Jaipur",
+        alt: "Corporate Event Anchor Yash Soni, Jaipur",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Corporate Event Anchor in Jaipur | Yash Soni",
-    description: "500+ corporate events. 70+ national brands. Jaipur's top corporate emcee.",
+    description: "700+ shows. 70+ national brands. Jaipur's top corporate emcee.",
     images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
   },
 };

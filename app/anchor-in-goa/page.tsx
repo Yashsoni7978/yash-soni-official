@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-goa/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Goa",
     "Best Wedding Anchor Goa",
@@ -155,9 +155,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-goa/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Goa | Taj Exotica & Luxury Beach Wedding Host — Yash Soni`,
+  name: `Best Anchor in Goa | Taj Exotica & Luxury Beach Wedding Host, Yash Soni`,
   headline: `Goa's Premier Event Anchor for Ultra-Luxury Beach Destination Weddings & NRI Sangeets`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Goa destination weddings. Mastering massive oceanfront acoustics, high-net-worth bilingual hosting, and unscripted VIP logistics.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Goa destination weddings. Mastering massive oceanfront acoustics, high-net-worth bilingual hosting, and unscripted VIP logistics.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, India` },
@@ -168,8 +168,8 @@ const webPageSchema = {
 // ─── METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Goa | Beach Destination Wedding Emcee — Yash Soni`,
-  description: `Looking for the best anchor in Goa? Anchor Yash Soni — 4.9★. Expert for Taj Exotica, ITC Grand, and ultra-luxury beach weddings. Flawless unscripted bilingual hosting bridging deep cultural roots with high-voltage NRI energy.`,
+  title: `Best Anchor in Goa | Beach Destination Wedding Emcee, Yash Soni`,
+  description: `Looking for the best anchor in Goa? Anchor Yash Soni, 4.9★. Expert for Taj Exotica, ITC Grand, and ultra-luxury beach weddings. Flawless unscripted bilingual hosting bridging deep cultural roots with high-voltage NRI energy.`,
   keywords: [
     "anchor in goa",
     "best anchor in goa",
@@ -197,13 +197,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Goa | Elite Beach Destination Wedding Host`,
     description: `4.9★ rated. Goa's premium anchor for massive beachfront destination weddings and highly energetic NRI Sangeets. Defeating coastal acoustics with pure command.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Goa — Anchor Yash Soni at Beach Destination Weddings` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Goa, Anchor Yash Soni at Beach Destination Weddings` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Goa | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Goa | Anchor Yash Soni, 4.9★`,
     description: `Taj Exotica. ITC Grand. W Goa. Goa's premier bilingual event anchor for massive, unscripted beach Sangeets and luxury ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Goa | Coastal Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Goa | Coastal Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Coastal Wedding, NRI Events, ${CITY}, Goa, India`,
     "DC.coverage": `${CITY}, Goa, India`,
     "DC.language": "en-IN",

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 
 import Link from "next/link";
@@ -304,7 +304,7 @@ export default function WeddingDecorationJaipur() {
             <span className="font-['Amandine'] text-4xl text-[#9F1239] mb-4 block">The Visionary</span>
             <Link href="/about" className="hover:opacity-80 transition-opacity"><h2 className="font-['Runiga'] text-5xl md:text-7xl text-[#1A1A1A] mb-8">Anchor Yash Soni</h2></Link>
             <p className="font-sans text-xl text-gray-600 font-light leading-relaxed mb-8">
-              Yash understands that decor is more than props—it dictates how the photographs will look and how the guests will feel. 
+              Yash understands that decor is more than props-it dictates how the photographs will look and how the guests will feel. 
             </p>
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
               He works alongside the best karigars, fabricators, and florists in Rajasthan to bring 3D designs into stunning reality, ensuring every petal is perfect.

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 
 import Link from "next/link";
@@ -307,7 +307,7 @@ export default function EventManagementJaipur() {
               Yash transitioned from being the face on the stage to managing the entire infrastructure behind it.
             </p>
             <p className="font-sans text-lg text-gray-500 font-light leading-relaxed mb-10">
-              He brings a unique perspective—knowing exactly what a performer needs to deliver a great show, and exactly what an audience needs to have a great time. This top-down vision drives our entire management approach.
+              He brings a unique perspective-knowing exactly what a performer needs to deliver a great show, and exactly what an audience needs to have a great time. This top-down vision drives our entire management approach.
             </p>
             <Image src="/favicon.webp" alt="Seal" width={80} height={80} className="opacity-50 grayscale" quality={75} sizes="(max-width: 768px) 100vw, 50vw" />
           </motion.div>

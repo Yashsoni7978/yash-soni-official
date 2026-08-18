@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -14,7 +14,7 @@ import { ArrowRight, Building2, CalendarCheck, CheckCircle2, Flower2, Heart, Lea
 // ─────────────────────────────────────────────
 const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20looking%20for%20a%20Mehendi%20anchor%20in%20Jaipur.%20I%27d%20like%20to%20check%20availability%20for%20my%20event.";
 const GOLD = "#D4AF37";
-// Keep the emerald accent — it's the Mehendi signature color
+// Keep the emerald accent, it's the Mehendi signature color
 const EMERALD = "#10b981";
 const css = `
   @keyframes shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
@@ -32,7 +32,7 @@ const G = ({ children, className = "" }) => (
     {children}
   </span>
 );
-// Emerald for the Mehendi personality accent — kept as requested
+// Emerald for the Mehendi personality accent, kept as requested
 const E = ({ children, className = "" }) => (
   <span className={`text-emerald-400 ${className}`}>{children}</span>
 );
@@ -80,7 +80,7 @@ const GAME_CATEGORIES = [
     color: "emerald",
     icon: Music,
     games: [
-      "Bollywood Antakshari — Modern Rules",
+      "Bollywood Antakshari, Modern Rules",
       "Guess The Song Challenge",
       "The Hookstep Dance-Off",
       "Traditional Dholak Jam Sessions",
@@ -91,7 +91,7 @@ const GAME_CATEGORIES = [
     color: "teal",
     icon: Heart,
     games: [
-      "The Shoe Game — Spicy Edition",
+      "The Shoe Game, Spicy Edition",
       "Couple Trivia & Family Roasts",
       "Find the Name in the Henna",
       "Who Knows the Bride Best?",
@@ -132,7 +132,7 @@ const LOCATIONS = [
   {
     zone: "Destination & All India",
     type: "Destination Mehendi",
-    desc: "Udaipur, Jodhpur, Goa, Dubai — the same warmth and energy travels. Hands-free games and Dholak sessions work everywhere.",
+    desc: "Udaipur, Jodhpur, Goa, Dubai, the same warmth and energy travels. Hands-free games and Dholak sessions work everywhere.",
     keywords: ["Destination Mehendi anchor India", "Mehendi host Rajasthan"],
   },
 ];
@@ -151,7 +151,7 @@ const TESTIMONIALS = [
   },
   {
     name: "Mehta Family",
-    quote: "The 'Shoe Game' roast had the entire family in tears of laughter. He read our crowd perfectly — knew when to slow down for the rituals and when to ignite the dance floor.",
+    quote: "The 'Shoe Game' roast had the entire family in tears of laughter. He read our crowd perfectly, knew when to slow down for the rituals and when to ignite the dance floor.",
     event: "Mehendi Ceremony · Ajmer Road, Jaipur",
     guests: "Family wedding",
   },
@@ -168,7 +168,7 @@ const FAQS = [
   },
   {
     q: "Why hire a specialised Mehendi anchor in Jaipur?",
-    a: "Mehendi ceremonies run 3–4 hours while guests have wet henna. Without a specialised host, those hours drag. A Mehendi anchor curates hands-free musical games, verbal trivia, and crowd interactions that keep energy peaking for the entire ceremony — no awkward silences, no guests on their phones, no boring waiting.",
+    a: "Mehendi ceremonies run 3–4 hours while guests have wet henna. Without a specialised host, those hours drag. A Mehendi anchor curates hands-free musical games, verbal trivia, and crowd interactions that keep energy peaking for the entire ceremony, no awkward silences, no guests on their phones, no boring waiting.",
   },
   {
     q: "What kind of Mehendi games are played for guests with henna on?",
@@ -176,11 +176,11 @@ const FAQS = [
   },
   {
     q: "Do you host Ladies Sangeet alongside the Mehendi ceremony?",
-    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth — doing both in the same evening without losing either group. That transition is a skill that takes 700+ shows to perfect.",
+    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth, doing both in the same evening without losing either group. That transition is a skill that takes 700+ shows to perfect.",
   },
   {
     q: "Can you handle the groom's entry at a combined Mehendi event?",
-    a: "Absolutely. Combined Mehendi events with a groom's entry are incredibly energetic. The Bride Squad vs. Groom Squad dynamic, a Dhol-backed entry build, and the couple games that follow — all choreographed to feel spontaneous and organic, never rehearsed.",
+    a: "Absolutely. Combined Mehendi events with a groom's entry are incredibly energetic. The Bride Squad vs. Groom Squad dynamic, a Dhol-backed entry build, and the couple games that follow, all choreographed to feel spontaneous and organic, never rehearsed.",
   },
   {
     q: "Do you coordinate with the DJ and Dhol team for Mehendi?",
@@ -188,7 +188,7 @@ const FAQS = [
   },
   {
     q: "What if some family members are shy to participate?",
-    a: "That's exactly what professional crowd psychology is for. I use seamless Ice-Breakers that pull people in naturally without putting them on the spot. The goal is for every guest — from Nani to the youngest cousin — to feel included and engaged, never forced.",
+    a: "That's exactly what professional crowd psychology is for. I use seamless Ice-Breakers that pull people in naturally without putting them on the spot. The goal is for every guest, from Nani to the youngest cousin, to feel included and engaged, never forced.",
   },
   {
     q: "Do you travel for Mehendi events outside Jaipur?",
@@ -196,7 +196,7 @@ const FAQS = [
   },
   {
     q: "What is the hosting duration for a Mehendi ceremony?",
-    a: "A standard Mehendi package is 3–4 hours — from guest arrivals through the henna application games and into the open Dholak or dance session at the end. For combined Mehendi + Ladies Sangeet events, extended 5–6 hour formats are available.",
+    a: "A standard Mehendi package is 3–4 hours, from guest arrivals through the henna application games and into the open Dholak or dance session at the end. For combined Mehendi + Ladies Sangeet events, extended 5–6 hour formats are available.",
   },
   {
     q: "How far in advance should we book a Mehendi anchor in Jaipur?",
@@ -204,7 +204,7 @@ const FAQS = [
   },
   {
     q: "What languages does the Mehendi anchor host in?",
-    a: "Hindi and English fluently, often simultaneously. For NRI families and international guests, the switch between the two is seamless. Warm Marwari and Rajasthani touches for local family elders are included — Nani's reaction is always the best moment of the ceremony.",
+    a: "Hindi and English fluently, often simultaneously. For NRI families and international guests, the switch between the two is seamless. Warm Marwari and Rajasthani touches for local family elders are included, Nani's reaction is always the best moment of the ceremony.",
   },
 ];
 const RELATED = [
@@ -213,7 +213,7 @@ const RELATED = [
   { icon: Heart, label: "Wedding Anchor", href: "/wedding-anchor-jaipur", desc: "Varmala, Baraat, Bidaai" },
   { icon: Building2, label: "Best Anchor Jaipur", href: "/best-anchor-in-jaipur", desc: "All event formats" },
 ];
-// Color map for game category cards — keeps the emerald/teal/green vibe
+// Color map for game category cards, keeps the emerald/teal/green vibe
 const COLOR_CLASSES = {
   emerald: {
     border: "border-emerald-500/30 hover:border-emerald-400",
@@ -300,23 +300,23 @@ export default function MehendiAnchor() {
     // selection color: gold for brand consistency, emerald accent kept elsewhere
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
-      {/* BREADCRUMB — sr-only for SEO */}
+      {/* BREADCRUMB, sr-only for SEO */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
         <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
         <span>Mehendi Anchor Jaipur</span>
       </nav>
       {/* ══════════════════════════════════════
-          1. HERO — emerald vibe preserved
+          1. HERO, emerald vibe preserved
       ══════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <div className="absolute inset-0 z-0">
-          {/* Emerald gradient overlay — the signature Mehendi feel */}
+          {/* Emerald gradient overlay, the signature Mehendi feel */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/65 to-emerald-900/20 z-10" />
           {/* FIX: next/image replaces <img> */}
           <Image
             src="/gallery-4.webp"
-            alt="Best Mehendi anchor in Jaipur — Anchor Yash Soni hosting a Mehendi ceremony"
+            alt="Best Mehendi anchor in Jaipur, Anchor Yash Soni hosting a Mehendi ceremony"
             fill priority quality={90}
             className="object-cover"
             sizes="100vw"
@@ -324,19 +324,19 @@ export default function MehendiAnchor() {
         </div>
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            {/* Badge — emerald accent preserved */}
+            {/* Badge, emerald accent preserved */}
             <div className="inline-flex items-center gap-2 border border-emerald-500/50 px-5 py-2 rounded-full bg-emerald-900/30 backdrop-blur-xl mb-8">
               <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
               <span className="text-emerald-300 text-[10px] uppercase tracking-widest font-bold">
                 4.9★ · Best Mehendi Anchor in Jaipur
               </span>
             </div>
-            {/* H1 — keyword-first */}
+            {/* H1, keyword-first */}
             <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
               The Ultimate<br /><E>Mehendi Anchor.</E>
             </h1>
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-3">
-              No dull waiting times. No awkward silences. Hands-free musical games, traditional warmth, and zero boring moments — across all Jaipur zones and beyond.
+              No dull waiting times. No awkward silences. Hands-free musical games, traditional warmth, and zero boring moments, across all Jaipur zones and beyond.
             </p>
             <p className="text-zinc-500 text-sm mb-8">
               700+ shows &nbsp;·&nbsp; Ladies Sangeet specialist &nbsp;·&nbsp; Bilingual Hindi/English
@@ -357,7 +357,7 @@ export default function MehendiAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          2. STATS — real numbers
+          2. STATS, real numbers
       ══════════════════════════════════════ */}
       <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
@@ -375,7 +375,7 @@ export default function MehendiAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. INTRO — keyword-rich body text
+          3. INTRO, keyword-rich body text
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -388,7 +388,7 @@ export default function MehendiAnchor() {
               The Mehendi is the most colourful, relaxed event of the entire wedding week. It's where families truly bond before the heavy ceremonies begin. But 3–4 hours of henna application with no hosting structure turns into 3–4 hours of guests on their phones.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              With <strong className="text-white">700+ shows hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has mastered the Mehendi format across every Jaipur zone — farmhouse weddings on Ajmer Road with 500+ guests, palace Mehendi events in Kukas and Amer Road for NRI families, and intimate family ceremonies in Mansarovar and Vaishali Nagar.
+              With <strong className="text-white">700+ shows hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has mastered the Mehendi format across every Jaipur zone, farmhouse weddings on Ajmer Road with 500+ guests, palace Mehendi events in Kukas and Amer Road for NRI families, and intimate family ceremonies in Mansarovar and Vaishali Nagar.
             </p>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
               Hands-free musical games. Couple trivia roasts. Dholak sessions that bridge elders and youth. And a dance floor that opens before the henna even dries.
@@ -413,7 +413,7 @@ export default function MehendiAnchor() {
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-2xl md:text-3xl font-black text-emerald-400 mb-2">The Experience</h3>
                 <p className="text-zinc-300 text-xs md:text-sm leading-relaxed">
-                  From soulful Dholak beginnings to high-energy Bollywood dance floors — managing the ritual respect and the festive vibe simultaneously.
+                  From soulful Dholak beginnings to high-energy Bollywood dance floors, managing the ritual respect and the festive vibe simultaneously.
                 </p>
               </div>
             </div>
@@ -421,13 +421,13 @@ export default function MehendiAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. GAMES MENU — emerald/teal/green kept
+          4. GAMES MENU, emerald/teal/green kept
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
           <SectionHeading subtitle="Crowd Engagement" title="Interactive Mehendi Games." align="center" />
           <p className="text-center text-zinc-500 max-w-xl mx-auto -mt-8 mb-12 text-sm leading-relaxed">
-            Guests have wet henna — so every game is hands-free. Musical, verbal, and visual interactions that keep every generation off their phones and in the moment.
+            Guests have wet henna, so every game is hands-free. Musical, verbal, and visual interactions that keep every generation off their phones and in the moment.
           </p>
           <div className="grid md:grid-cols-3 gap-5">
             {GAME_CATEGORIES.map((cat, i) => {
@@ -455,26 +455,26 @@ export default function MehendiAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. THE VIBE — what makes it special
+          5. THE VIBE, what makes it special
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <Reveal>
             <SectionHeading subtitle="The Vibe Check" title="Elegant. Musical. Fun." />
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-5 font-light">
-              The Mehendi is the most relaxed, colourful event of the entire wedding. It's where families truly bond before the heavy ceremonies begin. My job as host is to amplify that warmth — bridging the elders singing traditional folk songs and the youth ready for a Bollywood party.
+              The Mehendi is the most relaxed, colourful event of the entire wedding. It's where families truly bond before the heavy ceremonies begin. My job as host is to amplify that warmth, bridging the elders singing traditional folk songs and the youth ready for a Bollywood party.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-8 font-light">
-              Every game, every transition, every moment of crowd interaction is calibrated to feel spontaneous and joyful — never scripted or forced.
+              Every game, every transition, every moment of crowd interaction is calibrated to feel spontaneous and joyful, never scripted or forced.
             </p>
             <div className="space-y-3">
               {[
                 "Zero boring seating times across 3–4 hours",
                 "100% hands-free games for henna guests",
                 "Bridges elders and youth in the same event",
-                "Bilingual Hindi/English — NRI families included",
+                "Bilingual Hindi/English, NRI families included",
                 "Dholak-synced games and DJ coordination",
-                "Crisis-proof — delays and schedule changes invisible",
+                "Crisis-proof, delays and schedule changes invisible",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <CheckCircle2 size={14} className="text-emerald-400 mt-0.5 shrink-0" />
@@ -503,7 +503,7 @@ export default function MehendiAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. LOCATION COVERAGE — SEO section
+          6. LOCATION COVERAGE, SEO section
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -554,7 +554,7 @@ export default function MehendiAnchor() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-emerald-400 transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-emerald-400 transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                     <p className="text-emerald-400 text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>
@@ -565,11 +565,11 @@ export default function MehendiAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          8. FAQ — 11 questions targeting PAA
+          8. FAQ, 11 questions targeting PAA
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading subtitle="People Also Ask" title="Mehendi Anchor Jaipur — FAQ." align="center" />
+          <SectionHeading subtitle="People Also Ask" title="Mehendi Anchor Jaipur, FAQ." align="center" />
           <div className="flex flex-col gap-3">
             {FAQS.map((faq, idx) => (
               <Reveal key={idx} delay={idx * 0.03}>
@@ -580,7 +580,7 @@ export default function MehendiAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. RELATED SERVICES — internal links
+          9. RELATED SERVICES, internal links
       ══════════════════════════════════════ */}
       <section className="py-14 md:py-20 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -609,11 +609,11 @@ export default function MehendiAnchor() {
       </section>
       {/* ══════════════════════════════════════
           10. SCARCITY CTA
-          Fixed: no green gradient bg — dark base
+          Fixed: no green gradient bg, dark base
           with emerald accents kept for identity
       ══════════════════════════════════════ */}
       <section className="py-20 md:py-28  border-t border-white/5 px-5 md:px-10 relative overflow-hidden">
-        {/* Subtle emerald glow — keeps the Mehendi identity without the garish gradient */}
+        {/* Subtle emerald glow, keeps the Mehendi identity without the garish gradient */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.07),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span className="font-black text-[18vw] text-white/[0.025] leading-none whitespace-nowrap">MEHENDI</span>

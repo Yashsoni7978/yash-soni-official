@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -73,17 +73,17 @@ const BHARATPUR_IDENTITY = [
   {
     icon: Landmark,
     title: "The Golden Triangle Gateway",
-    desc: "Bharatpur sits at the critical junction of the Agra–Jaipur–Delhi heritage triangle — the most-travelled heritage tourism corridor in India. Wedding families from Delhi who have guests flying into Agra, or Jaipur-based families whose guests are routing through Delhi, consistently find Bharatpur a strategic destination option. Heritage venues here service a metropolitan guest list without requiring long internal travel."
+    desc: "Bharatpur sits at the critical junction of the Agra–Jaipur–Delhi heritage triangle, the most-travelled heritage tourism corridor in India. Wedding families from Delhi who have guests flying into Agra, or Jaipur-based families whose guests are routing through Delhi, consistently find Bharatpur a strategic destination option. Heritage venues here service a metropolitan guest list without requiring long internal travel."
   },
   {
     icon: Bird,
     title: "The Keoladeo Bird Sanctuary Edge",
-    desc: "The Keoladeo National Park — a UNESCO World Heritage Site — borders Bharatpur's event circuit. The world's premiere bird sanctuary creates a unique environmental character for adjacent venues: ecotourism-aware guests, early morning nature walks integrated into multi-day event schedules, and a natural quiet that defines the evening atmosphere. Events here must respect this environment while maximising the celebration energy within it."
+    desc: "The Keoladeo National Park, a UNESCO World Heritage Site, borders Bharatpur's event circuit. The world's premiere bird sanctuary creates a unique environmental character for adjacent venues: ecotourism-aware guests, early morning nature walks integrated into multi-day event schedules, and a natural quiet that defines the evening atmosphere. Events here must respect this environment while maximising the celebration energy within it."
   },
   {
     icon: Globe,
     title: "The Braj Cultural Heartland",
-    desc: "Bharatpur sits at the edge of the Braj region — the geographical heart of Krishna devotion in India. The Braj cultural identity, with its specific musical traditions, its devotional aesthetic, and the deep Vaishnava heritage that permeates the region, creates a hosting context that is entirely different from the Rajputana circuits of western Rajasthan. The anchor who understands Braj culture can create moments that resonate at a truly spiritual depth."
+    desc: "Bharatpur sits at the edge of the Braj region, the geographical heart of Krishna devotion in India. The Braj cultural identity, with its specific musical traditions, its devotional aesthetic, and the deep Vaishnava heritage that permeates the region, creates a hosting context that is entirely different from the Rajputana circuits of western Rajasthan. The anchor who understands Braj culture can create moments that resonate at a truly spiritual depth."
   },
 ];
 
@@ -91,19 +91,19 @@ const SERVICES = [
   {
     icon: Heart,
     title: "Lohagarh Fort Heritage Wedding",
-    desc: "Heritage fort ceremonies at Lohagarh — India's only unconquered fort, famous for repelling British forces. Managing the fort's unique identity, its historical significance to the Bharatpur Jat community, and the specific ceremonial requirements of a fort-heritage wedding in the Agra-Jaipur corridor.",
+    desc: "Heritage fort ceremonies at Lohagarh, India's only unconquered fort, famous for repelling British forces. Managing the fort's unique identity, its historical significance to the Bharatpur Jat community, and the specific ceremonial requirements of a fort-heritage wedding in the Agra-Jaipur corridor.",
     tag: "Shaadi"
   },
   {
     icon: Music2,
     title: "Palace Heritage Sangeet",
-    desc: "Sangeet nights at Laxmi Vilas Palace — Bharatpur's iconic heritage hotel — where the colonial-era architecture and formal garden setting create a Sangeet atmosphere unlike any modern hotel venue. Managing the indoor-outdoor acoustic transitions and the formal heritage character of the venue.",
+    desc: "Sangeet nights at Laxmi Vilas Palace, Bharatpur's iconic heritage hotel, where the colonial-era architecture and formal garden setting create a Sangeet atmosphere unlike any modern hotel venue. Managing the indoor-outdoor acoustic transitions and the formal heritage character of the venue.",
     tag: "Sangeet"
   },
   {
     icon: Flower2,
     title: "Garden Heritage Mehndi",
-    desc: "Pre-wedding events in Bharatpur's heritage properties and garden venues — where the Braj cultural landscape creates a distinctively warm, devotional backdrop for morning pre-wedding celebrations that infuse genuine regional character into the event.",
+    desc: "Pre-wedding events in Bharatpur's heritage properties and garden venues, where the Braj cultural landscape creates a distinctively warm, devotional backdrop for morning pre-wedding celebrations that infuse genuine regional character into the event.",
     tag: "Pre-Wedding"
   },
   {
@@ -126,28 +126,28 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "No knowledge of Bharatpur's Jat community heritage and Lohagarh Fort's specific identity", fix: "Bharatpur-specific cultural fluency — Jat heritage, unconquered fort pride, correct ceremonial vocabulary" },
-  { problem: "Cannot bridge Delhi NCR corporate mix and Braj heritage family in the same room", fix: "Golden Triangle cultural bilingualism — metro polish and regional Braj warmth simultaneously" },
-  { problem: "Treats Laxmi Vilas Palace like a standard hotel banquet without heritage sensitivity", fix: "Colonial heritage property register — appropriate formality and historical awareness embedded in hosting" },
+  { problem: "No knowledge of Bharatpur's Jat community heritage and Lohagarh Fort's specific identity", fix: "Bharatpur-specific cultural fluency, Jat heritage, unconquered fort pride, correct ceremonial vocabulary" },
+  { problem: "Cannot bridge Delhi NCR corporate mix and Braj heritage family in the same room", fix: "Golden Triangle cultural bilingualism, metro polish and regional Braj warmth simultaneously" },
+  { problem: "Treats Laxmi Vilas Palace like a standard hotel banquet without heritage sensitivity", fix: "Colonial heritage property register, appropriate formality and historical awareness embedded in hosting" },
   { problem: "No awareness of the Keoladeo sanctuary environment and its event-specific implications", fix: "Wildlife sanctuary acoustic and environmental discipline for sanctuary-edge events" },
   { problem: "Cannot create genuine Braj devotional cultural resonance for heritage family guests", fix: "Braj cultural references woven warmly into event narrative without lecture-mode delivery" },
-  { problem: "Bilingual gaps — loses the Delhi NCR professional guests or the heritage Bharatpur families", fix: "Full bilingual code-switching between polished English and Braj-register Hindi" },
+  { problem: "Bilingual gaps, loses the Delhi NCR professional guests or the heritage Bharatpur families", fix: "Full bilingual code-switching between polished English and Braj-register Hindi" },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Singhania Family",
-    quote: "We chose Lohagarh Fort specifically because of what it represents — the fort that was never defeated. For our family, that identity matters. We needed an anchor who understood that this was not just a beautiful venue, but a statement about our heritage. Yash got it completely. His references to Lohagarh's history were specific, and the family felt genuinely honoured throughout.",
+    quote: "We chose Lohagarh Fort specifically because of what it represents, the fort that was never defeated. For our family, that identity matters. We needed an anchor who understood that this was not just a beautiful venue, but a statement about our heritage. Yash got it completely. His references to Lohagarh's history were specific, and the family felt genuinely honoured throughout.",
     event: "Heritage Wedding · Lohagarh Fort · 400 guests"
   },
   {
     name: "Agarwal Family",
-    quote: "The Laxmi Vilas Sangeet was extraordinary — formal heritage gardens under lights, 300 guests from Delhi, Agra, and Jaipur, and a programme that ran from 7pm to midnight without dropping energy once. Yash managed the formal colonial property setting and the high-energy Sangeet crowd simultaneously with complete authority.",
+    quote: "The Laxmi Vilas Sangeet was extraordinary, formal heritage gardens under lights, 300 guests from Delhi, Agra, and Jaipur, and a programme that ran from 7pm to midnight without dropping energy once. Yash managed the formal colonial property setting and the high-energy Sangeet crowd simultaneously with complete authority.",
     event: "Sangeet · Laxmi Vilas Palace · 300 guests"
   },
   {
-    name: "Head of People — Delhi NCR Tech Company",
-    quote: "We brought the entire leadership team to Bharatpur for our annual offsite — partly for the heritage experience, partly because it was equidistant for our Agra and Delhi teams. Yash anchored our gala evening at The Bagh with brand-appropriate professionalism and genuine warmth. Exactly the tone we needed for a senior leadership event in a heritage setting.",
+    name: "Head of People, Delhi NCR Tech Company",
+    quote: "We brought the entire leadership team to Bharatpur for our annual offsite, partly for the heritage experience, partly because it was equidistant for our Agra and Delhi teams. Yash anchored our gala evening at The Bagh with brand-appropriate professionalism and genuine warmth. Exactly the tone we needed for a senior leadership event in a heritage setting.",
     event: "Corporate Retreat · The Bagh · 120 delegates"
   },
 ];
@@ -163,7 +163,7 @@ const FAQS = [
   { q: "Can you host bilingual events for NRI families in Bharatpur?", a: "Yes. Given its proximity to Delhi and Agra, Bharatpur is a prime location for NRI destination weddings. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Bharatpur?", a: "Bharatpur is an excellent destination for corporate offsites and dealer meets from the Delhi-NCR and Agra regions. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
   { q: "How far in advance should I book for a Bharatpur wedding?", a: "Bharatpur is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Bharatpur for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Bharatpur destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "Who is the best emcee or host in Bharatpur for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Bharatpur destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Bharatpur?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
@@ -177,7 +177,7 @@ export default function BharatpurPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/vintage-car-couple-shoot.webp" alt="Best Anchor in Bharatpur — Lohagarh Fort at twilight" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/vintage-car-couple-shoot.webp" alt="Best Anchor in Bharatpur, Lohagarh Fort at twilight" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -252,13 +252,13 @@ export default function BharatpurPage() {
                 Beyond <G>Announcements.</G><br />Beyond Scripts.
               </h2>
               <p className="text-zinc-400 text-lg md:text-xl mb-6 leading-relaxed font-light">
-                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor — simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
+                With 5+ years on stage and 700+ shows handled, <strong className="text-white">Anchor Yash Soni</strong> has built a reputation as Rajasthan's most versatile destination event anchor, simultaneously commanding heritage fort ceremonies, palace Sangeets, and corporate retreats with equal authority.
               </p>
               <p className="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed font-light">
-                Bharatpur occupies a unique strategic position — the <strong className="text-[#B5952F]">Lohagarh Fort</strong>, the only unconquered fort in India, anchors a heritage circuit that connects seamlessly to Agra, Jaipur, and Delhi NCR. The guest lists at Bharatpur events are among the most diverse in Rajasthan's destination circuit.
+                Bharatpur occupies a unique strategic position, the <strong className="text-[#B5952F]">Lohagarh Fort</strong>, the only unconquered fort in India, anchors a heritage circuit that connects seamlessly to Agra, Jaipur, and Delhi NCR. The guest lists at Bharatpur events are among the most diverse in Rajasthan's destination circuit.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                The Braj cultural heartland, the Keoladeo bird sanctuary, and the Jat community's fierce pride in Lohagarh's unconquered history create a hosting environment that demands genuine cultural depth — not a generic Rajasthan event template transplanted to the Golden Triangle gateway.
+                The Braj cultural heartland, the Keoladeo bird sanctuary, and the Jat community's fierce pride in Lohagarh's unconquered history create a hosting environment that demands genuine cultural depth, not a generic Rajasthan event template transplanted to the Golden Triangle gateway.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -287,7 +287,7 @@ export default function BharatpurPage() {
               India's Golden Triangle<br />Demands a <G>Gateway Standard.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Bharatpur commands India's most-travelled heritage tourism corridor. Its fort has never been conquered. Its bird sanctuary is a UNESCO World Heritage Site. Its Braj cultural identity reaches back to the era of Krishna's mythology. An event here is simultaneously positioned at the crossroads of Indian heritage culture — and the anchor who understands none of this creates a jarring disconnect with every single family that chose this destination for a reason.
+              Bharatpur commands India's most-travelled heritage tourism corridor. Its fort has never been conquered. Its bird sanctuary is a UNESCO World Heritage Site. Its Braj cultural identity reaches back to the era of Krishna's mythology. An event here is simultaneously positioned at the crossroads of Indian heritage culture, and the anchor who understands none of this creates a jarring disconnect with every single family that chose this destination for a reason.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -401,10 +401,10 @@ export default function BharatpurPage() {
               Agra. Delhi. Jaipur.<br /><G>One Fort City.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              The strategic value of Bharatpur for Delhi-based families cannot be overstated. At 2.5 hours from Delhi's Aerocity and 55km from Agra's Taj Mahal, it is the only heritage destination in Rajasthan that is simultaneously accessible to all six directions of India's elite destination wedding guest base. Families with international guests flying into Delhi and Indian relatives from Agra face a genuinely impossible geography — unless they choose Bharatpur.
+              The strategic value of Bharatpur for Delhi-based families cannot be overstated. At 2.5 hours from Delhi's Aerocity and 55km from Agra's Taj Mahal, it is the only heritage destination in Rajasthan that is simultaneously accessible to all six directions of India's elite destination wedding guest base. Families with international guests flying into Delhi and Indian relatives from Agra face a genuinely impossible geography, unless they choose Bharatpur.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Lohagarh Fort adds a heritage narrative that is genuinely unique — it is the only fort in India that withstood the full might of British colonial force and remained unconquered. For families with strong national identity pride — particularly those with military, civil service, or heritage community backgrounds — this narrative resonates at a level that no manufactured luxury venue can replicate.
+              Lohagarh Fort adds a heritage narrative that is genuinely unique, it is the only fort in India that withstood the full might of British colonial force and remained unconquered. For families with strong national identity pride, particularly those with military, civil service, or heritage community backgrounds, this narrative resonates at a level that no manufactured luxury venue can replicate.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
               The Braj cultural heartland, the UNESCO bird sanctuary, and the unconquered fort create a hosting tapestry of rare depth. An anchor who can weave all three into an event narrative creates experiences that guests carry for decades.
@@ -413,7 +413,7 @@ export default function BharatpurPage() {
           <Reveal delay={0.1}>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Lohagarh Heritage Fluency", sub: "Unconquered fort — Jat community pride" },
+                { label: "Lohagarh Heritage Fluency", sub: "Unconquered fort, Jat community pride" },
                 { label: "Braj Cultural Reference", sub: "Krishna devotion · Vaishnava warmth" },
                 { label: "Golden Triangle Logistics", sub: "Delhi · Agra · Jaipur guest mix" },
                 { label: "Bilingual Metro Register", sub: "NCR polish · Braj warmth" },
@@ -453,7 +453,7 @@ export default function BharatpurPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Bharatpur · The Unconquered Fort City</p>
-                <p className="text-white text-xs">India's most strategically positioned heritage destination — Lohagarh, Keoladeo, and Braj in one city.</p>
+                <p className="text-white text-xs">India's most strategically positioned heritage destination, Lohagarh, Keoladeo, and Braj in one city.</p>
               </div>
             </div>
           </Reveal>
@@ -463,14 +463,14 @@ export default function BharatpurPage() {
               10,000+ Crowd.<br /><G>Unconquered Fort.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Bharatpur events range from 80-person intimate ceremonies in Laxmi Vilas's formal gardens to 500-person full wedding receptions within Lohagarh Fort's historic walls. The guest mix diversity — spanning Delhi NCR professionals, Agra heritage families, and international guests — requires an anchor who can read and serve every community simultaneously without ever breaking the event's cohesive energy arc.
+              Bharatpur events range from 80-person intimate ceremonies in Laxmi Vilas's formal gardens to 500-person full wedding receptions within Lohagarh Fort's historic walls. The guest mix diversity, spanning Delhi NCR professionals, Agra heritage families, and international guests, requires an anchor who can read and serve every community simultaneously without ever breaking the event's cohesive energy arc.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> Multi-City Guest Logistics Awareness
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Bharatpur destination events draw guests from Delhi, Agra, Jaipur, and international origin simultaneously. The hosting must be culturally attuned to the diversity of this particular Golden Triangle mix — never defaulting to a single regional register that excludes any community in the room.
+                Bharatpur destination events draw guests from Delhi, Agra, Jaipur, and international origin simultaneously. The hosting must be culturally attuned to the diversity of this particular Golden Triangle mix, never defaulting to a single regional register that excludes any community in the room.
               </p>
             </div>
           </Reveal>
@@ -500,7 +500,7 @@ export default function BharatpurPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -512,7 +512,7 @@ export default function BharatpurPage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -520,10 +520,10 @@ export default function BharatpurPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Bharatpur's Best.</G>
+                Whatever You Call It -{" "}<G>Bharatpur's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Bharatpur —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Bharatpur -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -535,7 +535,7 @@ export default function BharatpurPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Bharatpur",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Bharatpur.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Bharatpur.",
                 keywords: ["best wedding anchor bharatpur", "wedding emcee bharatpur", "wedding host bharatpur", "wedding mc bharatpur"],
               },
               {
@@ -553,13 +553,13 @@ export default function BharatpurPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Bharatpur",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Bharatpur — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Bharatpur, by any name.",
                 keywords: ["best emcee in bharatpur", "best anchor in bharatpur", "best host in bharatpur", "best mc bharatpur"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Bharatpur",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host bharatpur", "english speaking anchor bharatpur", "bilingual emcee bharatpur"],
               },
               {
@@ -600,7 +600,7 @@ export default function BharatpurPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -706,7 +706,7 @@ export default function BharatpurPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Lohagarh Fort's event calendar and Laxmi Vilas Palace's private event spaces are strictly limited. Anchor dates mirror venue availability exactly.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

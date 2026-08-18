@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -158,7 +158,7 @@ const VS = [
   { problem: "Disrespecting deeply held Marwari traditions with loud, generic 'club MC' humor", fix: "Authentic, respectful Hindi execution that honors the family's regional roots" },
   { problem: "Losing the crowd's attention entirely inside the massive ITC Royal Bengal ballrooms", fix: "Mastery of extreme-scale indoor reverberation and physical stage dominance" },
   { problem: "Using only Hindi at corporate summits in a highly intellectual metropolitan city", fix: "Complete, flawless English moderation tuned to Kolkata's executive standard" },
-  { problem: "Reading from paper notes during high-stakes dealer meets and felicitations", fix: "100% unscripted flow—maintaining absolute eye contact and timeline mastery" },
+  { problem: "Reading from paper notes during high-stakes dealer meets and felicitations", fix: "100% unscripted flow-maintaining absolute eye contact and timeline mastery" },
   { problem: "Failing to fuse the cultures during a massive Bengali-North Indian wedding", fix: "Bilingual intelligence that engages local VIPs while steering the core rituals" },
   { problem: "Unable to manage the rapid transition from a heavy dinner to a high-energy Sangeet", fix: "Aggressive timeline pacing that pulls the crowd immediately to the dance floor" },
 ];
@@ -166,11 +166,11 @@ const VS = [
 const TESTIMONIALS = [
   {
     name: "Kedia Family",
-    quote: "Kolkata’s Marwari weddings are intensely traditional, but our guest list was incredibly modern—including international business partners. Yash’s bilingual control at ITC Royal Bengal was flawless. He knew exactly when to fall into deeply respectful Hindi for the elders during the Varmala, and when to energize the room in English for the Sangeet.",
+    quote: "Kolkata’s Marwari weddings are intensely traditional, but our guest list was incredibly modern-including international business partners. Yash’s bilingual control at ITC Royal Bengal was flawless. He knew exactly when to fall into deeply respectful Hindi for the elders during the Varmala, and when to energize the room in English for the Sangeet.",
     event: "Luxury Wedding · ITC Royal Bengal · 800 guests"
   },
   {
-    name: "Managing Director — National FMCG Corporation",
+    name: "Managing Director, National FMCG Corporation",
     quote: "We needed a highly articulate English-speaking host for our national distributor meet in Rajarhat. We had 600 delegates from across the country. Yash commanded the entire massive ballroom with no notes, extreme precision, and total authority. A true asset to any brand.",
     event: "Corporate Summit · Westin Rajarhat · 600 delegates"
   },
@@ -213,7 +213,7 @@ const FAQS = [
   },
   {
     q: "When should we secure your availability for a Kolkata event?",
-    a: "Because I travel Pan-India and manage heavy volumes during the Rajasthan wedding season, my availability gets locked extremely fast during winter (Oct–Feb). The moment your venue—like the ITC or Taj—is confirmed, please send a WhatsApp inquiry to block the date."
+    a: "Because I travel Pan-India and manage heavy volumes during the Rajasthan wedding season, my availability gets locked extremely fast during winter (Oct–Feb). The moment your venue-like the ITC or Taj-is confirmed, please send a WhatsApp inquiry to block the date."
   },
 ];
 
@@ -266,7 +266,7 @@ export default function KolkataPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/kolkata_bg.webp" alt="Best Anchor in Kolkata — Luxury Marwari & Corporate Events" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/kolkata_bg.webp" alt="Best Anchor in Kolkata, Luxury Marwari & Corporate Events" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -496,7 +496,7 @@ export default function KolkataPage() {
               For corporate events in Rajarhat, the dynamic flips entirely. Here, the anchor must transition into sharp, executive English, moderating technical panels and felicitations without missing a beat or relying on paper notes. It is a completely different neurological register.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Kolkata fluency—mastering the massive ballrooms, the deep Marwari roots, and the razor-sharp corporate summits—is the mark of an anchor at the vanguard of the industry.
+              Kolkata fluency-mastering the massive ballrooms, the deep Marwari roots, and the razor-sharp corporate summits-is the mark of an anchor at the vanguard of the industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -552,14 +552,14 @@ export default function KolkataPage() {
               Global Scale.<br /><G>Marwari Roots.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Kolkata tests an anchor’s ability to control space. When you are managing an international business family's wedding at JW Marriott, the ballrooms are intensely echoing spaces. Yash builds his stage presence to physically and vocally anchor these extreme environments—using pacing and crowd psychology to ensure no matter how large the guest list, the host remains the undeniable center of gravity.
+              Scaling an event in Kolkata tests an anchor’s ability to control space. When you are managing an international business family's wedding at JW Marriott, the ballrooms are intensely echoing spaces. Yash builds his stage presence to physically and vocally anchor these extreme environments-using pacing and crowd psychology to ensure no matter how large the guest list, the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Premium East" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Premium Kolkata clients do not accept generic templates. The hosting here must reflect extreme cultural intelligence, flawless articulation, and rapid adaptability—delivering an unscripted moderation that ensures the family or brand is represented perfectly.
+                Premium Kolkata clients do not accept generic templates. The hosting here must reflect extreme cultural intelligence, flawless articulation, and rapid adaptability-delivering an unscripted moderation that ensures the family or brand is represented perfectly.
               </p>
             </div>
           </Reveal>
@@ -589,7 +589,7 @@ export default function KolkataPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -678,7 +678,7 @@ export default function KolkataPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Kolkata experiences intense overlapping of the corporate summit season and peak Marwari luxury wedding dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

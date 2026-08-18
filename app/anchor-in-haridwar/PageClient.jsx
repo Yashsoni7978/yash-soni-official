@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -102,12 +102,12 @@ const HARIDWAR_IDENTITY = [
   {
     icon: Flame,
     title: "Ganga Aarti Scale & Silence",
-    desc: "Events in Haridwar, especially at properties like Pilibhit House, often feature private Ganga Aartis or incredibly intimate spiritual rituals. The acoustic challenge here is immense: the river is loud, but microphones are deeply inappropriate. Yash executes 'Acoustic Reverence'—utilizing pure, unamplified vocal projection and intense physical stage anchoring to guide the NRI or corporate audience through the spiritual timeline without ever breaking the sanctity of the ghats."
+    desc: "Events in Haridwar, especially at properties like Pilibhit House, often feature private Ganga Aartis or incredibly intimate spiritual rituals. The acoustic challenge here is immense: the river is loud, but microphones are deeply inappropriate. Yash executes 'Acoustic Reverence'-utilizing pure, unamplified vocal projection and intense physical stage anchoring to guide the NRI or corporate audience through the spiritual timeline without ever breaking the sanctity of the ghats."
   },
   {
     icon: Building2,
     title: "The IHCL Heritage Protocol",
-    desc: "Because Haridwar is a profound spiritual center, the luxury venues here operate with extreme operational rigidity. Properties like Pilibhit House manage some of the highest-net-worth spiritual retreats in India. A standard anchor fails here. Yash operates as a highly articulate Executive Moderator—utilizing pristine English to translate deep Sanskrit rituals for international families, ensuring the spiritual weight feels globally accessible and highly refined."
+    desc: "Because Haridwar is a profound spiritual center, the luxury venues here operate with extreme operational rigidity. Properties like Pilibhit House manage some of the highest-net-worth spiritual retreats in India. A standard anchor fails here. Yash operates as a highly articulate Executive Moderator-utilizing pristine English to translate deep Sanskrit rituals for international families, ensuring the spiritual weight feels globally accessible and highly refined."
   },
   {
     icon: Music2,
@@ -158,14 +158,14 @@ const VS = [
   { problem: "Using loud, 'cheap MC' club humor that instantly destroys the sanctity of a spiritual Ganges event", fix: "Intimate, highly conversational executive-grade delivery matching absolute reverence and VIP pedigree" },
   { problem: "Failing entirely to explain the spiritual weight of ceremonies to international/NRI guests in English", fix: "Executing flawless bilingual (English/Sanskrit) bridging to translate deep heritage directly to a global audience" },
   { problem: "The anchor freezing when the entire multi-day itinerary is completely Satvik (no alcohol)", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd without relying on a bar" },
-  { problem: "Reading rigidly from paper notes during an incredibly exposed outdoor Aarti against the river", fix: "100% unscripted flow—maintaining absolute eye contact and stage control despite severe acoustic distractions" },
+  { problem: "Reading rigidly from paper notes during an incredibly exposed outdoor Aarti against the river", fix: "100% unscripted flow-maintaining absolute eye contact and stage control despite severe acoustic distractions" },
   { problem: "Being unable to transition from deep, silent spiritual retreats into a massive family dancing format", fix: "Executing an intense psychological shift that drags the corporate VIPs seamlessly into celebration mode" },
   { problem: "The anchor's voice dissipating across the sprawling ghats or massive outdoor luxury lawms", fix: "Mastery of timeline sequencing and vocal centralizing to pull the entire party tightly towards the event core" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "NRI Destination Wedding — London",
+    name: "NRI Destination Wedding, London",
     quote: "Hosting at Pilibhit House required absolute reverence but also the ability to run a highly sophisticated cross-cultural timeline. Yash was flawless. His English narration of our private Ganga Aarti brought the entire international guest list to tears. Astounding stage command.",
     event: "VIP Spiritual Wedding · Pilibhit House (IHCL)"
   },
@@ -175,7 +175,7 @@ const TESTIMONIALS = [
     event: "Executive Alignment Summit · The Ganges Ghats"
   },
   {
-    name: "Bansal Family — Delhi NCR",
+    name: "Bansal Family, Delhi NCR",
     quote: "Our entire destination wedding in Haridwar was Satvik. No alcohol, strict timings. We were terrified the Sangeet would be dead. Yash dropped into the crowd natively and exploded the room purely on energy and unscripted crowd-work. Absolutely electric.",
     event: "Destination Sangeet · Amatra By The Ganges"
   },
@@ -189,7 +189,7 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle Sangeets and high-energy functions in Haridwar where alcohol is strictly prohibited?",
-    a: "This is the true test of a destination anchor. You cannot rely on the bar to loosen the crowd up. I utilize 'Psychological Combat'—speeding up the entire timeline aggressively, plunging into the audience physically, and detonating a massive dancing session through pure unscripted, highly personalized interaction. I manufacture the hype out of thin air."
+    a: "This is the true test of a destination anchor. You cannot rely on the bar to loosen the crowd up. I utilize 'Psychological Combat'-speeding up the entire timeline aggressively, plunging into the audience physically, and detonating a massive dancing session through pure unscripted, highly personalized interaction. I manufacture the hype out of thin air."
   },
   {
     q: "Our guest list is half Delhi NCR executives and half international (NRI) family members. Can you bridge the cultural gap?",
@@ -266,7 +266,7 @@ export default function HaridwarPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/haridwar_bg.webp" alt="Best Anchor in Haridwar — VIP Luxury Spiritual Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/haridwar_bg.webp" alt="Best Anchor in Haridwar, VIP Luxury Spiritual Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function HaridwarPage() {
                 Haridwar operates with extreme reverence. You are dealing with ultra-restricted properties like Pilibhit House where <strong className="text-[#B5952F]">absolute acoustic curfews, zero-alcohol (Satvik) limits, and top-tier NRI/Corporate families</strong> collide. A loud, disorganized anchor ruins the spiritual flow. Yash steps into these environments and executes perfectly polished, articulate English moderation, managing the silence of the ghats while still manufacturing raw, exploding energy when the timeline transitions to celebration.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts. For global cross-cultural weddings, Yash provides seamless translation—executing unscripted English that breaks down the profound Sanskrit rituals for the international network, entirely validating the presence of the highest-net-worth guests.
+                He completely rejects paper scripts. For global cross-cultural weddings, Yash provides seamless translation-executing unscripted English that breaks down the profound Sanskrit rituals for the international network, entirely validating the presence of the highest-net-worth guests.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -375,7 +375,7 @@ export default function HaridwarPage() {
               The Ganges Corridor Demands<br />an <G>Elite Frequency.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Haridwar blends absolute, ancient spiritual intensity with ultra-modern luxury execution. The properties here demand perfection—there are strict decibel curfews, complex rituals by the river, and the demographic is heavily weighted towards NRIs and Delhi NCR's highest corporate tier looking for roots. An anchor here cannot be a 'hype man'. He must possess razor-sharp cultural intelligence to navigate VIP Sanskrit/English bridging, the polish to match high-end legacy, and the psychological power to detonate a Sangeet entirely without alcohol.
+              Haridwar blends absolute, ancient spiritual intensity with ultra-modern luxury execution. The properties here demand perfection-there are strict decibel curfews, complex rituals by the river, and the demographic is heavily weighted towards NRIs and Delhi NCR's highest corporate tier looking for roots. An anchor here cannot be a 'hype man'. He must possess razor-sharp cultural intelligence to navigate VIP Sanskrit/English bridging, the polish to match high-end legacy, and the psychological power to detonate a Sangeet entirely without alcohol.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -489,13 +489,13 @@ export default function HaridwarPage() {
               VIP Reality.<br /><G>Ganga Convergence.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Haridwar requires an absolute mastery of 'Acoustic Reverence'. Venues like Pilibhit House demand extreme precision. The moment formal Aarti concludes, the transition to the reception must be handled flawlessly. Yash acts as a bridge—using impeccable English narration to ground NRI guests in the profound rituals, then transitioning seamlessly to physically compress the crowd into the evening flow entirely without breaking the heritage atmosphere.
+              Hosting a luxury event in Haridwar requires an absolute mastery of 'Acoustic Reverence'. Venues like Pilibhit House demand extreme precision. The moment formal Aarti concludes, the transition to the reception must be handled flawlessly. Yash acts as a bridge-using impeccable English narration to ground NRI guests in the profound rituals, then transitioning seamlessly to physically compress the crowd into the evening flow entirely without breaking the heritage atmosphere.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               Furthermore, Haridwar is heavily Satvik. You cannot mask a poorly-hosted event with alcohol. Yash drops the script and dives into the crowd, validating the elite presence naturally and forcing explosive energy entirely through raw, psychological crowd dominance. 
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Cross-cultural VIP fluency—defeating strict acoustic limits and driving intense Satvik energy—is the mark of an anchor who operates at the true apex of the destination industry.
+              Cross-cultural VIP fluency-defeating strict acoustic limits and driving intense Satvik energy-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,7 +551,7 @@ export default function HaridwarPage() {
               Global Scale.<br /><G>Spiritual Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Haridwar is deeply nuanced. Properties physically lock you against the river, and crowd control is paramount. Yash builds his stage presence to physically and vocally anchor these serene environments—using pristine English to synthesize the experience for NRIs while maintaining absolute command over the sprawling logistical timeline.
+              Scaling an event in Haridwar is deeply nuanced. Properties physically lock you against the river, and crowd control is paramount. Yash builds his stage presence to physically and vocally anchor these serene environments-using pristine English to synthesize the experience for NRIs while maintaining absolute command over the sprawling logistical timeline.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
@@ -588,7 +588,7 @@ export default function HaridwarPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function HaridwarPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Haridwar experiences intense overlapping of the Delhi VIP destination season and incredibly crowded auspicious dates. Top-tier anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

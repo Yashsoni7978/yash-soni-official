@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
+// Schema data, moved here from PageClient.jsx for server-side rendering
 const FAQS = [
   { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
   { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
@@ -14,7 +14,7 @@ const FAQS = [
   },
   {
     q: "Why hire a specialised Mehendi anchor in Jaipur?",
-    a: "Mehendi ceremonies run 3–4 hours while guests have wet henna. Without a specialised host, those hours drag. A Mehendi anchor curates hands-free musical games, verbal trivia, and crowd interactions that keep energy peaking for the entire ceremony — no awkward silences, no guests on their phones, no boring waiting.",
+    a: "Mehendi ceremonies run 3–4 hours while guests have wet henna. Without a specialised host, those hours drag. A Mehendi anchor curates hands-free musical games, verbal trivia, and crowd interactions that keep energy peaking for the entire ceremony, no awkward silences, no guests on their phones, no boring waiting.",
   },
   {
     q: "What kind of Mehendi games are played for guests with henna on?",
@@ -22,11 +22,11 @@ const FAQS = [
   },
   {
     q: "Do you host Ladies Sangeet alongside the Mehendi ceremony?",
-    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth — doing both in the same evening without losing either group. That transition is a skill that takes 700+ shows to perfect.",
+    a: "Yes. Combined Mehendi and Ladies Sangeet events are a core specialisation. The challenge is bridging traditional Dholak sessions for the elders and modern Bollywood games for the youth, doing both in the same evening without losing either group. That transition is a skill that takes 700+ shows to perfect.",
   },
   {
     q: "Can you handle the groom's entry at a combined Mehendi event?",
-    a: "Absolutely. Combined Mehendi events with a groom's entry are incredibly energetic. The Bride Squad vs. Groom Squad dynamic, a Dhol-backed entry build, and the couple games that follow — all choreographed to feel spontaneous and organic, never rehearsed.",
+    a: "Absolutely. Combined Mehendi events with a groom's entry are incredibly energetic. The Bride Squad vs. Groom Squad dynamic, a Dhol-backed entry build, and the couple games that follow, all choreographed to feel spontaneous and organic, never rehearsed.",
   },
   {
     q: "Do you coordinate with the DJ and Dhol team for Mehendi?",
@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: "What if some family members are shy to participate?",
-    a: "That's exactly what professional crowd psychology is for. I use seamless Ice-Breakers that pull people in naturally without putting them on the spot. The goal is for every guest — from Nani to the youngest cousin — to feel included and engaged, never forced.",
+    a: "That's exactly what professional crowd psychology is for. I use seamless Ice-Breakers that pull people in naturally without putting them on the spot. The goal is for every guest, from Nani to the youngest cousin, to feel included and engaged, never forced.",
   },
   {
     q: "Do you travel for Mehendi events outside Jaipur?",
@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: "What is the hosting duration for a Mehendi ceremony?",
-    a: "A standard Mehendi package is 3–4 hours — from guest arrivals through the henna application games and into the open Dholak or dance session at the end. For combined Mehendi + Ladies Sangeet events, extended 5–6 hour formats are available.",
+    a: "A standard Mehendi package is 3–4 hours, from guest arrivals through the henna application games and into the open Dholak or dance session at the end. For combined Mehendi + Ladies Sangeet events, extended 5–6 hour formats are available.",
   },
   {
     q: "How far in advance should we book a Mehendi anchor in Jaipur?",
@@ -50,7 +50,7 @@ const FAQS = [
   },
   {
     q: "What languages does the Mehendi anchor host in?",
-    a: "Hindi and English fluently, often simultaneously. For NRI families and international guests, the switch between the two is seamless. Warm Marwari and Rajasthani touches for local family elders are included — Nani's reaction is always the best moment of the ceremony.",
+    a: "Hindi and English fluently, often simultaneously. For NRI families and international guests, the switch between the two is seamless. Warm Marwari and Rajasthani touches for local family elders are included, Nani's reaction is always the best moment of the ceremony.",
   },
 ];
 

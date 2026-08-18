@@ -1,4 +1,4 @@
-
+﻿
 export const metadata = {
   title: "Destination Wedding Planner Jaipur | Rajasthan | Anchor Yash Soni",
   description: "Planning a destination wedding in Jaipur? Yash Soni delivers full-service destination wedding planning across Rajasthan's palace and heritage venues.",
@@ -47,15 +47,15 @@ const jsonLd = {
     itemListElement: [
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Palace Wedding — Up to 200 Guests" },
+        itemOffered: { "@type": "Service", name: "Palace Wedding, Up to 200 Guests" },
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Heritage Estate — Up to 400 Guests" },
+        itemOffered: { "@type": "Service", name: "Heritage Estate, Up to 400 Guests" },
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Royal Rajasthan — 400+ VIP Guests" },
+        itemOffered: { "@type": "Service", name: "Royal Rajasthan, 400+ VIP Guests" },
       },
     ],
   },

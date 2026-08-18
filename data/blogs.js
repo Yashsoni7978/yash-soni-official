@@ -1,4 +1,4 @@
-import { NEW_BLOGS_BATCH_1 } from './blogs_14_15';
+﻿import { NEW_BLOGS_BATCH_1 } from './blogs_14_15';
 import { NEW_BLOGS_BATCH_2 } from './blogs_16_17';
 import { NEW_BLOGS_BATCH_3 } from './blogs_18_19';
 import { NEW_BLOGS_BATCH_4 } from './blogs_20_21';
@@ -27,11 +27,11 @@ const OLD_BLOGS = [
     desc: "Plan the perfect sangeet ceremony in Jaipur. Tips on timeline, family performances, music, decor & hiring the right anchor for your sangeet night.",
     image: "/sangeet-red-glitter-stage.webp",
     content: `
-I still remember the first [sangeet ceremony in Jaipur](https://yashsoni.in/sangeet-anchor-jaipur) I anchored at Rambagh Palace. The bride's grandmother, nearly 80 years old, surprised everyone by leading a traditional Ghoomar dance. That single moment—three generations dancing together under fairy lights—is what makes sangeet nights in the Pink City so magical.
+I still remember the first [sangeet ceremony in Jaipur](https://yashsoni.in/sangeet-anchor-jaipur) I anchored at Rambagh Palace. The bride's grandmother, nearly 80 years old, surprised everyone by leading a traditional Ghoomar dance. That single moment-three generations dancing together under fairy lights-is what makes sangeet nights in the Pink City so magical.
 
 ### What Makes Jaipur Sangeets Special?
 
-In [Jaipur](/anchor-in-jaipur), sangeet ceremonies aren't just pre-wedding parties—they're where families truly bond. Unlike the formal [wedding ceremony](https://yashsoni.in/wedding-anchor-jaipur) or the intimate [mehendi function](https://yashsoni.in/mehendi-anchor-jaipur), your sangeet is pure celebration. No rituals to worry about, just music, laughter, and memories.
+In [Jaipur](/anchor-in-jaipur), sangeet ceremonies aren't just pre-wedding parties-they're where families truly bond. Unlike the formal [wedding ceremony](https://yashsoni.in/wedding-anchor-jaipur) or the intimate [mehendi function](https://yashsoni.in/mehendi-anchor-jaipur), your sangeet is pure celebration. No rituals to worry about, just music, laughter, and memories.
 
 The best part? You get to be creative. I've anchored sangeets with Bollywood themes at the Fairmont, traditional Rajasthani nights at heritage havelis, and even fusion celebrations mixing both. Each one unique, each one unforgettable.
 
@@ -41,12 +41,12 @@ The best part? You get to be creative. I've anchored sangeets with Bollywood the
 Heritage venues like Alsisar Haveli or Diggi Palace offer that authentic Jaipur charm. The courtyards, traditional architecture, and warm lighting create magic without much decoration. Budget: ₹80,000 - ₹2,00,000.
 
 **For Grand Celebrations (200-500 guests):**
-Hotels like [Fairmont or ITC Rajputana](/anchor-in-jaipur) provide professional setups, excellent food, and zero logistical headaches. Their teams have hosted hundreds of sangeets—they know what works. Budget: ₹3,00,000 - ₹10,000,000.
+Hotels like [Fairmont or ITC Rajputana](/anchor-in-jaipur) provide professional setups, excellent food, and zero logistical headaches. Their teams have hosted hundreds of sangeets-they know what works. Budget: ₹3,00,000 - ₹10,000,000.
 
 **For Outdoor Lovers:**
 Farmhouses on the outskirts give you blank canvases. Want a boho theme? A garden party vibe? Complete freedom. Just book a good caterer and your [professional anchor in Jaipur](https://yashsoni.in/sangeet-anchor-jaipur) to coordinate everything. Budget: ₹1,50,000 - ₹4,00,000.
 
-**Pro tip from experience:** Always have an indoor backup for outdoor venues. I once saw a beautiful farmhouse sangeet nearly ruined by sudden rain—thankfully, they had a tent arrangement ready!
+**Pro tip from experience:** Always have an indoor backup for outdoor venues. I once saw a beautiful farmhouse sangeet nearly ruined by sudden rain-thankfully, they had a tent arrangement ready!
 
 ### The Anchor's Role (Why You Actually Need One)
 
@@ -54,13 +54,13 @@ Here's the truth: I've seen family members try to host sangeets themselves. It n
 
 A [professional sangeet anchor](https://yashsoni.in/sangeet-anchor-jaipur) does more than hold a microphone:
 
-**We manage energy.** That 2-hour gap between performances? We fill it with games that get everyone participating—not checking their phones.
+**We manage energy.** That 2-hour gap between performances? We fill it with games that get everyone participating-not checking their phones.
 
 **We coordinate chaos.** Your cousin's dance group is late? Your DJ missed a song cue? We handle it invisibly while keeping guests entertained.
 
 **We read the room.** Elderly guests looking tired? Time to dim lights and slow pace. Youngsters getting bored? Let's open the dance floor!
 
-**We bridge cultures.** When bride's Punjabi family meets groom's Rajasthani relatives, [bilingual anchors](https://yashsoni.in/anchor-in-jaipur) ensure everyone feels included—switching seamlessly between Hindi, English, and even Rajasthani.
+**We bridge cultures.** When bride's Punjabi family meets groom's Rajasthani relatives, [bilingual anchors](https://yashsoni.in/anchor-in-jaipur) ensure everyone feels included-switching seamlessly between Hindi, English, and even Rajasthani.
 
 ### Your Sangeet Timeline (What Actually Works)
 
@@ -71,13 +71,13 @@ Guests arrive, welcome drinks, background music. I usually start with light anno
 Make it dramatic! I've done everything from Bollywood-style entrances with backup dancers to romantic entries with fairy lights. This sets your evening's tone.
 
 **8:00 PM - Family Performances**
-Here's my formula: Alternate between families. Groom's side performs, then bride's side, then mixed group. Keeps energy high and rivalry friendly. Limit to 5-7 performances max—trust me, 15 performances kills the vibe.
+Here's my formula: Alternate between families. Groom's side performs, then bride's side, then mixed group. Keeps energy high and rivalry friendly. Limit to 5-7 performances max-trust me, 15 performances kills the vibe.
 
 **9:00 PM - Dinner & Games**
 While guests eat, I host couple trivia or family antakshari. Keeps atmosphere alive, prevents awkward silence.
 
 **9:45 PM - Open Dance Floor**
-DJ time! This is when [professional anchors](https://yashsoni.in/sangeet-anchor-jaipur) really shine—getting shy aunties to dance, organizing group circles, keeping energy peaking.
+DJ time! This is when [professional anchors](https://yashsoni.in/sangeet-anchor-jaipur) really shine-getting shy aunties to dance, organizing group circles, keeping energy peaking.
 
 **11:00 PM - Wrap Up**
 Thank you speech, group photo, goodbye. Perfect timing before guests get exhausted.
@@ -98,7 +98,7 @@ Venue: ₹4,00,000 | [Anchor](https://yashsoni.in/sangeet-anchor-jaipur): ₹60,
 
 ### Let's Create Magic Together
 
-Want to discuss your sangeet vision? I'm here to help make it unforgettable—from choosing the perfect [venue in Jaipur](/anchor-in-jaipur) to coordinating every detail with your [event planner](https://yashsoni.in/event-planning-jaipur).
+Want to discuss your sangeet vision? I'm here to help make it unforgettable-from choosing the perfect [venue in Jaipur](/anchor-in-jaipur) to coordinating every detail with your [event planner](https://yashsoni.in/event-planning-jaipur).
 
 📞 **Call/WhatsApp:** 7737877978  
 🌐 **Website:** [www.yashsoni.in](https://yashsoni.in)
@@ -119,7 +119,7 @@ Want to discuss your sangeet vision? I'm here to help make it unforgettable—fr
     desc: "Complete mehendi ceremony planning guide for Jaipur weddings. Decor ideas, artist tips, schedule & how to keep guests engaged throughout.",
     image: "/indian-bride-solo-decor.webp",
     content: `
-Last month, I anchored a [mehendi ceremony in Jaipur](https://yashsoni.in/mehendi-anchor-jaipur) where the bride hid her fiancé's name in such an intricate design that guests spent an hour searching! The winner? His 6-year-old niece. That's the beauty of mehendi functions—they're intimate, playful, and create the sweetest memories.
+Last month, I anchored a [mehendi ceremony in Jaipur](https://yashsoni.in/mehendi-anchor-jaipur) where the bride hid her fiancé's name in such an intricate design that guests spent an hour searching! The winner? His 6-year-old niece. That's the beauty of mehendi functions-they're intimate, playful, and create the sweetest memories.
 
 ### Why Mehendi Ceremonies Feel Different
 
@@ -133,7 +133,7 @@ In [Jaipur](/anchor-in-jaipur), we blend traditional Rajasthani mehendi customs 
 Diggi Palace, Alsisar Haveli gardens, or farmhouse lawns work beautifully. The natural setting complements mehendi's aesthetic perfectly. Budget: ₹40,000 - ₹1,50,000.
 
 **Heritage Havelis:**
-For that authentic [Jaipur wedding](https://yashsoni.in/wedding-anchor-jaipur) experience, heritage courtyards offer stunning backdrops. The traditional architecture needs minimal decoration—just add marigold flowers and colorful dupattas. Budget: ₹60,000 - ₹2,00,000.
+For that authentic [Jaipur wedding](https://yashsoni.in/wedding-anchor-jaipur) experience, heritage courtyards offer stunning backdrops. The traditional architecture needs minimal decoration-just add marigold flowers and colorful dupattas. Budget: ₹60,000 - ₹2,00,000.
 
 **Hotel Poolside:**
 ITC Rajputana or JW Marriott poolside setups create modern, luxe vibes. Professional lighting, catering, and backup indoor options included. Budget: ₹1,50,000 - ₹4,00,000.
@@ -163,7 +163,7 @@ As a [professional mehendi anchor in Jaipur](https://yashsoni.in/mehendi-anchor-
 The artist hides fiancé's name in bride's design. First to find it wins. Creates hilarious chaos with 50 women huddled around bride's hands!
 
 **Mehendi Design Contest:**
-Give everyone paper and pens. Best design wins. Even aunties participate—and get surprisingly competitive!
+Give everyone paper and pens. Best design wins. Even aunties participate-and get surprisingly competitive!
 
 **Bollywood Mehendi Songs:**
 Name 10 Bollywood songs with "mehendi" in lyrics. Harder than it sounds! Teams compete. Winners get mehendi cones as prizes.
@@ -205,27 +205,27 @@ Every bride deserves a mehendi ceremony that's relaxed, beautiful, and memorable
     desc: "Plan a fun haldi ceremony in Jaipur with the right decor, music & anchor. Step-by-step guide for a vibrant, memorable haldi celebration.",
     image: "/haldi-bride-groom-family.webp",
     content: `
-There's something magical about haldi ceremonies—maybe it's the yellow everywhere, maybe it's the playful chaos, or maybe it's watching dignified uncles throwing turmeric paste at each other like five-year-olds. Last week, I anchored a [haldi ceremony in Jaipur](https://yashsoni.in/haldi-anchor-jaipur) where the groom ended up in the pool, fully dressed, covered in haldi. Best photos of the entire wedding week!
+There's something magical about haldi ceremonies-maybe it's the yellow everywhere, maybe it's the playful chaos, or maybe it's watching dignified uncles throwing turmeric paste at each other like five-year-olds. Last week, I anchored a [haldi ceremony in Jaipur](https://yashsoni.in/haldi-anchor-jaipur) where the groom ended up in the pool, fully dressed, covered in haldi. Best photos of the entire wedding week!
 
 ![Bride and Groom celebrating Haldi with family](/bride-groom-haldi-celebration.webp)
 
 ### Understanding Haldi: More Than Yellow Paste
 
-The haldi ceremony is sacred—turmeric symbolizes purification, blessings, and warding off evil. But modern [Jaipur weddings](https://yashsoni.in/wedding-anchor-jaipur) have transformed it into one of the most fun pre-wedding functions.
+The haldi ceremony is sacred-turmeric symbolizes purification, blessings, and warding off evil. But modern [Jaipur weddings](https://yashsoni.in/wedding-anchor-jaipur) have transformed it into one of the most fun pre-wedding functions.
 
 Unlike the intimate [mehendi](https://yashsoni.in/mehendi-anchor-jaipur) or high-energy [sangeet](https://yashsoni.in/sangeet-anchor-jaipur), haldi strikes perfect balance: meaningful traditions + playful moments + stunning yellow aesthetic.
 
-Traditionally, family elders apply turmeric paste to bride and groom separately at their homes. Modern celebrations? We're doing joint haldi at beautiful [venues in Jaipur](/anchor-in-jaipur), with 100+ guests, decorations, photographers, and yes—[professional anchors](https://yashsoni.in/haldi-anchor-jaipur) to keep it organized!
+Traditionally, family elders apply turmeric paste to bride and groom separately at their homes. Modern celebrations? We're doing joint haldi at beautiful [venues in Jaipur](/anchor-in-jaipur), with 100+ guests, decorations, photographers, and yes-[professional anchors](https://yashsoni.in/haldi-anchor-jaipur) to keep it organized!
 
 ### Best Haldi Venues in Jaipur
 
 **Garden & Poolside (Most Popular):**
-Outdoor settings work beautifully for haldi—natural light, open space, water nearby for clean-up. JW Marriott poolside, farmhouse lawns, Diggi Palace gardens. Budget: ₹40,000 - ₹2,00,000.
+Outdoor settings work beautifully for haldi-natural light, open space, water nearby for clean-up. JW Marriott poolside, farmhouse lawns, Diggi Palace gardens. Budget: ₹40,000 - ₹2,00,000.
 
 **Why poolside rocks:** Guests inevitably end up throwing haldi everywhere. Having a pool nearby? Game changer. Plus, those pool-entry photos? Viral-worthy.
 
 **Heritage Courtyards:**
-Alsisar Haveli, Shahpura House, Samode Haveli courtyards offer traditional vibes. The architecture needs minimal decoration—yellow marigolds and you're set. Budget: ₹60,000 - ₹1,80,000.
+Alsisar Haveli, Shahpura House, Samode Haveli courtyards offer traditional vibes. The architecture needs minimal decoration-yellow marigolds and you're set. Budget: ₹60,000 - ₹1,80,000.
 
 **Home Haldi (Traditional):**
 Many families still prefer home ceremonies. With right [event planning](https://yashsoni.in/event-planning-jaipur), your courtyard transforms beautifully. Most budget-friendly. Budget: ₹15,000 - ₹60,000.
@@ -316,30 +316,30 @@ Ready to plan a haldi ceremony that balances tradition with fun? I'm here to hel
     fullDate: "March 04, 2026",
     readTime: "6 min",
     title: "Meet Yash Soni: Jaipur's Most Trusted Wedding & Event Anchor",
-    desc: "Meet Yash Soni — Jaipur's top anchor & emcee with 4+ years experience and 1100+ events hosted across Rajasthan. His story & journey.",
+    desc: "Meet Yash Soni, Jaipur's top anchor & emcee with 4+ years experience and 1100+ events hosted across Rajasthan. His story & journey.",
     image: "/hawa-mahal-portrait.webp",
     content: `
 I never planned to become an [anchor in Jaipur](https://yashsoni.in/anchor-in-jaipur). It started with hosting my cousin's [sangeet ceremony](https://yashsoni.in/sangeet-anchor-jaipur) at a farmhouse outside the city. Halfway through, the professional anchor didn't show up. Panic mode. Someone handed me a microphone and said, "You're funny, just keep people entertained until he arrives."
 
 He never came. I hosted the entire night. And honestly? I loved every minute of it.
 
-That was 4+ years ago. Since then, I've anchored 500+ weddings, 200+ corporate events, and celebrations in every corner of Rajasthan—from the City Palace in [Jaipur](/anchor-in-jaipur) to lakeside venues in [Udaipur](/anchor-in-udaipur), from desert celebrations in [Jaisalmer](/anchor-in-jaisalmer) to blue city weddings in [Jodhpur](/anchor-in-jodhpur).
+That was 4+ years ago. Since then, I've anchored 500+ weddings, 200+ corporate events, and celebrations in every corner of Rajasthan-from the City Palace in [Jaipur](/anchor-in-jaipur) to lakeside venues in [Udaipur](/anchor-in-udaipur), from desert celebrations in [Jaisalmer](/anchor-in-jaisalmer) to blue city weddings in [Jodhpur](/anchor-in-jodhpur).
 
 ### What Makes Me Different?
 
-Let me be honest: Jaipur has many anchors. Some are great, some are learning, some should probably stick to their day jobs. What sets me apart isn't that I'm "the best"—it's that I genuinely understand Jaipur.
+Let me be honest: Jaipur has many anchors. Some are great, some are learning, some should probably stick to their day jobs. What sets me apart isn't that I'm "the best"-it's that I genuinely understand Jaipur.
 
 **I grew up here.** I know the difference between a City Palace wedding and a Rambagh Palace celebration. I understand why Rajasthani grandmothers cry during Ghoomar dances. I can switch seamlessly between Hindi, English, and Rajasthani depending on who I'm addressing.
 
 **I'm not just reading scripts.** Every [wedding I anchor](https://yashsoni.in/wedding-anchor-jaipur) gets a custom approach based on the couple's personality, family dynamics, and cultural backgrounds. Cookie-cutter hosting? Not my style.
 
-**I actually care.** Your [wedding day](https://yashsoni.in/wedding-planning-jaipur) isn't content for my Instagram—it's YOUR memory. I show up an hour early, I stay late if needed, and I coordinate with your entire vendor team to ensure everything flows perfectly.
+**I actually care.** Your [wedding day](https://yashsoni.in/wedding-planning-jaipur) isn't content for my Instagram-it's YOUR memory. I show up an hour early, I stay late if needed, and I coordinate with your entire vendor team to ensure everything flows perfectly.
 
 ### My Specializations
 
 **Wedding Celebrations:**
 
-[**Sangeet Ceremonies**](https://yashsoni.in/sangeet-anchor-jaipur) are where I shine brightest. High energy, Bollywood games, family performances, dance-offs—this is my element. I keep 500 guests engaged for 6 hours without anyone checking their phones.
+[**Sangeet Ceremonies**](https://yashsoni.in/sangeet-anchor-jaipur) are where I shine brightest. High energy, Bollywood games, family performances, dance-offs-this is my element. I keep 500 guests engaged for 6 hours without anyone checking their phones.
 
 [**Mehendi Functions**](https://yashsoni.in/mehendi-anchor-jaipur) require a different skill set: managing intimate gatherings, coordinating mehendi artists, hosting games that keep ladies entertained while the bride gets her intricate design done. I've perfected the art of making 3-hour mehendi ceremonies fly by.
 
@@ -347,7 +347,7 @@ Let me be honest: Jaipur has many anchors. Some are great, some are learning, so
 
 **Destination Weddings:**
 
-I specialize in [destination weddings across Rajasthan](https://yashsoni.in/destination-wedding-anchor). Whether you're planning multi-day celebrations in [Udaipur's](/anchor-in-udaipur) romantic settings, [Jodhpur's](/anchor-in-jodhpur) blue city backdrop, or [Pushkar's](/anchor-in-pushkar) spiritual vibes—I coordinate everything seamlessly.
+I specialize in [destination weddings across Rajasthan](https://yashsoni.in/destination-wedding-anchor). Whether you're planning multi-day celebrations in [Udaipur's](/anchor-in-udaipur) romantic settings, [Jodhpur's](/anchor-in-jodhpur) blue city backdrop, or [Pushkar's](/anchor-in-pushkar) spiritual vibes-I coordinate everything seamlessly.
 
 **Corporate Events:**
 
@@ -367,7 +367,7 @@ When you book me, we're not just having one quick call. I schedule multiple meet
 - Family dynamics and sensitivities
 - Guest demographics (age range, languages spoken)
 
-I create custom scripts—not generic templates. Your wedding isn't like the last 50 I anchored, so why would I use the same material?
+I create custom scripts-not generic templates. Your wedding isn't like the last 50 I anchored, so why would I use the same material?
 
 I coordinate with your entire vendor team: [event planner](https://yashsoni.in/event-planning-jaipur), DJ, caterer, decorator, photographer. Everyone gets my detailed timeline. Everyone knows their cues. No surprises.
 
@@ -379,7 +379,7 @@ I coordinate with your entire vendor team: [event planner](https://yashsoni.in/e
 
 ### Let's Create Something Memorable
 
-Whether you're planning an intimate [haldi ceremony](https://yashsoni.in/haldi-anchor-jaipur), a grand [sangeet night](https://yashsoni.in/sangeet-anchor-jaipur), a [destination wedding across Rajasthan](https://yashsoni.in/destination-wedding-anchor), or a [corporate conference](https://yashsoni.in/corporate-event-anchor-jaipur)—I'm here to make it unforgettable.
+Whether you're planning an intimate [haldi ceremony](https://yashsoni.in/haldi-anchor-jaipur), a grand [sangeet night](https://yashsoni.in/sangeet-anchor-jaipur), a [destination wedding across Rajasthan](https://yashsoni.in/destination-wedding-anchor), or a [corporate conference](https://yashsoni.in/corporate-event-anchor-jaipur)-I'm here to make it unforgettable.
 
 Let's talk about your vision. I promise to listen more than I talk (rare for an anchor, I know!).
 
@@ -407,7 +407,7 @@ Let's talk about your vision. I promise to listen more than I talk (rare for an 
 
 The frustrating answer everyone gives? "It depends." 
 
-The helpful answer I'm giving you today? Real numbers from real [weddings I've anchored in Jaipur](https://yashsoni.in/wedding-anchor-jaipur) over the past year. No vague estimates—actual costs broken down by wedding size, venue type, and celebration style.
+The helpful answer I'm giving you today? Real numbers from real [weddings I've anchored in Jaipur](https://yashsoni.in/wedding-anchor-jaipur) over the past year. No vague estimates-actual costs broken down by wedding size, venue type, and celebration style.
 
 Let's get transparent about money.
 
@@ -537,7 +537,7 @@ I offer complimentary consultation where I:
     fullDate: "March 06, 2026",
     readTime: "6 min",
     title: "Udaipur vs Jaipur for Weddings: Which City Should You Choose in 2026?",
-    desc: "Udaipur vs Jaipur for your destination wedding — venues, costs, weather & vibe compared. Which Rajasthan city is right for your big day?",
+    desc: "Udaipur vs Jaipur for your destination wedding, venues, costs, weather & vibe compared. Which Rajasthan city is right for your big day?",
     image: "/jal-mahal-jaipur-artist.webp",
     content: `
 Last month, I anchored a [destination wedding in Udaipur](/anchor-in-udaipur) at Taj Lake Palace. Stunning venue, romantic lakeside setting, bride floating across Pichola Lake in a decorated boat. Instagram paradise.
@@ -546,7 +546,7 @@ This month? I'm anchoring a [wedding in Jaipur](/anchor-in-jaipur) at Rambagh Pa
 
 Both beautiful. Both magical. But VERY different.
 
-As someone who anchors [destination weddings across Rajasthan](https://yashsoni.in/destination-wedding-anchor), I get asked constantly: "Udaipur or Jaipur—which should we pick?"
+As someone who anchors [destination weddings across Rajasthan](https://yashsoni.in/destination-wedding-anchor), I get asked constantly: "Udaipur or Jaipur-which should we pick?"
 
 Let me break it down honestly.
 
@@ -662,7 +662,7 @@ Why? If budget isn't primary concern, guest list is intimate, and you want that 
 
 ### I Coordinate Both Cities
 
-Whether you choose [Udaipur](/anchor-in-udaipur), [Jaipur](/anchor-in-jaipur), or both—I coordinate [destination weddings](https://yashsoni.in/destination-wedding-anchor) seamlessly across Rajasthan.
+Whether you choose [Udaipur](/anchor-in-udaipur), [Jaipur](/anchor-in-jaipur), or both-I coordinate [destination weddings](https://yashsoni.in/destination-wedding-anchor) seamlessly across Rajasthan.
 
 📞 **Call/WhatsApp:** 7737877978  
 🌐 **Website:** [www.yashsoni.in](https://yashsoni.in)
@@ -691,7 +691,7 @@ Couple calls excited about their [wedding in Jaipur](https://yashsoni.in/wedding
 
 I give honest numbers. Silence. Then: "But my friend's cousin hired an anchor for ₹5,000!"
 
-Here's what I've learned after anchoring 500+ events: transparent pricing saves everyone's time. So let's talk numbers—real, honest, no-BS pricing for [professional anchors in Jaipur](https://yashsoni.in/anchor-in-jaipur) in 2026.
+Here's what I've learned after anchoring 500+ events: transparent pricing saves everyone's time. So let's talk numbers-real, honest, no-BS pricing for [professional anchors in Jaipur](https://yashsoni.in/anchor-in-jaipur) in 2026.
 
 ### Why Anchor Charges Vary So Much
 
@@ -814,11 +814,11 @@ I price myself in the **upper-middle range** for [Jaipur anchors](https://yashso
 - Solidly in "experienced professional" tier
 
 **Why This Works:**
-Families get genuine expertise without paying celebrity premium. I can focus on quality over quantity—I'd rather anchor 2 weddings excellently per weekend than rush through 4 mediocrely.
+Families get genuine expertise without paying celebrity premium. I can focus on quality over quantity-I'd rather anchor 2 weddings excellently per weekend than rush through 4 mediocrely.
 
 ### Let's Talk About Your Event
 
-Every event is unique. These are base rates—I customize packages based on your specific needs.
+Every event is unique. These are base rates-I customize packages based on your specific needs.
 
 Free 30-minute consultation where we discuss:
 - Your event vision and requirements
@@ -858,7 +858,7 @@ Let me share everything I've learned anchoring [destination weddings in Jodhpur]
 Jodhpur's old city is painted brilliant blue. Photos against this backdrop are instantly recognizable and uniquely Jodhpur. Your wedding becomes visually distinct from every other Rajasthan celebration.
 
 **Mehrangarh Fort Dominance:**
-This isn't just another fort—it's one of India's largest and most magnificent. Many venues offer fort views, and some even host events inside. That's architectural drama no other city can match.
+This isn't just another fort-it's one of India's largest and most magnificent. Many venues offer fort views, and some even host events inside. That's architectural drama no other city can match.
 
 **Less "Tourist-y" Than Jaipur/Udaipur:**
 Jodhpur feels more authentic, less commercialized. You get genuine Rajasthani culture without the heavy tourist infrastructure. Your guests experience "real" Rajasthan.
@@ -997,7 +997,7 @@ As [professional anchor](https://yashsoni.in/destination-wedding-anchor) who's c
     desc: "Best farmhouse wedding venues in Jaipur for 2026. Capacity, pricing, locations & tips for choosing the perfect outdoor farmhouse for your wedding.",
     image: "/rose-petal-tree-background.webp",
     content: `
-There's something magical about farmhouse weddings in [Jaipur](/anchor-in-jaipur). Last month, I anchored a [sangeet ceremony](https://yashsoni.in/sangeet-anchor-jaipur) at a farmhouse on Ajmer Road where they'd set up a traditional Rajasthani village theme—complete with rope swings, charpais, and fairy lights everywhere. As the sun set over open fields, the entire space transformed into a glowing wonderland.
+There's something magical about farmhouse weddings in [Jaipur](/anchor-in-jaipur). Last month, I anchored a [sangeet ceremony](https://yashsoni.in/sangeet-anchor-jaipur) at a farmhouse on Ajmer Road where they'd set up a traditional Rajasthani village theme-complete with rope swings, charpais, and fairy lights everywhere. As the sun set over open fields, the entire space transformed into a glowing wonderland.
 
 Try creating that atmosphere in a hotel ballroom. You can't.
 
@@ -1011,13 +1011,13 @@ Let me share everything.
 Hotels have rules, layouts, timing restrictions. Farmhouses? Do whatever you want. Want a [mehendi function](https://yashsoni.in/mehendi-anchor-jaipur) starting at 10 AM? Sure. Dancing until 3 AM? No problem. Bring your own décor theme? Absolutely.
 
 **Space:**
-Open lawns, multiple areas for different activities, no space constraints. Your [sangeet](https://yashsoni.in/sangeet-anchor-jaipur) can have a dance floor, games area, food stations, lounge zones—all spread comfortably.
+Open lawns, multiple areas for different activities, no space constraints. Your [sangeet](https://yashsoni.in/sangeet-anchor-jaipur) can have a dance floor, games area, food stations, lounge zones-all spread comfortably.
 
 **Cost Savings:**
 Farmhouse rental (₹50K-2L) + your vendors often costs LESS than hotel packages (₹3L-10L+), even with same service quality.
 
 **Authentic Vibe:**
-Under stars, open fields, rural setting—creates that "real celebration" atmosphere hotels can't replicate.
+Under stars, open fields, rural setting-creates that "real celebration" atmosphere hotels can't replicate.
 
 **Multi-Function Convenience:**
 Rent for full day or multiple days. Host [haldi in morning](https://yashsoni.in/haldi-anchor-jaipur), [sangeet at night](https://yashsoni.in/sangeet-anchor-jaipur), all same location.
@@ -1026,7 +1026,7 @@ Rent for full day or multiple days. Host [haldi in morning](https://yashsoni.in/
 
 Farmhouses require MORE planning. You coordinate every vendor yourself. Weather contingencies needed. More logistics. Higher organization demands.
 
-Worth it? Absolutely—if you're willing to put in work or hire solid [event planner](https://yashsoni.in/event-planning-jaipur).
+Worth it? Absolutely-if you're willing to put in work or hire solid [event planner](https://yashsoni.in/event-planning-jaipur).
 
 ### Top Farmhouse Areas in Jaipur
 

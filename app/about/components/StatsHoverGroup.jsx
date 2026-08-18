@@ -1,6 +1,6 @@
-/**
- * StatsHoverGroup — Effect 2
- * Mechanic: flex column of stat cards — hovering one scales it up and
+﻿/**
+ * StatsHoverGroup, Effect 2
+ * Mechanic: flex column of stat cards, hovering one scales it up and
  * blurs siblings. Brand palette: Royal Gold, Rolex Green, Royal Hunter
  * as the three accent variants (never plain red/blue/green).
  * Respects prefers-reduced-motion: no scale/blur transitions.

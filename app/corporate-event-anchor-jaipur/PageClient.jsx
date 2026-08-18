@@ -14,14 +14,14 @@ import { ArrowRight, Award, Building2, CalendarCheck, CheckCircle2, Globe, Heart
 // ─────────────────────────────────────────────
 const WA = "https://wa.me/917737877978?text=Hi%20Yash!%20I%27m%20looking%20for%20a%20corporate%20event%20anchor%20in%20Jaipur.%20I%27d%20like%20to%20check%20availability.";
 const GOLD = "#D4AF37";
-// Blue is the corporate identity accent — kept throughoutconst css = `
+// Blue is the corporate identity accent, kept throughoutconst css = `
   @keyframes shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
   .gold-shimmer { background-size:200% auto; animation:shimmer 4s linear infinite; }
 `;
 // ─────────────────────────────────────────────
 // HELPERS
 // ─────────────────────────────────────────────
-// Corporate blue accent — the page's personality color
+// Corporate blue accent, the page's personality color
 const B = ({ children, className = "" }) => (
   <span className={`text-blue-400 ${className}`}>{children}</span>
 );
@@ -74,7 +74,7 @@ const FORMATS = [
   {
     icon: TrendingUp,
     title: "Conferences & Summits",
-    desc: "Formal, articulate, brand-aligned. Panel moderation, keynote introductions, Q&A management — all handled with the gravitas the room demands." },
+    desc: "Formal, articulate, brand-aligned. Panel moderation, keynote introductions, Q&A management, all handled with the gravitas the room demands." },
   {
     icon: Users,
     title: "Product Launches",
@@ -99,7 +99,7 @@ const VENUES = [
     desc: "Jaipur's largest convention centre. National brand summits, government events, and industry galas. Yash has hosted events here for 1,000+ delegates.",
     keywords: ["Corporate anchor JECC Sitapura", "Anchor JECC Jaipur"] },
   {
-    venue: "JLN Marg — Marriott & Fairmont",
+    venue: "JLN Marg, Marriott & Fairmont",
     type: "5-Star Hotel Corporate Events",
     desc: "CEO dinners, brand launches, and international delegation events at Jaipur's luxury hotel corridor. Broadcast-ready precision.",
     keywords: ["Corporate anchor JLN Marg", "Anchor Marriott Jaipur"] },
@@ -123,7 +123,7 @@ const CAPABILITIES = [
     desc: "Mic failure? Keynote speaker late? I fill dead air seamlessly with intelligent engagement so the audience never notices a glitch. In 700+ shows, not once." },
   {
     title: "Audience Retention",
-    desc: "Sharp wit and interactive segments keep energy high during long conferences. Your message doesn't just get delivered — it actually lands." },
+    desc: "Sharp wit and interactive segments keep energy high during long conferences. Your message doesn't just get delivered, it actually lands." },
   {
     title: "Broadcast Ready",
     desc: "Televised events, livestreams, and recorded productions. Teleprompter-trained. Clean transitions. Zero on-air errors. The media team relaxes." },
@@ -136,7 +136,7 @@ const PROCESS = [
   {
     step: "02",
     title: "Scripting & Flow",
-    desc: "I help refine the run-of-show and prepare a script that balances information with engagement. No generic templates — custom every time." },
+    desc: "I help refine the run-of-show and prepare a script that balances information with engagement. No generic templates, custom every time." },
   {
     step: "03",
     title: "The Sound Check",
@@ -159,7 +159,7 @@ const TESTIMONIALS = [
     guests: "Live broadcast event" },
   {
     name: "HR Director, Corporate Group",
-    quote: "Annual Day for 800 employees. Yash handled the awards, the performances, the CEO speech transitions, and the after-party MC role — all in one evening. Seamless.",
+    quote: "Annual Day for 800 employees. Yash handled the awards, the performances, the CEO speech transitions, and the after-party MC role, all in one evening. Seamless.",
     event: "Annual Day · Corporate Campus, Jaipur",
     guests: "800 employees" },
 ];
@@ -177,7 +177,7 @@ const FAQS = [
     a: "Yes. A fully compliant GST invoice is issued for every corporate booking. The booking process includes a formal agreement, advance confirmation, and complete documentation for your accounts team." },
   {
     q: "Are you comfortable with teleprompters for televised events?",
-    a: "Yes. For high-stakes summits, product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining full eye contact with a live audience — so it never looks scripted on camera — is a trained skill that comes from experience." },
+    a: "Yes. For high-stakes summits, product launches, and broadcast-quality corporate productions, teleprompter work is standard. Reading naturally while maintaining full eye contact with a live audience, so it never looks scripted on camera, is a trained skill that comes from experience." },
   {
     q: "Can you moderate panel discussions and Q&A sessions?",
     a: "Yes. Panel moderation includes pre-event research into each speaker's recent work and positions, preparation of insightful questions, and real-time management of audience Q&A. The discussion flows, stays on time, and the panellists feel respected." },
@@ -186,10 +186,10 @@ const FAQS = [
     a: "Yes. While Jaipur is the base, corporate events in Delhi, Mumbai, Bangalore, and other cities are a regular part of the calendar. A significant portion of corporate work happens outside Rajasthan. Travel and accommodation are typically arranged by the client as part of the engagement terms." },
   {
     q: "How do you handle audience engagement in long conferences?",
-    a: "Long conferences lose audiences in the gaps between sessions. The craft is in managing those transitions — using sharp wit, brief interactive moments, and energy pivots at exactly the right points. The audience stays present and your message gets through. This is what 70+ corporate brands have paid for." },
+    a: "Long conferences lose audiences in the gaps between sessions. The craft is in managing those transitions, using sharp wit, brief interactive moments, and energy pivots at exactly the right points. The audience stays present and your message gets through. This is what 70+ corporate brands have paid for." },
   {
     q: "Can you anchor both the formal ceremony and the gala dinner afterparty?",
-    a: "Yes. Shifting from formal award ceremony to high-energy gala entertainment in the same evening — without the room noticing the gear change — is a core corporate skill. Both registers are mastered." },
+    a: "Yes. Shifting from formal award ceremony to high-energy gala entertainment in the same evening, without the room noticing the gear change, is a core corporate skill. Both registers are mastered." },
   {
     q: "What is your approach to brand alignment on stage?",
     a: "I read the brand brief before every event. Tone of voice, prohibited language, key messages to reinforce, and the exact persona the brand wants on stage. I dress the part, speak the part, and never deviate from the brand's positioning. No freelancing." },
@@ -198,7 +198,7 @@ const FAQS = [
     a: "For large-format corporate events at JECC Sitapura and five-star venues, 3–4 months in advance is recommended during peak season. Annual Day events and Q4 award nights book even faster. Reach out via WhatsApp as soon as the venue is confirmed." },
   {
     q: "What sets Anchor Yash apart from other corporate anchors in Jaipur?",
-    a: "Three things: First, 70+ national brands served — the experience shows. Second, completely unscripted crisis management — PA failures, delayed speakers, schedule overruns all handled invisible to the audience. Third, broadcast-ready precision — for events that are recorded or livestreamed, there are zero on-air errors." },
+    a: "Three things: First, 70+ national brands served, the experience shows. Second, completely unscripted crisis management, PA failures, delayed speakers, schedule overruns all handled invisible to the audience. Third, broadcast-ready precision, for events that are recorded or livestreamed, there are zero on-air errors." },
 ];
 const RELATED = [
   { icon: Award, label: "Celebrity Events", href: "/celebrity-public-events-host", desc: "Launches & public events" },
@@ -267,21 +267,21 @@ export default function CorporateAnchor() {
     // selection: gold brand color, not blue
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
-      {/* BREADCRUMB — sr-only */}
+      {/* BREADCRUMB, sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
         <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
         <span>Corporate Event Anchor Jaipur</span>
       </nav>
       {/* ══════════════════════════════════════
-          1. HERO — blue theme preserved
+          1. HERO, blue theme preserved
       ══════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-blue-900/10 z-10" />
           {/* FIX: next/image replaces <img> */}
           <Image src="/service-corporate.webp"
-            alt="Best corporate event anchor in Jaipur — Anchor Yash Soni on stage"
+            alt="Best corporate event anchor in Jaipur, Anchor Yash Soni on stage"
             fill priority
             className="object-cover opacity-50 grayscale"
             sizes="100vw"
@@ -296,12 +296,12 @@ export default function CorporateAnchor() {
                   4.9★ · Best Corporate Anchor in Jaipur
                 </span>
               </div>
-              {/* H1 — primary keyword */}
+              {/* H1, primary keyword */}
               <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tight uppercase">
                 Command<br /><B>The Room.</B>
               </h1>
               <p className="text-zinc-400 text-base md:text-xl font-light leading-relaxed max-w-2xl mb-3 border-l-4 border-blue-600 pl-6">
-                When the CEO speaks, the audience should listen. Jaipur's most reviewed corporate anchor — award nights at JECC Sitapura, summits at Birla Auditorium, product launches at Marriott and Fairmont.
+                When the CEO speaks, the audience should listen. Jaipur's most reviewed corporate anchor, award nights at JECC Sitapura, summits at Birla Auditorium, product launches at Marriott and Fairmont.
               </p>
               <p className="text-zinc-600 text-sm mb-8 pl-6">
                 70+ national brands &nbsp;·&nbsp; 4.9★ across 50+ reviews &nbsp;·&nbsp; Broadcast-ready
@@ -323,7 +323,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          2. STATS — updated to real numbers
+          2. STATS, updated to real numbers
       ══════════════════════════════════════ */}
       <section className=" border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
@@ -340,7 +340,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. WHY YASH — capabilities + photo
+          3. WHY YASH, capabilities + photo
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10 border-t border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
@@ -361,7 +361,7 @@ export default function CorporateAnchor() {
               ))}
             </div>
           </Reveal>
-          {/* Stats grid — kept from original */}
+          {/* Stats grid, kept from original */}
           <Reveal delay={0.12}>
             <div className="grid grid-cols-2 gap-4">
               {STATS.map((s, i) => (
@@ -375,7 +375,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. VIDEO SHOWREEL — next/image fix
+          4. VIDEO SHOWREEL, next/image fix
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 bg-[#080808] border-y border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
@@ -412,7 +412,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. FORMATS — 6 cards
+          5. FORMATS, 6 cards
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -433,7 +433,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. VENUE COVERAGE — NEW SEO section
+          6. VENUE COVERAGE, NEW SEO section
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -470,7 +470,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          7. PROCESS TIMELINE — kept + upgraded
+          7. PROCESS TIMELINE, kept + upgraded
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -496,7 +496,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          8. TESTIMONIALS — NEW section
+          8. TESTIMONIALS, NEW section
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -513,7 +513,7 @@ export default function CorporateAnchor() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-blue-400 transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-blue-400 transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                     <p className="text-blue-400 text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>
@@ -524,11 +524,11 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. FAQ — 10 questions
+          9. FAQ, 10 questions
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading subtitle="Vendor Questions" title="Corporate Anchor Jaipur — FAQ." align="center" />
+          <SectionHeading subtitle="Vendor Questions" title="Corporate Anchor Jaipur, FAQ." align="center" />
           <div className="flex flex-col gap-3">
             {FAQS.map((faq, idx) => (
               <Reveal key={idx} delay={idx * 0.03}>
@@ -539,7 +539,7 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          10. RELATED SERVICES — internal links
+          10. RELATED SERVICES, internal links
       ══════════════════════════════════════ */}
       <section className="py-14 md:py-20  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -565,11 +565,11 @@ export default function CorporateAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          11. SCARCITY CTA — blue accent kept
+          11. SCARCITY CTA, blue accent kept
           but dark base instead of solid blue bg
       ══════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-5 md:px-10 relative overflow-hidden">
-        {/* Kept the blue glow but on dark base — not solid blue background */}
+        {/* Kept the blue glow but on dark base, not solid blue background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_65%)] pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <span className="font-black text-[18vw] text-white/[0.025] leading-none whitespace-nowrap">CORPORATE</span>
@@ -581,7 +581,7 @@ export default function CorporateAnchor() {
               Ready to <B>Elevate</B><br />Your Event?
             </h2>
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
-              Don't risk your brand reputation with an amateur. Jaipur's most reviewed corporate anchor — <strong className="text-blue-400">70+ national brands</strong> have made that call.
+              Don't risk your brand reputation with an amateur. Jaipur's most reviewed corporate anchor, <strong className="text-blue-400">70+ national brands</strong> have made that call.
             </p>
             <p className="text-zinc-600 text-xs mb-8">No waitlist. No replacements. WhatsApp to confirm availability.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">

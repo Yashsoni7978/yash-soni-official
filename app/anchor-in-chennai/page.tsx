@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-chennai/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Chennai",
     "Best Wedding Anchor Chennai",
@@ -88,13 +88,13 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "NRI Destination Wedding — Australia" },
+      author: { "@type": "Person", name: "NRI Destination Wedding, Australia" },
       reviewBody: "Hosting at Taj Fisherman's Cove required absolute poise and the ability to manage a massive coastal lawn. Yash was incredible. His English moderation for our global guests was flawlessly professional and unscripted.",
     },
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Corporate Summit — ITC Grand Chola" },
+      author: { "@type": "Person", name: "Corporate Summit, ITC Grand Chola" },
       reviewBody: "We held an international leadership summit at ITC Grand Chola. Yash moderated our strategic gala sessions with pure executive polish. He perfectly bridges the gap between formal corporate requirements and high-energy hosting.",
     },
   ],
@@ -155,9 +155,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-chennai/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Chennai | Taj & ITC Grand Chola Emcee — Yash Soni`,
+  name: `Best Anchor in Chennai | Taj & ITC Grand Chola Emcee, Yash Soni`,
   headline: `Chennai's Premier Event Anchor for Ultra-Luxury Coastal Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Chennai destination weddings. Mastering prestigious properties like Taj Fisherman's Cove and ITC Grand Chola with unscripted VIP executive hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Chennai destination weddings. Mastering prestigious properties like Taj Fisherman's Cove and ITC Grand Chola with unscripted VIP executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Tamil Nadu` },
@@ -169,7 +169,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Chennai | Luxury Coastal Wedding Emcee`,
-  description: `Looking for the best anchor in Chennai? Anchor Yash Soni — 4.9★. Expert for Taj Fisherman's Cove, ITC Grand Chola, and ultra-prestigious coastal weddings. Flawless unscripted bilingual hosting for VIP events.`,
+  description: `Looking for the best anchor in Chennai? Anchor Yash Soni, 4.9★. Expert for Taj Fisherman's Cove, ITC Grand Chola, and ultra-prestigious coastal weddings. Flawless unscripted bilingual hosting for VIP events.`,
   keywords: [
     "anchor in chennai",
     "best anchor in chennai",
@@ -197,13 +197,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Chennai | Elite Coastal Destination Wedding Host`,
     description: `4.9★ rated. Chennai's premium anchor for highly prestigious destination weddings spanning the ECR luxury ridge. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Chennai — Anchor Yash Soni at Coastal Luxury Resorts` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Chennai, Anchor Yash Soni at Coastal Luxury Resorts` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Chennai | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Chennai | Anchor Yash Soni, 4.9★`,
     description: `Taj Fisherman's Cove. ITC Grand Chola. Chennai's premier bilingual event anchor for exclusive VIP Sangeets and heavily restricted coastal ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Chennai | Coastal VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Chennai | Coastal VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Coastal Wedding, VIP Events, ${CITY}, Tamil Nadu, India`,
     "DC.coverage": `${CITY}, Tamil Nadu, India`,
     "DC.language": "en-IN",

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -91,7 +91,7 @@ const SERVICES = [
   {
     icon: Heart,
     title: "Umed Bhawan Wedding Anchor",
-    desc: "Masterful hosting for extravagant ceremonies at Umed Bhawan Palace and Brijraj Bhawan. Ensuring every ritual—from the grand Baraat entry to the Varmala—is articulated with royal dignity and deep reverence for the Marwari and Rajput families of the Hadoti region.",
+    desc: "Masterful hosting for extravagant ceremonies at Umed Bhawan Palace and Brijraj Bhawan. Ensuring every ritual-from the grand Baraat entry to the Varmala-is articulated with royal dignity and deep reverence for the Marwari and Rajput families of the Hadoti region.",
     tag: "Royal"
   },
   {
@@ -130,7 +130,7 @@ const VS = [
   { problem: "Ignoring the specific Hadoti cultural identity and using generic Mewari references", fix: "Authentic integration of Hadoti heritage and local Marwari/Rajput customs" },
   { problem: "Getting lost in the massive, imposing spaces of Umed Bhawan Palace", fix: "Imperial presence and acoustic command developed for massive heritage properties" },
   { problem: "Failing to connect the younger student/startup crowd with traditional elders", fix: "Flawless code-switching between highly formal respect and modern, engaging humor" },
-  { problem: "Relying on paper notes during complex multi-speaker felicitation ceremonies", fix: "100% unscripted flow—maintaining absolute eye contact and audience control" },
+  { problem: "Relying on paper notes during complex multi-speaker felicitation ceremonies", fix: "100% unscripted flow-maintaining absolute eye contact and audience control" },
   { problem: "Poor mic technique outdoors over the Chambal river causing echo and loss of speech", fix: "Expert outdoor signal handling and strategic crowd-condensing techniques" },
 ];
 
@@ -141,7 +141,7 @@ const TESTIMONIALS = [
     event: "Heritage Wedding · Umed Bhawan Palace · 600 guests"
   },
   {
-    name: "Director — Premium Coaching Institute",
+    name: "Director, Premium Coaching Institute",
     quote: "Our annual faculty felicitation brings together 800 highly educated, extremely analytical professionals. It requires absolute intellectual polish. Yash was formidable. He did not use a single sheet of paper, transitioned smoothly between English and Hindi, and held the room's respect entirely. The standard in Kota has been raised.",
     event: "Corporate Summit · Kota City Banquet · 800 delegates"
   },
@@ -163,7 +163,7 @@ const FAQS = [
   { q: "Can you host bilingual events for NRI families in Kota?", a: "Yes. Destination weddings in Kota attract families seeking deep Rajasthani heritage. Bilingual cultural bridging ensures international guests remain engaged through sophisticated English, while traditional relatives connect through culturally resonant Hindi." },
   { q: "Do you anchor corporate events in Kota?", a: "Kota is an excellent destination for corporate offsites and dealer meets. The hosting register for these events is sharp, brand-aligned, and professional, perfectly suited for leadership summits and galas." },
   { q: "How far in advance should I book for a Kota wedding?", a: "Kota is highly sought after during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Kota for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Kota destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
+  { q: "Who is the best emcee or host in Kota for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Kota destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Kota?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
@@ -178,7 +178,7 @@ export default function PageClient() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/varmala-fireworks-color-shots.webp" alt="Best Anchor in Kota — Umed Bhawan Palace and Heritage" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/varmala-fireworks-color-shots.webp" alt="Best Anchor in Kota, Umed Bhawan Palace and Heritage" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -259,7 +259,7 @@ export default function PageClient() {
                 Kota operates on two distinct but equally demanding peaks: the supreme royal heritage of <strong className="text-[#B5952F]">Umed Bhawan Palace</strong> and the hyper-intellectual environment of the city’s massive education and corporate sector. Yash commands both effortlessly.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                Delivering 100% unscripted, bilingual mastery, he possesses the cultural nuance to honor traditional Hadoti rituals and the corporate polish to engage 800+ executive delegates without breaking stride. In Kota, he doesn't just host the event—he anchors the prestige of the family and the brand.
+                Delivering 100% unscripted, bilingual mastery, he possesses the cultural nuance to honor traditional Hadoti rituals and the corporate polish to engage 800+ executive delegates without breaking stride. In Kota, he doesn't just host the event-he anchors the prestige of the family and the brand.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -288,7 +288,7 @@ export default function PageClient() {
               The Hadoti Capital Demands<br />an <G>Elite Frequency.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Kota is a fascinating duality. It is simultaneously a city of profound royal Rajasthani heritage and one of India’s most rigorous intellectual and industrial hubs. An event here—whether a Marwari palace wedding or a corporate mega-summit—requires an anchor who can walk comfortably in both worlds. A host who lacks intellect will fail the corporates; a host who lacks cultural depth will alienate the heritage families.
+              Kota is a fascinating duality. It is simultaneously a city of profound royal Rajasthani heritage and one of India’s most rigorous intellectual and industrial hubs. An event here-whether a Marwari palace wedding or a corporate mega-summit-requires an anchor who can walk comfortably in both worlds. A host who lacks intellect will fail the corporates; a host who lacks cultural depth will alienate the heritage families.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -402,13 +402,13 @@ export default function PageClient() {
               Palatial Gravity.<br /><G>Intellectual Rigor.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting an event for Kota's top-tier families—the ones who book Umed Bhawan Palace or Brijraj Bhawan—means you are addressing some of the most influential industrialists and educators in India. They do not tolerate fluff. The anchor must be perfectly prepared, articulate, and capable of maintaining an aura of absolute prestige. 
+              Hosting an event for Kota's top-tier families-the ones who book Umed Bhawan Palace or Brijraj Bhawan-means you are addressing some of the most influential industrialists and educators in India. They do not tolerate fluff. The anchor must be perfectly prepared, articulate, and capable of maintaining an aura of absolute prestige. 
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               At the same time, when the formality breaks into a Sangeet party by the Chambal river, you must be capable of injecting rapid, high-caliber energy without resorting to cheap tactics. It requires a highly sophisticated pendulum swing between royal respect and modern celebration.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Kota fluency—mastering the Hadoti heritage, the Umed Bhawan logistics, and the rigorous bilingual corporate standard—marks an anchor who operates at the summit of the industry.
+              Kota fluency-mastering the Hadoti heritage, the Umed Bhawan logistics, and the rigorous bilingual corporate standard-marks an anchor who operates at the summit of the industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -471,7 +471,7 @@ export default function PageClient() {
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Ed-Tech & Industrial" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Kota's corporate events are unusually complex—combining VIP networking, multi-speaker structures, and intricate award sequences. Yash executes these entirely unscripted, providing a seamless, bulletproof anchor layer that allows directors and organizers to fully relax.
+                Kota's corporate events are unusually complex-combining VIP networking, multi-speaker structures, and intricate award sequences. Yash executes these entirely unscripted, providing a seamless, bulletproof anchor layer that allows directors and organizers to fully relax.
               </p>
             </div>
           </Reveal>
@@ -501,7 +501,7 @@ export default function PageClient() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -513,7 +513,7 @@ export default function PageClient() {
 
             {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -521,10 +521,10 @@ export default function PageClient() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Kota's Best.</G>
+                Whatever You Call It -{" "}<G>Kota's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Kota —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Kota -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -536,7 +536,7 @@ export default function PageClient() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Kota",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Kota.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Kota.",
                 keywords: ["best wedding anchor kota", "wedding emcee kota", "wedding host kota", "wedding mc kota"],
               },
               {
@@ -554,13 +554,13 @@ export default function PageClient() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Kota",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Kota — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Kota, by any name.",
                 keywords: ["best emcee in kota", "best anchor in kota", "best host in kota", "best mc kota"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Kota",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host kota", "english speaking anchor kota", "bilingual emcee kota"],
               },
               {
@@ -601,7 +601,7 @@ export default function PageClient() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -706,7 +706,7 @@ export default function PageClient() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Kota's premium venues like Umed Bhawan have heavily contested calendars due to the overlap of peak wedding season and mega corporate events. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

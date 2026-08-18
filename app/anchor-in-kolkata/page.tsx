@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-kolkata/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Kolkata",
     "Best Wedding Anchor Kolkata",
@@ -93,7 +93,7 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Managing Director — FMCG Corporation" },
+      author: { "@type": "Person", name: "Managing Director, FMCG Corporation" },
       reviewBody: "We needed a highly articulate English-speaking host for our national distributor meet in Rajarhat. Yash commanded 600 delegates with no notes, extreme precision, and total authority.",
     },
   ],
@@ -155,9 +155,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-kolkata/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Kolkata | Luxury Wedding & ITC Royal Bengal Host — Yash Soni`,
+  name: `Best Anchor in Kolkata | Luxury Wedding & ITC Royal Bengal Host, Yash Soni`,
   headline: `Kolkata's Most Trusted Event Anchor for ITC Royal Bengal, Elite Marwari Weddings & Corporate Summits`,
-  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Kolkata luxury weddings. Specialist in Marwari heritage events and Rajarhat corporate summits. Bilingual English/Hindi. Zero scripts.`,
+  description: `Anchor Yash Soni, 4.9★ rated, 700+ shows. Premier anchor for Kolkata luxury weddings. Specialist in Marwari heritage events and Rajarhat corporate summits. Bilingual English/Hindi. Zero scripts.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, West Bengal` },
@@ -168,8 +168,8 @@ const webPageSchema = {
 // ─── METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Kolkata | Premium Elite Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Kolkata? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for ITC Royal Bengal, Taj Bengal, and Rajarhat tech/corporate summits. Elite bilingual English/Hindi unscripted hosting.`,
+  title: `Best Anchor in Kolkata | Premium Elite Wedding Host, Yash Soni`,
+  description: `Looking for the best anchor in Kolkata? Anchor Yash Soni, 4.9★ rated, 700+ shows. Expert for ITC Royal Bengal, Taj Bengal, and Rajarhat tech/corporate summits. Elite bilingual English/Hindi unscripted hosting.`,
   keywords: [
     "anchor in kolkata",
     "best anchor in kolkata",
@@ -199,13 +199,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Kolkata | Elite Marwari Wedding & Corporate Host`,
     description: `4.9★ rated. 700+ shows. Kolkata's most trusted anchor for ITC Royal Bengal luxury weddings and Rajarhat corporate summits. Flawless bilingual English/Hindi execution.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Kolkata — Anchor Yash Soni at ITC Royal Bengal` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Kolkata, Anchor Yash Soni at ITC Royal Bengal` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Kolkata | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Kolkata | Anchor Yash Soni, 4.9★`,
     description: `ITC Royal Bengal. Taj Bengal. Rajarhat Summits. Kolkata's premier bilingual event anchor. 700+ shows. Zero scripts.`,
     images: [OG_IMAGE],
   },
@@ -214,7 +214,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Kolkata | Luxury Urban Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Kolkata | Luxury Urban Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Luxury Wedding, Elite Events, Corporate Emcee, ${CITY}, West Bengal, India`,
     "DC.coverage": `${CITY}, West Bengal, India`,
     "DC.language": "en-IN",

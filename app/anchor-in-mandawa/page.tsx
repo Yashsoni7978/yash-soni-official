@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-mandawa/layout.jsx
-// Minimal layout — all metadata & schemas are in page.tsx
+// Minimal layout, all metadata & schemas are in page.tsx
 
 
 const FAQS = [
@@ -47,7 +47,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-mandawa/#webpage`,
   url: `https://yashsoni.in/anchor-in-mandawa`,
-  name: `Best Anchor in mandawa | Wedding & Event Host — Yash Soni`,
+  name: `Best Anchor in mandawa | Wedding & Event Host, Yash Soni`,
   description: `Anchor Yash Soni is the premium event anchor in mandawa. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

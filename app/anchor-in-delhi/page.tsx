@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-delhi/layout.jsx
-// SERVER COMPONENT — SEO metadata only. All JSON-LD schemas inside.
+// SERVER COMPONENT, SEO metadata only. All JSON-LD schemas inside.
 
 const CITY       = "Delhi";
 const SLUG       = "anchor-in-delhi";
@@ -17,7 +17,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type":    "ProfessionalService",
   "@id":      `${FULL_URL}/#business`,
-  name:        `Anchor Yash Soni — Best Anchor in ${CITY} NCR`,
+  name:        `Anchor Yash Soni, Best Anchor in ${CITY} NCR`,
   alternateName: [
     `Anchor in ${CITY}`,
     `Wedding Anchor ${CITY} NCR`,
@@ -106,7 +106,7 @@ const personSchema = {
     "Punjabi Sangeet Hosting",
     "Aerocity Corporate Summits",
   ],
-  award: "4.9★ Rated — 50+ Five-Star Reviews",
+  award: "4.9★ Rated, 50+ Five-Star Reviews",
 };
 
 const breadcrumbSchema = {
@@ -122,10 +122,10 @@ const breadcrumbSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
 
-  title: `Best Anchor in Delhi NCR | Wedding Host & Corporate Emcee — Yash Soni`,
+  title: `Best Anchor in Delhi NCR | Wedding Host & Corporate Emcee, Yash Soni`,
 
   description:
-    `Looking for the best anchor in Delhi NCR? Anchor Yash Soni — 4.9★ rated, 700+ shows. Elite corporate emcee & massive Chhatarpur farm wedding host. Bilingual, zero paper scripts, and VIP-trusted.`,
+    `Looking for the best anchor in Delhi NCR? Anchor Yash Soni, 4.9★ rated, 700+ shows. Elite corporate emcee & massive Chhatarpur farm wedding host. Bilingual, zero paper scripts, and VIP-trusted.`,
 
   keywords: [
     // Core identity
@@ -140,7 +140,7 @@ export const metadata: Metadata = {
     "male anchor in delhi",
     "emcee delhi",
     "event host delhi",
-    // Venue-specific — high intent
+    // Venue-specific, high intent
     "taj palace delhi wedding anchor",
     "itc maurya corporate emcee",
     "chhatarpur farm wedding anchor",
@@ -194,7 +194,7 @@ export const metadata: Metadata = {
         url:    OG_IMAGE,
         width:  1200,
         height: 630,
-        alt:    `Anchor Yash Soni — Best Event Anchor in Delhi NCR`,
+        alt:    `Anchor Yash Soni, Best Event Anchor in Delhi NCR`,
       },
     ],
   },
@@ -204,7 +204,7 @@ export const metadata: Metadata = {
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
     title:       `Best Anchor in Delhi NCR | Corporate & Wedding Emcee`,
-    description: `Massive Farm Weddings. Aerocity Summits. Delhi NCR's most trusted elite anchor — 700+ shows, 4.9★ rated.`,
+    description: `Massive Farm Weddings. Aerocity Summits. Delhi NCR's most trusted elite anchor, 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
 
@@ -264,7 +264,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-delhi/#webpage`,
   url: `https://${DOMAIN}/${SLUG}`,
-  name: `Best Anchor in Delhi | Wedding & Event Host — Yash Soni`,
+  name: `Best Anchor in Delhi | Wedding & Event Host, Yash Soni`,
   description: `Anchor Yash Soni is the premium event anchor in Delhi. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

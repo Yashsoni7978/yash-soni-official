@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
-// Schema data — moved here from PageClient.jsx for server-side rendering
+// Schema data, moved here from PageClient.jsx for server-side rendering
 const FAQS = [
   { q: "Who is the best anchor for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across India. With a 4.9? rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in cultural traditions." },
   { q: "Which anchor is best for destination weddings?", a: "Anchor Yash Soni is a top choice for destination weddings. He hosts events across premium venues and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
@@ -10,11 +10,11 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "Who is the best Sangeet anchor in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 700+ shows hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM — consistently.",
+    a: "Anchor Yash Soni is Jaipur's 4.9★ rated Sangeet host with 700+ shows hosted. He specialises in farmhouse Sangeets on Ajmer Road with 500–1,500 guests, palace Sangeet events in Kukas and Amer Road, and destination Sangeets across Jaipur & Rajasthan. His unscripted crowd psychology keeps dance floors packed until 4 AM, consistently.",
   },
   {
     q: "Why hire a professional Sangeet anchor instead of a family member?",
-    a: "A professional anchor manages the technical coordination with the DJ, eliminates dead air between performances, handles crises invisibly, and keeps energy peaking for 4–6 hours without fatigue. Family members bring personal moments — Yash brings the architecture that makes those moments land perfectly.",
+    a: "A professional anchor manages the technical coordination with the DJ, eliminates dead air between performances, handles crises invisibly, and keeps energy peaking for 4–6 hours without fatigue. Family members bring personal moments, Yash brings the architecture that makes those moments land perfectly.",
   },
   {
     q: "Do you help script family performances and entries?",
@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "Can you handle farmhouse Sangeets on Ajmer Road with 1,000+ guests?",
-    a: "This is a core specialisation. Farmhouse Sangeets on Ajmer Road and Bhankrota with 1,000–1,500 guests are a regular format. Commanding open-air crowds at scale without a script — reading energy, redirecting it, and keeping the dance floor electric until 4 AM — is the skill that separates Yash from announcers.",
+    a: "This is a core specialisation. Farmhouse Sangeets on Ajmer Road and Bhankrota with 1,000–1,500 guests are a regular format. Commanding open-air crowds at scale without a script, reading energy, redirecting it, and keeping the dance floor electric until 4 AM, is the skill that separates Yash from announcers.",
   },
   {
     q: "How do you handle technical glitches or delays?",
@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Can you host a Bollywood-style Awards Night Sangeet?",
-    a: "The Sangeet Awards segment is a signature format — custom award categories like 'The Drama Queen' or 'The Late Arrival', acceptance speeches, trophy moments, and fanfares that involve the whole family. It turns a standard Sangeet into a full production.",
+    a: "The Sangeet Awards segment is a signature format, custom award categories like 'The Drama Queen' or 'The Late Arrival', acceptance speeches, trophy moments, and fanfares that involve the whole family. It turns a standard Sangeet into a full production.",
   },
   {
     q: "Do you coordinate with our DJ and sound team?",
@@ -42,11 +42,11 @@ const FAQS = [
   },
   {
     q: "How far in advance should we book a Sangeet anchor in Jaipur?",
-    a: "Jaipur's peak wedding season (October–February) books 6–8 months in advance. No waitlists are maintained and no replacement anchors are sent. The moment your venue is locked, reach out via WhatsApp immediately — Sangeet dates in peak season fill before wedding slots.",
+    a: "Jaipur's peak wedding season (October–February) books 6–8 months in advance. No waitlists are maintained and no replacement anchors are sent. The moment your venue is locked, reach out via WhatsApp immediately, Sangeet dates in peak season fill before wedding slots.",
   },
   {
     q: "What is the hosting duration for a Sangeet?",
-    a: "A standard Sangeet shift is 4–6 hours — from guest arrivals and family entries through the stage show and into the open dance floor. For large farmhouse events on Ajmer Road that run until 4 AM, extended duration terms are available.",
+    a: "A standard Sangeet shift is 4–6 hours, from guest arrivals and family entries through the stage show and into the open dance floor. For large farmhouse events on Ajmer Road that run until 4 AM, extended duration terms are available.",
   },
 ];
 

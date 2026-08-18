@@ -3,13 +3,13 @@ import path from "path";
 import { BLOG_POSTS } from "../data/blogs";
 
 /**
- * Dynamic Sitemap Generator — Technical SEO Architect
+ * Dynamic Sitemap Generator, Technical SEO Architect
  *
  * Improvements over previous version:
- * 1. Removed EXPECTED_BLOGS whitelist — ALL blog posts are now included.
+ * 1. Removed EXPECTED_BLOGS whitelist, ALL blog posts are now included.
  * 2. /privacy and /terms are now omitted (they have robots: noindex in their
  *    page metadata, so they should NOT appear in sitemap per SEO best practice).
- * 3. Priority heuristics refined — duplicate /anchor-in-jaipur entries removed.
+ * 3. Priority heuristics refined, duplicate /anchor-in-jaipur entries removed.
  * 4. lastModified uses ISO string for compatibility.
  */
 
@@ -53,9 +53,9 @@ export default function sitemap() {
         const urlPath = cleanedPath === "" ? "" : `/${cleanedPath}`;
 
         // Pages that should NOT appear in sitemap:
-        // - /privacy and /terms have robots: noindex — excluded correctly
-        // - /blog/[slug] is a dynamic route — added separately below
-        // - /locations/jaipur redirects to /anchor-in-jaipur — excluded
+        // - /privacy and /terms have robots: noindex, excluded correctly
+        // - /blog/[slug] is a dynamic route, added separately below
+        // - /locations/jaipur redirects to /anchor-in-jaipur, excluded
         const EXCLUDED_ROUTES = [
           "/privacy",
           "/terms",
@@ -94,17 +94,18 @@ export default function sitemap() {
     let priority = 0.6;
     let changeFrequency = "monthly";
 
-    // 1.0 — Homepage
+    // 1.0, Homepage
     if (route.path === "" || route.path === "/") {
       priority = 1.0;
       changeFrequency = "daily";
     }
-    // 0.95 — Primary money pages (highest commercial intent)
+    // 0.95, Primary money pages (highest commercial intent)
     else if (
       [
         "/anchor-in-jaipur",
         "/best-anchor-in-jaipur",
         "/wedding-anchor-jaipur",
+        "/wedding-emcee-jaipur",
         "/sangeet-anchor-jaipur",
         "/corporate-event-anchor-jaipur",
       ].includes(route.path)
@@ -112,7 +113,7 @@ export default function sitemap() {
       priority = 0.95;
       changeFrequency = "weekly";
     }
-    // 0.85 — Secondary service pages and regional hubs
+    // 0.85, Secondary service pages and regional hubs
     else if (
       route.path === "/anchor-in-rajasthan" ||
       route.path.includes("rajasthan") ||
@@ -130,17 +131,17 @@ export default function sitemap() {
       priority = 0.85;
       changeFrequency = "weekly";
     }
-    // 0.75 — Blog listing and portfolio
+    // 0.75, Blog listing and portfolio
     else if (["/blog", "/portfolio"].includes(route.path)) {
       priority = 0.75;
       changeFrequency = "weekly";
     }
-    // 0.7 — Dynamic blog posts
+    // 0.7, Dynamic blog posts
     else if (route.isBlog) {
       priority = 0.7;
       changeFrequency = "monthly";
     }
-    // 0.6 — All other location/niche pages
+    // 0.6, All other location/niche pages
     else {
       priority = 0.6;
       changeFrequency = "monthly";

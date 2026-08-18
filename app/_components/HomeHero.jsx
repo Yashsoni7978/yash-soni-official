@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ export const HomeHero = ({ waLink }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
       </div>
-      {/* Content — bottom aligned, mobile-first */}
+      {/* Content, bottom aligned, mobile-first */}
       <div className="relative z-10 w-full px-5 md:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,14 +33,14 @@ export const HomeHero = ({ waLink }) => {
               <Star size={10} fill="#D4AF37" /> 4.9★ Rated · 50+ Reviews
             </span>
           </div>
-          {/* H1 — name first, keyword in subhead */}
+          {/* H1, name first, keyword in subhead */}
           <h1 className="font-black tracking-tighter leading-[0.9] mb-5">
             <span className="block text-white text-[13vw] md:text-[9vw] lg:text-8xl">ANCHOR</span>
             <GoldText animate className="block text-[13vw] md:text-[9vw] lg:text-8xl">YASH.</GoldText>
           </h1>
-          {/* Subheading — keyword-rich, not Jaipur-locked */}
+          {/* Subheading, keyword-rich, not Jaipur-locked */}
           <p className="text-zinc-300 text-base md:text-xl font-light leading-relaxed mb-3 max-w-lg">
-            The most commanding event host in India. 700+ shows — palace weddings, high-energy Sangeets, corporate summits, and VIP galas across Rajasthan and beyond.
+            The most commanding event host in India. 700+ shows, palace weddings, high-energy Sangeets, corporate summits, and VIP galas across Rajasthan and beyond.
           </p>
           <p className="text-zinc-500 text-sm mb-8 tracking-wide">
             Bilingual Hindi/English &nbsp;·&nbsp; Unscripted &nbsp;·&nbsp; 10,000+ crowd commanded &nbsp;·&nbsp; Zero paper scripts

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -68,13 +68,13 @@ const STATS = [
   { val: "4.9★", label: "Client Rating", icon: Star },
   { val: "5+", label: "Years Local", icon: Award },
 ];
-// ALL Jaipur micro-zones — SEO net
+// ALL Jaipur micro-zones, SEO net
 const JAIPUR_ZONES = [
   {
     zone: "Kukas & Delhi Road",
     type: "Palace & Heritage Venues",
     venues: "Le Meridien · ITC Mughal · Heritage resorts",
-    desc: "The gateway to Jaipur's most spectacular destination wedding properties. NRI families, international guests, and palace buyouts. Zero travel cost for Yash — maximum preparation.",
+    desc: "The gateway to Jaipur's most spectacular destination wedding properties. NRI families, international guests, and palace buyouts. Zero travel cost for Yash, maximum preparation.",
     href: "/best-anchor-in-jaipur",
     keywords: ["anchor kukas jaipur", "anchor delhi road jaipur"],
   },
@@ -90,7 +90,7 @@ const JAIPUR_ZONES = [
     zone: "Ajmer Road & Bhankrota",
     type: "Farmhouse Wedding Specialist",
     venues: "Sprawling private farmhouse lawns, 1000–1500 guests",
-    desc: "Jaipur's elite family wedding belt. Massive crowds, open-air farmhouses, Sangeet nights that need to stay electric until 4 AM. This format is a specialty — the crowds that break average anchors.",
+    desc: "Jaipur's elite family wedding belt. Massive crowds, open-air farmhouses, Sangeet nights that need to stay electric until 4 AM. This format is a specialty, the crowds that break average anchors.",
     href: "/sangeet-anchor-jaipur",
     keywords: ["anchor ajmer road jaipur", "farmhouse wedding anchor jaipur"],
   },
@@ -134,7 +134,7 @@ const JAIPUR_ZONES = [
   },
 ];
 const SERVICES = [
-  { icon: Heart, title: "Wedding Anchor Jaipur", desc: "Every ceremony format — Varmala, Baraat, Bidaai — with cultural precision.", img: "/service-wedding.webp", href: "/wedding-anchor-jaipur" },
+  { icon: Heart, title: "Wedding Anchor Jaipur", desc: "Every ceremony format, Varmala, Baraat, Bidaai, with cultural precision.", img: "/service-wedding.webp", href: "/wedding-anchor-jaipur" },
   { icon: Music2, title: "Sangeet Host Jaipur", desc: "Dance floors packed until 4 AM. 500–1,500 guests, unscripted crowd games.", img: "/gallery-1.webp", href: "/sangeet-anchor-jaipur" },
   { icon: Flower2, title: "Haldi Anchor Jaipur", desc: "100% family-friendly games, viral moments, zero boring gaps.", img: "/gallery-2.webp", href: "/haldi-anchor-jaipur" },
   { icon: Sparkles, title: "Mehendi Host Jaipur", desc: "Musical games, couple trivia, crowd engagement throughout.", img: "/gallery-3.webp", href: "/mehendi-anchor-jaipur" },
@@ -144,20 +144,20 @@ const SERVICES = [
 const TESTIMONIALS = [
   {
     name: "Sharma Family",
-    quote: "The PA failed mid-Sangeet for 3 minutes. Yash turned it into a crowd call-and-response. 900 people screaming together. He didn't save the night — he made it.",
-    event: "Farmhouse Sangeet — Ajmer Road, Jaipur",
+    quote: "The PA failed mid-Sangeet for 3 minutes. Yash turned it into a crowd call-and-response. 900 people screaming together. He didn't save the night, he made it.",
+    event: "Farmhouse Sangeet, Ajmer Road, Jaipur",
     guests: "900 guests",
   },
   {
     name: "Kapoor Family",
     quote: "We flew from Toronto for our daughter's wedding near Amer. Yash handled every international guest and every Rajasthani ritual with complete precision. Extraordinary.",
-    event: "Heritage Palace Wedding — Amer Road",
+    event: "Heritage Palace Wedding, Amer Road",
     guests: "NRI family, 600 guests",
   },
   {
     name: "Corporate Events Head",
-    quote: "We've tried every anchor in Jaipur for our annual awards. Yash is in a completely different league — zero script, razor wit, presence that impressed our keynote speakers.",
-    event: "Annual Gala — JECC Sitapura, Jaipur",
+    quote: "We've tried every anchor in Jaipur for our annual awards. Yash is in a completely different league, zero script, razor wit, presence that impressed our keynote speakers.",
+    event: "Annual Gala, JECC Sitapura, Jaipur",
     guests: "1,200 delegates",
   },
 ];
@@ -196,23 +196,23 @@ const FAQS = [
   },
   {
     q: "Have you hosted events at our Jaipur wedding venue before?",
-    a: "Anchor Yash Soni has anchored events at virtually every premium venue in Jaipur — from the grand ballrooms of Fairmont and Marriott to the heritage courtyards of Rambagh Palace, Jai Mahal Palace, and Samode Haveli — and from JECC Sitapura to farmhouse venues on Ajmer Road and Bhankrota. Every major event zone in Jaipur has been covered repeatedly across 700+ shows.",
+    a: "Anchor Yash Soni has anchored events at virtually every premium venue in Jaipur, from the grand ballrooms of Fairmont and Marriott to the heritage courtyards of Rambagh Palace, Jai Mahal Palace, and Samode Haveli, and from JECC Sitapura to farmhouse venues on Ajmer Road and Bhankrota. Every major event zone in Jaipur has been covered repeatedly across 700+ shows.",
   },
   {
     q: "Can we meet in Jaipur to discuss our event?",
-    a: "Yash Soni is locally based in Jaipur and available for in-person pre-event meetings at any convenient central location — C-Scheme, Vaishali Nagar, or wherever is most practical — to discuss the run-of-show, crowd games, and customise the event plan face-to-face. No Zoom calls required.",
+    a: "Yash Soni is locally based in Jaipur and available for in-person pre-event meetings at any convenient central location, C-Scheme, Vaishali Nagar, or wherever is most practical, to discuss the run-of-show, crowd games, and customise the event plan face-to-face. No Zoom calls required.",
   },
   {
     q: "Do you charge extra travel fees for events in Kukas or Amer?",
-    a: "Zero extra travel fees apply within Jaipur — all zones including Kukas, Amer Road, Ajmer Road, Bhankrota, Jhotwara, Mansarovar, and Sitapura are treated as completely local. No flight costs, no hotel stays, and no travel surcharges for any Jaipur venue. Yash arrives fresh, two hours early, and fully prepared.",
+    a: "Zero extra travel fees apply within Jaipur, all zones including Kukas, Amer Road, Ajmer Road, Bhankrota, Jhotwara, Mansarovar, and Sitapura are treated as completely local. No flight costs, no hotel stays, and no travel surcharges for any Jaipur venue. Yash arrives fresh, two hours early, and fully prepared.",
   },
   {
     q: "Do you also host corporate events and award nights in Jaipur?",
-    a: "Corporate events are a core specialisation alongside weddings — award nights, product launches, annual galas, and business summits at JECC Sitapura, Tonk Road, Birla Auditorium, and JLN Marg are a major part of the Jaipur calendar. The corporate hosting register is completely separate from wedding hosting, and both are independently mastered.",
+    a: "Corporate events are a core specialisation alongside weddings, award nights, product launches, annual galas, and business summits at JECC Sitapura, Tonk Road, Birla Auditorium, and JLN Marg are a major part of the Jaipur calendar. The corporate hosting register is completely separate from wedding hosting, and both are independently mastered.",
   },
   {
     q: "Our family loves Marwari culture. Can you host in local languages?",
-    a: "Yash Soni speaks fluent Hindi, polished English for international and NRI guests, and warm Marwari-Rajasthani as a native Jaipur local. He switches between all three registers live and unscripted within the same event — every family's cultural texture is different, and he adapts precisely to yours.",
+    a: "Yash Soni speaks fluent Hindi, polished English for international and NRI guests, and warm Marwari-Rajasthani as a native Jaipur local. He switches between all three registers live and unscripted within the same event, every family's cultural texture is different, and he adapts precisely to yours.",
   },
   {
     q: "What is the cost of hiring the best anchor in Jaipur?",
@@ -224,11 +224,11 @@ const FAQS = [
   },
   {
     q: "Can you handle an event with 1000+ guests?",
-    a: "Large crowds are a signature strength — Yash Soni has commanded open events of 10,000+ people unscripted. Farmhouse weddings on Ajmer Road with 1,000–1,500 guests are a standard evening. Crowd psychology — reading energy at scale, controlling chaos, and redirecting attention — is the core skill that separates a real anchor from an announcer.",
+    a: "Large crowds are a signature strength, Yash Soni has commanded open events of 10,000+ people unscripted. Farmhouse weddings on Ajmer Road with 1,000–1,500 guests are a standard evening. Crowd psychology, reading energy at scale, controlling chaos, and redirecting attention, is the core skill that separates a real anchor from an announcer.",
   },
   {
     q: "Can you host both the Haldi games and the Sangeet night?",
-    a: "Hosting both the Haldi and the Sangeet with the same anchor is strongly recommended. When the anchor has already built rapport and crowd energy at the Haldi, the Sangeet begins with pre-warmed momentum — the crowd starts hot instead of cold, and the energy compounds across the full wedding day in a way two separate anchors cannot replicate.",
+    a: "Hosting both the Haldi and the Sangeet with the same anchor is strongly recommended. When the anchor has already built rapport and crowd energy at the Haldi, the Sangeet begins with pre-warmed momentum, the crowd starts hot instead of cold, and the energy compounds across the full wedding day in a way two separate anchors cannot replicate.",
   },
   {
     q: "Do you travel outside Rajasthan for destination events?",
@@ -236,19 +236,19 @@ const FAQS = [
   },
   {
     q: "What makes Anchor Yash the best anchor in Jaipur over other options?",
-    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire — earned through 700+ shows, not one viral moment. Second, completely unscripted — zero paper scripts across an 5+ year career. Third, local Jaipur expertise — he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
+    a: "Three things distinguish Anchor Yash Soni: First, 4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire, earned through 700+ shows, not one viral moment. Second, completely unscripted, zero paper scripts across an 5+ year career. Third, local Jaipur expertise, he knows every venue, every vendor, every zone in the city and uses that knowledge to anticipate problems before your guests ever notice them.",
   },
   {
     q: "What is the difference between an anchor, emcee, and host in Jaipur events?",
-    a: "Anchor, emcee, host, and MC (Master of Ceremonies) are four terms for the same professional role — the person who leads the event programme, manages transitions, and commands the room. In Jaipur's wedding industry, 'anchor' is the most common term. Corporate event planners prefer 'emcee' or 'MC'. International and NRI families typically say 'host'. Yash Soni operates across all event formats regardless of what the role is called — the skill set is identical.",
+    a: "Anchor, emcee, host, and MC (Master of Ceremonies) are four terms for the same professional role, the person who leads the event programme, manages transitions, and commands the room. In Jaipur's wedding industry, 'anchor' is the most common term. Corporate event planners prefer 'emcee' or 'MC'. International and NRI families typically say 'host'. Yash Soni operates across all event formats regardless of what the role is called, the skill set is identical.",
   },
   {
     q: "Who is the best emcee in Jaipur for weddings?",
-    a: "Anchor Yash Soni is Jaipur's top-rated wedding emcee with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, and WeddingWire. As a wedding emcee in Jaipur, he has hosted 700+ shows — Sangeet nights, Haldi functions, Mehndi ceremonies, and grand reception events — across Rambagh Palace, Fairmont Jaipur, Jai Mahal Palace, and farmhouse venues on Ajmer Road.",
+    a: "Anchor Yash Soni is Jaipur's top-rated wedding emcee with a 4.9★ rating across 50+ verified reviews on Google, WedMeGood, and WeddingWire. As a wedding emcee in Jaipur, he has hosted 700+ shows, Sangeet nights, Haldi functions, Mehndi ceremonies, and grand reception events, across Rambagh Palace, Fairmont Jaipur, Jai Mahal Palace, and farmhouse venues on Ajmer Road.",
   },
   {
     q: "Who is the best corporate emcee in Jaipur?",
-    a: "Anchor Yash Soni is Jaipur's most in-demand corporate emcee for award nights, product launches, dealer meets, annual galas, and leadership summits. His corporate emcee and MC work spans JECC Sitapura, Birla Auditorium, Trident Jaipur, Marriott Jaipur, Hyatt Regency, and JLN Marg hotel properties — covering both bilingual Hindi/English hosting and the precise, brand-aligned delivery that senior management events require.",
+    a: "Anchor Yash Soni is Jaipur's most in-demand corporate emcee for award nights, product launches, dealer meets, annual galas, and leadership summits. His corporate emcee and MC work spans JECC Sitapura, Birla Auditorium, Trident Jaipur, Marriott Jaipur, Hyatt Regency, and JLN Marg hotel properties, covering both bilingual Hindi/English hosting and the precise, brand-aligned delivery that senior management events require.",
   },
   {
     q: "Who is the best wedding host in Jaipur for NRI families?",
@@ -377,7 +377,7 @@ const faqSchema = {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black relative">
       <style>{style}</style>
-      {/* Schemas in body — this is correct for Next.js App Router */}
+      {/* Schemas in body, this is correct for Next.js App Router */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
       {/* ══════════════════════════════════════
           BREADCRUMB
@@ -390,28 +390,28 @@ const faqSchema = {
         </div>
       </nav>
       {/* ══════════════════════════════════════
-          1. HERO — gold only, no pink
+          1. HERO, gold only, no pink
       ══════════════════════════════════════ */}
       <section className="relative min-h-screen pt-16 pb-20 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-[#050505]/30 z-10" />
-          <Image src="/service-corporate.webp" alt="Anchor Yash Soni — best anchor in Jaipur hosting a premium event" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={90} />
+          <Image src="/service-corporate.webp" alt="Anchor Yash Soni, best anchor in Jaipur hosting a premium event" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={90} />
         </div>
         <div className="relative z-20 text-center px-5 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            {/* Badge — review-based, not "Rated #1" */}
+            {/* Badge, review-based, not "Rated #1" */}
             <div className="inline-flex items-center gap-3 border border-[#D4AF37]/50 px-6 py-2.5 rounded-full /60 backdrop-blur-xl mb-8 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
               <Star className="w-4 h-4 text-[#B5952F] fill-[#D4AF37]" />
               <span className="text-[#B5952F] text-xs uppercase tracking-widest font-bold">
                 4.9★ · 50+ Reviews · Local Jaipur Anchor
               </span>
             </div>
-            {/* H1 — primary keyword */}
+            {/* H1, primary keyword */}
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
               Jaipur's <G>Premier</G><br />Wedding &amp; Event<br /><G>Anchor.</G>
             </h1>
             <p className="yash-hero-desc text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-4">
-              From palace weddings at Rambagh and Fairmont to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura — the definitive anchor for Jaipur's most prestigious events.
+              From palace weddings at Rambagh and Fairmont to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura, the definitive anchor for Jaipur's most prestigious events.
             </p>
             <p className="text-zinc-500 text-sm mb-10 tracking-wide">
               Locally based &nbsp;·&nbsp; 700+ Jaipur events &nbsp;·&nbsp; Zero travel fees within Jaipur
@@ -432,7 +432,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          2. STATS — no boxes
+          2. STATS, no boxes
       ══════════════════════════════════════ */}
       <section className=" border-y border-[#D4AF37]/15 relative z-10">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
@@ -463,12 +463,12 @@ const faqSchema = {
             </div>
           </Reveal>
 
-          {/* Primary citable claim — speakable schema target */}
+          {/* Primary citable claim, speakable schema target */}
           <Reveal>
             <p className="yash-citable text-xl md:text-2xl text-zinc-300 leading-relaxed font-light mb-12 border-l-2 border-[#D4AF37]/50 pl-6">
-              Anchor Yash Soni is Jaipur's highest-reviewed professional event anchor — rated{" "}
+              Anchor Yash Soni is Jaipur's highest-reviewed professional event anchor, rated{" "}
               <strong className="text-white">4.9★ across 50+ verified reviews</strong> on Google,
-              WedMeGood, and WeddingWire India — with{" "}
+              WedMeGood, and WeddingWire India, with{" "}
               <strong className="text-white">700+ shows hosted</strong> spanning palace weddings
               at Rambagh Palace and Fairmont Jaipur, Sangeet nights at Ajmer Road farmhouses with
               1,000–1,500 guests, corporate award galas at JECC Sitapura and Birla Auditorium, and
@@ -477,7 +477,7 @@ const faqSchema = {
             </p>
           </Reveal>
 
-          {/* By-the-numbers grid — specific entities AI can extract */}
+          {/* By-the-numbers grid, specific entities AI can extract */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
               { stat: "700+", label: "Events in Jaipur", detail: "Career verified total" },
@@ -495,11 +495,11 @@ const faqSchema = {
             ))}
           </div>
 
-          {/* Named venue entities — AI maps these to Jaipur anchor entity */}
+          {/* Named venue entities, AI maps these to Jaipur anchor entity */}
           <Reveal>
             <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6 mb-8">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-widest font-bold mb-4">
-                Jaipur Venues — Anchored Repeatedly
+                Jaipur Venues, Anchored Repeatedly
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -517,7 +517,7 @@ const faqSchema = {
             </div>
           </Reveal>
 
-          {/* Third-party verification — trust signals AI engines prioritise */}
+          {/* Third-party verification, trust signals AI engines prioritise */}
           <div className="grid md:grid-cols-3 gap-4">
             {[
               {
@@ -556,7 +556,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. LOCAL ADVANTAGE — original 3 cards
+          3. LOCAL ADVANTAGE, original 3 cards
           Fixed: no pink border on hover
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 bg-[#0a0a0a] border-b border-[#D4AF37]/15 relative z-10">
@@ -569,7 +569,7 @@ const faqSchema = {
             <RoyalBenefitCard
               icon={<Home className="w-9 h-9" />}
               title="Zero Travel Logistics"
-              desc="Locally based in Jaipur — no flight delays, no hotel costs. Yash arrives fresh, two hours early, fully prepared. From Kukas to Bhankrota, it is all local."
+              desc="Locally based in Jaipur, no flight delays, no hotel costs. Yash arrives fresh, two hours early, fully prepared. From Kukas to Bhankrota, it is all local."
             />
             <RoyalBenefitCard
               icon={<Building2 className="w-9 h-9" />}
@@ -585,7 +585,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. GALLERY — original grid kept
+          4. GALLERY, original grid kept
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 container mx-auto px-5 md:px-10 relative z-10">
         <SectionHeading subtitle="Event Portfolio" title="Unforgettable Moments in The Pink City." />
@@ -618,7 +618,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. SERVICES GRID — NEW with photos
+          5. SERVICES GRID, NEW with photos
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 bg-[#0a0a0a] border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -629,7 +629,7 @@ const faqSchema = {
                 {s.href ? (
                   <Link href={s.href}>
                     <div className="relative h-[280px] md:h-[320px] rounded-2xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all cursor-pointer">
-                      <Image src={s.img} alt={`${s.title} — anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" quality={90} />
+                      <Image src={s.img} alt={`${s.title}, anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" quality={90} />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                       <div className="absolute top-4 left-4">
                         <span className="text-[9px] uppercase tracking-widest bg-[#D4AF37] text-black px-2.5 py-1 rounded-full font-bold">Jaipur</span>
@@ -643,7 +643,7 @@ const faqSchema = {
                   </Link>
                 ) : (
                   <div className="relative h-[280px] md:h-[320px] rounded-2xl overflow-hidden group border border-white/10 transition-all">
-                    <Image src={s.img} alt={`${s.title} — anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover grayscale" quality={90} />
+                    <Image src={s.img} alt={`${s.title}, anchor in Jaipur`} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover grayscale" quality={90} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                     <div className="absolute top-4 left-4">
                       <span className="text-[9px] uppercase tracking-widest bg-[#D4AF37] text-black px-2.5 py-1 rounded-full font-bold">Jaipur</span>
@@ -662,7 +662,7 @@ const faqSchema = {
       </section>
       {/* ══════════════════════════════════════
           6B. KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -670,10 +670,10 @@ const faqSchema = {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Jaipur's Best.</G>
+                Whatever You Call It -{" "}<G>Jaipur's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Jaipur —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Jaipur -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -685,7 +685,7 @@ const faqSchema = {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Jaipur",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Jaipur.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Jaipur.",
                 keywords: ["best wedding anchor jaipur", "wedding emcee jaipur", "wedding host jaipur", "wedding mc jaipur"],
                 href: "/wedding-anchor-jaipur",
               },
@@ -706,19 +706,19 @@ const faqSchema = {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Jaipur",
-                desc: "4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire. 700+ shows. The most reviewed event professional in Jaipur — by any name.",
+                desc: "4.9★ across 50+ verified reviews on Google, WedMeGood, and WeddingWire. 700+ shows. The most reviewed event professional in Jaipur, by any name.",
                 keywords: ["best emcee in jaipur", "best anchor in jaipur", "best host in jaipur", "best mc jaipur"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Jaipur",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host jaipur", "english speaking anchor jaipur", "bilingual emcee jaipur"],
               },
               {
                 label: "Best Emcee Rajasthan · Best Host Rajasthan",
                 title: "Best Anchor in Rajasthan",
-                desc: "Jaipur-based, available across all of Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar, and beyond. The top anchor and emcee in Rajasthan.",
+                desc: "Jaipur-based, available across all of Rajasthan, Udaipur, Jodhpur, Jaisalmer, Pushkar, and beyond. The top anchor and emcee in Rajasthan.",
                 keywords: ["best anchor in rajasthan", "best emcee rajasthan", "best host rajasthan"],
                 href: "/anchor-in-rajasthan",
               },
@@ -753,7 +753,7 @@ const faqSchema = {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -780,14 +780,14 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. JAIPUR ZONES — SEO location net
+          6. JAIPUR ZONES, SEO location net
           ALL 8 zones with keywords
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
-          <SectionHeading subtitle="Complete Jaipur Coverage" title="Anchor in Jaipur — Every Zone, Every Venue." align="center" />
+          <SectionHeading subtitle="Complete Jaipur Coverage" title="Anchor in Jaipur, Every Zone, Every Venue." align="center" />
           <p className="text-zinc-500 text-sm text-center max-w-2xl mx-auto -mt-8 mb-12 leading-relaxed">
-            Jaipur is not one market. It is eight distinct event territories — each with its own crowd character, venue format, and hosting requirement. Yash Soni dominates all of them.
+            Jaipur is not one market. It is eight distinct event territories, each with its own crowd character, venue format, and hosting requirement. Yash Soni dominates all of them.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {JAIPUR_ZONES.map((z, i) => (
@@ -835,7 +835,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          7. VENUE SHOWCASE — original kept
+          7. VENUE SHOWCASE, original kept
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 bg-[#0f0508] border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -850,7 +850,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          8. TESTIMONIALS — NEW section with photos
+          8. TESTIMONIALS, NEW section with photos
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -865,7 +865,7 @@ const faqSchema = {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-sm group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                     <p className="text-[#B5952F] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>
@@ -876,7 +876,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. FAQ — original structure kept
+          9. FAQ, original structure kept
           Questions upgraded for PAA
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 bg-[#0a0a0a] border-t border-[#D4AF37]/15 relative z-10">
@@ -890,7 +890,7 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          10. NEARBY CITIES — NEW internal links
+          10. NEARBY CITIES, NEW internal links
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-20 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -916,8 +916,8 @@ const faqSchema = {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          11. CTA — dark version, gold only
-          Original was red/dark red bg — replaced
+          11. CTA, dark version, gold only
+          Original was red/dark red bg, replaced
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32 relative overflow-hidden z-10">
         <div className="absolute inset-0 " />
@@ -932,7 +932,7 @@ const faqSchema = {
               Hosting an Event <G>in Jaipur?</G>
             </h2>
             <p className="text-zinc-400 text-base mb-3 leading-relaxed">
-              Don't fly in an outsider. The best anchor in Jaipur is <strong className="text-[#B5952F]">already here</strong> — locally based, zero travel fees, and booked <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season.
+              Don't fly in an outsider. The best anchor in Jaipur is <strong className="text-[#B5952F]">already here</strong>, locally based, zero travel fees, and booked <strong className="text-[#B5952F]">6–8 months in advance</strong> for peak season.
             </p>
             <p className="text-zinc-600 text-sm mb-10">No waitlists. No replacements. One anchor, one event, per date.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">

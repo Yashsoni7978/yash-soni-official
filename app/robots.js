@@ -1,4 +1,4 @@
-export default function robots() {
+﻿export default function robots() {
   return {
     rules: [
       {
@@ -19,7 +19,7 @@ export default function robots() {
       },
       {
         // Prevent search engine bots from indexing /_next/ internal paths
-        // (these are JS/CSS bundles — not crawlable content)
+        // (these are JS/CSS bundles, not crawlable content)
         userAgent: "*",
         disallow: ["/_next/"],
       },

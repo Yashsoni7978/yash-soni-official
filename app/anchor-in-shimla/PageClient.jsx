@@ -102,12 +102,12 @@ const SHIMLA_IDENTITY = [
   {
     icon: Snowflake,
     title: "High-Altitude Acoustic Compression",
-    desc: "Shimla destination events frequently occur at extreme altitudes under massive outdoor mountain conditions (such as Taj Theog). The cold limits standard crowd engagement, and the mountain winds absolutely destroy baseline audio projection. Yash implements 'Acoustic Compression'—actively restructuring the layout to condense the audience physically, using raw vocal power to drive a Sangeet before the cold forces guests indoors."
+    desc: "Shimla destination events frequently occur at extreme altitudes under massive outdoor mountain conditions (such as Taj Theog). The cold limits standard crowd engagement, and the mountain winds absolutely destroy baseline audio projection. Yash implements 'Acoustic Compression'-actively restructuring the layout to condense the audience physically, using raw vocal power to drive a Sangeet before the cold forces guests indoors."
   },
   {
     icon: Crown,
     title: "The Wildflower Hall Protocol",
-    desc: "Properties like Wildflower Hall (Oberoi) attract the absolute peak of Delhi NCR and Chandigarh elite. The guest lists here are incredibly curated (100-150 VIPs) and highly corporate. These audiences reject standard 'hype man' behaviors. Yash acts as an Executive Moderator—a highly articulate, unscripted presence that validates the intellectual caliber of the room."
+    desc: "Properties like Wildflower Hall (Oberoi) attract the absolute peak of Delhi NCR and Chandigarh elite. The guest lists here are incredibly curated (100-150 VIPs) and highly corporate. These audiences reject standard 'hype man' behaviors. Yash acts as an Executive Moderator-a highly articulate, unscripted presence that validates the intellectual caliber of the room."
   },
   {
     icon: Briefcase,
@@ -158,24 +158,24 @@ const VS = [
   { problem: "Using 'cheap MC' club humor that immediately alienates an ultra-premium VIP guest list at Wildflower Hall", fix: "Intimate, highly conversational executive-grade delivery matching the crowd's pedigree" },
   { problem: "The anchor's voice dissipating entirely across the vast mountain ridges at Taj Theog", fix: "Mastery of timeline-stitching and acoustic centralizing to pull the entire party tightly together" },
   { problem: "Being unable to bridge the formal C-suite networking with the high-energy destination Sangeet", fix: "Executing an intense psychological transition that drags the VIPs directly to the dance floor" },
-  { problem: "Reading rigidly from paper notes during an incredibly exposed outdoor Himalayan Varmala", fix: "100% unscripted flow—maintaining absolute eye contact despite extreme high-altitude conditions" },
+  { problem: "Reading rigidly from paper notes during an incredibly exposed outdoor Himalayan Varmala", fix: "100% unscripted flow-maintaining absolute eye contact despite extreme high-altitude conditions" },
   { problem: "Guests retreating to their rooms early because the mountain temperatures freeze the Sangeet energy", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd immediately" },
   { problem: "An anchor getting flustered by sudden mountain weather shifts that force events indoors", fix: "Absolute stoic command, restructuring the event flow natively without the guests ever noticing panic" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Corporate Director — Delhi NCR",
+    name: "Corporate Director, Delhi NCR",
     quote: "Hosting a sunset reception at Taj Theog requires an anchor who understands immense prestige. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet despite the freezing outdoor temperatures with complete authority. He commands the room effortlessly.",
     event: "Destination Sunset Wedding · Taj Theog Resort & Spa"
   },
   {
-    name: "Garg Family — Chandigarh",
+    name: "Garg Family, Chandigarh",
     quote: "Choosing Wildflower Hall meant we had a highly restricted, incredibly VIP guest list. We needed an anchor, not a noisy MC. Yash was absolute perfection. Intense conversational flow, no reading from notes, completely owning the space without ever crossing the line.",
     event: "VIP Heritage Sangeet · Wildflower Hall (Oberoi)"
   },
   {
-    name: "CEO — Fintech Headquarters",
+    name: "CEO, Fintech Headquarters",
     quote: "We hosted an exclusive multi-day executive retreat at Welcomhotel Mashobra. Yash anchored the daytime strategy panels flawlessly with zero notes, and then instantly flipped the switch to host our evening gala. Absolute executive polish.",
     event: "Leadership Offsite Gala · Welcomhotel Mashobra"
   },
@@ -189,10 +189,10 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle outdoor functions in Shimla where the freezing wind kills the crowd's energy?",
-    a: "This is the true test of a mountain destination anchor. When the temperature drops rapidly at dusk, guests immediately want to retreat indoors. You cannot solve this purely with a DJ. I use 'Psychological Momentum'—accelerating the timeline aggressively, using extreme vocal projection to physically compress the crowd towards the stage, and pulling them into an intense, highly interactive dancing state before the cold sets in."
+    a: "This is the true test of a mountain destination anchor. When the temperature drops rapidly at dusk, guests immediately want to retreat indoors. You cannot solve this purely with a DJ. I use 'Psychological Momentum'-accelerating the timeline aggressively, using extreme vocal projection to physically compress the crowd towards the stage, and pulling them into an intense, highly interactive dancing state before the cold sets in."
   },
   {
-    q: "Our Shimla guest list is highly exclusive—mostly C-suite executives and VIP families. Can you match this tone?",
+    q: "Our Shimla guest list is highly exclusive-mostly C-suite executives and VIP families. Can you match this tone?",
     a: "Completely. A VIP wedding doesn't need a high-pitched 'hype man'; it needs an Executive Moderator. I drop the standard 'wedding tropes' and host with sharp, highly conversational, unscripted English that treats the VIPs with intellectual respect, immediately breaking the sterile barrier between the stage and the audience."
   },
   {
@@ -266,7 +266,7 @@ export default function ShimlaPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/shimla_bg.webp" alt="Best Anchor in Shimla — VIP Luxury Himalayan Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/shimla_bg.webp" alt="Best Anchor in Shimla, VIP Luxury Himalayan Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function ShimlaPage() {
                 Shimla operates at the zenith of high-altitude exclusivity. You are dealing with highly scrutinized venues like Wildflower Hall where <strong className="text-[#B5952F]">stringent cold weather limits and top-tier Chandigarh/Delhi executive crowds</strong> require flawless execution. Yash steps into these immaculate mountain environments and manufactures raw, authentic dancing energy entirely organically, without compromising the prestige of the heritage architectures.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC yelling'. For high-net-worth cross-cultural weddings at Taj Theog, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the VIPs, integrated natively with the deep warmth that traditional North Indian ceremonies demand.
+                He completely rejects paper scripts and basic 'MC yelling'. For high-net-worth cross-cultural weddings at Taj Theog, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the VIPs, integrated natively with the deep warmth that traditional North Indian ceremonies demand.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -489,13 +489,13 @@ export default function ShimlaPage() {
               VIP Reality.<br /><G>Himalayan Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Shimla requires an elite understanding of 'Acoustic Defense'. High-altitude properties involve sweeping mountain views where cold winds physically drop outdoor sound decibels. An amateur anchor loses the crowd entirely out here, resulting in guests shivering and retreating indoors. Yash acts as the primary thermal engine—using extreme vocal projection and hyper-accelerated timeline pacing to drive the party instantly, pulling the guests tight so the energy peaks before the cold wins.
+              Hosting a luxury event in Shimla requires an elite understanding of 'Acoustic Defense'. High-altitude properties involve sweeping mountain views where cold winds physically drop outdoor sound decibels. An amateur anchor loses the crowd entirely out here, resulting in guests shivering and retreating indoors. Yash acts as the primary thermal engine-using extreme vocal projection and hyper-accelerated timeline pacing to drive the party instantly, pulling the guests tight so the energy peaks before the cold wins.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Shimla crowds are generally a mix of highly modern Delhi/Chandigarh corporate executives and traditional legacy families. The host must bridge this gap instantly. Yash does this through total unscripted fluidity—validating the corporate guests with pristine English, then flipping elegantly into deep North Indian flow to anchor the Sangeet.
+              Furthermore, Shimla crowds are generally a mix of highly modern Delhi/Chandigarh corporate executives and traditional legacy families. The host must bridge this gap instantly. Yash does this through total unscripted fluidity-validating the corporate guests with pristine English, then flipping elegantly into deep North Indian flow to anchor the Sangeet.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              High-altitude VIP fluency—defeating strict weather timelines and uniting the Chandigarh/Delhi demographic—is the mark of an anchor who operates at the true apex of the destination industry.
+              High-altitude VIP fluency-defeating strict weather timelines and uniting the Chandigarh/Delhi demographic-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,14 +551,14 @@ export default function ShimlaPage() {
               Himalayan Peak.<br /><G>VIP Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Shimla and Mashobra is an intense logistical challenge. Properties physically drop off into the valleys, scattering guests across indoor lounges and outdoor terraces, leading to immense audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Shimla and Mashobra is an intense logistical challenge. Properties physically drop off into the valleys, scattering guests across indoor lounges and outdoor terraces, leading to immense audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "High Altitude Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Delhi/Chandigarh families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling Himalayan constraints.
+                High-net-worth Delhi/Chandigarh families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling Himalayan constraints.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function ShimlaPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function ShimlaPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Shimla experiences intense overlapping of the Delhi VIP destination season and peak local corporate retreat dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-andaman/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Andaman",
     "Best Wedding Anchor Andaman",
@@ -87,7 +87,7 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Executive family — UAE" },
+      author: { "@type": "Person", name: "Executive family, UAE" },
       reviewBody: "Flying our 100 closest guests to Havelock was a logistical mountain. We needed an anchor who didn't just 'talk' but actively managed the entire flow of the island resort. Yash was brilliant. His English delivery for our international guests was sharper than any host we've seen in Dubai.",
     },
     {
@@ -153,9 +153,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-andaman/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Andaman | Luxury Island & Havelock Emcee — Yash Soni`,
+  name: `Best Anchor in Andaman | Luxury Island & Havelock Emcee, Yash Soni`,
   headline: `The Andaman's Premier Event Anchor for Ultra-Exclusive VIP Island Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The absolute expert for Andaman destination weddings. Mastering Havelock logistics, Taj Exotica beach acoustics, and elite unscripted VIP event flow.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The absolute expert for Andaman destination weddings. Mastering Havelock logistics, Taj Exotica beach acoustics, and elite unscripted VIP event flow.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, India` },
@@ -167,7 +167,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Andaman | Elite Island Destination Host`,
-  description: `Looking for the best anchor in Andaman? Anchor Yash Soni — 4.9★. Expert for Taj Exotica Havelock and ultra-luxury private island weddings. Bilingual, executive-grade hosting for global VIPs.`,
+  description: `Looking for the best anchor in Andaman? Anchor Yash Soni, 4.9★. Expert for Taj Exotica Havelock and ultra-luxury private island weddings. Bilingual, executive-grade hosting for global VIPs.`,
   keywords: [
     "anchor in andaman",
     "best anchor in andaman",
@@ -194,13 +194,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Andaman | Ultra-Luxury Island Wedding Host`,
     description: `4.9★ rated. Andaman's premium anchor for highly intimate, ultra-luxury destination weddings at Havelock. Master of unscripted executive bilingual hosting.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Andaman — Anchor Yash Soni at Beach Island Weddings` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Andaman, Anchor Yash Soni at Beach Island Weddings` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Andaman | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Andaman | Anchor Yash Soni, 4.9★`,
     description: `Taj Exotica. Havelock. Andaman's premier bilingual event anchor for exclusive VIP Sangeets and highly restricted island ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -209,7 +209,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Andaman | Private Island Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Andaman | Private Island Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Island Wedding, VIP Events, ${CITY}, India`,
     "DC.coverage": `${CITY}, India`,
     "DC.language": "en-IN",

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -10,7 +10,7 @@ import { Award, Cake, CalendarCheck, CheckCircle2, Crown, Globe, Heart, Mic2, Mi
 
 
 // ─────────────────────────────────────────────
-// THEME — Black Gold (Anchoring pages)
+// THEME, Black Gold (Anchoring pages)
 // ─────────────────────────────────────────────
 const GOLD = "#D4AF37";
 const GOLD_D = "#a8891a";
@@ -95,59 +95,59 @@ const PARTY_TYPES = [
     icon:Cake,
     title:"Milestone Birthday Galas",
     sub:"18th · 25th · 30th · 50th · 60th",
-    desc:"The guest of honour doesn't get a template — they get a story. Every milestone birthday script is built around their specific journey: moments the crowd recognises, surprises they don't see coming, and tributes that land emotionally. The 50th birthday script has made entire rooms of 300 people cry and laugh inside the same five minutes.",
+    desc:"The guest of honour doesn't get a template, they get a story. Every milestone birthday script is built around their specific journey: moments the crowd recognises, surprises they don't see coming, and tributes that land emotionally. The 50th birthday script has made entire rooms of 300 people cry and laugh inside the same five minutes.",
     tag:"Milestone" },
   {
     icon:Users,
     title:"Kids Birthday Parties",
     sub:"Ages 5 to 14 · 30 to 200 guests",
-    desc:"Kids are the most unforgiving audience in the world. They don't pretend to have fun — they either have it or they don't. High-energy games, interactive character hosting, structured crowd management, and energy pacing that keeps 80 children genuinely engaged from start to finish. Parents get to actually enjoy the party.",
+    desc:"Kids are the most unforgiving audience in the world. They don't pretend to have fun, they either have it or they don't. High-energy games, interactive character hosting, structured crowd management, and energy pacing that keeps 80 children genuinely engaged from start to finish. Parents get to actually enjoy the party.",
     tag:"Kids Party" },
   {
     icon:Sparkles,
     title:"Surprise Birthday Reveals",
     sub:"Coordinated live reveals",
-    desc:"A surprise party lives or dies in the thirty seconds after the reveal. The emotional transition from shock to celebration, the crowd's energy management, the pivot from secret-keeping to open celebration — all of it is scripted and coordinated with the organising family days in advance. Nothing is improvised at the reveal.",
+    desc:"A surprise party lives or dies in the thirty seconds after the reveal. The emotional transition from shock to celebration, the crowd's energy management, the pivot from secret-keeping to open celebration, all of it is scripted and coordinated with the organising family days in advance. Nothing is improvised at the reveal.",
     tag:"Surprise" },
   {
     icon:Crown,
     title:"Celebrity-Style Birthday Galas",
     sub:"100 to 500+ guests · VIP events",
-    desc:"Red carpet entries, live crowd interaction, award-style tribute segments, Bollywood-energy entertainment hosting. For high-profile birthdays where the standard isn't just 'good' — it's the kind of event that gets talked about for years. Every element is choreographed from the first guest entry to the final send-off.",
+    desc:"Red carpet entries, live crowd interaction, award-style tribute segments, Bollywood-energy entertainment hosting. For high-profile birthdays where the standard isn't just 'good', it's the kind of event that gets talked about for years. Every element is choreographed from the first guest entry to the final send-off.",
     tag:"Celebrity Gala" },
   {
     icon:Heart,
     title:"Anniversary Celebrations",
     sub:"25th Silver · 50th Golden · Milestone vows",
-    desc:"A couple's anniversary deserves an anchor who can hold space for genuine emotion. The script walks through their journey — with contributions gathered from children, grandchildren, old friends — and builds a narrative arc that publicly honours the relationship. The evening moves between laughter and tears exactly when it's supposed to.",
+    desc:"A couple's anniversary deserves an anchor who can hold space for genuine emotion. The script walks through their journey, with contributions gathered from children, grandchildren, old friends, and builds a narrative arc that publicly honours the relationship. The evening moves between laughter and tears exactly when it's supposed to.",
     tag:"Anniversary" },
   {
     icon:Globe,
     title:"NRI & Destination Birthday Events",
     sub:"International guests · Bilingual hosting",
-    desc:"Birthday celebrations where family flies in from the UK, USA, Canada, and Gulf. Bilingual Hindi/English hosting that ensures every guest in the room — from the grandparents who speak only Hindi to the cousins who've grown up abroad — feels included and part of the celebration.",
+    desc:"Birthday celebrations where family flies in from the UK, USA, Canada, and Gulf. Bilingual Hindi/English hosting that ensures every guest in the room, from the grandparents who speak only Hindi to the cousins who've grown up abroad, feels included and part of the celebration.",
     tag:"NRI" },
 ];
 const VS = [
   { problem:"Recycled party games nobody wants to play",   fix:"Custom crowd games designed for the exact guest mix" },
-  { problem:"Script read off a piece of paper",           fix:"100% unscripted — adapts live to crowd energy" },
-  { problem:"Only Hindi or only English",                 fix:"Bilingual — seamless Hindi/English switching" },
+  { problem:"Script read off a piece of paper",           fix:"100% unscripted, adapts live to crowd energy" },
+  { problem:"Only Hindi or only English",                 fix:"Bilingual, seamless Hindi/English switching" },
   { problem:"Generic 'happy birthday' hosting",           fix:"Personalised script built around the guest of honour" },
-  { problem:"Dead energy between segments",               fix:"Zero filler — every minute has a purpose" },
+  { problem:"Dead energy between segments",               fix:"Zero filler, every minute has a purpose" },
   { problem:"Can't manage kids and adults both",          fix:"Format shifts completely for different age groups" },
 ];
 const VENUES = [
   "Fairmont Jaipur", "ITC Rajputana", "Marriott Jaipur", "Leela Palace",
   "Jai Mahal Palace", "Samode Haveli", "Palladio Jaipur",
   "Rambagh Palace", "Trident Jaipur",
-  "Banquet halls — Mansarovar", "Venues — Vaishali Nagar",
-  "Farmhouses — Ajmer Road", "Rooftops — C-Scheme",
+  "Banquet halls, Mansarovar", "Venues, Vaishali Nagar",
+  "Farmhouses, Ajmer Road", "Rooftops, C-Scheme",
 ];
 const TESTIMONIALS = [
   {
     name:"Priya Sharma",
     rating:5,
-    quote:"The 50th birthday script had my father's entire 50-year journey compressed into 20 minutes. He cried, we cried, the guests laughed — all in exactly the right sequence. When we say the anchor made the evening, we mean it literally.",
+    quote:"The 50th birthday script had my father's entire 50-year journey compressed into 20 minutes. He cried, we cried, the guests laughed, all in exactly the right sequence. When we say the anchor made the evening, we mean it literally.",
     event:"50th Birthday Gala · Fairmont Jaipur · 280 guests" },
   {
     name:"Ritu Agarwal",
@@ -157,7 +157,7 @@ const TESTIMONIALS = [
   {
     name:"Vikram Singhania",
     rating:5,
-    quote:"Kids party for 60 children aged 6–12. I was genuinely worried. Two hours of structured games, energy management, and genuine fun. Every child was engaged the entire time. Parents were impressed. This is a completely different skill set — and he has it.",
+    quote:"Kids party for 60 children aged 6–12. I was genuinely worried. Two hours of structured games, energy management, and genuine fun. Every child was engaged the entire time. Parents were impressed. This is a completely different skill set, and he has it.",
     event:"Kids Birthday Party · Samode Haveli · 60 children" },
 ];
 const FAQS = [
@@ -171,16 +171,16 @@ const FAQS = [
     a:"Birthday party anchoring in Jaipur starts from ₹15,000 for a standard 2–3 hour event. Milestone birthday galas with custom scripting, multiple game segments, and surprise coordination are quoted based on event complexity and duration. WhatsApp the date, venue, and guest count for a quote within the hour." },
   {
     q:"Do you anchor kids' birthday parties in Jaipur?",
-    a:"Yes. Kids' birthday parties for ages 5–14 are a specific specialisation. The hosting approach is completely different from adult events — structured games, high interactivity, character-themed segments, and crowd energy management that keeps children genuinely engaged. Available across all Jaipur venues and farmhouses." },
+    a:"Yes. Kids' birthday parties for ages 5–14 are a specific specialisation. The hosting approach is completely different from adult events, structured games, high interactivity, character-themed segments, and crowd energy management that keeps children genuinely engaged. Available across all Jaipur venues and farmhouses." },
   {
     q:"Can you host a surprise birthday party reveal in Jaipur?",
-    a:"Yes. Surprise party hosting requires pre-event planning with the organising family. The reveal timing, the emotional transition from surprise to celebration, the crowd's energy management during the reveal — all scripted and coordinated before the event. Nothing about a surprise reveal should be improvised." },
+    a:"Yes. Surprise party hosting requires pre-event planning with the organising family. The reveal timing, the emotional transition from surprise to celebration, the crowd's energy management during the reveal, all scripted and coordinated before the event. Nothing about a surprise reveal should be improvised." },
   {
     q:"What is the difference between a birthday anchor and a regular DJ?",
-    a:"A DJ controls the music. A birthday anchor controls the entire experience — the narrative arc of the evening, the crowd energy between segments, the personalised script, the games, the tributes, the emotional moments, and the physical energy in the room. The anchor is why the evening feels curated rather than accidental." },
+    a:"A DJ controls the music. A birthday anchor controls the entire experience, the narrative arc of the evening, the crowd energy between segments, the personalised script, the games, the tributes, the emotional moments, and the physical energy in the room. The anchor is why the evening feels curated rather than accidental." },
   {
     q:"Do you anchor birthday parties outside Jaipur?",
-    a:"Yes. Birthday event anchoring is available pan-Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and nationally for high-profile or destination birthday events. Travel and accommodation are billed separately and discussed at booking." },
+    a:"Yes. Birthday event anchoring is available pan-Rajasthan, Udaipur, Jodhpur, Jaisalmer, Pushkar, and nationally for high-profile or destination birthday events. Travel and accommodation are billed separately and discussed at booking." },
   {
     q:"How far in advance should we book a birthday party anchor in Jaipur?",
     a:"For milestone birthdays with custom scripting, 2–4 weeks minimum. For celebrity-style galas requiring extensive script research and family coordination, 4–6 weeks. Weekend bookings for the October–February peak season fill 6–8 weeks in advance. WhatsApp to check availability immediately." },
@@ -189,13 +189,13 @@ const FAQS = [
     a:"Milestone birthdays are the most emotionally significant events to host well. A 50th birthday script involves research into the guest of honour's life, gathering contributions from family and friends, and building a narrative that genuinely moves the room. These take 2–3 weeks of pre-event preparation and are booked well in advance." },
   {
     q:"Which birthday venues in Jaipur do you work with?",
-    a:"All major Jaipur venues have been worked with — Fairmont, ITC Rajputana, Marriott, Leela Palace, Rambagh Palace, Jai Mahal Palace, Samode Haveli, Trident Jaipur, and all standalone banquet venues in Mansarovar, Vaishali Nagar, C-Scheme, and the major farmhouse properties on Ajmer Road." },
+    a:"All major Jaipur venues have been worked with, Fairmont, ITC Rajputana, Marriott, Leela Palace, Rambagh Palace, Jai Mahal Palace, Samode Haveli, Trident Jaipur, and all standalone banquet venues in Mansarovar, Vaishali Nagar, C-Scheme, and the major farmhouse properties on Ajmer Road." },
   {
     q:"Do you also host anniversary celebrations in Jaipur?",
-    a:"Yes. Silver jubilee (25th) and golden jubilee (50th) anniversary celebrations are a natural extension of birthday hosting. The scripting focuses on the couple's journey, with contributions from children, grandchildren, and old friends — building a public tribute that honours the relationship in front of everyone who matters." },
+    a:"Yes. Silver jubilee (25th) and golden jubilee (50th) anniversary celebrations are a natural extension of birthday hosting. The scripting focuses on the couple's journey, with contributions from children, grandchildren, and old friends, building a public tribute that honours the relationship in front of everyone who matters." },
   {
     q:"What games do you use at birthday parties?",
-    a:"Never the same games twice. Games are designed based on the specific guest mix — age range, energy level, family dynamics, and what the guest of honour would enjoy. Milestone birthdays get memory-based games, couples get anniversary trivia, kids parties get structured interactive games. Nothing from a recycled template." },
+    a:"Never the same games twice. Games are designed based on the specific guest mix, age range, energy level, family dynamics, and what the guest of honour would enjoy. Milestone birthdays get memory-based games, couples get anniversary trivia, kids parties get structured interactive games. Nothing from a recycled template." },
 ];
 const RELATED = [
   { icon:Heart,    label:"Wedding Anchor Jaipur",  href:"/wedding-anchor-jaipur",         desc:"Varmala, Baraat, Bidaai" },
@@ -225,7 +225,7 @@ export default function BirthdayAnchorJaipur() {
       ══════════════════════════════════════ */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24">
         <div className="absolute inset-0">
-          <Image src="/gallery-1.webp" alt="Birthday party anchor Jaipur — Yash Soni high energy crowd"
+          <Image src="/gallery-1.webp" alt="Birthday party anchor Jaipur, Yash Soni high energy crowd"
             fill priority className="object-cover" sizes="100vw"
             style={{ filter:"grayscale(15%)", opacity:.4 }}quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"/>
@@ -242,7 +242,7 @@ export default function BirthdayAnchorJaipur() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-t border-white/10 pt-8">
               <div>
                 <p className="text-zinc-300 text-base md:text-lg font-light leading-relaxed max-w-lg mb-2">
-                  Custom scripted. Bilingual Hindi/English. Built around the guest of honour's actual story — not a recycled template.
+                  Custom scripted. Bilingual Hindi/English. Built around the guest of honour's actual story, not a recycled template.
                 </p>
                 <p className="text-zinc-500 text-sm">Jaipur · Rajasthan · Jaipur & Rajasthan</p>
               </div>
@@ -284,7 +284,7 @@ export default function BirthdayAnchorJaipur() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. THE REAL PROBLEM — pattern interrupt
+          3. THE REAL PROBLEM, pattern interrupt
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
@@ -294,10 +294,10 @@ export default function BirthdayAnchorJaipur() {
               Most Birthday<br/>Parties Are <G>Boring.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              The anchor reads off a script. The games are recycled from the last ten events. Nobody in the room actually knows what's coming next — and that includes the anchor.
+              The anchor reads off a script. The games are recycled from the last ten events. Nobody in the room actually knows what's coming next, and that includes the anchor.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              A birthday happens once a year. A milestone birthday — a 25th, a 50th — happens once in a lifetime. The anchor is the single person who controls whether the evening feels like a curated, emotional, energetic celebration or a forgettable function with music.
+              A birthday happens once a year. A milestone birthday, a 25th, a 50th, happens once in a lifetime. The anchor is the single person who controls whether the evening feels like a curated, emotional, energetic celebration or a forgettable function with music.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
               The right anchor doesn't just fill time between cake and dancing. The right anchor <em className="text-[#B5952F]">makes the birthday</em>.
@@ -318,7 +318,7 @@ export default function BirthdayAnchorJaipur() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. PARTY FORMATS — 6 cards
+          4. PARTY FORMATS, 6 cards
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-6xl mx-auto">
@@ -351,7 +351,7 @@ export default function BirthdayAnchorJaipur() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. GALLERY — bento grid
+          5. GALLERY, bento grid
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
@@ -384,7 +384,7 @@ export default function BirthdayAnchorJaipur() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. VS — THE DIFFERENCE
+          6. VS, THE DIFFERENCE
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-12">
         <div className="max-w-5xl mx-auto">
@@ -461,7 +461,7 @@ export default function BirthdayAnchorJaipur() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -471,7 +471,7 @@ export default function BirthdayAnchorJaipur() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. SCROLLING TICKER — social proof
+          9. SCROLLING TICKER, social proof
       ══════════════════════════════════════ */}
       <section className="py-8 border-b border-white/5 overflow-hidden mask-fade">
         <div className="flex marquee whitespace-nowrap gap-12">
@@ -548,7 +548,7 @@ export default function BirthdayAnchorJaipur() {
               Let's Make This<br/><G>Birthday Legendary.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-2">Peak season weekends fill 6–8 weeks in advance.</p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the date and guest count — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the date and guest count, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-2 px-12 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
                 <CalendarCheck size={16}/> WhatsApp to Book

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -102,12 +102,12 @@ const RISHIKESH_IDENTITY = [
   {
     icon: Flame,
     title: "The Ultimate Satvik Challenge",
-    desc: "Rishikesh is a holy city. Events here run on a strict 'Satvik Protocol'—meaning no alcohol, and often, no meat. For an amateur anchor, alcohol is a crutch used to get guests dancing. Yash does not need it. He specializes in 'Pure Organic Momentum', using razor-sharp interactive crowd psychology, flawless humor, and immense stage dominance to create a totally sober Sangeet that feels more explosive than a nightclub."
+    desc: "Rishikesh is a holy city. Events here run on a strict 'Satvik Protocol'-meaning no alcohol, and often, no meat. For an amateur anchor, alcohol is a crutch used to get guests dancing. Yash does not need it. He specializes in 'Pure Organic Momentum', using razor-sharp interactive crowd psychology, flawless humor, and immense stage dominance to create a totally sober Sangeet that feels more explosive than a nightclub."
   },
   {
     icon: Waves,
     title: "Himalayan Ridge Acoustics",
-    desc: "Properties like Taj Rishikesh and The Roseate Ganges are carved directly into the Himalayan foothills alongside the river. The natural acoustics are chaotic—wind coming down the valley actively strips the sound away. Yash uses 'Acoustic Compression', physically restructuring the crowd layout and projecting his voice through the wind to ensure the emotional intimacy of the Varmala is never lost to the sheer scale of the mountains."
+    desc: "Properties like Taj Rishikesh and The Roseate Ganges are carved directly into the Himalayan foothills alongside the river. The natural acoustics are chaotic-wind coming down the valley actively strips the sound away. Yash uses 'Acoustic Compression', physically restructuring the crowd layout and projecting his voice through the wind to ensure the emotional intimacy of the Varmala is never lost to the sheer scale of the mountains."
   },
   {
     icon: Briefcase,
@@ -155,27 +155,27 @@ const VENUES = [
 ];
 
 const VS = [
-  { problem: "The party completely dying at 9 PM because there is no alcohol to lower guests' inhibitions", fix: "Manufacturing pure organic hype—using the anchor to actively force the crowd out of their shells" },
+  { problem: "The party completely dying at 9 PM because there is no alcohol to lower guests' inhibitions", fix: "Manufacturing pure organic hype-using the anchor to actively force the crowd out of their shells" },
   { problem: "Using 'cheap MC' club humor that instantly ruins the serene, spiritual prestige of Taj Rishikesh", fix: "Intimate, highly conversational executive-grade delivery matching the VIP crowd's pedigree" },
   { problem: "The anchor's voice dissipating entirely into the Himalayan valley winds during a riverside Phera", fix: "Mastery of timeline-stitching and acoustic centralizing to pull the entire party tightly together" },
-  { problem: "Reading rigidly from paper notes during a highly exclusive family performance", fix: "100% unscripted flow—maintaining absolute eye contact and reacting to inside jokes in real-time" },
+  { problem: "Reading rigidly from paper notes during a highly exclusive family performance", fix: "100% unscripted flow-maintaining absolute eye contact and reacting to inside jokes in real-time" },
   { problem: "Failing to fuse the cultures during a massive US/UK-Indian cross-border wedding in Rishikesh", fix: "Bilingual emotional intelligence that bridges modern urban executives directly with local elders" },
   { problem: "The corporate wellness offsite feeling like a boring seminar instead of a luxury escape", fix: "Unscripted, highly articulate strategy moderation that feels like a TED-style conversation" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Bansal Family — Delhi NCR",
+    name: "Bansal Family, Delhi NCR",
     quote: "Hosting a Satvik wedding at Taj Rishikesh was incredibly beautiful, but we were terrified the Sangeet would be boring without a bar. Yash completely changed the game. He brought an insane level of pure, organic hype using his voice and crowd interaction. The dance floor was packed till the venue shut down.",
     event: "Destination Satvik Wedding · Taj Rishikesh"
   },
   {
-    name: "Venture Capital Summit — Gurgaon",
+    name: "Venture Capital Summit, Gurgaon",
     quote: "We held a 3-day wellness and strategy summit at The Roseate Ganges. Yash anchored the entire schedule. His English is exceptionally sharp, and his ability to pace a room without relying on notes made him look like one of the executives. True professional.",
     event: "Executive Retreat · The Roseate Ganges"
   },
   {
-    name: "Dr. Shah & Family — US/Mumbai",
+    name: "Dr. Shah & Family, US/Mumbai",
     quote: "We chose Aloha on the Ganges to perform deeply traditional ceremonies, but all our friends flew in from the US. Yash was the ultimate bridge. He brought perfect English context for the Americans, and immense Hindi respect for the spiritual rituals by the river.",
     event: "Cross-Cultural Wedding · Aloha on the Ganges"
   },
@@ -189,7 +189,7 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "A lot of our guests are worried the Sangeet will be dull because it’s a strict dry (no-alcohol) event. How do you fix this?",
-    a: "This is arguably the most valuable skillset an anchor can possess. When alcohol isn't present to loosen up a crowd, the anchor must become the catalyst. I employ 'Psychological Momentum'—using rapid-fire interactive segments, highly personalized unscripted humor, and aggressive timeline pacing to pull guests onto the dance floor via pure, organic energy."
+    a: "This is arguably the most valuable skillset an anchor can possess. When alcohol isn't present to loosen up a crowd, the anchor must become the catalyst. I employ 'Psychological Momentum'-using rapid-fire interactive segments, highly personalized unscripted humor, and aggressive timeline pacing to pull guests onto the dance floor via pure, organic energy."
   },
   {
     q: "We are holding a corporate offsite at Taj Rishikesh. Our crowd is purely C-Suite. Can you match this tone?",
@@ -266,7 +266,7 @@ export default function RishikeshPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/rishikesh_bg.webp" alt="Best Anchor in Rishikesh — Satvik Weddings & Taj Wellness" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/rishikesh_bg.webp" alt="Best Anchor in Rishikesh, Satvik Weddings & Taj Wellness" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function RishikeshPage() {
                 Rishikesh presents a completely unique high-net-worth challenge. The properties here (like Taj Rishikesh) enforce <strong className="text-[#B5952F]">extremely strict 'Satvik' protocols without alcohol</strong>. Many anchors fail entirely in this environment because they cannot hype a sober crowd. Yash steps into these pristine valleys and manufactures raw, explosive dancing energy entirely organically, using sheer psychology and vocal momentum.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC behavior'. For VIP corporate retreats and spiritual cross-cultural weddings, Yash provides an elite bilingual execution—commanding executive English that validates global/Delhi NCR guests, perfectly fused with the deep Hindi reverence required for ceremonies on the Ganges.
+                He completely rejects paper scripts and basic 'MC behavior'. For VIP corporate retreats and spiritual cross-cultural weddings, Yash provides an elite bilingual execution-commanding executive English that validates global/Delhi NCR guests, perfectly fused with the deep Hindi reverence required for ceremonies on the Ganges.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -492,10 +492,10 @@ export default function RishikeshPage() {
               Hosting a luxury event in Rishikesh requires absolute mastery over 'Psychological Engagement'. Without alcohol to lower the guests' inhibitions, a standard party frequently fails. An amateur anchor loses the crowd entirely out here. Yash acts as the singular energy catalyst, actively collapsing the psychological distance between the VIPs and the stage, using extremely sharp unscripted interactions to keep a 200-guest Sangeet locked in and fiercely hyped entirely sober.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Rishikesh crowds are heavily weighted towards highly modern Delhi executives and traditional spiritual elders. The host must bridge this gap instantly. Yash does this through total bilingual fluidity—validating the corporate guests with pristine English, then flipping elegantly into deep Hindi/Sanskrit reverence to anchor the core ceremonies by the Ganges.
+              Furthermore, Rishikesh crowds are heavily weighted towards highly modern Delhi executives and traditional spiritual elders. The host must bridge this gap instantly. Yash does this through total bilingual fluidity-validating the corporate guests with pristine English, then flipping elegantly into deep Hindi/Sanskrit reverence to anchor the core ceremonies by the Ganges.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Himalayan VIP fluency—defeating strict Satvik acoustic limits and uniting the high-net-worth demographic—is the mark of an anchor who operates at the true apex of the wellness destination industry.
+              Himalayan VIP fluency-defeating strict Satvik acoustic limits and uniting the high-net-worth demographic-is the mark of an anchor who operates at the true apex of the wellness destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,14 +551,14 @@ export default function RishikeshPage() {
               Himalayan Wellness.<br /><G>VIP Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Rishikesh’s luxury ecosystem is an acoustic and psychological challenge. Properties along the Ganges suffer from massive acoustic drift as the wind rips through the valley. Furthermore, maintaining energy with 0% alcohol requires absolute perfection. Yash builds his stage presence to physically and vocally anchor these extreme environments—using conversational dominance to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Rishikesh’s luxury ecosystem is an acoustic and psychological challenge. Properties along the Ganges suffer from massive acoustic drift as the wind rips through the valley. Furthermore, maintaining energy with 0% alcohol requires absolute perfection. Yash builds his stage presence to physically and vocally anchor these extreme environments-using conversational dominance to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Spiritual Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural integrity, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within strictly Satvik, zero-alcohol Himalayan constraints.
+                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural integrity, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within strictly Satvik, zero-alcohol Himalayan constraints.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function RishikeshPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function RishikeshPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Rishikesh experiences intense overlapping of the Delhi VIP destination season and peak local corporate retreat dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

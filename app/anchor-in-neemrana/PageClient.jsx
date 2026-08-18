@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -112,7 +112,7 @@ const NEEMRANA_IDENTITY = [
   {
     icon: Users,
     title: "The Intimate VIP Dynamic",
-    desc: "Because of the logistical difficulty of the forts, Neemrana weddings are rarely 1,000-guest affairs. They are usually highly exclusive, 150-300 guest events containing ultra-premium VIPs. This requires the anchor to pivot away from 'stage broadcasting' into 'intimate conversational dominance'—engaging with the CEO of a tech firm and the grandparents of a Marwari family simultaneously."
+    desc: "Because of the logistical difficulty of the forts, Neemrana weddings are rarely 1,000-guest affairs. They are usually highly exclusive, 150-300 guest events containing ultra-premium VIPs. This requires the anchor to pivot away from 'stage broadcasting' into 'intimate conversational dominance'-engaging with the CEO of a tech firm and the grandparents of a Marwari family simultaneously."
   },
 ];
 
@@ -170,7 +170,7 @@ const TESTIMONIALS = [
     event: "Fortress Destination Wedding · Neemrana Fort-Palace"
   },
   {
-    name: "Director — FinTech HQ Gurgaon",
+    name: "Director, FinTech HQ Gurgaon",
     quote: "We brought our entire C-suite out to Neemrana for our annual strategy retreat. Yash anchored the daytime panels with incredible precision, handled Q&A sessions without any notes, and then transitioned into hosting our evening gala flawlessly. True executive hosting.",
     event: "Leadership Offsite · Ramada Neemrana · 120 delegates"
   },
@@ -189,10 +189,10 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   { q: "Who is the best anchor for destination weddings in Neemrana?", a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in Neemrana's fort palace and heritage resort wedding circuit. Bilingual Hindi/English, completely unscripted, and deeply experienced in managing grand destination weddings for families travelling from Delhi-NCR and abroad." },
   { q: "How do you handle the logistics and acoustics of fort weddings in Neemrana?", a: "Neemrana's heritage venues, particularly Neemrana Fort Palace, feature multi-level open-air settings and unique acoustic challenges. Managing event energy across these stepped terraces requires an experienced host who uses precise pacing and crowd psychology to draw guests together, maintaining a high-energy atmosphere despite the vertical spread." },
-  { q: "Can you host bilingual events for NRI families in Neemrana?", a: "Yes. Given its proximity to Delhi, Neemrana frequently hosts NRI destination weddings. Bilingual cultural bridging is essential here — sophisticated English for international guests combined with culturally rich Hindi ensures everyone connects with the royal Rajasthani setting." },
+  { q: "Can you host bilingual events for NRI families in Neemrana?", a: "Yes. Given its proximity to Delhi, Neemrana frequently hosts NRI destination weddings. Bilingual cultural bridging is essential here, sophisticated English for international guests combined with culturally rich Hindi ensures everyone connects with the royal Rajasthani setting." },
   { q: "Do you anchor corporate events in Neemrana?", a: "Neemrana is a prime location for corporate offsites, dealer meets, and leadership summits from the Delhi-NCR region. The hosting register for these events is sharp, brand-aligned, and professional, distinctly different from a high-energy wedding tone." },
   { q: "How far in advance should I book for a Neemrana wedding?", a: "Neemrana is highly sought after year-round but especially during the winter wedding season (October–March). Premium dates book out 6–8 months in advance. Secure your dates via WhatsApp immediately upon confirming your venue." },
-  { q: "Who is the best emcee or host in Neemrana for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Neemrana destination events — with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless royal event." },
+  { q: "Who is the best emcee or host in Neemrana for weddings?", a: "Anchor Yash Soni is the top-rated wedding emcee and host for Neemrana destination events, with a 4.9★ verified rating. Whether you are searching for an anchor, emcee, host, or MC, the same unscripted expertise applies to deliver a flawless royal event." },
   { q: "What is the difference between a wedding anchor, emcee, and host in Neemrana?", a: "Anchor, emcee, host, and MC are terms for the same professional role. Event planners often use 'emcee' or 'host', while families might say 'anchor'. Yash Soni operates seamlessly across all audience types and formats regardless of the exact title used." },
 ];
 
@@ -205,7 +205,7 @@ export default function NeemranaPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/neemrana_bg.webp" alt="Best Anchor in Neemrana — Corporate Retreats & Fort Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/neemrana_bg.webp" alt="Best Anchor in Neemrana, Corporate Retreats & Fort Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -285,7 +285,7 @@ export default function NeemranaPage() {
                 Neemrana is an architectural anomaly. A 15th-century, 14-tier vertical <strong className="text-[#B5952F]">Fort Palace</strong> means the anchor is actively battling extreme acoustic dead zones and stringent decibel limits that kill standard DJs. Furthermore, the crowd is almost exclusively composed of elite Delhi NCR business families and corporate executives requiring razor-sharp, unscripted English articulation.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                Yash does not use paper notes or aggressive, club-style hosting. He relies on highly sophisticated crowd-pacing, bilingual code-switching, and sheer vocal projection to dominate fortresses and corporate retreats alike—generating massive organic energy while completely respecting the heritage boundaries.
+                Yash does not use paper notes or aggressive, club-style hosting. He relies on highly sophisticated crowd-pacing, bilingual code-switching, and sheer vocal projection to dominate fortresses and corporate retreats alike-generating massive organic energy while completely respecting the heritage boundaries.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -314,7 +314,7 @@ export default function NeemranaPage() {
               The Fortress Demands<br />an <G>Elite Frequency.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Neemrana is not an open banquet hall. It is a highly compressed, vertically stacked historic zone catering almost entirely to the powerful Delhi-Gurgaon corridor. An anchor cannot simply 'yell' here—the sound breaks immediately. The event must be controlled through extreme pacing, psychological momentum, and immaculate bilingual English-Hindi bridging that satisfies highly modern corporate professionals while honoring traditional family elders.
+              Neemrana is not an open banquet hall. It is a highly compressed, vertically stacked historic zone catering almost entirely to the powerful Delhi-Gurgaon corridor. An anchor cannot simply 'yell' here-the sound breaks immediately. The event must be controlled through extreme pacing, psychological momentum, and immaculate bilingual English-Hindi bridging that satisfies highly modern corporate professionals while honoring traditional family elders.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -434,7 +434,7 @@ export default function NeemranaPage() {
               On the corporate front, Neemrana serves as the playground for Gurgaon's executives. When anchoring a multi-day leadership summit or a modern Delhi-fusion wedding, the host must completely drop all repetitive wedding tropes in favor of sharp, unscripted, highly articulate English moderation that validates the immense intellect of the room.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Neemrana fluency—defeating the impossible acoustics and commanding the NCR C-suite purely unscripted—marks an anchor operating at the very peak of the industry.
+              Neemrana fluency-defeating the impossible acoustics and commanding the NCR C-suite purely unscripted-marks an anchor operating at the very peak of the industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -490,14 +490,14 @@ export default function NeemranaPage() {
               Vertical Lawns.<br /><G>Intimate Crowd.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Neemrana’s ecosystem is a vertical challenge. Properties like the Fort Palace scatter 300+ guests upwards across endless stairs and terraces, leading to immediate acoustic disintegration. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline compression to condense the venue, ensuring the host and the family remain the undeniable center of gravity.
+              Scaling an event in Neemrana’s ecosystem is a vertical challenge. Properties like the Fort Palace scatter 300+ guests upwards across endless stairs and terraces, leading to immediate acoustic disintegration. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline compression to condense the venue, ensuring the host and the family remain the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Executive Offsite" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Gurgaon NCR business families and tech conglomerates do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within stringent decibel-limited fort conditions.
+                Gurgaon NCR business families and tech conglomerates do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within stringent decibel-limited fort conditions.
               </p>
             </div>
           </Reveal>
@@ -527,7 +527,7 @@ export default function NeemranaPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -539,7 +539,7 @@ export default function NeemranaPage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -547,10 +547,10 @@ export default function NeemranaPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Neemrana's Best.</G>
+                Whatever You Call It -{" "}<G>Neemrana's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Neemrana —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Neemrana -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -562,7 +562,7 @@ export default function NeemranaPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Neemrana",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Neemrana.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Neemrana.",
                 keywords: ["best wedding anchor neemrana", "wedding emcee neemrana", "wedding host neemrana", "wedding mc neemrana"],
               },
               {
@@ -580,13 +580,13 @@ export default function NeemranaPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Neemrana",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Neemrana — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Neemrana, by any name.",
                 keywords: ["best emcee in neemrana", "best anchor in neemrana", "best host in neemrana", "best mc neemrana"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Neemrana",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host neemrana", "english speaking anchor neemrana", "bilingual emcee neemrana"],
               },
               {
@@ -627,7 +627,7 @@ export default function NeemranaPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -733,7 +733,7 @@ export default function NeemranaPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Neemrana experiences intense overlapping of the Delhi corporate weekend offsite season and peak NCR luxury wedding dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

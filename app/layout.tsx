@@ -16,7 +16,7 @@ import {
 
 // ── FONTS ──────────────────────────────────────────────────────────────────
 // Reduced from 6 fonts to 4 actually-used fonts (Great_Vibes and Spectral
-// were unmapped in globals.css font-display classes — confirmed unused).
+// were unmapped in globals.css font-display classes, confirmed unused).
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     template: "%s | Anchor Yash Soni",
   },
   description:
-    "Looking for the best anchor in Jaipur? Anchor Yash Soni has hosted 700+ shows — from palace weddings in Kukas & Amer Road to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura. Jaipur's most trusted event host.",
+    "Looking for the best anchor in Jaipur? Anchor Yash Soni has hosted 700+ shows, from palace weddings in Kukas and Amer Road to farmhouse Sangeets on Ajmer Road and corporate galas at JECC Sitapura. Jaipur's most trusted event host.",
   keywords: [
     "best anchor in jaipur",
     "best wedding anchor in jaipur",
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Best Anchor in Jaipur on stage",
+        alt: "Anchor Yash Soni, Best Anchor in Jaipur on stage",
       },
     ],
   },
@@ -122,12 +122,12 @@ export const metadata: Metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Best Anchor in Jaipur",
+        alt: "Anchor Yash Soni, Best Anchor in Jaipur",
       },
     ],
   },
   icons: {
-    // Use app/icon.png — Next.js auto-generates all favicon sizes from it.
+    // Use app/icon.png, Next.js auto-generates all favicon sizes from it.
     // Do NOT manually specify .webp favicons: not supported by all browsers.
     icon: [{ url: "/icon.png", type: "image/png" }],
     shortcut: "/icon.png",
@@ -155,7 +155,7 @@ const localBusinessSchema = {
     "Anchor Yash Soni is the best anchor in Jaipur with 700+ shows hosted across Rajasthan and India. Specialist in luxury weddings, Sangeet ceremonies, corporate award nights, Haldi, Mehendi, and VIP events. Bilingual Hindi/English host serving Kukas, Amer Road, Ajmer Road, Sitapura JECC, Mansarovar and all major event venues in Jaipur.",
   url: "https://yashsoni.in",
   telephone: "+917737877978",
-  // FIXED: Real email — obfuscated form does not parse in schema.org
+  // FIXED: Real email, obfuscated form does not parse in schema.org
   email: "info@yashsoni.in",
   priceRange: "₹₹₹₹",
   image: "https://yashsoni.in/og-image.webp",
@@ -169,6 +169,8 @@ const localBusinessSchema = {
       "Corporate Event Management",
       "Stage Presence",
       "Public Speaking",
+      "Emcee Services",
+      "Master of Ceremonies",
       "Cultural Traditions of Rajasthan",
       "Bilingual Hosting",
     ],
@@ -198,8 +200,12 @@ const localBusinessSchema = {
   ],
   serviceType: [
     "Wedding Anchor",
+    "Wedding Emcee",
+    "Master of Ceremonies",
     "Sangeet Host",
     "Corporate Event Anchor",
+    "Corporate Emcee",
+    "Emcee Services",
     "Birthday Party Anchor",
     "Haldi Games Host",
     "Mehendi Anchor",
@@ -221,6 +227,7 @@ const localBusinessSchema = {
     "https://www.youtube.com/@anchor_yash",
     "https://www.wedmegood.com/profile/anchor-yash-25628297",
     "https://www.weddingwire.in/wedding-entertainment/anchor-yash--e487166",
+    "https://www.google.com/search?kgmid=/g/11w1fnfjrs",
   ],
 };
 
@@ -240,6 +247,8 @@ const personSchema = {
     "Corporate Event Management",
     "Stage Presence",
     "Public Speaking",
+    "Emcee Services",
+    "Master of Ceremonies",
     "Cultural Traditions of Rajasthan",
     "Bilingual Hosting",
   ],
@@ -258,6 +267,7 @@ const personSchema = {
   sameAs: [
     "https://www.instagram.com/anchor_yash_official",
     "https://www.youtube.com/@anchor_yash",
+    "https://www.google.com/search?kgmid=/g/11w1fnfjrs",
   ],
 };
 
@@ -267,7 +277,7 @@ const websiteSchema = {
   "@id": "https://yashsoni.in/#website",
   name: "Anchor Yash Soni",
   url: "https://yashsoni.in",
-  description: "Official website of Anchor Yash Soni — Best Anchor in Jaipur",
+  description: "Official website of Anchor Yash Soni, Best Anchor in Jaipur",
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -290,14 +300,14 @@ export default function RootLayout({
       className={`scroll-smooth ${playfair.variable} ${cormorant.variable} ${cinzel.variable} ${montserrat.variable}`}
     >
       <head>
-        {/* Geo meta — not part of Next.js metadata API, placed here directly */}
+        {/* Geo meta, not part of Next.js metadata API, placed here directly */}
         <meta name="geo.region" content="IN-RJ" />
         <meta name="geo.placename" content="Jaipur, Rajasthan, India" />
         <meta name="geo.position" content="26.9124;75.7873" />
         <meta name="ICBM" content="26.9124, 75.7873" />
         <meta name="theme-color" content="#020202" />
 
-        {/* Global JSON-LD — ProfessionalService + Person + WebSite */}
+        {/* Global JSON-LD, ProfessionalService + Person + WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -324,7 +334,7 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        {/* layout.tsx wraps HeaderController in <header> — Navbar must NOT
+        {/* layout.tsx wraps HeaderController in <header>, Navbar must NOT
             also wrap itself in <header> to avoid nested landmark elements */}
         <header className="fixed top-0 left-0 w-full z-[10000]" role="banner">
           <HeaderController />
@@ -341,7 +351,7 @@ export default function RootLayout({
         <FooterController />
         <FloatingContact />
 
-        {/* Facebook Pixel — FIXED: noscript now in <body>, not <head> */}
+        {/* Facebook Pixel, FIXED: noscript now in <body>, not <head> */}
         <Script
           id="fb-pixel"
           strategy="afterInteractive"
@@ -360,7 +370,7 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* noscript fallback — FIXED: now in <body>, not <head> */}
+        {/* noscript fallback, FIXED: now in <body>, not <head> */}
         {process.env.NEXT_PUBLIC_FB_PIXEL_ID && (
           <noscript>
             {/* eslint-disable-next-line @next/next/no-img-element */}

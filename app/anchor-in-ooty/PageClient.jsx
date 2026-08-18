@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -102,12 +102,12 @@ const OOTY_IDENTITY = [
   {
     icon: Landmark,
     title: "Colonial Heritage Protocol",
-    desc: "Events in Ooty, especially at properties like Savoy (IHCL) or Ferrnhills Royale Palace, are operating within literal historical monuments. The etiquette here isn't just 'wedding fun'—it is 'High-Tea Sophistication'. Yash executes 'Heritage Integration'—utilizing flawless, prestigious English to narration the colonial weight of the venue, ensuring the hosting validates the absolute pedigree of the international and Bangalore HNI guest lists."
+    desc: "Events in Ooty, especially at properties like Savoy (IHCL) or Ferrnhills Royale Palace, are operating within literal historical monuments. The etiquette here isn't just 'wedding fun'-it is 'High-Tea Sophistication'. Yash executes 'Heritage Integration'-utilizing flawless, prestigious English to narration the colonial weight of the venue, ensuring the hosting validates the absolute pedigree of the international and Bangalore HNI guest lists."
   },
   {
     icon: Coffee,
     title: "Tea Estate Acoustic Mastery",
-    desc: "Because Ooty is famous for its sprawling, terrace-style tea estate weddings, the sound physics are a nightmare. Wind and massive outdoor dispersion mean guests drift off constantly. Yash operates as an 'Acoustic Focal Point'—using intense, commanding unscripted vocal presence and physical timeline management to pull the party together, preventing the energy from bleeding out into the Nilgiri mist."
+    desc: "Because Ooty is famous for its sprawling, terrace-style tea estate weddings, the sound physics are a nightmare. Wind and massive outdoor dispersion mean guests drift off constantly. Yash operates as an 'Acoustic Focal Point'-using intense, commanding unscripted vocal presence and physical timeline management to pull the party together, preventing the energy from bleeding out into the Nilgiri mist."
   },
   {
     icon: Music2,
@@ -158,24 +158,24 @@ const VS = [
   { problem: "Using loud, 'cheap MC' club shouting that instantly destroys the colonial grace of Ooty's heritage hotels", fix: "Intimate, highly conversational executive-grade delivery matching the absolute pinnacle of heritage pedigree" },
   { problem: "The anchor freezing when the Nilgiri mist and cold forces an outdoor tea-garden party suddenly indoors", fix: "Absolute stoic command, restructuring the event flow and timeline natively without the guests sensing the shift" },
   { problem: "Guests retreating to their heated rooms early because the mountain temperatures freeze the event energy", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd instantaneously" },
-  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor mountain ceremony", fix: "100% unscripted flow—maintaining absolute eye contact despite severe high-altitude distractions" },
+  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor mountain ceremony", fix: "100% unscripted flow-maintaining absolute eye contact despite severe high-altitude distractions" },
   { problem: "Being unable to bridge the formal Bangalore C-suite networking with a high-energy Sangeet format", fix: "Executing an intense psychological transition that drags the technology VIPs directly to the dance floor natively" },
   { problem: "The anchor's voice dissipating entirely as guests wander across the vast heritage estates", fix: "Mastery of timeline sequencing and vocal centralizing to pull the entire party tightly towards the event core" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "NRI Destination Wedding — London",
+    name: "NRI Destination Wedding, London",
     quote: "Hosting at Ferrnhills Royale Palace required absolute reverence but also the ability to run a highly sophisticated international timeline. Yash was flawless. His English narration of the heritage protocols was astounding. Truly an elite stage presence.",
     event: "VIP Wedding · Ferrnhills Royale Palace"
   },
   {
-    name: "Tech Founders — Bangalore",
+    name: "Tech Founders, Bangalore",
     quote: "We chose Savoy for our board offsite. We needed an anchor who could moderate a panel but also drive our award night energy. Yash anchored with pure executive polish. Unscripted, sharp, and totally in control of the multi-day agenda.",
     event: "Leadership Offsite · Savoy Ooty"
   },
   {
-    name: "Nilgiri Estate Sangeet — Mumbai",
+    name: "Nilgiri Estate Sangeet, Mumbai",
     quote: "The mist was rolling in, it was cold, and we were worried the party would fail. Yash didn't wait. He brought massive Sangeet hype entirely natively. He switched between English for the VIPs and heavy energy work effortlessly. The dance floor exploded.",
     event: "Destination Sangeet · Sterling Ooty"
   },
@@ -189,15 +189,15 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle outdoor weddings in Ooty when the Nilgiri mist and cold roll in at sunset?",
-    a: "This is the cardinal rule of high-altitude hosting. The second the sun sets over the tea gardens, the crowd wants to retreat. A basic DJ setup cannot counter this psychology. I utilize 'Temperature Compression'—speeding up the entire timeline aggressively, plunging into the crowd physically, and detonating a massive dancing session before the cold forces families indoors."
+    a: "This is the cardinal rule of high-altitude hosting. The second the sun sets over the tea gardens, the crowd wants to retreat. A basic DJ setup cannot counter this psychology. I utilize 'Temperature Compression'-speeding up the entire timeline aggressively, plunging into the crowd physically, and detonating a massive dancing session before the cold forces families indoors."
   },
   {
-    q: "Our Bangalore guest list is incredibly sophisticated—tech founders and corporate VIPs. Can you match this tone?",
+    q: "Our Bangalore guest list is incredibly sophisticated-tech founders and corporate VIPs. Can you match this tone?",
     a: "Completely. Elite heritage properties like Savoy do not need a loud, shouting 'hype man'. They require an Executive Moderator. I deliberately drop standard, childish 'wedding gimmicks'. I host with formal, razor-sharp, unscripted English that respects the pedigree of the VIPs, perfectly bridging high-level networking with eventual massive celebration."
   },
   {
     q: "The properties here are heritage sites with strict noise and acoustic rules. How do you adapt?",
-    a: "I execute 'Acoustic Precision'. In locations like Coonoor or Ooty, I am extremely mindful of property decibel limits during the Day. I host conversationally. However, when the Sangeet begins, I use 'Crowd Condensing'—physically pulling the guests towards the core stage area to generate massive perceived energy without needing to volume-blast the whole mountain."
+    a: "I execute 'Acoustic Precision'. In locations like Coonoor or Ooty, I am extremely mindful of property decibel limits during the Day. I host conversationally. However, when the Sangeet begins, I use 'Crowd Condensing'-physically pulling the guests towards the core stage area to generate massive perceived energy without needing to volume-blast the whole mountain."
   },
   {
     q: "Do you use teleprompters or scripts during these complex multi-day Ooty itineraries?",
@@ -268,7 +268,7 @@ export default function OotyPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/rose-petal-tree-background.webp" alt="Best Anchor in Ooty — VIP Luxury Heritage Hill Weddings" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/rose-petal-tree-background.webp" alt="Best Anchor in Ooty, VIP Luxury Heritage Hill Weddings" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -348,7 +348,7 @@ export default function OotyPage() {
                 Ooty operates as a definitive sanctuary away from standard chaotic wedding hubs. You are dealing with literal historical monuments like Savoy (IHCL) where <strong className="text-[#B5952F]">colonial architecture and Bangalore’s highest tech-elite demographics</strong> requires flawless execution. Yash steps into these sprawling, heritage mountain architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the corporate network, suddenly flipping into high-voltage momentum when the Sangeet demands unhinged energy.
+                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the corporate network, suddenly flipping into high-voltage momentum when the Sangeet demands unhinged energy.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -491,13 +491,13 @@ export default function OotyPage() {
               VIP Reality.<br /><G>Nilgiri Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Ooty requires an elite understanding of 'Property Dominance'. Venues like Savoy IHCL drag across literal acres of Victorian terrain. The moment formal day-networking concludes, the crowd fragments entirely across the hotel footprints. Yash assumes the role of the Timeline Architect—using extreme vocal pacing and dominant stage psychology to forcefully pull the Bangalore VIPs into the central phase, instantly generating massive momentum before the mountain drop paralyzes energy.
+              Hosting a luxury event in Ooty requires an elite understanding of 'Property Dominance'. Venues like Savoy IHCL drag across literal acres of Victorian terrain. The moment formal day-networking concludes, the crowd fragments entirely across the hotel footprints. Yash assumes the role of the Timeline Architect-using extreme vocal pacing and dominant stage psychology to forcefully pull the Bangalore VIPs into the central phase, instantly generating massive momentum before the mountain drop paralyzes energy.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               Furthermore, Ooty is a definitive destination for Bangalore's most sophisticated tech and corporate families. Yash fundamentally validates their presence with pristine, unscripted English moderation, then seamlessly flips into an aggressively high-energy party format when the evening formal wear comes off.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Heritage VIP fluency—defeating sprawling Victorian architectures and dominating the Bangalore corporate tier—is the mark of an anchor who operates at the true apex of the destination industry.
+              Heritage VIP fluency-defeating sprawling Victorian architectures and dominating the Bangalore corporate tier-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -553,14 +553,14 @@ export default function OotyPage() {
               Victorian Scale.<br /><G>Bangalore Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Ooty is an intense logistical challenge. Properties physically drop off across the Nilgiri valleys, scattering guests continuously into the mist. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Ooty is an intense logistical challenge. Properties physically drop off across the Nilgiri valleys, scattering guests continuously into the mist. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "VVIP Heritage" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Bangalore families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling Victorian constraints.
+                High-net-worth Bangalore families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling Victorian constraints.
               </p>
             </div>
           </Reveal>
@@ -590,7 +590,7 @@ export default function OotyPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -679,7 +679,7 @@ export default function OotyPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Ooty experiences intense overlapping of the Bangalore VIP destination season and peak local heritage hotel dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-dharamshala/layout.jsx
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Dharamshala",
     "Best Wedding Anchor Dharamshala",
@@ -88,7 +88,7 @@ const localBusinessSchema = {
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5" },
-      author: { "@type": "Person", name: "Corporate Summit — Chandigarh" },
+      author: { "@type": "Person", name: "Corporate Summit, Chandigarh" },
       reviewBody: "Choosing Taj Dharamshala meant we needed an extremely refined host for our executive summit. Yash anchored with pure executive polish. Unscripted, sharp, and totally in control of the multi-day agenda.",
     },
     {
@@ -155,9 +155,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-dharamshala/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Dharamshala | Taj & Hyatt Emcee — Yash Soni`,
+  name: `Best Anchor in Dharamshala | Taj & Hyatt Emcee, Yash Soni`,
   headline: `Dharamshala's Premier Event Anchor for Ultra-Luxury Mountain Destination Weddings`,
-  description: `Anchor Yash Soni — 4.9★ rated. The definitive expert for Dharamshala destination weddings. Mastering prestigious properties like Taj Dharamshala and Hyatt Regency with unscripted VIP executive hosting.`,
+  description: `Anchor Yash Soni, 4.9★ rated. The definitive expert for Dharamshala destination weddings. Mastering prestigious properties like Taj Dharamshala and Hyatt Regency with unscripted VIP executive hosting.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Himachal Pradesh` },
@@ -169,7 +169,7 @@ const webPageSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
   title: `Best Anchor in Dharamshala | Luxury Mountain Wedding Emcee`,
-  description: `Looking for the best anchor in Dharamshala? Anchor Yash Soni — 4.9★. Expert for Taj Dharamshala, Hyatt Regency, and ultra-prestigious mountain weddings. Flawless unscripted bilingual hosting for VIP events.`,
+  description: `Looking for the best anchor in Dharamshala? Anchor Yash Soni, 4.9★. Expert for Taj Dharamshala, Hyatt Regency, and ultra-prestigious mountain weddings. Flawless unscripted bilingual hosting for VIP events.`,
   keywords: [
     "anchor in dharamshala",
     "best anchor in dharamshala",
@@ -197,13 +197,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Dharamshala | Elite Mountain Destination Wedding Host`,
     description: `4.9★ rated. Dharamshala's premium anchor for highly prestigious destination weddings spanning the Dhauladhar luxury ridge. Unscripted bilingual excellence.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Dharamshala — Anchor Yash Soni at Mountain Luxury Resorts` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Dharamshala, Anchor Yash Soni at Mountain Luxury Resorts` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Dharamshala | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Dharamshala | Anchor Yash Soni, 4.9★`,
     description: `Taj Dharamshala. Hyatt Regency. Dharamshala's premier bilingual event anchor for exclusive VIP Sangeets and heavily restricted mountain VIP ceremonies.`,
     images: [OG_IMAGE],
   },
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Dharamshala | Dhauladhar VIP Destination Emcee — Yash Soni`,
+    "DC.title": `Best Anchor in Dharamshala | Dhauladhar VIP Destination Emcee, Yash Soni`,
     "DC.subject": `Event Anchor, Mountain Wedding, VIP Events, ${CITY}, Himachal Pradesh, India`,
     "DC.coverage": `${CITY}, Himachal Pradesh, India`,
     "DC.language": "en-IN",

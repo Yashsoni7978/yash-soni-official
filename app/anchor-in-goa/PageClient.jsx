@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -107,7 +107,7 @@ const PUSHKAR_IDENTITY = [
   {
     icon: Globe,
     title: "The Ultimate NRI & VIP Convergence",
-    desc: "Goa is the apex destination for elite NRI families flying in from the US, UK, and UAE—frequently merging with traditional families from Delhi or Mumbai. The cultural code-switching required is immense. Yash transitions natively between highly articulate, executive-grade English suited for a global VIP guest list, and the deep, respectful Hindi required for the Pheras and traditional elders."
+    desc: "Goa is the apex destination for elite NRI families flying in from the US, UK, and UAE-frequently merging with traditional families from Delhi or Mumbai. The cultural code-switching required is immense. Yash transitions natively between highly articulate, executive-grade English suited for a global VIP guest list, and the deep, respectful Hindi required for the Pheras and traditional elders."
   },
   {
     icon: Sunset,
@@ -158,7 +158,7 @@ const VS = [
   { problem: "The anchor's voice being completely drowned out by ocean winds during a beach Varmala", fix: "Mastery of open-air acoustic projection and aggressive crowd-condensing frameworks" },
   { problem: "Using cheap, cheesy 'resort MC' humor that alienates a highly educated NRI guest list", fix: "Flawless, executive-grade English delivery layered over deeply respectful Hindi traditions" },
   { problem: "Losing control of 500 guests scattered across the massive lawns of the Grand Hyatt", fix: "Physical stage dominance and timeline pacing that continually pulls the crowd to the center" },
-  { problem: "Reading rigidly from paper notes during a chaotic, multi-culture Sangeet", fix: "100% unscripted flow—maintaining absolute eye contact and reacting to the room in real-time" },
+  { problem: "Reading rigidly from paper notes during a chaotic, multi-culture Sangeet", fix: "100% unscripted flow-maintaining absolute eye contact and reacting to the room in real-time" },
   { problem: "Failing to fuse the cultures during a massive US-Indian cross-border wedding", fix: "Bilingual emotional intelligence that bridges international VIPs directly with local elders" },
   { problem: "The party energy dying when moving from an outdoor dinner to the indoor club", fix: "Aggressive, high-hype transitions that drag the entire guest list straight to the dance floor" },
 ];
@@ -175,7 +175,7 @@ const TESTIMONIALS = [
     event: "Cross-Cultural Sangeet · W Goa · 350 guests"
   },
   {
-    name: "Corporate Director — National Finance Hub",
+    name: "Corporate Director, National Finance Hub",
     quote: "We hosted an exclusive multi-day corporate retreat at the ITC Grand Goa. The challenge was keeping the executive team focused on strategy during the day, while hosting intense galas at night. Yash's intellectual, unscripted hosting was incredibly sharp. Complete authority.",
     event: "Leadership Offsite Gala · ITC Grand Goa"
   },
@@ -189,7 +189,7 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle the massive outdoor acoustics of a Goa beach wedding?",
-    a: "This is the primary failure point for most anchors in Goa. Ocean wind carries sound away instantly, and guests tend to spread out across massive resort lawns. An anchor cannot just 'yell louder'. I use a technique called 'Acoustic Condensing'—physically repositioning the crowd, utilizing specific speaker triangulations with the DJ, and using vocal pacing to force intimacy into an otherwise infinite space."
+    a: "This is the primary failure point for most anchors in Goa. Ocean wind carries sound away instantly, and guests tend to spread out across massive resort lawns. An anchor cannot just 'yell louder'. I use a technique called 'Acoustic Condensing'-physically repositioning the crowd, utilizing specific speaker triangulations with the DJ, and using vocal pacing to force intimacy into an otherwise infinite space."
   },
   {
     q: "Half our guests are flying in from the US/UK, and half are traditional relatives from Delhi. Can you manage both?",
@@ -267,7 +267,7 @@ export default function GoaPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/goa_bg.webp" alt="Best Anchor in Goa — NRI & Luxury Beach Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/goa_bg.webp" alt="Best Anchor in Goa, NRI & Luxury Beach Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -347,7 +347,7 @@ export default function GoaPage() {
                 Goa functions precisely at the limits of extreme scale. You are dealing with massive <strong className="text-[#B5952F]">oceanfront acoustic dispersal</strong>, strictly enforced property decibel limits, and an audience heavily skewed towards international, highly-educated NRI families. Yash steps into these infinite spaces and manufactures intense, raw dancing energy entirely organically.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts. For high-net-worth cross-cultural weddings at the Taj Exotica or W Goa, Yash provides an elite bilingual execution—flawless, commanding English that centers the global VIPs, integrated natively with the deep Hindi warmth that the traditional Indian ceremonies absolutely demand.
+                He completely rejects paper scripts. For high-net-worth cross-cultural weddings at the Taj Exotica or W Goa, Yash provides an elite bilingual execution-flawless, commanding English that centers the global VIPs, integrated natively with the deep Hindi warmth that the traditional Indian ceremonies absolutely demand.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -493,10 +493,10 @@ export default function GoaPage() {
               Hosting a luxury event in Goa requires an elite understanding of 'Coastal Acoustics & Transition Mechanics'. Many of the area's most beautiful 5-star properties feature sprawling oceanfront lawns. An amateur anchor loses the crowd entirely out here. Yash actively collapses the psychological distance between the last row and the stage, using extremely sharp voice projection and timeline pacing to keep a massive Sangeet focused and locked in.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Goa's destination crowds are almost invariably a mix of highly modern international/NRI friends and traditional, VIP business-family elders. The host must bridge this gap instantly. Yash does this through total unscripted fluidity—validating the global guests with pristine English, then flipping elegantly into deep Hindi to anchor the Pheras.
+              Furthermore, Goa's destination crowds are almost invariably a mix of highly modern international/NRI friends and traditional, VIP business-family elders. The host must bridge this gap instantly. Yash does this through total unscripted fluidity-validating the global guests with pristine English, then flipping elegantly into deep Hindi to anchor the Pheras.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Coastal fluency—defeating the ocean wind and uniting the global VIP demographic—is the mark of an anchor who operates at the true apex of the destination industry.
+              Coastal fluency-defeating the ocean wind and uniting the global VIP demographic-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -552,14 +552,14 @@ export default function GoaPage() {
               Infinite Coastlines.<br /><G>Intimate Crowd.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Goa’s luxury ecosystem is a massive logistical challenge. Properties like ITC Grand or The Leela throw 500+ guests across colossal open laws, leading to immediate acoustic scatter and audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments—using pacing and crowd psychology to compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Goa’s luxury ecosystem is a massive logistical challenge. Properties like ITC Grand or The Leela throw 500+ guests across colossal open laws, leading to immediate acoustic scatter and audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments-using pacing and crowd psychology to compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Destination Protocol" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth NRI families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling beach-front conditions.
+                High-net-worth NRI families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling beach-front conditions.
               </p>
             </div>
           </Reveal>
@@ -589,7 +589,7 @@ export default function GoaPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -678,7 +678,7 @@ export default function GoaPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Goa experiences intense overlapping of the international destination season and peak local luxury wedding dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

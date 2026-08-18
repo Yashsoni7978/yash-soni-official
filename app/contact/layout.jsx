@@ -1,5 +1,5 @@
-// app/contact/layout.jsx
-// SERVER COMPONENT — metadata only
+﻿// app/contact/layout.jsx
+// SERVER COMPONENT, metadata only
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -98,7 +98,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Contact Anchor Yash Soni — Book Event Anchor in Jaipur",
+        alt: "Contact Anchor Yash Soni, Book Event Anchor in Jaipur",
       },
     ],
   },

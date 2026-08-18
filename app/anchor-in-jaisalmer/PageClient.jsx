@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -83,7 +83,7 @@ const JAISALMER_IDENTITY = [
   {
     icon: Landmark,
     title: "The Golden Bhati Lineage",
-    desc: "The culture of the Golden City is dictated by its 12th-century Rajput heritage. When hosting inside the Jaisalmer Fort—the only living fort in India—or in its surrounding palaces, the event is immediately imbued with historical weight. Incorporating the right clan references, acknowledging the local Manganiyar musical traditions, and maintaining Rajasthani dignity is non-negotiable."
+    desc: "The culture of the Golden City is dictated by its 12th-century Rajput heritage. When hosting inside the Jaisalmer Fort-the only living fort in India-or in its surrounding palaces, the event is immediately imbued with historical weight. Incorporating the right clan references, acknowledging the local Manganiyar musical traditions, and maintaining Rajasthani dignity is non-negotiable."
   },
 ];
 
@@ -128,9 +128,9 @@ const VENUES = [
 const VS = [
   { problem: "Voice and energy lost completely to the open desert wind at dune events", fix: "Specialised open-air acoustic technique and physical crowd-condensing capability" },
   { problem: "Local folk artists (Manganiyars) clumsily inserted into the modern timeline", fix: "Seamless, respectful integration of Rajasthani folk music with DJ sets" },
-  { problem: "Over-the-top, loud Indian wedding tropes that ruin an ultra-luxury Suryagarh aesthetic", fix: "International-standard luxury hosting — refined, understated, yet totally commanding" },
+  { problem: "Over-the-top, loud Indian wedding tropes that ruin an ultra-luxury Suryagarh aesthetic", fix: "International-standard luxury hosting, refined, understated, yet totally commanding" },
   { problem: "Incapable of bridging elder traditional respects with NRI diaspora expectations", fix: "Flawless bilingual code-switching (English/Hindi) preserving cultural gravitas" },
-  { problem: "Fails to manage the harsh temperature drops of the desert winter nights", fix: "Aggressive Sangeet pacing — moving the crowd quickly from seats to the dance floor" },
+  { problem: "Fails to manage the harsh temperature drops of the desert winter nights", fix: "Aggressive Sangeet pacing, moving the crowd quickly from seats to the dance floor" },
   { problem: "Reading from paper scripts while standing in a 12th-century golden fort", fix: "100% unscripted, eyes-up crowd connection from start to finish" },
 ];
 
@@ -142,11 +142,11 @@ const TESTIMONIALS = [
   },
   {
     name: "Desai Family",
-    quote: "Managing a Sangeet in the open desert dunes was an acoustic nightmare—until Yash took the stage. The wind was fierce, but his energy outmatched the desert. He physically arranged the crowd, built an intimate circle in infinite space, and held 500 guests locked to the stage for a straight 4-hour set. Incredible.",
+    quote: "Managing a Sangeet in the open desert dunes was an acoustic nightmare-until Yash took the stage. The wind was fierce, but his energy outmatched the desert. He physically arranged the crowd, built an intimate circle in infinite space, and held 500 guests locked to the stage for a straight 4-hour set. Incredible.",
     event: "Desert Camp Sangeet · Sam Sand Dunes · 500 guests"
   },
   {
-    name: "VP Marketing — Corporate MNC",
+    name: "VP Marketing, Corporate MNC",
     quote: "We flew 80 of our top performing partners to The Serai for an exclusive retreat. Yash hosted our gala dinner under the stars with supreme professionalism. He brought out the rich history of Jaisalmer without turning the evening into a history lecture. The perfect balance of elite corporate standard and Rajasthani warmth.",
     event: "Corporate Gala · The Serai · 80 delegates"
   },
@@ -160,19 +160,19 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "Who is the best anchor for luxury weddings in Jaisalmer?",
-    a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in the ultra-luxury and NRI destination wedding demographic in Jaisalmer — with deep experience at Suryagarh, Marriott Jaisalmer, The Serai, and premium desert camp venues. He delivers the flawless, bilingual, and sophisticated hosting required for Jaisalmer's discerning clientele.",
+    a: "Anchor Yash Soni is rated 4.9★ across 700+ shows and specialises in the ultra-luxury and NRI destination wedding demographic in Jaisalmer, with deep experience at Suryagarh, Marriott Jaisalmer, The Serai, and premium desert camp venues. He delivers the flawless, bilingual, and sophisticated hosting required for Jaisalmer's discerning clientele.",
   },
   {
     q: "How do you handle the acoustics of open desert events at Sam Sand Dunes?",
-    a: "Open desert is one of the hardest acoustic environments in the world — sound dissipates instantly and wind interferes with microphone usage. The solution is crowd psychology: using precise pacing to draw the audience physically closer to the stage, creating an intimate bubble of energy that defies the infinite space around it. This is a technique that comes from experience, not theory.",
+    a: "Open desert is one of the hardest acoustic environments in the world, sound dissipates instantly and wind interferes with microphone usage. The solution is crowd psychology: using precise pacing to draw the audience physically closer to the stage, creating an intimate bubble of energy that defies the infinite space around it. This is a technique that comes from experience, not theory.",
   },
   {
     q: "Can you host a bilingual event that bridges NRI modern life with Rajasthani tradition?",
-    a: "Bilingual cultural bridging is the cornerstone of Jaisalmer destination wedding hosting. NRI families from the US, UK, and UAE bring their extended diaspora — the hosting must be perfectly bilingual, ensuring international guests are completely engrossed while Indian relatives feel the full cultural depth and pride of the Rajputana Thar setting.",
+    a: "Bilingual cultural bridging is the cornerstone of Jaisalmer destination wedding hosting. NRI families from the US, UK, and UAE bring their extended diaspora, the hosting must be perfectly bilingual, ensuring international guests are completely engrossed while Indian relatives feel the full cultural depth and pride of the Rajputana Thar setting.",
   },
   {
     q: "Do you integrate local Rajasthani folk musicians (like Manganiyars) into your events?",
-    a: "Manganiyar folk musicians are woven seamlessly into Jaisalmer events — respectfully introduced and strategically placed so the transition from heritage folk to modern Sangeet beats feels like a natural cultural evolution, not a jarring interruption. Yash coordinates directly with musicians and DJs to manage this flow.",
+    a: "Manganiyar folk musicians are woven seamlessly into Jaisalmer events, respectfully introduced and strategically placed so the transition from heritage folk to modern Sangeet beats feels like a natural cultural evolution, not a jarring interruption. Yash coordinates directly with musicians and DJs to manage this flow.",
   },
   {
     q: "Have you hosted corporate elite events and offsites in Jaisalmer?",
@@ -180,23 +180,23 @@ const FAQS = [
   },
   {
     q: "What makes Jaisalmer different from Jaipur or Udaipur for a wedding host?",
-    a: "Jaisalmer is remote and extreme — families who choose the Golden City are deliberately isolating themselves in luxury at the edge of the Thar Desert. The hosting must match the vastness of the setting: unmatched elegance, profound environmental awareness, and a stage presence that can command an audience under the weight of a living 12th-century fort.",
+    a: "Jaisalmer is remote and extreme, families who choose the Golden City are deliberately isolating themselves in luxury at the edge of the Thar Desert. The hosting must match the vastness of the setting: unmatched elegance, profound environmental awareness, and a stage presence that can command an audience under the weight of a living 12th-century fort.",
   },
   {
     q: "What happens if it gets very cold during our desert Sangeet?",
-    a: "Desert temperatures plummet rapidly after sunset from November to February. As the host, the timeline is aggressively adjusted — cutting long gaps, driving interactive segments rapidly, and immediately moving the crowd to the dance floor to maintain energy and core temperature. This real-time adaptation is what separates experienced Jaisalmer anchors from untested ones.",
+    a: "Desert temperatures plummet rapidly after sunset from November to February. As the host, the timeline is aggressively adjusted, cutting long gaps, driving interactive segments rapidly, and immediately moving the crowd to the dance floor to maintain energy and core temperature. This real-time adaptation is what separates experienced Jaisalmer anchors from untested ones.",
   },
   {
     q: "How far in advance should we book for a Jaisalmer event?",
-    a: "Jaisalmer events often require multi-day blockouts due to travel distance from central Rajasthan — availability disappears quickly during peak winter months. Families booking Suryagarh or the Marriott typically lock their anchor simultaneously with the venue. WhatsApp immediately upon confirming your dates.",
+    a: "Jaisalmer events often require multi-day blockouts due to travel distance from central Rajasthan, availability disappears quickly during peak winter months. Families booking Suryagarh or the Marriott typically lock their anchor simultaneously with the venue. WhatsApp immediately upon confirming your dates.",
   },
   {
     q: "Who is the best emcee in Jaisalmer for desert weddings?",
-    a: "Anchor Yash Soni is the top-rated wedding emcee and host for Jaisalmer destination events — with a 4.9★ verified rating and experience at Suryagarh, The Serai, Gorbandh Palace, and Sam Sand Dunes venues. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Jaisalmer settings.",
+    a: "Anchor Yash Soni is the top-rated wedding emcee and host for Jaisalmer destination events, with a 4.9★ verified rating and experience at Suryagarh, The Serai, Gorbandh Palace, and Sam Sand Dunes venues. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Jaisalmer settings.",
   },
   {
     q: "What is the difference between a wedding anchor, emcee, and host in Jaisalmer?",
-    a: "Anchor, emcee, host, and MC are four terms for the same role. International destination wedding planners typically prefer 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates across all formats flawlessly — the Jaisalmer fort and desert circuit demands the same skill regardless of what the role is called.",
+    a: "Anchor, emcee, host, and MC are four terms for the same role. International destination wedding planners typically prefer 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates across all formats flawlessly, the Jaisalmer fort and desert circuit demands the same skill regardless of what the role is called.",
   },
 ];
 
@@ -210,7 +210,7 @@ export default function JaisalmerPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/backgrounds/jaisalmer_bg.webp" alt="Best Anchor in Jaisalmer — The Golden Fort and Thar Desert" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/backgrounds/jaisalmer_bg.webp" alt="Best Anchor in Jaisalmer, The Golden Fort and Thar Desert" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -434,13 +434,13 @@ export default function JaisalmerPage() {
               NRI Polish.<br /><G>Desert Reality.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting an event for an international family at Suryagarh means you are operating under intense scrutiny. The aesthetic is heavily curated, the production value is immense, and the attendees have global expectations. The anchor must be the authoritative spine of the event—directing proceedings with immaculate English, unshakeable confidence, and profound respect for the Rajasthani setting.
+              Hosting an event for an international family at Suryagarh means you are operating under intense scrutiny. The aesthetic is heavily curated, the production value is immense, and the attendees have global expectations. The anchor must be the authoritative spine of the event-directing proceedings with immaculate English, unshakeable confidence, and profound respect for the Rajasthani setting.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               Conversely, stepping out onto the Sam Sand Dunes strips away all architectural comfort. You are fighting the freezing night wind, rapidly changing acoustics, and thousands of miles of empty desert. This requires physical command. You have to instinctively close the distance between you and the crowd to keep them locked into the celebration.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Jaisalmer fluency—from the hyper-refined interiors of the Marriott to the wild expanse of the Thar—is the mark of an anchor who operates at the absolute peak of the destination industry.
+              Jaisalmer fluency-from the hyper-refined interiors of the Marriott to the wild expanse of the Thar-is the mark of an anchor who operates at the absolute peak of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -486,7 +486,7 @@ export default function JaisalmerPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Jaisalmer · The Golden City</p>
-                <p className="text-white text-xs">India's extreme luxury destination — requiring flawless production and absolute anchor authority.</p>
+                <p className="text-white text-xs">India's extreme luxury destination, requiring flawless production and absolute anchor authority.</p>
               </div>
             </div>
           </Reveal>
@@ -533,7 +533,7 @@ export default function JaisalmerPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -545,7 +545,7 @@ export default function JaisalmerPage() {
 
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -553,10 +553,10 @@ export default function JaisalmerPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Jaisalmer's Best.</G>
+                Whatever You Call It -{" "}<G>Jaisalmer's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Jaisalmer —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Jaisalmer -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -568,7 +568,7 @@ export default function JaisalmerPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Jaisalmer",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Jaisalmer.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Jaisalmer.",
                 keywords: ["best wedding anchor jaisalmer", "wedding emcee jaisalmer", "wedding host jaisalmer", "wedding mc jaisalmer"],
               },
               {
@@ -586,13 +586,13 @@ export default function JaisalmerPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Jaisalmer",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Jaisalmer — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Jaisalmer, by any name.",
                 keywords: ["best emcee in jaisalmer", "best anchor in jaisalmer", "best host in jaisalmer", "best mc jaisalmer"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Jaisalmer",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host jaisalmer", "english speaking anchor jaisalmer", "bilingual emcee jaisalmer"],
               },
               {
@@ -633,7 +633,7 @@ export default function JaisalmerPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -739,7 +739,7 @@ export default function JaisalmerPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Jaisalmer's premium properties book out months in advance, and because of travel logistics, host block-outs in this region happen simultaneously. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

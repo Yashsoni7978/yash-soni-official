@@ -1,5 +1,5 @@
-/**
- * GlowCard — Effect 3
+﻿/**
+ * GlowCard, Effect 3
  * Mechanic: dark card with a blurred dual-layer gold/ivory glow behind via
  * a pseudo-element, and a rotating gradient border on hover.
  * Brand palette: outer blur Royal Gold at low opacity, inner border gradient

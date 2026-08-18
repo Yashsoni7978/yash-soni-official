@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -74,7 +74,7 @@ const FAQItem = ({ q, a, id }) => {
   );
 };
 // ─────────────────────────────────────────────
-// DATA — All Jodhpur-specific
+// DATA, All Jodhpur-specific
 // ─────────────────────────────────────────────
 const STATS = [
   { val: "700", suffix: "+", label: "Shows Hosted", sub: "across Rajasthan", icon: Mic2 },
@@ -86,24 +86,24 @@ const JODHPUR_IDENTITY = [
   {
     icon: Crown,
     title: "Umaid Bhawan Scale",
-    desc: "The largest private residence in the world that still functions as a working palace. Events here operate under a different set of rules — royal family protocols, strict sound corridors, and a guest list that often includes nobility and senior government figures. The anchor must command this room without being diminished by it."
+    desc: "The largest private residence in the world that still functions as a working palace. Events here operate under a different set of rules, royal family protocols, strict sound corridors, and a guest list that often includes nobility and senior government figures. The anchor must command this room without being diminished by it."
   },
   {
     icon: Sword,
     title: "Mehrangarh Fort Acoustics",
-    desc: "The fort courtyard is one of the most dramatic wedding venues in India and also one of the most acoustically challenging. Stone walls, open sky, crowd spread across multiple levels, and unpredictable desert wind. Commanding this space is a learned skill — not an improvised one."
+    desc: "The fort courtyard is one of the most dramatic wedding venues in India and also one of the most acoustically challenging. Stone walls, open sky, crowd spread across multiple levels, and unpredictable desert wind. Commanding this space is a learned skill, not an improvised one."
   },
   {
     icon: Globe,
     title: "The Blue City's Royal Register",
-    desc: "Jodhpur's heritage families are not Jaipur. The register is more austere, the protocol more formal. The anchor who brings the same high-energy Bollywood tone to a Jodhpur royal wedding has fundamentally misread the room. The hosting style must match the city's personality — dignified, powerful, and deeply rooted."
+    desc: "Jodhpur's heritage families are not Jaipur. The register is more austere, the protocol more formal. The anchor who brings the same high-energy Bollywood tone to a Jodhpur royal wedding has fundamentally misread the room. The hosting style must match the city's personality, dignified, powerful, and deeply rooted."
   },
 ];
 const SERVICES = [
   {
     icon: Heart,
     title: "Royal Wedding Anchor",
-    desc: "Umaid Bhawan, Mehrangarh Fort, RAAS Jodhpur — each demands precise protocol, bilingual hosting, and the ability to adapt mid-event. From the baraat entry at the fort gates to the reception at the palace courtyard.",
+    desc: "Umaid Bhawan, Mehrangarh Fort, RAAS Jodhpur, each demands precise protocol, bilingual hosting, and the ability to adapt mid-event. From the baraat entry at the fort gates to the reception at the palace courtyard.",
     tag: "Shaadi"
   },
   {
@@ -115,7 +115,7 @@ const SERVICES = [
   {
     icon: Flower2,
     title: "Haldi & Mehndi Host",
-    desc: "Intimate haveli-courtyard events where family elders expect respect and the younger crowd wants energy. The tone shifts effortlessly — games that include everyone, transitions that honour the ritual.",
+    desc: "Intimate haveli-courtyard events where family elders expect respect and the younger crowd wants energy. The tone shifts effortlessly, games that include everyone, transitions that honour the ritual.",
     tag: "Pre-Wedding"
   },
   {
@@ -140,13 +140,13 @@ const VS = [
   { problem: "Cannot manage fort-courtyard acoustic challenges", fix: "Mehrangarh stone-wall echo technique from repeated events at the fort" },
   { problem: "Unfamiliar with Umaid Bhawan's palace protocols", fix: "Royal family protocol awareness from prior events at the palace" },
   { problem: "Desert wind creates dead microphone moments", fix: "Open-air contingency hosting that turns technical gaps into crowd moments" },
-  { problem: "Mispronounces Rajputana surnames and ritual names", fix: "Pre-event research deck — every name, every clan, every ritual verified" },
-  { problem: "Same energy level for Sangeet and reception", fix: "Real-time energy calibration — electric for Sangeet, regal for reception" },
+  { problem: "Mispronounces Rajputana surnames and ritual names", fix: "Pre-event research deck, every name, every clan, every ritual verified" },
+  { problem: "Same energy level for Sangeet and reception", fix: "Real-time energy calibration, electric for Sangeet, regal for reception" },
 ];
 const TESTIMONIALS = [
   {
     name: "Rathore Family",
-    quote: "Our Umaid Bhawan wedding had 700 guests — ranging from Delhi industrialists to ancestral Jodhpuri families who have never left the city. Yash read every section of that room. The royal elders were nodding in approval, the Delhi crowd was dancing. I have never seen an anchor manage that range.",
+    quote: "Our Umaid Bhawan wedding had 700 guests, ranging from Delhi industrialists to ancestral Jodhpuri families who have never left the city. Yash read every section of that room. The royal elders were nodding in approval, the Delhi crowd was dancing. I have never seen an anchor manage that range.",
     event: "Wedding · Umaid Bhawan Palace · 700 guests"
   },
   {
@@ -155,8 +155,8 @@ const TESTIMONIALS = [
     event: "Sangeet · Mehrangarh Fort · 500 guests"
   },
   {
-    name: "VP Marketing — Auto OEM",
-    quote: "National dealer meet at Ajit Bhawan — 420 channel partners from across Rajasthan and Gujarat. Day conference, evening awards gala, dinner performance. Yash hosted all three formats without the tone bleeding from one into the next. That commercial awareness is very rare.",
+    name: "VP Marketing, Auto OEM",
+    quote: "National dealer meet at Ajit Bhawan, 420 channel partners from across Rajasthan and Gujarat. Day conference, evening awards gala, dinner performance. Yash hosted all three formats without the tone bleeding from one into the next. That commercial awareness is very rare.",
     event: "Dealer Meet · Ajit Bhawan · 420 delegates"
   },
 ];
@@ -168,43 +168,43 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "Who is the best anchor for destination weddings in Jodhpur?",
-    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Jodhpur's fort and palace wedding circuit — Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, Ajit Bhawan, Bal Samand Lake Palace, and Vivanta. Bilingual Hindi/English, unscripted, experienced in royal family protocols and NRI destination weddings.",
+    a: "Anchor Yash Soni is rated 4.9★ with 700+ shows anchored across Rajasthan, specialising in Jodhpur's fort and palace wedding circuit, Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, Ajit Bhawan, Bal Samand Lake Palace, and Vivanta. Bilingual Hindi/English, unscripted, experienced in royal family protocols and NRI destination weddings.",
   },
   {
     q: "Have you hosted weddings at Umaid Bhawan Palace?",
-    a: "Umaid Bhawan Palace is among the most demanding venues in India. The palace management has strict protocols — specific staging areas, sound system limitations in the heritage wings, and the requirement to interact respectfully with members of the royal family who may attend. Knowing what is and is not appropriate in this setting comes from working there, not from research.",
+    a: "Umaid Bhawan Palace is among the most demanding venues in India. The palace management has strict protocols, specific staging areas, sound system limitations in the heritage wings, and the requirement to interact respectfully with members of the royal family who may attend. Knowing what is and is not appropriate in this setting comes from working there, not from research.",
   },
   {
     q: "How do you manage the acoustics at Mehrangarh Fort events?",
-    a: "The fort courtyard bounces sound off thick stone walls and loses it to the open sky simultaneously. The technique is to use the crowd rather than fight the acoustics — pulling people closer, building circular energy rather than projecting outward. This setting specifically requires an anchor who has worked it before, not one figuring it out during your wedding.",
+    a: "The fort courtyard bounces sound off thick stone walls and loses it to the open sky simultaneously. The technique is to use the crowd rather than fight the acoustics, pulling people closer, building circular energy rather than projecting outward. This setting specifically requires an anchor who has worked it before, not one figuring it out during your wedding.",
   },
   {
     q: "Can you manage a large NRI crowd at a Jodhpur palace wedding?",
-    a: "Jodhpur's destination circuit consistently brings families from the UK, US, and UAE. The hosting challenge is specific — the international cousins need English that sounds native, not anchored. The Rajputana family elders need a tone that respects the heritage of the house. Code-switching across these registers, live and unscripted, is the core skill.",
+    a: "Jodhpur's destination circuit consistently brings families from the UK, US, and UAE. The hosting challenge is specific, the international cousins need English that sounds native, not anchored. The Rajputana family elders need a tone that respects the heritage of the house. Code-switching across these registers, live and unscripted, is the core skill.",
   },
   {
     q: "How far in advance should I book for a Jodhpur destination wedding?",
-    a: "Palace venues in Jodhpur — particularly Umaid Bhawan — have extremely limited availability windows. The anchor calendar for November through February fills 6–8 months ahead at premium properties. Blocking the date requires an advance payment. No tentative holds or waitlists — WhatsApp the moment your venue is confirmed.",
+    a: "Palace venues in Jodhpur, particularly Umaid Bhawan, have extremely limited availability windows. The anchor calendar for November through February fills 6–8 months ahead at premium properties. Blocking the date requires an advance payment. No tentative holds or waitlists, WhatsApp the moment your venue is confirmed.",
   },
   {
     q: "Do you anchor Sangeet functions at Jodhpur fort venues?",
-    a: "Mehrangarh Fort Sangeets are among the most complex events to anchor — the courtyard layout, the acoustic behaviour of the stone, crowd movement across multiple levels, and the desert chill after 9 PM all affect crowd energy. These are variables managed in real time, producing a Sangeet that feels electric rather than fighting the space.",
+    a: "Mehrangarh Fort Sangeets are among the most complex events to anchor, the courtyard layout, the acoustic behaviour of the stone, crowd movement across multiple levels, and the desert chill after 9 PM all affect crowd energy. These are variables managed in real time, producing a Sangeet that feels electric rather than fighting the space.",
   },
   {
     q: "Can you anchor corporate events in Jodhpur?",
-    a: "Corporate events — dealer meets, annual galas, and leadership summits at Ajit Bhawan, Vivanta Jodhpur, and WelcomHeritage Mandir Palace — are a regular part of the Jodhpur calendar. The corporate hosting register is brand-specific and sharp, not a wedding tone re-purposed for a boardroom. Bilingual Hindi/English is standard.",
+    a: "Corporate events, dealer meets, annual galas, and leadership summits at Ajit Bhawan, Vivanta Jodhpur, and WelcomHeritage Mandir Palace, are a regular part of the Jodhpur calendar. The corporate hosting register is brand-specific and sharp, not a wedding tone re-purposed for a boardroom. Bilingual Hindi/English is standard.",
   },
   {
     q: "What makes Anchor Yash different from local Jodhpur anchors?",
-    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit — backed by 700+ shows, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
+    a: "The difference is range and record. Local anchors know Jodhpur. Anchor Yash Soni knows Jodhpur and the full spectrum of event formats, crowd psychologies, and venue-specific requirements of the destination wedding circuit, backed by 700+ shows, a 4.9★ rating from 50+ verified clients, and a zero-paper-script career.",
   },
   {
     q: "Who is the best emcee in Jodhpur for destination weddings?",
-    a: "Anchor Yash Soni is the top-rated wedding emcee for Jodhpur destination events — with a 4.9★ verified rating and deep experience at Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, and Ajit Bhawan. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Jodhpur venues.",
+    a: "Anchor Yash Soni is the top-rated wedding emcee for Jodhpur destination events, with a 4.9★ verified rating and deep experience at Umaid Bhawan Palace, Mehrangarh Fort, RAAS Jodhpur, and Ajit Bhawan. Whether called anchor, emcee, host, or MC, the same bilingual unscripted expertise applies across all Jodhpur venues.",
   },
   {
     q: "What is the difference between a wedding anchor, emcee, and host in Jodhpur?",
-    a: "Anchor, emcee, host, and MC are four terms for the same role — the professional who leads the event programme, manages transitions, and commands the room. Wedding planners in Jodhpur's destination circuit often prefer 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates flawlessly across all formats regardless of what the role is called.",
+    a: "Anchor, emcee, host, and MC are four terms for the same role, the professional who leads the event programme, manages transitions, and commands the room. Wedding planners in Jodhpur's destination circuit often prefer 'emcee' or 'host', while traditional families say 'anchor'. Yash Soni operates flawlessly across all formats regardless of what the role is called.",
   },
 ];
 
@@ -218,7 +218,7 @@ export default function JodhpurPage() {
       <style>{css}</style>
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/jodhpur_bg.webp" alt="Best Anchor in Jodhpur — Mehrangarh Fort at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/jodhpur_bg.webp" alt="Best Anchor in Jodhpur, Mehrangarh Fort at twilight" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -230,7 +230,7 @@ export default function JodhpurPage() {
                 Best Event Anchor · Jodhpur · The Blue City
               </span>
             </div>
-            {/* H1 — ANCHOR + Texture City Name */}
+            {/* H1, ANCHOR + Texture City Name */}
             <h1 className="font-black uppercase tracking-tighter leading-[0.82] mb-8">
               <span className="block text-white text-[17vw] md:text-[12vw] lg:text-[9rem] opacity-90 drop-shadow-2xl">ANCHOR</span>
               <span className="block text-[15vw] md:text-[10vw] lg:text-[8rem] bg-clip-text text-transparent bg-cover bg-center mt-2 pb-4" style={{ backgroundImage: "url('/texture/jodhpur.webp')" }}>
@@ -319,7 +319,7 @@ export default function JodhpurPage() {
               The Blue City Demands<br />a <G>Royal Standard.</G>
             </h2>
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mb-14 font-light">
-              Jodhpur is not Jaipur. The heritage is deeper, the protocol is stricter, and the wrong tone at a Rajputana wedding is not a minor error — it is a cultural misread that the family remembers.
+              Jodhpur is not Jaipur. The heritage is deeper, the protocol is stricter, and the wrong tone at a Rajputana wedding is not a minor error, it is a cultural misread that the family remembers.
             </p>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-5">
@@ -434,10 +434,10 @@ export default function JodhpurPage() {
               Jodhpur destination weddings carry the weight of lineage. At a Rathore family wedding at Umaid Bhawan, the wrong joke, the wrong reference, or the wrong energy at the wrong moment is not a recoverable error. The anchor is representing the family to everyone in that room.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Royal family members may attend. Heritage guests from ancestral Jodhpur lineages will notice every detail. NRI cousins from London who've heard top international MCs will notice a different set of details. The register must satisfy all of them simultaneously — and it must feel effortless.
+              Royal family members may attend. Heritage guests from ancestral Jodhpur lineages will notice every detail. NRI cousins from London who've heard top international MCs will notice a different set of details. The register must satisfy all of them simultaneously, and it must feel effortless.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              5+ years of Rajasthan's top-tier wedding circuit means the palace protocols, the clan references, and the cultural nuances are already known — not studied the night before.
+              5+ years of Rajasthan's top-tier wedding circuit means the palace protocols, the clan references, and the cultural nuances are already known, not studied the night before.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -480,7 +480,7 @@ export default function JodhpurPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 /60 backdrop-blur-sm border border-[#D4AF37]/20 rounded-xl p-4">
                 <p className="text-[#B5952F] text-[9px] font-bold uppercase tracking-widest mb-1">Jodhpur · Mehrangarh Fort</p>
-                <p className="text-white text-xs">India's most dramatic wedding fortress — commanded repeatedly.</p>
+                <p className="text-white text-xs">India's most dramatic wedding fortress, commanded repeatedly.</p>
               </div>
             </div>
           </Reveal>
@@ -490,14 +490,14 @@ export default function JodhpurPage() {
               10,000+ Crowd.<br /><G>Fort Walls.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Fort-scale crowds are a specific skill. Sound disperses differently in open heritage spaces. The energy that works in a hotel ballroom evaporates in a fort courtyard. The technique for commanding 600 guests across Mehrangarh's three courtyard levels is something built over repeated events — not borrowed from a wedding emcee reel.
+              Fort-scale crowds are a specific skill. Sound disperses differently in open heritage spaces. The energy that works in a hotel ballroom evaporates in a fort courtyard. The technique for commanding 600 guests across Mehrangarh's three courtyard levels is something built over repeated events, not borrowed from a wedding emcee reel.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> Heritage Venue Crisis Management
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                Desert wind, stone-wall echo, power challenges in heritage wings, last-minute programme changes at the fort — all handled without the guests knowing anything happened.
+                Desert wind, stone-wall echo, power challenges in heritage wings, last-minute programme changes at the fort, all handled without the guests knowing anything happened.
               </p>
             </div>
           </Reveal>
@@ -522,7 +522,7 @@ export default function JodhpurPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -533,7 +533,7 @@ export default function JodhpurPage() {
       </section>
                   {/* ══════════════════════════════════════
           KEYWORD CLUSTER SECTION
-          Anchor · Emcee · Host · MC — All Variants
+          Anchor · Emcee · Host · MC, All Variants
       ══════════════════════════════════════ */}
       <section className="py-24 md:py-32  border-y border-[#D4AF37]/15 relative z-10">
         <div className="container mx-auto px-5 md:px-10">
@@ -541,10 +541,10 @@ export default function JodhpurPage() {
             <div className="text-center mb-14">
               <p className="text-[#B5952F] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Anchor · Emcee · Host · MC</p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                Whatever You Call It —{" "}<G>Jodhpur's Best.</G>
+                Whatever You Call It -{" "}<G>Jodhpur's Best.</G>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mt-5 max-w-2xl mx-auto font-light leading-relaxed">
-                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Jodhpur —
+                Whether you search for a wedding anchor, corporate emcee, event host, or MC in Jodhpur -
                 it is the same role, the same skill set, and the same name: Anchor Yash Soni.
               </p>
             </div>
@@ -556,7 +556,7 @@ export default function JodhpurPage() {
               {
                 label: "Wedding Emcee · Wedding Host",
                 title: "Best Wedding Anchor in Jodhpur",
-                desc: "Ceremonies, Varmala, Baraat entry, Bidaai — every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Jodhpur.",
+                desc: "Ceremonies, Varmala, Baraat entry, Bidaai, every wedding format hosted with cultural precision. The most reviewed wedding anchor and emcee in Jodhpur.",
                 keywords: ["best wedding anchor jodhpur", "wedding emcee jodhpur", "wedding host jodhpur", "wedding mc jodhpur"],
               },
               {
@@ -574,13 +574,13 @@ export default function JodhpurPage() {
               {
                 label: "Best MC · Best Host · Best Emcee",
                 title: "Best Emcee in Jodhpur",
-                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Jodhpur — by any name.",
+                desc: "4.9★ across 50+ verified reviews. 700+ shows. The most reviewed event professional in Jodhpur, by any name.",
                 keywords: ["best emcee in jodhpur", "best anchor in jodhpur", "best host in jodhpur", "best mc jodhpur"],
               },
               {
                 label: "Bilingual Emcee · International Host",
                 title: "NRI Wedding Host in Jodhpur",
-                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted — making every guest feel at home.",
+                desc: "Polished English for international guests, sophisticated Hindi for the family. Code-switching live and unscripted, making every guest feel at home.",
                 keywords: ["nri wedding host jodhpur", "english speaking anchor jodhpur", "bilingual emcee jodhpur"],
               },
               {
@@ -621,7 +621,7 @@ export default function JodhpurPage() {
             ))}
           </div>
 
-          {/* Search term cloud — entity density for GEO */}
+          {/* Search term cloud, entity density for GEO */}
           <Reveal>
             <div className="border border-white/5 rounded-2xl p-6 bg-[#0a0a0a]">
               <p className="text-zinc-600 text-[10px] uppercase tracking-widest font-bold mb-4">Also Searched As</p>
@@ -725,7 +725,7 @@ export default function JodhpurPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Jodhpur's peak destination season fills 6–8 months ahead. I do not maintain a waitlist and do not send replacements.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

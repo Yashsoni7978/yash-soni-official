@@ -118,7 +118,7 @@ export default function ManagementFooter() {
             <span>·</span>
             <Link href="/terms" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>
             <span>·</span>
-            <Link href="/press" className="hover:text-[#D4AF37] transition-colors">Press Kit</Link>
+            <Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Press Kit</Link>
           </div>
         </div>
       </div>

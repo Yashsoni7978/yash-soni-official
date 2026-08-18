@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-mumbai/layout.jsx
-// SERVER COMPONENT — SEO metadata only. All JSON-LD schemas inside.
+// SERVER COMPONENT, SEO metadata only. All JSON-LD schemas inside.
 
 const CITY       = "Mumbai";
 const SLUG       = "anchor-in-mumbai";
@@ -17,7 +17,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type":    "ProfessionalService",
   "@id":      `${FULL_URL}/#business`,
-  name:        `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name:        `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     `Anchor in ${CITY}`,
     `Wedding Anchor ${CITY}`,
@@ -30,7 +30,7 @@ const localBusinessSchema = {
     "St Regis Mumbai Wedding Host",
     "Bandra Kurla Complex Event Anchor",
   ],
-  description: `Yash Soni hosts premium events in Mumbai — from Bollywood-style sangeets in Andheri to corporate galas at Trident Nariman Point and BKC venues. Bilingual Hindi/English anchor with 700+ shows. Available for destination weddings in Mumbai and Navi Mumbai.`,
+  description: `Yash Soni hosts premium events in Mumbai, from Bollywood-style sangeets in Andheri to corporate galas at Trident Nariman Point and BKC venues. Bilingual Hindi/English anchor with 700+ shows. Available for destination weddings in Mumbai and Navi Mumbai.`,
   url:         FULL_URL,
   telephone:   "+917737877978",
   priceRange:  "₹₹₹₹",
@@ -105,7 +105,7 @@ const personSchema = {
     "South Bombay Elite Events",
     "BKC Corporate Summits",
   ],
-  award: "4.9★ Rated — 50+ Five-Star Reviews",
+  award: "4.9★ Rated, 50+ Five-Star Reviews",
 };
 
 const breadcrumbSchema = {
@@ -121,10 +121,10 @@ const breadcrumbSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
 
-  title: `Best Anchor in Mumbai | Corporate Emcee & Wedding Host — Yash Soni`,
+  title: `Best Anchor in Mumbai | Corporate Emcee & Wedding Host, Yash Soni`,
 
   description:
-    `Looking for the best anchor in Mumbai? Anchor Yash Soni — 4.9★ rated, 700+ shows. Elite corporate emcee for BKC & luxury wedding host for Taj Mahal Palace & St Regis. Bilingual, zero scripts, and VIP-trusted.`,
+    `Looking for the best anchor in Mumbai? Anchor Yash Soni, 4.9★ rated, 700+ shows. Elite corporate emcee for BKC & luxury wedding host for Taj Mahal Palace & St Regis. Bilingual, zero scripts, and VIP-trusted.`,
 
   keywords: [
     // Core identity
@@ -138,7 +138,7 @@ export const metadata: Metadata = {
     "male anchor in mumbai",
     "emcee mumbai",
     "event host mumbai",
-    // Venue-specific — high intent
+    // Venue-specific, high intent
     "taj mahal palace wedding anchor",
     "st regis mumbai sangeet host",
     "jw marriott sahar corporate emcee",
@@ -193,7 +193,7 @@ export const metadata: Metadata = {
         url:    OG_IMAGE,
         width:  1200,
         height: 630,
-        alt:    `Anchor Yash Soni — Best Event Anchor in Mumbai`,
+        alt:    `Anchor Yash Soni, Best Event Anchor in Mumbai`,
       },
     ],
   },
@@ -203,7 +203,7 @@ export const metadata: Metadata = {
     site:        "@yashsonianchor",
     creator:     "@yashsonianchor",
     title:       `Best Anchor in Mumbai | Corporate & Wedding Emcee`,
-    description: `Taj Mahal Palace. BKC Summits. The St. Regis. Mumbai's most trusted elite anchor — 700+ shows, 4.9★ rated.`,
+    description: `Taj Mahal Palace. BKC Summits. The St. Regis. Mumbai's most trusted elite anchor, 700+ shows, 4.9★ rated.`,
     images:      [OG_IMAGE],
   },
 
@@ -263,7 +263,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-mumbai/#webpage`,
   url: `https://${DOMAIN}/${SLUG}`,
-  name: `Best Anchor in Mumbai | Wedding & Event Host — Yash Soni`,
+  name: `Best Anchor in Mumbai | Wedding & Event Host, Yash Soni`,
   description: `Anchor Yash Soni is the premium event anchor in Mumbai. Flawless unscripted hosting for weddings and corporate events.`,
   inLanguage: "en-IN",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".yash-citable", ".yash-hero-desc", ".yash-faq-answer"] }

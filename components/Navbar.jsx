@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -107,7 +107,7 @@ export default function Navbar() {
             href="/"
             onClick={() => setIsOpen(false)}
             className="relative z-[101] flex items-center group shrink-0"
-            aria-label="Anchor Yash Soni — Home"
+            aria-label="Anchor Yash Soni, Home"
           >
             <span className="text-xl font-display font-black tracking-[0.2em] uppercase group-hover:scale-105 transition-transform duration-500">
               <GoldTextureText>ANCHOR YASH</GoldTextureText>

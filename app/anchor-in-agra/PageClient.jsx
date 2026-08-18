@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -107,7 +107,7 @@ const AGRA_IDENTITY = [
   {
     icon: Building2,
     title: "Sprawling Mughal Acoustics",
-    desc: "Properties like ITC Mughal are built to mimic massive imperial palaces. The lawns are enormous, and the architecture dissipates sound rapidly. Yash specializes in 'Acoustic Condensing'—using targeted vocal pacing and physical stage dominance to pull a wandering crowd into a highly intense, tightly packed center, preserving the energy of the Sangeet across vast open spaces."
+    desc: "Properties like ITC Mughal are built to mimic massive imperial palaces. The lawns are enormous, and the architecture dissipates sound rapidly. Yash specializes in 'Acoustic Condensing'-using targeted vocal pacing and physical stage dominance to pull a wandering crowd into a highly intense, tightly packed center, preserving the energy of the Sangeet across vast open spaces."
   },
   {
     icon: Briefcase,
@@ -158,24 +158,24 @@ const VS = [
   { problem: "Using 'cheap MC' club humor that immediately alienates an ultra-premium VIP guest list at Amarvilas", fix: "Intimate, highly conversational executive-grade delivery matching the crowd's pedigree" },
   { problem: "The anchor's voice dissipating entirely across the sprawling lawns of ITC Mughal", fix: "Mastery of timeline-stitching and acoustic centralizing to pull the entire party tightly together" },
   { problem: "Being unable to bridge the formal C-suite networking with the high-energy destination Sangeet", fix: "Executing an intense psychological transition that drags the VIPs directly to the dance floor" },
-  { problem: "Reading rigidly from paper notes during a highly exclusive family performance", fix: "100% unscripted flow—maintaining absolute eye contact and reacting to inside jokes in real-time" },
+  { problem: "Reading rigidly from paper notes during a highly exclusive family performance", fix: "100% unscripted flow-maintaining absolute eye contact and reacting to inside jokes in real-time" },
   { problem: "Failing to fuse the cultures during a massive US/UK-Indian cross-border wedding in Agra", fix: "Bilingual emotional intelligence that bridges modern urban executives directly with local elders" },
   { problem: "Sangeet momentum dying because strict local noise ordinances drop the DJ volume", fix: "Generating pure organic 'unplugged' hype using the anchor’s voice and physical crowd interaction" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Corporate Director — Delhi NCR",
+    name: "Corporate Director, Delhi NCR",
     quote: "Hosting a sunset reception at The Oberoi Amarvilas requires an anchor who understands immense prestige. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet with complete authority. He commands the room effortlessly without ever sounding like a generic MC.",
     event: "Destination Sunset Wedding · The Oberoi Amarvilas"
   },
   {
     name: "Singhania Family",
-    quote: "We had international guests and traditional elders flying into ITC Mughal to celebrate. Yash’s bilingual code-switching was perfect. He bridged the cultural gap so naturally. No awkward jokes, no loud club behavior—just pure, refined stage presence that escalated the party perfectly.",
+    quote: "We had international guests and traditional elders flying into ITC Mughal to celebrate. Yash’s bilingual code-switching was perfect. He bridged the cultural gap so naturally. No awkward jokes, no loud club behavior-just pure, refined stage presence that escalated the party perfectly.",
     event: "Cross-Cultural Royal Sangeet · ITC Mughal"
   },
   {
-    name: "CEO — Fintech Headquarters",
+    name: "CEO, Fintech Headquarters",
     quote: "We hosted an exclusive multi-day executive retreat at the Taj Convention Centre in Agra. Yash anchored the daytime strategy panels flawlessly with zero notes, and then instantly flipped the switch to host our evening gala. Absolute executive polish.",
     event: "Leadership Offsite Gala · Taj Hotel & Convention Centre"
   },
@@ -189,10 +189,10 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle the strict acoustic/noise ordinances around heritage zones like the Taj East Gate?",
-    a: "This is the true test of a heritage anchor. Properties near the Taj Mahal have aggressive volume limiters to protect the monument. You cannot rely on a 100-decibel DJ to create the energy. Instead, I use 'Psychological Momentum'—intense timeline pacing, physical crowd interaction, and deep vocal projection to manufacture a massive party atmosphere entirely organically, without violating venue limits."
+    a: "This is the true test of a heritage anchor. Properties near the Taj Mahal have aggressive volume limiters to protect the monument. You cannot rely on a 100-decibel DJ to create the energy. Instead, I use 'Psychological Momentum'-intense timeline pacing, physical crowd interaction, and deep vocal projection to manufacture a massive party atmosphere entirely organically, without violating venue limits."
   },
   {
-    q: "Our Agra guest list is highly exclusive—mostly C-suite executives and VIP families. Can you match this tone?",
+    q: "Our Agra guest list is highly exclusive-mostly C-suite executives and VIP families. Can you match this tone?",
     a: "Completely. A VIP wedding doesn't need a high-pitched 'hype man'; it needs an Executive Moderator. I drop the standard 'wedding tropes' and host with sharp, highly conversational, unscripted English that treats the VIPs with intellectual respect, immediately breaking the sterile barrier between the stage and the audience."
   },
   {
@@ -266,7 +266,7 @@ export default function AgraPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/agra_bg.webp" alt="Best Anchor in Agra — VIP Luxury Heritage Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/agra_bg.webp" alt="Best Anchor in Agra, VIP Luxury Heritage Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function AgraPage() {
                 Agra operates at the zenith of heritage exclusivity. You are dealing with highly scrutinized venues like The Oberoi Amarvilas where <strong className="text-[#B5952F]">stringent noise constraints and top-tier VIP/Executive crowds</strong> require flawless execution. Yash steps into these immaculate environments and manufactures raw, authentic dancing energy entirely organically, without compromising the prestige of the Taj footprint.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC yelling'. For high-net-worth cross-cultural weddings at ITC Mughal, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the VIPs, integrated natively with the deep Hindi warmth that the traditional royal ceremonies demand.
+                He completely rejects paper scripts and basic 'MC yelling'. For high-net-worth cross-cultural weddings at ITC Mughal, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the VIPs, integrated natively with the deep Hindi warmth that the traditional royal ceremonies demand.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -492,10 +492,10 @@ export default function AgraPage() {
               Hosting a luxury event in Agra requires an elite understanding of 'Acoustic Compliance'. The absolute best properties are bound by the strictest noise limits due to their proximity to the Taj Mahal. An amateur anchor fails completely when the DJ decibels are suddenly capped at 10 PM. Yash steps in immediately as the primary energy engine, actively collapsing the psychological distance between the VIPs and the stage, using extremely sharp voice projection to keep the crowds fiercely hyped completely unplugged.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Agra crowds are generally a mix of highly modern Delhi/NCR executives and traditional legacy families. The host must bridge this gap instantly. Yash does this through total unscripted fluidity—validating the corporate guests with pristine English, then flipping elegantly into deep Hindi warmth to anchor the core family events.
+              Furthermore, Agra crowds are generally a mix of highly modern Delhi/NCR executives and traditional legacy families. The host must bridge this gap instantly. Yash does this through total unscripted fluidity-validating the corporate guests with pristine English, then flipping elegantly into deep Hindi warmth to anchor the core family events.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Heritage VIP fluency—defeating strict monument timelines and uniting the high-net-worth demographic—is the mark of an anchor who operates at the true apex of the luxury industry.
+              Heritage VIP fluency-defeating strict monument timelines and uniting the high-net-worth demographic-is the mark of an anchor who operates at the true apex of the luxury industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,14 +551,14 @@ export default function AgraPage() {
               Heritage Prestige.<br /><G>VIP Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Agra’s luxury ecosystem is an intense logistical challenge. Properties like ITC Mughal scatter hundreds of high-profile guests across indoor lounges and outdoor courtyards, leading to immense audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Agra’s luxury ecosystem is an intense logistical challenge. Properties like ITC Mughal scatter hundreds of high-profile guests across indoor lounges and outdoor courtyards, leading to immense audience drift. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Royal Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling heritage constraints.
+                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling heritage constraints.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function AgraPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function AgraPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Agra experiences intense overlapping of the Delhi VIP destination season and peak local corporate retreat dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

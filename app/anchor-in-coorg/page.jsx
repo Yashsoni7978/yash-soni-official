@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -102,17 +102,17 @@ const COORG_IDENTITY = [
   {
     icon: Coffee,
     title: "Estate Architecture Mastery",
-    desc: "Events in Coorg, especially at properties like Taj Madikeri or Evolve Back, are operating within literal rainforest ecosystems. The challenge here is 'Property Dispersion'—guests drift through sprawling estate pathways. Yash executes 'Geometric Centralization'—utilizing intense, unscripted vocal presence and physical stage dominance to pull the dispersed HNI crowd back into a single focal point, preventing the energy from bleeding out into the coffee plantations."
+    desc: "Events in Coorg, especially at properties like Taj Madikeri or Evolve Back, are operating within literal rainforest ecosystems. The challenge here is 'Property Dispersion'-guests drift through sprawling estate pathways. Yash executes 'Geometric Centralization'-utilizing intense, unscripted vocal presence and physical stage dominance to pull the dispersed HNI crowd back into a single focal point, preventing the energy from bleeding out into the coffee plantations."
   },
   {
     icon: Building2,
     title: "Eco-Luxury Executive Protocol",
-    desc: "Because Coorg is the prime sanctuary for Bangalore's C-suite and global tech billionaires, the hosting register must be exceptionally sophisticated. Yash operates as a highly articulate Executive Moderator—utilizing pristine, unscripted English that validates the intellectual pedigree of the room, entirely avoiding standard 'wedding shouting' or generic MC templates."
+    desc: "Because Coorg is the prime sanctuary for Bangalore's C-suite and global tech billionaires, the hosting register must be exceptionally sophisticated. Yash operates as a highly articulate Executive Moderator-utilizing pristine, unscripted English that validates the intellectual pedigree of the room, entirely avoiding standard 'wedding shouting' or generic MC templates."
   },
   {
     icon: Music2,
     title: "The Tech-Elite Transition",
-    desc: "Coorg Sangeets start with incredible formal grace and networking but require a massive, high-velocity explosion for the midnight party. Yash acts as the catalyst—navigating the formal corporate English requirements of the evening flawlessly, before instantly converting into high-voltage, unscripted command to drive a massive Bangalore-tier dance floor."
+    desc: "Coorg Sangeets start with incredible formal grace and networking but require a massive, high-velocity explosion for the midnight party. Yash acts as the catalyst-navigating the formal corporate English requirements of the evening flawlessly, before instantly converting into high-voltage, unscripted command to drive a massive Bangalore-tier dance floor."
   },
 ];
 
@@ -158,24 +158,24 @@ const VS = [
   { problem: "Using loud, 'cheap MC' club humor that instantly destroys the serene eco-luxury of a Coorg retreat", fix: "Intimate, highly conversational executive-grade delivery matching the absolute pinnacle of guest pedigree" },
   { problem: "Losing control of 200 VIPs drifting across a sprawling 100-acre rainforest property", fix: "Mastery of timeline sequencing and vocal centralizing to pull the entire party tightly towards the event core" },
   { problem: "Guests retreating to their villas early because the mountain temperatures freeze the event energy", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd instantaneously" },
-  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor valley ceremony", fix: "100% unscripted flow—maintaining absolute eye contact despite severe high-altitude distractions" },
+  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor valley ceremony", fix: "100% unscripted flow-maintaining absolute eye contact despite severe high-altitude distractions" },
   { problem: "Being unable to bridge the formal Bangalore C-suite networking with a high-energy Sangeet format", fix: "Executing an intense psychological transition that drags the technology VIPs directly to the dance floor natively" },
   { problem: "Failing to manage the complex acoustic dispersion of an open-air valley lawn ceremony", fix: "Aggressive, tight-knit crowd-condensing frameworks that force acoustic intimacy and focus" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "NRI Destination Wedding — Singapore",
+    name: "NRI Destination Wedding, Singapore",
     quote: "Hosting at Taj Madikeri required absolute poise and the ability to manage a sprawling rainforest estate. Our guest list was mostly international corporate heads. Yash was incredible. His English moderation was flawlessly professional and unscripted. Truly elite.",
     event: "VIP Destination Wedding · Taj Madikeri Resort"
   },
   {
-    name: "Tech Leadership — Bangalore",
+    name: "Tech Leadership, Bangalore",
     quote: "We chose Tamara for our senior leadership offsite. We needed an anchor who could moderate a panel but also drive our evening gala. Yash anchored with pure executive polish. Unscripted, sharp, and totally in control.",
     event: "Executive Retreat · Tamara Coorg"
   },
   {
-    name: "Estate Sangeet — Kodagu",
+    name: "Estate Sangeet, Kodagu",
     quote: "The mist was rolling in, it was cold, and we were worried the Sangeet would fail. Yash didn't wait. He brought massive energy entirely natively. He switched between English for the VIPs and heavy energy work effortlessly. The floor exploded.",
     event: "Destination Sangeet · Evolve Back Coorg"
   },
@@ -189,15 +189,15 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle outdoor weddings in Coorg when the Western Ghats mist and rain roll in?",
-    a: "This is the cardinal rule of rainforest hosting. The second the sun sets or mist rolls into the coffee estate, the crowd wants to retreat. I utilize 'Atmospheric Compression'—speeding up the entire timeline aggressively, plunging into the crowd physically, and detonating a massive session before the weather forces guests indoors."
+    a: "This is the cardinal rule of rainforest hosting. The second the sun sets or mist rolls into the coffee estate, the crowd wants to retreat. I utilize 'Atmospheric Compression'-speeding up the entire timeline aggressively, plunging into the crowd physically, and detonating a massive session before the weather forces guests indoors."
   },
   {
-    q: "Our Bangalore guest list is incredibly sophisticated—tech founders and global VPs. Can you match this tone?",
+    q: "Our Bangalore guest list is incredibly sophisticated-tech founders and global VPs. Can you match this tone?",
     a: "Completely. Elite properties like Taj and Tamara do not need a loud, shouting 'hype man'. They require an Executive Moderator. I deliberately drop standard, childish 'wedding gimmicks'. I host with formal, razor-sharp, unscripted English that respects the pedigree of the VIPs, perfectly bridging high-level networking with eventual massive celebration."
   },
   {
     q: "The properties here are massive (100+ acres). How do you prevent guests from wandering off to the villas?",
-    a: "Sprawling estates are notorious for 'Audience Drift'. In Coorg, guests go wandering for valley views or retreat to their rooms. I play the role of the 'Timeline engine'—deploying rapid-fire, high-frequency pacing that constantly drags the guests back to the main stage, actively preventing the energy from bleeding away."
+    a: "Sprawling estates are notorious for 'Audience Drift'. In Coorg, guests go wandering for valley views or retreat to their rooms. I play the role of the 'Timeline engine'-deploying rapid-fire, high-frequency pacing that constantly drags the guests back to the main stage, actively preventing the energy from bleeding away."
   },
   {
     q: "Do you use teleprompters or scripts during these complex multi-day Coorg itineraries?",
@@ -268,7 +268,7 @@ export default function CoorgPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/rose-petal-tree-background.webp" alt="Best Anchor in Coorg — VIP Luxury Coffee Estate Weddings" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/rose-petal-tree-background.webp" alt="Best Anchor in Coorg, VIP Luxury Coffee Estate Weddings" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -348,7 +348,7 @@ export default function CoorgPage() {
                 Coorg operates as an exclusive sanctuary away from standard chaotic wedding hubs. You are dealing with vast rainforest properties like Taj Madikeri where <strong className="text-[#B5952F]">sweeping architectural scale and Bangalore’s highest tech-elite demographics</strong> requires flawless execution. Yash steps into these sprawling, estate architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the corporate network, suddenly flipping into high-voltage momentum when the Sangeet demands unhinged energy.
+                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the corporate network, suddenly flipping into high-voltage momentum when the Sangeet demands unhinged energy.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -491,13 +491,13 @@ export default function CoorgPage() {
               VIP Reality.<br /><G>Rainforest Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Coorg requires an elite understanding of 'Property Dominance'. Venues like Taj Madikeri drag across literal mountains of rainforest terrain. The moment formal day-networking concludes, the crowd fragments entirely across the resort footprints. Yash assumes the role of the Timeline Architect—using extreme vocal pacing and dominant stage psychology to forcefully pull the Bangalore VIPs into the central phase, instantly generating massive momentum before the mountain drop paralyzes energy.
+              Hosting a luxury event in Coorg requires an elite understanding of 'Property Dominance'. Venues like Taj Madikeri drag across literal mountains of rainforest terrain. The moment formal day-networking concludes, the crowd fragments entirely across the resort footprints. Yash assumes the role of the Timeline Architect-using extreme vocal pacing and dominant stage psychology to forcefully pull the Bangalore VIPs into the central phase, instantly generating massive momentum before the mountain drop paralyzes energy.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               Furthermore, Coorg is a definitive destination for Bangalore's most sophisticated tech and corporate families. Yash fundamentally validates their presence with pristine, unscripted English moderation, then seamlessly flips into an aggressively high-energy party format when the evening formal wear comes off.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Rainforest VIP fluency—defeating sprawling architectural scales and dominating the Bangalore corporate tier—is the mark of an anchor who operates at the true apex of the destination industry.
+              Rainforest VIP fluency-defeating sprawling architectural scales and dominating the Bangalore corporate tier-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -553,14 +553,14 @@ export default function CoorgPage() {
               Rainforest Scale.<br /><G>Bangalore Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Coorg is an intense logistical challenge. Properties physically drop off across the Western Ghats valleys, scattering guests continuously. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Coorg is an intense logistical challenge. Properties physically drop off across the Western Ghats valleys, scattering guests continuously. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "VVIP Eco-Luxury" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Bangalore families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling rainforest constraints.
+                High-net-worth Bangalore families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling rainforest constraints.
               </p>
             </div>
           </Reveal>
@@ -590,7 +590,7 @@ export default function CoorgPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -679,7 +679,7 @@ export default function CoorgPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Coorg experiences intense overlapping of the Bangalore VIP destination season and peak local rainforest hotel dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

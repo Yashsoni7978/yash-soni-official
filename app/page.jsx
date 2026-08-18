@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -26,22 +26,22 @@ import { AnimatedStatsCard } from "../components/AnimatedStatsCard";
 // Title intentionally differentiated from layout default via a distinct
 // primary keyword to avoid duplicate title tag in Google's index.
 export const metadata = {
-  title: "Yash Soni | Professional Event Anchor & Emcee — Jaipur, Rajasthan",
+  title: "Yash Soni | Professional Event Anchor & Emcee, Jaipur, Rajasthan",
   description:
     "Yash Soni is a professional event anchor and emcee based in Jaipur. Specializing in weddings, corporate events, sports commentary & destination events across Rajasthan and India.",
   alternates: {
     canonical: "https://yashsoni.in",
   },
   openGraph: {
-    title: "Yash Soni | Event Anchor & Emcee — 700+ Shows, 4.9★",
+    title: "Yash Soni | Event Anchor & Emcee, 700+ Shows, 4.9★",
     description:
-      "700+ shows. 4.9★ rated. Professional event anchor & emcee based in Jaipur — weddings, corporate galas, sangeets, sports & destination events.",
+      "700+ shows. 4.9★ rated. Professional event anchor & emcee based in Jaipur, weddings, corporate galas, sangeets, sports & destination events.",
     images: [
       {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Yash Soni — Professional Event Anchor & Emcee performing live on stage",
+        alt: "Yash Soni, Professional Event Anchor & Emcee performing live on stage",
       },
     ],
   },
@@ -61,7 +61,7 @@ const STATS = [
 const SERVICES = [
   {
     title: "Wedding Anchor",
-    desc: "From the emotional Varmala to a chaotic Baraat — every ritual with cultural precision. NRI families, palace venues, and farmhouse lawns handled flawlessly.",
+    desc: "From the emotional Varmala to a chaotic Baraat, every ritual with cultural precision. NRI families, palace venues, and farmhouse lawns handled flawlessly.",
     img: "/service-wedding.webp",
     href: "/wedding-anchor-jaipur",
     tag: "Weddings",
@@ -75,7 +75,7 @@ const SERVICES = [
   },
   {
     title: "Sangeet Host",
-    desc: "The dance floor doesn't just stay alive — it stays packed. Unscripted crowd games, high-energy transitions, complete command of 500 to 1,500 guests.",
+    desc: "The dance floor doesn't just stay alive, it stays packed. Unscripted crowd games, high-energy transitions, complete command of 500 to 1,500 guests.",
     img: "/service-fashion.webp",
     href: "/sangeet-anchor-jaipur",
     tag: "Sangeet",
@@ -103,9 +103,9 @@ const PLATFORMS = [
 ];
 
 const WHY_ME = [
-  { icon: Sparkles, title: "100% Unscripted", text: "Zero paper scripts in 700+ shows. Every moment is responsive, real, and built for your specific crowd — not a template." },
-  { icon: Users, title: "Crowd Psychology", text: "I don't manage crowds — I move them. Whether 50 guests or 1,500 at an open venue, the energy stays locked until I decide it peaks." },
-  { icon: Quote, title: "Crisis-Proof", text: "Power cuts, delayed brides, audio failures — handled invisible to guests every time. Your insurance policy against awkward silences." },
+  { icon: Sparkles, title: "100% Unscripted", text: "Zero paper scripts in 700+ shows. Every moment is responsive, real, and built for your specific crowd, not a template." },
+  { icon: Users, title: "Crowd Psychology", text: "I don't manage crowds, I move them. Whether 50 guests or 1,500 at an open venue, the energy stays locked until I decide it peaks." },
+  { icon: Quote, title: "Crisis-Proof", text: "Power cuts, delayed brides, audio failures, handled invisible to guests every time. Your insurance policy against awkward silences." },
 ];
 
 const VS_DATA = [
@@ -125,10 +125,10 @@ const LOCATIONS = [
 ];
 
 const PROCESS = [
-  { num: "01", title: "The Vision Call", text: "We align on your vibe — royal elegance or high energy. Crowd size, inside jokes, must-have moments." },
+  { num: "01", title: "The Vision Call", text: "We align on your vibe, royal elegance or high energy. Crowd size, inside jokes, must-have moments." },
   { num: "02", title: "The Blueprint", text: "No templates. A custom run-of-show with tailored games, crowd work, and a flawless timeline." },
   { num: "03", title: "The Sound Check", text: "I arrive early, sync with your technical team, and own the stage so you can actually enjoy your event." },
-  { num: "04", title: "The Execution", text: "I close on a massive high. Benchmark: your guests leave asking — where did you find this anchor?" },
+  { num: "04", title: "The Execution", text: "I close on a massive high. Benchmark: your guests leave asking, where did you find this anchor?" },
 ];
 
 const REVIEWS = [
@@ -139,17 +139,17 @@ const REVIEWS = [
   { name: "Saurabh Agarwal", text: "The experience was phenomenal. Great anchor with a soft and attracting personality and eye-catching presence.", event: "Event" },
   { name: "Keshav Srivastav", text: "He was engaging, professional, and kept the audience captivated throughout the event.", event: "Corporate" },
   { name: "Vartika Jetawat", text: "Anchored at my brother's Sangeet. Very friendly, understood the requirements, energetic throughout.", event: "Sangeet" },
-  { name: "Divya Shree", text: "A true master of connection — made everyone feel included. Highly recommend for an unforgettable experience!", event: "Wedding" },
+  { name: "Divya Shree", text: "A true master of connection, made everyone feel included. Highly recommend for an unforgettable experience!", event: "Wedding" },
   { name: "Divyansh Soni", text: "Very good experience. Handled my Sangeet function very well.", event: "Sangeet" },
   { name: "Utkarsh Godha", text: "Perfect entertaining anchor. Exactly what we needed for our event.", event: "Event" },
 ];
 
 const FAQS = [
   { q: "Who is the best anchor in Jaipur for weddings and events?", a: "Anchor Yash Soni is a premium event host with 700+ shows hosted across Jaipur & Rajasthan. With a 4.9★ rating across 50+ client reviews, he specialises in luxury weddings, high-energy Sangeets, corporate award nights, and VIP events. Bilingual in Hindi and English, and fluent in Rajasthani cultural traditions." },
-  { q: "Which anchor is best for destination weddings in Rajasthan?", a: "Anchor Yash Soni is a top choice for destination weddings. While Jaipur is home, he hosts events across Rajasthan — Udaipur, Jodhpur, Jaisalmer, Pushkar — and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
+  { q: "Which anchor is best for destination weddings in Rajasthan?", a: "Anchor Yash Soni is a top choice for destination weddings. While Jaipur is home, he hosts events across Rajasthan, Udaipur, Jodhpur, Jaisalmer, Pushkar, and travels across India for the right events. Travel logistics and accommodation are discussed during the first booking call." },
   { q: "How to find a bilingual (Hindi/English) anchor in India?", a: "Anchor Yash Soni switches effortlessly between Hindi for the emotions, English for the class, and a bit of Rajasthani/Marwari to make the elders smile. For NRI families with international guests, the transitions are completely seamless." },
-  { q: "Can a single anchor handle a large crowd of 1,000+ guests?", a: "Yes, large-format crowds are a specialty. Anchor Yash has commanded open events of 10,000+ people unscripted. Crowd psychology — reading energy patterns, controlling chaos, redirecting attention — is the core skill that separates a real anchor from an announcer." },
-  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences — the difference between an event people attend and one they remember." },
+  { q: "Can a single anchor handle a large crowd of 1,000+ guests?", a: "Yes, large-format crowds are a specialty. Anchor Yash has commanded open events of 10,000+ people unscripted. Crowd psychology, reading energy patterns, controlling chaos, redirecting attention, is the core skill that separates a real anchor from an announcer." },
+  { q: "Why hire a professional anchor instead of a family member?", a: "Because a professional like Anchor Yash never uses a paper script (zero in 700+ shows). If the PA fails, he turns it into a crowd moment. If the bride needs 10 more minutes, nobody in the room knows. He is your insurance policy against awkward silences, the difference between an event people attend and one they remember." },
   { q: "How early should you book a wedding anchor in India?", a: "For peak wedding season (October–February), Anchor Yash Soni's calendar fills 6–8 months ahead. No waitlists are maintained and replacements are not sent. Once your date is confirmed, it is exclusively reserved. Reach out via WhatsApp the moment your date is finalised." },
   { q: "Do anchors prepare scripts for family members at a Sangeet?", a: "Yes. Knowing that family members get nervous, Anchor Yash provides simple, funny script templates and does a quick 10-minute rehearsal with them before the show so they look like pros on stage." },
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
@@ -159,7 +159,7 @@ const FAQS = [
   { q: "Can an event anchor host virtual or hybrid corporate events?", a: "Yes. Post-2020, Anchor Yash mastered engaging audiences through a camera lens for virtual town halls, webinars, and hybrid corporate events." },
 ];
 
-// FIXED: gallery-5.webp duplicate removed — using unique 6th image
+// FIXED: gallery-5.webp duplicate removed, using unique 6th image
 const GALLERY_IMAGES = [
   "/gallery-1.webp",
   "/gallery-2.webp",
@@ -180,7 +180,7 @@ const faqSchema = {
   })),
 };
 
-// Homepage breadcrumb — single item (homepage = root)
+// Homepage breadcrumb, single item (homepage = root)
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -194,7 +194,7 @@ const breadcrumbSchema = {
   ],
 };
 
-// FIXED: VideoObject schema removed entirely — had 3 TODO placeholder fields
+// FIXED: VideoObject schema removed entirely, had 3 TODO placeholder fields
 // which produce invalid JSON-LD and fail Google Rich Results Test.
 // Re-add once you have a real YouTube showreel URL + thumbnail + upload date.
 
@@ -227,7 +227,7 @@ export default function HomePage() {
   return (
     <>
 
-      {/* FIXED: Removed wrapping <main> — layout.tsx already provides
+      {/* FIXED: Removed wrapping <main>, layout.tsx already provides
           <main id="main-content">. Nested <main> elements are invalid HTML. */}
 
       {/* Page-level JSON-LD */}
@@ -288,13 +288,13 @@ export default function HomePage() {
               </h2>
               <p className="text-zinc-400 text-base md:text-lg mb-4 leading-relaxed font-light">
                 With 700+ shows hosted across Jaipur & Rajasthan, Anchor
-                Yash Soni is not just a host — he is a crowd psychologist, a
+                Yash Soni is not just a host, he is a crowd psychologist, a
                 cultural navigator, and a pressure-tested professional who has
                 never reached for a paper script.
               </p>
               <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
                 Palace weddings, open-air Sangeets, national corporate galas,
-                destination events — every format is a different craft. Yash
+                destination events, every format is a different craft. Yash
                 has mastered all of them.
               </p>
               <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
@@ -374,7 +374,7 @@ export default function HomePage() {
                   <div className="relative h-[440px] md:h-[520px] rounded-2xl overflow-hidden group border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.25)] cursor-pointer">
                     <Image
                       src={s.img}
-                      alt={`${s.title} by Anchor Yash Soni — premium event hosting`}
+                      alt={`${s.title} by Anchor Yash Soni, premium event hosting`}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
                       quality={70}
@@ -507,7 +507,7 @@ export default function HomePage() {
                 event rots in awkward silence.
               </p>
               <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-light">
-                The right anchor isn&apos;t the one with the most years —
+                The right anchor isn&apos;t the one with the most years -
                 it&apos;s the one who commands your specific crowd, reads your
                 room, and makes your family feel like the only event that has
                 ever mattered.{" "}
@@ -520,7 +520,7 @@ export default function HomePage() {
                   "Never used a paper script in 700+ shows",
                   "Commands crowds of 10,000+ unscripted",
                   "Bilingual Hindi/English in real time",
-                  "Crisis-tested: power cuts, audio failures, delays — all handled",
+                  "Crisis-tested: power cuts, audio failures, delays, all handled",
                   "Cultural fluency: traditional rituals + international NRI protocol",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -535,7 +535,7 @@ export default function HomePage() {
               </div>
               <Link href="/anchor-in-jaipur">
                 <button
-                  aria-label="See why clients choose Yash — visit the Anchor in Jaipur page"
+                  aria-label="See why clients choose Yash, visit the Anchor in Jaipur page"
                   className="px-7 py-3 bg-[#D4AF37] text-black text-sm font-bold rounded-full hover:bg-white transition-all inline-flex items-center gap-2"
                 >
                   See Why Clients Choose Yash{" "}
@@ -735,7 +735,7 @@ export default function HomePage() {
             <p className="text-zinc-500 mb-10 text-sm">
               Calendar fills{" "}
               <strong className="text-[#B5952F]">6–8 months in advance.</strong>{" "}
-              When it&apos;s full — it&apos;s full.
+              When it&apos;s full, it&apos;s full.
             </p>
             <Link href={WA_LINK} target="_blank" rel="noopener noreferrer">
               <button
@@ -792,7 +792,7 @@ export default function HomePage() {
                   a high-stakes corporate summit at the Taj Palace Aerocity, the
                   anchor acts as the heartbeat of the room. My mastery lies in{" "}
                   <strong className="text-[#B5952F]">Reading the Energy</strong>
-                  —knowing exactly when to elevate the room for a high-octane
+                  -knowing exactly when to elevate the room for a high-octane
                   Sangeet performance and when to hold a space of quiet dignity
                   for a Varmala ceremony.
                 </p>
@@ -839,7 +839,7 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
-      {/* FIXED: Removed duplicate inline <footer> — FooterController in
+      {/* FIXED: Removed duplicate inline <footer>, FooterController in
           layout.tsx handles the global footer for all pages */}
     </>
   );

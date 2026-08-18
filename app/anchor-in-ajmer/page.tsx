@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 // app/anchor-in-ajmer/layout.jsx
-// Sufi Heritage & Regional Palace Wedding Anchor — Full Schema + SEO Layout
+// Sufi Heritage & Regional Palace Wedding Anchor, Full Schema + SEO Layout
 
 const CITY     = "Ajmer";
 const REGION   = "Central Rajasthan";
@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${FULL_URL}/#business`,
-  name: `Anchor Yash Soni — Best Anchor in ${CITY}`,
+  name: `Anchor Yash Soni, Best Anchor in ${CITY}`,
   alternateName: [
     "Anchor in Ajmer",
     "Best Wedding Anchor Ajmer",
@@ -160,9 +160,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `https://yashsoni.in/anchor-in-ajmer/#webpage`,
   url: FULL_URL,
-  name: `Best Anchor in Ajmer | Pratap Palace & Heritage Wedding Host — Yash Soni`,
-  headline: `India's Most Trusted Event Anchor for Ajmer — Pratap Palace, Mansingh & the Central Rajasthan Circuit`,
-  description: `Anchor Yash Soni — 4.9★ rated, 700+ shows. Premier anchor for Ajmer destination weddings at Pratap Palace (Taj) & Ana Sagar properties. Regional cultural fluency. Bilingual, unscripted.`,
+  name: `Best Anchor in Ajmer | Pratap Palace & Heritage Wedding Host, Yash Soni`,
+  headline: `India's Most Trusted Event Anchor for Ajmer, Pratap Palace, Mansingh & the Central Rajasthan Circuit`,
+  description: `Anchor Yash Soni, 4.9★ rated, 700+ shows. Premier anchor for Ajmer destination weddings at Pratap Palace (Taj) & Ana Sagar properties. Regional cultural fluency. Bilingual, unscripted.`,
   inLanguage: "en-IN",
   isPartOf: { "@type": "WebSite", url: `https://${DOMAIN}`, name: "Anchor Yash Soni" },
   about: { "@type": "Thing", name: `Event Anchor Services in ${CITY}, Central Rajasthan` },
@@ -173,8 +173,8 @@ const webPageSchema = {
 // ─── METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${DOMAIN}`),
-  title: `Best Anchor in Ajmer | Premium Heritage Wedding Host — Yash Soni`,
-  description: `Looking for the best anchor in Ajmer? Anchor Yash Soni — 4.9★ rated, 700+ shows. Expert for luxury weddings at Pratap Palace & Ana Sagar lake outposts. Syncretic cultural fluency, bilingual English/Hindi, completely unscripted.`,
+  title: `Best Anchor in Ajmer | Premium Heritage Wedding Host, Yash Soni`,
+  description: `Looking for the best anchor in Ajmer? Anchor Yash Soni, 4.9★ rated, 700+ shows. Expert for luxury weddings at Pratap Palace & Ana Sagar lake outposts. Syncretic cultural fluency, bilingual English/Hindi, completely unscripted.`,
   keywords: [
     "anchor in ajmer",
     "best anchor in ajmer",
@@ -205,13 +205,13 @@ export const metadata: Metadata = {
     siteName: "Anchor Yash Soni",
     title: `Best Anchor in Ajmer | Premium Heritage Wedding Host`,
     description: `4.9★ rated. 700+ shows. Ajmer's most trusted anchor for Pratap Palace and premium heritage properties. Seamless bilingual hosting for central Rajasthan's elite families.`,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ajmer — Anchor Yash Soni at Pratap Palace` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `Best Anchor in Ajmer, Anchor Yash Soni at Pratap Palace` }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@yashsonianchor",
     creator: "@yashsonianchor",
-    title: `Best Anchor in Ajmer | Anchor Yash Soni — 4.9★`,
+    title: `Best Anchor in Ajmer | Anchor Yash Soni, 4.9★`,
     description: `Pratap Palace. Ana Sagar. Central Rajasthan's premium bilingual heritage wedding anchor. 700+ shows. Zero paper scripts.`,
     images: [OG_IMAGE],
   },
@@ -220,7 +220,7 @@ export const metadata: Metadata = {
     "geo.placename": `${CITY}, ${REGION}, India`,
     "geo.position": `${LAT};${LNG}`,
     ICBM: `${LAT}, ${LNG}`,
-    "DC.title": `Best Anchor in Ajmer | Heritage Palace Anchor — Yash Soni`,
+    "DC.title": `Best Anchor in Ajmer | Heritage Palace Anchor, Yash Soni`,
     "DC.subject": `Event Anchor, Heritage Wedding, Destination Emcee, Syncretic Culture, ${CITY}, Rajasthan, India`,
     "DC.coverage": `${CITY}, Central Rajasthan, India`,
     "DC.language": "en-IN",

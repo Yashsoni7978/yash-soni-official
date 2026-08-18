@@ -1,10 +1,10 @@
-// app/destination-wedding-anchor/layout.jsx
+﻿// app/destination-wedding-anchor/layout.jsx
 import { buildServiceSchema } from "../../lib/schema/serviceSchema";
 
-// SERVER COMPONENT — national-rank SEO metadata
+// SERVER COMPONENT, national-rank SEO metadata
 const serviceSchema = buildServiceSchema({
   pageUrl: "https://yashsoni.in/destination-wedding-anchor",
-  name: "Destination Wedding Anchor India — Anchor Yash Soni",
+  name: "Destination Wedding Anchor India, Anchor Yash Soni",
   description: "700+ Premium Shows Hosted • Elite Heritage Venues • Anchor Yash Soni delivers flawless destination weddings across Jaipur, Udaipur, Jodhpur & Pushkar. Luxury planning, travel & decor handled end‑to‑end.",
   serviceType: "Destination Wedding Hosting",
   providerJobTitle: "Destination Wedding Anchor & Emcee",
@@ -44,9 +44,9 @@ const breadcrumb = {
 };
 export const metadata = {
   metadataBase: new URL("https://yashsoni.in"),
-  title: "Destination Wedding Anchor India | Anchor Yash Soni — 4.9★ Udaipur, Jodhpur, Goa & Global",
+  title: "Destination Wedding Anchor India | Anchor Yash Soni, 4.9★ Udaipur, Jodhpur, Goa & Global",
   description:
-    "India's 4.9★ rated destination wedding anchor — Anchor Yash Soni. Udaipur, Jodhpur, Jaisalmer, Goa, Pushkar & international. Full 2–3 day wedding package. NRI bilingual specialist. Book now.",
+    "India's 4.9★ rated destination wedding anchor, Anchor Yash Soni. Udaipur, Jodhpur, Jaisalmer, Goa, Pushkar & international. Full 2–3 day wedding package. NRI bilingual specialist. Book now.",
   keywords: [
     "destination wedding anchor india",
     "destination wedding anchor",
@@ -93,7 +93,7 @@ export const metadata = {
     locale: "en_IN",
     url: "https://yashsoni.in/destination-wedding-anchor",
     siteName: "Anchor Yash Soni",
-    title: "Destination Wedding Anchor India | Anchor Yash Soni — 4.9★",
+    title: "Destination Wedding Anchor India | Anchor Yash Soni, 4.9★",
     description:
       "4.9★ destination wedding anchor. Udaipur, Jodhpur, Goa & international. Full 2–3 day wedding package. NRI bilingual specialist.",
     images: [
@@ -101,7 +101,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Anchor Yash Soni — Destination Wedding Anchor India",
+        alt: "Anchor Yash Soni, Destination Wedding Anchor India",
       },
     ],
   },

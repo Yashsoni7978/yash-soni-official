@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 
 import Link from "next/link";
@@ -119,7 +119,7 @@ export default function CorporateEventManagement() {
         >
           <span className="font-['Orange_Avenue'] text-4xl text-[#60A5FA] mb-6 block">The Corporate Standard</span>
           <h2 className="font-['The_Seasons'] text-4xl md:text-6xl text-white leading-tight mb-10">Your event is a direct reflection of your company's brand equity.</h2>
-          <p className="font-sans text-lg md:text-xl text-gray-400 font-light leading-relaxed">Corporate events require military-level precision. There is no room for delayed schedules or technical glitches. We handle end-to-end production—from massive LED screen setups and artist management to executing high-security VIP protocols for your board of directors and chief guests.</p>
+          <p className="font-sans text-lg md:text-xl text-gray-400 font-light leading-relaxed">Corporate events require military-level precision. There is no room for delayed schedules or technical glitches. We handle end-to-end production-from massive LED screen setups and artist management to executing high-security VIP protocols for your board of directors and chief guests.</p>
         </motion.div>
       </section>
 

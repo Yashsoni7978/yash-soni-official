@@ -102,17 +102,17 @@ const MANALI_IDENTITY = [
   {
     icon: Snowflake,
     title: "Alpine Acoustic Defense",
-    desc: "Manali events (especially at properties like Span Resort by the Beas River) face immense natural challenges. The roar of the river and the massive alpine winds aggressively destroy standard DJ sound systems. Yash utilizes strict 'Acoustic Defense'—physically relocating audiences closer to the stage and projecting pure unscripted vocal power to prevent the audience from fragmenting across the massive outdoor estates."
+    desc: "Manali events (especially at properties like Span Resort by the Beas River) face immense natural challenges. The roar of the river and the massive alpine winds aggressively destroy standard DJ sound systems. Yash utilizes strict 'Acoustic Defense'-physically relocating audiences closer to the stage and projecting pure unscripted vocal power to prevent the audience from fragmenting across the massive outdoor estates."
   },
   {
     icon: Music2,
     title: "High-Voltage Punjabi Command",
-    desc: "The demographic driving the ultra-luxury Manali destination is overwhelmingly Chandigarh and Punjab's elite. They expect an astronomically high-energy Sangeet. The host cannot just be a passive speaker—Yash dives directly into the crowd, utilizing native bilingual fluency to generate an exploding, extremely interactive dance floor that peaks before the Himalayan cold forces everyone inside."
+    desc: "The demographic driving the ultra-luxury Manali destination is overwhelmingly Chandigarh and Punjab's elite. They expect an astronomically high-energy Sangeet. The host cannot just be a passive speaker-Yash dives directly into the crowd, utilizing native bilingual fluency to generate an exploding, extremely interactive dance floor that peaks before the Himalayan cold forces everyone inside."
   },
   {
     icon: Building2,
     title: "The Span Resort Exclusivity",
-    desc: "Manali is dominated by massive, sprawling luxury resorts like Baragarh and Span Resort. Because these properties are huge, guests naturally wander off. Yash assumes the role of the 'Timeline Catalyst'—deploying rapid-fire pacing that constantly drags the guests back to the main stage, actively keeping the energy trapped and centralized throughout a multi-day itinerary."
+    desc: "Manali is dominated by massive, sprawling luxury resorts like Baragarh and Span Resort. Because these properties are huge, guests naturally wander off. Yash assumes the role of the 'Timeline Catalyst'-deploying rapid-fire pacing that constantly drags the guests back to the main stage, actively keeping the energy trapped and centralized throughout a multi-day itinerary."
   },
 ];
 
@@ -158,24 +158,24 @@ const VS = [
   { problem: "The anchor's voice being completely drowned out by the roar of the Beas River during a Varmala", fix: "Mastery of timeline-stitching and acoustic centralizing to pull the entire party tightly towards the stage" },
   { problem: "Guests retreating to their heated rooms early because the mountain temperatures freeze the Sangeet", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd instantaneously" },
   { problem: "Using 'cheap MC' club humor that instantly alienates an ultra-premium VIP guest list at Baragarh", fix: "Intimate, highly conversational executive-grade delivery matching the crowd's pedigree perfectly" },
-  { problem: "Reading rigidly from paper notes during an incredibly exposed outdoor alpine ceremony", fix: "100% unscripted flow—maintaining absolute eye contact despite extreme high-altitude conditions disruptions" },
+  { problem: "Reading rigidly from paper notes during an incredibly exposed outdoor alpine ceremony", fix: "100% unscripted flow-maintaining absolute eye contact despite extreme high-altitude conditions disruptions" },
   { problem: "Failing to generate enough momentum for a high-net-worth Punjabi family from Chandigarh", fix: "Executing an intense psychological transition that drags the entire family directly to the dance floor" },
   { problem: "An anchor getting flustered by sudden mountain weather shifts that force events indoors", fix: "Absolute stoic command, restructuring the event flow natively without the guests ever sensing panic" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Gill Family — Chandigarh",
+    name: "Gill Family, Chandigarh",
     quote: "Hosting a Punjabi Sangeet at Span Resort in November is risky because the cold kills the crowd. Yash bypassed the weather entirely. He generated so much interactive, unscripted hype that the dance floor was packed instantly. He never relied on notes. The best anchor we've ever hired.",
     event: "Destination Sangeet · Span Resort & Spa"
   },
   {
-    name: "Tech Startup Offsite — Gurgaon",
+    name: "Tech Startup Offsite, Gurgaon",
     quote: "We held an executive strategy retreat at Baragarh Resort. Yash anchored the summit gracefully, shifting completely away from the 'wedding MC' vibe into a sharp, articulate moderator. Highly recommended for corporate VIPs.",
     event: "Leadership Offsite · Baragarh Resort"
   },
   {
-    name: "Dr. Arora's Gala — Mumbai",
+    name: "Dr. Arora's Gala, Mumbai",
     quote: "We hosted out at The Himalayan. The gothic architecture is beautiful but very spread out. We needed someone who could centralize 200 guests. Yash took control from minute one. He compressed the crowd around the stage and held their attention all night.",
     event: "VIP Wedding Reception · The Himalayan"
   },
@@ -189,11 +189,11 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle outdoor functions in Manali where the freezing wind kills the crowd's energy?",
-    a: "This is the true test of an alpine destination anchor. When the temperature drops rapidly at dusk, guests immediately want to retreat to the heaters. You cannot solve this purely with a DJ. I use 'Psychological Momentum'—accelerating the timeline aggressively, using extreme vocal projection to physically compress the crowd towards the stage, and pulling them into an intense, highly interactive dancing state before the cold sets in."
+    a: "This is the true test of an alpine destination anchor. When the temperature drops rapidly at dusk, guests immediately want to retreat to the heaters. You cannot solve this purely with a DJ. I use 'Psychological Momentum'-accelerating the timeline aggressively, using extreme vocal projection to physically compress the crowd towards the stage, and pulling them into an intense, highly interactive dancing state before the cold sets in."
   },
   {
     q: "We are holding our Varmala by the Beas River. The water is incredibly loud. How do you manage the sound?",
-    a: "The acoustic environment at riverside venues like Span Resort is hostile. I actively use 'Acoustic Defense'. Instead of fighting the river with speakers, I restructure the crowd physically—pulling the seating tighter to the mandap—and I project my voice dynamically to overpower the ambient noise, ensuring the emotional depth of the Pheras is completely preserved."
+    a: "The acoustic environment at riverside venues like Span Resort is hostile. I actively use 'Acoustic Defense'. Instead of fighting the river with speakers, I restructure the crowd physically-pulling the seating tighter to the mandap-and I project my voice dynamically to overpower the ambient noise, ensuring the emotional depth of the Pheras is completely preserved."
   },
   {
     q: "The demographic driving our Manali wedding is extremely high-profile Chandigarh elite. Can you generate enough hype for a Punjabi Sangeet?",
@@ -266,7 +266,7 @@ export default function ManaliPage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/manali_bg.webp" alt="Best Anchor in Manali — VIP Luxury Alpine Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/manali_bg.webp" alt="Best Anchor in Manali, VIP Luxury Alpine Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -346,7 +346,7 @@ export default function ManaliPage() {
                 Manali operates at the zenith of high-altitude exclusivity. You are dealing with highly scrutinized venues like Span Resort where <strong className="text-[#B5952F]">the roar of the Beas River, freezing weather limits, and top-tier Chandigarh crowds</strong> require aggressive execution. Yash steps into these sprawling mountain environments and manufactures raw, explosive dancing energy entirely organically, without letting the cold dictate the timeline.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and passive hosting. For high-net-worth families out here, Yash provides an elite bilingual execution—flawless English that validates the elite corporate network, combined forcefully with native Punjabi/Hindi crowd-work to ignite massive Sangeet momentum.
+                He completely rejects paper scripts and passive hosting. For high-net-worth families out here, Yash provides an elite bilingual execution-flawless English that validates the elite corporate network, combined forcefully with native Punjabi/Hindi crowd-work to ignite massive Sangeet momentum.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -489,13 +489,13 @@ export default function ManaliPage() {
               VIP Reality.<br /><G>Pine Forest Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Manali requires an elite understanding of 'Acoustic Compression'. Properties along the river involve sweeping lawns where the rushing Beas River physically drowns out the microphone. An amateur anchor loses the crowd entirely out here, resulting in an unengaged reception. Yash dominates these environments—using extreme vocal projection and physical stage boundaries to corral the guests intimately towards the action, shutting down acoustic drift.
+              Hosting a luxury event in Manali requires an elite understanding of 'Acoustic Compression'. Properties along the river involve sweeping lawns where the rushing Beas River physically drowns out the microphone. An amateur anchor loses the crowd entirely out here, resulting in an unengaged reception. Yash dominates these environments-using extreme vocal projection and physical stage boundaries to corral the guests intimately towards the action, shutting down acoustic drift.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Manali is the premium playground for Chandigarh and Punjab's elite. The energy threshold is massive. Yash does this through total unscripted fluidity—validating the corporate executives with pristine English, then flipping aggressively into deep North Indian/Punjabi hype to explode the Sangeets entirely natively.
+              Furthermore, Manali is the premium playground for Chandigarh and Punjab's elite. The energy threshold is massive. Yash does this through total unscripted fluidity-validating the corporate executives with pristine English, then flipping aggressively into deep North Indian/Punjabi hype to explode the Sangeets entirely natively.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              High-altitude VIP fluency—defeating strict weather timelines and generating unstoppable Northern momentum—is the mark of an anchor who operates at the true apex of the destination industry.
+              High-altitude VIP fluency-defeating strict weather timelines and generating unstoppable Northern momentum-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -551,14 +551,14 @@ export default function ManaliPage() {
               Himalayan Peak.<br /><G>Punjabi Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Manali is an intense logistical challenge. Properties physically drop off into the valleys or stretch for acres alongside the river, scattering guests massively. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Manali is an intense logistical challenge. Properties physically drop off into the valleys or stretch for acres alongside the river, scattering guests massively. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Alpine Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Chandigarh/Punjab families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling Himalayan constraints.
+                High-net-worth Chandigarh/Punjab families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling Himalayan constraints.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function ManaliPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -677,7 +677,7 @@ export default function ManaliPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Manali experiences intense overlapping of the Delhi VIP destination season and peak Chandigarh extreme-luxury dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

@@ -65,11 +65,8 @@ const nextConfig = {
         destination: "/corporate-event-anchor-jaipur",
         permanent: true,
       },
-      {
-        source: "/wedding-emcee-jaipur",
-        destination: "/wedding-anchor-jaipur",
-        permanent: true,
-      },
+      // NOTE: /wedding-emcee-jaipur now serves a real standalone page (Task 5).
+      // The old redirect has been removed. The page lives at app/wedding-emcee-jaipur/.
       // ── Location redirects ────────────────────────────────────────────
       {
         source: "/anchor-in-chandigarh",

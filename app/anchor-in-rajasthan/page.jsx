@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -10,7 +10,7 @@ import { Building2, CalendarCheck, ChevronRight, Crown, Globe, Heart, MapPin, Mi
 
 
 // ─────────────────────────────────────────────
-// THEME — Black Gold (Anchoring pages)
+// THEME, Black Gold (Anchoring pages)
 // ─────────────────────────────────────────────
 const GOLD = "#D4AF37";
 const GOLD_D = "#a8891a";
@@ -106,7 +106,7 @@ const CITIES = [
     tag: "Lake City",
     href: "/anchor-in-udaipur",
     venues: "Taj Lake Palace · Udaivilas · Leela Udaipur · RAAS",
-    desc: "Rajasthan's most romantic destination. NRI families choose Udaipur first—requires international protocols and deep venue knowledge." },
+    desc: "Rajasthan's most romantic destination. NRI families choose Udaipur first-requires international protocols and deep venue knowledge." },
   {
     city: "Jodhpur",
     tag: "Blue City",
@@ -181,42 +181,42 @@ const CITIES = [
     desc: "Hosting in the city of forts. Epic scales and historic venues that demand a powerful, commanding stage presence." },
 ];
 const EVENT_TYPES = [
-  { icon:Heart,    title:"Palace Weddings",        desc:"Varmala, Baraat, Pheras, Bidaai across every palace property in Rajasthan. Heritage venues with centuries-old protocol — navigated.", href:"/wedding-anchor-jaipur" },
-  { icon:Music2,   title:"Destination Sangeets",   desc:"High-energy Sangeet production in fort courtyards, rooftop terraces, desert camps, and lake palace ballrooms. The acoustic challenges are real — so is the experience.", href:"/sangeet-anchor-jaipur" },
-  { icon:Globe,    title:"NRI & International",    desc:"Bilingual Hindi/English. International protocols. Families from UK, USA, Canada, and Gulf who chose Rajasthan for a reason — the event needs to honour that choice.", href:"/destination-wedding-anchor" },
+  { icon:Heart,    title:"Palace Weddings",        desc:"Varmala, Baraat, Pheras, Bidaai across every palace property in Rajasthan. Heritage venues with centuries-old protocol, navigated.", href:"/wedding-anchor-jaipur" },
+  { icon:Music2,   title:"Destination Sangeets",   desc:"High-energy Sangeet production in fort courtyards, rooftop terraces, desert camps, and lake palace ballrooms. The acoustic challenges are real, so is the experience.", href:"/sangeet-anchor-jaipur" },
+  { icon:Globe,    title:"NRI & International",    desc:"Bilingual Hindi/English. International protocols. Families from UK, USA, Canada, and Gulf who chose Rajasthan for a reason, the event needs to honour that choice.", href:"/destination-wedding-anchor" },
   { icon:Building2,title:"Corporate & Conferences",desc:"National brand summits, government galas, and award nights at Jaipur's JECC Sitapura and major conference properties across Rajasthan cities.", href:"/corporate-event-anchor-jaipur" },
-  { icon:Sparkles, title:"Pre-Wedding Ceremonies", desc:"Haldi, Mehndi, Roka, and engagement ceremonies. Each format requires a completely different energy register — all available across Rajasthan.", href:"/haldi-anchor-jaipur" },
+  { icon:Sparkles, title:"Pre-Wedding Ceremonies", desc:"Haldi, Mehndi, Roka, and engagement ceremonies. Each format requires a completely different energy register, all available across Rajasthan.", href:"/haldi-anchor-jaipur" },
   { icon:Crown,    title:"Destination Events",     desc:"Celebration of life events, milestone birthdays, anniversary galas, and family reunions across Rajasthan's most iconic venues.", href:"/anchor-in-jaipur" },
 ];
 const WHY_RAJASTHAN = [
   {
     num:"01",
     title:"Every Venue Protocol Known",
-    desc:"Rambagh Palace, Fairmont, Umaid Bhawan, Taj Lake Palace, Suryagarh — each has its own vendor protocols, sound restrictions, timing constraints, and operational requirements. Years of work at these properties means zero surprises on the event day." },
+    desc:"Rambagh Palace, Fairmont, Umaid Bhawan, Taj Lake Palace, Suryagarh, each has its own vendor protocols, sound restrictions, timing constraints, and operational requirements. Years of work at these properties means zero surprises on the event day." },
   {
     num:"02",
     title:"Acoustic Expertise for Heritage Spaces",
-    desc:"Fort courtyards, haveli interiors, desert open-air, lake palace ballrooms — each is an acoustic problem that kills unprepared anchors. Voice projection, mic positioning, and crowd management adapt completely to each space." },
+    desc:"Fort courtyards, haveli interiors, desert open-air, lake palace ballrooms, each is an acoustic problem that kills unprepared anchors. Voice projection, mic positioning, and crowd management adapt completely to each space." },
   {
     num:"03",
-    title:"Cultural Fluency — Rajasthani, Hindi, English",
-    desc:"Rajasthan's royal wedding culture has specific rituals, specific register, and specific expectations. Bilingual Hindi/English switching with genuine Rajasthani cultural knowledge — not a Google-translated script." },
+    title:"Cultural Fluency, Rajasthani, Hindi, English",
+    desc:"Rajasthan's royal wedding culture has specific rituals, specific register, and specific expectations. Bilingual Hindi/English switching with genuine Rajasthani cultural knowledge, not a Google-translated script." },
   {
     num:"04",
     title:"Pan-Rajasthan Logistics",
-    desc:"Jaipur to Jaisalmer is 575 kilometres. Jodhpur to Udaipur is 250. Events happen at all hours across all distances. Travel logistics are fully managed — the anchor arrives fresh, on time, and fully briefed." },
+    desc:"Jaipur to Jaisalmer is 575 kilometres. Jodhpur to Udaipur is 250. Events happen at all hours across all distances. Travel logistics are fully managed, the anchor arrives fresh, on time, and fully briefed." },
 ];
 const TESTIMONIALS = [
   {
-    name:"Sharma Family — Jodhpur",
-    quote:"Umaid Bhawan Palace has seen a thousand anchors. Yash was the first one who matched the venue without trying to overshadow it. The grandeur of the space and the warmth of the family — both preserved simultaneously.",
+    name:"Sharma Family, Jodhpur",
+    quote:"Umaid Bhawan Palace has seen a thousand anchors. Yash was the first one who matched the venue without trying to overshadow it. The grandeur of the space and the warmth of the family, both preserved simultaneously.",
     event:"Palace Wedding · Umaid Bhawan Palace, Jodhpur" },
   {
-    name:"Kapoor Family — Udaipur",
-    quote:"Taj Lake Palace at sunset with 200 international guests and two families from different states. The bilingual hosting, the NRI protocols, the emotional moments — every single element landed exactly right.",
+    name:"Kapoor Family, Udaipur",
+    quote:"Taj Lake Palace at sunset with 200 international guests and two families from different states. The bilingual hosting, the NRI protocols, the emotional moments, every single element landed exactly right.",
     event:"Destination Wedding · Taj Lake Palace, Udaipur" },
   {
-    name:"Events Head — National Brand",
+    name:"Events Head, National Brand",
     quote:"We've run corporate summits across five Rajasthan cities. The anchor is the highest-risk element of any live event. Yash is the only anchor we've worked with who has never, not once, required a rescue.",
     event:"Corporate Summit Series · Jaipur · Udaipur · Jodhpur" },
 ];
@@ -228,19 +228,19 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q:"Who is the best anchor in Rajasthan?",
-    a:"Anchor Yash Soni is Rajasthan's 4.9★ rated event host with 700+ shows across the state — Jaipur palace buyouts, Udaipur lake palace destination weddings, Jodhpur fort Sangeets, Jaisalmer desert camps, and corporate galas at JECC Sitapura. Bilingual Hindi/English, zero paper scripts, and full pan-Rajasthan availability." },
+    a:"Anchor Yash Soni is Rajasthan's 4.9★ rated event host with 700+ shows across the state, Jaipur palace buyouts, Udaipur lake palace destination weddings, Jodhpur fort Sangeets, Jaisalmer desert camps, and corporate galas at JECC Sitapura. Bilingual Hindi/English, zero paper scripts, and full pan-Rajasthan availability." },
   {
     q:"Which cities in Rajasthan do you anchor events in?",
-    a:"Full coverage across Rajasthan — Jaipur (home base), Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and Bikaner. Smaller heritage cities and resort properties are also covered depending on availability. WhatsApp the city and date for immediate availability confirmation." },
+    a:"Full coverage across Rajasthan, Jaipur (home base), Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and Bikaner. Smaller heritage cities and resort properties are also covered depending on availability. WhatsApp the city and date for immediate availability confirmation." },
   {
     q:"Do you anchor destination weddings in Rajasthan?",
-    a:"Yes. Destination weddings in Rajasthan are a core specialisation — particularly Udaipur (Taj Lake Palace, Oberoi Udaivilas, Leela), Jodhpur (Umaid Bhawan Palace, Mehrangarh Fort), and Jaisalmer (Suryagarh, Serai). NRI families and international guests are handled with full bilingual hosting and international protocol management." },
+    a:"Yes. Destination weddings in Rajasthan are a core specialisation, particularly Udaipur (Taj Lake Palace, Oberoi Udaivilas, Leela), Jodhpur (Umaid Bhawan Palace, Mehrangarh Fort), and Jaisalmer (Suryagarh, Serai). NRI families and international guests are handled with full bilingual hosting and international protocol management." },
   {
     q:"Can you anchor events at palace venues in Rajasthan?",
-    a:"Yes. Palace venue anchoring is the primary specialisation across Rajasthan. Rambagh Palace, Fairmont Jaipur, Leela Palace, Taj Lake Palace, Oberoi Udaivilas, Umaid Bhawan Palace, Mehrangarh Fort, Suryagarh, and Narendra Bhawan have all been worked with. Each property has its own protocols — all navigated from experience." },
+    a:"Yes. Palace venue anchoring is the primary specialisation across Rajasthan. Rambagh Palace, Fairmont Jaipur, Leela Palace, Taj Lake Palace, Oberoi Udaivilas, Umaid Bhawan Palace, Mehrangarh Fort, Suryagarh, and Narendra Bhawan have all been worked with. Each property has its own protocols, all navigated from experience." },
   {
     q:"Do you handle NRI and international guests at Rajasthan events?",
-    a:"Yes. Bilingual Hindi/English hosting with international protocol management is standard for destination weddings across Rajasthan. Families from the UK, USA, Canada, and Gulf regularly choose Rajasthan for weddings — the anchor needs to ensure every guest, regardless of background, feels fully included." },
+    a:"Yes. Bilingual Hindi/English hosting with international protocol management is standard for destination weddings across Rajasthan. Families from the UK, USA, Canada, and Gulf regularly choose Rajasthan for weddings, the anchor needs to ensure every guest, regardless of background, feels fully included." },
   {
     q:"What is the process for booking an anchor in Rajasthan?",
     a:"WhatsApp the event city, date, venue, expected guest count, and event type. Availability is confirmed within the hour. A quote follows. Token payment confirms the booking. Pre-event coordination, script development, and briefing happen over the following weeks." },
@@ -249,7 +249,7 @@ const FAQS = [
     a:"Fort courtyards, haveli interiors, and desert open-air venues each present specific acoustic problems that standard anchors can't handle. Voice projection technique, mic positioning, crowd placement, and energy management all adapt completely to the venue. This comes from years of work at these specific properties." },
   {
     q:"Do you anchor corporate events and conferences in Rajasthan?",
-    a:"Yes. Corporate events at JECC Sitapura in Jaipur, conference hotels across Udaipur and Jodhpur, and national brand summits across the state. The corporate register is completely different from wedding hosting — sharp, concise, brand-aligned, and unscripted." },
+    a:"Yes. Corporate events at JECC Sitapura in Jaipur, conference hotels across Udaipur and Jodhpur, and national brand summits across the state. The corporate register is completely different from wedding hosting, sharp, concise, brand-aligned, and unscripted." },
 ];
 
 const localBusinessSchema = {
@@ -305,7 +305,7 @@ export default function AnchorInRajasthan() {
       ══════════════════════════════════════ */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-16 md:pb-24">
         <div className="absolute inset-0">
-          <Image src="/gallery-5.webp" alt="Anchor in Rajasthan — palace wedding event host across Rajasthan"
+          <Image src="/gallery-5.webp" alt="Anchor in Rajasthan, palace wedding event host across Rajasthan"
             fill priority className="object-cover" sizes="100vw"
             style={{ filter:"grayscale(15%)", opacity:.4 }}quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-transparent"/>
@@ -364,7 +364,7 @@ export default function AnchorInRajasthan() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          3. RAJASTHAN HUB — intro
+          3. RAJASTHAN HUB, intro
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12 border-b border-white/5">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
@@ -377,7 +377,7 @@ export default function AnchorInRajasthan() {
               Rajasthan's wedding and event circuit is unlike any other state in India. The venues are centuries-old palaces and forts with acoustic properties that break unprepared anchors. The families are royal lineage with cultural expectations that generic hosting can't meet. The destination wedding guests are international, NRI, and multilingual.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Seven cities. Every major palace property. Every event format. Bilingual Hindi/English with genuine Rajasthani cultural fluency — not a translated template. This is what anchoring across Rajasthan actually requires.
+              Seven cities. Every major palace property. Every event format. Bilingual Hindi/English with genuine Rajasthani cultural fluency, not a translated template. This is what anchoring across Rajasthan actually requires.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Jaipur","Udaipur","Jodhpur","Jaisalmer","Pushkar","Bikaner","Ajmer"].map(c => (
@@ -400,7 +400,7 @@ export default function AnchorInRajasthan() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. CITY CARDS — internal linking hub
+          4. CITY CARDS, internal linking hub
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12  border-b border-white/5">
         <div className="max-w-6xl mx-auto">
@@ -443,7 +443,7 @@ export default function AnchorInRajasthan() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. EVENT TYPES — 6 cards
+          5. EVENT TYPES, 6 cards
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
@@ -473,7 +473,7 @@ export default function AnchorInRajasthan() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. GALLERY — 5 image bento
+          6. GALLERY, 5 image bento
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
@@ -506,7 +506,7 @@ export default function AnchorInRajasthan() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          7. WHY — 4 pillars
+          7. WHY, 4 pillars
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-12">
         <div className="max-w-6xl mx-auto">
@@ -552,7 +552,7 @@ export default function AnchorInRajasthan() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -599,7 +599,7 @@ export default function AnchorInRajasthan() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          11. CITY LINKS — internal link grid
+          11. CITY LINKS, internal link grid
       ══════════════════════════════════════ */}
       <section className="py-14  border-y border-white/5 px-5 md:px-12 text-center">
         <div className="max-w-6xl mx-auto">
@@ -674,7 +674,7 @@ export default function AnchorInRajasthan() {
               Ready to <G>Execute</G><br/>Across Rajasthan.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-2">Palace venue peak season books 6–8 weeks in advance.</p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the city, date, and venue — availability confirmed within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the city, date, and venue, availability confirmed within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-2 px-12 py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.25)] active:scale-95">
                 <CalendarCheck size={16}/> Check Availability

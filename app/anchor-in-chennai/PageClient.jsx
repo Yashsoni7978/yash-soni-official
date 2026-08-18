@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -102,12 +102,12 @@ const CHENNAI_IDENTITY = [
   {
     icon: Landmark,
     title: "The ECR Coastal Protocol",
-    desc: "Events along the East Coast Road (ECR), especially at properties like Taj Fisherman's Cove, are defined by their horizontal scale. The guest list is a precise mix of Chennai's industrial legacy families and South India's corporate elite. Yash executes 'Coastal Dominance'—utilizing flawless, prestigious English to narration the oceanfront ceremonies, ensuring the hosting validates the absolute pedigree of the international and HNI guest lists."
+    desc: "Events along the East Coast Road (ECR), especially at properties like Taj Fisherman's Cove, are defined by their horizontal scale. The guest list is a precise mix of Chennai's industrial legacy families and South India's corporate elite. Yash executes 'Coastal Dominance'-utilizing flawless, prestigious English to narration the oceanfront ceremonies, ensuring the hosting validates the absolute pedigree of the international and HNI guest lists."
   },
   {
     icon: Building2,
     title: "ITC Grand Chola Scale",
-    desc: "Hosting at ITC Grand Chola, one of the world's largest LEED-certified hotels, requires an anchor who can fill massive imperial ballrooms without shouting. Yash operates as an 'Acoustic Focal Point'—using intense, commanding unscripted vocal presence and physical stage dominance to pull the dispersed 800+ guests back into a single focal point, preventing the energy from bleeding out into the hotel's vast corridors."
+    desc: "Hosting at ITC Grand Chola, one of the world's largest LEED-certified hotels, requires an anchor who can fill massive imperial ballrooms without shouting. Yash operates as an 'Acoustic Focal Point'-using intense, commanding unscripted vocal presence and physical stage dominance to pull the dispersed 800+ guests back into a single focal point, preventing the energy from bleeding out into the hotel's vast corridors."
   },
   {
     icon: Globe,
@@ -158,24 +158,24 @@ const VS = [
   { problem: "Using loud, 'cheap MC' club shouting that instantly alienates a sophisticated Chennai industrial family audience", fix: "Intimate, highly conversational executive-grade delivery matching the absolute pinnacle of guest pedigree" },
   { problem: "The anchor being invisible in the context of the massive architectural scale of ITC Grand Chola", fix: "Absolute stage command assumes the physical center of gravity, pulling 1,000 guests together unscripted" },
   { problem: "Sound dispersion and coastal humidity killing the Varmala energy on an open ECR beachfront lawn", fix: "Aggressive, tight-knit crowd-condensing frameworks that force acoustic intimacy and focus" },
-  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor seaside ceremony", fix: "100% unscripted flow—maintaining absolute eye contact despite the scale of the ECR shoreline" },
+  { problem: "Reading rigidly from paper notes during a visually sweeping outdoor seaside ceremony", fix: "100% unscripted flow-maintaining absolute eye contact despite the scale of the ECR shoreline" },
   { problem: "Being unable to bridge the formal C-suite networking with a high-energy Sangeet format", fix: "Executing an intense psychological transition that drags the technology and industrial VIPs directly to the dance floor" },
   { problem: "The anchor's voice dissipating entirely as guests wander across sprawling coastal property lawns", fix: "Mastery of timeline sequencing and vocal centralizing to pull the entire party tightly towards the event core" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Industrial Group CEO — Chennai",
+    name: "Industrial Group CEO, Chennai",
     quote: "Hosting at Taj Fisherman's Cove required absolute poise and the ability to manage a massive international guest list. Yash was flawless. His English narration of the ceremony was astounding. Truly an elite stage presence.",
     event: "VIP Family Wedding · Taj Fisherman's Cove"
   },
   {
-    name: "Tech Leadership — Sydney to Chennai",
+    name: "Tech Leadership, Sydney to Chennai",
     quote: "We chose ITC Grand Chola for our regional summit gala. We needed an anchor who could moderate a board and then drive a 500-person party. Yash anchored with pure executive polish. Unscripted, sharp, and totally in control.",
     event: "Leadership Gala · ITC Grand Chola"
   },
   {
-    name: "ECR Beachfront Sangeet — NRI",
+    name: "ECR Beachfront Sangeet, NRI",
     quote: "The humidity was high, the crowd was large, and we were worried about energy loss. Yash didn't wait. He brought massive Sangeet hype entirely natively. He switched between English for the VIPs and heavy energy work effortlessly.",
     event: "Destination Sangeet · Sheraton Grand ECR"
   },
@@ -189,7 +189,7 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle the massive outdoor sound dispersion of Chennai's ECR beachfront properties?",
-    a: "This is the cardinal rule of coastal hosting. The second you are on a 10-acre ECR lawn, the guests want to drift. A basic setup fails. I utilize 'Crowd Compression'—speeding up the timeline, initiating physical interaction, and detonating a massive dancing session that pulls the dispersed VIPs into a tight, high-energy core."
+    a: "This is the cardinal rule of coastal hosting. The second you are on a 10-acre ECR lawn, the guests want to drift. A basic setup fails. I utilize 'Crowd Compression'-speeding up the timeline, initiating physical interaction, and detonating a massive dancing session that pulls the dispersed VIPs into a tight, high-energy core."
   },
   {
     q: "Our guest list includes international dignitaries and board directors. Can you match this tone?",
@@ -267,7 +267,7 @@ export default function ChennaiPage() {
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/backgrounds/chennai_bg.webp" alt="Best Anchor in Chennai — VIP Luxury Coastal Weddings" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
+          <Image src="/backgrounds/chennai_bg.webp" alt="Best Anchor in Chennai, VIP Luxury Coastal Weddings" fill sizes="(max-width:768px) 224px, 288px" className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" quality={75} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -347,7 +347,7 @@ export default function ChennaiPage() {
                 Chennai operates as a definitive sanctuary for India's industrial and corporate royalty. You are dealing with vast imperial architectures like ITC Grand Chola where <strong className="text-[#B5952F]">sweeping ballroom scale and international corporate demographics</strong> requires flawless execution. Yash steps into these sprawling architectures and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together unscripted.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC humor'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the CEO network, suddenly flipping into high-voltage momentum when the Sangeet demands unhinged energy.
+                He completely rejects paper scripts and basic 'MC humor'. For high-net-worth cross-cultural weddings, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the CEO network, suddenly flipping into high-voltage momentum when the Sangeet demands unhinged energy.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -490,13 +490,13 @@ export default function ChennaiPage() {
               VIP Reality.<br /><G>Ballroom Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Chennai requires an elite understanding of 'Phase-Based Pacing'. Venues like ITC Grand Chola or The Leela Palace feature horizontal scales that can swallow even the most experienced MCs. The moment the formal evening segment concludes, the crowd fragments entirely across the hotel footprints. Yash assumes the role of the Timeline Architect—using extreme vocal pacing and dominant stage psychology to forcefully pull the industrial VIPs into the central phase, instantly generating massive momentum unscripted.
+              Hosting a luxury event in Chennai requires an elite understanding of 'Phase-Based Pacing'. Venues like ITC Grand Chola or The Leela Palace feature horizontal scales that can swallow even the most experienced MCs. The moment the formal evening segment concludes, the crowd fragments entirely across the hotel footprints. Yash assumes the role of the Timeline Architect-using extreme vocal pacing and dominant stage psychology to forcefully pull the industrial VIPs into the central phase, instantly generating massive momentum unscripted.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
               Furthermore, Chennai is a definitive destination for India's most sophisticated corporate families. Yash fundamentally validates their presence with pristine, unscripted English moderation, then seamlessly flips into an aggressively high-energy party format when the evening formal wear comes off.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              Imperial VIP fluency—defeating massive architectural scales and dominating the industrial tier—is the mark of an anchor who operates at the true apex of the destination industry.
+              Imperial VIP fluency-defeating massive architectural scales and dominating the industrial tier-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -552,14 +552,14 @@ export default function ChennaiPage() {
               Imperial Scale.<br /><G>Coastal Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Chennai is an intense architectural challenge. Properties like ITC Grand Chola physically swallow guests continuously across their footprints. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the ballroom, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Chennai is an intense architectural challenge. Properties like ITC Grand Chola physically swallow guests continuously across their footprints. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the ballroom, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "VVIP South India" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth industrial families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling imperial constraints.
+                High-net-worth industrial families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling imperial constraints.
               </p>
             </div>
           </Reveal>
@@ -589,7 +589,7 @@ export default function ChennaiPage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -678,7 +678,7 @@ export default function ChennaiPage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Chennai experiences intense overlapping of the coastal destination season and peak local industrial retreat dates. Travelling anchors require multi-day blockouts. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

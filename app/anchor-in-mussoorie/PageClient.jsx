@@ -102,12 +102,12 @@ const MUSSOORIE_IDENTITY = [
   {
     icon: Building2,
     title: "The Doon Valley Heritage Protocol",
-    desc: "Mussoorie is distinct because of its deep colonial-era heritage mixed with towering modern luxury. Venues like Welcomhotel The Savoy command extreme historic prestige, while JW Marriott Walnut Grove operates as a colossal contemporary fortress. Yash masters this spectrum—delivering hyper-polished, formal English hosting when required for the VIP corporate element, then instantly igniting massive ballroom Sangeets without losing refinement."
+    desc: "Mussoorie is distinct because of its deep colonial-era heritage mixed with towering modern luxury. Venues like Welcomhotel The Savoy command extreme historic prestige, while JW Marriott Walnut Grove operates as a colossal contemporary fortress. Yash masters this spectrum-delivering hyper-polished, formal English hosting when required for the VIP corporate element, then instantly igniting massive ballroom Sangeets without losing refinement."
   },
   {
     icon: Snowflake,
     title: "High-Altitude Temperature Compression",
-    desc: "Events spanning across the vast outdoor lawns overlooking the Doon Valley face a severe weather drop at sunset. Yash executes 'Temperature Compression'—accelerating the Sangeet's timeline organically, using raw vocal power and unscripted interactive psychology to pull the guests out of their jackets and onto the dance floor before the cold fundamentally kills the energy."
+    desc: "Events spanning across the vast outdoor lawns overlooking the Doon Valley face a severe weather drop at sunset. Yash executes 'Temperature Compression'-accelerating the Sangeet's timeline organically, using raw vocal power and unscripted interactive psychology to pull the guests out of their jackets and onto the dance floor before the cold fundamentally kills the energy."
   },
   {
     icon: Briefcase,
@@ -158,24 +158,24 @@ const VS = [
   { problem: "Using 'cheap MC' club humor that instantly alienates an ultra-premium VIP guest list at JW Marriott", fix: "Intimate, highly conversational executive-grade delivery matching the crowd's precise pedigree" },
   { problem: "The anchor's voice dissipating entirely across the vast outdoor lawns overlooking the Doon Valley", fix: "Mastery of timeline-stitching and acoustic centralizing to pull the entire party tightly towards the stage" },
   { problem: "Being unable to bridge formal C-suite networking with the massive high-energy Sangeet format", fix: "Executing an intense psychological transition that drags the VIPs directly to the dance floor" },
-  { problem: "Reading rigidly from paper notes during an incredibly visually exposed mountain Varmala", fix: "100% unscripted flow—maintaining absolute eye contact despite severe high-altitude weather shifts" },
+  { problem: "Reading rigidly from paper notes during an incredibly visually exposed mountain Varmala", fix: "100% unscripted flow-maintaining absolute eye contact despite severe high-altitude weather shifts" },
   { problem: "Guests retreating to their heated rooms early because the mountain temperatures freeze the Sangeet", fix: "Generating pure organic 'unplugged' hype using rapid pacing to heat up the crowd instantaneously" },
   { problem: "An anchor getting totally flustered by sudden weather systems that force the reception indoors", fix: "Absolute stoic command, restructuring the event flow natively without the guests ever sensing panic" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Executive Corporate Retreat — Delhi NCR",
+    name: "Executive Corporate Retreat, Delhi NCR",
     quote: "Hosting a sunset reception at JW Marriott Walnut Grove requires an anchor who understands immense scale. Yash’s unscripted English was flawless, and he managed the transition into the evening Sangeet despite the massive indoor ballrooms with complete authority. Absolute executive polish.",
     event: "Destination Sangeet · JW Marriott Walnut Grove"
   },
   {
-    name: "Bhargava Family — Dehradun",
+    name: "Bhargava Family, Dehradun",
     quote: "Choosing The Savoy meant we had a highly restricted, incredibly VIP guest list inside a heritage property. We needed an anchor, not a loud MC. Yash was absolute perfection. Intense conversational flow, no reading from notes, completely owning the space without ever crossing the line.",
     event: "VIP Heritage Wedding · Welcomhotel The Savoy"
   },
   {
-    name: "Global Finance Summit — Gurgaon",
+    name: "Global Finance Summit, Gurgaon",
     quote: "We hosted out at Jaypee Residency Manor. Yash anchored our daytime strategy panels flawlessly with zero notes, bringing sharp insights, and then instantly flipped the switch to host our evening gala. His ability to read a room of CEOs is staggering.",
     event: "Leadership Offsite Gala · Jaypee Residency Manor"
   },
@@ -189,15 +189,15 @@ const FAQS = [
   { q: "What does an event anchor do if there is a technical failure?", a: "Technical failures, power cuts, last-minute schedule changes, and delayed brides are all handled without the guests noticing. For Anchor Yash, crisis management under pressure is a core competency, not an afterthought." },
   {
     q: "How do you handle outdoor functions in Mussoorie where the freezing wind kills the crowd's energy?",
-    a: "This is the ultimate test of a Doon Valley anchor. When the temperature drops rapidly at sunset, guests instantly mentally check out and want to retreat indoors. You cannot solve this purely with a loud sound system. I use 'Psychological Momentum'—accelerating the timeline aggressively, using extreme vocal projection to physically compress the crowd towards the stage, and forcing an explosive dancing state before the cold wins."
+    a: "This is the ultimate test of a Doon Valley anchor. When the temperature drops rapidly at sunset, guests instantly mentally check out and want to retreat indoors. You cannot solve this purely with a loud sound system. I use 'Psychological Momentum'-accelerating the timeline aggressively, using extreme vocal projection to physically compress the crowd towards the stage, and forcing an explosive dancing state before the cold wins."
   },
   {
-    q: "Our Mussoorie guest list is absolutely exclusive—mostly South Delhi executives and corporate VIPs. Can you match this tone?",
+    q: "Our Mussoorie guest list is absolutely exclusive-mostly South Delhi executives and corporate VIPs. Can you match this tone?",
     a: "Completely. A VIP destination wedding doesn't need a high-pitched 'hype man'; it needs an Executive Moderator. I drop all standard 'wedding gimmicks' and host with sharp, highly conversational, unscripted English. It treats the VIPs with intellectual respect and immediately breaks the sterile barrier between the stage and the high-society audience."
   },
   {
     q: "The properties here like JW Marriott and Jaypee Manor are massive. How do you prevent guests from wandering off?",
-    a: "Large-footprint luxury properties cause severe 'Audience Drift'. Guests vanish to the lounges or terraces. I assume the role of the 'Timeline Catalyst'—deploying rapid-fire pacing and unscripted crowd-work that constantly drags the guests back to the main stage, actively keeping the energy trapped and centralized throughout the evening."
+    a: "Large-footprint luxury properties cause severe 'Audience Drift'. Guests vanish to the lounges or terraces. I assume the role of the 'Timeline Catalyst'-deploying rapid-fire pacing and unscripted crowd-work that constantly drags the guests back to the main stage, actively keeping the energy trapped and centralized throughout the evening."
   },
   {
     q: "Do you use teleprompters or scripts during these massive VIP itineraries?",
@@ -267,7 +267,7 @@ export default function MussooriePage() {
 
       {/* ══ 1. HERO ══ */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/mussoorie_bg.webp" alt="Best Anchor in Mussoorie — VIP Luxury Heritage Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
+        <div className="absolute inset-0 z-0"><div className="relative w-full h-full"><Image src="/backgrounds/mussoorie_bg.webp" alt="Best Anchor in Mussoorie, VIP Luxury Heritage Weddings" fill priority sizes="100vw" className="object-cover slow-zoom" quality={75} /></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 via-transparent to-transparent" />
         </div>
@@ -347,7 +347,7 @@ export default function MussooriePage() {
                 Mussoorie operates at the zenith of heritage exclusivity. You are dealing with colossal venues like JW Marriott Walnut Grove where <strong className="text-[#B5952F]">sweeping architectural scale and top-tier Delhi NCR executive crowds</strong> require flawless execution. Yash steps into these sprawling mountain environments and manufactures incredibly tight, explosive dancing energy entirely organically, pulling the VIPs together before the altitude drops the temperature.
               </p>
               <p className="text-zinc-400 text-base mb-8 leading-relaxed font-light">
-                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings at The Savoy, Yash provides an elite bilingual execution—flawless, commanding English that drops the invisible wall between the stage and the corporate network, while honoring the colonial prestige of the venue flawlessly.
+                He completely rejects paper scripts and basic 'MC behavior'. For high-net-worth cross-cultural weddings at The Savoy, Yash provides an elite bilingual execution-flawless, commanding English that drops the invisible wall between the stage and the corporate network, while honoring the colonial prestige of the venue flawlessly.
               </p>
               <Link href="/about" className="inline-flex items-center gap-3 border-b border-[#D4AF37]/50 pb-2 text-[#B5952F] text-xs tracking-widest uppercase hover:text-white transition-colors">
                 MY FULL STORY <ArrowRight size={14} />
@@ -490,13 +490,13 @@ export default function MussooriePage() {
               VIP Reality.<br /><G>Doon Valley Scale.</G>
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4 font-light">
-              Hosting a luxury event in Mussoorie requires an elite understanding of 'Property Dominance'. Venues like JW Marriott stretch across massive acreages. The moment formal networking concludes, the crowd fragments entirely. An amateur anchor loses them to the lobby bars. Yash assumes the role of the Timeline Architect—using extreme vocal pacing and dominant stage psychology to forcefully pull the VIPs into the central ballroom, instantly sparking a massive Sangeet before the energy dies.
+              Hosting a luxury event in Mussoorie requires an elite understanding of 'Property Dominance'. Venues like JW Marriott stretch across massive acreages. The moment formal networking concludes, the crowd fragments entirely. An amateur anchor loses them to the lobby bars. Yash assumes the role of the Timeline Architect-using extreme vocal pacing and dominant stage psychology to forcefully pull the VIPs into the central ballroom, instantly sparking a massive Sangeet before the energy dies.
             </p>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
-              Furthermore, Mussoorie is the definitive playground for Delhi NCR's most sophisticated corporate families. Yash does exactly what they require—validating their presence with pristine, unscripted English moderation, then seamlessly flipping into an aggressively high-energy North Indian hype set when the formal wear comes off.
+              Furthermore, Mussoorie is the definitive playground for Delhi NCR's most sophisticated corporate families. Yash does exactly what they require-validating their presence with pristine, unscripted English moderation, then seamlessly flipping into an aggressively high-energy North Indian hype set when the formal wear comes off.
             </p>
             <p className="text-zinc-300 text-sm font-semibold border-l-2 border-[#D4AF37]/50 pl-4">
-              High-altitude VIP fluency—defeating sprawling architectures and dominating the South Delhi corporate tier—is the mark of an anchor who operates at the true apex of the destination industry.
+              High-altitude VIP fluency-defeating sprawling architectures and dominating the South Delhi corporate tier-is the mark of an anchor who operates at the true apex of the destination industry.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -552,14 +552,14 @@ export default function MussooriePage() {
               Himalayan Peak.<br /><G>Corporate Focus.</G><br />Zero Scripts.
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-5 font-light">
-              Scaling an event in Mussoorie is an intense logistical challenge. Properties physically drop off into the valleys or stretch massively across mountain ridges, scattering guests constantly. Yash builds his stage presence to physically and vocally anchor these extreme environments—using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
+              Scaling an event in Mussoorie is an intense logistical challenge. Properties physically drop off into the valleys or stretch massively across mountain ridges, scattering guests constantly. Yash builds his stage presence to physically and vocally anchor these extreme environments-using timeline stitching to forcefully compress the venue, ensuring the host remains the undeniable center of gravity.
             </p>
             <div className="p-5 rounded-2xl bg-[#D4AF37]/8 border border-[#D4AF37]/25">
               <div className="flex items-center gap-3 text-white font-bold mb-2 text-sm">
                 <ShieldCheck size={16} className="text-[#B5952F]" /> The "Heritage VIP Retreat" Guarantee
               </div>
               <p className="text-zinc-400 text-xs leading-relaxed font-light">
-                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted—even within sprawling Himalayan constraints.
+                High-net-worth Delhi NCR families do not accept generic templates. The execution here must reflect deep cultural intelligence, flawless corporate bilingual articulation, and the ability to manufacture extreme crowd hype totally unscripted-even within sprawling Himalayan constraints.
               </p>
             </div>
           </Reveal>
@@ -589,7 +589,7 @@ export default function MussooriePage() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-5">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white text-xs font-bold group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                   </div>
                 </a>
@@ -678,7 +678,7 @@ export default function MussooriePage() {
             <p className="text-zinc-400 text-sm md:text-base mb-3 leading-relaxed">
               Mussoorie experiences extreme saturation from the Delhi VIP destination season. Top-tier anchors require multi-day blockouts for Doon Valley mountain transit. I do not hold dates without confirmation.
             </p>
-            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details — quote within the hour.</p>
+            <p className="text-zinc-600 text-xs mb-10 uppercase tracking-widest">WhatsApp the event details, quote within the hour.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer">
               <button className="inline-flex items-center gap-3 px-14 py-6 bg-[#D4AF37] text-black font-black text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95">
                 <CalendarCheck size={18} /> CLAIM YOUR DATE

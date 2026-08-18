@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 
 import Link from "next/link";
@@ -391,7 +391,7 @@ export default function ThemeWeddingOrganizerIndia() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <span className="font-['Orange_Avenue'] text-4xl text-[#5EEAD4] mb-8 block">Client Feedback</span>
           <p className="font-['The_Seasons'] text-4xl md:text-6xl leading-tight mb-12">
-            "They turned a boring hotel banquet hall into a mystical Sufi courtyard. The mirrors, the massive lamps, the custom fragrance—it felt like we walked onto a Bollywood movie set."
+            "They turned a boring hotel banquet hall into a mystical Sufi courtyard. The mirrors, the massive lamps, the custom fragrance-it felt like we walked onto a Bollywood movie set."
           </p>
           <span className="font-['Rekalgera'] tracking-widest uppercase text-sm block">Neha & Siddharth</span>
           <span className="font-sans text-sm text-white/60 block mt-2">Sufi Sangeet, Jaipur</span>

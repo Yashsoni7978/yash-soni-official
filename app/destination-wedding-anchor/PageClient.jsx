@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -79,7 +79,7 @@ const DESTINATIONS = [
   {
     city: "Udaipur",
     tag: "City of Lakes",
-    desc: "Palace properties on the lake. Taj Lake Palace, Leela Palace, Oberoi Udaivilas — the most photographed destination wedding backdrop in India. Yash has hosted extensively across Udaipur's heritage properties.",
+    desc: "Palace properties on the lake. Taj Lake Palace, Leela Palace, Oberoi Udaivilas, the most photographed destination wedding backdrop in India. Yash has hosted extensively across Udaipur's heritage properties.",
     venues: "Taj Lake Palace · Leela Palace · Oberoi Udaivilas · City Palace",
     img: "/gallery-1.webp",
     colSpan: "col-span-2",
@@ -96,7 +96,7 @@ const DESTINATIONS = [
   {
     city: "Jaisalmer",
     tag: "Golden City",
-    desc: "Desert camp weddings, fort ceremonies under the stars. Jaisalmer is the ultimate sunset backdrop — Sangeet nights here are in a completely different league.",
+    desc: "Desert camp weddings, fort ceremonies under the stars. Jaisalmer is the ultimate sunset backdrop, Sangeet nights here are in a completely different league.",
     venues: "Suryagarh · Serai · Fort properties",
     img: "/gallery-3.webp",
     keywords: ["destination wedding anchor jaisalmer", "desert wedding anchor india"],
@@ -104,7 +104,7 @@ const DESTINATIONS = [
   {
     city: "Goa",
     tag: "Beach Vibes",
-    desc: "Beachfront ceremonies, sunset cocktails, barefoot luxury. The format is completely different from palace weddings — high-energy, international crowd, and a vibe that stays electric until 6 AM.",
+    desc: "Beachfront ceremonies, sunset cocktails, barefoot luxury. The format is completely different from palace weddings, high-energy, international crowd, and a vibe that stays electric until 6 AM.",
     venues: "W Goa · ITC Grand · Alila Diwa · Beach properties",
     img: "/gallery-2.webp",
     keywords: ["destination wedding anchor goa", "beach wedding anchor goa"],
@@ -115,21 +115,21 @@ const ITINERARY = [
     day: "Day 01",
     title: "The Welcome & Sundowner",
     icon: Sun,
-    desc: "Guests arrive. The vibe is chill but charged. I host a 'Know Your Family' session over high-tea or cocktails — breaking the ice between two families meeting for the first time, turning nervous introductions into genuine warmth within 2 hours.",
+    desc: "Guests arrive. The vibe is chill but charged. I host a 'Know Your Family' session over high-tea or cocktails, breaking the ice between two families meeting for the first time, turning nervous introductions into genuine warmth within 2 hours.",
     align: "left",
   },
   {
-    day: "Day 02 — Morning",
+    day: "Day 02, Morning",
     title: "The Pool Party or Haldi",
     icon: Sparkles,
     desc: "Chaos mode on. Floral Holi, Tug-of-War, Bride Squad vs Groom Squad battles. I make sure no one stays dry and everyone's dancing. The energy set here carries through the entire evening.",
     align: "right",
   },
   {
-    day: "Day 02 — Night",
+    day: "Day 02, Night",
     title: "The Sangeet Gala",
     icon: Music,
-    desc: "Glitz and glamour. I switch to a tuxedo. This is the Bollywood Awards Night — family performances, heartfelt roasts, crowd games, and managing stage flow for 4–6 hours without a single dead moment.",
+    desc: "Glitz and glamour. I switch to a tuxedo. This is the Bollywood Awards Night, family performances, heartfelt roasts, crowd games, and managing stage flow for 4–6 hours without a single dead moment.",
     align: "left",
   },
   {
@@ -143,7 +143,7 @@ const ITINERARY = [
 const WHY_DIFFERENT = [
   {
     title: "The Social Glue",
-    desc: "Destination weddings have guests who are tired from travel, families meeting for the first time, and an itinerary that runs 3 days straight. I act as the binding force that keeps the energy cohesive across every event — Welcome Lunch to After-Party.",
+    desc: "Destination weddings have guests who are tired from travel, families meeting for the first time, and an itinerary that runs 3 days straight. I act as the binding force that keeps the energy cohesive across every event, Welcome Lunch to After-Party.",
   },
   {
     title: "Logistics Awareness",
@@ -151,11 +151,11 @@ const WHY_DIFFERENT = [
   },
   {
     title: "NRI Protocol Fluency",
-    desc: "International guests, bilingual hosting, cultural navigation between Rajasthani traditions and Western etiquette. Families flying in from the UK, USA, Canada, and Gulf feel completely included — not observers.",
+    desc: "International guests, bilingual hosting, cultural navigation between Rajasthani traditions and Western etiquette. Families flying in from the UK, USA, Canada, and Gulf feel completely included, not observers.",
   },
   {
     title: "Crisis at Scale",
-    desc: "A 3-day destination wedding is three separate shows. Power cuts, weather changes, delayed arrivals — all handled invisible to 400+ guests across multiple venues. In 700+ shows, not once has a guest seen a problem.",
+    desc: "A 3-day destination wedding is three separate shows. Power cuts, weather changes, delayed arrivals, all handled invisible to 400+ guests across multiple venues. In 700+ shows, not once has a guest seen a problem.",
   },
 ];
 const TESTIMONIALS = [
@@ -190,39 +190,39 @@ const FAQS = [
   },
   {
     q: "What does the destination wedding package cover?",
-    a: "The full 2–3 day destination wedding package covers every event from the Welcome Lunch or Sundowner through the Pool Party or Haldi, Sangeet Gala, Varmala ceremony, and Reception. Every event gets a custom run-of-show, dedicated preparation, and a professional presence that matches the venue's grandeur. There are no hidden hourly charges — it is a flat package fee.",
+    a: "The full 2–3 day destination wedding package covers every event from the Welcome Lunch or Sundowner through the Pool Party or Haldi, Sangeet Gala, Varmala ceremony, and Reception. Every event gets a custom run-of-show, dedicated preparation, and a professional presence that matches the venue's grandeur. There are no hidden hourly charges, it is a flat package fee.",
   },
   {
     q: "Do you travel for weddings in Udaipur and other Rajasthan cities?",
-    a: "Yes. Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and all Rajasthan destination cities are regularly hosted. Rajasthan is the primary destination wedding territory — the heritage venues, the palace properties, and the visual backdrop are unmatched in India. Travel from Jaipur to any Rajasthan city is seamless.",
+    a: "Yes. Udaipur, Jodhpur, Jaisalmer, Pushkar, Ajmer, and all Rajasthan destination cities are regularly hosted. Rajasthan is the primary destination wedding territory, the heritage venues, the palace properties, and the visual backdrop are unmatched in India. Travel from Jaipur to any Rajasthan city is seamless.",
   },
   {
     q: "Do you travel for destination weddings in Goa and other Indian states?",
-    a: "Yes. Goa, Mumbai, Kerala, Mussoorie, Ranthambore, and other destination locations across India are available. Beach weddings in Goa and hill station weddings in Mussoorie are completely different formats from palace weddings — the energy, the crowd profile, and the hosting style adapt to each location.",
+    a: "Yes. Goa, Mumbai, Kerala, Mussoorie, Ranthambore, and other destination locations across India are available. Beach weddings in Goa and hill station weddings in Mussoorie are completely different formats from palace weddings, the energy, the crowd profile, and the hosting style adapt to each location.",
   },
   {
     q: "Do you host international destination weddings?",
     a: "Yes. A valid passport is held and international destination weddings in Dubai, Thailand, Bali, and other global locations are available. International bookings require at least 3–4 months notice for visa logistics and require client arrangement of return flights from Jaipur and accommodation at the wedding venue.",
   },
   {
-    q: "Do you have experience with palace weddings — Rambagh, Umaid Bhawan, Leela?",
-    a: "Yes. Rambagh Palace Jaipur, Umaid Bhawan Jodhpur, Taj Lake Palace Udaipur, Leela Palace, and City Palace Udaipur have all been hosted. Heritage palace venues have their own acoustic quirks, lighting protocols, and event team hierarchies — knowing these before you arrive is the difference between competent and commanding.",
+    q: "Do you have experience with palace weddings, Rambagh, Umaid Bhawan, Leela?",
+    a: "Yes. Rambagh Palace Jaipur, Umaid Bhawan Jodhpur, Taj Lake Palace Udaipur, Leela Palace, and City Palace Udaipur have all been hosted. Heritage palace venues have their own acoustic quirks, lighting protocols, and event team hierarchies, knowing these before you arrive is the difference between competent and commanding.",
   },
   {
     q: "Can you handle NRI guests and international families at destination weddings?",
-    a: "NRI destination weddings are a core specialisation. Bilingual Hindi/English hosting, international etiquette awareness, and cultural navigation between Rajasthani traditions and Western protocols — all handled seamlessly. Families from the UK, USA, Canada, and Gulf fly in with specific expectations of both the cultural experience and the international standard of presentation. Both are delivered.",
+    a: "NRI destination weddings are a core specialisation. Bilingual Hindi/English hosting, international etiquette awareness, and cultural navigation between Rajasthani traditions and Western protocols, all handled seamlessly. Families from the UK, USA, Canada, and Gulf fly in with specific expectations of both the cultural experience and the international standard of presentation. Both are delivered.",
   },
   {
     q: "What is your role during the non-stage events like a Welcome Lunch?",
-    a: "At non-stage events, I act as the 'Social Glue.' I move through the room, facilitate introductions between families who are meeting for the first time, run casual ice-breaker games, and ensure both sides of the family are genuinely mixing — not sitting in separate groups. By the time the Sangeet starts, the room already knows each other. That changes everything.",
+    a: "At non-stage events, I act as the 'Social Glue.' I move through the room, facilitate introductions between families who are meeting for the first time, run casual ice-breaker games, and ensure both sides of the family are genuinely mixing, not sitting in separate groups. By the time the Sangeet starts, the room already knows each other. That changes everything.",
   },
   {
     q: "Who handles travel and accommodation for destination bookings?",
-    a: "The client arranges return flights from Jaipur and accommodation at the wedding venue — same hotel as guests — for the anchor and one assistant. I always arrive at least one full day before the first event specifically to sync with the venue events team, check all technical setups, and anticipate any location-specific challenges.",
+    a: "The client arranges return flights from Jaipur and accommodation at the wedding venue, same hotel as guests, for the anchor and one assistant. I always arrive at least one full day before the first event specifically to sync with the venue events team, check all technical setups, and anticipate any location-specific challenges.",
   },
   {
     q: "How far in advance should we book a destination wedding anchor?",
-    a: "Destination wedding packages block 3–4 full days of the calendar. Book 6–9 months in advance for peak destination season (October–February for Rajasthan, November–January for Goa). International bookings need a minimum 3–4 months notice. WhatsApp the moment your venue and dates are confirmed — destination slots are the first to fill.",
+    a: "Destination wedding packages block 3–4 full days of the calendar. Book 6–9 months in advance for peak destination season (October–February for Rajasthan, November–January for Goa). International bookings need a minimum 3–4 months notice. WhatsApp the moment your venue and dates are confirmed, destination slots are the first to fill.",
   },
   {
     q: "What languages do you host in at destination weddings?",
@@ -301,7 +301,7 @@ export default function DestinationAnchor() {
   return (
     <main className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black">
       <style>{css}</style>
-      {/* BREADCRUMB — sr-only */}
+      {/* BREADCRUMB, sr-only */}
       <nav className="sr-only">
         <Link href="/">Home</Link> ›
         <Link href="/anchor-in-jaipur">Best Anchor in Jaipur</Link> ›
@@ -315,7 +315,7 @@ export default function DestinationAnchor() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#050505] z-10" />
           <Image
             src="/gallery-4.webp"
-            alt="Destination wedding anchor India — Anchor Yash Soni"
+            alt="Destination wedding anchor India, Anchor Yash Soni"
             fill priority
             className="object-cover"
             sizes="100vw"
@@ -329,12 +329,12 @@ export default function DestinationAnchor() {
                 4.9★ · Destination Wedding Anchor · India & Global
               </span>
             </div>
-            {/* H1 — national keyword */}
+            {/* H1, national keyword */}
             <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.9] mb-6 tracking-tighter uppercase">
               Have Mic,<br /><G>Will Travel.</G>
             </h1>
             <p className="text-zinc-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-3">
-              From the palace lakes of Udaipur to the desert forts of Jaisalmer, the beaches of Goa to international destinations — 4.9★ rated destination wedding anchor — Udaipur, Jodhpur, Jaisalmer, Goa &amp; international.
+              From the palace lakes of Udaipur to the desert forts of Jaisalmer, the beaches of Goa to international destinations, 4.9★ rated destination wedding anchor, Udaipur, Jodhpur, Jaisalmer, Goa &amp; international.
             </p>
             <p className="text-zinc-500 text-sm mb-8">
               Udaipur · Jodhpur · Jaisalmer · Goa · Dubai &amp; worldwide &nbsp;·&nbsp; NRI specialist &nbsp;·&nbsp; Full 2–3 day package
@@ -355,7 +355,7 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          2. GOLD DESTINATION TICKER — fixed animation
+          2. GOLD DESTINATION TICKER, fixed animation
       ══════════════════════════════════════ */}
       <div className="bg-[#D4AF37] text-black py-3.5 overflow-hidden border-y border-white/10 relative z-20">
         <div className="flex whitespace-nowrap w-max ticker">
@@ -385,7 +385,7 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          4. INTRO — keyword-dense national SEO
+          4. INTRO, keyword-dense national SEO
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -395,7 +395,7 @@ export default function DestinationAnchor() {
               I Don't Just Host<br />Your Wedding. <G>I Curate</G><br />the 3-Day Experience.
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
-              Destination weddings are a completely different discipline from single-day events. Guests are tired from travel, two families are meeting for the first time, the itinerary runs 72 hours, and the venues are unfamiliar to everyone — including most vendors.
+              Destination weddings are a completely different discipline from single-day events. Guests are tired from travel, two families are meeting for the first time, the itinerary runs 72 hours, and the venues are unfamiliar to everyone, including most vendors.
             </p>
             <p className="text-zinc-400 text-sm md:text-base mb-4 leading-relaxed font-light">
               With <strong className="text-white">700+ shows hosted</strong> and a <strong className="text-white">4.9★ rating across 50+ verified reviews</strong>, Anchor Yash Soni has hosted destination weddings at Taj Lake Palace and Leela Palace in Udaipur, Umaid Bhawan and Mehrangarh Fort in Jodhpur, Suryagarh in Jaisalmer, beach properties in Goa, and international venues across Dubai and Southeast Asia.
@@ -409,7 +409,7 @@ export default function DestinationAnchor() {
               </button>
             </Link>
           </Reveal>
-          {/* Stacked image — original design kept */}
+          {/* Stacked image, original design kept */}
           <Reveal delay={0.15}>
             <div className="relative h-[500px] md:h-[600px] w-full">
               <div className="absolute top-0 right-0 w-3/4 h-3/4 rounded-2xl overflow-hidden border border-white/10 transform rotate-3">
@@ -435,14 +435,14 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          5. WHY DIFFERENT — 4 points
+          5. WHY DIFFERENT, 4 points
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
           <Reveal>
             <SectionHeading subtitle="The Role" title="The Social Glue." />
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8 font-light">
-              Destination weddings demand a completely different approach. The anchor isn't just a stage host — they're the connective tissue across 3 days, multiple venues, 400+ guests, and families who barely know each other.
+              Destination weddings demand a completely different approach. The anchor isn't just a stage host, they're the connective tissue across 3 days, multiple venues, 400+ guests, and families who barely know each other.
             </p>
             <div className="space-y-6">
               {WHY_DIFFERENT.map((w, i) => (
@@ -476,7 +476,7 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          6. 3-DAY ITINERARY — original kept, upgraded
+          6. 3-DAY ITINERARY, original kept, upgraded
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -507,7 +507,7 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          7. DESTINATION GRID — SEO location cards
+          7. DESTINATION GRID, SEO location cards
           (Original location postcards expanded)
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
@@ -519,7 +519,7 @@ export default function DestinationAnchor() {
                 <div className={`relative rounded-2xl overflow-hidden group cursor-pointer border border-white/8 hover:border-[#D4AF37]/50 transition-all duration-400 ${i === 0 ? "md:col-span-2 h-[280px]" : "h-[220px]"}`}>
                   <Image
                     src={d.img}
-                    alt={`Destination wedding anchor ${d.city} — Anchor Yash Soni`}
+                    alt={`Destination wedding anchor ${d.city}, Anchor Yash Soni`}
                     fill
                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                     sizes="(max-width:768px) 100vw, 50vw"
@@ -552,7 +552,7 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          8. TESTIMONIALS — NEW
+          8. TESTIMONIALS, NEW
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -567,7 +567,7 @@ export default function DestinationAnchor() {
                   </div>
                   <p className="text-zinc-300 text-sm leading-relaxed italic flex-1 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">— {t.name}</p>
+                    <p className="text-white font-bold text-xs group-hover:text-[#B5952F] transition-colors">- {t.name}</p>
                     <p className="text-zinc-600 text-[10px] mt-0.5">{t.event}</p>
                     <p className="text-[#B5952F] text-[10px] uppercase tracking-wider mt-0.5">{t.guests}</p>
                   </div>
@@ -578,11 +578,11 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          9. FAQ — 12 questions, national PAA
+          9. FAQ, 12 questions, national PAA
       ══════════════════════════════════════ */}
       <section className="py-16 md:py-24  border-y border-white/5 px-5 md:px-10">
         <div className="max-w-5xl mx-auto">
-          <SectionHeading subtitle="Logistics & Planning" title="Destination Wedding Anchor — FAQ." align="center" />
+          <SectionHeading subtitle="Logistics & Planning" title="Destination Wedding Anchor, FAQ." align="center" />
           <div className="grid md:grid-cols-2 gap-4">
             {FAQS.map((faq, idx) => (
               <Reveal key={idx} delay={idx * 0.025}>
@@ -593,7 +593,7 @@ export default function DestinationAnchor() {
         </div>
       </section>
       {/* ══════════════════════════════════════
-          10. RELATED SERVICES — internal links
+          10. RELATED SERVICES, internal links
       ══════════════════════════════════════ */}
       <section className="py-14 md:py-20 px-5 md:px-10">
         <div className="max-w-6xl mx-auto">
@@ -633,9 +633,9 @@ export default function DestinationAnchor() {
               Packing <G>My Bags?</G>
             </h2>
             <p className="text-zinc-400 text-sm mb-3 leading-relaxed">
-              Destination wedding packages block <strong className="text-[#B5952F]">3–4 full days</strong> of the calendar. They book <strong className="text-[#B5952F]">6–9 months in advance</strong> — faster than any other format.
+              Destination wedding packages block <strong className="text-[#B5952F]">3–4 full days</strong> of the calendar. They book <strong className="text-[#B5952F]">6–9 months in advance</strong>, faster than any other format.
             </p>
-            <p className="text-zinc-600 text-xs mb-8">The moment your venue and dates are confirmed — WhatsApp immediately.</p>
+            <p className="text-zinc-600 text-xs mb-8">The moment your venue and dates are confirmed, WhatsApp immediately.</p>
             <Link href={WA} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 md:py-5 bg-[#D4AF37] text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.2)] active:scale-95">
                 <CalendarCheck size={16} /> Inquire Now
