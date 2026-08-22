@@ -1,4 +1,4 @@
-﻿import { NEW_BLOGS_BATCH_1 } from './blogs_14_15';
+import { NEW_BLOGS_BATCH_1 } from './blogs_14_15';
 import { NEW_BLOGS_BATCH_2 } from './blogs_16_17';
 import { NEW_BLOGS_BATCH_3 } from './blogs_18_19';
 import { NEW_BLOGS_BATCH_4 } from './blogs_20_21';
@@ -6,6 +6,7 @@ import { NEW_BLOGS_BATCH_5 } from './blogs_22_23';
 import { NEW_BLOGS_BATCH_6 } from './blogs_24';
 import { NEW_BLOGS_BATCH_7 } from './blogs_25';
 import { NEW_BLOGS_BATCH_8 } from './blogs_26';
+import { NEW_BLOGS_BATCH_9 } from './blogs_27';
 
 // ===================================================
 // MASTER BLOG DATA - YASHSONI.IN
@@ -1542,7 +1543,8 @@ export const BLOG_POSTS = [
   ...NEW_BLOGS_BATCH_5,
   ...NEW_BLOGS_BATCH_6,
   ...NEW_BLOGS_BATCH_7,
-  ...NEW_BLOGS_BATCH_8
+  ...NEW_BLOGS_BATCH_8,
+  ...NEW_BLOGS_BATCH_9
 ];
 
 export default BLOG_POSTS;
